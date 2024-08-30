@@ -200,9 +200,12 @@ function monthDealNextSlide(){
   }
 }
 
+monthDealPrevBtn.onclick = monthDealPrevSlide;
+monthDealNextBtn.onclick = monthDealNextSlide;
+
 function monthDealSliderChecker(){
 
-  monthDealSliders.forEach((slider)=>{
+  monthDealSliders.forEach((slider) => {
     slider.classList.remove('active');
   });
 
@@ -210,7 +213,33 @@ function monthDealSliderChecker(){
     dot.classList.remove('active');
   });
 
+  monthDealSliders[monthDealCurrentSlide - 1].classList.add("active");
+  monthDealPaginationDots[monthDealCurrentSlide - 1].classList.add("active");
+
+  if(monthDealCurrentSlide == 1) {
+     monthDealPrevBtn.classList.add("disabled");
+  } else {
+    monthDealPrevBtn.classList.remove("disabled");
+  }
+
+  if(monthDealCurrentSlide == monthDealSliders.length) {
+     monthDealNextBtn.classList.add("disabled");
+  } else {
+    monthDealNextBtn.classList.remove("disabled");
+  }
+
 }
+
+monthDealSliderChecker();
+
+
+monthDealPaginationDots.forEach((dot) => {
+  dot.onclick = function (){
+    monthDealCurrentSlide = parseInt(this.getAttribute('data-index'));
+    monthDealSliderChecker();
+  }
+});
+
 
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
