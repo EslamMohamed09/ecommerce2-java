@@ -1363,41 +1363,95 @@ header .main-header .bottom nav ul li:hover {
   border-radius: 0.6rem;
   box-shadow: var(--box-shadow2);
 }
+.month-deal-section .product-card .col-left {
+  position: relative;
+}
+.month-deal-section .product-card .col-left .arrows {
+  width: 100%;
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  transform: translateX(-50%);
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.month-deal-section .product-card .col-left .arrows .arrow-left,
+.month-deal-section .product-card .col-left .arrows .arrow-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--black);
+  cursor: pointer;
+}
 .month-deal-section .product-card .col-left .image {
   width: 80%;
 }
 .month-deal-section .product-card .col-left .image img {
   width: 80%;
 }
-.month-deal-section .product-card .content span {
+.month-deal-section .product-card .col-left .indicators {
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding: 0.1rem;
+}
+.month-deal-section .product-card .col-left .indicators ul {
+  margin: 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 !important;
+  gap: 1rem;
+}
+.month-deal-section .product-card .col-left .indicators ul li {
+  display: inline-block;
+  font-weight: bold;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  line-height: 1.9;
+  cursor: pointer;
+  background-color: var(--black);
+}
+.month-deal-section .product-card .col-right .content span {
   color: var(--orange-red1);
   font-weight: bold;
 }
-.month-deal-section .product-card .content h3 {
+.month-deal-section .product-card .col-right .content h3 {
   margin-bottom: 1rem;
 }
-.month-deal-section .product-card .content p {
+.month-deal-section .product-card .col-right .content p {
   font-size: 1rem;
   font-weight: bold;
 }
-.month-deal-section .product-card .content ul {
+.month-deal-section .product-card .col-right .content ul {
   margin-top: 2rem;
   padding-left: 0;
   gap: 0.5rem;
   list-style-type: square;
 }
-.month-deal-section .product-card .content ul li {
+.month-deal-section .product-card .col-right .content ul li {
   font-size: 1rem;
   font-weight: bold;
 }
-.month-deal-section .product-card .content .content-footer {
+.month-deal-section .product-card .col-right .content .content-footer {
   width: 100%;
   gap: 1.1rem;
 }
-.month-deal-section .product-card .content .content-footer .btn {
+.month-deal-section .product-card .col-right .content .content-footer .btn {
   border-radius: 0.2rem;
 }
-.month-deal-section .product-card .content .content-footer .favourite-icon {
+.month-deal-section .product-card .col-right .content .content-footer .favourite-icon {
   width: 3.1rem;
   height: 2.8rem;
   border-radius: 0.2rem;
@@ -1405,12 +1459,24 @@ header .main-header .bottom nav ul li:hover {
   border: 1px solid var(--black);
   color: var(--white);
 }
-.month-deal-section .product-card .content .content-footer .favourite-icon svg {
+.month-deal-section .product-card .col-right .content .content-footer .favourite-icon svg {
   font-size: 1.4rem;
 }
-.month-deal-section .product-card .content .content-footer .favourite-icon:hover {
+.month-deal-section .product-card .col-right .content .content-footer .favourite-icon:hover {
   background-color: transparent !important;
   color: var(--black);
+}
+.month-deal-section .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.month-deal-section .dot.active {
+  background-color: #333;
 }
 
 /********************
@@ -1508,7 +1574,7 @@ footer .bottom-footer .visa-cards {
   gap: 1rem;
 }
 footer .bottom-footer .visa-cards img {
-  height: 2.4rem;
+  height: 2rem;
 }
 footer .bottom-footer p {
   color: var(--gray8);

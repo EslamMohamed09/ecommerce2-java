@@ -5,31 +5,41 @@ if(document.getElementById("open-mHeader") && document.getElementById("main-head
    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
 }
 
+/*
+###############
+banner-section
+###############
+*/
 let index = 0;
-let slides = document.querySelectorAll('.banner-slide-item');
+let bannerSlides = document.querySelectorAll('.banner-slide-item');
 
 function hideAllSlides(){
-  slides.forEach(slide => {
+  bannerSlides.forEach(slide => {
     slide.style.display = "none";
   });
 }
 
 hideAllSlides();
 
-if (index >= 0 && index < slides.length) {slides[index].style.display = "flex";}
+if (index >= 0 && index < bannerSlides.length) {bannerSlides[index].style.display = "flex";}
 
 function prevB(){
-  index = (index - 1 + slides.length) % slides.length;
+  index = (index - 1 + bannerSlides.length) % bannerSlides.length;
   hideAllSlides();
-  slides[index].style.display = "flex";
+  bannerSlides[index].style.display = "flex";
 }
 
 function nextB(){
-  index = (index + 1) % slides.length;
+  index = (index + 1) % bannerSlides.length;
   hideAllSlides();
-  slides[index].style.display = "flex";
+  bannerSlides[index].style.display = "flex";
 }
 
+/*
+###############
+offers-section
+###############
+*/
 document.addEventListener("DOMContentLoaded", function() { // create divs according to class name
   const productItems = Array.from(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
   const groupedProducts = {};
@@ -81,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() { // create divs accord
 });
 
 function truncateWords(title, wordsCount){
-   return title.split(' ').slice(0,wordsCount).join(' ');
+  return title.split(' ').slice(0,wordsCount).join(' ');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -152,11 +162,62 @@ $(document).ready(function(){
 
 });
 
+let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
+let monthDealCurrentSlide = 1;
+let monthDealPrevBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-left");
+let monthDealNextBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-right");
+let paginationIndicators = document.createElement("ul");
+
+for(let i=1; i<=monthDealSliders.length; i++){
+    let paginationIndicator = document.createElement('li');
+        paginationIndicator.setAttribute('data-index', i);
+    paginationIndicators.appendChild(paginationIndicator);
+}
+
+document.querySelector(".month-deal-section .product-card .col-left .indicators").appendChild(paginationIndicators);
+
+let monthDealPaginationDots = document.querySelectorAll(".month-deal-section .product-card .col-left .indicators ul li");
+
+function monthDealPrevSlide(){
+  if(monthDealPrevBtn.classList.contains('disabled')){
+
+     return false;
+
+  } else {
+    monthDealCurrentSlide--;
+    monthDealSliderChecker();
+  }
+}
+
+function monthDealNextSlide(){
+  if(monthDealNextBtn.classList.contains('disabled')){
+
+     return false;
+
+  } else {
+    monthDealCurrentSlide++;
+    monthDealSliderChecker();
+  }
+}
+
+function monthDealSliderChecker(){
+
+  monthDealSliders.forEach((slider)=>{
+    slider.classList.remove('active');
+  });
+
+  monthDealPaginationDots.forEach((dot) => {
+    dot.classList.remove('active');
+  });
+
+}
+
+
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
 /**************
   SINGLE PAGE
-**************/
+***************/
 const smallImage = document.querySelectorAll('#single-page .col-left .small-images .small-image img');
 const bigImage = document.querySelector('#single-page .col-left .big-image img');
 const lens = document.querySelector('#single-page .col-left .big-image .lens');
