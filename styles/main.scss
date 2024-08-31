@@ -363,10 +363,10 @@ p {font-size:1rem;
 section {padding:2rem 7%;}
 
 /******************* # BUTTONS ********************/
-.add-btn {font-size:0.9rem;
+.add-btn {font-size:0.8rem;
           font-weight:800;
           text-transform:uppercase;
-          color:var(--gray1);
+          color:var(--gray11);
           border:none;
           background-color:transparent;}
 
@@ -469,7 +469,7 @@ section {padding:2rem 7%;}
                   display:block;
                   margin:auto;
                   transition:0.5s;
-                  background-color:var(--gray9);
+                  background-color:var(--gray5);
                   z-index:20;}
 
 .line-btn:hover::after {width:100%;}
@@ -1115,8 +1115,13 @@ header {
  # New Products
 ********************/
 .new-products-section {
+
   .product-card {border-radius:0.6rem;
                  box-shadow:var(--box-shadow2);
+
+    h4 {color:var(--gray11);
+        font-size:1.1rem;}
+
     button {margin-top:1rem;}
   }
 
@@ -1141,7 +1146,7 @@ header {
                                  justify-content:center;
                                  align-items:flex-end;
         .content {
-          h3 {margin-bottom:1rem;}
+          h4 {margin-bottom:1rem;}
         }
         .image img {height:14rem;}
       }
@@ -1149,6 +1154,7 @@ header {
       .product-card:nth-child(2) {flex:1 1 15rem;
                                   display:flex;
                                   flex-direction:column;
+                                  justify-content:center;
                                   align-items:center;
         .image {margin-bottom:0.7rem;
           img {height:11rem;}
@@ -1241,7 +1247,7 @@ header {
                 cursor:pointer;
                 background-color:var(--black);}
 
-            li.active {background-color:var(--shin-blue5);}
+            li.active {background-color:var(--red8);}
 
         }
 
@@ -1254,15 +1260,20 @@ header {
 
         span {color:var(--orange-red1);
               font-weight:bold;}
-        h3 {margin-bottom:1rem;}
+
+        h3 {margin-bottom:1rem;
+            color:var(--gray11);}
+
         p {font-size:1rem;
             font-weight:bold;}
+
           ul {margin-top:2rem;
               padding-left:0;
-              gap:0.5rem;
-              list-style-type:square;
+              gap:0.8rem;
+
             li {font-size:1rem;
                 font-weight:bold;}
+
         }
 
         .content-footer {width:100%;
@@ -1297,7 +1308,7 @@ header {
 /********************
 # Footer
 ********************/
-footer {background:linear-gradient(to top, var(--green15), var(--green14) 50%, var(--green15) 100%);
+footer {background:linear-gradient(to top, var(--olive5), var(--olive4) 50%, var(--olive2) 100%);
         padding:4rem 0 0;
 
   .footer-widget {text-align:left;
@@ -1306,10 +1317,10 @@ footer {background:linear-gradient(to top, var(--green15), var(--green14) 50%, v
     h4 {text-transform:uppercase;
         margin-bottom:1.5rem;
         font-weight:bold;
-        color:var(--gray9);}
+        color:var(--gray2);}
 
     p {text-transform:capitalize;
-       color:var(--gray8);
+       color:var(--gray3);
        padding:0.5rem 0;
       a {color:var(--gray8);}
     }
@@ -1335,12 +1346,12 @@ footer {background:linear-gradient(to top, var(--green15), var(--green14) 50%, v
            margin:0 !important;
            border-radius:50%;
            font-size:1rem;
-           background-color:var(--gray2);
+           background-color:var(--olive2);
           svg {color:var(--white);
                margin:0 !important;}
         }
 
-        a:hover {background-color:var(--gray7);}
+        a:hover {background-color:var(--gray2);}
         a.facebook:hover svg {color:var(--blue7);}
         a.pinterest:hover svg {color:var(--orange-red1);}
         a.instagram:hover svg {color:var(--primary-color1);}
@@ -1351,15 +1362,15 @@ footer {background:linear-gradient(to top, var(--green15), var(--green14) 50%, v
 
   }
 
-  .bottom-footer {background-color:var(--green15);
+  .bottom-footer {background-color:var(--olive5);
                   padding:1.3rem 0.9rem;
                   margin-top:5rem;
 
     .visa-cards {gap:1rem;
-      img {height:2rem;}
+      img {height:1.5rem;}
     }
 
-    p {color:var(--gray8);
+    p {color:var(--gray4);
        margin-bottom:0.7rem;
        font-size:15px;}
   }

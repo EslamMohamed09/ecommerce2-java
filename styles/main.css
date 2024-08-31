@@ -412,10 +412,10 @@ section {
 
 /******************* # BUTTONS ********************/
 .add-btn {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--gray1);
+  color: var(--gray11);
   border: none;
   background-color: transparent;
 }
@@ -546,7 +546,7 @@ section {
   display: block;
   margin: auto;
   transition: 0.5s;
-  background-color: var(--gray9);
+  background-color: var(--gray5);
   z-index: 20;
 }
 
@@ -1307,6 +1307,10 @@ header .main-header .bottom nav ul li:hover {
   border-radius: 0.6rem;
   box-shadow: var(--box-shadow2);
 }
+.new-products-section .product-card h4 {
+  color: var(--gray11);
+  font-size: 1.1rem;
+}
 .new-products-section .product-card button {
   margin-top: 1rem;
 }
@@ -1334,7 +1338,7 @@ header .main-header .bottom nav ul li:hover {
   justify-content: center;
   align-items: flex-end;
 }
-.new-products-section .col-right .product-card:first-child .content h3 {
+.new-products-section .col-right .product-card:first-child .content h4 {
   margin-bottom: 1rem;
 }
 .new-products-section .col-right .product-card:first-child .image img {
@@ -1344,6 +1348,7 @@ header .main-header .bottom nav ul li:hover {
   flex: 1 1 15rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .new-products-section .col-right .product-card:nth-child(2) .image {
@@ -1448,7 +1453,7 @@ header .main-header .bottom nav ul li:hover {
   background-color: var(--black);
 }
 .month-deal-section .product-card .col-left .indicators ul li.active {
-  background-color: var(--shin-blue5);
+  background-color: var(--red8);
 }
 .month-deal-section .product-card .col-right .content span {
   color: var(--orange-red1);
@@ -1456,6 +1461,7 @@ header .main-header .bottom nav ul li:hover {
 }
 .month-deal-section .product-card .col-right .content h3 {
   margin-bottom: 1rem;
+  color: var(--gray11);
 }
 .month-deal-section .product-card .col-right .content p {
   font-size: 1rem;
@@ -1464,8 +1470,7 @@ header .main-header .bottom nav ul li:hover {
 .month-deal-section .product-card .col-right .content ul {
   margin-top: 2rem;
   padding-left: 0;
-  gap: 0.5rem;
-  list-style-type: square;
+  gap: 0.8rem;
 }
 .month-deal-section .product-card .col-right .content ul li {
   font-size: 1rem;
@@ -1508,7 +1513,7 @@ header .main-header .bottom nav ul li:hover {
 # Footer
 ********************/
 footer {
-  background: linear-gradient(to top, var(--green15), var(--green14) 50%, var(--green15) 100%);
+  background: linear-gradient(to top, var(--olive5), var(--olive4) 50%, var(--olive2) 100%);
   padding: 4rem 0 0;
 }
 footer .footer-widget {
@@ -1519,11 +1524,11 @@ footer .footer-widget h4 {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-weight: bold;
-  color: var(--gray9);
+  color: var(--gray2);
 }
 footer .footer-widget p {
   text-transform: capitalize;
-  color: var(--gray8);
+  color: var(--gray3);
   padding: 0.5rem 0;
 }
 footer .footer-widget p a {
@@ -1556,14 +1561,14 @@ footer .footer-widget .social li a {
   margin: 0 !important;
   border-radius: 50%;
   font-size: 1rem;
-  background-color: var(--gray2);
+  background-color: var(--olive2);
 }
 footer .footer-widget .social li a svg {
   color: var(--white);
   margin: 0 !important;
 }
 footer .footer-widget .social li a:hover {
-  background-color: var(--gray7);
+  background-color: var(--gray2);
 }
 footer .footer-widget .social li a.facebook:hover svg {
   color: var(--blue7);
@@ -1581,7 +1586,7 @@ footer .footer-widget .social li a.youtube:hover svg {
   color: var(--orange-red1);
 }
 footer .bottom-footer {
-  background-color: var(--green15);
+  background-color: var(--olive5);
   padding: 1.3rem 0.9rem;
   margin-top: 5rem;
 }
@@ -1589,10 +1594,10 @@ footer .bottom-footer .visa-cards {
   gap: 1rem;
 }
 footer .bottom-footer .visa-cards img {
-  height: 2rem;
+  height: 1.5rem;
 }
 footer .bottom-footer p {
-  color: var(--gray8);
+  color: var(--gray4);
   margin-bottom: 0.7rem;
   font-size: 15px;
 }

@@ -95,8 +95,8 @@ function truncateWords(title, wordsCount){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.offers-section .product-item h4').forEach(h4 => {
-    h4.textContent = truncateWords(h4.textContent, 3);
+  document.querySelectorAll('.offers-section .product-item h5').forEach(h5 => {
+    h5.textContent = truncateWords(h5.textContent, 3);
   });
 });
 
@@ -162,6 +162,11 @@ $(document).ready(function(){
 
 });
 
+/*
+###################
+month deal section
+###################
+*/
 let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
 let monthDealCurrentSlide = 1;
 let monthDealPrevBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-left");
