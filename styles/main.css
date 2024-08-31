@@ -610,6 +610,9 @@ header .top-nav .col-left #currency-select img {
 header .top-nav .col-left #currency-select i {
   color: var(--white);
 }
+header .top-nav .col-right ul {
+  list-style: none;
+}
 header .top-nav .col-right ul li a {
   color: var(--white);
   text-transform: capitalize;
@@ -732,7 +735,7 @@ header .main-header .bottom nav ul li:hover {
 .banner-section {
   position: relative;
   padding-right: 2%;
-  background: radial-gradient(var(--gray9), var(--gray6));
+  background: radial-gradient(var(--gray4), var(--gray7));
 }
 .banner-section .banner-slide-item {
   width: 100%;
@@ -1006,6 +1009,7 @@ header .main-header .bottom nav ul li:hover {
 
 .quality-section .container .content h5 {
   text-transform: capitalize;
+  color: var(--gray11);
 }
 
 .quality-section .container .content p {
@@ -1030,7 +1034,7 @@ header .main-header .bottom nav ul li:hover {
   gap: 1rem;
   padding: 2%;
   padding-right: 0.5%;
-  background-color: var(--gray10);
+  background-color: var(--gray5);
 }
 .promo-section .section-container .card-item .content {
   padding: 0;
@@ -1170,8 +1174,9 @@ header .main-header .bottom nav ul li:hover {
   width: 100%;
   background-color: transparent;
 }
-.offers-section .inner-col .offersblock .product-item .product-content h4 {
+.offers-section .inner-col .offersblock .product-item .product-content h5 {
   text-align: center;
+  color: var(--gray11);
 }
 .offers-section .inner-col .offersblock .product-item .product-content .price {
   flex-wrap: nowrap;
@@ -1251,7 +1256,7 @@ header .main-header .bottom nav ul li:hover {
   flex-wrap: wrap;
   padding: 0;
   border-radius: 0.5rem;
-  background: radial-gradient(circle at 72% 60%, var(--gray7) 1%, var(--gray) 40%);
+  background: radial-gradient(circle at 72% 60%, var(--gray4) 1%, var(--gray12) 40%);
 }
 .today-deal-section .section-container .col-left {
   flex: 1 1 25rem;

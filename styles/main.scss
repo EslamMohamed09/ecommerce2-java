@@ -512,7 +512,7 @@ header {
     }
 
     .col-right {
-      ul {
+      ul {list-style:none;
         li {
           a {color:var(--white);
              text-transform:capitalize;}
@@ -634,7 +634,7 @@ header {
 ********************/
 .banner-section {position:relative;
                  padding-right:2%;
-                 background:radial-gradient(var(--gray9), var(--gray6));
+                 background:radial-gradient(var(--gray4), var(--gray7));
 
     .banner-slide-item {width:100%;
                         flex-wrap:wrap;
@@ -844,7 +844,8 @@ header {
 ********************/
 .quality-section .container svg {color:var(--blue7);}
 
-.quality-section .container .content h5 {text-transform:capitalize;}
+.quality-section .container .content h5 {text-transform:capitalize;
+                                         color:var(--gray11);}
 
 .quality-section .container .content p {text-transform:capitalize;
                                         font-size:15px;}
@@ -865,7 +866,7 @@ header {
                 gap:1rem;
                 padding:2%;
                 padding-right:0.5%;
-                background-color:var(--gray10);
+                background-color:var(--gray5);
 
         .content {padding:0;
                   width:60%;
@@ -989,7 +990,8 @@ header {
                           width:100%;
                           background-color:transparent;
   
-          h4 {text-align:center;}
+          h5 {text-align:center;
+              color:var(--gray11);}
   
           .price {flex-wrap:nowrap;
                   gap:1.3rem;
@@ -1073,7 +1075,7 @@ header {
   .section-container {flex-wrap:wrap;
                       padding:0;
                       border-radius:0.5rem;
-                      background:radial-gradient(circle at 72% 60%, var(--gray7) 1%, var(--gray) 40%);
+                      background:radial-gradient(circle at 72% 60%, var(--gray4) 1%, var(--gray12) 40%);
 
 
     .col-left {flex:1 1 25rem;
