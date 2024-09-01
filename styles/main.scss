@@ -8,8 +8,6 @@
    font-family:'Exo 2',sans-serif;
    scroll-behavior:smooth;}
 
-.container {margin:0 auto;}
-
 :root {--violet:#ebddf1;
        --violet2:#dfc5ec;
        --violet3:#d8b3eb;
@@ -83,11 +81,28 @@
        --green14:#063113;
        --green15:#05270f;
 
-       --olive1:#027a7a;
-       --olive2:#026b6b;
-       --olive3:#015050;
-       --olive4:#004242;
-       --olive5:#013535;
+       --olive:#eff7f7;
+       --olive1:#e5f5f5;
+       --olive2:#def3f3;
+       --olive3:#dde2e2;
+       --olive4:#cdd1d1;
+       --olive5:#b9c2c2;
+       --olive6:#9ab1b1;
+       --olive7:#7b9494;
+       --olive8:#616666;
+       --olive9:#536e6e;
+       --olive10:#4a7474;
+       --olive11:#3e8181;
+       --olive12:#85fcfc;
+       --olive13:#5ff7f7;
+       --olive14:#44f7f7;
+       --olive15:#04f7f7;
+       --olive16:#02a8a8;
+       --olive17:#028d8d;
+       --olive18:#026b6b;
+       --olive19:#015050;
+       --olive20:#004242;
+       --olive21:#013535;
 
        --milky1:rgb(208, 241, 253);
        --milky2:rgb(183, 233, 253);
@@ -357,10 +372,16 @@ body {overflow-x:hidden;
 
 body {overflow-x:hidden;}
 
+.container {margin:0 auto;}
+
 p {font-size:1rem;
    margin:0;}
 
-section {padding:2rem 7%;}
+ul {margin:0;
+    padding:0;}
+
+section {padding:2rem 7%;
+         margin:0 !important;}
 
 /******************* # BUTTONS ********************/
 .add-btn {font-size:0.8rem;
@@ -493,8 +514,8 @@ h5 {font-size:1.1rem;}
 ********************/
 header {
 
-  .top-nav {padding:0.3rem 3rem;
-            background-color:(var(--olive4));
+  .top-nav {padding:0.3rem 3%;
+            background-color:(var(--olive20));
 
     .col-left {
       #currency-select {gap:0.1rem;
@@ -507,7 +528,7 @@ header {
              border-radius:50%;
              margin-right:0.3rem;
              object-fit:cover;}
-        i {color:var(--white);}
+        svg {color:var(--white);}
       }
     }
 
@@ -517,49 +538,92 @@ header {
           a {color:var(--white);
              text-transform:capitalize;}
         }
-        button {text-transform:capitalize;}
+        button {color:var(--white);
+                background-color:transparent;
+                border:none;}
         #open-mHeader {display:none;
                        cursor:pointer;}
       }
     }
   }
 
-  .main-header {background-color:(var(--olive4));
+  .main-header {background-color:(var(--olive20));
+                padding:0 !important;
+                margin:0 !important;
+                
 
-    .upper {padding:0.4rem 3rem;
-            border-top:1px solid var(--olive3);
-            border-bottom:1px solid var(--olive3);
+    .upper {padding:0.4rem 3%;
+            border-top:1px solid var(--olive19);
+            border-bottom:1px solid var(--olive19);
 
       .web-title {cursor:pointer;
-                  text-transform:uppercase;
-                  color:var(--white);}
-
-      .search-block {width:50%;
-                     border-radius:1rem;
-                     background-color:var(--white);
-                     padding:0.3rem 0.4rem;
-
-        input[type="search"] {flex:1 1 10rem;}
+                  
+          a {color:var(--olive11);
+             text-transform:uppercase;}
       }
 
-      .icons {gap:1rem;
-        i {color:var(--white);
-           cursor:pointer;}
+      .search-block {width:50%;
+                     border-radius:1.5rem;
+                     background-color:var(--white);
+                     padding:0.2rem 0.9rem;
+
+        input[type="search"] {flex:1 1 10rem;
+                              padding:0.2rem 0.4rem;border-radius:1.5rem;
+                              border:none;
+                              font-size:1.2rem;}
+        svg {cursor:pointer;}
+      }
+
+      .icons {gap:1.2rem;
+        .icon {gap:0.1rem;
+
+              svg {color:var(--white);
+                   font-size:1.3rem;}
+
+              .value {width:fit-content;
+                      height:fit-content;
+                      padding:6px;
+                      display:flex;
+                      justify-content:center;
+                      align-items:center;
+                      color:yellow;
+                      background-color:var(--olive10);
+                      border-radius:50%;
+                      margin-bottom:1rem;
+
+                  span {width:fit-content;
+                        height:fit-content;
+                        padding:0;
+                        margin:0;
+                        font-size:0.7rem;
+                        line-height:6px;}
+
+              }
+        }
       }
 
     }
 
     .bottom {padding:0 3rem;
+             margin:0;
+             
       nav {
+
         ul {gap:0.5rem;
             list-style:none;
-          li {padding:0.5rem 0.7rem;
+
+          li {padding:0.8rem 0.7rem;
             a {color:var(--white);
                text-transform:capitalize;}
+
           }
-          li:hover {background-color:var(--olive3);}
+
+          li:hover {background-color:var(--olive11);}
+
         }
+
       }
+      
     }
 
   }
@@ -865,17 +929,17 @@ header {
                 height:12rem;
                 gap:1rem;
                 padding:2%;
-                padding-right:0.5%;
-                background-color:var(--gray5);
+                background-color:var(--blue);
 
         .content {padding:0;
                   width:60%;
                   
           h3 {font-size:1.2rem;
-              font-weight:1000;}
+              font-weight:1000;
+              color:var(--gray11);}
   
           p {font-size:1.1rem;
-             color:var(--gray4);
+             color:var(--gray11);
              text-transform:uppercase;}
           
           .btn5 {margin-top:0.8rem;
@@ -883,9 +947,11 @@ header {
                  font-weight:bold;
                  padding:0.5rem 1rem;}
         }
-        .image {width:40%;}
-
-        .image img {width:90%;}
+        .image {width:40%;
+           img {width:10rem;
+                height:10rem;
+                object-fit:contain;}
+        }
     }
   }
 
@@ -1075,13 +1141,13 @@ header {
   .section-container {flex-wrap:wrap;
                       padding:0;
                       border-radius:0.5rem;
-                      background:radial-gradient(circle at 72% 60%, var(--gray4) 1%, var(--gray12) 40%);
+                      background:radial-gradient(circle at 72% 60%, var(--olive16) 1%, var(--olive21) 40%);
 
 
     .col-left {flex:1 1 25rem;
                padding:3rem;
       .content {gap:0.5rem;
-        span{color:var(--orange-red1);
+        span{color:var(--olive15);
              font-size:1.3rem;
              margin-bottom:1rem;}
         h3 {color:var(--white);
@@ -1308,7 +1374,7 @@ header {
 /********************
 # Footer
 ********************/
-footer {background:linear-gradient(to top, var(--olive5), var(--olive4) 50%, var(--olive2) 100%);
+footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, var(--olive18) 100%);
         padding:4rem 0 0;
 
   .footer-widget {text-align:left;
@@ -1346,7 +1412,7 @@ footer {background:linear-gradient(to top, var(--olive5), var(--olive4) 50%, var
            margin:0 !important;
            border-radius:50%;
            font-size:1rem;
-           background-color:var(--olive2);
+           background-color:var(--olive11);
           svg {color:var(--white);
                margin:0 !important;}
         }
@@ -1354,7 +1420,7 @@ footer {background:linear-gradient(to top, var(--olive5), var(--olive4) 50%, var
         a:hover {background-color:var(--gray2);}
         a.facebook:hover svg {color:var(--blue7);}
         a.pinterest:hover svg {color:var(--orange-red1);}
-        a.instagram:hover svg {color:var(--primary-color1);}
+        a.instagram:hover svg {color:var(--red9);}
         a.linkedin:hover svg {color:var(--shin-blue5);}
         a.youtube:hover svg {color:var(--orange-red1);}
       }
@@ -1362,7 +1428,7 @@ footer {background:linear-gradient(to top, var(--olive5), var(--olive4) 50%, var
 
   }
 
-  .bottom-footer {background-color:var(--olive5);
+  .bottom-footer {background-color:var(--olive21);
                   padding:1.3rem 0.9rem;
                   margin-top:5rem;
 
