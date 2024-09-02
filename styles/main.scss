@@ -365,10 +365,10 @@ body {overflow-x:hidden;
                    justify-content:flex-end;
                    align-items:flex-end}
 
-::-webkit-scrollbar {width:5px;}
+::-webkit-scrollbar {width:8px;}
 
-::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, #fb3c7f 0%, #ffc05e 100%);
-                           border-radius:10px;}
+::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--olive18) 0%, var(--olive17) 100%);
+                           border-radius:0;}
 
 body {overflow-x:hidden;}
 
@@ -726,14 +726,20 @@ header {
       .col-left {flex:1 1 20rem;}
 
       .col-left .semi-title {font-size:0.9rem;
-                             color:var(--pink);
+                             color:var(--red7);
                              font-weight:550;
-                             text-transform:capitalize;}
+                             text-transform:capitalize;
+                             text-shadow:var(--text-shadow3);}
 
       .col-left .semi-title svg {margin-right:0.2rem;}
 
-      .col-left p {margin-bottom:0.9rem;
-                   width:50%;}
+      .col-left h2 {color:var(--gray11);
+                    margin-bottom:0.6rem;}
+
+      .col-left p {width:55%;
+                   font-size:1.2rem;
+                   margin-bottom:0.9rem;
+                   color:var(--black);}
 
       .col-left button {padding:0.4rem 0.9rem 0.4rem 1.3rem;}
 
@@ -926,17 +932,38 @@ header {
 /********************
  # Quality
 ********************/
-.quality-section .container svg {color:var(--blue7);}
+.quality-section {
+  svg {color:var(--blue7);
+       margin:0;}
 
-.quality-section .container .content h5 {text-transform:capitalize;
-                                         color:var(--gray11);}
+    .col-block {
 
-.quality-section .container .content p {text-transform:capitalize;
-                                        font-size:15px;}
+      .content {padding:0;
+        h4 {text-transform:capitalize;
+            color:var(--gray11);
+            margin:0;
+            margin-bottom:0.2rem;}
+  
+        p {text-transform:capitalize;
+           font-size:15px;}
+      }
 
-/********************
+    }
+}
+
+@media (max-width:768px){
+  .quality-section .col-block {margin-bottom:1.4rem;
+                               
+    h4 {font-size:1.5rem;}
+  }
+}
+
+@media (max-width:580px){
+  .quality-section .col-block {padding-left:11%;}
+}
+/************
  # promo
-********************/
+************/
 .promo-section {
   .section-container {gap:1rem;
                       flex-wrap:wrap;
@@ -980,9 +1007,9 @@ header {
   .promo-section .card-item {min-height:11rem;}
 }
 
-/********************
+/************
  # offers
-********************/
+************/
 .offers-section {
 
   .tabs {gap:1.5rem;
@@ -1021,7 +1048,8 @@ header {
               
     .offersblock {position:relative;
 
-      .product-item {overflow:hidden;
+      .product-item {margin-bottom:1.2rem;
+                     overflow:hidden;
                      position:relative;
     
         .image {width:90%;
@@ -1063,13 +1091,16 @@ header {
                 opacity:0;
                 transition:all 0.3s linear;
 
-          #icon {font-size:1.3rem;
-                 padding:0.6rem;
-                 color:var(--gray1);
-                 background:transparent;
-                 border:none;}
+          a {
+              svg {font-size:1.3rem;
+                   padding:0.6rem;
+                   color:var(--gray11);
+                   background:transparent;
+                   border:none;}
+    
+              svg:hover {color:var(--primary);}
+          }
 
-          #icon:hover {color:var(--primary);}
         }
 
         /* content */
@@ -1102,35 +1133,36 @@ header {
                                   right:0.3rem;}
       
       .owl-nav {position:absolute;
-                  top:-3rem;
-                  right:0.2rem;
-                  width:6rem;
-                  height:2.6rem;
-                  padding:0;
-                  display:flex !important;
-                  flex-direction:row;
-                  justify-content:center;
-                  align-items:center;
-                  gap:1.2rem;
+                top:-3rem;
+                right:-0.6rem;
+                width:6rem;
+                height:1.7rem;
+                padding:0;
+                display:flex !important;
+                flex-direction:row;
+                justify-content:center;
+                align-items:center;
+                gap:1.2rem;
 
           .owl-prev,
           .owl-next {margin:0 !important;
                      padding:0;
                      padding-bottom:0.4rem !important;
                      text-align:center;
-                     width:2.4rem;
+                     width:1.7rem;
                      height:100% !important;
                      background-color:var(--shin-blue5);
                      color:var(--white);
                      display:flex !important;
-                     flex-direction:row;
                      justify-content:center;
                      align-items:center;
-                     border-radius:0.1rem;}
-          .owl-prev span,
-          .owl-next span {font-size:2.6rem;
-                          margin:0 !important;
-                          padding:0 !important;}
+                     border-radius:0.1rem;
+
+              span {font-size:2rem;
+                    margin:0 !important;
+                    padding:0 !important;
+                    line-height:0;}
+          }
       }
     }
   }
@@ -1141,9 +1173,12 @@ header {
                       top:0;}
 
     .col-left {
-      .inner-col {display:grid;
-                  grid-template-columns:repeat(auto-fill,minmax(160px, 1fr));
-        .product-item .image {height:22rem;}
+      .inner-col {
+        .offersblock {
+          .items {
+            .product-item .image {height:22rem;}
+          }
+        }
       }
     }
 
@@ -1158,7 +1193,12 @@ header {
         }
       }
     }
+
   }
+}
+
+@media(max-width:768px){
+  .offers-section .col-left {margin-bottom:2rem;}
 }
 
 /********************

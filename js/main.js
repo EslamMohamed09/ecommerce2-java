@@ -76,8 +76,6 @@ document.addEventListener("DOMContentLoaded", function() { // create divs accord
 
         document.querySelector(".offers-section .col-right .inner-col").appendChild(offersBlock);
     } else {
-      // If the products are less than or equal to 8, you can handle them separately if needed
-      // Here, we assume they don't need to be wrapped in items div
       const offersBlock = document.createElement('div');
       offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
 
@@ -119,11 +117,11 @@ $(document).ready(function(){
     $(blocks).each(function() {
       $(this).addClass('owl-carousel');
       $(this).owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
+        loop:true,
+        margin:10,
+        nav:true,
         dots:false,
-        items: 1
+        items:1
       });
     });
     

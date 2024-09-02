@@ -402,12 +402,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(125deg, #fb3c7f 0%, #ffc05e 100%);
-  border-radius: 10px;
+  background-image: linear-gradient(125deg, var(--olive18) 0%, var(--olive17) 100%);
+  border-radius: 0;
 }
 
 body {
@@ -833,16 +833,23 @@ header .main-header .bottom nav ul li:hover {
 }
 .banner-section .banner-slide-item .col-left .semi-title {
   font-size: 0.9rem;
-  color: var(--pink);
+  color: var(--red7);
   font-weight: 550;
   text-transform: capitalize;
+  text-shadow: var(--text-shadow3);
 }
 .banner-section .banner-slide-item .col-left .semi-title svg {
   margin-right: 0.2rem;
 }
+.banner-section .banner-slide-item .col-left h2 {
+  color: var(--gray11);
+  margin-bottom: 0.6rem;
+}
 .banner-section .banner-slide-item .col-left p {
+  width: 55%;
+  font-size: 1.2rem;
   margin-bottom: 0.9rem;
-  width: 50%;
+  color: var(--black);
 }
 .banner-section .banner-slide-item .col-left button {
   padding: 0.4rem 0.9rem 0.4rem 1.3rem;
@@ -1089,23 +1096,40 @@ header .main-header .bottom nav ul li:hover {
 /********************
  # Quality
 ********************/
-.quality-section .container svg {
+.quality-section svg {
   color: var(--blue7);
+  margin: 0;
 }
-
-.quality-section .container .content h5 {
+.quality-section .col-block .content {
+  padding: 0;
+}
+.quality-section .col-block .content h4 {
   text-transform: capitalize;
   color: var(--gray11);
+  margin: 0;
+  margin-bottom: 0.2rem;
 }
-
-.quality-section .container .content p {
+.quality-section .col-block .content p {
   text-transform: capitalize;
   font-size: 15px;
 }
 
-/********************
+@media (max-width: 768px) {
+  .quality-section .col-block {
+    margin-bottom: 1.4rem;
+  }
+  .quality-section .col-block h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 580px) {
+  .quality-section .col-block {
+    padding-left: 11%;
+  }
+}
+/************
  # promo
-********************/
+************/
 .promo-section .section-container {
   gap: 1rem;
   flex-wrap: wrap;
@@ -1155,9 +1179,9 @@ header .main-header .bottom nav ul li:hover {
     min-height: 11rem;
   }
 }
-/********************
+/************
  # offers
-********************/
+************/
 .offers-section .tabs {
   gap: 1.5rem;
   margin: 0 0 1.5rem 0;
@@ -1200,6 +1224,7 @@ header .main-header .bottom nav ul li:hover {
   position: relative;
 }
 .offers-section .inner-col .offersblock .product-item {
+  margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
   /* content */
@@ -1248,14 +1273,14 @@ header .main-header .bottom nav ul li:hover {
   opacity: 0;
   transition: all 0.3s linear;
 }
-.offers-section .inner-col .offersblock .product-item .icons #icon {
+.offers-section .inner-col .offersblock .product-item .icons a svg {
   font-size: 1.3rem;
   padding: 0.6rem;
-  color: var(--gray1);
+  color: var(--gray11);
   background: transparent;
   border: none;
 }
-.offers-section .inner-col .offersblock .product-item .icons #icon:hover {
+.offers-section .inner-col .offersblock .product-item .icons a svg:hover {
   color: var(--primary);
 }
 .offers-section .inner-col .offersblock .product-item .product-content {
@@ -1290,9 +1315,9 @@ header .main-header .bottom nav ul li:hover {
 .offers-section .inner-col .offersblock .owl-nav {
   position: absolute;
   top: -3rem;
-  right: 0.2rem;
+  right: -0.6rem;
   width: 6rem;
-  height: 2.6rem;
+  height: 1.7rem;
   padding: 0;
   display: flex !important;
   flex-direction: row;
@@ -1306,21 +1331,21 @@ header .main-header .bottom nav ul li:hover {
   padding: 0;
   padding-bottom: 0.4rem !important;
   text-align: center;
-  width: 2.4rem;
+  width: 1.7rem;
   height: 100% !important;
   background-color: var(--shin-blue5);
   color: var(--white);
   display: flex !important;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 0.1rem;
 }
 .offers-section .inner-col .offersblock .owl-nav .owl-prev span,
 .offers-section .inner-col .offersblock .owl-nav .owl-next span {
-  font-size: 2.6rem;
+  font-size: 2rem;
   margin: 0 !important;
   padding: 0 !important;
+  line-height: 0;
 }
 .offers-section .row {
   position: relative;
@@ -1329,11 +1354,7 @@ header .main-header .bottom nav ul li:hover {
   position: absolute;
   top: 0;
 }
-.offers-section .row .col-left .inner-col {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-}
-.offers-section .row .col-left .inner-col .product-item .image {
+.offers-section .row .col-left .inner-col .offersblock .items .product-item .image {
   height: 22rem;
 }
 .offers-section .row .col-right .inner-col .offersblock .items {
@@ -1345,6 +1366,11 @@ header .main-header .bottom nav ul li:hover {
   height: 10rem;
 }
 
+@media (max-width: 768px) {
+  .offers-section .col-left {
+    margin-bottom: 2rem;
+  }
+}
 /********************
  # Today Deal
 ********************/
