@@ -40,8 +40,7 @@ function nextB(){
 offers-section
 ###############
 */
- // create divs according to class name
-function createGroupedProducts(productsSelector){
+function createOneGroupedProducts(productsSelector){
 
   const productItems = Array.from(productsSelector);
   const groupedProducts = {};
@@ -56,19 +55,46 @@ function createGroupedProducts(productsSelector){
   });
    
   for (const [className, products] of Object.entries(groupedProducts)) { // Create the offersblock and items divs
-    if (products.length > 8) {
         const offersBlock = document.createElement('div');
-        offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
+              offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
+
+        products.forEach((product) => {
+          offersBlock.appendChild(product);
+        });
+
+        document.querySelector(".offers-section .col-left .inner-col").appendChild(offersBlock);
+    
+  }
+}
+
+function createTwoGroupedProducts(productsSelector){
+
+  const productItems = Array.from(productsSelector);
+  const groupedProducts = {};
+
+  // Group products by their class names
+  productItems.forEach(productItem => {
+    const className = productItem.classList[1]; // Assumes 'product-item 20%' format
+    if (!groupedProducts[className]) {
+        groupedProducts[className] = [];
+    }
+    groupedProducts[className].push(productItem);
+  });
+   
+  for (const [className, products] of Object.entries(groupedProducts)) { // Create the offersblock and items divs
+        const offersBlock = document.createElement('div');
+              offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
 
         let itemsBlock = document.createElement('div');
             itemsBlock.className = 'items';
         let itemCount = 0;
 
+
         products.forEach((product, index) => {
           itemsBlock.appendChild(product);
           itemCount++;
   
-          if (itemCount === 8 || index === products.length - 1) {
+          if (itemCount === 10 || index === products.length - 1) {
               offersBlock.appendChild(itemsBlock);
               itemsBlock = document.createElement('div');
               itemsBlock.className = 'items';
@@ -77,20 +103,12 @@ function createGroupedProducts(productsSelector){
         });
 
         document.querySelector(".offers-section .col-right .inner-col").appendChild(offersBlock);
-    } else {
-      const offersBlock = document.createElement('div');
-      offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
-
-      products.forEach(product => {
-        offersBlock.appendChild(product);
-      });
-
-      document.body.appendChild(offersBlock);
-    }
+    
   }
 }
 
-createGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
+createOneGroupedProducts(document.querySelectorAll('.offers-section .col-left .inner-col .product-item'));
+createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
 
 
 function truncateWords(title, wordsCount){

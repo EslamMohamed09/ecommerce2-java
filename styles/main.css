@@ -1244,7 +1244,7 @@ header .main-header .bottom nav ul li:hover {
   transition: all 1s linear;
 }
 .offers-section .inner-col .offersblock .product-item .image img {
-  height: 75%;
+  height: 60%;
   object-fit: contain;
   transition: all 1s linear;
 }
@@ -1362,7 +1362,7 @@ header .main-header .bottom nav ul li:hover {
 }
 .offers-section .row .col-right .inner-col .offersblock .items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(163px, 1fr));
   gap: 1rem;
 }
 .offers-section .row .col-right .inner-col .offersblock .items .product-item .image {
@@ -1372,6 +1372,9 @@ header .main-header .bottom nav ul li:hover {
 @media (max-width: 768px) {
   .offers-section .col-left {
     margin-bottom: 2rem;
+  }
+  .offersblock .product-item .image img {
+    height: 55%;
   }
 }
 /********************
