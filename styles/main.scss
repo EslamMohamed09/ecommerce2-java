@@ -384,8 +384,8 @@ section {padding:2rem 7%;
          margin:0 !important;}
 
 /******************* # BUTTONS ********************/
-.add-btn {font-size:0.8rem;
-          font-weight:800;
+.add-btn {font-size:0.9rem;
+          font-weight:bold;
           text-transform:uppercase;
           color:var(--gray11);
           border:none;
@@ -505,7 +505,7 @@ h1 {font-size:2.1rem;}
 h2 {font-size:1.7rem;}
 h3 {font-size:1.6rem;}
 h4 {font-size:1.2rem;}
-h5 {font-size:1.1rem;}
+h5 {font-size:1rem;}
 
 .section-heading {position:relative;
                   margin-bottom:3rem;}
@@ -594,15 +594,16 @@ header {
         svg {cursor:pointer;}
       }
 
-      .icons {gap:1.2rem;
+      .icons {gap:2.8rem;
         .icon {gap:0.1rem;
+               position:relative;
 
               svg {color:var(--white);
                    font-size:1.3rem;}
 
               .value {width:fit-content;
                       height:fit-content;
-                      padding:6px;
+                      padding:5px;
                       display:flex;
                       justify-content:center;
                       align-items:center;
@@ -610,6 +611,9 @@ header {
                       background-color:var(--olive10);
                       border-radius:50%;
                       margin-bottom:1rem;
+                      position:absolute;
+                      top:-0.5rem;
+                      right:-0.8rem;
 
                   span {width:fit-content;
                         height:fit-content;
@@ -1057,10 +1061,11 @@ header {
                 display:flex;
                 justify-content:center;
                 align-items:center;
+                margin-bottom:1rem;
                 overflow:hidden;
                 transition:all 1s linear;
     
-          img {height:85%;
+          img {height:75%;
                object-fit:contain;
                transition:all 1s linear;}
 
@@ -1091,15 +1096,12 @@ header {
                 opacity:0;
                 transition:all 0.3s linear;
 
-          a {
-              svg {font-size:1.3rem;
-                   padding:0.6rem;
-                   color:var(--gray11);
-                   background:transparent;
-                   border:none;}
-    
-              svg:hover {color:var(--primary);}
-          }
+          
+          svg {font-size:1.1rem;
+               color:var(--gray11);
+               border:none;
+           &:hover {color:var(--primary);}
+          }          
 
         }
 
@@ -1120,7 +1122,7 @@ header {
                                 color:var(--gray5);
                                 text-decoration:line-through !important;}
   
-            strong:last-child {font-size:1.2rem;
+            strong:last-child {font-size:1.1rem;
                                color:var(--red9);}
           }
 
@@ -1175,9 +1177,8 @@ header {
     .col-left {
       .inner-col {
         .offersblock {
-          .items {
-            .product-item .image {height:22rem;}
-          }
+          .product-item .image {height:20rem;}
+          
         }
       }
     }
@@ -1186,7 +1187,7 @@ header {
       .inner-col {
         .offersblock {
           .items {display:grid;
-                  grid-template-columns:repeat(auto-fill,minmax(170px, 1fr));
+                  grid-template-columns:repeat(auto-fill,minmax(160px, 1fr));
                   gap:1rem;
             .product-item .image {height:10rem;}
           }

@@ -435,8 +435,8 @@ section {
 
 /******************* # BUTTONS ********************/
 .add-btn {
-  font-size: 0.8rem;
-  font-weight: 800;
+  font-size: 0.9rem;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--gray11);
   border: none;
@@ -601,7 +601,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .section-heading {
@@ -709,10 +709,11 @@ header .main-header .upper .search-block svg {
   cursor: pointer;
 }
 header .main-header .upper .icons {
-  gap: 1.2rem;
+  gap: 2.8rem;
 }
 header .main-header .upper .icons .icon {
   gap: 0.1rem;
+  position: relative;
 }
 header .main-header .upper .icons .icon svg {
   color: var(--white);
@@ -721,7 +722,7 @@ header .main-header .upper .icons .icon svg {
 header .main-header .upper .icons .icon .value {
   width: fit-content;
   height: fit-content;
-  padding: 6px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -729,6 +730,9 @@ header .main-header .upper .icons .icon .value {
   background-color: var(--olive10);
   border-radius: 50%;
   margin-bottom: 1rem;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.8rem;
 }
 header .main-header .upper .icons .icon .value span {
   width: fit-content;
@@ -1235,11 +1239,12 @@ header .main-header .bottom nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
   overflow: hidden;
   transition: all 1s linear;
 }
 .offers-section .inner-col .offersblock .product-item .image img {
-  height: 85%;
+  height: 75%;
   object-fit: contain;
   transition: all 1s linear;
 }
@@ -1273,14 +1278,12 @@ header .main-header .bottom nav ul li:hover {
   opacity: 0;
   transition: all 0.3s linear;
 }
-.offers-section .inner-col .offersblock .product-item .icons a svg {
-  font-size: 1.3rem;
-  padding: 0.6rem;
+.offers-section .inner-col .offersblock .product-item .icons svg {
+  font-size: 1.1rem;
   color: var(--gray11);
-  background: transparent;
   border: none;
 }
-.offers-section .inner-col .offersblock .product-item .icons a svg:hover {
+.offers-section .inner-col .offersblock .product-item .icons svg:hover {
   color: var(--primary);
 }
 .offers-section .inner-col .offersblock .product-item .product-content {
@@ -1304,7 +1307,7 @@ header .main-header .bottom nav ul li:hover {
   text-decoration: line-through !important;
 }
 .offers-section .inner-col .offersblock .product-item .product-content .price strong:last-child {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--red9);
 }
 .offers-section .inner-col .offersblock .product-item:hover .icons {
@@ -1354,12 +1357,12 @@ header .main-header .bottom nav ul li:hover {
   position: absolute;
   top: 0;
 }
-.offers-section .row .col-left .inner-col .offersblock .items .product-item .image {
-  height: 22rem;
+.offers-section .row .col-left .inner-col .offersblock .product-item .image {
+  height: 20rem;
 }
 .offers-section .row .col-right .inner-col .offersblock .items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
 }
 .offers-section .row .col-right .inner-col .offersblock .items .product-item .image {

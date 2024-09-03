@@ -40,8 +40,10 @@ function nextB(){
 offers-section
 ###############
 */
-document.addEventListener("DOMContentLoaded", function() { // create divs according to class name
-  const productItems = Array.from(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
+ // create divs according to class name
+function createGroupedProducts(productsSelector){
+
+  const productItems = Array.from(productsSelector);
   const groupedProducts = {};
 
   // Group products by their class names
@@ -67,10 +69,10 @@ document.addEventListener("DOMContentLoaded", function() { // create divs accord
           itemCount++;
   
           if (itemCount === 8 || index === products.length - 1) {
-            offersBlock.appendChild(itemsBlock);
-            itemsBlock = document.createElement('div');
-            itemsBlock.className = 'items';
-            itemCount = 0;
+              offersBlock.appendChild(itemsBlock);
+              itemsBlock = document.createElement('div');
+              itemsBlock.className = 'items';
+              itemCount = 0;
           }
         });
 
@@ -86,7 +88,10 @@ document.addEventListener("DOMContentLoaded", function() { // create divs accord
       document.body.appendChild(offersBlock);
     }
   }
-});
+}
+
+createGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
+
 
 function truncateWords(title, wordsCount){
   return title.split(' ').slice(0,wordsCount).join(' ');
