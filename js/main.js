@@ -1,3 +1,10 @@
+/*** SCROLL HEADER ***/
+const header = document.querySelector('header');
+window.addEventListener('scroll', function(){
+  this.window.scrollY > 30 ? header.classList.add('headerscroll') : header.classList.remove('headerscroll');
+});
+
+
 /*** MOBILE HEADER ***/
 if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
    const mobileHBtn = document.getElementById("open-mHeader");
