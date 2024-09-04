@@ -1313,6 +1313,7 @@ header {
 
     .col-left {flex:1 1 25rem;
                padding:3rem;
+
       .content {gap:0.5rem;
         span{color:var(--olive15);
              font-size:1.3rem;
@@ -1326,6 +1327,7 @@ header {
 
         .btn5:hover {color:var(--white);}
       }
+
     }
 
     .col-right {flex:1 1 25rem;
@@ -1340,8 +1342,14 @@ header {
 }
 
 @media(max-width:768px){
-  .today-deal-section .container {flex-direction:column-reverse;
-                                  background:radial-gradient(circle at 51% 25%, var(--gray7) 10%, var(--gray) 49%);}
+  .today-deal-section .section-container {flex-direction:column-reverse;
+                                          background:radial-gradient(circle at 50% 26%, var(--olive16) 15%, var(--olive21) 40%);}
+
+    .today-deal-section .section-container .col-left .content span {margin-top:3rem;}
+}
+
+@media(max-width:668px){
+  .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive16) 15%, var(--olive21) 40%);}
 }
 
 /********************

@@ -1559,9 +1559,17 @@ header .main-header .bottom nav ul li:hover {
 }
 
 @media (max-width: 768px) {
-  .today-deal-section .container {
+  .today-deal-section .section-container {
     flex-direction: column-reverse;
-    background: radial-gradient(circle at 51% 25%, var(--gray7) 10%, var(--gray) 49%);
+    background: radial-gradient(circle at 50% 26%, var(--olive16) 15%, var(--olive21) 40%);
+  }
+  .today-deal-section .section-container .col-left .content span {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 668px) {
+  .today-deal-section .section-container {
+    background: radial-gradient(circle at 50% 26%, var(--olive16) 15%, var(--olive21) 40%);
   }
 }
 /********************
