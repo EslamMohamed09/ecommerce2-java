@@ -712,7 +712,7 @@ header .main-header .upper .web-title a {
   text-transform: uppercase;
 }
 header .main-header .upper .search-block {
-  width: 50%;
+  width: 45%;
   border-radius: 1.5rem;
   padding: 0;
   border: 1px solid var(--olive20);
