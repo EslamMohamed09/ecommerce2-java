@@ -1763,6 +1763,39 @@ header .main-header .bottom nav ul li:hover {
   color: var(--black);
 }
 
+@media (max-width: 768px) {
+  .month-deal-section .product-card {
+    padding: 3rem 5%;
+    grid-template-columns: 1fr;
+  }
+  .month-deal-section .product-card .col-right .content ul {
+    padding-left: 1.5rem;
+  }
+  .month-deal-section .product-card .content-footer {
+    margin: 1rem 0 0;
+  }
+}
+@media (max-width: 400px) {
+  .month-deal-section .product-card .col-left .image img {
+    width: 13rem;
+    height: 13rem;
+  }
+  .month-deal-section .product-card .col-left .arrows {
+    width: 99%;
+  }
+}
+@media (max-width: 300px) {
+  .month-deal-section .product-card .col-left .image img {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+@media (max-width: 215px) {
+  .month-deal-section .product-card .col-left .image img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
 /********************
  # Brands
 ********************/

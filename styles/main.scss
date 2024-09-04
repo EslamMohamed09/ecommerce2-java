@@ -1510,18 +1510,22 @@ header {
         }
 
         .content-footer {width:100%;
-                        gap:1.1rem;
+                         gap:1.1rem;
+
           .btn {border-radius:0.2rem;}
+
           .favourite-icon {width:3.1rem;
-                          height:2.8rem;
-                          border-radius:0.2rem;
-                          background-color:var(--black);
-                          border:1px solid var(--black);
-                          color:var(--white);
+                           height:2.8rem;
+                           border-radius:0.2rem;
+                           background-color:var(--black);
+                           border:1px solid var(--black);
+                           color:var(--white);
             svg {font-size:1.4rem;}
           }
+
           .favourite-icon:hover {background-color:transparent !important;
                                 color:var(--black);}
+
         }
 
       }
@@ -1529,6 +1533,37 @@ header {
 
   }
 }
+
+@media(max-width:768px){
+  .month-deal-section .product-card {padding:3rem 5%;
+                                     grid-template-columns:1fr;
+
+      .col-right .content ul {padding-left:1.5rem;}
+
+      .content-footer {margin:1rem 0 0;}
+  }
+}
+
+@media(max-width:400px){
+  .month-deal-section .product-card .col-left {
+
+    .image img {width:13rem;
+                height:13rem;}
+
+    .arrows {width:99%;}
+  }
+}
+
+@media(max-width:300px){
+  .month-deal-section .product-card .col-left .image img {width:11rem;
+                                                          height:11rem;}
+}
+
+@media(max-width:215px){
+  .month-deal-section .product-card .col-left .image img {width:8rem;
+                                                          height:8rem;}
+}
+
 
 /********************
  # Brands
