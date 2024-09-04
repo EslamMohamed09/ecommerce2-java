@@ -384,6 +384,8 @@ ul {margin:0;
 section {padding:2rem 7%;
          margin:0 !important;}
 
+@media(max-width:280px){section {padding:2rem 3%;}}
+
 /******************* # BUTTONS ********************/
 .add-btn {font-size:0.9rem;
           font-weight:bold;
@@ -1315,13 +1317,17 @@ header {
                padding:3rem;
 
       .content {gap:0.5rem;
+
         span{color:var(--olive15);
              font-size:1.3rem;
              margin-bottom:1rem;}
+
         h3 {color:var(--white);
             font-weight:normal;}
+
         p {color:var(--white);
            font-size:1.35rem;}
+
         .btn5 {padding:0.7rem 1.5rem;
                margin-top:1rem;}
 
@@ -1348,8 +1354,13 @@ header {
     .today-deal-section .section-container .col-left .content span {margin-top:3rem;}
 }
 
-@media(max-width:668px){
-  .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive16) 15%, var(--olive21) 40%);}
+@media(max-width:280px){
+  .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive16) 8%, var(--olive21) 30%);
+    
+    .col-left {padding:5% 5% 5% 7%;}
+
+    .col-right .image img {height:7rem;}
+  }
 }
 
 /********************
