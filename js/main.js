@@ -1,9 +1,5 @@
 /*** SCROLL HEADER ***/
 const header = document.querySelector('header');
-window.addEventListener('scroll', function(){
-  this.window.scrollY > 30 ? header.classList.add('headerscroll') : header.classList.remove('headerscroll');
-});
-
 
 /*** MOBILE HEADER ***/
 if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
@@ -19,6 +15,8 @@ banner-section
 */
 let index = 0;
 let bannerSlides = document.querySelectorAll('.banner-slide-item');
+let bannerSliderInterval;  
+let isSliderActive = true;
 
 function hideAllSlides(){
   bannerSlides.forEach(slide => {
@@ -26,20 +24,22 @@ function hideAllSlides(){
   });
 }
 
-hideAllSlides();
-
-if (index >= 0 && index < bannerSlides.length) {bannerSlides[index].style.display = "flex";}
+function showCurrentSlide() {
+  if (index >= 0 && index < bannerSlides.length) {
+    bannerSlides[index].style.display = "flex";
+  }
+}
 
 function prevB(){
   index = (index - 1 + bannerSlides.length) % bannerSlides.length;
   hideAllSlides();
-  bannerSlides[index].style.display = "flex";
+  showCurrentSlide();
 }
 
 function nextB(){
   index = (index + 1) % bannerSlides.length;
   hideAllSlides();
-  bannerSlides[index].style.display = "flex";
+  showCurrentSlide();
 }
 
 function truncateWords(text, wordsCount){
@@ -51,8 +51,49 @@ document.querySelectorAll('.banner-section .banner-slide-item .col-left h2').for
 });
 
 document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forEach((p) => {
-   p.textContent = truncateWords(p.textContent, 20);
+  p.textContent = truncateWords(p.textContent, 20);
 });
+
+// Start the slider
+function workBannerSlider(){
+  if (!isSliderActive) {  // Avoid restarting if already active
+    bannerSliderInterval = setInterval(nextB, 2000);
+    isSliderActive = true; // Update the flag
+    console.log("Slider started");
+  }
+}
+
+// Stop the slider
+function stopBannerSlider(){
+  if (isSliderActive) {  // Avoid clearing if already inactive
+    clearInterval(bannerSliderInterval);
+    isSliderActive = false; // Update the flag
+    console.log("Slider stopped");
+  }
+}
+
+// Event listeners for mouse hover
+const bannerSection = document.querySelector(".banner-section");
+bannerSection.addEventListener('mouseenter', stopBannerSlider);
+bannerSection.addEventListener('mouseleave', workBannerSlider);
+
+// Start the slider initially
+hideAllSlides();
+showCurrentSlide();
+
+// Scroll event for stopping the slider
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 30){
+      header.classList.add('headerscroll');
+      stopBannerSlider();
+  } else {
+    header.classList.remove('headerscroll');
+    workBannerSlider();
+  }
+});
+
+workBannerSlider();
+
 
 /*
 ###############

@@ -952,7 +952,7 @@ header .main-header .bottom nav ul li:hover {
  # Banner
 ************/
 .banner-section {
-  padding: 4rem 7%;
+  padding: 14rem 7% 0;
   background: radial-gradient(var(--gray4), var(--gray7));
   position: relative;
 }
