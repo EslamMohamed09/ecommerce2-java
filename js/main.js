@@ -130,8 +130,6 @@ createOneGroupedProducts(document.querySelectorAll('.offers-section .col-left .i
 createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.offers-section .product-item h5').forEach(h5 => {
     h5.textContent = truncateWords(h5.textContent, 3);
@@ -205,6 +203,7 @@ $(document).ready(function(){
 month deal section
 ###################
 */
+if(document.querySelector(".month-deal-section")){
 let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
 let monthDealCurrentSlide = 1;
 let monthDealPrevBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-left");
@@ -282,7 +281,7 @@ monthDealPaginationDots.forEach((dot) => {
     monthDealSliderChecker();
   }
 });
-
+}
 
 
 document.getElementById("current-year").textContent = new Date().getFullYear();

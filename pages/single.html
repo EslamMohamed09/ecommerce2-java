@@ -4,16 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>single product</title>
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../styles/bootstrap.css">
+  <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
+<header>
+  <div class="top-nav d-flex-r-bt-c">
+    <div class="col-left">
+      <div class="d-flex-r-st-c" id="currency-select">
+        <select>
+          <option value="EN">EN / USD</option>
+          <option value="DE">DE / EURO</option>
+          <option value="EG">EG / POUND</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-right">
+      <ul class="d-flex-r-st-c">
+        <li><a href="#">my account</a></li>
+        <li><a href="#">my cart</a></li>
+        <li><a href="#">checkout</a></li>
+        <li><a href="#">login</a></li>
+        <button id="open-mHeader"><i class="fas fa-bars" style="color:white;"></i></button>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main-header" class="main-header">
+
+    <div class="upper d-flex-r-bt-c">
+      <h2 class="web-title"><a href="index.html">shopping</a></h2>
+      <form class="search-form d-flex-r-bt-c">
+        <input type="search" placeholder="search">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </form>
+      <div class="icons d-flex-r-st-c">
+        <a href="#" class="icon d-flex-r-c-c">
+          <i class="far fa-heart"></i>
+          <div class="value"><span>8</span></div>
+        </a>
+        <a href="#" class="icon d-flex-r-c-c">
+          <i class="fas fa-lock"></i>
+          <div class="value"><span>12</span></div>
+        </a>
+      </div>
+    </div> <!-- End upper -->
+
+    <div class="bottom">
+      <nav>
+        <ul class="d-flex-r-st-c">
+          <li><a href="#">home</a></li>
+          <li><a href="#">electronics</a></li>
+          <li><a href="#">watches</a></li>
+          <li><a href="#">shoes</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</header>
   
 <section id="single-page">
-  <container class="product-container">
+  <div class="product-container">
     <div class="row">
 
-      <div class="col-md-5 col-left">
+      <div class="col-left col-md-5">
 
         <ul class="allcategoriesproduct d-flex-r-st-c"><li>electronics > blenders</li></ul>
 
@@ -43,7 +98,7 @@
 
       </div> <!-- End col-left -->
 
-      <div class="col-md-7 col-right">
+      <div class="col-right col-md-7">
         <div class="content d-flex-c-st-st">
           <div class="magnifier-img"></div>
 
@@ -51,7 +106,7 @@
           <h1>Fresh Electric Kettle 1.7 liters - Assorted Colors</h1>
           
           <div class="description-block d-flex-c-st-st">
-            <p><span>Description</span> <v-icon>mdi-note-multiple</v-icon></p>
+            <p><span>Description</span> <i class="fas fa-sticky-note"></i></p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi iusto sapiente sequi sunt atque est!</p>
           </div>
 
@@ -60,7 +115,7 @@
           <p><span>In stock:</span> 18</p>
 
           <div class="about-item-block d-flex-c-st-st">
-            <p><span>About This Item</span> <v-icon>mdi-note-text</v-icon></p>
+            <p><span>About This Item</span> <i class="fas fa-sticky-note"></i></p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aperiam deleniti a adipisci recusandae dicta laborum. Sunt doloribus itaque mollitia!</p>
           </div>
 
@@ -98,10 +153,89 @@
       </div> <!-- End col-right -->
 
     </div>
-  </container>
+  </div>
 </section>
 
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h4>shop</h4>
+          <p>electronics</p>
+          <p>women clothes</p>
+          <p>mens's clothes</p>
+          <p>winter collection</p>
+          <p>furniture</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h4>further info</h4>
+          <p>about</p>
+          <p>customer service</p>
+          <p>reward program</p>
+          <p>shipping & returns</p>
+          <p>privacy policy</p>
+          <p>terms & conditions</p>
+          <p>blog</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h4>customer service</h4>
+          <p>search terms</p>
+          <p>advanced search</p>
+          <p>orders & returns</p>
+          <p>contact us</p>
+          <p>Theme FAQs</p>
+          <p>consultant</p>
+          <p>store locations</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <img src="../images/brand/brand6.png" alt="">
+          <div class="contacts">
+            <p><i class="fas fa-map-marker-alt"></i>united states, los angelos</p>
+            <p><i class="fas fa-phone-alt"></i>call us at (489) 832-98430</p>
+            <p><i class="fas fa-envelope"></i>example@domain.com</p>
+          </div>
+          <ul class="social d-flex-r-st-c">
+            <li><a href="#" class="facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" class="pinterest"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-footer">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <p><span id="current-year"></span> arty. all rights reserved powered by arty</p>
+        <p>arty themes by arty.com</p>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div class="visa-cards d-flex-r-end-c">
+          <img src="../images/norton.png" alt="">
+          <img src="../images/TRUSTe.jpg" alt="">
+          <img src="../images/authorizenet.png" alt="">
+          <img src="../images/visa.png" alt="">
+          <img src="../images/mastercard.png" alt="">
+          <img src="../images/accredited.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
 <script src="../js/bootstrap.js"></script>
+<script src="../js/all.min.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
