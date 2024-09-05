@@ -981,30 +981,42 @@ header {
 
 }
 
+@media (min-width:768px) and (max-width:1000px) { .banner-section .banner-slide-item .col-left p {width:85%;} 
+                                                  .banner-section .banner-slide-item .col-right img {width:11rem;}
+}
 
 @media (max-width:768px) {
 
-        .banner-section .banner-slide-item {flex-flow:column-reverse;}
-
-        .banner-section .banner-slide-item .col-left {justify-content:flex-start;}
-
-        .banner-section .banner-slide-item .col-left p {width:90%;}
-
         .banner-section #prev,
-        .banner-section #next {top:80%}
+        .banner-section #next {top:45% !important;}
+
+        .banner-section #prev {left:1% !important;
+                               opacity:1;}
+
+        .banner-section #next {right:1% !important;
+                               opacity:1;}
+
+        .banner-section .banner-slide-item {flex-flow:column-reverse;
+
+          .col-left {justify-content:flex-start;
+                     padding-left:6%;
+
+            p {width:90%;}
+          }
+        }
 }
 
-@media (max-width:450px) { .banner-section .banner-slide-item .col-right img {width:60%;} }
+@media (max-width:450px) { .banner-section .banner-slide-item .col-right img {width:80%;} }
 
 @media (max-width:300px) { .banner-section .banner-slide-item .col-left p {width:100%;} }
 
-@media (max-width:260px) { .banner-section .banner-slide-item .col-right img {width:80%;}
-                           .banner-section .banner-slide-item .col-left p {font-size:1rem;}
-}
+@media (max-width:260px) { .banner-section .banner-slide-item .col-left p {font-size:1rem;} }
 
 @media (max-width:238px) { .banner-section .banner-slide-item .col-left h2 {font-size:1.3rem;} }
 
-@media (max-width:208px) { .banner-section .banner-slide-item .col-left h2 {font-size:1.1rem;} }
+@media (max-width:208px) { .banner-section .banner-slide-item .col-left {padding-left:3%;}
+                           .banner-section .banner-slide-item .col-left h2 {font-size:1.1rem;}
+}
 
 /********************
  # Quality
