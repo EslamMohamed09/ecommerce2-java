@@ -561,6 +561,7 @@ header {
 
     .col-right {
       ul {list-style:none;
+          gap:1rem;
         li {
           a {color:var(--white);
              font-size:1rem;
@@ -592,28 +593,31 @@ header {
              text-transform:uppercase;}
       }
 
-      .search-block {width:45%;
-                     border-radius:1.5rem;
-                     padding:0;
-                     border:1px solid var(--olive20);
-                     background-color:var(--olive2);
+      .search-form {width:45%;
+                    border-radius:1.5rem;
+                    padding:0;
+                    border:none;
+                    background-color:var(--olive11);
 
         input[type="search"] {flex:1 1 10rem;
-                              padding:0.4rem 0.6rem;
+                              padding:0.4rem 0.6rem 0.4rem 1rem;
                               border-radius:1.5rem;
+                              font-size:1.2rem;
                               border:none;
-                              background-color:var(--olive2);
-                              font-size:1.2rem;}
+                              color:var(--white);
+                              background-color:var(--olive11);}
 
-        .search-icon {border-top-right-radius:1.5rem;
-                      border-bottom-right-radius:1.5rem;
-                      padding:0.6rem 0.9rem;
-                      height:100%;
-                      cursor:pointer;
-                      // box-shadow:inset 0 0 1px var(--olive20);
-                      background-color:var(--olive18);
+        input[type="search"]::placeholder {color:var(--white);}
 
-          svg {color:var(--olive12);}
+        .search-btn {border-top-right-radius:1.5rem;
+                     border-bottom-right-radius:1.5rem;
+                     padding:0.6rem 1.3rem;
+                     height:100%;
+                     border:none;
+                     background-color:var(--olive19);
+
+          svg {color:var(--olive12);
+               font-size:1.1rem;}
         }
       }
 
@@ -740,30 +744,30 @@ header {
 
     .main-header {width:90%;
 
-      .upper .web-title {font-size:1rem;}
+      .upper .web-title {font-size:1.1rem;}
 
-      .bottom nav ul li a {font-size:0.9rem;}
+      .bottom nav ul li a {font-size:1rem;}
 
     }
   }
 }
 
-@media(max-width:426px) {
+@media(max-width:490px) {
   header .main-header .upper {gap:1.5rem;
-    .search-block {width:60%;}
+    .search-form {width:60%;}
     .icons {gap:1.9rem;}
   }
 }
 
-@media(max-width:380px) {
+@media(max-width:400px) {
   header .main-header {
 
     .upper {position:relative;
             padding:0 5% 4rem 3%;
 
-      .search-block {position:absolute;
-                     bottom:0;
-                     width:95%;}
+      .search-form {position:absolute;
+                    bottom:0;
+                    width:95%;}
 
       .icons .icon .value {padding:3px;}
 
@@ -785,9 +789,14 @@ header {
         }
       }
 
-      .col-right { ul li a {font-size:0.8rem;} }
+      .col-right { ul li a {font-size:0.9rem;} }
     }
   }
+}
+
+@media (max-width:280px){
+  header .top-nav .col-left select {width:4rem;}
+  header .top-nav .col-right ul {gap:0.6rem;}
 }
 
 @media (max-width:263px){
@@ -796,15 +805,13 @@ header {
   }
 }
 
-@media (max-width:263px){ header .top-nav .col-left #currency-select select {width:5rem;} }
-
 @media (max-width:224px){ header .top-nav .col-left #currency-select select {width:3rem;} }
 /************
- # Home
+ # Banner
 ************/
 .banner-section {padding:4rem 7%;
-                 position:relative;
                  background:radial-gradient(var(--gray4), var(--gray7));
+                 position:relative;
 
     .banner-slide-item {width:100%;
                         flex-wrap:wrap;
@@ -942,11 +949,11 @@ header {
 
     #prev,
     #next {position:absolute;
-           top:50%;
-           transform:translateY(-50%);
-           width:2.6rem;
-           height:2.6rem;
-           padding:0.8rem;
+           top:50% !important;
+           transform:translateY(-50%) !important;
+           width:2.3rem;
+           height:2.3rem;
+           padding:0.6rem;
            border-radius:50%;
            font-size:1.2rem;
            cursor:pointer;
@@ -977,6 +984,8 @@ header {
 
 @media (max-width:768px) {
 
+        .banner-section .banner-slide-item {flex-flow:column-reverse;}
+
         .banner-section .banner-slide-item .col-left {justify-content:flex-start;}
 
         .banner-section .banner-slide-item .col-left p {width:90%;}
@@ -984,8 +993,6 @@ header {
         .banner-section #prev,
         .banner-section #next {top:80%}
 }
-
-@media (max-width:650px) { .banner-section .banner-slide-item {flex-flow:column-reverse;} }
 
 @media (max-width:450px) { .banner-section .banner-slide-item .col-right img {width:60%;} }
 
