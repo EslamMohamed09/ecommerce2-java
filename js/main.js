@@ -42,6 +42,18 @@ function nextB(){
   bannerSlides[index].style.display = "flex";
 }
 
+function truncateWords(text, wordsCount){
+  return text.split(' ').slice(0,wordsCount).join(' ');
+}
+
+document.querySelectorAll('.banner-section .banner-slide-item .col-left h2').forEach((h2) => {
+  h2.textContent = truncateWords(h2.textContent, 5);
+});
+
+document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forEach((p) => {
+   p.textContent = truncateWords(p.textContent, 20);
+});
+
 /*
 ###############
 offers-section
@@ -118,9 +130,7 @@ createOneGroupedProducts(document.querySelectorAll('.offers-section .col-left .i
 createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
 
 
-function truncateWords(title, wordsCount){
-  return title.split(' ').slice(0,wordsCount).join(' ');
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.offers-section .product-item h5').forEach(h5 => {

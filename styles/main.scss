@@ -497,8 +497,7 @@ section {padding:2rem 7%;
 .line-btn:hover::after {width:100%;}
 
 
-img {max-width:100%;
-     object-fit:cover;}
+img {max-width:100%;}
 
 h1, h2, h3, h4, h5 {font-weight:bold;
                     margin:0;
@@ -660,7 +659,7 @@ header {
         ul {gap:0.5rem;
             list-style:none;
 
-          li {padding:0.8rem 0.7rem;
+          li {padding:0.7rem;
             a {color:var(--white);
                font-size:1.1rem;
                text-transform:capitalize;}
@@ -803,7 +802,8 @@ header {
 /************
  # Home
 ************/
-.banner-section {position:relative;
+.banner-section {padding:4rem 7%;
+                 position:relative;
                  background:radial-gradient(var(--gray4), var(--gray7));
 
     .banner-slide-item {width:100%;
@@ -833,35 +833,54 @@ header {
       }
 
       /* Animation */
-      :first-child .col-left .semi-title {animation:movebottom 0.5s linear;}
-      :first-child .col-left h2 {animation:movebottom 0.5s linear;}
-      :first-child .col-left p {animation:moveleft 0.5s linear;}
-      :first-child .col-left button {animation:movetop 0.5s linear;}
+      &:first-child .col-left .semi-title {animation:movebottom 0.5s linear;}
+      &:first-child .col-left h2 {animation:movebottom 0.5s linear;}
+      &:first-child .col-left p {animation:moveleft 0.5s linear;}
+      &:first-child .col-left button {animation:movetop 0.5s linear;}
   
-      :nth-child(2) .col-left .semi-title {animation:movebottom 0.5s linear;}
-      :nth-child(2) .col-left h2 {animation:movebottom 0.5s linear;}
-      :nth-child(2) .col-left p {animation:moveright 0.5s linear;}
-      :nth-child(2) .col-left button {animation:movetop 0.5s linear;}
+      &:nth-child(2) .col-left .semi-title {animation:movebottom 0.5s linear;}
+      &:nth-child(2) .col-left h2 {animation:movebottom 0.5s linear;}
+      &:nth-child(2) .col-left p {animation:moveright 0.5s linear;}
+      &:nth-child(2) .col-left button {animation:movetop 0.5s linear;}
  
-      :nth-child(3) .col-left .semi-title {animation:movebottom 0.5s linear;}
-      :nth-child(3) .col-left h2 {animation:moveleft 0.5s linear;}
-      :nth-child(3) .col-left p {animation:moveright 0.5s linear;}
-      :nth-child(3) .col-left button {animation:movetop 0.5s linear;}
+      &:nth-child(3) .col-left .semi-title {animation:movebottom 0.5s linear;}
+      &:nth-child(3) .col-left h2 {animation:moveleft 0.5s linear;}
+      &:nth-child(3) .col-left p {animation:moveright 0.5s linear;}
+      &:nth-child(3) .col-left button {animation:movetop 0.5s linear;}
  
-      :nth-child(4) .col-left .semi-title {animation:movebottom 0.5s linear;}
-      :nth-child(4) .col-left h2 {animation:moveright 0.5s linear;}
-      :nth-child(4) .col-left p {animation:moveleft 0.5s linear;}
-      :nth-child(4) .col-left button {animation:movetop 0.5s linear;}
+      &:nth-child(4) .col-left .semi-title {animation:movebottom 0.5s linear;}
+      &:nth-child(4) .col-left h2 {animation:moveright 0.5s linear;}
+      &:nth-child(4) .col-left p {animation:moveleft 0.5s linear;}
+      &:nth-child(4) .col-left button {animation:movetop 0.5s linear;}
  
-      :nth-child(5) .col-left .semi-title {animation:movebottom 0.5s linear 1s backwards;}
-      :nth-child(5) .col-left h2 {animation:moveleft 0.5s linear 1s backwards;}
-      :nth-child(5) .col-left p {animation:moveright 0.5s linear 1s backwards;}
-      :nth-child(5) .col-left button {animation:movetop 0.5s linear 1s backwards;}
+      &:nth-child(5) .col-left .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .col-left h2 {animation:moveleft 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .col-left p {animation:moveright 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .col-left button {animation:movetop 0.5s linear 0.5s backwards;}
  
-      :nth-child(6) .col-left .semi-title {animation:movebottom 0.5s linear 1s backwards;}
-      :nth-child(6) .col-left h2 {animation:moveright 0.5s linear 1s backwards;}
-      :nth-child(6) .col-left p {animation:moveleft 0.5s linear 1s backwards;}
-      :nth-child(6) .col-left button {animation:movetop 0.5s linear 1s backwards;}
+      &:nth-child(6) .col-left .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .col-left h2 {animation:moveright 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .col-left p {animation:moveleft 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .col-left button {animation:movetop 0.5s linear 0.5s backwards;}
+
+      .col-right {flex:1 1 25rem;
+                  position:relative;
+                  z-index:0;
+
+        img {width:15rem;
+             height:15rem;
+             object-fit:contain;}
+      }
+
+      /* animation */
+      &:first-child .col-right img {animation:showimg 0.3s linear;}
+      &:nth-child(2) .col-right img {animation:showimg 0.3s linear;}
+      &:nth-child(3) .col-right img {animation:showimg 0.5s linear;}
+      &:nth-child(4) .col-right img {animation:showimg 0.5s linear;}
+      &:nth-child(5) .col-right img {animation:showimg 0.8s linear;}
+      &:nth-child(6) .col-right img {animation:showimg 0.8s linear;}
+
+
     }
 
     @keyframes movebottom {
@@ -912,24 +931,6 @@ header {
       }
     }
 
-    .banner-slide-item {
-
-      .col-right {flex:1 1 25rem;
-                  position:relative;
-                  z-index:0;
-
-        img {width:40%;}
-      }
-
-      /* animation */
-      :first-child .col-right img {animation:showimg 0.3s linear;}
-      :nth-child(2) .col-right img {animation:showimg 0.3s linear;}
-      :nth-child(3) .col-right img {animation:scaleimg 0.5s linear;}
-      :nth-child(4) .col-right img {animation:scaleimg 0.5s linear;}
-      :nth-child(5) .col-right img {animation:rotateyimg 0.8s linear;}
-      :nth-child(6) .col-right img {animation:rotateimg 0.8s linear;}
-    }
-
     @keyframes showimg {
       0%{
           opacity:0;
@@ -939,54 +940,20 @@ header {
       }
     }
 
-    @keyframes scaleimg {
-      0%{
-          transform:scale(0);
-      }
-      50%{
-          transform:scale(0.5);
-      }
-      100%{
-           transform:scale(1);
-      }
-    }
-
-    @keyframes rotateyimg {
-      0%{
-            transform:rotateY(180deg);
-      }
-      100%{
-            transform:rotate(0deg);
-      }
-    }
-
-    @keyframes rotateimg {
-      0%{
-          transform:rotate(180deg);
-      }
-      50%{
-          transform:rotate(90deg);
-      }
-      100%{
-           transform:rotate(0deg);
-    
-      }
-    }
-
     #prev,
     #next {position:absolute;
            top:50%;
            transform:translateY(-50%);
-           font-size:1rem;
-           width:2.8rem;
-           height:2.8rem;
+           width:2.6rem;
+           height:2.6rem;
            padding:0.8rem;
            border-radius:50%;
+           font-size:1.2rem;
            cursor:pointer;
            text-align:center;
            color:var(--white);
-           border:1px solid var(--gray5);
-           background-color:var(--gray5);
+           border:1px solid var(--gray11);
+           background-color:var(--gray11);
            z-index:100;
            opacity:0;
            transition:all 0.3s linear;}
@@ -995,11 +962,11 @@ header {
 
     #next {right:-1rem;}
 
-    :hover #prev {left:1%;
-                  opacity:1;}
+    &:hover #prev {left:1%;
+                   opacity:1;}
 
-    :hover #next {right:1%;
-                  opacity:1;}
+    &:hover #next {right:1%;
+                   opacity:1;}
 
     #prev:hover {background-color:transparent;}
 

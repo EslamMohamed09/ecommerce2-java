@@ -585,7 +585,6 @@ section {
 
 img {
   max-width: 100%;
-  object-fit: cover;
 }
 
 h1, h2, h3, h4, h5 {
@@ -785,7 +784,7 @@ header .main-header .bottom nav ul {
   list-style: none;
 }
 header .main-header .bottom nav ul li {
-  padding: 0.8rem 0.7rem;
+  padding: 0.7rem;
 }
 header .main-header .bottom nav ul li a {
   color: var(--white);
@@ -937,6 +936,7 @@ header .main-header .bottom nav ul li:hover {
  # Home
 ************/
 .banner-section {
+  padding: 4rem 7%;
   position: relative;
   background: radial-gradient(var(--gray4), var(--gray7));
 }
@@ -944,6 +944,7 @@ header .main-header .bottom nav ul li:hover {
   width: 100%;
   flex-wrap: wrap;
   /* Animation */
+  /* animation */
 }
 .banner-section .banner-slide-item .col-left {
   flex: 1 1 25rem;
@@ -974,77 +975,105 @@ header .main-header .bottom nav ul li:hover {
 .banner-section .banner-slide-item .col-left button svg {
   margin-left: 0.5rem;
 }
-.banner-section .banner-slide-item :first-child .col-left .semi-title {
+.banner-section .banner-slide-item:first-child .col-left .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item :first-child .col-left h2 {
+.banner-section .banner-slide-item:first-child .col-left h2 {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item :first-child .col-left p {
+.banner-section .banner-slide-item:first-child .col-left p {
   animation: moveleft 0.5s linear;
 }
-.banner-section .banner-slide-item :first-child .col-left button {
+.banner-section .banner-slide-item:first-child .col-left button {
   animation: movetop 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(2) .col-left .semi-title {
+.banner-section .banner-slide-item:nth-child(2) .col-left .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(2) .col-left h2 {
+.banner-section .banner-slide-item:nth-child(2) .col-left h2 {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(2) .col-left p {
+.banner-section .banner-slide-item:nth-child(2) .col-left p {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(2) .col-left button {
+.banner-section .banner-slide-item:nth-child(2) .col-left button {
   animation: movetop 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(3) .col-left .semi-title {
+.banner-section .banner-slide-item:nth-child(3) .col-left .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(3) .col-left h2 {
+.banner-section .banner-slide-item:nth-child(3) .col-left h2 {
   animation: moveleft 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(3) .col-left p {
+.banner-section .banner-slide-item:nth-child(3) .col-left p {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(3) .col-left button {
+.banner-section .banner-slide-item:nth-child(3) .col-left button {
   animation: movetop 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(4) .col-left .semi-title {
+.banner-section .banner-slide-item:nth-child(4) .col-left .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(4) .col-left h2 {
+.banner-section .banner-slide-item:nth-child(4) .col-left h2 {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(4) .col-left p {
+.banner-section .banner-slide-item:nth-child(4) .col-left p {
   animation: moveleft 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(4) .col-left button {
+.banner-section .banner-slide-item:nth-child(4) .col-left button {
   animation: movetop 0.5s linear;
 }
-.banner-section .banner-slide-item :nth-child(5) .col-left .semi-title {
-  animation: movebottom 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(5) .col-left .semi-title {
+  animation: movebottom 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(5) .col-left h2 {
-  animation: moveleft 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(5) .col-left h2 {
+  animation: moveleft 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(5) .col-left p {
-  animation: moveright 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(5) .col-left p {
+  animation: moveright 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(5) .col-left button {
-  animation: movetop 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(5) .col-left button {
+  animation: movetop 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(6) .col-left .semi-title {
-  animation: movebottom 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(6) .col-left .semi-title {
+  animation: movebottom 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(6) .col-left h2 {
-  animation: moveright 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(6) .col-left h2 {
+  animation: moveright 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(6) .col-left p {
-  animation: moveleft 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(6) .col-left p {
+  animation: moveleft 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item :nth-child(6) .col-left button {
-  animation: movetop 0.5s linear 1s backwards;
+.banner-section .banner-slide-item:nth-child(6) .col-left button {
+  animation: movetop 0.5s linear 0.5s backwards;
+}
+.banner-section .banner-slide-item .col-right {
+  flex: 1 1 25rem;
+  position: relative;
+  z-index: 0;
+}
+.banner-section .banner-slide-item .col-right img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+}
+.banner-section .banner-slide-item:first-child .col-right img {
+  animation: showimg 0.3s linear;
+}
+.banner-section .banner-slide-item:nth-child(2) .col-right img {
+  animation: showimg 0.3s linear;
+}
+.banner-section .banner-slide-item:nth-child(3) .col-right img {
+  animation: showimg 0.5s linear;
+}
+.banner-section .banner-slide-item:nth-child(4) .col-right img {
+  animation: showimg 0.5s linear;
+}
+.banner-section .banner-slide-item:nth-child(5) .col-right img {
+  animation: showimg 0.8s linear;
+}
+.banner-section .banner-slide-item:nth-child(6) .col-right img {
+  animation: showimg 0.8s linear;
 }
 @keyframes movebottom {
   0% {
@@ -1086,35 +1115,6 @@ header .main-header .bottom nav ul li:hover {
     transform: translateY(0px);
   }
 }
-.banner-section .banner-slide-item {
-  /* animation */
-}
-.banner-section .banner-slide-item .col-right {
-  flex: 1 1 25rem;
-  position: relative;
-  z-index: 0;
-}
-.banner-section .banner-slide-item .col-right img {
-  width: 40%;
-}
-.banner-section .banner-slide-item :first-child .col-right img {
-  animation: showimg 0.3s linear;
-}
-.banner-section .banner-slide-item :nth-child(2) .col-right img {
-  animation: showimg 0.3s linear;
-}
-.banner-section .banner-slide-item :nth-child(3) .col-right img {
-  animation: scaleimg 0.5s linear;
-}
-.banner-section .banner-slide-item :nth-child(4) .col-right img {
-  animation: scaleimg 0.5s linear;
-}
-.banner-section .banner-slide-item :nth-child(5) .col-right img {
-  animation: rotateyimg 0.8s linear;
-}
-.banner-section .banner-slide-item :nth-child(6) .col-right img {
-  animation: rotateimg 0.8s linear;
-}
 @keyframes showimg {
   0% {
     opacity: 0;
@@ -1123,51 +1123,21 @@ header .main-header .bottom nav ul li:hover {
     opacity: 1;
   }
 }
-@keyframes scaleimg {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes rotateyimg {
-  0% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes rotateimg {
-  0% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 .banner-section #prev,
 .banner-section #next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1rem;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2.6rem;
+  height: 2.6rem;
   padding: 0.8rem;
   border-radius: 50%;
+  font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
   color: var(--white);
-  border: 1px solid var(--gray5);
-  background-color: var(--gray5);
+  border: 1px solid var(--gray11);
+  background-color: var(--gray11);
   z-index: 100;
   opacity: 0;
   transition: all 0.3s linear;
@@ -1178,11 +1148,11 @@ header .main-header .bottom nav ul li:hover {
 .banner-section #next {
   right: -1rem;
 }
-.banner-section :hover #prev {
+.banner-section:hover #prev {
   left: 1%;
   opacity: 1;
 }
-.banner-section :hover #next {
+.banner-section:hover #next {
   right: 1%;
   opacity: 1;
 }
