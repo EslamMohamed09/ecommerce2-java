@@ -13,14 +13,20 @@ window.addEventListener('scroll', function(){
   window.scrollY > 30 ? header.classList.add('headerscroll') : header.classList.remove('headerscroll');
 });
 
+function truncateWords(text, wordsCount){
+  return text.split(' ').slice(0,wordsCount).join(' ');
+}
+
 /*
 ###############
 banner-section
 ###############
 */
 let index = 0;
-let bannerSlides = document.querySelectorAll('.banner-slide-item');
+const bannerSection = document.querySelector(".banner-section");
+const bannerSlides = document.querySelectorAll('.banner-section .banner-slide-item');
 
+if(bannerSection){
 function hideAllSlides(){
   bannerSlides.forEach(slide => {
     slide.style.display = "none";
@@ -55,8 +61,6 @@ window.addEventListener('scroll', function(){
   }
 });
 
-const bannerSection = document.querySelector(".banner-section");
-
 bannerSection.addEventListener('mouseenter', function(){
   clearInterval(bannerSliderInterval);
 });
@@ -66,10 +70,6 @@ bannerSection.addEventListener('mouseleave', function(){
   bannerSliderInterval = setInterval(nextB, 4000);
 });
 
-function truncateWords(text, wordsCount){
-  return text.split(' ').slice(0,wordsCount).join(' ');
-}
-
 document.querySelectorAll('.banner-section .banner-slide-item .col-left h2').forEach((h2) => {
   h2.textContent = truncateWords(h2.textContent, 5);
 });
@@ -77,7 +77,7 @@ document.querySelectorAll('.banner-section .banner-slide-item .col-left h2').for
 document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forEach((p) => {
   p.textContent = truncateWords(p.textContent, 20);
 });
-
+}
 
 /*
 ###############
