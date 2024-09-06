@@ -1621,7 +1621,7 @@
           <h3>Nikon Z5 Mirrorless</h3>
           <p>24.3 megapixels - Interchangeable Lens</p>
           <p>Digital Camera (Body Only)</p>
-          <button class="btn5">buy now</button>
+          <button class="btn5 quick-view-btn">buy now</button>
         </div>
       </div>
 
@@ -1745,6 +1745,87 @@
     <img src="images/brand/brand5.png" alt="" class="item">
   </div>
 
+</section>
+
+<section id="quick-view-modal" class="quick-view-modal">
+  <div class="dialog" max-width="800" max-height="450">
+    <i class="fas fa-bars" id="close-btn"></i>
+    <div class="card">
+      <div class="product-container container bg-white pt-5 px-6">
+        <div class="row">
+   
+          <div class="col-left col-sm-6">
+  
+            <ul class="allcategoriesproduct d-flex-r-st-c"><li>product.category</li></ul>
+    
+            <div class="all-images d-flex-c-c-st">
+            
+              <div class="big-image">
+                <img src="images/electronics/phones/samsung4/1.png" alt="" id="viewProductImg">
+              </div>
+  
+              <div class="small-images d-flex-r-bt-st">
+                <div class="small-image"><img src="images/electronics/phones/samsung4/1.png" class="small-img"></div>
+                <div class="small-image"><img src="images/electronics/phones/samsung4/2.png" class="small-img"></div>
+                <div class="small-image"><img src="images/electronics/phones/samsung4/3.png" class="small-img"></div>
+                <div class="small-image"><img src="images/electronics/phones/samsung4/4.png" class="small-img"></div>
+              </div>
+    
+            </div> <!-- End all-images -->
+  
+          </div> <!-- End col-left -->
+  
+          <div class="col-right col-sm-6">
+            <div class="content d-flex-c-st-st">
+              <p>visit the hans store</p>
+              <h1>samsung</h1>
+              <i class="fas fa-star"></i>
+              <div class="description-block d-flex-c-st-st">
+                <p><span>description</span> <i class="fas fa-multiple"></i></p>
+                <p>product description</p>
+              </div>
+              <p><span>brand:</span> {{ product.brand }}</p>
+              <p><span>availability:</span> 14</p>
+              <p><span>In stock:</span> {{ product.stock }}</p>
+                          
+              <div class="product-price d-flex flex-row justify-start align-center"> <!-- price -->
+                <strong class="oldprice">${{ product.price }}</strong>
+                <strong class="price">${{ Math.ceil(product.price - product.price * (product.discountPercentage / 100)) }}</strong>
+              </div>
+              
+              <div class="size-block d-flex-c-st-st" style="gap:0.5rem;">
+                <p><span>size:</span> {{ product.selectedSize }}</p>
+                <div class="sizes d-flex flex-row justify-start align-start" style="gap:1rem;">
+                  <span v-for="size in product.sizes" :key="size" :class="{ 'selected-size': size === product.selectedSize }" @click="selectSize(size)">{{ size }}</span>
+                </div>
+              </div>
+  
+              <div v-if="product.colors && product.colors.length > 0" class="color-block d-flex-c-st-st" style="gap:0.5rem;">
+                <p><span>Color:</span> {{ product.selectedColor }}</p>
+                <div class="colors d-flex flex-row justify-start align-start" style="gap:1rem;">
+                  <span v-for="(color, index) in product.colors" :key="index" class="color-circle" :style="{ backgroundColor: color }" @click="selectColor(color)"></span>
+                </div>
+              </div>
+  
+              <div class="product-quantity-block d-flex-c-st-st" style="gap:0.4rem;">
+                <p><span>quantity:</span></p>
+                <div class="product-quantity d-flex-r-st-c">
+                  <button type="button" class="pro-quantity-btn d-flex-r-c-c" @click="decrementQuantity"><v-icon>mdi-minus</v-icon></button>
+                  <span id="pro-quantity-no">{{ quantity }}</span>
+                  <button type="button" class="pro-quantity-btn d-flex-r-c-c" @click="incrementQuantity"><v-icon>mdi-plus</v-icon></button>
+                </div>
+                <p style="font-size:0.9rem;"><span>subtotal:</span> ${{ calculateSubtotal }}</p>
+              </div>
+
+              <button type="button" class="btn">Add To Card</button>
+              <a href=""><p>see all mobiles</p></a>
+            </div> <!-- End content -->
+          </div> <!-- End col-right -->
+   
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>

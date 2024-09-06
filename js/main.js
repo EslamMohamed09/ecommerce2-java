@@ -315,6 +315,7 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
  SINGLE PAGE
 ###############
 */
+if(document.querySelector("#single-page")){
 const smallImage = document.querySelectorAll('#single-page .col-left .small-images .small-image img');
 const bigImage = document.querySelector('#single-page .col-left .big-image img');
 const lens = document.querySelector('#single-page .col-left .big-image .lens');
@@ -375,6 +376,7 @@ magnify(bigImage, magnifierImage);
 
 }
 
+
 const selectedColor = document.querySelector("#single-page .color-block #selected-color");
 const colorCircles = document.querySelectorAll("#single-page .color-block .color-circle");
 
@@ -406,5 +408,29 @@ increaseQuantityBtn.addEventListener('click', function(){
      proQuantityNumber += 1;
      proQuantityElement.textContent = proQuantityNumber;
      subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice}`;
+  }
+});
+}
+
+/*
+#################
+ QUICK VIEW MODAL
+#################
+*/
+const quickViewModal = document.getElementById('quick-view-modal');
+const quickViewBtn = document.querySelector('.quick-view-btn');
+const closeBtn = document.querySelector('.quick-view-modal #close-btn');
+
+quickViewBtn.addEventListener('click', function() {
+  quickViewModal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', function() {
+  quickViewModal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target === quickViewModal) {
+    quickViewModal.style.display = 'none';
   }
 });
