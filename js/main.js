@@ -299,7 +299,6 @@ function monthDealSliderChecker(){
 
 monthDealSliderChecker();
 
-
 monthDealPaginationDots.forEach((dot) => {
   dot.onclick = function (){
     monthDealCurrentSlide = parseInt(this.getAttribute('data-index'));
@@ -311,9 +310,11 @@ monthDealPaginationDots.forEach((dot) => {
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
-/**************
-  SINGLE PAGE
-***************/
+/*
+###############
+ SINGLE PAGE
+###############
+*/
 const smallImage = document.querySelectorAll('#single-page .col-left .small-images .small-image img');
 const bigImage = document.querySelector('#single-page .col-left .big-image img');
 const lens = document.querySelector('#single-page .col-left .big-image .lens');
@@ -373,3 +374,13 @@ function leaveLens(){
 magnify(bigImage, magnifierImage);
 
 }
+
+const selectedColor = document.querySelector("#single-page .color-block #selected-color");
+const colorCircles = document.querySelectorAll("#single-page .color-block .color-circle");
+
+colorCircles.forEach((colorCircle) => {
+  colorCircle.addEventListener('click', function(){
+    selectedColor.textContent = this.style.backgroundColor;
+  });
+});
+

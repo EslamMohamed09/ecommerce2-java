@@ -132,15 +132,17 @@
           </div>
 
           <div class="color-block d-flex-c-st-st" style="gap:0.5rem;">
-            <p><span>Color:</span> red</p>
+            <p><span>Color:</span> <span id="selected-color">red</span></p>
             <div class="colors d-flex-r-st-st" style="gap:1rem;">
-              <span class="color-circle"></span>
+              <span class="color-circle" style="background-color:red;"></span>
+              <span class="color-circle" style="background-color:blue;"></span>
+              <span class="color-circle" style="background-color:green;"></span>
+              <span class="color-circle" style="background-color:yellow;"></span>
             </div>
           </div>
 
           <div class="product-quantity-block d-flex-c-st-st" style="gap:0.6rem;">
-            <p><span>Quantity:</span></p>
-            <div class="product-quantity d-flex-r-st-c">
+            <div class="product-quantity-btns d-flex-r-st-c">
               <button type="button" class="pro-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
               <span id="pro-quantity-no">1</span>
               <button type="button" class="pro-quantity-btn d-flex-r-c-c"><i class="fas fa-plus"></i></button>
