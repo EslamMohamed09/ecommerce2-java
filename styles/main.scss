@@ -811,10 +811,11 @@ header {
 }
 
 @media (max-width:224px){ header .top-nav .col-left #currency-select select {width:3rem;} }
+
 /************
  # Banner
 ************/
-.banner-section {padding:14rem 7% 0;
+.banner-section {padding:7rem 7%;
                  background:radial-gradient(var(--gray4), var(--gray7));
                  position:relative;
 
@@ -848,14 +849,14 @@ header {
       &:first-child .col-left .semi-title {animation:movebottom 0.5s linear;}
       &:first-child .col-left h2 {animation:movebottom 0.5s linear;}
       &:first-child .col-left p {animation:moveleft 0.5s linear;}
-      &:first-child .col-left button {animation:movetop 0.5s linear;}
+      &:first-child .col-left button {animation:moveright 0.5s linear;}
   
       &:nth-child(2) .col-left .semi-title {animation:movebottom 0.5s linear;}
       &:nth-child(2) .col-left h2 {animation:movebottom 0.5s linear;}
       &:nth-child(2) .col-left p {animation:moveright 0.5s linear;}
       &:nth-child(2) .col-left button {animation:movetop 0.5s linear;}
  
-      &:nth-child(3) .col-left .semi-title {animation:movebottom 0.5s linear;}
+      &:nth-child(3) .col-left .semi-title {animation:moveright 0.5s linear;}
       &:nth-child(3) .col-left h2 {animation:moveleft 0.5s linear;}
       &:nth-child(3) .col-left p {animation:moveright 0.5s linear;}
       &:nth-child(3) .col-left button {animation:movetop 0.5s linear;}
@@ -863,7 +864,7 @@ header {
       &:nth-child(4) .col-left .semi-title {animation:movebottom 0.5s linear;}
       &:nth-child(4) .col-left h2 {animation:moveright 0.5s linear;}
       &:nth-child(4) .col-left p {animation:moveleft 0.5s linear;}
-      &:nth-child(4) .col-left button {animation:movetop 0.5s linear;}
+      &:nth-child(4) .col-left button {animation:moveright 0.5s linear;}
  
       &:nth-child(5) .col-left .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
       &:nth-child(5) .col-left h2 {animation:moveleft 0.5s linear 0.5s backwards;}
@@ -873,7 +874,7 @@ header {
       &:nth-child(6) .col-left .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
       &:nth-child(6) .col-left h2 {animation:moveright 0.5s linear 0.5s backwards;}
       &:nth-child(6) .col-left p {animation:moveleft 0.5s linear 0.5s backwards;}
-      &:nth-child(6) .col-left button {animation:movetop 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .col-left button {animation:moveright 0.5s linear 0.5s backwards;}
 
       .col-right {flex:1 1 25rem;
                   position:relative;
@@ -910,7 +911,7 @@ header {
     @keyframes movetop {
           0% {
               opacity:0;
-              transform:translateY(100px);
+              transform:translateY(20px);
           }
         
           100% {
@@ -992,6 +993,8 @@ header {
 
 @media (max-width:768px) {
 
+        .banner-section {padding:1rem 7%;}
+
         .banner-section #prev,
         .banner-section #next {top:45% !important;}
 
@@ -1002,7 +1005,6 @@ header {
                                opacity:1;}
 
         .banner-section .banner-slide-item {flex-flow:column-reverse;
-
           .col-left {justify-content:flex-start;
                      padding-left:6%;
 

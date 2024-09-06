@@ -952,7 +952,7 @@ header .main-header .bottom nav ul li:hover {
  # Banner
 ************/
 .banner-section {
-  padding: 14rem 7% 0;
+  padding: 7rem 7%;
   background: radial-gradient(var(--gray4), var(--gray7));
   position: relative;
 }
@@ -1001,7 +1001,7 @@ header .main-header .bottom nav ul li:hover {
   animation: moveleft 0.5s linear;
 }
 .banner-section .banner-slide-item:first-child .col-left button {
-  animation: movetop 0.5s linear;
+  animation: moveright 0.5s linear;
 }
 .banner-section .banner-slide-item:nth-child(2) .col-left .semi-title {
   animation: movebottom 0.5s linear;
@@ -1016,7 +1016,7 @@ header .main-header .bottom nav ul li:hover {
   animation: movetop 0.5s linear;
 }
 .banner-section .banner-slide-item:nth-child(3) .col-left .semi-title {
-  animation: movebottom 0.5s linear;
+  animation: moveright 0.5s linear;
 }
 .banner-section .banner-slide-item:nth-child(3) .col-left h2 {
   animation: moveleft 0.5s linear;
@@ -1037,7 +1037,7 @@ header .main-header .bottom nav ul li:hover {
   animation: moveleft 0.5s linear;
 }
 .banner-section .banner-slide-item:nth-child(4) .col-left button {
-  animation: movetop 0.5s linear;
+  animation: moveright 0.5s linear;
 }
 .banner-section .banner-slide-item:nth-child(5) .col-left .semi-title {
   animation: movebottom 0.5s linear 0.5s backwards;
@@ -1061,7 +1061,7 @@ header .main-header .bottom nav ul li:hover {
   animation: moveleft 0.5s linear 0.5s backwards;
 }
 .banner-section .banner-slide-item:nth-child(6) .col-left button {
-  animation: movetop 0.5s linear 0.5s backwards;
+  animation: moveright 0.5s linear 0.5s backwards;
 }
 .banner-section .banner-slide-item .col-right {
   flex: 1 1 25rem;
@@ -1104,7 +1104,7 @@ header .main-header .bottom nav ul li:hover {
 @keyframes movetop {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -1188,6 +1188,9 @@ header .main-header .bottom nav ul li:hover {
   }
 }
 @media (max-width: 768px) {
+  .banner-section {
+    padding: 1rem 7%;
+  }
   .banner-section #prev,
   .banner-section #next {
     top: 45% !important;

@@ -1,12 +1,17 @@
 /*** SCROLL HEADER ***/
 const header = document.querySelector('header');
 
+
 /*** MOBILE HEADER ***/
 if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
    const mobileHBtn = document.getElementById("open-mHeader");
    const mainHeader = document.getElementById("main-header");
    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
 }
+
+window.addEventListener('scroll', function(){
+  window.scrollY > 30 ? header.classList.add('headerscroll') : header.classList.remove('headerscroll');
+});
 
 /*
 ###############
@@ -15,8 +20,6 @@ banner-section
 */
 let index = 0;
 let bannerSlides = document.querySelectorAll('.banner-slide-item');
-let bannerSliderInterval;  
-let isSliderActive = true;
 
 function hideAllSlides(){
   bannerSlides.forEach(slide => {
@@ -24,23 +27,44 @@ function hideAllSlides(){
   });
 }
 
-function showCurrentSlide() {
-  if (index >= 0 && index < bannerSlides.length) {
-    bannerSlides[index].style.display = "flex";
-  }
-}
+hideAllSlides();
+
+if (index >= 0 && index < bannerSlides.length) {bannerSlides[index].style.display = "flex";}
 
 function prevB(){
   index = (index - 1 + bannerSlides.length) % bannerSlides.length;
   hideAllSlides();
-  showCurrentSlide();
+  bannerSlides[index].style.display = "flex";
 }
 
 function nextB(){
   index = (index + 1) % bannerSlides.length;
   hideAllSlides();
-  showCurrentSlide();
+  bannerSlides[index].style.display = "flex";
 }
+
+
+let bannerSliderInterval = setInterval(nextB, 4000);
+
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 10){
+    clearInterval(bannerSliderInterval);
+  } else if(window.scrollY === 0){
+    clearInterval(bannerSliderInterval);
+    bannerSliderInterval = setInterval(nextB, 4000);
+  }
+});
+
+const bannerSection = document.querySelector(".banner-section");
+
+bannerSection.addEventListener('mouseenter', function(){
+  clearInterval(bannerSliderInterval);
+});
+
+bannerSection.addEventListener('mouseleave', function(){
+  clearInterval(bannerSliderInterval);
+  bannerSliderInterval = setInterval(nextB, 4000);
+});
 
 function truncateWords(text, wordsCount){
   return text.split(' ').slice(0,wordsCount).join(' ');
@@ -53,46 +77,6 @@ document.querySelectorAll('.banner-section .banner-slide-item .col-left h2').for
 document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forEach((p) => {
   p.textContent = truncateWords(p.textContent, 20);
 });
-
-// Start the slider
-function workBannerSlider(){
-  if (!isSliderActive) {  // Avoid restarting if already active
-    bannerSliderInterval = setInterval(nextB, 2000);
-    isSliderActive = true; // Update the flag
-    console.log("Slider started");
-  }
-}
-
-// Stop the slider
-function stopBannerSlider(){
-  if (isSliderActive) {  // Avoid clearing if already inactive
-    clearInterval(bannerSliderInterval);
-    isSliderActive = false; // Update the flag
-    console.log("Slider stopped");
-  }
-}
-
-// Event listeners for mouse hover
-const bannerSection = document.querySelector(".banner-section");
-bannerSection.addEventListener('mouseenter', stopBannerSlider);
-bannerSection.addEventListener('mouseleave', workBannerSlider);
-
-// Start the slider initially
-hideAllSlides();
-showCurrentSlide();
-
-// Scroll event for stopping the slider
-window.addEventListener('scroll', function(){
-  if(window.scrollY > 30){
-      header.classList.add('headerscroll');
-      stopBannerSlider();
-  } else {
-    header.classList.remove('headerscroll');
-    workBannerSlider();
-  }
-});
-
-workBannerSlider();
 
 
 /*
