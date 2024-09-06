@@ -417,6 +417,7 @@ increaseQuantityBtn.addEventListener('click', function(){
  QUICK VIEW MODAL
 #################
 */
+if(document.getElementById('quick-view-modal')){
 const quickViewModal = document.getElementById('quick-view-modal');
 const quickViewBtn = document.querySelector('.quick-view-btn');
 const closeBtn = document.querySelector('.quick-view-modal #close-btn');
@@ -434,3 +435,4 @@ window.addEventListener('click', function(event) {
     quickViewModal.style.display = 'none';
   }
 });
+}
