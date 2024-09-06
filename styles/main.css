@@ -2047,6 +2047,9 @@ footer .bottom-footer p {
 #single-page .product-container .col-right .content span {
   font-weight: bold;
 }
+#single-page .product-container .col-right .content span.instock {
+  font-weight: normal;
+}
 #single-page .product-container .col-right .content .icon {
   font-size: 1.2rem;
   margin: 0 !important;

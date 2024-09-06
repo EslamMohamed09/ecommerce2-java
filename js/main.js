@@ -384,3 +384,27 @@ colorCircles.forEach((colorCircle) => {
   });
 });
 
+const maxQuantity = parseInt(document.querySelector("#single-page .product-container .col-right .instock").textContent);
+const productPrice = parseInt(document.querySelector("#single-page .product-container .col-right .product-price .price").textContent);
+const decreaseQuantityBtn = document.querySelector("#single-page .product-container .col-right .product-quantity-block .decrease-quantity-btn");
+const increaseQuantityBtn = document.querySelector("#single-page .product-container .col-right .product-quantity-block .increase-quantity-btn");
+const proQuantityElement = document.querySelector("#single-page .product-container .col-right .product-quantity-block #pro-quantity-no");
+const subtotalElement = document.querySelector("#single-page .product-container .col-right .product-quantity-block #subtotal");
+
+let proQuantityNumber = parseInt(proQuantityElement.textContent);
+
+decreaseQuantityBtn.addEventListener('click', function(){
+  if(proQuantityNumber > 1){
+     proQuantityNumber -= 1;
+     proQuantityElement.textContent = proQuantityNumber;
+     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice}`;
+  }
+});
+
+increaseQuantityBtn.addEventListener('click', function(){
+  if(proQuantityNumber < maxQuantity){
+     proQuantityNumber += 1;
+     proQuantityElement.textContent = proQuantityNumber;
+     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice}`;
+  }
+});
