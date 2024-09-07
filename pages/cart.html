@@ -67,30 +67,23 @@
 <section class="cart-page">
   <div class="container">
     <div class="row">
-      <v-col cols="12">
-        <v-breadcrumbs :items="['Home', 'Your cart']" class="pa-0" style="font-size:1rem;">
-          <template v-slot:divider>
-              <v-icon color="var(--gray5)">mdi-chevron-right</v-icon>
-          </template>
-        </v-breadcrumbs>
-        <div class="bar-block mt-3 position-relative" v-if="cartItems.length > 0"> <!-- BAR -->
-          <v-icon :style="`left:calc(${parseInt((calculateTotal / 5000) * 100) <= 100 ? parseInt((calculateTotal / 5000) * 100) : 100}% - 1.5rem);`">mdi-truck-fast</v-icon>
-          <v-progress-linear :color="parseInt((calculateTotal / 5000) * 100) < 50 
-                                      ? 'var(--orange-red1)'
-                                      : parseInt((calculateTotal / 5000) * 100) > 50 && parseInt((calculateTotal / 5000) * 100) < 100
-                                      ? 'orange'
-                                      : 'green'"
-            height="10" :model-value="parseInt((calculateTotal / 5000) * 100) <= 100 ? parseInt((calculateTotal / 5000) * 100) : 100" striped style="border-radius:0.5rem;"></v-progress-linear>
+      <div class="col-md-12">
+        <div class="pa-0" style="font-size:1rem;">home <i class="fas fa-chevron-right"></i> your card</div>
+        <div class="bar-block"> <!-- BAR -->
+          <i class="fas fa-truck" id="progress-icon"></i>
+          <div class="progress-block">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
         </div>
-        <p class="pa-0 text-left" style="color:var(--gray4);" v-if="5000 - calculateTotal > 0">only ${{ 5000 - calculateTotal }} away from free shipping</p>
-        <p class="pa-0 text-left" style="color:var(--gray4);" v-if="5000 - calculateTotal <= 0">your order now included free shipping</p>
-        <v-card elevation="0" class="text-left" v-if="!cartItems.length">
-          <p class="py-1" style="color:var(--gray4)">free shipping for all orders over $5000</p>
-          <p class="py-1" style="color:var(--gray4)">your cart is empty</p>
-        </v-card>
-      </v-col>
-      <v-col lg="9" md="8" sm="12" cols="12">
-        <v-table style="background-color:transparent;">
+        <p class="pa-0 text-left" style="color:var(--gray10);">only 5000 - calculateTotal away from free shipping</p>
+        <p class="pa-0 text-left" style="color:var(--gray10);">your order now included free shipping</p>
+        <div class="card text-left">
+          <p class="py-1" style="color:var(--gray10)">free shipping for all orders over $5000</p>
+          <p class="py-1" style="color:var(--gray10)">your cart is empty</p>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8 col-sm-12">
+        <table style="background-color:transparent;">
           <thead style="background-color:var(--blue2);">
             <tr>
               <th>PRODUCT</th>
@@ -101,78 +94,75 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="item in cartItems" :key="item.id">
+            <tr>
               <td> <!-- Product -->
                 <div class="product-card d-flex-r-st-st">
                   <div class="image"><img :src="item.thumbnail" class="w-100" alt=""></div>
                   <div class="content d-flex-c-st-st">
-                    <v-card-title class="card-title">{{ item.title }} </v-card-title>
+                    <h2 class="card-title">samsung </h2>
                     <p style="line-height:1.4rem;color:var(--gray4);">red / xxl</p>
-                    <p style="line-height:1.4rem;color:var(--gray4);">{{ item.category }}</p>
+                    <p style="line-height:1.4rem;color:var(--gray4);">electronics</p>
                   </div>
                 </div>
               </td>
-              <td> <!-- price -->
-                <p class="font-weight-bold pa-0" style="line-height:1.4rem;">${{ Math.ceil(item.price - item.price * (item.discountPercentage / 100)) }}</p>
-              </td>
+              <td> <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p></td> <!-- price -->
               <td> <!-- quantity -->
-                <div class="product-quantity d-flex-r-st-c">
-                  <button type="button" class="pro-quantity-btn d-flex-r-c-c" @click="decrementQuantity(item)"><v-icon>mdi-minus</v-icon></button>
-                  <span id="pro-quantity-no">{{ item.quantity }}</span>
-                  <button type="button" class="pro-quantity-btn d-flex-r-c-c" @click="incrementQuantity(item)"><v-icon>mdi-plus</v-icon></button>
+                <div class="product-quantity-btns d-flex-r-st-c">
+                  <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
+                  <span id="pro-quantity-no">1</span>
+                  <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c"><i class="fas fa-plus"></i></button>
                 </div>
               </td>
               <td></td>
-              <td><v-icon size="18" class="font-weight-bold" @click="deleteItem(item.id)">mdi-close</v-icon></td>
+              <td><i class="far fa-window-close"></i></td>
             </tr>
           </tbody>
-        </v-table>
-      </v-col>
-      <v-col lg="3" md="4" sm="12" cols="12">
-        <v-card class="pa-0 text-left" elevation="0" style="background-color:transparent;">
-          <v-card-title class="font-weight-bold text-uppercase py-1 px-0" style="font-size:1rem;">order summary</v-card-title>
-          <hr class="w-100" style="background-color:var(--gray1);height:2px;">
-          <p class="d-flex-r-bt-c px-0 py-4"> <!-- subtotal -->
-            <span class="font-weight-bold" style="font-size:0.9rem;">subtotal</span>
-            <span class="font-weight-bold" style="font-size:0.9rem;">${{ calculateSubtotal }}</span>
-          </p>
-          <v-divider length="100%" color="black"></v-divider>
+        </table>
+      </div>
+      <div class="col-lg-9 col-md-4 col-sm-12">
+        <div class="card pa-0" style="background-color:transparent;">
+          <h2 class="font-weight-bold text-uppercase py-1 px-0" style="font-size:1rem;">order summary</h2>
+          <hr class="w-100" style="background-color:var(--gray11);height:2px;">
+          <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p>
           <p class="font-weight-bold text-uppercase mt-2 mb-3">get shipping estimate:</p>
           <select class="w-100% mb-3 rounded-xl" style="background:transparent !important;border:1px solid var(--gray6);box-shadow:none;">
-            <option value="" disabled>select a country</option>
-            <option v-for="country in countries" :key="country.code" :value="country.code">{{ country.name }}</option>
+            <option>select a country</option>
+            <option>egypt</option>
+            <option>ksa</option>
+            <option>usa</option>
+            <option>kuwait</option>
           </select>
           <div class="citypostal d-flex-r-bt-c"> <!-- city postal -->
             <select class="rounded-xl" style="width:55%;background:transparent !important;border:1px solid var(--gray6);box-shadow:none;">
-              <option value="" disabled>select a country</option>
-              <option v-for="country in countries" :key="country.code" :value="country.code">{{ country.name }}</option>
+              <option>select a country</option>
+              <option>egypt</option>
+              <option>ksa</option>
+              <option>usa</option>
+              <option>kuwait</option>
             </select>
             <input type="text" class="rounded-xl" placeholder="postal code" style="width:42%;background:transparent !important;border:1px solid var(--gray6);">
           </div>
-          <v-btn class="btn2 w-100 mt-4 mb-6 rounded-xl" elevation="0" variant="elevated" density="compact">calculate shipping</v-btn>
-          <v-divider length="100%" color="black"></v-divider>
+          <button class="btn2">calculate shipping</button>
           <p class="mt-3 mb-2 font-weight-bold text-capitalize">coupon code</p>
           <input type="text" class="w-100 rounded-xl" placeholder="Enter Coupon Code" style="border:1px solid var(--gray6);">
           <p class="px-0 mt-2 mb-4" style="color:var(--gray6);">Coupon code will be applied on the checkout page</p>
-          <v-divider length="100%" color="black"></v-divider>
-          <v-card-text class="d-flex-r-bt-c py-4 px-0"> <!-- Total-->
+          <p class="d-flex-r-bt-c py-4 px-0"> <!-- Total-->
             <span class="font-weight-bold" style="font-size:0.9rem;">TOTAL:</span>
-            <span class="font-weight-bold" style="font-size:0.9rem;">${{ calculateTotal }}</span>
-          </v-card-text>
-          <v-divider length="100%" color="black"></v-divider>
+            <span class="font-weight-bold" style="font-size:0.9rem;">calculateTotal</span>
+          </p>
           <p class="px-0 mt-2 mb-4" style="color:var(--gray6);">Tax included and shipping calculated at checkout</p>
           <div class="agree-terms d-flex-r-st-c py-2 px-0" style="gap:0.5rem;"> <!-- agree-terms -->
             <input type="checkbox" id="agree-term"> 
             <label for="agree-term" class="pa-0 ma-0 text-none" style="font-size:0.9rem;font-weight:600;color:var(--gray2);">I agree with terms & conditions</label>
           </div>
-          <v-btn class="btn2 my-4 w-100 font-weight-bold" elevation="0" variant="elevated" density="compact" style="border-radius:0.2rem;" @click="toCheckout">proceed to checkout</v-btn>
-          <v-btn class="trans-btn w-100 ma-0 font-weight-bold" elevation="0" variant="elevated" density="compact" style="border-radius:0.2rem;" @click="$router.push({name: 'home'})">continue shopping</v-btn>
-        </v-card>
-      </v-col>
+          <button class="btn2 my-4 w-100 font-weight-bold" style="border-radius:0.2rem;">proceed to checkout</button>
+          <a href="index.html" class="trans-btn w-100 ma-0 font-weight-bold" style="border-radius:0.2rem;">continue shopping</a>
+        </div>
+      </div>
     </div>
-    <div class="text-left mt-5 d-flex-r-st-c"> <!-- secure -->
-      <v-icon style="font-size:1.5rem;margin-right:0.2rem;">mdi-shield-lock</v-icon>
-      <p style="padding:0;color:var(--gray3);">Secure Shopping Guarantee</p>
+    <div class="mt-5 d-flex-r-st-c"> <!-- secure -->
+      <i class="fas fa-lock"></i>
+      <p style="padding:0;color:var(--gray10);">Secure Shopping Guarantee</p>
     </div>
     <div class="mt-5 d-flex-r-st-c" style="gap:1rem;"> <!-- images -->
       <img src="../images/norton.png" style="height:1.3rem;" alt="">

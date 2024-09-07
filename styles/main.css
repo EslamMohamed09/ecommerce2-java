@@ -2310,6 +2310,23 @@ footer .bottom-footer p {
 /***************
  # cart-page
 ***************/
+.cart-page .progress-block {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.cart-page .progress-block .progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: var(--orange-red1);
+  border-radius: 0.5rem;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+}
 .cart-page table thead tr th {
   font-weight: bolder;
   font-size: 1rem;

@@ -375,7 +375,6 @@ magnify(bigImage);
 
 }
 
-
 const selectedColor = document.querySelector(".color-block #selected-color");
 const colorCircles = document.querySelectorAll(".color-block .color-circle");
 
@@ -438,3 +437,32 @@ smallImgs.forEach((smallImg) => {
 });
 
 }
+
+/*
+###########
+ CART PAGE
+###########
+*/
+function updateProgressBar(calculateTotal) {
+  const maxTotal = 5000;
+  const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
+  const progressBar = document.getElementById('progress-bar');
+  const progressIcon = document.getElementById('progress-icon');
+
+  // Update the width of the progress bar
+  progressBar.style.width = `${Math.min(progressPercentage, 100)}%`;
+
+  if (progressPercentage < 50) {
+      progressBar.style.backgroundColor = 'var(--orange-red1)';
+  } else if (progressPercentage >= 50 && progressPercentage < 100) {
+    progressBar.style.backgroundColor = 'orange';
+  } else {
+    progressBar.style.backgroundColor = 'green';
+  }
+
+  // Move the icon along the track
+  progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
+}
+
+const calculateTotal = 3500;
+updateProgressBar(calculateTotal);
