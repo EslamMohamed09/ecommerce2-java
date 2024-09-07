@@ -1749,81 +1749,84 @@
 
 <section id="quick-view-modal" class="quick-view-modal">
 
-  <div class="close-area d-flex-r-end-st"><i class="far fa-window-close"></i></div>
+  <div class="close-area d-flex-r-end-st"><div id="close-btn"><i class="far fa-window-close"></i></div></div>
 
-  <div class="product-container container">
-    <div class="row">
+  <div class="card">
 
-      <div class="col-left col-sm-6">
+    <div class="product-container container">
+      <div class="row">
 
-        <ul class="allcategoriesproduct d-flex-r-st-c"><li>electronics > phones</li></ul>
+        <div class="col-left col-sm-6">
 
-        <div class="all-images d-flex-c-c-st">
-        
-          <div class="big-image">
-            <img src="images/electronics/phones/samsung4/1.png" alt="" id="viewProductImg">
-          </div>
+          <ul class="allcategoriesproduct d-flex-r-st-c"><li>electronics > phones</li></ul>
 
-          <div class="small-images d-flex-r-c-st">
-            <div class="small-image"><img src="images/electronics/phones/samsung4/1.png" class="small-img"></div>
-            <div class="small-image"><img src="images/electronics/phones/samsung4/2.png" class="small-img"></div>
-            <div class="small-image"><img src="images/electronics/phones/samsung4/3.png" class="small-img"></div>
-            <div class="small-image"><img src="images/electronics/phones/samsung4/4.png" class="small-img"></div>
-          </div>
-
-        </div> <!-- End all-images -->
-
-      </div> <!-- End col-left -->
-
-      <div class="col-right col-sm-6">
-        <div class="content d-flex-c-st-st">
-          <p>visit the hans store</p>
-          <h1>SAMSUNG Galaxy S22 Ultra Dual</h1>
-          <div class="description-block d-flex-c-st-st">
-            <p><span>description</span> <i class="fas fa-sticky-note"></i></p>
-            <p>Wireless carrier: Unlocked for All Carriers, Memory storage capacity: 12 GB, Screen size: 6.8 Inches, Wireless network: technology GSM, CDMA, LTE</p>
-          </div>
-          <p><span>brand:</span> samsung</p>
-          <p><span>availability:</span> 14</p>
-          <p><span>In stock:</span> <span class="instock">18</span></p>
-                      
-          <div class="product-price d-flex-r-c-c"> <!-- price -->
-            <strong class="oldprice">$180</strong>
-            <strong class="price">$160</strong>
-          </div>
+          <div class="all-images d-flex-c-c-st">
           
-          <div class="size-block d-flex-c-st-st" style="gap:0.5rem;">
-            <p><span>size:</span> xl</p>
-            <div class="sizes d-flex flex-row justify-start align-start" style="gap:1rem;">
-              <span>xl</span>
+            <div class="big-image">
+              <img src="images/electronics/phones/samsung4/1.png" alt="">
             </div>
-          </div>
 
-          <div class="color-block d-flex-c-st-st" style="gap:0.5rem;">
-            <p><span>Color:</span> <span id="selected-color">red</span></p>
-            <div class="colors d-flex-r-st-st" style="gap:1rem;">
-              <span class="color-circle" style="background-color:red;"></span>
-              <span class="color-circle" style="background-color:blue;"></span>
-              <span class="color-circle" style="background-color:green;"></span>
-              <span class="color-circle" style="background-color:yellow;"></span>
+            <div class="small-images d-flex-r-c-st">
+              <div class="small-image"><img src="images/electronics/phones/samsung4/1.png" class="small-img"></div>
+              <div class="small-image"><img src="images/electronics/phones/samsung4/2.png" class="small-img"></div>
+              <div class="small-image"><img src="images/electronics/phones/samsung4/3.png" class="small-img"></div>
+              <div class="small-image"><img src="images/electronics/phones/samsung4/4.jpg" class="small-img"></div>
             </div>
-          </div>
 
-          <div class="product-quantity-block d-flex-c-st-st" style="gap:0.6rem;">
-            <div class="product-quantity-btns d-flex-r-st-c">
-              <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
-              <span id="pro-quantity-no">1</span>
-              <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c"><i class="fas fa-plus"></i></button>
+          </div> <!-- End all-images -->
+
+        </div> <!-- End col-left -->
+
+        <div class="col-right col-sm-6">
+          <div class="content d-flex-c-st-st">
+            <p>visit the hans store</p>
+            <h1>SAMSUNG Galaxy S22 Ultra Dual</h1>
+            <div class="description-block d-flex-c-st-st">
+              <p><span>description</span> <i class="fas fa-sticky-note"></i></p>
+              <p>Wireless carrier: Unlocked for All Carriers, Memory storage capacity: 12 GB, Screen size: 6.8 Inches, Wireless network: technology GSM, CDMA, LTE</p>
             </div>
-            <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p>
-          </div>
+            <p><span>brand:</span> samsung</p>
+            <p><span>In stock:</span> <span class="instock">18</span></p>
+                        
+            <div class="product-price d-flex-r-c-c">
+              <strong class="oldprice">$180</strong>
+              <strong class="price">$160</strong>
+            </div>
+            
+            <div class="size-block d-flex-c-st-st" style="gap:0.5rem;">
+              <p><span>size:</span> xl</p>
+              <div class="sizes d-flex flex-row justify-start align-start" style="gap:1rem;">
+                <span>xl</span>
+              </div>
+            </div>
 
-          <button type="button" class="btn">Add To Card</button>
-          <a href=""><p>see all mobiles</p></a>
-        </div> <!-- End content -->
-      </div> <!-- End col-right -->
+            <div class="color-block d-flex-c-st-st" style="gap:0.5rem;">
+              <p><span>Color:</span> <span id="selected-color">red</span></p>
+              <div class="colors d-flex-r-st-st" style="gap:1rem;">
+                <span class="color-circle" style="background-color:red;"></span>
+                <span class="color-circle" style="background-color:blue;"></span>
+                <span class="color-circle" style="background-color:green;"></span>
+                <span class="color-circle" style="background-color:yellow;"></span>
+              </div>
+            </div>
 
+            <div class="product-quantity-block d-flex-c-st-st" style="gap:0.6rem;">
+              <div class="product-quantity-btns d-flex-r-st-c">
+                <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
+                <span id="pro-quantity-no">1</span>
+                <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c"><i class="fas fa-plus"></i></button>
+              </div>
+              <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p>
+            </div>
+
+            <button type="button" class="btn">Add To Card</button>
+            <a href=""><p>see all mobiles</p></a>
+          </div> <!-- End content -->
+        </div> <!-- End col-right -->
+
+      </div>
     </div>
+
   </div>
 
 </section>

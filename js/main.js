@@ -315,18 +315,17 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
  SINGLE PAGE
 ###############
 */
-if(document.querySelector("#single-page")){
-const smallImage = document.querySelectorAll('#single-page .col-left .small-images .small-image img');
-const bigImage = document.querySelector('#single-page .col-left .big-image img');
-const lens = document.querySelector('#single-page .col-left .big-image .lens');
-const magnifierImage = document.querySelector('#single-page .col-right .content .magnifier-img');
+const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
+const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
+const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
+const magnifierImage = document.querySelector('#single-page .product-container .col-right .content .magnifier-img');
 
-if(smallImage && bigImage){
+if(smallImages && bigImage){
 
-for(let i=0; i<smallImage.length; i++){
-   smallImage[i].onclick = function(){
-     bigImage.src = smallImage[i].src;
-   }
+for(let i=0; i<smallImages.length; i++){
+    smallImages[i].onclick = function(){
+      bigImage.src = smallImages[i].src;
+    }
 }
 
 function magnify(bigImage){
@@ -372,13 +371,13 @@ function leaveLens(){
   magnifierImage.classList.remove('active');
 }
 
-magnify(bigImage, magnifierImage);
+magnify(bigImage);
 
 }
 
 
-const selectedColor = document.querySelector("#single-page .color-block #selected-color");
-const colorCircles = document.querySelectorAll("#single-page .color-block .color-circle");
+const selectedColor = document.querySelector(".color-block #selected-color");
+const colorCircles = document.querySelectorAll(".color-block .color-circle");
 
 colorCircles.forEach((colorCircle) => {
   colorCircle.addEventListener('click', function(){
@@ -386,20 +385,20 @@ colorCircles.forEach((colorCircle) => {
   });
 });
 
-const maxQuantity = parseInt(document.querySelector("#single-page .product-container .col-right .instock").textContent);
-const productPrice = parseInt(document.querySelector("#single-page .product-container .col-right .product-price .price").textContent);
-const decreaseQuantityBtn = document.querySelector("#single-page .product-container .col-right .product-quantity-block .decrease-quantity-btn");
-const increaseQuantityBtn = document.querySelector("#single-page .product-container .col-right .product-quantity-block .increase-quantity-btn");
-const proQuantityElement = document.querySelector("#single-page .product-container .col-right .product-quantity-block #pro-quantity-no");
-const subtotalElement = document.querySelector("#single-page .product-container .col-right .product-quantity-block #subtotal");
+const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
+const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
+const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
+const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
+const proQuantityElement = document.querySelector(".product-container .col-right .product-quantity-block #pro-quantity-no");
+const subtotalElement = document.querySelector(".product-container .col-right .product-quantity-block #subtotal");
 
-let proQuantityNumber = parseInt(proQuantityElement.textContent);
+let proQuantityNumber = parseInt(proQuantityElement.textContent.trim());
 
 decreaseQuantityBtn.addEventListener('click', function(){
   if(proQuantityNumber > 1){
      proQuantityNumber -= 1;
      proQuantityElement.textContent = proQuantityNumber;
-     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice}`;
+     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
   }
 });
 
@@ -407,10 +406,10 @@ increaseQuantityBtn.addEventListener('click', function(){
   if(proQuantityNumber < maxQuantity){
      proQuantityNumber += 1;
      proQuantityElement.textContent = proQuantityNumber;
-     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice}`;
+     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
   }
 });
-}
+
 
 /*
 #################
@@ -418,6 +417,8 @@ increaseQuantityBtn.addEventListener('click', function(){
 #################
 */
 if(document.getElementById('quick-view-modal')){
+const smallImgs = document.querySelectorAll('.quick-view-modal .product-container .col-left .small-images .small-image img');
+const bigImg = document.querySelector('.quick-view-modal .product-container .col-left .big-image img');
 const quickViewModal = document.getElementById('quick-view-modal');
 const quickViewBtn = document.querySelector('.quick-view-btn');
 const closeBtn = document.querySelector('.quick-view-modal #close-btn');
@@ -430,9 +431,10 @@ closeBtn.addEventListener('click', function() {
   quickViewModal.style.display = 'none';
 });
 
-window.addEventListener('click', function(event) {
-  if (event.target === quickViewModal) {
-    quickViewModal.style.display = 'none';
+smallImgs.forEach((smallImg) => {
+  smallImg.onclick = function(){
+    bigImg.src = smallImg.src;
   }
 });
+
 }
