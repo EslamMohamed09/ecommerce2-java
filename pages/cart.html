@@ -66,25 +66,31 @@
 
 <section class="cart-page">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="pa-0" style="font-size:1rem;">home <i class="fas fa-chevron-right"></i> your card</div>
-        <div class="bar-block"> <!-- BAR -->
-          <i class="fas fa-truck" id="progress-icon"></i>
-          <div class="progress-block">
-            <div class="progress-bar" id="progress-bar"></div>
-          </div>
-        </div>
-        <p class="pa-0" style="color:var(--gray10);">only 5000 - calculateTotal away from free shipping</p>
-        <p class="pa-0" style="color:var(--gray10);">your order now included free shipping</p>
-        <div class="card">
-          <p class="py-1" style="color:var(--gray10)">free shipping for all orders over $5000</p>
-          <p class="py-1" style="color:var(--gray10)">your cart is empty</p>
+
+    <div class="page-name d-flex-r-st-c"><p>home</p> <i class="fas fa-chevron-right"></i> <p>your card</p></div>
+
+    <div class="progress-bar-block">
+      <div class="progress-bar-data">
+        <i class="fas fa-truck" id="progress-icon"></i>
+        <div class="progress-bar"> <!-- BAR -->
+          <div class="filled-progress-bar"></div>
         </div>
       </div>
+      <div class="shipping-case case-empty-card">
+        <p>free shipping for all orders over $5000</p>
+        <p>your cart is empty</p>
+      </div>
+      <div class="shipping-case case-filled-card">
+        <p>only 5000 - calculateTotal away from free shipping</p>
+        <p>your order now included free shipping</p>
+      </div>
+    </div>
+
+    <div class="row">
+
       <div class="col-lg-9 col-md-8 col-sm-12">
         <table>
-          <thead style="background-color:var(--blue2);">
+          <thead>
             <tr>
               <th>PRODUCT</th>
               <th>PRICE</th>
@@ -97,11 +103,33 @@
             <tr>
               <td> <!-- Product -->
                 <div class="product-card d-flex-r-st-st">
-                  <div class="image"><img :src="item.thumbnail" class="w-100" alt=""></div>
+                  <div class="image"><img src="../images/electronics/phones/samsung4/1.png" alt=""></div>
                   <div class="content d-flex-c-st-st">
-                    <h2 class="card-title">samsung </h2>
-                    <p style="line-height:1.4rem;color:var(--gray4);">red / xxl</p>
-                    <p style="line-height:1.4rem;color:var(--gray4);">electronics</p>
+                    <h5>SAMSUNG Galaxy S22 Ultra Dual Sim</h5>
+                    <p>red / xxl</p>
+                    <p>electronics</p>
+                  </div>
+                </div>
+              </td>
+              <td><p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p></td> <!-- price -->
+              <td> <!-- quantity -->
+                <div class="product-quantity-btns d-flex-r-st-c">
+                  <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
+                  <span id="pro-quantity-no">1</span>
+                  <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c"><i class="fas fa-plus"></i></button>
+                </div>
+              </td>
+              <td></td>
+              <td><i class="far fa-window-close"></i></td>
+            </tr>
+            <tr>
+              <td> <!-- Product -->
+                <div class="product-card d-flex-r-st-st">
+                  <div class="image"><img src="../images/electronics/phones/samsung4/1.png" alt=""></div>
+                  <div class="content d-flex-c-st-st">
+                    <h5>SAMSUNG Galaxy S22 Ultra Dual Sim</h5>
+                    <p>red / xxl</p>
+                    <p>electronics</p>
                   </div>
                 </div>
               </td>
@@ -119,7 +147,8 @@
           </tbody>
         </table>
       </div>
-      <div class="col-lg-9 col-md-4 col-sm-12">
+
+      <div class="col-lg-3 col-md-4 col-sm-12">
         <div class="card pa-0">
           <h2 class="font-weight-bold text-uppercase py-1 px-0" style="font-size:1rem;">order summary</h2>
           <hr style="background-color:var(--gray11);height:2px;">
@@ -159,7 +188,9 @@
           <a href="index.html" class="trans-btn w-100 ma-0 font-weight-bold" style="border-radius:0.2rem;">continue shopping</a>
         </div>
       </div>
+
     </div>
+
     <div class="mt-5 d-flex-r-st-c"> <!-- secure -->
       <i class="fas fa-lock"></i>
       <p style="padding:0;color:var(--gray10);">Secure Shopping Guarantee</p>

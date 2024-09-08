@@ -446,7 +446,7 @@ smallImgs.forEach((smallImg) => {
 function updateProgressBar(calculateTotal) {
   const maxTotal = 5000;
   const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
-  const progressBar = document.getElementById('progress-bar');
+  const progressBar = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
   const progressIcon = document.getElementById('progress-icon');
 
   // Update the width of the progress bar
