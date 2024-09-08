@@ -1715,28 +1715,28 @@ header {
                             color:var(--orange-red1);}
                 }
 
-                  .product-quantity-btns {width:fit-content;
-                                          margin:0;
-                                          gap:0.5rem;
-                                          border:1px solid var(--gray10);
-                                          border-radius:1rem;
+                .product-quantity-btns {width:fit-content;
+                                        margin:0;
+                                        gap:0.5rem;
+                                        border:1px solid var(--gray10);
+                                        border-radius:1rem;
 
-                    .pro-quantity-btn {width:2.1rem;
-                                       height:2.1rem;
-                                       font-size:1rem;
-                                       color:var(--gray11);
-                                       border:none;
-                                       background-color:transparent;}
+                  .pro-quantity-btn {width:2.1rem;
+                                      height:2.1rem;
+                                      font-size:1rem;
+                                      color:var(--gray11);
+                                      border:none;
+                                      background-color:transparent;}
 
-                    #pro-quantity-no {font-size:1rem;
-                                      margin:0 0.5rem;
-                                      padding:0;
-                                      color:var(--gray11);}
-              
+                  #pro-quantity-no {font-size:1rem;
+                                    margin:0 0.5rem;
+                                    padding:0;
+                                    color:var(--gray11);}
+            
 
-                    .pro-quantity-btn:first-child {border-right:1px solid var(--gray10);}
-                    .pro-quantity-btn:nth-child(3) {border-left:1px solid var(--gray10);}
-                  }
+                  .pro-quantity-btn:first-child {border-right:1px solid var(--gray10);}
+                  .pro-quantity-btn:nth-child(3) {border-left:1px solid var(--gray10);}
+                }
 
                 .btn {margin-top:0.8rem;
                       width:80%;
@@ -2053,9 +2053,9 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       }
     }
 
-    tr:not {}
+    tr:not(:last-child) {border-bottom:1px solid var(--gray3);}
 
-    tr {border-bottom:1px solid var(--gray3);
+    tr {
       .product-card {gap:1rem;
 
         .image {flex:1 1 5rem;
@@ -2075,24 +2075,28 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
 
       }
 
-      .product-quantity {width:fit-content;
-                        margin:0.1rem 0 0;
-                        gap:0.3rem;
-                        border-radius:1.5rem;
-                        border:1.5px solid var(--gray5);
-      
-        .pro-quantity-btn {padding:0.6rem 0.5rem;
-                            font-size:0.8rem;
-                            color:var(--gray5);
-                            background-color:transparent;
-                            cursor:pointer;}
-      
+      .product-quantity-btns {width:fit-content;
+                              margin:0;
+                              gap:0.5rem;
+                              border:1px solid var(--gray10);
+                              border-radius:1rem;
+
+        .pro-quantity-btn {width:2.1rem;
+                           height:2.1rem;
+                           font-size:1rem;
+                           color:var(--gray11);
+                           border:none;
+                           background-color:transparent;}
+
         #pro-quantity-no {font-size:1rem;
-                          margin:0;
+                          margin:0 0.5rem;
                           padding:0;
-                          color:var(--gray1);}
-      
+                          color:var(--gray11);}
+
+        .pro-quantity-btn:first-child {border-right:1px solid var(--gray10);}
+        .pro-quantity-btn:nth-child(3) {border-left:1px solid var(--gray10);}
       }
+
     }
 
   }

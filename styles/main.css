@@ -2358,7 +2358,7 @@ footer .bottom-footer p {
   font-size: 1rem;
   font-weight: bolder;
 }
-.cart-page table tr {
+.cart-page table tr:not(:last-child) {
   border-bottom: 1px solid var(--gray3);
 }
 .cart-page table tr .product-card {
@@ -2382,25 +2382,32 @@ footer .bottom-footer p {
 .cart-page table tr .product-card .content p {
   color: var(--gray8);
 }
-.cart-page table tr .product-quantity {
+.cart-page table tr .product-quantity-btns {
   width: fit-content;
-  margin: 0.1rem 0 0;
-  gap: 0.3rem;
-  border-radius: 1.5rem;
-  border: 1.5px solid var(--gray5);
-}
-.cart-page table tr .product-quantity .pro-quantity-btn {
-  padding: 0.6rem 0.5rem;
-  font-size: 0.8rem;
-  color: var(--gray5);
-  background-color: transparent;
-  cursor: pointer;
-}
-.cart-page table tr .product-quantity #pro-quantity-no {
-  font-size: 1rem;
   margin: 0;
+  gap: 0.5rem;
+  border: 1px solid var(--gray10);
+  border-radius: 1rem;
+}
+.cart-page table tr .product-quantity-btns .pro-quantity-btn {
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 1rem;
+  color: var(--gray11);
+  border: none;
+  background-color: transparent;
+}
+.cart-page table tr .product-quantity-btns #pro-quantity-no {
+  font-size: 1rem;
+  margin: 0 0.5rem;
   padding: 0;
-  color: var(--gray1);
+  color: var(--gray11);
+}
+.cart-page table tr .product-quantity-btns .pro-quantity-btn:first-child {
+  border-right: 1px solid var(--gray10);
+}
+.cart-page table tr .product-quantity-btns .pro-quantity-btn:nth-child(3) {
+  border-left: 1px solid var(--gray10);
 }
 
 /*# sourceMappingURL=main.css.map */
