@@ -65,12 +65,12 @@
 </header>
 
 <section class="cart-page">
-  <div class="container">
+  <div class="section-container">
 
-    <div class="page-name d-flex-r-st-c"><p>home</p> <i class="fas fa-chevron-right"></i> <p>your card</p></div>
+    <div class="page-hierarchy d-flex-r-st-c"><p>home</p> <i class="fas fa-chevron-right"></i> <p>your card</p></div>
 
     <div class="progress-bar-block">
-      <div class="progress-bar-data">
+      <div class="progress-bar-value">
         <i class="fas fa-truck" id="progress-icon"></i>
         <div class="progress-bar"> <!-- BAR -->
           <div class="filled-progress-bar"></div>
@@ -88,7 +88,7 @@
 
     <div class="row">
 
-      <div class="col-lg-9 col-md-8 col-sm-12">
+      <div class="col-left col-lg-9 col-md-8 col-sm-12">
         <table>
           <thead>
             <tr>
@@ -112,7 +112,7 @@
                   </div>
                 </div>
               </td>
-              <td><p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p></td> <!-- price -->
+              <td><p class="price">$160</p></td>
               <td> <!-- quantity -->
                 <div class="product-quantity-btns d-flex-r-st-c">
                   <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
@@ -135,7 +135,7 @@
                   </div>
                 </div>
               </td>
-              <td> <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p></td> <!-- price -->
+              <td><p class="price">$38</p></td> <!-- price -->
               <td> <!-- quantity -->
                 <div class="product-quantity-btns d-flex-r-st-c">
                   <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c"><i class="fas fa-minus"></i></button>
@@ -151,44 +151,39 @@
         </table>
       </div>
 
-      <div class="col-lg-3 col-md-4 col-sm-12">
-        <div class="card pa-0">
-          <h2 class="font-weight-bold text-uppercase py-1 px-0" style="font-size:1rem;">order summary</h2>
-          <hr style="background-color:var(--gray11);height:2px;">
-          <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p>
-          <p class="font-weight-bold text-uppercase mt-2 mb-3">get shipping estimate:</p>
-          <select class="mb-3 rounded-xl" style="background:transparent !important;border:1px solid var(--gray6);box-shadow:none;">
-            <option>select a country</option>
-            <option>egypt</option>
-            <option>ksa</option>
-            <option>usa</option>
-            <option>kuwait</option>
-          </select>
-          <div class="citypostal d-flex-r-bt-c"> <!-- city postal -->
-            <select style="width:55%;background:transparent !important;border:1px solid var(--gray6);box-shadow:none;">
-              <option>select a country</option>
-              <option>egypt</option>
-              <option>ksa</option>
-              <option>usa</option>
-              <option>kuwait</option>
-            </select>
-            <input type="text" placeholder="postal code" style="width:42%;background:transparent !important;border:1px solid var(--gray6);">
+      <div class="col-right col-lg-3 col-md-4 col-sm-12">
+        <div class="col-blocks">
+
+          <div class="calculate-block d-flex-c-st-st">
+            <h5>order summary</h5>
+            <p class="subtotal-items d-flex-r-bt-c"><span>subtotal:</span> <span id="subtotal">$38</span></p>
+            <p class="get-shipping">get shipping estimate:</p>
+            <div class="citypostal d-flex-r-bt-c"> <!-- city postal -->
+              <select>
+                <option>egypt</option>
+                <option>ksa</option>
+                <option>usa</option>
+                <option>kuwait</option>
+              </select>
+              <input type="text" class="postalcode-input" placeholder="postal code">
+            </div>
+            <button class="btn2">calculate shipping</button>
           </div>
-          <button class="btn2">calculate shipping</button>
-          <p class="mt-3 mb-2 font-weight-bold text-capitalize">coupon code</p>
-          <input type="text" placeholder="Enter Coupon Code" style="border:1px solid var(--gray6);">
-          <p class="px-0 mt-2 mb-4" style="color:var(--gray6);">Coupon code will be applied on the checkout page</p>
-          <p class="d-flex-r-bt-c py-4 px-0"> <!-- Total-->
-            <span class="font-weight-bold" style="font-size:0.9rem;">TOTAL:</span>
-            <span class="font-weight-bold" style="font-size:0.9rem;">calculateTotal</span>
-          </p>
-          <p class="px-0 mt-2 mb-4" style="color:var(--gray6);">Tax included and shipping calculated at checkout</p>
-          <div class="agree-terms d-flex-r-st-c py-2 px-0" style="gap:0.5rem;"> <!-- agree-terms -->
-            <input type="checkbox" id="agree-term"> 
-            <label for="agree-term" class="pa-0 ma-0 text-none" style="font-size:0.9rem;font-weight:600;color:var(--gray11);">I agree with terms & conditions</label>
+          
+          <div class="checkout-block d-flex-c-st-st">
+            <p class="coupon-code">coupon code</p>
+            <input type="text" class="couponcode-input" placeholder="Enter Coupon Code">
+            <p class="coupon-code-info">Coupon code will be applied on the checkout page</p>
+            <p class="total-items d-flex-r-bt-c"><span>TOTAL:</span><span id="total">$38</span></p>
+            <p>Tax included and shipping calculated at checkout</p>
+            <div class="agree-terms d-flex-r-st-c py-2 px-0" style="gap:0.5rem;"><!-- agree-terms -->
+              <input type="checkbox" id="agree-term"> 
+              <label for="agree-term" class="pa-0 ma-0 text-none" style="font-size:0.9rem;font-weight:600;color:var(--gray11);">I agree with terms & conditions</label>
+            </div>
+            <button class="btn2">proceed to checkout</button>
+            <a href="index.html" class="trans-btn">continue shopping</a>
           </div>
-          <button class="btn2 my-4 w-100 font-weight-bold" style="border-radius:0.2rem;">proceed to checkout</button>
-          <a href="index.html" class="trans-btn w-100 ma-0 font-weight-bold" style="border-radius:0.2rem;">continue shopping</a>
+
         </div>
       </div>
 
