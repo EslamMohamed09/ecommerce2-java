@@ -307,6 +307,33 @@ monthDealPaginationDots.forEach((dot) => {
 });
 }
 
+/*
+#################
+ QUICK VIEW MODAL
+#################
+*/
+if(document.getElementById('quick-view-modal')){
+  const smallImgs = document.querySelectorAll('.quick-view-modal .product-container .col-left .small-images .small-image img');
+  const bigImg = document.querySelector('.quick-view-modal .product-container .col-left .big-image img');
+  const quickViewModal = document.getElementById('quick-view-modal');
+  const quickViewBtn = document.querySelector('.quick-view-btn');
+  const closeBtn = document.querySelector('.quick-view-modal #close-btn');
+  
+  quickViewBtn.addEventListener('click', function() {
+    quickViewModal.style.display = 'block';
+  });
+  
+  closeBtn.addEventListener('click', function() {
+    quickViewModal.style.display = 'none';
+  });
+  
+  smallImgs.forEach((smallImg) => {
+    smallImg.onclick = function(){
+      bigImg.src = smallImg.src;
+    }
+  });
+  
+  }  
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
@@ -384,7 +411,8 @@ colorCircles.forEach((colorCircle) => {
   });
 });
 
-const maxQuantity = parseInt(document.getElementById("instock").textContent);
+if(document.querySelector(".product-container .col-right")){
+const maxQuantity = parseInt(document.querySelector(".product-container .col-right #instock").textContent);
 const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
 const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
 const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
@@ -397,7 +425,7 @@ decreaseQuantityBtn.addEventListener('click', function(){
   if(proQuantityNumber > 1){
      proQuantityNumber -= 1;
      proQuantityElement.textContent = proQuantityNumber;
-     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
+     subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
   }
 });
 
@@ -405,37 +433,9 @@ increaseQuantityBtn.addEventListener('click', function(){
   if(proQuantityNumber < maxQuantity){
      proQuantityNumber += 1;
      proQuantityElement.textContent = proQuantityNumber;
-     subtotalElement.textContent =  `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
+     subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
   }
 });
-
-
-/*
-#################
- QUICK VIEW MODAL
-#################
-*/
-if(document.getElementById('quick-view-modal')){
-const smallImgs = document.querySelectorAll('.quick-view-modal .product-container .col-left .small-images .small-image img');
-const bigImg = document.querySelector('.quick-view-modal .product-container .col-left .big-image img');
-const quickViewModal = document.getElementById('quick-view-modal');
-const quickViewBtn = document.querySelector('.quick-view-btn');
-const closeBtn = document.querySelector('.quick-view-modal #close-btn');
-
-quickViewBtn.addEventListener('click', function() {
-  quickViewModal.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', function() {
-  quickViewModal.style.display = 'none';
-});
-
-smallImgs.forEach((smallImg) => {
-  smallImg.onclick = function(){
-    bigImg.src = smallImg.src;
-  }
-});
-
 }
 
 /*
@@ -443,6 +443,40 @@ smallImgs.forEach((smallImg) => {
  CART PAGE
 ###########
 */
+if(document.querySelector(".cart-page")){
+
+const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
+
+productRows.forEach((row) => {
+
+const decQuantityBtn = row.querySelector(".cart-page .col-left table .product-quantity-btns .decrease-quantity-btn");
+const proQuantity = row.querySelector(".cart-page .col-left table .product-quantity-btns #pro-quantity-no");
+const incQuantityBtn = row.querySelector(".cart-page .col-left table .product-quantity-btns .increase-quantity-btn");
+const avInStock = parseInt(row.querySelector(".cart-page .col-left table #instock").textContent);
+const proPrice = parseFloat(row.querySelector(".cart-page .col-left table .price").textContent.replace('$', '').trim());
+const totalPrice = row.querySelector(".cart-page .col-left table .total-price");
+
+
+let proQuantityNum = parseInt(proQuantity.textContent.trim());
+
+decQuantityBtn.addEventListener('click', function(){
+  if(proQuantityNum > 1){
+     proQuantityNum -= 1;
+     proQuantity.textContent = proQuantityNum;
+     totalPrice.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+  }
+});
+
+incQuantityBtn.addEventListener('click', function(){
+  if(proQuantityNum < avInStock){
+     proQuantityNum += 1;
+     proQuantity.textContent = proQuantityNum;
+     totalPrice.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+  }
+});
+
+});
+
 function updateProgressBar(calculateTotal) {
   const maxTotal = 5000;
   const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
@@ -466,3 +500,5 @@ function updateProgressBar(calculateTotal) {
 
 const calculateTotal = 3500;
 updateProgressBar(calculateTotal);
+
+}
