@@ -2074,8 +2074,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
               font-size:1rem;
               font-weight:bolder;}
 
-          th:nth-child(2),
-          th:nth-child(3) {text-align:center;}
+          th:not(:first-child) {text-align:center;}
 
         }
       }
@@ -2083,7 +2082,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       tr:not(:last-child) {border-bottom:1px solid var(--gray3);}
 
       tr {
-        td {
+        td {text-align:center !important;
           .product-card {gap:1rem;
 
             .image {flex:1 1 5rem;
@@ -2110,11 +2109,11 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
                                   border-radius:2rem;
 
             .pro-quantity-btn {width:1.6rem;
-                              height:2.6rem;
-                              font-size:0.9rem;
-                              color:var(--gray8);
-                              border:none;
-                              background-color:transparent;}
+                               height:2.6rem;
+                               font-size:0.9rem;
+                               color:var(--gray8);
+                               border:none;
+                               background-color:transparent;}
 
             #pro-quantity-no {font-size:1rem;
                               margin:0 0.5rem;
@@ -2127,16 +2126,12 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
   
           }
 
-          p.price {font-size:0.9rem;
-                   font-weight:bold;}
+          p.price,
+          p.total-price {font-size:0.9rem;
+                         font-weight:bold;}
 
           .fa-times {cursor:pointer;}
         }
-
-        td:nth-child(2),
-        td:nth-child(3) {text-align:center !important;}
-
-       
 
       }
 

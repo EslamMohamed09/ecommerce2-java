@@ -2387,12 +2387,14 @@ footer .bottom-footer p {
   font-size: 1rem;
   font-weight: bolder;
 }
-.cart-page .col-left table thead tr th:nth-child(2),
-.cart-page .col-left table thead tr th:nth-child(3) {
+.cart-page .col-left table thead tr th:not(:first-child) {
   text-align: center;
 }
 .cart-page .col-left table tr:not(:last-child) {
   border-bottom: 1px solid var(--gray3);
+}
+.cart-page .col-left table tr td {
+  text-align: center !important;
 }
 .cart-page .col-left table tr td .product-card {
   gap: 1rem;
@@ -2442,16 +2444,13 @@ footer .bottom-footer p {
 .cart-page .col-left table tr td .product-quantity-btns .pro-quantity-btn:nth-child(3) {
   padding-right: 1rem;
 }
-.cart-page .col-left table tr td p.price {
+.cart-page .col-left table tr td p.price,
+.cart-page .col-left table tr td p.total-price {
   font-size: 0.9rem;
   font-weight: bold;
 }
 .cart-page .col-left table tr td .fa-times {
   cursor: pointer;
-}
-.cart-page .col-left table tr td:nth-child(2),
-.cart-page .col-left table tr td:nth-child(3) {
-  text-align: center !important;
 }
 .cart-page .col-right .col-blocks .btn2 {
   width: 100%;

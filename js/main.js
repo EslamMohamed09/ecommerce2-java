@@ -384,7 +384,7 @@ colorCircles.forEach((colorCircle) => {
   });
 });
 
-const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
+const maxQuantity = parseInt(document.getElementById("instock").textContent);
 const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
 const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
 const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
