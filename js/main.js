@@ -449,13 +449,13 @@ const productRows = document.querySelectorAll(".cart-page .col-left table tbody 
 
 productRows.forEach((row) => {
 
-const decQuantityBtn = row.querySelector(".cart-page .col-left table .product-quantity-btns .decrease-quantity-btn");
-const proQuantity = row.querySelector(".cart-page .col-left table .product-quantity-btns #pro-quantity-no");
-const incQuantityBtn = row.querySelector(".cart-page .col-left table .product-quantity-btns .increase-quantity-btn");
-const avInStock = parseInt(row.querySelector(".cart-page .col-left table #instock").textContent);
-const proPrice = parseFloat(row.querySelector(".cart-page .col-left table .price").textContent.replace('$', '').trim());
-const totalPrice = row.querySelector(".cart-page .col-left table .total-price");
-
+const decQuantityBtn = row.querySelector(".product-quantity-btns .decrease-quantity-btn");
+const proQuantity = row.querySelector(".product-quantity-btns #pro-quantity-no");
+const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quantity-btn");
+const avInStock = parseInt(row.querySelector("#instock").textContent);
+const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
+const totalPrice = row.querySelector(".total-price");
+const subtotalProducts = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
 
 let proQuantityNum = parseInt(proQuantity.textContent.trim());
 
@@ -464,6 +464,12 @@ decQuantityBtn.addEventListener('click', function(){
      proQuantityNum -= 1;
      proQuantity.textContent = proQuantityNum;
      totalPrice.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+     
+     let subtotal = 0;
+     productRows.forEach(row => {
+       subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
+     });
+     subtotalProducts.textContent = `$${subtotal.toFixed(2)}`;
   }
 });
 
@@ -472,6 +478,12 @@ incQuantityBtn.addEventListener('click', function(){
      proQuantityNum += 1;
      proQuantity.textContent = proQuantityNum;
      totalPrice.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+     
+     let subtotal = 0;
+     productRows.forEach(row => {
+      subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
+     });
+     subtotalProducts.textContent = `$${subtotal.toFixed(2)}`;
   }
 });
 
