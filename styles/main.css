@@ -457,7 +457,7 @@ section {
   display: inline-block;
   padding: 0.7rem 2rem;
   font-size: 1rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   box-shadow: none;
   outline: none;
@@ -2350,12 +2350,15 @@ footer .bottom-footer p {
   margin: 1rem 0;
 }
 .cart-page .progress-bar-block .progress-bar-value {
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem;
+}
+.cart-page .progress-bar-block .progress-bar-value #progress-icon {
+  color: var(--orange-red1);
 }
 .cart-page .progress-bar-block .progress-bar-value .progress-bar {
   width: 100%;
-  background-color: #e0e0e0;
   height: 10px;
+  background-color: #e0e0e0;
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
@@ -2384,6 +2387,10 @@ footer .bottom-footer p {
   font-size: 1rem;
   font-weight: bolder;
 }
+.cart-page .col-left table thead tr th:nth-child(2),
+.cart-page .col-left table thead tr th:nth-child(3) {
+  text-align: center;
+}
 .cart-page .col-left table tr:not(:last-child) {
   border-bottom: 1px solid var(--gray3);
 }
@@ -2392,7 +2399,7 @@ footer .bottom-footer p {
 }
 .cart-page .col-left table tr .product-card .image {
   flex: 1 1 5rem;
-  padding: 0.5rem;
+  padding: 0.6rem;
 }
 .cart-page .col-left table tr .product-card .image img {
   width: 13rem;
@@ -2410,16 +2417,16 @@ footer .bottom-footer p {
 }
 .cart-page .col-left table tr .product-quantity-btns {
   width: fit-content;
-  margin: 0;
+  margin: 0 auto;
   gap: 0.5rem;
   border: 1px solid var(--gray10);
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 .cart-page .col-left table tr .product-quantity-btns .pro-quantity-btn {
-  width: 2.1rem;
-  height: 2.1rem;
-  font-size: 1rem;
-  color: var(--gray11);
+  width: 1.6rem;
+  height: 2.6rem;
+  font-size: 0.9rem;
+  color: var(--gray8);
   border: none;
   background-color: transparent;
 }
@@ -2427,15 +2434,20 @@ footer .bottom-footer p {
   font-size: 1rem;
   margin: 0 0.5rem;
   padding: 0;
-  color: var(--gray11);
+  color: var(--gray10);
 }
 .cart-page .col-left table tr .product-quantity-btns .pro-quantity-btn:first-child {
-  border-right: 1px solid var(--gray10);
+  padding-left: 1rem;
 }
 .cart-page .col-left table tr .product-quantity-btns .pro-quantity-btn:nth-child(3) {
-  border-left: 1px solid var(--gray10);
+  padding-right: 1rem;
 }
-.cart-page .col-left table tr .price {
+.cart-page .col-left table tr td:nth-child(2),
+.cart-page .col-left table tr td:nth-child(3) {
+  text-align: center !important;
+}
+.cart-page .col-left table tr p.price {
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .cart-page .col-right .col-blocks .btn2 {
@@ -2500,7 +2512,7 @@ footer .bottom-footer p {
   background: transparent;
 }
 .cart-page .col-right .col-blocks .checkout-block p.coupon-code-info {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--gray6);
 }
 .cart-page .col-right .col-blocks .checkout-block p.total-items {
@@ -2509,6 +2521,10 @@ footer .bottom-footer p {
   border-top: 1px solid var(--gray4);
   border-bottom: 1px solid var(--gray4);
   font-weight: bold;
+}
+.cart-page .col-right .col-blocks .checkout-block p.tax-included {
+  font-size: 0.9rem;
+  color: var(--gray6);
 }
 .cart-page .col-right .col-blocks .checkout-block .btn2 {
   font-weight: bold;
