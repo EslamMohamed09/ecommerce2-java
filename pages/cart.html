@@ -125,7 +125,7 @@
                 </div>
               </td>
               <td></td>
-              <td><i class="far fa-window-close"></i></td>
+              <td><i class="fas fa-times"></i></td>
             </tr>
 
             <tr>
@@ -148,7 +148,7 @@
                 </div>
               </td>
               <td></td>
-              <td><i class="far fa-window-close"></i></td>
+              <td><i class="fas fa-times"></i></td>
             </tr>
 
           </tbody>
@@ -180,9 +180,9 @@
             <p class="coupon-code-info">Coupon code will be applied on the checkout page</p>
             <p class="total-items d-flex-r-bt-c"><span>TOTAL:</span><span id="total">$38</span></p>
             <p class="tax-included">Tax included and shipping calculated at checkout</p>
-            <div class="agree-terms d-flex-r-st-c py-2 px-0" style="gap:0.5rem;"><!-- agree-terms -->
-              <input type="checkbox" id="agree-term"> 
-              <label for="agree-term" class="pa-0 ma-0 text-none" style="font-size:0.9rem;font-weight:600;color:var(--gray11);">I agree with terms & conditions</label>
+            <div class="agree-terms d-flex-r-st-c"><!-- agree-terms -->
+              <input type="checkbox" id="agreeterm-checkbox">
+              <label for="agreeterm-checkbox" style="font-size:0.9rem;font-weight:600;color:var(--gray11);">I agree with terms & conditions</label>
             </div>
             <button class="btn2">proceed to checkout</button>
             <a href="index.html" class="trans-btn">continue shopping</a>
@@ -193,16 +193,18 @@
 
     </div>
 
-    <div class="mt-5 d-flex-r-st-c"> <!-- secure -->
+    <div class="secure-shopping d-flex-r-st-c"> <!-- secure -->
       <i class="fas fa-lock"></i>
-      <p style="padding:0;color:var(--gray10);">Secure Shopping Guarantee</p>
+      <p>Secure Shopping Guarantee</p>
     </div>
-    <div class="mt-5 d-flex-r-st-c" style="gap:1rem;"> <!-- images -->
-      <img src="../images/norton.png" style="height:1.3rem;" alt="">
-      <img src="../images/TRUSTe.jpg" style="height:1.3rem;" alt="">
-      <img src="../images/authorizenet.png" style="height:1.3rem;" alt="">
-      <img src="../images/accredited.png" style="height:1.3rem;" alt="">
+
+    <div class="services-images d-flex-r-st-c"> <!-- images -->
+      <img src="../images/norton.png" alt="">
+      <img src="../images/TRUSTe.jpg" alt="">
+      <img src="../images/authorizenet.png" alt="">
+      <img src="../images/accredited.png" alt="">
     </div>
+
   </div>
 </section>
 
