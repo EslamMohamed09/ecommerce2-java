@@ -514,3 +514,26 @@ const calculateTotal = 3500;
 updateProgressBar(calculateTotal);
 
 }
+
+/*
+##############
+ CHECKOUT PAGE
+##############
+*/
+if(document.querySelector(".checkout-page")){
+ const deliveryChecks = document.querySelectorAll(".checkout-page .col-left .delivery-block .check-parent .check");
+ deliveryChecks.forEach((deliveryCheck) => {
+  deliveryCheck.addEventListener('click', function(){
+
+    deliveryChecks.forEach((deliveryCheck) => {
+      deliveryCheck.classList.remove('selectedcheck');
+      const radioInput = deliveryCheck.querySelector('input[type="radio"]');
+      radioInput.checked = false;
+    });
+
+    deliveryCheck.classList.add('selectedcheck');
+    const radioInput = deliveryCheck.querySelector('input[type="radio"]');
+    radioInput.checked = true;
+  });
+ });
+}

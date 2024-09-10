@@ -74,85 +74,87 @@
         
       <div class="col-left col-md-7">
 
-        <div class="upper-block" style="background:transparent;padding:0 !important;">
-            <h2>Mart Project</h2>
-            <div class="page-hierarchy d-flex-r-st-c"><p>cart</p> <i class="fas fa-chevron-right"></i> <p>Information</p></div>
-            <div class="buttons d-flex-r-bt-c">
-              <button class="w-50 rounded-md font-weight-bold border-none" style="background-color:var(--shin-blue3);color:var(--white2);font-size:1rem;">shop
-                <span style="padding:0.3rem 0.4rem;border-radius:0.4rem;color:var(--shin-blue3);background-color:var(--white2);">pay</span>
-              </button>
-              <button class="btn w-50" style="background-color:var(--black2);color:var(--white2);font-size:1rem;"><i class="fab fa-google"></i>pay</button>
-            </div>
-        </div>
-        
-        <div class="line d-flex-r-st-c my-4 pl-2" style="gap:1rem;"> <!-- line -->
-          <span style="color:var(--gray5);text-transform:uppercase;">or</span>
-        </div>
+        <h4>Mart Project</h4>
+        <div class="page-hierarchy d-flex-r-st-c"><p>cart</p> <i class="fas fa-chevron-right"></i> <p>Information</p></div>
 
-        <div class="card">
-          <div class="contact-block block w-100 pa-0"> <!-- CONTACT BLOCK -->
-            <div class="heading d-flex-r-bt-c w-100 mb-2"> <!-- title parent -->
-              <h4>contact</h4> 
-              <div class="d-flex-r-st-c" style="gap:0.2rem;font-size:0.9rem;">
+        <div class="blocks d-flex-c-st-st">
+
+          <div class="pay-block block">
+            <div class="buttons d-flex-r-bt-c">
+              <button class="btn2">shop <span>pay</span></button>
+              <button class="b-btn"><i class="fab fa-google"></i>pay</button>
+            </div>
+            <div class="line d-flex-r-st-c my-4 pl-2"> <!-- line -->
+              <hr><span>or</span><hr>
+            </div>
+          </div>
+        
+          <div class="contact-block block"> 
+            <div class="heading d-flex-r-bt-c">
+              <h5>contact</h5> 
+              <div class="col-right d-flex-r-st-c">
                 <span>have an account?</span>
                 <a href="loginpage">login</a>
               </div>
             </div>
-          <div class="input-parent d-flex-r-bt-c rounded-lg w-100"> <!-- input-parent -->
-            <div class="d-flex-c-st-st w-75 position-relative">
-              <input type="text" required>
-              <label>Email or mobile phone number</label>
+            <div class="input-parent d-flex-r-bt-c">
+              <div class="input-box d-flex-c-st-st">
+                <input type="text" required>
+                <label>Email or mobile phone number</label>
+              </div>
+              <span><i class="fas fa-mobile-alt"></i></span>
             </div>
-            <i class="fas fa-mobile-alt"></i>
+            <div class="checkbox-parent d-flex-r-st-c">
+              <input type="checkbox" id="email-me">
+              <label for="email-me">Email me with news and offers</label>
+            </div>
           </div>
-          <div class="d-flex-r-st-c" style="gap:0.4rem;padding:0;"> <!-- email me -->
-            <input type="checkbox" id="email-me">
-            <label for="email-me" style="font-size:0.9rem;text-transform:none;">Email me with news and offers</label>
-          </div>
-          </div>
-          <div class="delivery-block block w-100 py-3"> <!-- DELIVERY BLOCK -->
-            <h4 style="margin-bottom:8px;">delivery method</h4>
-            <div class="check-parent d-block w-100">
-              <div class="check d-flex-r-st-c w-100">
-                <input type="radio" value="ship">
+
+          <div class="delivery-block block">
+            <h5>delivery method</h5>
+            <div class="check-parent d-block">
+              <div class="check d-flex-r-st-c">
+                <input type="radio" name="delivery" value="ship">
                 <i class="fas fa-truck-moving"></i>
-                <p class="margin-left:1.5rem;">ship</p>
+                <p>ship</p>
               </div>
-              <div class="check d-flex-r-st-c w-100">
-                <input type="radio" value="pickup">
+              <div class="check d-flex-r-st-c">
+                <input type="radio" name="delivery" value="pickup">
                 <i class="fas fa-gift"></i>
-                <p class="margin-left:1.5rem;">pick up</p>
+                <p>pick up</p>
               </div>
             </div>
           </div>
-          <div class="shipping-block block w-100 py-3"> <!-- SHIPPING BLOCK -->
-            <h4 style="margin-bottom:8px;">shipping address</h4>
-            <form class="d-flex-c-st-end" style="gap:0.7rem;">
-              <div class="input-parent d-flex-c-st-st position-relative rounded-lg w-100"> <!-- input-parent -->
+
+          <div class="shipping-block block">
+            <h5>shipping address</h5>
+            <form class="d-flex-c-st-end">
+              <div class="input-parent d-flex-c-st-st position-relative"> <!-- input-parent -->
                 <input type="text" maxlength="35" required>
                 <label>fullname</label>
               </div>
-              <div class="input-parent d-flex-c-st-st position-relative rounded-lg w-100"> <!-- input-parent -->
+              <div class="input-parent d-flex-c-st-st position-relative"> <!-- input-parent -->
                 <input type="text" required>
                 <label>address</label>
               </div>
-              <div class="d-flex-r-bt-c w-100" style="gap:0.6rem;">
-                 <div class="input-parent d-flex-c-st-st w-100" style="position:relative;"> <!-- input-parent -->
-                   <input type="text" maxlength="15" required>
-                   <label>government</label>
-                 </div>
-                 <div class="input-parent d-flex-c-st-st w-100" style="position:relative;"> <!-- input-parent -->
-                   <input type="text" maxlength="15" required>
-                   <label>city</label>
-                 </div>
-                 <div class="input-parent d-flex-c-st-st w-100" style="position:relative;"> <!-- input-parent -->
-                   <input type="text" maxlength="9" required>
-                   <label>postal code</label>
-                 </div>
+              <div class="inputs-box d-flex-r-bt-c">
+                <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                  <input type="text" maxlength="15" required>
+                  <label>government</label>
+                </div>
+                <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                  <input type="text" maxlength="15" required>
+                  <label>city</label>
+                </div>
+                <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                  <input type="text" maxlength="9" required>
+                  <label>postal code</label>
+                </div>
               </div>
-              <button class="btn2 mt-3">continue shipping</button>
+              <button class="btn2">continue shipping</button>
             </form>
           </div>
+
         </div>
         
       </div> <!-- END COL -->
