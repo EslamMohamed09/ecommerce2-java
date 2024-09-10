@@ -2509,22 +2509,34 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
     }
 
 
-    .discount-block {
-      .input-parent {
+    .discount-block {width:100%;
+                     gap:0.8rem;
+
+      .input-parent {width:100%;
+                     margin-bottom:1.5rem;
       
         input[type="text"] {width:80%;
                             background-color:var(--white);
-                            border:1px solid var(--gray8);
+                            border:1px solid var(--gray4);
                             padding:0.7rem 0.8rem;
                             border-radius:0.5rem;}
       
-        button {padding:0.7rem;
+        button {padding:0.7rem 1rem;
                 height:fit-content;
-                color:var(--gray2);
                 font-size:1rem;
                 font-weight:bold;
-                background-color:var(--gray8);}
+                text-transform:capitalize;
+                border-radius:0.3rem;
+                border:none;
+                color:var(--gray10);
+                background-color:var(--gray4);}
       }
+      
+      p {width:100%;
+         font-size:1rem;
+         color:var(--gray10);}
+      p.subtotal .value {font-weight:bold;}
+      p.total {font-weight:bold;}
     }
   }
   
