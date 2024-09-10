@@ -2820,6 +2820,33 @@ footer .bottom-footer p {
   background: var(--gray1);
   border-left: 1.5px solid var(--gray4);
 }
+.checkout-page .col-right .products {
+  width: 100%;
+}
+.checkout-page .col-right .products .product-item {
+  width: 100%;
+}
+.checkout-page .col-right .products .product-item .content {
+  gap: 1rem;
+}
+.checkout-page .col-right .products .product-item .content .image {
+  position: relative;
+}
+.checkout-page .col-right .products .product-item .content .image img {
+  width: 5rem;
+  height: 5rem;
+}
+.checkout-page .col-right .products .product-item .content .details h5 {
+  font-weight: bold;
+}
+.checkout-page .col-right .products .product-item .content .details p {
+  color: var(--gray5);
+  font-size: 0.8rem;
+}
+.checkout-page .col-right .products .product-item p {
+  color: var(--gray9);
+  margin: 0 !important;
+}
 .checkout-page .col-right .discount-block input[type=text] {
   width: 80%;
   background-color: var(--white);

@@ -2468,6 +2468,24 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
               background:var(--gray1);
               border-left:1.5px solid var(--gray4);
 
+    .products {width:100%;
+      .product-item {width:100%;
+        .content {gap:1rem;
+          .image {position:relative;
+            img {width:5rem;
+                 height:5rem;}
+          }
+          .details {
+            h5 {font-weight:bold;}
+            p {color:var(--gray5);
+               font-size:0.8rem;}
+          }
+        }
+        p {color:var(--gray9);
+           margin:0 !important;}
+      }
+    }
+
     .discount-block {
     
       input[type="text"] {width:80%;
