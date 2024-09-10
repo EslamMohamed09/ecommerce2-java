@@ -2839,8 +2839,8 @@ footer .bottom-footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: yellow;
-  background-color: var(--olive10);
+  color: var(--gray3);
+  background-color: var(--gray10);
   border-radius: 50%;
   margin-bottom: 1rem;
   position: absolute;
@@ -2870,14 +2870,14 @@ footer .bottom-footer p {
   color: var(--gray9);
   margin: 0 !important;
 }
-.checkout-page .col-right .discount-block input[type=text] {
+.checkout-page .col-right .discount-block .input-parent input[type=text] {
   width: 80%;
   background-color: var(--white);
   border: 1px solid var(--gray8);
   padding: 0.7rem 0.8rem;
   border-radius: 0.5rem;
 }
-.checkout-page .col-right .discount-block .v-btn {
+.checkout-page .col-right .discount-block .input-parent button {
   padding: 0.7rem;
   height: fit-content;
   color: var(--gray2);
