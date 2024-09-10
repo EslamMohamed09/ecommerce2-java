@@ -2832,9 +2832,32 @@ footer .bottom-footer p {
 .checkout-page .col-right .products .product-item .content .image {
   position: relative;
 }
+.checkout-page .col-right .products .product-item .content .image .value {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  background-color: var(--olive10);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.8rem;
+}
+.checkout-page .col-right .products .product-item .content .image .value span {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 6px;
+}
 .checkout-page .col-right .products .product-item .content .image img {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 .checkout-page .col-right .products .product-item .content .details h5 {
   font-weight: bold;

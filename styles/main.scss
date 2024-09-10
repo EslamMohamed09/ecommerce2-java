@@ -687,7 +687,6 @@ header {
                         margin:0;
                         font-size:0.7rem;
                         line-height:6px;}
-
               }
         }
       }
@@ -2472,8 +2471,31 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       .product-item {width:100%;
         .content {gap:1rem;
           .image {position:relative;
-            img {width:5rem;
-                 height:5rem;}
+
+            .value {width:fit-content;
+                    height:fit-content;
+                    padding:5px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    color:yellow;
+                    background-color:var(--olive10);
+                    border-radius:50%;
+                    margin-bottom:1rem;
+                    position:absolute;
+                    top:-0.5rem;
+                    right:-0.8rem;
+
+              span {width:fit-content;
+                    height:fit-content;
+                    padding:0;
+                    margin:0;
+                    font-size:0.7rem;
+                    line-height:6px;}
+            }
+
+            img {width:4rem;
+                 height:4rem;}
           }
           .details {
             h5 {font-weight:bold;}
