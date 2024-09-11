@@ -446,6 +446,20 @@ increaseQuantityBtn.addEventListener('click', function(){
 if(document.querySelector(".cart-page")){
 
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
+const subtotalProducts = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
+
+let initialSubtotal = 0;
+productRows.forEach((row) => {
+  const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
+  const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
+  const totalPrice = row.querySelector(".total-price");
+
+  totalPrice.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
+
+  initialSubtotal += proQuantity * proPrice;
+});
+
+subtotalProducts.textContent = `$${initialSubtotal.toFixed(2)}`;
 
 productRows.forEach((row) => {
 
@@ -455,7 +469,6 @@ const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quant
 const avInStock = parseInt(row.querySelector("#instock").textContent);
 const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
 const totalPrice = row.querySelector(".total-price");
-const subtotalProducts = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
 
 let proQuantityNum = parseInt(proQuantity.textContent.trim());
 
