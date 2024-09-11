@@ -446,10 +446,13 @@ increaseQuantityBtn.addEventListener('click', function(){
 if(document.querySelector(".cart-page")){
 
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
-const subtotalPriceProducts = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
+const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
 const total = document.querySelector(".cart-page .col-right .checkout-block #total");
 
 let initialSubtotal = 0;
+let shippingFee = 10;
+const maxTotal = 5000;
+
 productRows.forEach((row) => {
   const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
   const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
@@ -458,60 +461,77 @@ productRows.forEach((row) => {
   totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
 
   initialSubtotal += proQuantity * proPrice;
+  
+  if(initialSubtotal >= maxTotal){shippingFee = 0;}
 });
 
-subtotalPriceProducts.textContent = `$${initialSubtotal.toFixed(2)}`;
-total.textContent = `$${(initialSubtotal + 10).toFixed(2)}`;
+subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
+total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
 
 productRows.forEach((row) => {
 
-const decQuantityBtn = row.querySelector(".product-quantity-btns .decrease-quantity-btn");
-const proQuantity = row.querySelector(".product-quantity-btns #pro-quantity-no");
-const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quantity-btn");
-const avInStock = parseInt(row.querySelector("#instock").textContent);
-const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
-const totalPriceProduct = row.querySelector(".total-price");
+  const decQuantityBtn = row.querySelector(".product-quantity-btns .decrease-quantity-btn");
+  const proQuantity = row.querySelector(".product-quantity-btns #pro-quantity-no");
+  const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quantity-btn");
+  const avInStock = parseInt(row.querySelector("#instock").textContent);
+  const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
+  const totalPriceProduct = row.querySelector(".total-price");
 
-let proQuantityNum = parseInt(proQuantity.textContent.trim());
+  let proQuantityNum = parseInt(proQuantity.textContent.trim());
 
-decQuantityBtn.addEventListener('click', function(){
-  if(proQuantityNum > 1){
-     proQuantityNum -= 1;
-     proQuantity.textContent = proQuantityNum;
-     totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
-     
-     let subtotal = 0;
-     productRows.forEach(row => {
-       subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
-     });
-     subtotalPriceProducts.textContent = `$${subtotal.toFixed(2)}`;
-     total.textContent = `$${(subtotal + 10).toFixed(2)}`;
+  decQuantityBtn.addEventListener('click', function(){
+    if(proQuantityNum > 1){
+      proQuantityNum -= 1;
+      proQuantity.textContent = proQuantityNum;
+      totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+      
+      let subtotal = 0;
+      productRows.forEach(row => {
+        subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
+      });
 
-     updateProgressBar(subtotalPriceProducts.textContent.replace('$', ''));
-  }
-});
+      subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
 
-incQuantityBtn.addEventListener('click', function(){
-  if(proQuantityNum < avInStock){
-     proQuantityNum += 1;
-     proQuantity.textContent = proQuantityNum;
-     totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
-     
-     let subtotal = 0;
-     productRows.forEach(row => {
-      subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
-     });
-     subtotalPriceProducts.textContent = `$${subtotal.toFixed(2)}`;
-     total.textContent = `$${(subtotal + 10).toFixed(2)}`;
-     
-     updateProgressBar(subtotalPriceProducts.textContent.replace('$', ''));
-  }
-});
+      if (subtotal >= maxTotal) {
+          shippingFee = 0;
+      } else {
+        shippingFee = 10;
+      }
+
+      total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
+
+      updateProgressBar(subtotal);
+    }
+  });
+
+  incQuantityBtn.addEventListener('click', function(){
+    if(proQuantityNum < avInStock){
+      proQuantityNum += 1;
+      proQuantity.textContent = proQuantityNum;
+      totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+      
+      let subtotal = 0;
+      productRows.forEach(row => {
+        subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
+      });
+
+      subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
+
+      if (subtotal >= maxTotal) {
+        shippingFee = 0;
+      } else {
+        shippingFee = 10;
+      }
+
+      total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
+
+      updateProgressBar(subtotal);
+    }
+  });
 
 });
 
 function updateProgressBar(calculateTotal) {
-  const maxTotal = 5000;
   const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
   const progressBar = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
   const progressIcon = document.getElementById('progress-icon');
@@ -527,9 +547,10 @@ function updateProgressBar(calculateTotal) {
   }
 
   progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
+  
 }
 
-updateProgressBar(subtotalPriceProducts.textContent.replace('$', ''));
+updateProgressBar(subtotalProductsPrice.textContent.replace('$', ''));
 
 }
 
