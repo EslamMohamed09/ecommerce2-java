@@ -508,23 +508,20 @@ function updateProgressBar(calculateTotal) {
   const progressBar = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
   const progressIcon = document.getElementById('progress-icon');
 
-  // Update the width of the progress bar
   progressBar.style.width = `${Math.min(progressPercentage, 100)}%`;
 
-  if (progressPercentage < 50) {
-      progressBar.style.backgroundColor = 'var(--orange-red1)';
-  } else if (progressPercentage >= 50 && progressPercentage < 100) {
+  if (progressPercentage < 25) {
+      progressBar.style.backgroundColor = 'var(--red8)';
+  } else if (progressPercentage >= 25 && progressPercentage < 100) {
     progressBar.style.backgroundColor = 'orange';
   } else {
-    progressBar.style.backgroundColor = 'green';
+    progressBar.style.backgroundColor = 'var(--green10)';
   }
 
-  // Move the icon along the track
   progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
 }
 
-const calculateTotal = 3500;
-updateProgressBar(calculateTotal);
+updateProgressBar(subtotalProducts.textContent.replace('$', ''));
 
 }
 

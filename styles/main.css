@@ -2369,9 +2369,12 @@ footer .bottom-footer p {
 }
 .cart-page .progress-bar-block .progress-bar-value {
   margin: 0 0 0.5rem;
+  position: relative;
 }
 .cart-page .progress-bar-block .progress-bar-value #progress-icon {
   color: var(--orange-red1);
+  position: absolute;
+  top: -1.1rem;
 }
 .cart-page .progress-bar-block .progress-bar-value .progress-bar {
   width: 100%;

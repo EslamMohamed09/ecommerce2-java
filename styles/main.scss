@@ -2052,8 +2052,11 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
                        margin:1rem 0;
 
     .progress-bar-value {margin:0 0 0.5rem;
+                         position:relative;
 
-      #progress-icon {color:var(--orange-red1);}
+      #progress-icon {color:var(--orange-red1);
+                      position:absolute;
+                      top:-1.1rem;}
 
       .progress-bar {width:100%;
                      height:10px;
