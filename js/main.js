@@ -458,10 +458,10 @@ productRows.forEach((row) => {
   totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
 
   initialSubtotal += proQuantity * proPrice;
-  total.textContent = `$${initialSubtotal + 10}`;
 });
 
 subtotalPriceProducts.textContent = `$${initialSubtotal.toFixed(2)}`;
+total.textContent = `$${(initialSubtotal + 10).toFixed(2)}`;
 
 productRows.forEach((row) => {
 
@@ -485,6 +485,8 @@ decQuantityBtn.addEventListener('click', function(){
        subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
      });
      subtotalPriceProducts.textContent = `$${subtotal.toFixed(2)}`;
+     total.textContent = `$${(subtotal + 10).toFixed(2)}`;
+
      updateProgressBar(subtotalPriceProducts.textContent.replace('$', ''));
   }
 });
@@ -500,6 +502,8 @@ incQuantityBtn.addEventListener('click', function(){
       subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
      });
      subtotalPriceProducts.textContent = `$${subtotal.toFixed(2)}`;
+     total.textContent = `$${(subtotal + 10).toFixed(2)}`;
+     
      updateProgressBar(subtotalPriceProducts.textContent.replace('$', ''));
   }
 });
