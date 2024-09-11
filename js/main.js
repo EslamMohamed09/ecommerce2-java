@@ -448,6 +448,7 @@ if(document.querySelector(".cart-page")){
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
 const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
 const total = document.querySelector(".cart-page .col-right .checkout-block #total");
+const remainingFree = document.querySelector(".cart-page .progress-bar-block .shipping-case #remaining-free");
 
 let initialSubtotal = 0;
 let shippingFee = 10;
@@ -467,6 +468,8 @@ productRows.forEach((row) => {
 
 subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
 total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
+const remainingAmount = maxTotal - initialSubtotal;
+remainingFree.textContent = remainingAmount;
 
 productRows.forEach((row) => {
 
@@ -501,6 +504,7 @@ productRows.forEach((row) => {
       total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
 
       updateProgressBar(subtotal);
+      remainingFree.textContent = remainingAmount;
     }
   });
 
@@ -526,6 +530,7 @@ productRows.forEach((row) => {
       total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
 
       updateProgressBar(subtotal);
+      remainingFree.textContent = remainingAmount;
     }
   });
 
@@ -551,6 +556,9 @@ function updateProgressBar(calculateTotal) {
 }
 
 updateProgressBar(subtotalProductsPrice.textContent.replace('$', ''));
+
+
+
 
 }
 
