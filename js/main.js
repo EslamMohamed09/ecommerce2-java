@@ -483,6 +483,7 @@ decQuantityBtn.addEventListener('click', function(){
        subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
      });
      subtotalProducts.textContent = `$${subtotal.toFixed(2)}`;
+     updateProgressBar(subtotalProducts.textContent.replace('$', ''));
   }
 });
 
@@ -497,6 +498,7 @@ incQuantityBtn.addEventListener('click', function(){
       subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
      });
      subtotalProducts.textContent = `$${subtotal.toFixed(2)}`;
+     updateProgressBar(subtotalProducts.textContent.replace('$', ''));
   }
 });
 
