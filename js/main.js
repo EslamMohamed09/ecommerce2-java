@@ -448,7 +448,7 @@ if(document.querySelector(".cart-page")){
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
 const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
 const total = document.querySelector(".cart-page .col-right .checkout-block #total");
-const remainingFree = document.querySelector(".cart-page .progress-bar-block .shipping-case #remaining-free");
+const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
 
 let initialSubtotal = 0;
 let shippingFee = 10;
@@ -469,8 +469,15 @@ productRows.forEach((row) => {
 subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
 total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
 
-let remainingAmount = maxTotal - initialSubtotal; // remaining amount in bar
-remainingFree.textContent = remainingAmount.toFixed(2);
+function updateShippingMessage(subtotal){
+  if(subtotal >= maxTotal){
+     shippingInfo.textContent = "Your order now includes free shipping!";
+  } else {
+    shippingInfo.innerHTML = `only <span id="remaining-free">${(maxTotal - subtotal).toFixed(2)}</span> away from free shipping`;
+  }
+}
+
+updateShippingMessage(initialSubtotal);
 
 productRows.forEach((row) => {
 
@@ -504,8 +511,7 @@ productRows.forEach((row) => {
 
       total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
 
-      remainingAmount = maxTotal - subtotal;
-      remainingFree.textContent = remainingAmount.toFixed(2);
+      updateShippingMessage(subtotal);
 
       updateProgressBar(subtotal);
     }
@@ -532,8 +538,7 @@ productRows.forEach((row) => {
 
       total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
       
-      remainingAmount = maxTotal - subtotal;
-      remainingFree.textContent = remainingAmount.toFixed(2);
+      updateShippingMessage(subtotal);
 
       updateProgressBar(subtotal);
     }
@@ -560,7 +565,7 @@ function updateProgressBar(calculateTotal) {
   
 }
 
-updateProgressBar(subtotalProductsPrice.textContent.replace('$', ''));
+updateProgressBar(initialSubtotal);
 
 }
 
