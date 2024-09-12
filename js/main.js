@@ -483,21 +483,27 @@ increaseQuantityBtn.addEventListener('click', function(){
 */
 if(document.querySelector(".cart-page")){
 
+// Function to render the cart items
 function renderCartItems() {
-  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
-  const cartTableBody = document.getElementById('cart-items');
+  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || []; // Get cart items from localStorage
+  const cartTableBody = document.getElementById('cart-items'); // Target the tbody
 
+  // Clear any existing content in the cart table
   cartTableBody.innerHTML = '';
 
   // If the cart is empty, show a message
   if (cartItems.length === 0) {
-      cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
-      return;
+    cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
+    return;
   }
 
   cartItems.forEach((product, index) => {
-    const total = product.price * product.quantity; // Calculate total price for the product
-
+    // Ensure the price is a number
+    const price = parseFloat(product.price); 
+  
+    // Calculate total price for the product
+    const total = price * product.quantity;
+  
     const productRow = `
       <tr>
         <td> <!-- Product -->
@@ -508,12 +514,13 @@ function renderCartItems() {
             <div class="content d-flex-c-st-st">
               <h5>${product.title}</h5>
               <p>${product.color} / ${product.size}</p>
-              <p>electronics</p>
-              <span id="instock">${product.inStock}</span>
+              <p>${product.description}</p>
+              <p>Brand: ${product.brand}</p>
+              <span id="instock">${product.stock} in stock</span>
             </div>
           </div>
         </td>
-        <td><p class="price">$${product.price.toFixed(2)}</p></td>
+        <td><p class="price">$${price.toFixed(2)}</p></td>
         <td> <!-- Quantity -->
           <div class="product-quantity-btns d-flex-r-st-c">
             <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'decrease')">
@@ -529,10 +536,11 @@ function renderCartItems() {
         <td><i class="fas fa-times" onclick="removeProduct(${index})"></i></td>
       </tr>
     `;
-
+  
     // Append the product row to the table body
     cartTableBody.innerHTML += productRow;
   });
+  
 }
 
 // Function to update product quantity
@@ -560,6 +568,7 @@ function removeProduct(index) {
 
 // Initialize cart rendering on page load
 document.addEventListener('DOMContentLoaded', renderCartItems);
+
 
 
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
