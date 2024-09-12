@@ -33,7 +33,7 @@
   <div id="main-header" class="main-header">
 
     <div class="upper d-flex-r-bt-c">
-      <h2 class="web-title"><a href="index.html">shopping</a></h2>
+      <h2 class="web-title"><a href="../index.html">shopping</a></h2>
       <form class="search-form d-flex-r-bt-c">
         <input type="search" placeholder="search">
         <button class="search-btn"><i class="fas fa-search"></i></button>
@@ -43,7 +43,7 @@
           <i class="far fa-heart"></i>
           <div class="value"><span>8</span></div>
         </a>
-        <a href="pages/cart.html" class="icon d-flex-r-c-c">
+        <a href="cart.html" class="icon d-flex-r-c-c">
           <i class="fas fa-shopping-cart"></i>
           <div class="value"><span>2</span></div>
         </a>
@@ -111,15 +111,15 @@
           
           <div class="description-block d-flex-c-st-st">
             <p><span>Description</span> <i class="fas fa-sticky-note"></i></p>
-            <p>Wireless carrier: Unlocked for All Carriers, Memory storage capacity: 12 GB, Screen size: 6.8 Inches, Wireless network: technology GSM, CDMA, LTE</p>
+            <p class="description">Wireless carrier: Unlocked for All Carriers, Memory storage capacity: 12 GB, Screen size: 6.8 Inches, Wireless network: technology GSM, CDMA, LTE</p>
           </div>
 
-          <p><span>Brand:</span> braun</p>
+          <p class="brand"><span>Brand:</span> samsung</p>
           <p><span>In stock:</span> <span id="instock">18</span></p>
 
           <div class="about-item-block d-flex-c-st-st">
             <p><span>About This Item</span> <i class="fas fa-sticky-note"></i></p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aperiam deleniti a adipisci recusandae dicta laborum. Sunt doloribus itaque mollitia!</p>
+            <p class="about-this-item">Wireless carrier: Unlocked for All Carriers, Memory storage capacity: 12 GB, Screen size: 6.8 Inches</p>
           </div>
 
           <div class="product-price d-flex-r-c-c">
@@ -128,9 +128,11 @@
           </div>
 
           <div class="size-block d-flex-c-st-st" style="gap:0.5rem;">
-            <p><span>size:</span> xl</p>
+            <p><span>size:</span> <span class="size">xl</span></p>
             <div class="sizes d-flex-r-st-st" style="gap:1rem;">
               <span>L</span>
+              <span>xl</span>
+              <span>xxl</span>
             </div>
           </div>
 
@@ -153,7 +155,7 @@
             <p style="font-size:0.9rem;"><span>subtotal:</span> <span id="subtotal">$38</span></p>
           </div>
 
-          <a href="cart.html" class="btn">Add To Card</a>
+          <button type="button" class="b-btn">Add To Cart</button>
           <a href="#"><p>see all mobiles</p></a>
         </div> <!-- End content -->
       </div> <!-- End col-right -->

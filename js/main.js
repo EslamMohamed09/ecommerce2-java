@@ -400,6 +400,43 @@ function leaveLens(){
 
 magnify(bigImage);
 
+document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function(){
+  const singlepProductContainer = document.querySelector("#single-page .product-container");
+  const productTitleV = singlepProductContainer.querySelector('h1').textContent;
+  const productImageV = singlepProductContainer.querySelector(".big-image img").getAttribute('src');
+  const productDescriptionV = singlepProductContainer.querySelector('.description').textContent;
+  const productBrandV = singlepProductContainer.querySelector('.brand').textContent.split(': ')[1];
+  const productStockV = singlepProductContainer.querySelector('.col-right #instock').textContent;
+  const productAboutV = singlepProductContainer.querySelector('.about-this-item').textContent;
+  const oldPriceV = singlepProductContainer.querySelector('.oldprice').textContent;
+  const priceV = singlepProductContainer.querySelector('.price').textContent;
+  const sizeV = singlepProductContainer.querySelector('.size').textContent;
+  const colorV = singlepProductContainer.querySelector('.col-right #selected-color').textContent;
+  const quantityV = singlepProductContainer.querySelector('.col-right #pro-quantity-no').textContent;
+
+  const product = {
+    title: productTitleV,
+    image: productImageV,
+    description: productDescriptionV,
+    brand: productBrandV,
+    stock: productStockV,
+    about: productAboutV,
+    oldPrice: oldPriceV,
+    price: priceV,
+    size: sizeV,
+    color: colorV,
+    quantity: quantityV
+  };
+
+  let productCart = JSON.parse(localStorage.getItem('product-cart')) || [];
+  productCart.push(product);
+  localStorage.setItem('product-cart', JSON.stringify(productCart));
+
+  alert('Product added to cart');
+
+});
+
+
 }
 
 const selectedColor = document.querySelector(".color-block #selected-color");

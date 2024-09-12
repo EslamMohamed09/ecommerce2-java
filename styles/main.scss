@@ -2015,9 +2015,9 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
             }
               
 
-            .btn {margin-top:0.8rem;
-                  width:80%;
-                  border-radius:2rem;}
+            .b-btn {margin-top:0.8rem;
+                    width:60%;
+                    border-radius:2rem;}
           }
       }
 }
@@ -2032,7 +2032,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
 
 }
 
-@media(max-width:510px){#single-page .btn {width:100%;}}
+@media(max-width:510px){#single-page .b-btn {width:100%;}}
 
 
 /***************

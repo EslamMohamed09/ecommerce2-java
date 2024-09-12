@@ -2325,9 +2325,9 @@ footer .bottom-footer p {
 #single-page .product-container .col-right .content .product-quantity-btns .pro-quantity-btn:nth-child(3) {
   border-left: 1px solid var(--gray10);
 }
-#single-page .product-container .col-right .content .btn {
+#single-page .product-container .col-right .content .b-btn {
   margin-top: 0.8rem;
-  width: 80%;
+  width: 60%;
   border-radius: 2rem;
 }
 
@@ -2343,7 +2343,7 @@ footer .bottom-footer p {
   }
 }
 @media (max-width: 510px) {
-  #single-page .btn {
+  #single-page .b-btn {
     width: 100%;
   }
 }
