@@ -440,7 +440,6 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 
 }
 
-
 const selectedColor = document.querySelector(".color-block #selected-color");
 const colorCircles = document.querySelectorAll(".color-block .color-circle");
 
@@ -483,6 +482,85 @@ increaseQuantityBtn.addEventListener('click', function(){
 ###########
 */
 if(document.querySelector(".cart-page")){
+
+function renderCartItems() {
+  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+  const cartTableBody = document.getElementById('cart-items');
+
+  cartTableBody.innerHTML = '';
+
+  // If the cart is empty, show a message
+  if (cartItems.length === 0) {
+      cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
+      return;
+  }
+
+  cartItems.forEach((product, index) => {
+    const total = product.price * product.quantity; // Calculate total price for the product
+
+    const productRow = `
+      <tr>
+        <td> <!-- Product -->
+          <div class="product-card d-flex-r-st-st">
+            <div class="image">
+              <img src="${product.image}" alt="${product.title}">
+            </div>
+            <div class="content d-flex-c-st-st">
+              <h5>${product.title}</h5>
+              <p>${product.color} / ${product.size}</p>
+              <p>electronics</p>
+              <span id="instock">${product.inStock}</span>
+            </div>
+          </div>
+        </td>
+        <td><p class="price">$${product.price.toFixed(2)}</p></td>
+        <td> <!-- Quantity -->
+          <div class="product-quantity-btns d-flex-r-st-c">
+            <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'decrease')">
+              <i class="fas fa-minus"></i>
+            </button>
+            <span id="pro-quantity-no">${product.quantity}</span>
+            <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'increase')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </td>
+        <td><p class="total-price">$${total.toFixed(2)}</p></td>
+        <td><i class="fas fa-times" onclick="removeProduct(${index})"></i></td>
+      </tr>
+    `;
+
+    // Append the product row to the table body
+    cartTableBody.innerHTML += productRow;
+  });
+}
+
+// Function to update product quantity
+function updateQuantity(index, action) {
+  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+
+  if (action === 'increase') {
+    cartItems[index].quantity++;
+  } else if (action === 'decrease' && cartItems[index].quantity > 1) {
+    cartItems[index].quantity--;
+  }
+
+  localStorage.setItem('product-cart', JSON.stringify(cartItems)); // Update localStorage
+  renderCartItems(); // Re-render the cart
+}
+
+// Function to remove a product from the cart
+function removeProduct(index) {
+  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+
+  cartItems.splice(index, 1); // Remove the product
+  localStorage.setItem('product-cart', JSON.stringify(cartItems)); // Update localStorage
+  renderCartItems(); // Re-render the cart
+}
+
+// Initialize cart rendering on page load
+document.addEventListener('DOMContentLoaded', renderCartItems);
+
 
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
 const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
@@ -607,6 +685,7 @@ function updateProgressBar(calculateTotal) {
 updateProgressBar(initialSubtotal);
 
 }
+
 
 /*
 ##############
