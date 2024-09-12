@@ -1957,7 +1957,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
 
             .magnifier-img.active {display:block;}
 
-            h1 {font-weight:800;}
+            h1 {font-weight:700;}
 
             p {font-size:1.1rem;}
 
@@ -1968,8 +1968,10 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
             .icon {font-size:1.2rem;
                    margin:0 !important;}
 
-            .description-block, 
+            .description-block,
             .about-item-block {width:85%;}
+
+            p.id {display:none;}
 
             .product-price {margin:0;
                             gap:1rem;}

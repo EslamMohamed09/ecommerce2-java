@@ -2255,7 +2255,7 @@ footer .bottom-footer p {
   display: block;
 }
 #single-page .product-container .col-right .content h1 {
-  font-weight: 800;
+  font-weight: 700;
 }
 #single-page .product-container .col-right .content p {
   font-size: 1.1rem;
@@ -2273,6 +2273,9 @@ footer .bottom-footer p {
 #single-page .product-container .col-right .content .description-block,
 #single-page .product-container .col-right .content .about-item-block {
   width: 85%;
+}
+#single-page .product-container .col-right .content p.id {
+  display: none;
 }
 #single-page .product-container .col-right .content .product-price {
   margin: 0;

@@ -402,6 +402,7 @@ magnify(bigImage);
 
 document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function(){
   const singlepProductContainer = document.querySelector("#single-page .product-container");
+  const productIdV = singlepProductContainer.querySelector('.id').textContent;
   const productTitleV = singlepProductContainer.querySelector('h1').textContent;
   const productImageV = singlepProductContainer.querySelector(".big-image img").getAttribute('src');
   const productDescriptionV = singlepProductContainer.querySelector('.description').textContent;
@@ -415,6 +416,7 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
   const quantityV = singlepProductContainer.querySelector('.col-right #pro-quantity-no').textContent;
 
   const product = {
+    id: productIdV,
     title: productTitleV,
     image: productImageV,
     description: productDescriptionV,
@@ -436,8 +438,8 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 
 });
 
-
 }
+
 
 const selectedColor = document.querySelector(".color-block #selected-color");
 const colorCircles = document.querySelectorAll(".color-block .color-circle");
