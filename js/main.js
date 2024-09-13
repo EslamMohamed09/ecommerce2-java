@@ -495,17 +495,14 @@ increaseQuantityBtn.addEventListener('click', function(){
 ###########
 */
 if(document.querySelector(".cart-page")){
-
+  
   function renderCartItems() {
     const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
     const cartTableBody = document.getElementById('cart-items');
 
     cartTableBody.innerHTML = '';
 
-    if (cartItems.length === 0) {
-        cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
-        return;
-    }
+    if (cartItems.length === 0) {cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';}
 
     cartItems.forEach((product, index) => {
       const itemPrice = parseFloat(product.price.replace('$', ''));
@@ -555,7 +552,6 @@ if(document.querySelector(".cart-page")){
     const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
     const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
     const total = document.querySelector(".cart-page .col-right .checkout-block #total");
-    const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
 
     let initialSubtotal = 0;
     let shippingFee = 10;
@@ -605,84 +601,13 @@ if(document.querySelector(".cart-page")){
     renderCartItems();
   }
 
-  document.addEventListener('DOMContentLoaded', renderCartItems);
-
-
-  const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
-  const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
-  const total = document.querySelector(".cart-page .col-right .checkout-block #total");
-  const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
-
   let initialSubtotal = 0;
   let shippingFee = 10;
   const maxTotal = 5000;
 
-  productRows.forEach((row) => {
-
-    const decQuantityBtn = row.querySelector(".product-quantity-btns .decrease-quantity-btn");
-    const proQuantity = row.querySelector(".product-quantity-btns #pro-quantity-no");
-    const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quantity-btn");
-    const avInStock = parseInt(row.querySelector("#instock").textContent);
-    const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
-    const totalPriceProduct = row.querySelector(".total-price");
-
-    let proQuantityNum = parseInt(proQuantity.textContent.trim());
-
-    decQuantityBtn.addEventListener('click', function(){
-      if(proQuantityNum > 1){
-        proQuantityNum -= 1;
-        proQuantity.textContent = proQuantityNum;
-        totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
-        
-        let subtotal = 0;
-        productRows.forEach(row => {
-          subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
-        });
-
-        subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
-
-        if (subtotal >= maxTotal) {
-            shippingFee = 0;
-        } else {
-          shippingFee = 10;
-        }
-
-        total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
-
-        updateShippingMessage(subtotal);
-        updateProgressBar(subtotal);
-      }
-    });
-
-    incQuantityBtn.addEventListener('click', function(){
-      if(proQuantityNum < avInStock){
-        proQuantityNum += 1;
-        proQuantity.textContent = proQuantityNum;
-        totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
-        
-        let subtotal = 0;
-        productRows.forEach(row => {
-          subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
-        });
-
-        subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
-
-        if (subtotal >= maxTotal) {
-          shippingFee = 0;
-        } else {
-          shippingFee = 10;
-        }
-
-        total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
-        
-        updateShippingMessage(subtotal);
-        updateProgressBar(subtotal);
-      }
-    });
-
-  });
-
   function updateShippingMessage(subtotal){
+    const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
+
     if(subtotal >= maxTotal){
       shippingInfo.textContent = "Your order now includes free shipping!";
     } else {
@@ -709,7 +634,9 @@ if(document.querySelector(".cart-page")){
     
   }
 
+  document.addEventListener('DOMContentLoaded', renderCartItems());
 
+  
 }
 
 
