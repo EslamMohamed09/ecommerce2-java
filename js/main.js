@@ -14,11 +14,9 @@ const firstSection = document.querySelector('section');
 window.addEventListener('scroll', function(){
 
   if (window.scrollY > 30){
-      header.classList.add('headerscroll');
       document.querySelector("header .top-nav").style.display = 'none';
       document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
   } else {
-    header.classList.remove('headerscroll');
     document.querySelector("header .top-nav").style.display = 'flex';
     document.querySelector(".main-header").style.boxShadow = 'none';
 
