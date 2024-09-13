@@ -496,206 +496,219 @@ increaseQuantityBtn.addEventListener('click', function(){
 */
 if(document.querySelector(".cart-page")){
 
-// Function to render the cart items
-function renderCartItems() {
-  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
-  const cartTableBody = document.getElementById('cart-items');
+  function renderCartItems() {
+    const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+    const cartTableBody = document.getElementById('cart-items');
 
-  cartTableBody.innerHTML = '';
+    cartTableBody.innerHTML = '';
 
-  if (cartItems.length === 0) {
-    cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
-    return;
-  }
+    if (cartItems.length === 0) {
+        cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
+        return;
+    }
 
-  cartItems.forEach((product, index) => {
-    const price = parseFloat(product.price.replace('$', ''));
-  
-    const total = price * product.quantity;
-  
-    const productRow = `
-      <tr>
-        <td> <!-- Product -->
-          <div class="product-card d-flex-r-st-st">
-            <div class="image">
-              <img src="${product.image}" alt="${product.title}">
+    cartItems.forEach((product, index) => {
+      const itemPrice = parseFloat(product.price.replace('$', ''));
+    
+      const itemtotal = itemPrice * product.quantity;
+    
+      const productRow = `
+        <tr>
+          <td> <!-- Product -->
+            <div class="product-card d-flex-r-st-st">
+              <div class="image">
+                <img src="${product.image}" alt="${product.title}">
+              </div>
+              <div class="content d-flex-c-st-st">
+                <h5>${product.title}</h5>
+                <p>${product.color} / ${product.size}</p>
+                <p>Brand: ${product.brand}</p>
+                <span id="instock">${product.stock} in stock</span>
+              </div>
             </div>
-            <div class="content d-flex-c-st-st">
-              <h5>${product.title}</h5>
-              <p>${product.color} / ${product.size}</p>
-              <p>Brand: ${product.brand}</p>
-              <span id="instock">${product.stock} in stock</span>
+          </td>
+          <td><p class="price">$${itemPrice.toFixed(2)}</p></td>
+          <td> <!-- Quantity -->
+            <div class="product-quantity-btns d-flex-r-st-c">
+              <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'decrease')">
+                <i class="fas fa-minus"></i>
+              </button>
+              <span id="pro-quantity-no">${product.quantity}</span>
+              <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'increase')">
+                <i class="fas fa-plus"></i>
+              </button>
             </div>
-          </div>
-        </td>
-        <td><p class="price">$${price.toFixed(2)}</p></td>
-        <td> <!-- Quantity -->
-          <div class="product-quantity-btns d-flex-r-st-c">
-            <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'decrease')">
-              <i class="fas fa-minus"></i>
-            </button>
-            <span id="pro-quantity-no">${product.quantity}</span>
-            <button type="button" class="pro-quantity-btn increase-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'increase')">
-              <i class="fas fa-plus"></i>
-            </button>
-          </div>
-        </td>
-        <td><p class="total-price">$${total.toFixed(2)}</p></td>
-        <td><i class="fas fa-times" onclick="removeProduct(${index})"></i></td>
-      </tr>
-    `;
-  
-    cartTableBody.innerHTML += productRow;
-  });
-  
-}
+          </td>
+          <td><p class="total-price">$${itemtotal.toFixed(2)}</p></td>
+          <td><i class="fas fa-times" onclick="removeProduct(${index})"></i></td>
+        </tr>
+      `;
+    
+      cartTableBody.innerHTML += productRow;
+    });
 
-function updateQuantity(index, action) {
-  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
-
-  if (action === 'increase') {
-    cartItems[index].quantity++;
-  } else if (action === 'decrease' && cartItems[index].quantity > 1) {
-    cartItems[index].quantity--;
+    viewSubtotalandTotal();
+    
   }
 
-  localStorage.setItem('product-cart', JSON.stringify(cartItems));
-  renderCartItems();
-}
+  function viewSubtotalandTotal(){
+    const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
+    const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
+    const total = document.querySelector(".cart-page .col-right .checkout-block #total");
+    const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
 
-function removeProduct(index) {
-  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+    let initialSubtotal = 0;
+    let shippingFee = 10;
+    const maxTotal = 5000;
 
-  cartItems.splice(index, 1);
-  localStorage.setItem('product-cart', JSON.stringify(cartItems));
-  renderCartItems();
-}
+    productRows.forEach((row) => {
+      const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
+      const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
+      const totalPriceProduct = row.querySelector(".total-price");
 
-// Initialize cart rendering on page load
-document.addEventListener('DOMContentLoaded', renderCartItems);
+      totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
 
-
-const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
-const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
-const total = document.querySelector(".cart-page .col-right .checkout-block #total");
-const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
-
-let initialSubtotal = 0;
-let shippingFee = 10;
-const maxTotal = 5000;
-
-productRows.forEach((row) => {
-  const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
-  const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
-  const totalPriceProduct = row.querySelector(".total-price");
-
-  totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
-
-  initialSubtotal += proQuantity * proPrice;
-  
-  if(initialSubtotal >= maxTotal){shippingFee = 0;}
-});
-
-subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
-total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
-
-function updateShippingMessage(subtotal){
-  if(subtotal >= maxTotal){
-     shippingInfo.textContent = "Your order now includes free shipping!";
-  } else {
-    shippingInfo.innerHTML = `only <span id="remaining-free">${(maxTotal - subtotal).toFixed(2)}</span> away from free shipping`;
-  }
-}
-
-updateShippingMessage(initialSubtotal);
-
-productRows.forEach((row) => {
-
-  const decQuantityBtn = row.querySelector(".product-quantity-btns .decrease-quantity-btn");
-  const proQuantity = row.querySelector(".product-quantity-btns #pro-quantity-no");
-  const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quantity-btn");
-  const avInStock = parseInt(row.querySelector("#instock").textContent);
-  const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
-  const totalPriceProduct = row.querySelector(".total-price");
-
-  let proQuantityNum = parseInt(proQuantity.textContent.trim());
-
-  decQuantityBtn.addEventListener('click', function(){
-    if(proQuantityNum > 1){
-      proQuantityNum -= 1;
-      proQuantity.textContent = proQuantityNum;
-      totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+      initialSubtotal += proQuantity * proPrice;
       
-      let subtotal = 0;
-      productRows.forEach(row => {
-        subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
-      });
+      if(initialSubtotal >= maxTotal){shippingFee = 0;}
 
-      subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
+    });
 
-      if (subtotal >= maxTotal) {
+    subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
+    total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
+
+    updateShippingMessage(initialSubtotal);
+    updateProgressBar(initialSubtotal);
+    
+  }
+
+  function updateQuantity(index, action) {
+    const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+
+    const stock = cartItems[index].stock;
+
+    if (action === 'increase' && cartItems[index].quantity < stock) {
+        cartItems[index].quantity++;
+    } else if (action === 'decrease' && cartItems[index].quantity > 1) {
+        cartItems[index].quantity--;
+    }
+
+    localStorage.setItem('product-cart', JSON.stringify(cartItems));
+    renderCartItems();
+  }
+
+  function removeProduct(index) {
+    const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+
+    cartItems.splice(index, 1);
+    localStorage.setItem('product-cart', JSON.stringify(cartItems));
+    renderCartItems();
+  }
+
+  document.addEventListener('DOMContentLoaded', renderCartItems);
+
+
+  const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
+  const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
+  const total = document.querySelector(".cart-page .col-right .checkout-block #total");
+  const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
+
+  let initialSubtotal = 0;
+  let shippingFee = 10;
+  const maxTotal = 5000;
+
+  productRows.forEach((row) => {
+
+    const decQuantityBtn = row.querySelector(".product-quantity-btns .decrease-quantity-btn");
+    const proQuantity = row.querySelector(".product-quantity-btns #pro-quantity-no");
+    const incQuantityBtn = row.querySelector(".product-quantity-btns .increase-quantity-btn");
+    const avInStock = parseInt(row.querySelector("#instock").textContent);
+    const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
+    const totalPriceProduct = row.querySelector(".total-price");
+
+    let proQuantityNum = parseInt(proQuantity.textContent.trim());
+
+    decQuantityBtn.addEventListener('click', function(){
+      if(proQuantityNum > 1){
+        proQuantityNum -= 1;
+        proQuantity.textContent = proQuantityNum;
+        totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+        
+        let subtotal = 0;
+        productRows.forEach(row => {
+          subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
+        });
+
+        subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
+
+        if (subtotal >= maxTotal) {
+            shippingFee = 0;
+        } else {
+          shippingFee = 10;
+        }
+
+        total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
+
+        updateShippingMessage(subtotal);
+        updateProgressBar(subtotal);
+      }
+    });
+
+    incQuantityBtn.addEventListener('click', function(){
+      if(proQuantityNum < avInStock){
+        proQuantityNum += 1;
+        proQuantity.textContent = proQuantityNum;
+        totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
+        
+        let subtotal = 0;
+        productRows.forEach(row => {
+          subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
+        });
+
+        subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
+
+        if (subtotal >= maxTotal) {
           shippingFee = 0;
-      } else {
-        shippingFee = 10;
+        } else {
+          shippingFee = 10;
+        }
+
+        total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
+        
+        updateShippingMessage(subtotal);
+        updateProgressBar(subtotal);
       }
+    });
 
-      total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
-
-      updateShippingMessage(subtotal);
-
-      updateProgressBar(subtotal);
-    }
   });
 
-  incQuantityBtn.addEventListener('click', function(){
-    if(proQuantityNum < avInStock){
-      proQuantityNum += 1;
-      proQuantity.textContent = proQuantityNum;
-      totalPriceProduct.textContent = `$${proQuantity.textContent * proPrice.toFixed(2)}`;
-      
-      let subtotal = 0;
-      productRows.forEach(row => {
-        subtotal += parseFloat(row.querySelector(".total-price").textContent.replace('$', '').trim());
-      });
-
-      subtotalProductsPrice.textContent = `$${subtotal.toFixed(2)}`;
-
-      if (subtotal >= maxTotal) {
-        shippingFee = 0;
-      } else {
-        shippingFee = 10;
-      }
-
-      total.textContent = `$${(subtotal + shippingFee).toFixed(2)}`;
-      
-      updateShippingMessage(subtotal);
-
-      updateProgressBar(subtotal);
+  function updateShippingMessage(subtotal){
+    if(subtotal >= maxTotal){
+      shippingInfo.textContent = "Your order now includes free shipping!";
+    } else {
+      shippingInfo.innerHTML = `only <span id="remaining-free">${(maxTotal - subtotal).toFixed(2)}</span> away from free shipping`;
     }
-  });
-
-});
-
-function updateProgressBar(calculateTotal) {
-  const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
-  const progressBar = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
-  const progressIcon = document.getElementById('progress-icon');
-
-  progressBar.style.width = `${Math.min(progressPercentage, 100)}%`;
-
-  if (progressPercentage < 25) {
-      progressBar.style.backgroundColor = 'var(--red8)';
-  } else if (progressPercentage >= 25 && progressPercentage < 100) {
-    progressBar.style.backgroundColor = 'orange';
-  } else {
-    progressBar.style.backgroundColor = 'var(--green10)';
   }
 
-  progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
-  
-}
+  function updateProgressBar(calculateTotal) {
+    const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
+    const progressBar = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
+    const progressIcon = document.getElementById('progress-icon');
 
-updateProgressBar(initialSubtotal);
+    progressBar.style.width = `${Math.min(progressPercentage, 100)}%`;
+
+    if (progressPercentage < 25) {
+        progressBar.style.backgroundColor = 'var(--red8)';
+    } else if (progressPercentage >= 25 && progressPercentage < 100) {
+      progressBar.style.backgroundColor = 'orange';
+    } else {
+      progressBar.style.backgroundColor = 'var(--green10)';
+    }
+
+    progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
+    
+  }
+
 
 }
 
