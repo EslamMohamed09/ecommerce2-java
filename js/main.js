@@ -509,7 +509,7 @@ function renderCartItems() {
   }
 
   cartItems.forEach((product, index) => {
-    const price = parseFloat(product.price); 
+    const price = parseFloat(product.price.replace('$', ''));
   
     const total = price * product.quantity;
   
@@ -523,7 +523,6 @@ function renderCartItems() {
             <div class="content d-flex-c-st-st">
               <h5>${product.title}</h5>
               <p>${product.color} / ${product.size}</p>
-              <p>${product.description}</p>
               <p>Brand: ${product.brand}</p>
               <span id="instock">${product.stock} in stock</span>
             </div>
@@ -546,13 +545,11 @@ function renderCartItems() {
       </tr>
     `;
   
-    // Append the product row to the table body
     cartTableBody.innerHTML += productRow;
   });
   
 }
 
-// Function to update product quantity
 function updateQuantity(index, action) {
   const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
 
@@ -562,22 +559,20 @@ function updateQuantity(index, action) {
     cartItems[index].quantity--;
   }
 
-  localStorage.setItem('product-cart', JSON.stringify(cartItems)); // Update localStorage
-  renderCartItems(); // Re-render the cart
+  localStorage.setItem('product-cart', JSON.stringify(cartItems));
+  renderCartItems();
 }
 
-// Function to remove a product from the cart
 function removeProduct(index) {
   const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
 
-  cartItems.splice(index, 1); // Remove the product
-  localStorage.setItem('product-cart', JSON.stringify(cartItems)); // Update localStorage
-  renderCartItems(); // Re-render the cart
+  cartItems.splice(index, 1);
+  localStorage.setItem('product-cart', JSON.stringify(cartItems));
+  renderCartItems();
 }
 
 // Initialize cart rendering on page load
 document.addEventListener('DOMContentLoaded', renderCartItems);
-
 
 
 const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
