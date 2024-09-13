@@ -436,6 +436,7 @@ ul {
 section {
   padding: 2rem 7%;
   margin: 0 !important;
+  transition: padding-top 0.05s ease;
 }
 
 @media (max-width: 280px) {
@@ -705,6 +706,14 @@ h5 {
 /********************
  # Header
 ********************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000000;
+}
 header .top-nav {
   padding: 0.3rem 3%;
   background-color: var(--olive20);
@@ -849,21 +858,6 @@ header .main-header .bottom nav ul li:hover {
   background-color: var(--olive11);
 }
 
-@media (min-width: 768px) {
-  header.headerscroll .main-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 0.4rem 1.5rem rgba(0, 247, 255, 0.356);
-    transition: all 1s linear;
-  }
-  header.headerscroll .main-header .upper {
-    padding: 0.6rem 2.5%;
-  }
-  header.headerscroll .main-header .bottom {
-    padding: 0 2.5%;
-  }
-}
 @media (max-width: 768px) {
   header .top-nav {
     padding: 0.3rem 1rem;

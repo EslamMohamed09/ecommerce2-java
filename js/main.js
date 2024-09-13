@@ -9,9 +9,24 @@ if(document.getElementById("open-mHeader") && document.getElementById("main-head
    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
 }
 
+const firstSection = document.querySelector('section');
+
 window.addEventListener('scroll', function(){
-  window.scrollY > 30 ? header.classList.add('headerscroll') : header.classList.remove('headerscroll');
+
+  if (window.scrollY > 30){
+      header.classList.add('headerscroll');
+      document.querySelector("header .top-nav").style.display = 'none';
+      document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
+  } else {
+    header.classList.remove('headerscroll');
+    document.querySelector("header .top-nav").style.display = 'flex';
+    document.querySelector(".main-header").style.boxShadow = 'none';
+
+  }
+  
 });
+
+document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 function truncateWords(text, wordsCount){
   return text.split(' ').slice(0,wordsCount).join(' ');
@@ -485,23 +500,19 @@ if(document.querySelector(".cart-page")){
 
 // Function to render the cart items
 function renderCartItems() {
-  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || []; // Get cart items from localStorage
-  const cartTableBody = document.getElementById('cart-items'); // Target the tbody
+  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+  const cartTableBody = document.getElementById('cart-items');
 
-  // Clear any existing content in the cart table
   cartTableBody.innerHTML = '';
 
-  // If the cart is empty, show a message
   if (cartItems.length === 0) {
     cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';
     return;
   }
 
   cartItems.forEach((product, index) => {
-    // Ensure the price is a number
     const price = parseFloat(product.price); 
   
-    // Calculate total price for the product
     const total = price * product.quantity;
   
     const productRow = `
