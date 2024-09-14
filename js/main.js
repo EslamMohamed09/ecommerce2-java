@@ -359,12 +359,43 @@ const bigImage = document.querySelector('#single-page .product-container .col-le
 const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
 const magnifierImage = document.querySelector('#single-page .product-container .col-right .content .magnifier-img');
 
+
+function getProductId(){
+  const urlParams = new URLSearchParams(window.location.search);
+  urlParams.get('id');
+}
+
+function fetchProductDetails(productId){
+  fetch('products.json')
+  .then(response => response.json())
+  .then(data => {
+    const product = data.products.find(p => p.id === productId);
+    if(product){
+       displayProductDetails(product);
+    } else {
+      document.querySelector("#single-page .product-container");
+    }
+  })
+  .catch(error => console.error('Error fetching the product data:', error));
+}
+
+function displayProductDetails(){
+  const productContainer = document.querySelector("#single-page .product-container");
+  productContainer.querySelector(".col-left .small-images").src = product.image;
+  productContainer.querySelector(".col-left .big-image img").src = product.image[0];
+  productContainer.querySelector(".col-right .content h1").textContent = product.title;
+  productContainer.querySelector(".col-right .content .description").textContent = product.description;
+  productContainer.querySelector(".col-right .content .brand").textContent = product.brand;
+  productContainer.querySelector(".col-right .content .instock").textContent = product.instock;
+  productContainer.querySelector(".col-right .content .about-this-item").textContent = product.aboutThisItem;
+  productContainer.querySelector(".col-right .content .oldprice").textContent = product.price;
+  productContainer.querySelector(".col-right .content .price").textContent = product.salePrice;
+  productContainer.querySelector(".col-right .content .sizes").textContent = product.size;
+  productContainer.querySelector(".col-right .content .colors").textContent = product.color;
+}
+
+
 if(smallImages && bigImage){
-
-
-
-
-  
 
 for(let i=0; i<smallImages.length; i++){
     smallImages[i].onclick = function(){
