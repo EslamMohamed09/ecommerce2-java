@@ -718,22 +718,25 @@ header .top-nav {
   padding: 0.3rem 3%;
   background-color: var(--olive20);
 }
-header .top-nav .col-left #currency-select {
+header .top-nav .col-left select {
   gap: 0.1rem;
   cursor: pointer;
+  color: var(--white);
+  background-color: var(--olive20);
+  border: 1px solid var(--olive17);
 }
-header .top-nav .col-left #currency-select span {
+header .top-nav .col-left select span {
   font-size: 0.9rem;
   color: var(--white);
 }
-header .top-nav .col-left #currency-select img {
+header .top-nav .col-left select img {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
   margin-right: 0.3rem;
   object-fit: cover;
 }
-header .top-nav .col-left #currency-select svg {
+header .top-nav .col-left select svg {
   color: var(--white);
 }
 header .top-nav .col-right ul {

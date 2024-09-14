@@ -590,8 +590,11 @@ header {position:fixed;
             background-color:(var(--olive20));
 
     .col-left {
-      #currency-select {gap:0.1rem;
-                        cursor:pointer;
+      select {gap:0.1rem;
+              cursor:pointer;
+              color:var(--white);
+              background-color:(var(--olive20));
+              border:1px solid var(--olive17);
                  
         span {font-size:0.9rem;
               color:var(--white);}

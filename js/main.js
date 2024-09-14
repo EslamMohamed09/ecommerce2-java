@@ -9,7 +9,10 @@ if(document.getElementById("open-mHeader") && document.getElementById("main-head
    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
 }
 
-const firstSection = document.querySelector('section');
+let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
+let productsCartCount = productsCart.length;
+
+document.querySelector(".main-header .upper .icons .cart-icon span").textContent = productsCartCount;
 
 window.addEventListener('scroll', function(){
 
@@ -458,6 +461,7 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
   localStorage.setItem('product-cart', JSON.stringify(productCart));
 
 });
+
 }
 
 const selectedColor = document.querySelector(".color-block #selected-color");
