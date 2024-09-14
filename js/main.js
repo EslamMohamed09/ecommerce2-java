@@ -9,10 +9,6 @@ if(document.getElementById("open-mHeader") && document.getElementById("main-head
    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
 }
 
-let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
-let productsCartCount = productsCart.length;
-
-document.querySelector(".main-header .upper .icons .cart-icon span").textContent = productsCartCount;
 
 window.addEventListener('scroll', function(){
 
@@ -365,6 +361,11 @@ const magnifierImage = document.querySelector('#single-page .product-container .
 
 if(smallImages && bigImage){
 
+
+
+
+  
+
 for(let i=0; i<smallImages.length; i++){
     smallImages[i].onclick = function(){
       bigImage.src = smallImages[i].src;
@@ -474,7 +475,7 @@ colorCircles.forEach((colorCircle) => {
 });
 
 if(document.querySelector(".product-container .col-right")){
-const maxQuantity = parseInt(document.querySelector(".product-container .col-right #instock").textContent);
+const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
 const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
 const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
 const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
@@ -499,6 +500,7 @@ increaseQuantityBtn.addEventListener('click', function(){
   }
 });
 }
+
 
 /*
 ###########
@@ -648,6 +650,11 @@ if(document.querySelector(".cart-page")){
   document.addEventListener('DOMContentLoaded', renderCartItems());
   
 }
+
+let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
+let productsCartCount = productsCart.length;
+
+document.querySelector(".main-header .upper .icons .cart-icon span").textContent = productsCartCount;
 
 
 /*
