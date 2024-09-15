@@ -1936,7 +1936,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       .col-right {padding:2rem;
 
           .content {width:100%;
-                    gap:0.5rem;
+                    gap:0.6rem;
                     padding-top:0.8rem;
                     position:relative;
 
@@ -1978,7 +1978,9 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
                                      border:1.9px solid var(--black2);
                                      padding:0.3rem 0.8rem;}
 
-            .color-block {margin:0.4rem 0 0.5rem;
+            .color-block {margin:0.5rem 0 0.6rem;
+
+              #selected-color {font-weight:normal;}
 
               .color-circle {width:2.7rem;
                              height:2.7rem;

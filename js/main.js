@@ -501,7 +501,15 @@ const colorCircles = document.querySelectorAll(".color-block .color-circle");
 
 colorCircles.forEach((colorCircle) => {
   colorCircle.addEventListener('click', function(){
-    selectedColor.textContent = this.style.backgroundColor;
+    if (this.style.backgroundImage) {
+        const gradientColors = this.style.backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
+        if (gradientColors && gradientColors.length > 1) {
+            const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
+            selectedColor.textContent = filteredColors.join(' x ');
+        }
+    } else {
+      selectedColor.textContent = this.style.backgroundColor;
+    }
   });
 });
 
