@@ -437,10 +437,12 @@ function displayProductDetails(product) {
   }
 
   setupImageClickEvents();
-  handleQuantity();
   magnify(document.querySelector('#single-page .product-container .col-left .big-image img'));
+  flippingColors();
+  handleQuantity();
 
 }
+
 const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
 const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
 const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
@@ -456,7 +458,6 @@ function setupImageClickEvents() {
     });
   });
 }
-
 
 function magnify(bigImage){
   const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
@@ -496,6 +497,8 @@ function leaveLens(lens, magnifierImage){
   magnifierImage.classList.remove('active');
 }
 
+function flippingColors(){
+
 const selectedColor = document.querySelector(".color-block #selected-color");
 const colorCircles = document.querySelectorAll(".color-block .color-circle");
 
@@ -512,6 +515,8 @@ colorCircles.forEach((colorCircle) => {
     }
   });
 });
+
+}
 
 function handleQuantity() {
   const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
@@ -538,6 +543,14 @@ function handleQuantity() {
       subtotalElement.textContent = `$${(proQuantityNumber * productPrice).toFixed(2)}`;
     }
   });
+}
+
+const productId = getProductId();
+
+if(productId){
+   fetchProductDetails(productId);
+} else {
+  document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
 }
 
 
@@ -588,14 +601,6 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 });
 
 
-
-const productId = getProductId();
-
-if(productId){
-   fetchProductDetails(productId);
-} else {
-  document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
-}
 
 
 // if(document.querySelector(".product-container .col-right")){
