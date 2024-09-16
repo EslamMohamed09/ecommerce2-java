@@ -354,54 +354,102 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
  SINGLE PAGE
 ###############
 */
-const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
-const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
-const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
-const magnifierImage = document.querySelector('#single-page .product-container .col-right .content .magnifier-img');
-
-
 function getProductId(){
   const urlParams = new URLSearchParams(window.location.search);
-  urlParams.get('id');
+  return urlParams.get('id');
 }
 
 function fetchProductDetails(productId){
-  fetch('products.json')
+  fetch('/pages/products.json')
   .then(response => response.json())
   .then(data => {
-    const product = data.products.find(p => p.id === productId);
+    const product = data.products.find(p => p.id == productId);
     if(product){
        displayProductDetails(product);
     } else {
       document.querySelector("#single-page .product-container");
     }
   })
-  .catch(error => console.error('Error fetching the product data:', error));
+  .catch(error => {
+    console.error('Error fetching the product data:', error);
+    document.querySelector("#single-page .product-container").innerHTML = 'Error loading product details';
+  });
 }
 
-function displayProductDetails(){
+function displayProductDetails(product) {
   const productContainer = document.querySelector("#single-page .product-container");
-  productContainer.querySelector(".col-left .small-images").src = product.image;
-  productContainer.querySelector(".col-left .big-image img").src = product.image[0];
-  productContainer.querySelector(".col-right .content h1").textContent = product.title;
-  productContainer.querySelector(".col-right .content .description").textContent = product.description;
-  productContainer.querySelector(".col-right .content .brand").textContent = product.brand;
-  productContainer.querySelector(".col-right .content .instock").textContent = product.instock;
-  productContainer.querySelector(".col-right .content .about-this-item").textContent = product.aboutThisItem;
-  productContainer.querySelector(".col-right .content .oldprice").textContent = product.price;
-  productContainer.querySelector(".col-right .content .price").textContent = product.salePrice;
-  productContainer.querySelector(".col-right .content .sizes").textContent = product.size;
-  productContainer.querySelector(".col-right .content .colors").textContent = product.color;
+
+  const smallImagesContainer = productContainer.querySelector(".col-left .small-images");
+  smallImagesContainer.innerHTML = '';
+
+  if (product.image && Array.isArray(product.image)) {
+      product.image.forEach((img) => {
+        smallImagesContainer.innerHTML += `
+          <div class="small-image">
+            <img src="${img}" class="small-img" alt="Product Image">
+          </div>`;
+      });
+
+    productContainer.querySelector(".col-left .big-image img").src = product.image[0];
+  } else {
+    console.error('Product images are not defined or not an array');
+  }
+
+  if (product.title) {productContainer.querySelector(".col-right .content h1").textContent = product.title;}
+  if (product.description) {productContainer.querySelector(".col-right .content .description").textContent = product.description;}
+  if (product.brand) {productContainer.querySelector(".col-right .content .brand").textContent = product.brand;}
+  if (product.instock) {productContainer.querySelector(".col-right .content .instock").textContent = product.instock;}
+  if (product.aboutThisItem) {productContainer.querySelector(".col-right .content .about-this-item").textContent = product.aboutThisItem;}
+  if (product.price) {productContainer.querySelector(".col-right .content .oldprice").textContent = product.price;}
+  if (product.salePrice) {productContainer.querySelector(".col-right .content .price").textContent = product.salePrice;}
+  if (product.size) {productContainer.querySelector(".col-right .content .size-block .size").textContent = product.size;}
+
+  const sizesContainer = productContainer.querySelector(".col-right .content .size-block .sizes");
+  sizesContainer.innerHTML = '';
+
+  if (product.sizes && Array.isArray(product.sizes)) {
+      product.sizes.forEach((size) => {
+        sizesContainer.innerHTML += `<span>${size}</span>`;
+      });
+  } else {
+    console.warn('Product sizes are not an array or not defined');
+  }
+
+  if (product.color) {productContainer.querySelector(".col-right .content .color-block #selected-color").textContent = product.color;}
+
+  const colorsContainer = productContainer.querySelector(".col-right .content .colors");
+  colorsContainer.innerHTML = '';
+
+  if (product.colors && Array.isArray(product.colors)) {
+      product.colors.forEach((color) => {
+        colorsContainer.innerHTML += `<span class="color-circle" style="background-color:${color};"></span>`;
+      });
+  } else {
+    console.warn('Product colors are not an array or not defined');
+  }
+
+  setupImageClickEvents();
+
 }
 
+
+
+const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
+const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
+const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
+const magnifierImage = document.querySelector('#single-page .product-container .col-right .content .magnifier-img');
+
+function setupImageClickEvents(){
+  if(smallImages.length > 0 && bigImage){
+     smallImages.forEach((img)=>{
+       img.addEventListener('click', function(){
+         bigImage.src = img.src;
+       });
+     })
+  }
+}
 
 if(smallImages && bigImage){
-
-for(let i=0; i<smallImages.length; i++){
-    smallImages[i].onclick = function(){
-      bigImage.src = smallImages[i].src;
-    }
-}
 
 function magnify(bigImage){
   lens.addEventListener('mousemove', moveLens);
@@ -493,6 +541,14 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
   localStorage.setItem('product-cart', JSON.stringify(productCart));
 
 });
+
+const productId = getProductId();
+
+if(productId){
+   fetchProductDetails(productId);
+} else {
+  document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
+}
 
 }
 

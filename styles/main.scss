@@ -1936,7 +1936,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       .col-right {padding:2rem;
 
           .content {width:100%;
-                    gap:0.6rem;
+                    gap:0.5rem;
                     padding-top:0.8rem;
                     position:relative;
 
@@ -1957,6 +1957,8 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
             p {font-size:1.1rem;}
 
             span {font-weight:bold;}
+
+            span.brand {font-weight:normal;}
 
             span.instock {font-weight:normal;}
 
