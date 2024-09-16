@@ -391,8 +391,6 @@ function displayProductDetails(product) {
       });
 
     productContainer.querySelector(".col-left .big-image img").src = product.image[0];
-  } else {
-    console.error('Product images are not defined or not an array');
   }
 
   if (product.title) {productContainer.querySelector(".col-right .content h1").textContent = product.title;}
@@ -411,8 +409,6 @@ function displayProductDetails(product) {
       product.sizes.forEach((size) => {
         sizesContainer.innerHTML += `<span>${size}</span>`;
       });
-  } else {
-    console.warn('Product sizes are not an array or not defined');
   }
 
   if (product.color) {productContainer.querySelector(".col-right .content .color-block #selected-color").textContent = product.color;}
@@ -422,79 +418,128 @@ function displayProductDetails(product) {
 
   if (product.colors && Array.isArray(product.colors)) {
       product.colors.forEach((color) => {
-        colorsContainer.innerHTML += `<span class="color-circle" style="background-color:${color};"></span>`;
+
+        let backgroundStyle = '';
+
+        if (color.includes('x')) {
+            const colorArray = color.split('x').map(c => c.trim());
+          if (colorArray.length === 2) {
+              backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+          } else {
+            backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+          }
+        } else {
+          backgroundStyle = color;
+        }
+
+        colorsContainer.innerHTML += `<span class="color-circle" style="background:${backgroundStyle};"></span>`;
       });
-  } else {
-    console.warn('Product colors are not an array or not defined');
   }
 
   setupImageClickEvents();
+  handleQuantity();
+  magnify(document.querySelector('#single-page .product-container .col-left .big-image img'));
 
 }
-
-
-
 const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
 const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
 const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
 const magnifierImage = document.querySelector('#single-page .product-container .col-right .content .magnifier-img');
 
-function setupImageClickEvents(){
-  if(smallImages.length > 0 && bigImage){
-     smallImages.forEach((img)=>{
-       img.addEventListener('click', function(){
-         bigImage.src = img.src;
-       });
-     })
+function setupImageClickEvents() {
+  const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
+  const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
+
+  smallImages.forEach((img) => {
+    img.addEventListener('click', function () {
+      bigImage.src = img.src;
+    });
+  });
+}
+
+
+function magnify(bigImage){
+  const lens = document.querySelector('#single-page .product-container .col-left .big-image .lens');
+  const magnifierImage = document.querySelector('#single-page .product-container .col-right .content .magnifier-img');
+
+  if (bigImage && lens && magnifierImage) {
+    lens.addEventListener('mousemove', (e) => moveLens(e, bigImage, lens, magnifierImage));
+    bigImage.addEventListener('mousemove', (e) => moveLens(e, bigImage, lens, magnifierImage));
+    bigImage.addEventListener('mouseout', () => leaveLens(lens, magnifierImage));
   }
 }
 
-if(smallImages && bigImage){
-
-function magnify(bigImage){
-  lens.addEventListener('mousemove', moveLens);
-  bigImage.addEventListener('mousemove', moveLens);
-  bigImage.addEventListener('mouseout', leaveLens);
-}
-
-function moveLens(e){
-  let x, y, cx, cy;
-
+function moveLens(e, bigImage, lens, magnifierImage){
   const bigImageRect = bigImage.getBoundingClientRect();
+  let x = e.pageX - bigImageRect.left - lens.offsetWidth / 2;
+  let y = e.pageY - bigImageRect.top - lens.offsetHeight / 2;
 
-  x = e.pageX - bigImageRect.left - lens.offsetWidth / 2;
-  y = e.pageY - bigImageRect.top - lens.offsetHeight / 2;
+  x = Math.max(0, Math.min(x, bigImageRect.width - lens.offsetWidth));
+  y = Math.max(0, Math.min(y, bigImageRect.height - lens.offsetHeight));
 
-  let max_xpos = bigImageRect.width - lens.offsetWidth;
-  let max_ypos = bigImageRect.height - lens.offsetHeight;
+  lens.style.left = `${x}px`;
+  lens.style.top = `${y}px`;
 
-  if(x > max_xpos) x = max_xpos;
-  if(x < 0) x = 0;
-
-  if(y > max_ypos) y = max_ypos;
-  if(y < 0) y = 0;
-
-  lens.style.cssText = `top:${y}px;left:${x}px`;
-
-  cx = magnifierImage.offsetWidth / lens.offsetWidth;
-  cy = magnifierImage.offsetHeight / lens.offsetHeight;
+  const cx = magnifierImage.offsetWidth / lens.offsetWidth;
+  const cy = magnifierImage.offsetHeight / lens.offsetHeight;
 
   magnifierImage.style.backgroundImage = `url('${bigImage.src}')`;
   magnifierImage.style.backgroundPosition = `-${x * cx}px -${y * cy}px`;
   magnifierImage.style.backgroundSize = `${bigImageRect.width * cx}px ${bigImageRect.height * cy}px`;
-  magnifierImage.style.backgroundRepeat = `no-repeat`;
 
   lens.classList.add('active');
   magnifierImage.classList.add('active');
-
 }
 
-function leaveLens(){
+function leaveLens(lens, magnifierImage){
   lens.classList.remove('active');
   magnifierImage.classList.remove('active');
 }
 
-magnify(bigImage);
+const selectedColor = document.querySelector(".color-block #selected-color");
+const colorCircles = document.querySelectorAll(".color-block .color-circle");
+
+colorCircles.forEach((colorCircle) => {
+  colorCircle.addEventListener('click', function(){
+    if (this.style.backgroundImage) {
+        const gradientColors = this.style.backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
+        if (gradientColors && gradientColors.length > 1) {
+            const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
+            selectedColor.textContent = filteredColors.join(' x ');
+        }
+    } else {
+      selectedColor.textContent = this.style.backgroundColor;
+    }
+  });
+});
+
+function handleQuantity() {
+  const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
+  const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
+  const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
+  const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
+  const proQuantityElement = document.querySelector(".product-container .col-right .product-quantity-block #pro-quantity-no");
+  const subtotalElement = document.querySelector(".product-container .col-right .product-quantity-block #subtotal");
+
+  let proQuantityNumber = parseInt(proQuantityElement.textContent.trim());
+
+  decreaseQuantityBtn.addEventListener('click', () => {
+    if (proQuantityNumber > 1) {
+      proQuantityNumber -= 1;
+      proQuantityElement.textContent = proQuantityNumber;
+      subtotalElement.textContent = `$${(proQuantityNumber * productPrice).toFixed(2)}`;
+    }
+  });
+
+  increaseQuantityBtn.addEventListener('click', () => {
+    if (proQuantityNumber < maxQuantity) {
+      proQuantityNumber += 1;
+      proQuantityElement.textContent = proQuantityNumber;
+      subtotalElement.textContent = `$${(proQuantityNumber * productPrice).toFixed(2)}`;
+    }
+  });
+}
+
 
 document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function(){
   const singlepProductContainer = document.querySelector("#single-page .product-container");
@@ -542,6 +587,8 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 
 });
 
+
+
 const productId = getProductId();
 
 if(productId){
@@ -550,51 +597,33 @@ if(productId){
   document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
 }
 
-}
 
-const selectedColor = document.querySelector(".color-block #selected-color");
-const colorCircles = document.querySelectorAll(".color-block .color-circle");
+// if(document.querySelector(".product-container .col-right")){
+// const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
+// const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
+// const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
+// const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
+// const proQuantityElement = document.querySelector(".product-container .col-right .product-quantity-block #pro-quantity-no");
+// const subtotalElement = document.querySelector(".product-container .col-right .product-quantity-block #subtotal");
 
-colorCircles.forEach((colorCircle) => {
-  colorCircle.addEventListener('click', function(){
-    if (this.style.backgroundImage) {
-        const gradientColors = this.style.backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
-        if (gradientColors && gradientColors.length > 1) {
-            const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
-            selectedColor.textContent = filteredColors.join(' x ');
-        }
-    } else {
-      selectedColor.textContent = this.style.backgroundColor;
-    }
-  });
-});
+// let proQuantityNumber = parseInt(proQuantityElement.textContent.trim());
 
-if(document.querySelector(".product-container .col-right")){
-const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
-const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
-const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
-const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
-const proQuantityElement = document.querySelector(".product-container .col-right .product-quantity-block #pro-quantity-no");
-const subtotalElement = document.querySelector(".product-container .col-right .product-quantity-block #subtotal");
+// decreaseQuantityBtn.addEventListener('click', function(){
+//   if(proQuantityNumber > 1){
+//      proQuantityNumber -= 1;
+//      proQuantityElement.textContent = proQuantityNumber;
+//      subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
+//   }
+// });
 
-let proQuantityNumber = parseInt(proQuantityElement.textContent.trim());
-
-decreaseQuantityBtn.addEventListener('click', function(){
-  if(proQuantityNumber > 1){
-     proQuantityNumber -= 1;
-     proQuantityElement.textContent = proQuantityNumber;
-     subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
-  }
-});
-
-increaseQuantityBtn.addEventListener('click', function(){
-  if(proQuantityNumber < maxQuantity){
-     proQuantityNumber += 1;
-     proQuantityElement.textContent = proQuantityNumber;
-     subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
-  }
-});
-}
+// increaseQuantityBtn.addEventListener('click', function(){
+//   if(proQuantityNumber < maxQuantity){
+//      proQuantityNumber += 1;
+//      proQuantityElement.textContent = proQuantityNumber;
+//      subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
+//   }
+// });
+// }
 
 
 /*
