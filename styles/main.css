@@ -2285,6 +2285,9 @@ footer .bottom-footer p {
   font-size: 1.2rem;
   color: var(--orange-red1);
 }
+#single-page .product-container .col-right .content .size-block .size span.size-value {
+  font-weight: normal;
+}
 #single-page .product-container .col-right .content .size-block .sizes span {
   cursor: pointer;
   border: 1.9px solid var(--black2);

@@ -1976,9 +1976,12 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
             .product-price .price {font-size:1.2rem;
                                    color:var(--orange-red1);}
 
-            .size-block .sizes span {cursor:pointer;
-                                     border:1.9px solid var(--black2);
-                                     padding:0.3rem 0.8rem;}
+            .size-block {
+              .size span.size-value {font-weight:normal;}
+              .sizes span {cursor:pointer;
+                           border:1.9px solid var(--black2);
+                           padding:0.3rem 0.8rem;}
+            }
 
             .color-block {margin:0.5rem 0 0.6rem;
 

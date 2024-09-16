@@ -400,15 +400,37 @@ function displayProductDetails(product) {
   if (product.aboutThisItem) {productContainer.querySelector(".col-right .content .about-this-item").textContent = product.aboutThisItem;}
   if (product.price) {productContainer.querySelector(".col-right .content .oldprice").textContent = product.price;}
   if (product.salePrice) {productContainer.querySelector(".col-right .content .price").textContent = product.salePrice;}
-  if (product.size) {productContainer.querySelector(".col-right .content .size-block .size").textContent = product.size;}
 
-  const sizesContainer = productContainer.querySelector(".col-right .content .size-block .sizes");
-  sizesContainer.innerHTML = '';
+   // Size block handling
+  const sizeBlock = productContainer.querySelector(".col-right .content .size-block");
+  const sizeElement = sizeBlock.querySelector(".size .size-value");
+  const sizesContainer = sizeBlock.querySelector(".sizes");
 
-  if (product.sizes && Array.isArray(product.sizes)) {
-      product.sizes.forEach((size) => {
-        sizesContainer.innerHTML += `<span>${size}</span>`;
-      });
+  let hasSize = product.size; // Check if there is a size value
+  let hasSizes = product.sizes && Array.isArray(product.sizes) && product.sizes.length > 0; // Check if there are available sizes
+
+  if (hasSize) {
+    sizeElement.textContent = product.size;
+  } else {
+    sizeElement.parentElement.style.display = 'none'; // Hide the size element if no size
+  }
+
+  if (hasSizes) {
+    sizesContainer.innerHTML = ''; // Clear existing sizes
+
+    // Populate available sizes
+    product.sizes.forEach((size) => {
+      sizesContainer.innerHTML += `<span>${size}</span>`;
+    });
+  } else {
+    sizesContainer.style.display = 'none'; // Hide sizes container if no available sizes
+  }
+
+  // If no size and no available sizes, hide the entire size-block
+  if (!hasSize && !hasSizes) {
+    sizeBlock.style.display = 'none'; // Hide the entire block if neither is present
+  } else {
+    sizeBlock.style.display = 'flex'; // Show size block if size or sizes are present
   }
 
   if (product.color) {productContainer.querySelector(".col-right .content .color-block #selected-color").textContent = product.color;}
