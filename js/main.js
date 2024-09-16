@@ -414,7 +414,7 @@ function displayProductDetails(product) {
   if (product.color) {productContainer.querySelector(".col-right .content .color-block #selected-color").textContent = product.color;}
 
   const colorsContainer = productContainer.querySelector(".col-right .content .colors");
-  colorsContainer.innerHTML = '';
+        colorsContainer.innerHTML = '';
 
   if (product.colors && Array.isArray(product.colors)) {
       product.colors.forEach((color) => {
@@ -497,26 +497,32 @@ function leaveLens(lens, magnifierImage){
   magnifierImage.classList.remove('active');
 }
 
-function flippingColors(){
+function flippingColors() {
+  const selectedColor = document.querySelector(".color-block #selected-color");
+  const colorCircles = document.querySelectorAll(".color-block .color-circle");
 
-const selectedColor = document.querySelector(".color-block #selected-color");
-const colorCircles = document.querySelectorAll(".color-block .color-circle");
+  colorCircles.forEach((colorCircle) => {
+    colorCircle.addEventListener('click', function() {
+      const backgroundImage = this.style.backgroundImage;
+      const backgroundColor = this.style.backgroundColor;
 
-colorCircles.forEach((colorCircle) => {
-  colorCircle.addEventListener('click', function(){
-    if (this.style.backgroundImage) {
-        const gradientColors = this.style.backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
-        if (gradientColors && gradientColors.length > 1) {
-            const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
-            selectedColor.textContent = filteredColors.join(' x ');
-        }
-    } else {
-      selectedColor.textContent = this.style.backgroundColor;
-    }
+      if (backgroundImage && backgroundImage !== 'none' && backgroundImage !== 'initial') {
+          const gradientColors = backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
+
+          if (gradientColors && gradientColors.length > 1) {
+              const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
+              selectedColor.textContent = filteredColors.join(' x ');
+          }
+      } else if (backgroundColor && backgroundColor !== 'initial') {
+        selectedColor.textContent = backgroundColor;
+      } else {
+        selectedColor.textContent = 'No valid color found';
+      }
+
+    });
   });
-});
-
 }
+
 
 function handleQuantity() {
   const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);

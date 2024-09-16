@@ -3113,7 +3113,7 @@
       "price":"$92",
       "salePrice":"$89",
       "color":"red x white",
-      "colors":["lightgreen x white", "lightgreen x black", "red x black"],
+      "colors":["red x white", "lightgreen x white", "lightgreen x black", "red x black"],
       "Fabric Type": "80% Cotton,20% Polyester",
       "Origin": "Made in the USA or Imported",
       "Sole Material": "Rubber",
