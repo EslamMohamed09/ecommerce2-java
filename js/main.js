@@ -596,20 +596,31 @@ if(productId){
   document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
 }
 
-document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function(){
+document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function() {
   const singlepProductContainer = document.querySelector("#single-page .product-container");
-  const productIdV = singlepProductContainer.querySelector('.id').textContent;
-  const productTitleV = singlepProductContainer.querySelector('h1').textContent;
-  const productImageV = singlepProductContainer.querySelector(".big-image img").getAttribute('src');
-  const productDescriptionV = singlepProductContainer.querySelector('.description').textContent;
-  const productBrandV = singlepProductContainer.querySelector('.brand').textContent.split(': ')[1];
-  const productStockV = singlepProductContainer.querySelector('.col-right #instock').textContent;
-  const productAboutV = singlepProductContainer.querySelector('.about-this-item').textContent;
-  const oldPriceV = singlepProductContainer.querySelector('.oldprice').textContent;
-  const priceV = singlepProductContainer.querySelector('.price').textContent;
-  const sizeV = singlepProductContainer.querySelector('.size').textContent;
-  const colorV = singlepProductContainer.querySelector('.col-right #selected-color').textContent;
-  const quantityV = singlepProductContainer.querySelector('.col-right #pro-quantity-no').textContent;
+
+  const safeTextContent = (selector) => {
+    const element = singlepProductContainer.querySelector(selector);
+    return element ? element.textContent.trim() : '';
+  };
+
+  const safeGetAttribute = (selector, attr) => {
+    const element = singlepProductContainer.querySelector(selector);
+    return element ? element.getAttribute(attr) : '';
+  };
+
+  const productIdV = safeTextContent('.id');
+  const productTitleV = safeTextContent('h1');
+  const productImageV = safeGetAttribute(".big-image img", 'src');
+  const productDescriptionV = safeTextContent('.description');
+  const productBrandV = safeTextContent('.brand').split(': ')[1] || '';
+  const productStockV = safeTextContent('#instock');
+  const productAboutV = safeTextContent('.about-this-item');
+  const oldPriceV = safeTextContent('.oldprice');
+  const priceV = safeTextContent('.price');
+  const sizeV = safeTextContent('.size');
+  const colorV = safeTextContent('#selected-color');
+  const quantityV = safeTextContent('#pro-quantity-no');
 
   const product = {
     id: productIdV,
@@ -630,17 +641,17 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 
   const existingProductIndex = productCart.findIndex(item => item.id === product.id);
 
-  if(existingProductIndex > -1){
-     productCart[existingProductIndex] = product;
-     alert('product updated in cart');
+  if(existingProductIndex > -1) {
+    productCart[existingProductIndex] = product;
+    alert('Product updated in cart');
   } else {
     productCart.push(product);
     alert('Product added to cart');
   }
 
   localStorage.setItem('product-cart', JSON.stringify(productCart));
-
 });
+
 
 }
 
