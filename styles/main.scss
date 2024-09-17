@@ -140,6 +140,7 @@
        --blue7:#0734ca;
        --blue8:#052aa1;
        --blue9:#162753;
+       --blue10:#0d1a3b;
 
        --dark-blue:#343a40;
        --dark-blue2:#2a2e35;
@@ -500,7 +501,7 @@ section {padding:2rem 7%;
            text-align:center;
            text-transform:uppercase;
            border-radius:0.1rem;
-           color:var(--primary5);
+           color:var(--black2);
            outline:none;
            border:none;
            background:transparent;
@@ -527,6 +528,8 @@ section {padding:2rem 7%;
                   transition:0.5s;
                   background-color:var(--gray5);
                   z-index:20;}
+
+.line-btn:hover {color:var(--black2);}
 
 .line-btn:hover::after {width:100%;}
 
