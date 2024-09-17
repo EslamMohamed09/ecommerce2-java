@@ -396,7 +396,11 @@ function displayProductDetails(product) {
   }
 
   if (product.title) {productContainer.querySelector(".col-right .content h1").textContent = product.title;}
-  if (product.description) {productContainer.querySelector(".col-right .content .description").textContent = product.description;}
+  if (product.description) {
+      productContainer.querySelector(".col-right .content .description-block .description").textContent = product.description;
+  } else {
+    productContainer.querySelector(".col-right .content .description-block").style.display = "none";
+  }
 
   if (product.brand) {
       productContainer.querySelector(".col-right .content .brand .brand-value").textContent = product.brand;
@@ -405,7 +409,12 @@ function displayProductDetails(product) {
   }
 
   if (product.instock) {productContainer.querySelector(".col-right .content .instock").textContent = product.instock;}
-  if (product.aboutThisItem) {productContainer.querySelector(".col-right .content .about-this-item").textContent = product.aboutThisItem;}
+  if (product.aboutThisItem) {
+      productContainer.querySelector(".col-right .content .about-item-block .about-this-item").textContent = product.aboutThisItem;
+  } else {
+    productContainer.querySelector(".col-right .content .about-item-block").style.display = "none";
+  }
+
   if (product.price) {productContainer.querySelector(".col-right .content .oldprice").textContent = product.price;}
   if (product.salePrice) {productContainer.querySelector(".col-right .content .price").textContent = product.salePrice;}
 
@@ -586,7 +595,6 @@ if(productId){
 } else {
   document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
 }
-
 
 document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function(){
   const singlepProductContainer = document.querySelector("#single-page .product-container");
