@@ -395,43 +395,37 @@ function displayProductDetails(product) {
 
   if (product.title) {productContainer.querySelector(".col-right .content h1").textContent = product.title;}
   if (product.description) {productContainer.querySelector(".col-right .content .description").textContent = product.description;}
-  if (product.brand) {productContainer.querySelector(".col-right .content .brand").textContent = product.brand;}
+
+  if (product.brand) {
+      productContainer.querySelector(".col-right .content .brand .brand-value").textContent = product.brand;
+  } else {
+    productContainer.querySelector(".col-right .content .brand").style.display = 'none';
+  }
+
   if (product.instock) {productContainer.querySelector(".col-right .content .instock").textContent = product.instock;}
   if (product.aboutThisItem) {productContainer.querySelector(".col-right .content .about-this-item").textContent = product.aboutThisItem;}
   if (product.price) {productContainer.querySelector(".col-right .content .oldprice").textContent = product.price;}
   if (product.salePrice) {productContainer.querySelector(".col-right .content .price").textContent = product.salePrice;}
 
-   // Size block handling
   const sizeBlock = productContainer.querySelector(".col-right .content .size-block");
   const sizeElement = sizeBlock.querySelector(".size .size-value");
   const sizesContainer = sizeBlock.querySelector(".sizes");
 
-  let hasSize = product.size; // Check if there is a size value
-  let hasSizes = product.sizes && Array.isArray(product.sizes) && product.sizes.length > 0; // Check if there are available sizes
+  let hasSize = product.size; 
+  let hasSizes = product.sizes && Array.isArray(product.sizes) && product.sizes.length > 0;
 
-  if (hasSize) {
-    sizeElement.textContent = product.size;
-  } else {
-    sizeElement.parentElement.style.display = 'none'; // Hide the size element if no size
-  }
+  if (hasSize) {sizeElement.textContent = product.size;} else {sizeElement.parentElement.style.display = 'none';}
 
   if (hasSizes) {
-    sizesContainer.innerHTML = ''; // Clear existing sizes
-
-    // Populate available sizes
-    product.sizes.forEach((size) => {
-      sizesContainer.innerHTML += `<span>${size}</span>`;
-    });
+      sizesContainer.innerHTML = '';
+      product.sizes.forEach((size) => {
+        sizesContainer.innerHTML += `<span>${size}</span>`;
+      });
   } else {
-    sizesContainer.style.display = 'none'; // Hide sizes container if no available sizes
+    sizesContainer.style.display = 'none';
   }
 
-  // If no size and no available sizes, hide the entire size-block
-  if (!hasSize && !hasSizes) {
-    sizeBlock.style.display = 'none'; // Hide the entire block if neither is present
-  } else {
-    sizeBlock.style.display = 'flex'; // Show size block if size or sizes are present
-  }
+  if (!hasSize && !hasSizes) {sizeBlock.style.display = 'none';} else {sizeBlock.style.display = 'flex';}
 
   if (product.color) {productContainer.querySelector(".col-right .content .color-block #selected-color").textContent = product.color;}
 
