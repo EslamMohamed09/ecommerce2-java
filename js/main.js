@@ -454,6 +454,8 @@ function displayProductDetails(product) {
       });
   }
 
+  productContainer.querySelector(".col-right .content .product-quantity-block #subtotal").textContent = product.salePrice;
+
   setupImageClickEvents();
   magnify(document.querySelector('#single-page .product-container .col-left .big-image img'));
   flippingSizes();
@@ -549,7 +551,6 @@ function flippingColors() {
     });
   });
 }
-
 
 function handleQuantity() {
   const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
