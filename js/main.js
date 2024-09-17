@@ -1,7 +1,7 @@
 /*** SCROLL HEADER ***/
 const header = document.querySelector('header');
 
-
+if(header){
 /*** MOBILE HEADER ***/
 if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
    const mobileHBtn = document.getElementById("open-mHeader");
@@ -24,6 +24,8 @@ window.addEventListener('scroll', function(){
 });
 
 document.body.style.paddingTop = `${header.offsetHeight}px`;
+
+}
 
 function truncateWords(text, wordsCount){
   return text.split(' ').slice(0,wordsCount).join(' ');
@@ -100,9 +102,8 @@ function createOneGroupedProducts(productsSelector){
 
   const productItems = Array.from(productsSelector);
   const groupedProducts = {};
-
-  // Group products by their class names
-  productItems.forEach(productItem => {
+  
+  productItems.forEach(productItem => { // Group products by their class names
     const className = productItem.classList[1]; // Assumes 'product-item 20%' format
     if (!groupedProducts[className]) {
         groupedProducts[className] = [];
@@ -111,14 +112,14 @@ function createOneGroupedProducts(productsSelector){
   });
    
   for (const [className, products] of Object.entries(groupedProducts)) { // Create the offersblock and items divs
-        const offersBlock = document.createElement('div');
-              offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
+       const offersBlock = document.createElement('div');
+             offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
 
-        products.forEach((product) => {
-          offersBlock.appendChild(product);
-        });
+       products.forEach((product) => {
+         offersBlock.appendChild(product);
+       });
 
-        document.querySelector(".offers-section .col-left .inner-col").appendChild(offersBlock);
+       document.querySelector(".offers-section .col-left .inner-col").appendChild(offersBlock);
     
   }
 }
@@ -354,6 +355,8 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
  SINGLE PAGE
 ###############
 */
+if(document.querySelector("#single-page")){
+
 function getProductId(){
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get('id');
@@ -622,7 +625,7 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 
 });
 
-
+}
 
 
 // if(document.querySelector(".product-container .col-right")){
@@ -802,11 +805,12 @@ if(document.querySelector(".cart-page")){
   
 }
 
-let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
-let productsCartCount = productsCart.length;
+if(header){
+  let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
+  let productsCartCount = productsCart.length;
 
-document.querySelector(".main-header .upper .icons .cart-icon span").textContent = productsCartCount;
-
+  document.querySelector(".main-header .upper .icons .cart-icon span").textContent = productsCartCount;
+}
 
 /*
 ##############
