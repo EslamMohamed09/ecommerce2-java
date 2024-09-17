@@ -118,9 +118,8 @@ function createOneGroupedProducts(productsSelector){
        products.forEach((product) => {
          offersBlock.appendChild(product);
        });
-
+        
        document.querySelector(".offers-section .col-left .inner-col").appendChild(offersBlock);
-    
   }
 }
 
@@ -166,7 +165,6 @@ function createTwoGroupedProducts(productsSelector){
 
 createOneGroupedProducts(document.querySelectorAll('.offers-section .col-left .inner-col .product-item'));
 createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
-
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.offers-section .product-item h5').forEach(h5 => {
@@ -235,6 +233,7 @@ $(document).ready(function(){
   });
 
 });
+
 
 /*
 ###################
