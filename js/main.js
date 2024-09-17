@@ -456,6 +456,7 @@ function displayProductDetails(product) {
 
   setupImageClickEvents();
   magnify(document.querySelector('#single-page .product-container .col-left .big-image img'));
+  flippingSizes();
   flippingColors();
   handleQuantity();
 
@@ -513,6 +514,14 @@ function moveLens(e, bigImage, lens, magnifierImage){
 function leaveLens(lens, magnifierImage){
   lens.classList.remove('active');
   magnifierImage.classList.remove('active');
+}
+
+function flippingSizes(){
+  document.querySelectorAll("#single-page .size-block .sizes span").forEach((size) => {
+    size.addEventListener('click', function(){
+      document.querySelector("#single-page .size-block .size .size-value").textContent = size.textContent;
+    });
+  });
 }
 
 function flippingColors() {
