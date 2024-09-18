@@ -755,7 +755,7 @@ if(document.querySelector(".cart-page")){
 
     let initialSubtotal = 0;
     let shippingFee = 10;
-    const maxTotal = 5000;
+    const maxTotal = 1000;
 
     productRows.forEach((row) => {
       const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
@@ -803,7 +803,7 @@ if(document.querySelector(".cart-page")){
 
   let initialSubtotal = 0;
   let shippingFee = 10;
-  const maxTotal = 5000;
+  const maxTotal = 1000;
 
   function updateShippingMessage(subtotal){
     const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
