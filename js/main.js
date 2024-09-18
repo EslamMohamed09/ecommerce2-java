@@ -424,10 +424,10 @@ function displayProductDetails(product) {
   const sizeElement = sizeBlock.querySelector(".size .size-value");
   const sizesContainer = sizeBlock.querySelector(".sizes");
 
-  let hasSize = product.size; 
+  let hasSize = product.size || product.screenSize;
   let hasSizes = product.sizes && Array.isArray(product.sizes) && product.sizes.length > 0;
 
-  if (hasSize) {sizeElement.textContent = product.size;} else {sizeElement.parentElement.style.display = 'none';}
+  if (hasSize) {sizeElement.textContent = product.size || product.screenSize} else {sizeElement.parentElement.style.display = 'none';}
 
   if (hasSizes) {
       sizesContainer.innerHTML = '';
@@ -617,13 +617,11 @@ function addToCart(){
     const productIdV = safeTextContent('.id');
     const productTitleV = safeTextContent('h1');
     const productImageV = safeGetAttribute(".big-image img", 'src');
-    const productDescriptionV = safeTextContent('.description');
     const productBrandV = safeTextContent('.brand').split(': ')[1] || '';
     const productStockV = safeTextContent('.instock');
-    const productAboutV = safeTextContent('.about-this-item');
     const oldPriceV = safeTextContent('.oldprice');
-    const priceV = safeTextContent('.price');
-    const sizeV = safeTextContent('.size').split(': ')[1] || '';
+    const salePriceV = safeTextContent('.price');
+    const sizeV = safeTextContent('.size') || '';
     const colorV = safeTextContent('#selected-color');
     const quantityV = safeTextContent('#pro-quantity-no');
 
@@ -631,12 +629,10 @@ function addToCart(){
       id: productIdV,
       title: productTitleV,
       image: productImageV,
-      description: productDescriptionV,
       brand: productBrandV,
       stock: productStockV,
-      about: productAboutV,
       oldPrice: oldPriceV,
-      price: priceV,
+      salePrice: salePriceV,
       size: sizeV,
       color: colorV,
       quantity: quantityV
@@ -705,7 +701,7 @@ if(document.querySelector(".cart-page")){
     if (cartItems.length === 0) {cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';}
 
     cartItems.forEach((product, index) => {
-      const itemPrice = parseFloat(product.price.replace('$', ''));
+      const itemPrice = parseFloat(product.salePrice.replace('$', ''));
     
       const itemtotal = itemPrice * product.quantity;
     
