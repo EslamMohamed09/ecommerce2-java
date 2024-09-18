@@ -396,6 +396,8 @@ function displayProductDetails(product) {
   }
 
   if (product.title) {productContainer.querySelector(".col-right .content h1").textContent = product.title;}
+  if (product.id){productContainer.querySelector(".col-right .content .description-block .id").textContent = product.id}
+
   if (product.description) {
       productContainer.querySelector(".col-right .content .description-block .description").textContent = product.description;
   } else {
@@ -658,9 +660,6 @@ function addToCart(){
 }
 
 }
-
-console.log(JSON.parse(localStorage.getItem('product-cart')) || []);
-
 
 // if(document.querySelector(".product-container .col-right")){
 // const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
