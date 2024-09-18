@@ -617,11 +617,11 @@ function addToCart(){
     const productIdV = safeTextContent('.id');
     const productTitleV = safeTextContent('h1');
     const productImageV = safeGetAttribute(".big-image img", 'src');
-    const productBrandV = safeTextContent('.brand').split(': ')[1] || '';
+    const productBrandV = safeTextContent('.brand-value') || '';
     const productStockV = safeTextContent('.instock');
     const oldPriceV = safeTextContent('.oldprice');
     const salePriceV = safeTextContent('.price');
-    const sizeV = safeTextContent('.size') || '';
+    const sizeV = safeTextContent('.size-value') || '';
     const colorV = safeTextContent('#selected-color');
     const quantityV = safeTextContent('#pro-quantity-no');
 
