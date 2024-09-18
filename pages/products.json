@@ -16,7 +16,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Qichic",
       "material":"96%Polyester+4%Spandex",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":4
     },
@@ -36,7 +36,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"H HYFOL",
       "material":"65% Polyester and 35% Cotton",
-      "instock":21,
+      "instock":"21",
       "off":"15%",
       "rating":4.5
     },
@@ -57,7 +57,7 @@
       "brand":"Fleece Crewneck",
       "material":"56% Cotton, 44% Polyester",
       "country":"Bangladesh",
-      "instock":80,
+      "instock":"80",
       "off":"15%",
       "rating":5
     },
@@ -77,7 +77,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Qichic",
       "material":"96%Polyester+4%Spandex",
-      "instock":175,
+      "instock":"175",
       "off":"15%",
       "rating":5
     },
@@ -97,7 +97,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Champion Authentic",
       "material":"80% Cotton, 20% Polyester",
-      "instock":150,
+      "instock":"150",
       "off":"15%",
       "rating":3.5
     },
@@ -117,7 +117,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Vodikar",
       "material":"Cotton Blend",
-      "instock":105,
+      "instock":"105",
       "off":"15%",
       "rating":4
     },
@@ -137,7 +137,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Armour",
       "material":"100% Polyester",
-      "instock":29,
+      "instock":"29",
       "off":"15%",
       "rating":4.5
     },
@@ -157,7 +157,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"hand made",
       "material":"Cotton+Polyester",
-      "instock":36,
+      "instock":"36",
       "off":"10%",
       "rating":4.5
     },
@@ -177,7 +177,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Satankud",
       "material":"Polyester-blend",
-      "instock":33,
+      "instock":"33",
       "off":"15%",
       "rating":4.5
     },
@@ -196,7 +196,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Lulucleaf",
       "material":"cotton+polyester",
-      "instock":20,
+      "instock":"20",
       "off":"15%",
       "rating":4.5
     },
@@ -215,7 +215,7 @@
       "size":"xxl",
       "sizes":["M", "L", "XL", "XXL"],
       "material":"75% Polyester/25% Cotton",
-      "instock":58,
+      "instock":"58",
       "off":"10%",
       "rating":5
     },
@@ -233,7 +233,7 @@
       "size":"l",
       "sizes":["M", "L", "XL", "XXL"],
       "material":"Cotton+Polyester",
-      "instock":19,
+      "instock":"19",
       "off":"20%",
       "rating":4
     },
@@ -253,7 +253,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"SIR7",
       "material":"65% Cotton, 35% Polyester",
-      "instock":29,
+      "instock":"29",
       "off":"20%",
       "rating":4.5
     },
@@ -272,7 +272,7 @@
       "size":"M",
       "sizes":["M", "L", "XL", "XXL"],
       "material":"56% Cotton, 44% Polyester",
-      "instock":21,
+      "instock":"21",
       "off":"20%",
       "rating":5
     },
@@ -292,7 +292,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"TSLA",
       "material":"100% Polyester",
-      "instock":26,
+      "instock":"26",
       "off":"20%",
       "rating":5
     },
@@ -311,7 +311,7 @@
       "size":"M",
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"LAIWANG",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":3.5
     },
@@ -331,7 +331,7 @@
       "brand":"Rusaevon",
       "material":"Cotton+Polyester",
       "country": "China",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":4
     },
@@ -351,7 +351,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"hand made",
       "material":"Polyester, Cotton and Fleece",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":4.5
     },
@@ -371,7 +371,7 @@
       "sizes":["M", "L", "XL", "XXL"],
       "brand":"Kenwood",
       "material":"Plastic",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":4.5
     },
@@ -389,7 +389,7 @@
       "colors":["silver", "blue", "yellow", "black"],
       "brand":"Kenwood",
       "material":"Glass",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":4.5
     },
@@ -406,7 +406,7 @@
       "color":"white x gray",
       "colors":["white x gray", "blue", "yellow", "black"],
       "brand":"Braun",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":4.5
     },
@@ -424,7 +424,7 @@
       "colors":["pink", "blue", "yellow", "black"],
       "brand":"ECPURCHASE",
       "material":"Food grade enhanced ABS, BPAfree,PC, 304 stainless blade",
-      "instock":16,
+      "instock":"16",
       "off":"20%",
       "rating":5
     },
@@ -443,7 +443,7 @@
       "capacity":"3.2L",
       "brand":"Braun",
       "material":"mixed materials",
-      "instock":22,
+      "instock":"22",
       "off":"20%",
       "rating":4
     },
@@ -462,7 +462,7 @@
       "capacity":"0.8 Litre",
       "brand":"tornado",
       "material":"stainless Steel",
-      "instock":19,
+      "instock":"19",
       "off":"20%",
       "rating":4.5
     },
@@ -480,7 +480,7 @@
       "colors":["silver", "blue", "yellow", "black"],
       "brand":"fresh",
       "material":"plastic",
-      "instock":17,
+      "instock":"17",
       "off":"20%",
       "rating":5
     },
@@ -500,7 +500,7 @@
       "Power":"2200W",
       "brand":"Kenwood",
       "material":"glass",
-      "instock":11,
+      "instock":"11",
       "off":"20%",
       "rating":5
     },
@@ -518,7 +518,7 @@
       "capacity":"1.7L",
       "brand":"fresh",
       "material":"glass",
-      "instock":13,
+      "instock":"13",
       "off":"20%",
       "rating":4.1
     },
@@ -537,7 +537,7 @@
       "brand":"caso",
       "material":"Stainless Steel",
       "Voltage":"230 Volts",
-      "instock":25,
+      "instock":"25",
       "off":"20%",
       "rating":4
     },
@@ -557,7 +557,7 @@
       "capacity":"1.5L",
       "material":"Mixed Materials",
       "Country":"China",
-      "instock":45,
+      "instock":"45",
       "off":"20%",
       "rating":4.5
     },
@@ -576,7 +576,7 @@
       "brand":"carnival",
       "capacity":"1.8L",
       "material":"glass",
-      "instock":56,
+      "instock":"56",
       "off":"20%",
       "rating":4.5
     },
@@ -597,7 +597,7 @@
       "Weight":"25 Kilograms",
       "dimensions":":LxWxH 45 x 44 x 66 centimeters",
       "Efficiency":"B, A+",
-      "instock":19,
+      "instock":"19",
       "off":"20%",
       "rating":4.5
     },
@@ -615,7 +615,7 @@
       "colors":["green", "blue", "yellow", "black"],
       "capacity":"50 Liter",
       "brand":"Ariston",
-      "instock":33,
+      "instock":"33",
       "off":"20%",
       "rating":4.5
     },
@@ -635,7 +635,7 @@
       "Weight":"11.8 Kilograms",
       "material":"Mixed Materials",
       "dimensions":"LxWxH 42 x 42 x 74.6 centimeters",
-      "instock":39,
+      "instock":"39",
       "off":"20%",
       "rating":5
     },
@@ -650,7 +650,7 @@
       "salePrice":"$100",
       "color":"silver",
       "colors":["silver", "blue", "yellow", "black"],
-      "instock":27,
+      "instock":"27",
       "off":"20%",
       "rating":4
     },
@@ -671,7 +671,7 @@
       "Weight":"5 Kilograms",
       "dimensions":"LxWxH 13 x 30 x 40 centimeters",
       "materials":"Mixed Materials",
-      "instock":11,
+      "instock":"11",
       "off":"20%",
       "rating":4.5
     },
@@ -689,7 +689,7 @@
       "capacity":"11 KW",
       "brand":"Fresh",
       "material":"Mixed Materials",
-      "instock":23,
+      "instock":"23",
       "off":"15%",
       "rating":5
     },
@@ -709,7 +709,7 @@
       "Cord Length":"1.8 Meter",
       "Water Tank Capacity":"330 Ml",
       "Country":"China",
-      "instock":33,
+      "instock":"33",
       "off":"15%",
       "rating":5
     },
@@ -727,7 +727,7 @@
       "brand":"tornado",
       "Power":"2400 -2800 Watt",
       "Base Plate Type":"Ceramic",
-      "instock":39,
+      "instock":"39",
       "off":"15%",
       "rating":4.1
     },
@@ -746,7 +746,7 @@
       "Power":"2000 watts",
       "brand":"Tefal",
       "weight":"1.5 Kilograms",
-      "instock":35,
+      "instock":"35",
       "off":"15%",
       "rating":4
     },
@@ -765,7 +765,7 @@
       "screen size":"3 Inches",
       "weight":"701 Grams",
       "Maximum aperture":"3.5 Millimeters",
-      "instock":43,
+      "instock":"43",
       "off":"20%",
       "rating":4.5
     },
@@ -789,7 +789,7 @@
       "Manufacturer Number":"2724669299101",
       "Optical Zoom":"Other",
       "Touch screen":"Yes",
-      "instock":4,
+      "instock":"4",
       "off":"20%",
       "rating":4.5
     },
@@ -816,7 +816,7 @@
       "Display Type":"LCD",
       "Digital Camera Type":"SLR Camera",
       "Touch screen":"Yes",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":4.5
     },
@@ -832,7 +832,7 @@
       "salePrice":"$380",
       "brand":"Other",
       "color":"black",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":4.5
     },
@@ -854,7 +854,7 @@
       "screen size":"6.7 Inches",
       "Form factor":"slate",
       "Model year":"2022",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -877,7 +877,7 @@
       "colors":["lightskyblue", "blue", "yellow", "black"],
       "screen size":"6.7 Inches",
       "sIM card slot count":"single SIM",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -902,7 +902,7 @@
       "SIM card slot count":"dual SIM",
       "Form factor":"slate",
       "Model year":"2022",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -974,7 +974,7 @@
       "SIM card slot count":"Dual SIM",
       "Form factor":"Basic Case",
       "Weight":"1 Grams",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -998,7 +998,7 @@
       "Connectivity technologies":"Bluetooth, Wi-Fi, USB, NFC",
       "Screen size":"6.5 Inches",
       "Wireless network technology":"GSM, Wi-Fi, LTE",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -1023,7 +1023,7 @@
       "Screen size":"6.5 Inches",
       "Wireless network technology":"GSM, CDMA",
       "SIM card slot count":"Dual SIM",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -1048,7 +1048,7 @@
       "SIM card slot count":"Dual SIM",
       "Scanner Resolution":"1080 x 2400",
       "Form factor":"Touch Bar",
-      "instock":37,
+      "instock":"37",
       "off":"20%",
       "rating":5
     },
@@ -1070,7 +1070,7 @@
       "Wireless network technology":"GSM, CDMA, LTE",
       "Form factor":"slate",
       "Model year":"2022",
-      "instock":41,
+      "instock":"41",
       "off":"20%",
       "rating":5
     },
@@ -1094,7 +1094,7 @@
       "SIM card slot count":"Dual SIM",
       "Resolution":"1440 x 3200",
       "Connector type":"USB Type C",
-      "instock":25,
+      "instock":"25",
       "off":"20%",
       "rating":5
     },
@@ -1122,7 +1122,7 @@
       "Compatible with":"All",
       "External Product ID":"8806090979576",
       "Model Number":"Rfanc22we5w",
-      "instock":81,
+      "instock":"81",
       "off":"20%",
       "rating":5
     },
@@ -1143,7 +1143,7 @@
       "Connectivity technology":"Wireless",
       "Compatible devices":"Multi",
       "Item weight":"42.2 Grams",
-      "instock":24,
+      "instock":"24",
       "off":"20%",
       "rating":5
     },
@@ -1163,7 +1163,7 @@
       "Form factor":"In Ear",
       "Connectivity technology":"Wireless, Wired",
       "weight":"55 Grams",
-      "instock":18,
+      "instock":"18",
       "off":"20%",
       "rating":5
     },
@@ -1187,7 +1187,7 @@
       "Control type":"Media Control",
       "Cable feature":"Without Cable",
       "Item weight":"0.06 Kilograms",
-      "instock":22,
+      "instock":"22",
       "off":"20%",
       "rating":5
     },
@@ -1210,7 +1210,7 @@
       "Included components":"Cable",
       "Material":"Wood",
       "Item weight":"4 Grams",
-      "instock":26,
+      "instock":"26",
       "off":"10%",
       "rating":5
     },
@@ -1234,7 +1234,7 @@
       "Model name":"V35KV",
       "Product dimensions":"20D x 95.5W x 60.6H centimeters",
       "Connectivity technology":"Wi-Fi",
-      "instock":36,
+      "instock":"36",
       "off":"20%",
       "rating":5
     },
@@ -1255,7 +1255,7 @@
       "Resolution":"768p",
       "Model name":"3.5 mm",
       "Product dimensions":"18.5D x 73W x 48H centimeters",
-      "instock":27,
+      "instock":"27",
       "off":"20%",
       "rating":5
     },
@@ -1276,7 +1276,7 @@
       "Product dimensions":"38.1L x 25.4W x 30.5H centimeters",
       "Voltage":"240 Volts",
       "Item weight":"5400 Grams",
-      "instock":28,
+      "instock":"28",
       "off":"20%",
       "rating":5
     },
@@ -1299,7 +1299,7 @@
       "Weight":"7.88 Kilograms",
       "Capacity":"6 Liters",
       "Manufacturer":"Fresh",
-      "instock":39,
+      "instock":"39",
       "off":"20%",
       "rating":5
     },
@@ -1321,7 +1321,7 @@
       "Item weight":"15 Kilograms",
       "Power / Wattage":"2000 watts",
       "Manufacturer":"Mienta",
-      "instock":45,
+      "instock":"45",
       "off":"20%",
       "rating":5
     },
@@ -1341,7 +1341,7 @@
       "Capacity":"2 Liters",
       "Wattage":"1800 watts",
       "Manufacturer":"Kenwood",
-      "instock":41,
+      "instock":"41",
       "off":"20%",
       "rating":5
     },
@@ -1366,7 +1366,7 @@
       "Dust Container Capacity":"3.5 Liter",
       "Power Cord Length":"5 Meter",
       "Country of Origin":"Egypt 1 Year Full Free Warranty",
-      "instock":16,
+      "instock":"16",
       "off":"20%",
       "rating":5
     },
@@ -1381,7 +1381,7 @@
       "price":"$55",
       "salePrice":"$50",
       "color":"black",
-      "instock":36,
+      "instock":"36",
       "off":"20%",
       "rating":5
     },
@@ -1402,7 +1402,7 @@
       "Item weight":"5 Kilograms",
       "Item dimensions":"LxWxH 74.2 x 74.2 x 29.5 centimeters",
       "Total USB ports":2,
-      "instock":31,
+      "instock":"31",
       "off":"20%",
       "rating":5
     },
@@ -1425,7 +1425,7 @@
       "Item dimensions":"LxWxH 21 x 48 x 43.5 centimeters",
       "Total USB ports":"2",
       "Total internal bays":"7",
-      "instock":38,
+      "instock":"38",
       "off":"20%",
       "rating":5
     },
@@ -1445,7 +1445,7 @@
       "Material":"Tempered Glass",
       "weight":"7.4 Kilograms",
       "Item dimensions":"LxWxH 44.2 x 21 x 47.9 centimeters",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":5
     },
@@ -1466,7 +1466,7 @@
       "Item dimensions":"LxWxH 49.1 x 20 x 45.1 centimeters",
       "Total USB ports":"2",
       "Total internal bays":"2",
-      "instock":15,
+      "instock":"15",
       "off":"20%",
       "rating":5
     },
@@ -1486,7 +1486,7 @@
       "weight":"14.33 Pounds",
       "Item dimensions":"LxWxH 39.5 x 21 x 45 centimeters",
       "Total USB ports":"2",
-      "instock":29,
+      "instock":"29",
       "off":"20%",
       "rating":4
     },
@@ -1509,7 +1509,7 @@
       "Weight":"17 Pounds",
       "Item dimensions":"LxWxH 37.2 x 21 x 34.9 centimeters",
       "Total USB ports":"1",
-      "instock":20,
+      "instock":"20",
       "off":"20%",
       "rating":5
     },
@@ -1525,7 +1525,7 @@
       "brand":"BenQ",
       "color":"silver",
       "Material":"Mixed Materials",
-      "instock":22,
+      "instock":"22",
       "off":"20%",
       "rating":5
     },
@@ -1549,7 +1549,7 @@
       "Dimensions":"LxWxH 55.2 x 25.1 x 54.5 centimeters",
       "Total USB ports":"2",
       "Total internal bays":"3",
-      "instock":18,
+      "instock":"18",
       "off":"20%",
       "rating":5
     },
@@ -1564,7 +1564,7 @@
       "price":"$100",
       "salePrice":"$94",
       "color":"gray",
-      "instock":26,
+      "instock":"26",
       "off":"20%",
       "rating":5
     },
@@ -1581,7 +1581,7 @@
       "brand":"Keendex",
       "color":"Black",
       "Material":"Mixed Materials",
-      "instock":38,
+      "instock":"38",
       "off":"20%",
       "rating":5
     },
@@ -1602,7 +1602,7 @@
       "Compatible devices":"Desktop",
       "Noise level":"15 dB",
       "Material":"Aluminum",
-      "instock":33,
+      "instock":"33",
       "off":"20%",
       "rating":4
     },
@@ -1626,7 +1626,7 @@
       "Compatible devices":"Laptop",
       "Installation type":"Internal Hard Drive",
       "Hard disk size":"1TB",
-      "instock":31,
+      "instock":"31",
       "off":"20%",
       "rating":4
     },
@@ -1650,7 +1650,7 @@
       "color":"Grey",
       "Hard disk size":"1TB",
       "Included components":"PHD",
-      "instock":150,
+      "instock":"150",
       "off":"20%",
       "rating":4.5
     },
@@ -1673,7 +1673,7 @@
       "Weight":"46 Grams",
       "Item dimensions":"LxWxH 10 x 5.5 x 0.9 centimeters",
       "Data transfer rate":"1050 Megabits Per Second",
-      "instock":86,
+      "instock":"86",
       "off":"20%",
       "rating":5
     },
@@ -1697,7 +1697,7 @@
       "Compatible devices":"PC, laptop",
       "Installation type":"External Hard Drive",
       "Hard disk size":"240 GB",
-      "instock":73,
+      "instock":"73",
       "off":"20%",
       "rating":5
     },
@@ -1722,7 +1722,7 @@
       "Reading speed":"560 Megabytes Per Second",
       "Cache size":"500",
       "Series":"Green",
-      "instock":65,
+      "instock":"65",
       "off":"20%",
       "rating":4.5
     },
@@ -1746,7 +1746,7 @@
       "Compatible devices":"Laptop",
       "Installation type":"External Hard Drive",
       "Hard disk size":"240 GB",
-      "instock":27,
+      "instock":"27",
       "off":"20%",
       "rating":4.5
     },
@@ -1767,7 +1767,7 @@
       "Compatible devices":"usb 2.0 compatible, usb 3.0 port",
       "Hard disk size":"6TB",
       "Material":"plastic",
-      "instock":26,
+      "instock":"26",
       "off":"25%",
       "rating":5
     },
@@ -1792,7 +1792,7 @@
       "Hard disk rotational speed":"7200 RPM",
       "Included components":"HDD",
       "Cache size":"12",
-      "instock":23,
+      "instock":"23",
       "off":"25%",
       "rating":4
     },
@@ -1816,7 +1816,7 @@
       "Installation type":"External Hard Drive",
       "Hard disk size":"1TB",
       "Specific uses for product":"Multimedia, Personal, Gaming",
-      "instock":33,
+      "instock":"33",
       "off":"25%",
       "rating":5
     },
@@ -1834,7 +1834,7 @@
       "Installation type":"External Hard Drive",
       "Hard disk size":"4TB",
       "Included components":"HDD",
-      "instock":46,
+      "instock":"46",
       "off":"25%",
       "rating":4
     },
@@ -1855,7 +1855,7 @@
       "brand":"Kingston",
       "Special features":"Backward Compatible",
       "Hard disk form factor":"2.5 Inches",
-      "instock":22,
+      "instock":"22",
       "off":"25%",
       "rating":4.5
     },
@@ -1879,7 +1879,7 @@
       "Installation type":"Internal Hard Drive",
       "Hard disk size":"960 GB",
       "Included components":"Hard Drive",
-      "instock":29,
+      "instock":"29",
       "off":"25%",
       "rating":4.5
     },
@@ -1904,7 +1904,7 @@
       "Installation type":"Internal Hard Drive",
       "Hard disk size":"1TB",
       "Included components":"ssd",
-      "instock":66,
+      "instock":"66",
       "off":"25%",
       "rating":5
     },
@@ -1928,7 +1928,7 @@
       "Material":"Mixed Materials",
       "Headphone jack":"3.5 mm Jack",
       "Compatible devices":"All Headphones",
-      "instock":73,
+      "instock":"73",
       "off":"25%",
       "rating":5
     },
@@ -1947,7 +1947,7 @@
       "colors":["gray", "blue", "yellow", "black"],
       "Connectivity technology":"Wireless",
       "Material":"Plastic",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -1971,7 +1971,7 @@
       "Included components":"Ear Cushions",
       "Material":"Plastic",
       "Weight":"297 Grams",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -1996,7 +1996,7 @@
       "Type":"Over Ear",
       "Microphone Included":"false",
       "Noise Cancelling:":"false",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2014,7 +2014,7 @@
       "Are batteries needed to power the product or is this product a battery":"No",
       "Is this a Dangerous Good or a Hazardous Material, Substance or Waste that is regulated for transportation, storage, and/or disposal?":"No",
       "Accessory Type":"Holder",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2035,7 +2035,7 @@
       "Memory clock speed":"4400 MHz",
       "Graphics card interface":"PCI Express",
       "Wireless Type":"802.11ac",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2060,7 +2060,7 @@
       "Graphics card interface":"PCI Express",
       "Memory slots available":"4",
       "Wireless communication standard":"802.11ax",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2084,7 +2084,7 @@
       "Maximum print speed (color)":"6",
       "Max. monochrome printing speed":"7",
       "Operating system": "Windows",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2108,7 +2108,7 @@
       "Max. monochrome printing speed":"8.8 ppm",
       "Weight":"5 Kilograms",
       "Product dimensions":"29.5D x 43.5W x 18.9H centimeters",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2125,7 +2125,7 @@
       "brand":"HP",
       "Material":"0.19",
       "Series":"ISO Up to 11 ppm",
-      "instock":22,
+      "instock":"22",
       "off":"25%",
       "rating":4
     },
@@ -2147,7 +2147,7 @@
       "Max. monochrome printing speed":"15",
       "Item weight":"1.5 Pounds",
       "Product dimensions": "31.6D x 43.5W x 14.5H centimeters",
-      "instock":29,
+      "instock":"29",
       "off":"25%",
       "rating":4
     },
@@ -2171,7 +2171,7 @@
       "Printer output":"Monochrome",
       "Maximum print speed (color)":"5ppm",
       "Max. monochrome printing speed":"15 ppm",
-      "instock":33,
+      "instock":"33",
       "off":"25%",
       "rating":5
     },
@@ -2192,7 +2192,7 @@
       "Voltage":"1.35 Volts",
       "Form factor":"SO-DIMM",
       "color":"green",
-      "instock":38,
+      "instock":"38",
       "off":"25%",
       "rating":5
     },
@@ -2207,7 +2207,7 @@
       "price":"$54",
       "salePrice":"$49",
       "color":"green x black",
-      "instock":36,
+      "instock":"36",
       "off":"25%",
       "rating":4
     },
@@ -2230,7 +2230,7 @@
       "Form Factor":"DIMM",
       "Series":"Kingston FURY Beast DDR4 RGB Memory",
       "Data transfer rate":"12 Gigabits",
-      "instock":32,
+      "instock":"32",
       "off":"25%",
       "rating":4
     },
@@ -2255,7 +2255,7 @@
       "Graphics card interface":"PCI-Express x16",
       "Memory clock speed":"14000 MHz",
       "Series":"GV-N3050EAGLE OC-8GD",
-      "instock":44,
+      "instock":"44",
       "off":"25%",
       "rating":4
     },
@@ -2280,7 +2280,7 @@
       "Included components":"graphic card, users manual",
       "Compatible devices":"Desktop",
       "Graphics card interface":"PCI Express",
-      "instock":41,
+      "instock":"41",
       "off":"25%",
       "rating":4
     },
@@ -2305,7 +2305,7 @@
       "Graphics card interface":"PCI Express",
       "Memory clock speed":"1",
       "Series":"GV-N1650OC-4GD",
-      "instock":46,
+      "instock":"46",
       "off":"25%",
       "rating":4
     },
@@ -2323,7 +2323,7 @@
       "brand":"B&H-ERX",
       "weight":"800 Grams",
       "Wattage":"7.5 watts",
-      "instock":28,
+      "instock":"28",
       "off":"25%",
       "rating":4.5
     },
@@ -2340,7 +2340,7 @@
       "brand":"Carrier",
       "color":"white",
       "Product dimensions":"22.5D x 108.2W x 33.8H centimeters",
-      "instock":33,
+      "instock":"33",
       "off":"25%",
       "rating":4
     },
@@ -2355,7 +2355,7 @@
       "price":"$249",
       "salePrice":"$244",
       "color":"silver",
-      "instock":22,
+      "instock":"22",
       "off":"25%",
       "rating":4
     },
@@ -2373,7 +2373,7 @@
       "color": "White",
       "Power source": "Electric",
       "Mounting type": "Wall Mount",
-      "instock":52,
+      "instock":"52",
       "off":"25%",
       "rating":4.5
     },
@@ -2399,7 +2399,7 @@
       "Material": "Mixed Materials",
       "Weight": "4.8 Kilograms",
       "Included components": "Cord",
-      "instock":22,
+      "instock":"22",
       "off":"25%",
       "rating":4
     },
@@ -2421,7 +2421,7 @@
       "Material": "Mixed Materials",
       "Weight": "6.6 Kilograms",
       "Included components": "Remote",
-      "instock":37,
+      "instock":"37",
       "off":"25%",
       "rating":4
     },
@@ -2442,7 +2442,7 @@
       "Mounting type": "Wall Mount",
       "Product dimensions": "24D x 58W x 56H centimeters",
       "Weight": "4 Kilograms",
-      "instock":39,
+      "instock":"39",
       "off":"25%",
       "rating":4
     },
@@ -2461,7 +2461,7 @@
       "brand":"Prifix",
       "Mounting type":"Downrod Mount",
       "Dimensions":"12D x 15W x 10H centimeters",
-      "instock":32,
+      "instock":"32",
       "off":"25%",
       "rating":4
     },
@@ -2482,7 +2482,7 @@
       "Power / Wattage": "65 watts",
       "Voltage": "240 Volts",
       "Weight": "3.7 Kilograms",
-      "instock":11,
+      "instock":"11",
       "off":"25%",
       "rating":4
     },
@@ -2504,7 +2504,7 @@
       "Material": "Plastic",
       "Weight": "6.5 Kilograms",
       "Included components": "ceiling fan",
-      "instock":36,
+      "instock":"36",
       "off":"25%",
       "rating":4
     },
@@ -2524,7 +2524,7 @@
       "Product dimensions": "63D x 59W x 155H centimeters",
       "Pattern": "Solid",
       "Model Number": "FG300L-2D",
-      "instock":22,
+      "instock":"22",
       "off":"25%",
       "rating":4
     },
@@ -2543,7 +2543,7 @@
       "color": "White",
       "Product dimensions":"57D x 60W x 150H centimeters",
       "Pattern": "Solid",
-      "instock":49,
+      "instock":"49",
       "off":"25%",
       "rating":4
     },
@@ -2562,7 +2562,7 @@
       "Weight":"25 Kilograms",
       "Product dimensions": "2D x 2W x 2H Meters",
       "Model Number": "KH256 VF",
-      "instock":43,
+      "instock":"43",
       "off":"25%",
       "rating":4
     },
@@ -2577,7 +2577,7 @@
       "price":"$225",
       "salePrice":"$219",
       "color":"gray",
-      "instock":49,
+      "instock":"49",
       "off":"25%",
       "rating":4.5
     },
@@ -2593,7 +2593,7 @@
       "salePrice":"$224",
       "color":"darkkhaki",
       "colors":["darkkhaki", "gray", "silver"],
-      "instock":52,
+      "instock":"52",
       "off":"25%",
       "rating":3.5
     },
@@ -2609,7 +2609,7 @@
       "salePrice":"$159",
       "color":"white",
       "colors":["white", "gray", "silver"],
-      "instock":35,
+      "instock":"35",
       "off":"25%",
       "rating":4
     },
@@ -2625,7 +2625,7 @@
       "salePrice":"$1577",
       "color":"black",
       "colors":["black", "gray"],
-      "instock":63,
+      "instock":"63",
       "off":"25%",
       "rating":4
     },
@@ -2645,7 +2645,7 @@
       "Included Components": "Washing Machine",
       "Weight":"50 Kilograms",
       "Capacity":"8 Kilograms",
-      "instock":48,
+      "instock":"48",
       "off":"25%",
       "rating":4
     },
@@ -2672,7 +2672,7 @@
       "Number of programmes": "15",
       "Country of origin": "Turkey 5 Years Full Free Warranty",
       "Maximum Spin Speed": "800 RPM",
-      "instock":57,
+      "instock":"57",
       "off":"25%",
       "rating":4
     },
@@ -2690,7 +2690,7 @@
       "color":"Black",
       "colors":["black", "gray", "silver"],
       "Capacity": "7 Kilograms",
-      "instock":52,
+      "instock":"52",
       "off":"25%",
       "rating":4
     },
@@ -2710,7 +2710,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Imported",
       "Outer Material": "Synthetic",
-      "instock":63,
+      "instock":"63",
       "off":"25%",
       "rating":4
     },
@@ -2730,7 +2730,7 @@
       "Origin":"Imported",
       "Sole Material": "Rubber",
       "Outer Material": "Leather",
-      "instock":40,
+      "instock":"40",
       "off":"25%",
       "rating":4.5
     },
@@ -2749,7 +2749,7 @@
       "Care Instructions":"Machine Wash",
       "Origin":"Imported",
       "Sole Material":"Ethylene Vinyl Acetate",
-      "instock":30,
+      "instock":"30",
       "off":"25%",
       "rating":4.5
     },
@@ -2765,7 +2765,7 @@
       "salePrice":"$39",
       "color":"black",
       "colors":["black", "lightskyblue", "blue", "white"],
-      "instock":26,
+      "instock":"26",
       "off":"25%",
       "rating":4.5
     },
@@ -2780,7 +2780,7 @@
       "price":"$39",
       "salePrice":"$36",
       "color":"white x black",
-      "instock":27,
+      "instock":"27",
       "off":"20%",
       "rating":4.5
     },
@@ -2800,7 +2800,7 @@
       "Origin": "Made in the USA or Imported",
       "Sole Material": "Rubber",
       "Outer Material": "Synthetic",
-      "instock":59,
+      "instock":"59",
       "off":"20%",
       "rating":4
     },
@@ -2820,7 +2820,7 @@
       "Origin": "Imported",
       "material": "Polyester webbing upper",
       "Sole Material": "Rubber",
-      "instock":38,
+      "instock":"38",
       "off":"20%",
       "rating":4.5
     },
@@ -2839,7 +2839,7 @@
       "Sole Material": "EVA+TPR Rubber",
       "Outer Material": "Polyester",
       "Closure Type": "Hook & Loop",
-      "instock":85,
+      "instock":"85",
       "off":"20%",
       "rating":4.5
     },
@@ -2859,7 +2859,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Polyester Webbing Upper",
       "Closure Type": "Hook & Loop",
-      "instock":34,
+      "instock":"34",
       "off":"25%",
       "rating":4.5
     },
@@ -2879,7 +2879,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Synthetic",
       "Closure Type": "Hook & Loop",
-      "instock":20,
+      "instock":"20",
       "off":"20%",
       "rating":4.5
     },
@@ -2898,7 +2898,7 @@
       "Sole Material":"Rubber",
       "Closure Type":"Lace-Up",
       "Water Resistance Level": "Not Water Resistant",
-      "instock":47,
+      "instock":"47",
       "off":"30%",
       "rating":4.5
     },
@@ -2918,7 +2918,7 @@
       "Sole Material": "Rubber",
       "Closure Type": "Lace-Up",
       "Water Resistance Level": "Not Water Resistant",
-      "instock":42,
+      "instock":"42",
       "off":"25%",
       "rating":4.5
     },
@@ -2938,7 +2938,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Rubber",
       "Closure Type": "Lace-Up",
-      "instock":15,
+      "instock":"15",
       "off":"30%",
       "rating":4.5
     },
@@ -2958,7 +2958,7 @@
       "Sole Material": "Synthetic",
       "Outer Material": "Rubber",
       "Closure Type": "Lace-Up",
-      "instock":46,
+      "instock":"46",
       "off":"30%",
       "rating":4.5
     },
@@ -2978,7 +2978,7 @@
       "Care Instructions":"Machine Wash",
       "Origin: Made in":"USA",
       "Sole Material":"Rubber",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -2998,7 +2998,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Imported",
       "Sole Material": "Synthetic",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3018,7 +3018,7 @@
       "Origin": "Imported",
       "Sole Material": "Rubber",
       "Outer Material": "Leather",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":4
     },
@@ -3038,7 +3038,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Imported",
       "Sole Material": "Rubber",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3058,7 +3058,7 @@
       "Origin":"Made in the USA or Imported",
       "Sole Material":"Synthetic",
       "Closure Type":"Pull On",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3078,7 +3078,7 @@
       "Sole Material": "Rubber",
       "Closure Type": "Lace-Up",
       "Water Resistance Level": "Not Water Resistant",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3097,7 +3097,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Mesh",
       "Closure Type": "Lace-Up",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3117,7 +3117,7 @@
       "Origin": "Made in the USA or Imported",
       "Sole Material": "Rubber",
       "Closure Type": "Lace-Up",
-      "instock":61,
+      "instock":"61",
       "off":"30%",
       "rating":4.5
     },
@@ -3137,7 +3137,7 @@
       "Sole Material":"Rubber",
       "Outer Material":"Faux Leather",
       "Closure Type": "Lace-Up",
-      "instock":62,
+      "instock":"62",
       "off":"30%",
       "rating":4
     },
@@ -3155,7 +3155,7 @@
       "colors":["black", "lightgreen x black", "red x black"],
       "Outer Material":"PU+Rubber",
       "Closure Type":"Lace-Up",
-      "instock":71,
+      "instock":"71",
       "off":"35%",
       "rating":4.5
     },
@@ -3175,7 +3175,7 @@
       "Sole Material":"Rubber",
       "Outer Material":"Leather",
       "Closure Type": "Lace-Up",
-      "instock":63,
+      "instock":"63",
       "off":"30%",
       "rating":4.5
     },
@@ -3196,7 +3196,7 @@
       "Origin":"Imported",
       "Closure Type":"Lace-Up",
       "Country of Origin":"China",
-      "instock":64,
+      "instock":"64",
       "off":"30%",
       "rating":4.5
     },
@@ -3216,7 +3216,7 @@
       "Sole Material": "Rubber",
       "Closure Type": "Lace-Up",
       "Water Resistance Level": "Not Water Resistant",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3237,7 +3237,7 @@
       "Sole Material":"Rubber",
       "Closure Type":"Lace-Up",
       "Weight":"8.2 oz",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -3253,7 +3253,7 @@
       "salePrice":"$121",
       "color":"white",
       "colors":["white", "red", "red x white"],
-      "instock":58,
+      "instock":"58",
       "off":"10%",
       "rating":5
     },
@@ -3273,7 +3273,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Made in the USA or Imported",
       "Sole Material": "Rubber",
-      "instock":65,
+      "instock":"65",
       "off":"30%",
       "rating":4.5
     },
@@ -3293,7 +3293,7 @@
       "Origin":"Imported",
       "Sole Material": "Thermoplastic Polyurethane",
       "Outer Material": "Synthetic",
-      "instock":74,
+      "instock":"74",
       "off":"30%",
       "rating":4.5
     },
@@ -3313,7 +3313,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Imported",
       "Sole Material": "Rubber",
-      "instock":77,
+      "instock":"77",
       "off":"30%",
       "rating":4.5
     },
@@ -3333,7 +3333,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Imported",
       "Sole Material": "Man Made",
-      "instock":78,
+      "instock":"78",
       "off":"35%",
       "rating":5
     },
@@ -3353,7 +3353,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Made in the USA or Imported",
       "Sole Material": "Ethylene Vinyl Acetate",
-      "instock":73,
+      "instock":"73",
       "off":"35%",
       "rating":5
     },
@@ -3373,7 +3373,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Made in the USA or Imported",
       "Sole Material": "Rubber",
-      "instock":84,
+      "instock":"84",
       "off":"30%",
       "rating":5
     },
@@ -3393,7 +3393,7 @@
       "Origin": "Imported",
       "Sole Material": "Synthetic Rubber",
       "Outer Material": "Textile",
-      "instock":39,
+      "instock":"39",
       "off":"30%",
       "rating":5
     },
@@ -3412,7 +3412,7 @@
       "Sole Material": "Rubber",
       "Outer Material":" Polyurethane (PU)",
       "Closure": "TypePull-On",
-      "instock":78,
+      "instock":"78",
       "off":"30%",
       "rating":5
     },
@@ -3433,7 +3433,7 @@
       "Closure Type": "Zip",
       "Water Resistance Level": "Water Resistant",
       "Country of Origin": "China",
-      "instock":40,
+      "instock":"40",
       "off":"30%",
       "rating":4
     },
@@ -3453,7 +3453,7 @@
       "Shaft Height": "12 Inches",
       "Shaft Circumference": "14 Inches",
       "Outer Material": "Faux Leather",
-      "instock":54,
+      "instock":"54",
       "off":"30%",
       "rating":4.5
     },
@@ -3472,7 +3472,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Faux Leather",
       "Closure Type": "Pull-On",
-      "instock":38,
+      "instock":"38",
       "off":"30%",
       "rating":4.5
     },
@@ -3492,7 +3492,7 @@
       "Shaft Height": "3.75 Inches",
       "Outer Material": "Polyurethane (PU)",
       "Closure Type": "Zipper",
-      "instock":50,
+      "instock":"50",
       "off":"30%",
       "rating":5
     },
@@ -3511,7 +3511,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Synthetic Rubber",
       "Closure Type": "Zipper",
-      "instock":52,
+      "instock":"52",
       "off":"30%",
       "rating":5
     },
@@ -3531,7 +3531,7 @@
       "Outer Material": "Suede",
       "Closure Type": "Zipper",
       "Water Resistance Level": "Not Water Resistant",
-      "instock":59,
+      "instock":"59",
       "off":"30%",
       "rating":5
     },
@@ -3551,7 +3551,7 @@
       "Outer Material": "Faux Leather",
       "Closure Type": "Slip On",
       "Water Resistance Level": "Water Resistant",
-      "instock":40,
+      "instock":"40",
       "off":"35%",
       "rating":5
     },
@@ -3571,7 +3571,7 @@
       "Care Instructions": "Hand Wash Only",
       "Fur Description":"ARCH SUPPORT 100% Comfortable Arch Supportive Women's Slides Sandals",
       "Sole Material": "Rubber",
-      "instock":57,
+      "instock":"57",
       "off":"35%",
       "rating":5
     },
@@ -3592,7 +3592,7 @@
       "Outer Material": "Ethylene Vinyl Acetate (EVA)",
       "Closure Type": "Slip On",
       "Country of Origin":" China",
-      "instock":69,
+      "instock":"69",
       "off":"35%",
       "rating":5
     },
@@ -3611,7 +3611,7 @@
       "Fabric Type": "100% Synthetic",
       "Origin": "Imported",
       "Country of Origin": "China",
-      "instock":62,
+      "instock":"62",
       "off":"35%",
       "rating":5
     },
@@ -3631,7 +3631,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Faux Leather",
       "Closure Type": "Slip On",
-      "instock":68,
+      "instock":"68",
       "off":"35%",
       "rating":5
     },
@@ -3651,7 +3651,7 @@
       "Sole Material": "Rubber",
       "Outer Material": "Fabric",
       "Closure Type": "Pull On",
-      "instock":60,
+      "instock":"60",
       "off":"35%",
       "rating":5
     },
@@ -3672,7 +3672,7 @@
       "Outer Material": "Injected Polyurethane Gel Midsole and Synthetic Leather",
       "Closure Type": "Slip On",
       "Country of Origin": "Thailand",
-      "instock":67,
+      "instock":"67",
       "off":"30%",
       "rating":5
     },
@@ -3693,7 +3693,7 @@
       "Closure Type": "Slip On",
       "Water Resistance Level": "Waterproof",
       "Country of Origin":"China",
-      "instock":56,
+      "instock":"56",
       "off":"30%",
       "rating":5
     },
@@ -3713,7 +3713,7 @@
       "Care Instructions": "Machine Wash",
       "Origin": "Imported",
       "Sole Material": "Oofoam",
-      "instock":82,
+      "instock":"82",
       "off":"35%",
       "rating":3.5
     },
@@ -3734,7 +3734,7 @@
       "Outer Material": "Rubber",
       "Closure Type": "Hook & Loop",
       "Country of Origin": "China",
-      "instock":15,
+      "instock":"15",
       "off":"35%",
       "rating":4.5
     },
@@ -3754,7 +3754,7 @@
       "Sole Material": "Synthetic",
       "Outer Material": "Faux Leather",
       "Closure Type": "Slip On",
-      "instock":72,
+      "instock":"72",
       "off":"35%",
       "rating":4
     },
@@ -3774,7 +3774,7 @@
       "Sole Material":" Rubber/Plastic",
       "Outer Material": "Rubber",
       "Closure Type": "Slip On",
-      "instock":48,
+      "instock":"48",
       "off":"35%",
       "rating":5
     },
@@ -3794,7 +3794,7 @@
       "Dimensions": "60 x 90 cm",
       "Fuel Type": "Gas",
       "Number of Burners": 5,
-      "instock":20,
+      "instock":"20",
       "off":"35%",
       "rating":4.5
     },
@@ -3809,7 +3809,7 @@
       "price":"$249",
       "salePrice":"$241",
       "color": "black x silver",
-      "instock":49,
+      "instock":"49",
       "off":"30%",
       "rating":3.5
     },
@@ -3827,7 +3827,7 @@
       "brand": "Union Air",
       "dimensions": "LxWxH 60 x 90 x 85 centimeters",
       "Weight": "65 Kilograms",
-      "instock":78,
+      "instock":"78",
       "off":"30%",
       "rating":3.5
     },
@@ -3852,7 +3852,7 @@
       "Voltage": "220 Volts",
       "Efficiency":" A+",
       "Mounting type": "Gas",
-      "instock":19,
+      "instock":"19",
       "off":"30%",
       "rating":3.5
     },
@@ -3872,7 +3872,7 @@
       "brand":"Fresh",
       "Mounting type":"Gas",
       "Installation Type":"Free Standing",
-      "instock":30,
+      "instock":"30",
       "off":"35%",
       "rating":5
     },
@@ -3892,7 +3892,7 @@
       "Fuel type": "Liquefied Petroleum Gas",
       "dimensions": "LxWxH 60 x 80 x 90 centimeters",
       "Weight": "45 Kilograms",
-      "instock":10,
+      "instock":"10",
       "off":"10%",
       "rating":5
     },
@@ -3909,7 +3909,7 @@
       "color": "Silver",
       "Material": "Stainless Steel",
       "brand": "Natural Sky",
-      "instock":15,
+      "instock":"15",
       "off":"10%",
       "rating":5
     },
@@ -3926,7 +3926,7 @@
       "color": "white",
       "Material": "Copper",
       "brand": "Grand Electronic",
-      "instock":16,
+      "instock":"16",
       "off":"10%",
       "rating":5
     },
@@ -3941,7 +3941,7 @@
       "price":"$19",
       "salePrice":"$17",
       "color":"transparent",
-      "instock":20,
+      "instock":"20",
       "off":"10%",
       "rating":4.5
     },
@@ -3965,7 +3965,7 @@
       "Product care instructions": "Microwave Safe, Hand Wash Only, Dishwasher Safe",
       "Shape": "Round",
       "Is dishwasher-safe": "Yes",
-      "instock":30,
+      "instock":"30",
       "off":"10%",
       "rating":5
     },
@@ -3984,7 +3984,7 @@
       "Material":"Stainless Steel",
       "brand":"YAeele",
       "Weight":"1 Grams",
-      "instock":43,
+      "instock":"43",
       "off":"10%",
       "rating":3.5
     },
@@ -4004,7 +4004,7 @@
       "brand":"Tueval",
       "Material":"Aluminum",
       "Weight":"270 Grams",
-      "instock":79,
+      "instock":"79",
       "off":"10%",
       "rating":4
     },
@@ -4021,7 +4021,7 @@
       "dimensions":"5L x 10W centimeters",
       "price":"$44",
       "salePrice":"$41",
-      "instock":10,
+      "instock":"10",
       "off":"10%",
       "rating":3.5
     },
@@ -4045,7 +4045,7 @@
       "Number of pieces": "2",
       "Model name": "woke frypan",
       "Is dishwasher-safe": "Yes",
-      "instock":20,
+      "instock":"20",
       "off":"10%",
       "rating":3.5
     },
@@ -4065,7 +4065,7 @@
       "brand": "Zinox",
       "Number of pieces": "2",
       "Included components": "frying pan set 2 pcs",
-      "instock":22,
+      "instock":"22",
       "off":"10%",
       "rating":3.5
     },
@@ -4083,7 +4083,7 @@
       "brand": "Generic",
       "Type": "Milk Spill Stopper",
       "Material": "Glass",
-      "instock":70,
+      "instock":"70",
       "off":"30%",
       "rating":5
     },
@@ -4101,7 +4101,7 @@
       "color":"palevioletred",
       "colors":["palevioletred", "gray", "silver", "black"],
       "Number of pieces": "3",
-      "instock":60,
+      "instock":"60",
       "off":"10%",
       "rating":3.5
     },
@@ -4116,7 +4116,7 @@
       "salePrice":"$11",
       "color":"gray x green",
       "colors":["gray x green", "red", "peru", "black"],
-      "instock":63,
+      "instock":"63",
       "off":"30%",
       "rating":3.5
     },
@@ -4134,7 +4134,7 @@
       "colors":["red", "peru", "black"],
       "Material":"Stainless Steel, Tungsten Steel, Ceramic",
       "brand":"Other",
-      "instock":65,
+      "instock":"65",
       "off":"30%",
       "rating":3.5
     },
@@ -4149,7 +4149,7 @@
       "salePrice":"$7",
       "color":"red x silver",
       "colors":["red x silver", "peru", "black"],
-      "instock":82,
+      "instock":"82",
       "off":"35%",
       "rating":3.5
     },
@@ -4170,7 +4170,7 @@
       "Capacity":"28 Liters",
       "Material":"Mixed Materials",
       "Weight":"18 Kilograms",
-      "instock":59,
+      "instock":"59",
       "off":"30%",
       "rating":5
     },
@@ -4191,7 +4191,7 @@
       "Capacity": "2E+1 Liters",
       "Material": "Metal",
       "Energy consumption": "700 Watts",
-      "instock":27,
+      "instock":"27",
       "off":"30%",
       "rating":3.5
     },
@@ -4216,7 +4216,7 @@
       "Included Components": "Microwave",
       "Controller type": "Push Button",
       "Efficiency": "B",
-      "instock":28,
+      "instock":"28",
       "off":"35%",
       "rating":5
     },
@@ -4235,7 +4235,7 @@
       "Capacity": "4E+1 Liters",
       "Human interface input": "Buttons",
       "Weight": "5 Kilograms",
-      "instock":21,
+      "instock":"21",
       "off":"30%",
       "rating":4.5
     },
@@ -4259,7 +4259,7 @@
       "Efficiency": "A+",
       "Weight": "11.76 Kilograms",
       "Model Number": "MZ2010P-B5",
-      "instock":22,
+      "instock":"22",
       "off":"10%",
       "rating":5
     },
@@ -4278,7 +4278,7 @@
       "color":"peru",
       "colors":["peru", "black", "blue", "gray"],
       "Weight": "1.19 Kilograms",
-      "instock":16,
+      "instock":"16",
       "off":"10%",
       "rating":5
     },
@@ -4294,7 +4294,7 @@
       "salePrice":"$35",
       "color":"black",
       "colors":["peru", "black", "blue", "gray"],
-      "instock":68,
+      "instock":"68",
       "off":"10%",
       "rating":3.5
     },
@@ -4315,7 +4315,7 @@
       "Type": "Pot",
       "Material": "Stainless Steel",
       "Product": "Made of SAE 304 stainless steel AKA 18/8 stainless steel",
-      "instock":66,
+      "instock":"66",
       "off":"10%",
       "rating":5
     },
@@ -4334,7 +4334,7 @@
       "Material": "Aluminum",
       "brand": "Trueval",
       "Weight": "450 Grams",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -4354,7 +4354,7 @@
       "brand": "Top Chef",
       "Weight": "1.28 Kilograms",
       "Number of pieces": "2",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -4376,7 +4376,7 @@
       "Assembly required"	: "No",
       "Included components": "yes",
       "Weight": "1.68 Kilograms",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -4395,7 +4395,7 @@
       "Material": "Granite",
       "Type": "Cooking Pots",
       "Size": "24 Cm",
-      "instock":15,
+      "instock":"15",
       "off":"15%",
       "rating":5
     },
@@ -4413,7 +4413,7 @@
       "brand": "Trueval",
       "color":"red",
       "colors":["purple", "black", "red", "palevioletred"],
-      "instock":50,
+      "instock":"50",
       "off":"10%",
       "rating":5
     },
@@ -4431,7 +4431,7 @@
       "brand":"Tefal",
       "color":"maroon",
       "colors":["purple", "black", "red", "maroon"],
-      "instock":73,
+      "instock":"73",
       "off":"20%",
       "rating":5
     },
@@ -4449,7 +4449,7 @@
       "brand":"Agudo",
       "price":"$12",
       "salePrice":"$11",
-      "instock":38,
+      "instock":"38",
       "off":"10%",
       "rating":3.5
     },
@@ -4464,7 +4464,7 @@
       "salePrice":"$13",
       "color":"white x black",
       "colors":["white x black", "black x gray", "blue x black", "red x blue"],
-      "instock":30,
+      "instock":"30",
       "off":"10%",
       "rating":3.5
     }
