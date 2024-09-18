@@ -749,32 +749,35 @@ if(document.querySelector(".cart-page")){
   }
 
   function viewSubtotalandTotal(){
-    const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
-    const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
-    const total = document.querySelector(".cart-page .col-right .checkout-block #total");
 
-    let initialSubtotal = 0;
-    let shippingFee = 10;
-    const maxTotal = 1000;
-
-    productRows.forEach((row) => {
-      const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
-      const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
-      const totalPriceProduct = row.querySelector(".total-price");
-
-      totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
-
-      initialSubtotal += proQuantity * proPrice;
-      
-      if(initialSubtotal >= maxTotal){shippingFee = 0;}
-
-    });
-
-    subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
-    total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
-
-    updateShippingMessage(initialSubtotal);
-    updateProgressBar(initialSubtotal);
+    if(document.querySelector(".cart-page .col-left table tbody tr .price")){
+       const productRows = document.querySelectorAll(".cart-page .col-left table tbody tr");
+       const subtotalProductsPrice = document.querySelector(".cart-page .col-right .calculate-block #subtotal");
+       const total = document.querySelector(".cart-page .col-right .checkout-block #total");
+   
+       let initialSubtotal = 0;
+       let shippingFee = 10;
+       const maxTotal = 1000;
+   
+       productRows.forEach((row) => {
+         const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
+         const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
+         const totalPriceProduct = row.querySelector(".total-price");
+   
+         totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
+   
+         initialSubtotal += proQuantity * proPrice;
+         
+         if(initialSubtotal >= maxTotal){shippingFee = 0;}
+   
+       });
+   
+       subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
+       total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
+   
+       updateShippingMessage(initialSubtotal);
+       updateProgressBar(initialSubtotal);
+    }
     
   }
 
