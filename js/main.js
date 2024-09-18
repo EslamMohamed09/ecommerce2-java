@@ -617,7 +617,7 @@ function addToCart(){
     const productImageV = safeGetAttribute(".big-image img", 'src');
     const productDescriptionV = safeTextContent('.description');
     const productBrandV = safeTextContent('.brand').split(': ')[1] || '';
-    const productStockV = safeTextContent('#instock');
+    const productStockV = safeTextContent('.instock');
     const productAboutV = safeTextContent('.about-this-item');
     const oldPriceV = safeTextContent('.oldprice');
     const priceV = safeTextContent('.price');
