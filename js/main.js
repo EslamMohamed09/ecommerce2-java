@@ -350,9 +350,9 @@ if(document.getElementById('quick-view-modal')){
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
 /*
-###############
+############
  SINGLE PAGE
-###############
+############
 */
 if(document.querySelector("#single-page")){
 
@@ -470,6 +470,7 @@ function displayProductDetails(product) {
   flippingSizes();
   flippingColors();
   handleQuantity();
+  addToCart();
 
 }
 
@@ -596,64 +597,69 @@ if(productId){
   document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
 }
 
-document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function() {
-  const singlepProductContainer = document.querySelector("#single-page .product-container");
+function addToCart(){
 
-  const safeTextContent = (selector) => {
-    const element = singlepProductContainer.querySelector(selector);
-    return element ? element.textContent.trim() : '';
-  };
+  document.querySelector("#single-page .product-container .col-right .b-btn").addEventListener('click', function() {
+    const singlepProductContainer = document.querySelector("#single-page .product-container");
 
-  const safeGetAttribute = (selector, attr) => {
-    const element = singlepProductContainer.querySelector(selector);
-    return element ? element.getAttribute(attr) : '';
-  };
+    const safeTextContent = (selector) => {
+      const element = singlepProductContainer.querySelector(selector);
+      return element ? element.textContent.trim() : '';
+    };
 
-  const productIdV = safeTextContent('.id');
-  const productTitleV = safeTextContent('h1');
-  const productImageV = safeGetAttribute(".big-image img", 'src');
-  const productDescriptionV = safeTextContent('.description');
-  const productBrandV = safeTextContent('.brand').split(': ')[1] || '';
-  const productStockV = safeTextContent('#instock');
-  const productAboutV = safeTextContent('.about-this-item');
-  const oldPriceV = safeTextContent('.oldprice');
-  const priceV = safeTextContent('.price');
-  const sizeV = safeTextContent('.size');
-  const colorV = safeTextContent('#selected-color');
-  const quantityV = safeTextContent('#pro-quantity-no');
+    const safeGetAttribute = (selector, attr) => {
+      const element = singlepProductContainer.querySelector(selector);
+      return element ? element.getAttribute(attr) : '';
+    };
 
-  const product = {
-    id: productIdV,
-    title: productTitleV,
-    image: productImageV,
-    description: productDescriptionV,
-    brand: productBrandV,
-    stock: productStockV,
-    about: productAboutV,
-    oldPrice: oldPriceV,
-    price: priceV,
-    size: sizeV,
-    color: colorV,
-    quantity: quantityV
-  };
+    const productIdV = safeTextContent('.id');
+    const productTitleV = safeTextContent('h1');
+    const productImageV = safeGetAttribute(".big-image img", 'src');
+    const productDescriptionV = safeTextContent('.description');
+    const productBrandV = safeTextContent('.brand').split(': ')[1] || '';
+    const productStockV = safeTextContent('#instock');
+    const productAboutV = safeTextContent('.about-this-item');
+    const oldPriceV = safeTextContent('.oldprice');
+    const priceV = safeTextContent('.price');
+    const sizeV = safeTextContent('.size').split(': ')[1] || '';
+    const colorV = safeTextContent('#selected-color');
+    const quantityV = safeTextContent('#pro-quantity-no');
 
-  let productCart = JSON.parse(localStorage.getItem('product-cart')) || [];
+    const product = {
+      id: productIdV,
+      title: productTitleV,
+      image: productImageV,
+      description: productDescriptionV,
+      brand: productBrandV,
+      stock: productStockV,
+      about: productAboutV,
+      oldPrice: oldPriceV,
+      price: priceV,
+      size: sizeV,
+      color: colorV,
+      quantity: quantityV
+    };
 
-  const existingProductIndex = productCart.findIndex(item => item.id === product.id);
+    let productCart = JSON.parse(localStorage.getItem('product-cart')) || [];
 
-  if(existingProductIndex > -1) {
-    productCart[existingProductIndex] = product;
-    alert('Product updated in cart');
-  } else {
-    productCart.push(product);
-    alert('Product added to cart');
-  }
+    const existingProductIndex = productCart.findIndex(item => item.id === product.id);
 
-  localStorage.setItem('product-cart', JSON.stringify(productCart));
-});
+    if(existingProductIndex > -1) {
+       productCart[existingProductIndex] = product;
+       alert('Product updated in cart');
+    } else {
+      productCart.push(product);
+      alert('Product added to cart');
+    }
 
+    localStorage.setItem('product-cart', JSON.stringify(productCart));
+  });
 
 }
+
+}
+
+console.log(JSON.parse(localStorage.getItem('product-cart')) || []);
 
 
 // if(document.querySelector(".product-container .col-right")){
@@ -685,9 +691,9 @@ document.querySelector("#single-page .product-container .col-right .b-btn").addE
 
 
 /*
-###########
+##########
  CART PAGE
-###########
+##########
 */
 if(document.querySelector(".cart-page")){
   
