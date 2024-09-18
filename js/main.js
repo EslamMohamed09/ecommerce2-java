@@ -657,34 +657,6 @@ function addToCart(){
 
 }
 
-// if(document.querySelector(".product-container .col-right")){
-// const maxQuantity = parseInt(document.querySelector(".product-container .col-right .instock").textContent);
-// const productPrice = parseFloat(document.querySelector(".product-container .col-right .product-price .price").textContent.replace('$', '').trim());
-// const decreaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .decrease-quantity-btn");
-// const increaseQuantityBtn = document.querySelector(".product-container .col-right .product-quantity-block .increase-quantity-btn");
-// const proQuantityElement = document.querySelector(".product-container .col-right .product-quantity-block #pro-quantity-no");
-// const subtotalElement = document.querySelector(".product-container .col-right .product-quantity-block #subtotal");
-
-// let proQuantityNumber = parseInt(proQuantityElement.textContent.trim());
-
-// decreaseQuantityBtn.addEventListener('click', function(){
-//   if(proQuantityNumber > 1){
-//      proQuantityNumber -= 1;
-//      proQuantityElement.textContent = proQuantityNumber;
-//      subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
-//   }
-// });
-
-// increaseQuantityBtn.addEventListener('click', function(){
-//   if(proQuantityNumber < maxQuantity){
-//      proQuantityNumber += 1;
-//      proQuantityElement.textContent = proQuantityNumber;
-//      subtotalElement.textContent = `$${proQuantityElement.textContent * productPrice.toFixed(2)}`;
-//   }
-// });
-// }
-
-
 /*
 ##########
  CART PAGE
