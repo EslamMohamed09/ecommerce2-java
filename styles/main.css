@@ -2928,4 +2928,96 @@ footer .bottom-footer p {
   font-weight: bold;
 }
 
+/*==========================================
+ # Payment Page
+===========================================*/
+.payment-section {
+  background: linear-gradient(90deg, #2ecc71 42%, #27ae60 50%);
+  padding: 10rem 4rem 6rem;
+}
+
+.payment-section .form-container {
+  padding: 3rem;
+  background: #eee;
+  width: 90%;
+  box-shadow: var(--box-shadow2);
+}
+
+.payment-section .form-container h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.payment-section .form-container .inputbox {
+  margin-bottom: 1rem;
+}
+
+.payment-section .form-container .inputbox span {
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+  display: block;
+  font-weight: bold;
+  color: #444;
+}
+
+.payment-section .form-container .inputbox input {
+  width: 95%;
+  padding: 0.4rem 1rem;
+  outline: none;
+  border: 1px solid #999;
+}
+
+.payment-section .form-container .inputbox input:focus {
+  outline: none;
+  border: 1px solid #333;
+  box-shadow: var(--box-shadow);
+}
+
+.payment-section .form-container .col-right img {
+  margin-bottom: 0.6rem;
+}
+
+.payment-section .form-container .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 0.8rem;
+}
+
+.payment-section .form-container .flex .inputbox {
+  flex: 1 1 10rem;
+}
+
+.payment-section .form-container .submit-btn {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background: rgb(17, 138, 17);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: all 0.5s linear;
+}
+
+.payment-section .form-container .submit-btn:hover {
+  background: rgb(26, 189, 26);
+  text-shadow: var(--box-shadow5);
+  transition: all 0.5s linear;
+}
+
+@media (max-width: 768px) {
+  .payment-section {
+    padding: 10rem 2rem 6rem;
+  }
+  .payment-section {
+    background: linear-gradient(180deg, #2ecc71 42%, #27ae60 50%);
+  }
+  .payment-section .form-container .col-left {
+    margin-bottom: 3rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
