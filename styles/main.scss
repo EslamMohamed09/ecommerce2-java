@@ -2557,6 +2557,9 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       p.subtotal .value {font-weight:bold;}
       p.total {font-weight:bold;}
     }
+
+    .btn2 {width:100%;
+           margin-top:2rem;}
   }
   
 }
@@ -2578,11 +2581,11 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
 
         .inputbox {margin-bottom:1rem;
 
-            span {padding-bottom:0.5rem;
+            span {padding-bottom:0.4rem;
                   font-size:1.3rem;
                   display:block;
                   font-weight:bold;
-                  color:#444;}
+                  color:var(--gray11);}
 
             input {width:95%;
                    padding:0.4rem 1rem;
@@ -2623,6 +2626,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
     }
 
 }
+
 @media (max-width:768px){
 
       .payment-section {padding:10rem 2rem 6rem;}

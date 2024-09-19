@@ -2930,6 +2930,10 @@ footer .bottom-footer p {
 .checkout-page .col-right .discount-block p.total {
   font-weight: bold;
 }
+.checkout-page .col-right .btn2 {
+  width: 100%;
+  margin-top: 2rem;
+}
 
 /*===================
  # Payment Page
@@ -2953,11 +2957,11 @@ footer .bottom-footer p {
   margin-bottom: 1rem;
 }
 .payment-section .form-container .inputbox span {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
   font-size: 1.3rem;
   display: block;
   font-weight: bold;
-  color: #444;
+  color: var(--gray11);
 }
 .payment-section .form-container .inputbox input {
   width: 95%;

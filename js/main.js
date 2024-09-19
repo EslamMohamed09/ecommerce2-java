@@ -888,10 +888,9 @@ if(document.querySelector(".checkout-page")){
   const shippingElement = document.querySelector(".checkout-page .col-right .discount-block .shipping .value");
   const totalElement = document.querySelector(".checkout-page .col-right .discount-block .total .value");
 
-        subtotalElement.textContent = `$${initialSubtotal}`;
-
         if(initialSubtotal >= maxTotal){shippingFee = 0}
 
+        subtotalElement.textContent = `$${initialSubtotal}`;
         shippingElement.textContent = `$${shippingFee}`;
         totalElement.textContent = `$${initialSubtotal + shippingFee}`
    
