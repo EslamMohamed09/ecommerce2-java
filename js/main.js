@@ -686,7 +686,7 @@ if(document.querySelector(".cart-page")){
               </div>
               <div class="content d-flex-c-st-st">
                 <h5>${product.title}</h5>
-                <p>${product.color} / ${product.size}</p>
+                <p>${product.color}${product.size ? ' / ' + product.size : ''}</p>
                 <p>Brand: ${product.brand}</p>
                 <span id="instock">${product.stock} in stock</span>
               </div>
