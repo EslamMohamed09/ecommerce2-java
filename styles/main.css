@@ -2842,9 +2842,12 @@ footer .bottom-footer p {
 }
 .checkout-page .col-right .products {
   width: 100%;
+  margin-bottom: 3rem;
 }
 .checkout-page .col-right .products .product-item {
   width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 .checkout-page .col-right .products .product-item .content {
   gap: 1rem;

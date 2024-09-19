@@ -662,6 +662,8 @@ if(document.querySelector("#single-page")){
  CART PAGE
 ##########
 */
+const maxTotal = 1000;
+
 if(document.querySelector(".cart-page")){
   
   function renderCartItems() {
@@ -779,7 +781,6 @@ if(document.querySelector(".cart-page")){
 
   let initialSubtotal = 0;
   let shippingFee = 10;
-  const maxTotal = 1000;
 
   function updateShippingMessage(subtotal){
     const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
@@ -827,6 +828,7 @@ if(header){
 ##############
 */
 if(document.querySelector(".checkout-page")){
+
  const deliveryChecks = document.querySelectorAll(".checkout-page .col-left .delivery-block .check-parent .check");
  deliveryChecks.forEach((deliveryCheck) => {
   deliveryCheck.addEventListener('click', function(){
@@ -842,4 +844,59 @@ if(document.querySelector(".checkout-page")){
     radioInput.checked = true;
   });
  });
+
+ function renderItemsCheckout(){
+  const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+  const productsCheckoutContainer = document.querySelector(".checkout-page .col-right .products");
+        productsCheckoutContainer.innerHTML = '';
+
+        let initialSubtotal = 0;
+        let shippingFee = 10;
+
+  if(cartItems.length === 0){productsCheckoutContainer.innerHTML = 'theres is no product';}
+
+  cartItems.forEach((product) => {
+    totalPriceProduct = product.quantity * parseFloat(product.salePrice.replace('$', ''));
+
+    const productItem = `
+      <div class="product-item d-flex-r-bt-c">
+        <div class="content d-flex-r-st-c">
+          <div class="image">
+            <div class="value"><span>${product.quantity}</span></div>
+            <img src="${product.image}" alt="${product.title}">
+          </div>
+          <div class="details d-flex-c-st-st">
+            <h5>${product.title}</h5>
+            <p>${product.color}${product.size ? ' / ' + product.size : ''}</p>
+          </div>
+        </div>
+        <p>$${totalPriceProduct.toFixed(2)}</p>
+      </div>
+    `;
+
+    productsCheckoutContainer.innerHTML += productItem;
+
+    initialSubtotal += product.quantity * parseFloat(product.salePrice.replace('$', ''));
+
+  });
+
+  document.querySelectorAll(".checkout-page .col-right .products .product-item .details h5").forEach((h5) => {
+    h5.textContent = truncateWords(h5.textContent, 6);
+  });
+
+  const subtotalElement = document.querySelector(".checkout-page .col-right .discount-block .subtotal .value");
+  const shippingElement = document.querySelector(".checkout-page .col-right .discount-block .shipping .value");
+  const totalElement = document.querySelector(".checkout-page .col-right .discount-block .total .value");
+
+        subtotalElement.textContent = `$${initialSubtotal}`;
+
+        if(initialSubtotal >= maxTotal){shippingFee = 0}
+
+        shippingElement.textContent = `$${shippingFee}`;
+        totalElement.textContent = `$${initialSubtotal + shippingFee}`
+   
+ }
+
+ renderItemsCheckout();
+
 }

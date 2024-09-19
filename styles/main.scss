@@ -2480,7 +2480,12 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
               border-left:1.5px solid var(--gray4);
 
     .products {width:100%;
+               margin-bottom:3rem;
+
       .product-item {width:100%;
+                     margin:0.5rem 0;
+                     padding:0.5rem 0;
+
         .content {gap:1rem;
           .image {position:relative;
 
@@ -2517,7 +2522,9 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
         }
         p {color:var(--gray9);
            margin:0 !important;}
+
       }
+
     }
 
 
