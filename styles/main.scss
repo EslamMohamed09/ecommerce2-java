@@ -92,20 +92,24 @@
        --olive8:#616666;
        --olive9:#536e6e;
        --olive10:#4a7474;
-       --olive11:#3e8181;
-       --olive12:#85fcfc;
-       --olive13:#5ff7f7;
-       --olive14:#44f7f7;
-       --olive15:#04f7f7;
-       --olive16:#02a8a8;
-       --olive17:#028d8d;
-       --olive18:#026b6b;
-       --olive19:#015050;
-       --olive20:#004242;
-       --olive21:#013535;
+       --olive11:#b1f7f7;
+       --olive12:#9ff8f8;
+       --olive13:#87f5f5;
+       --olive14:#3e8181;
+       --olive15:#85fcfc;
+       --olive16:#5ff7f7;
+       --olive17:#44f7f7;
+       --olive18:#04f7f7;
+       --olive19:#02a8a8;
+       --olive20:#028d8d;
+       --olive21:#026b6b;
+       --olive22:#015050;
+       --olive23:#004242;
+       --olive24:#013535;
 
        --milky1:rgb(208, 241, 253);
        --milky2:rgb(183, 233, 253);
+       --milky3:rgb(166, 217, 229);
 
        --aqua:#f1f8f8;
        --aqua1:#eafafa;
@@ -369,7 +373,7 @@ body {overflow-x:hidden;
 
 ::-webkit-scrollbar {width:8px;}
 
-::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--olive18) 0%, var(--olive17) 100%);
+::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--olive21) 0%, var(--olive20) 100%);
                            border-radius:0;}
 
 body {overflow-x:hidden;}
@@ -578,7 +582,7 @@ h5 {font-size:1rem;}
                              bottom:-0.6rem;
                              width:100%;
                              height:1.6px;
-                             background-color:var(--olive16);}
+                             background-color:var(--olive19);}
 
 /********************
  # Header
@@ -590,14 +594,14 @@ header {position:fixed;
         width:100%;
         z-index:1000000;
   .top-nav {padding:0.3rem 3%;
-            background-color:(var(--olive20));
+            background-color:(var(--olive23));
 
     .col-left {
       select {gap:0.1rem;
               cursor:pointer;
               color:var(--white);
-              background-color:(var(--olive20));
-              border:1px solid var(--olive17);
+              background-color:(var(--olive23));
+              border:1px solid var(--olive20);
                  
         span {font-size:0.9rem;
               color:var(--white);}
@@ -627,7 +631,7 @@ header {position:fixed;
     }
   }
 
-  .main-header {background-color:(var(--olive20));
+  .main-header {background-color:(var(--olive23));
                 padding:0 !important;
                 margin:0 !important;
                 z-index:1000000;
@@ -635,12 +639,12 @@ header {position:fixed;
                 
 
     .upper {padding:0.4rem 3%;
-            border-top:1px solid var(--olive19);
-            border-bottom:1px solid var(--olive19);
+            border-top:1px solid var(--olive22);
+            border-bottom:1px solid var(--olive22);
 
       .web-title {cursor:pointer;
                   
-          a {color:var(--olive11);
+          a {color:var(--olive14);
              text-transform:uppercase;}
       }
 
@@ -648,7 +652,7 @@ header {position:fixed;
                     border-radius:1.5rem;
                     padding:0;
                     border:none;
-                    background-color:var(--olive11);
+                    background-color:var(--olive14);
 
         input[type="search"] {flex:1 1 10rem;
                               padding:0.4rem 0.6rem 0.4rem 1rem;
@@ -656,7 +660,7 @@ header {position:fixed;
                               font-size:1.2rem;
                               border:none;
                               color:var(--white);
-                              background-color:var(--olive11);}
+                              background-color:var(--olive14);}
 
         input[type="search"]::placeholder {color:var(--white);}
 
@@ -665,9 +669,9 @@ header {position:fixed;
                      padding:0.6rem 1.3rem;
                      height:100%;
                      border:none;
-                     background-color:var(--olive19);
+                     background-color:var(--olive22);
 
-          svg {color:var(--olive12);
+          svg {color:var(--olive15);
                font-size:1.1rem;}
         }
       }
@@ -720,7 +724,7 @@ header {position:fixed;
 
           }
 
-          li:hover {background-color:var(--olive11);}
+          li:hover {background-color:var(--olive14);}
 
         }
 
@@ -1334,7 +1338,7 @@ header {position:fixed;
   .section-container {flex-wrap:wrap;
                       padding:0;
                       border-radius:0.5rem;
-                      background:radial-gradient(circle at 72% 60%, var(--olive16) 1%, var(--olive21) 40%);
+                      background:radial-gradient(circle at 72% 60%, var(--olive19) 1%, var(--olive24) 40%);
 
 
     .col-left {flex:1 1 25rem;
@@ -1342,7 +1346,7 @@ header {position:fixed;
 
       .content {gap:0.5rem;
 
-        span{color:var(--olive15);
+        span{color:var(--olive18);
              font-size:1.3rem;
              margin-bottom:1rem;}
 
@@ -1373,13 +1377,13 @@ header {position:fixed;
 
 @media(max-width:768px){
   .today-deal-section .section-container {flex-direction:column-reverse;
-                                          background:radial-gradient(circle at 50% 26%, var(--olive16) 15%, var(--olive21) 40%);}
+                                          background:radial-gradient(circle at 50% 26%, var(--olive19) 15%, var(--olive24) 40%);}
 
     .today-deal-section .section-container .col-left .content span {margin-top:3rem;}
 }
 
 @media(max-width:280px){
-  .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive16) 8%, var(--olive21) 30%);
+  .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive19) 8%, var(--olive24) 30%);
     
     .col-left {padding:5% 5% 5% 7%;}
 
@@ -1786,7 +1790,7 @@ header {position:fixed;
 /********************
 # Footer
 ********************/
-footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, var(--olive18) 100%);
+footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, var(--olive21) 100%);
         padding:4rem 0 0;
 
   .footer-widget {text-align:left;
@@ -1824,7 +1828,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
            margin:0 !important;
            border-radius:50%;
            font-size:1rem;
-           background-color:var(--olive11);
+           background-color:var(--olive14);
           svg {color:var(--white);
                margin:0 !important;}
         }
@@ -1840,7 +1844,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
 
   }
 
-  .bottom-footer {background-color:var(--olive21);
+  .bottom-footer {background-color:var(--olive24);
                   padding:1.3rem 0.9rem;
                   margin-top:5rem;
 
@@ -2058,7 +2062,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
   }
 
   .progress-bar-block {width:100%;
-                       margin:1rem 0;
+                       margin:1rem 0 2rem;
 
     .progress-bar-value {margin:0 0 0.5rem;
                          position:relative;
@@ -2094,7 +2098,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
     table {width:100%;
            margin-bottom:1rem;
 
-      thead {background-color:var(--blue2);
+      thead {background-color:var(--milky3);
         tr {
           th {padding:1rem;
               font-size:1rem;
@@ -2111,10 +2115,10 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
         td {text-align:center !important;
           .product-card {gap:1rem;
 
-            .image {flex:1 1 5rem;
-                    padding:0.6rem;
-              img {width:13rem;
-                  height:13rem;}
+            .image {flex:1 1 2rem;
+                    padding:1rem 0.3rem;
+              img {width:9rem;
+                  height:9rem;}
             }
 
             .content {flex:1 1 15rem;
@@ -2123,6 +2127,8 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
               h5 {margin:0.7rem 0 0;}
 
               p {color:var(--gray8);}
+
+              span#instock {margin-top:0.5rem;font-weight:bold;font-size:0.9rem;}
               
             }
 
@@ -2523,6 +2529,8 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
         p {color:var(--gray9);
            margin:0 !important;}
 
+        p.pro-price {font-weight:bold;}
+
       }
 
     }
@@ -2554,7 +2562,7 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
       p {width:100%;
          font-size:1rem;
          color:var(--gray10);}
-      p.subtotal .value {font-weight:bold;}
+      p.subtotal {font-weight:bold;}
       p.total {font-weight:bold;}
     }
 
@@ -2567,63 +2575,81 @@ footer {background:linear-gradient(to top, var(--olive21), var(--olive20) 50%, v
 /*===================
  # Payment Page
 ====================*/
-.payment-section {background:linear-gradient(90deg, #2ecc71 42%, #27ae60 50%);
-                  padding:10rem 4rem 6rem;
+.payment-section {background:var(--aqua);
+                  padding:5rem 4rem 6rem;
 
-    .form-container {padding:3rem;
-                     background:#eee;
-                     width:90%;
-                     box-shadow:var(--box-shadow2);
+  .form-container {padding:0;
+                   width:95%;
+
+      .col-left {padding:2.5rem 2rem;
+                 background:var(--olive5);
 
         h3 {font-weight:700;
             margin-bottom:1.5rem;
             text-transform:uppercase;}
 
-        .inputbox {margin-bottom:1rem;
+        .inputs-block {width:100%;
+                       gap:1rem;
 
-            span {padding-bottom:0.4rem;
-                  font-size:1.3rem;
-                  display:block;
-                  font-weight:bold;
-                  color:var(--gray11);}
+          .input-boxes {width:100%;
+                        flex-wrap:wrap;
 
-            input {width:95%;
-                   padding:0.4rem 1rem;
-                   outline:none;
-                   border:1px solid #999;}
-
-            input:focus {outline:none;
-                         border:1px solid #333;
-                         box-shadow:var(--box-shadow);}
-        }
-
-        .col-right { 
-          img {margin-bottom:0.6rem;}
-
-          .flex {display:flex;
-                 justify-content:space-between;
-                 flex-wrap:wrap;
-                 padding-right:0.8rem;
-  
             .inputbox {flex:1 1 10rem;}
+
           }
 
-          .submit-btn {width:100%;
-                       margin-top:2rem;
-                       padding:0.5rem;
-                       outline:none;
-                       border:none;
-                       background:rgb(17, 138, 17);
-                       color:#fff;
-                       font-size:1.3rem;
-                       font-weight:bold;
-                       transition:all 0.5s linear;}
-  
-          .submit-btn:hover {background:rgb(26, 189, 26);
-                             text-shadow:var(--box-shadow5);
-                             transition:all 0.5s linear;}
+          .inputbox {width:100%;
+
+              span {padding:0;
+                    margin-bottom:0.4rem;
+                    font-size:1.1rem;
+                    display:block;
+                    font-weight:bold;
+                    color:var(--gray11);}
+
+              input {width:95%;
+                    padding:0.4rem 1rem;
+                    outline:none;
+                    border:1px solid var(--gray4);}
+
+                  input:focus {outline: none;
+                              border:1px solid var(--olive19);}
+                  
+                  input:not(:placeholder-shown) {outline:none;
+                                                border:1px solid var(--olive21);}
+          }
+
         }
-    }
+
+      }
+
+      .col-right {
+
+        .order-details-block {width:100%;
+                              padding:2.5rem 2rem;
+                              background:var(--olive3);
+
+          h3 {margin-bottom:2rem;}
+
+          .editorder-btn {color:var(--black2);}
+        }
+
+        .submit-btn {width:100%;
+                      margin-top:2rem;
+                      padding:0.5rem;
+                      outline:none;
+                      border:none;
+                      background:rgb(17, 138, 17);
+                      color:#fff;
+                      font-size:1.3rem;
+                      font-weight:bold;
+                      transition:all 0.5s linear;}
+
+        .submit-btn:hover {background:rgb(26, 189, 26);
+                            text-shadow:var(--box-shadow5);
+                            transition:all 0.5s linear;}
+      }
+  }
 
 }
 

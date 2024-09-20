@@ -870,7 +870,7 @@ if(document.querySelector(".checkout-page")){
             <p>${product.color}${product.size ? ' / ' + product.size : ''}</p>
           </div>
         </div>
-        <p>$${totalPriceProduct.toFixed(2)}</p>
+        <p class="pro-price">$${totalPriceProduct.toFixed(2)}</p>
       </div>
     `;
 
