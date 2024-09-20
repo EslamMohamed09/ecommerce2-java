@@ -345,7 +345,7 @@
                   for ($i = 1; $i <= $range; $i++) {
                     $active_class = ($i == $page) ? " active" : "";
                     ?>
-                    <a href="?categoryid=<?php echo $thiscategory['ID'];?>&page=<?php echo $i;?>" class="pagination-link<?php echo $active_class;?>"><?php echo $i;?></a>
+                    <a href="?categoryid=<?php echo $thiscategory['ID'];?>&page=4" class="pagination-link<?php echo $active_class;?>">4</a>
                   <?php }
                   if ($totalPages > $visiblePages) {
                     echo '<span class="pagination-dots">....</span>';
@@ -355,13 +355,13 @@
                   echo '<a href="?categoryid=' . $thiscategory['ID'] . '&page=1" class="pagination-link">1</a>';
                   echo '<span class="pagination-dots">....</span>';
                   for($i = $totalPages - $range + 1; $i <= $totalPages; $i++) {$active_class = ($i == $page) ? " active" : "";?>
-                    <a href="?categoryid=<?php echo $thiscategory['ID'];?>&page=<?php echo $i;?>" class="pagination-link<?php echo $active_class;?>"><?php echo $i;?></a>
+                    <a href="?categoryid=<?php echo $thiscategory['ID'];?>&page=4" class="pagination-link<?php echo $active_class;?>">4</a>
                   <?php }
                 } else {
                   echo '<a href="?categoryid=' . $thiscategory['ID'] . '&page=1" class="pagination-link">1</a>';
                   echo '<span class="pagination-dots">....</span>';
                   for($i = $page - floor($visiblePages / 2); $i <= $page + floor($visiblePages / 2); $i++) {$active_class = ($i == $page) ? " active" : "";?>
-                    <a href="?categoryid=<?php echo $thiscategory['ID'];?>&page=<?php echo $i;?>" class="pagination-link<?php echo $active_class;?>"><?php echo $i;?></a>
+                    <a href="?categoryid=<?php echo $thiscategory['ID'];?>&page=4" class="pagination-link<?php echo $active_class;?>">4</a>
                   <?php }
                   echo '<span class="pagination-dots">....</span>';
                   echo '<a href="?categoryid=' . $thiscategory['ID'] . '&page=' . $totalPages . '" class="pagination-link">' . $totalPages . '</a>';
@@ -509,47 +509,32 @@
 
         </div>
 
-        <?php $CPtotalrecords = count($allCategoryChildsProductsWF30); if($CPtotalrecords > $CPlimit){?>
 
           <div class="pagination">
+              <a href="?categoryid=2&cppage=<?php echo ($CPpage-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
 
-            <?php $CPtotalPages = ceil($CPtotalrecords/$CPlimit);
-
-            if($CPpage > 1){?>
-              <a href="?categoryid=<?php echo $thiscategory['ID'];?>&cppage=<?php echo ($CPpage-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
-            <?php } 
-
-            $CPvisiblePages = 3;
-            $CPrange = min($CPvisiblePages, $CPtotalPages);
-
-            if($CPpage <= $CPrange) {
-              for ($i = 1; $i <= $CPrange; $i++) {
-                $CPactive_class = ($i == $CPpage) ? " active" : "";
-                ?>
-                <a href="?categoryid=<?php echo $thiscategory['ID'];?>&cppage=<?php echo $i;?>" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
-              <?php }
-              if($CPtotalPages > $CPvisiblePages) {
-                echo '<span class="pagination-dots">....</span>';
-                echo '<a href="?categoryid=' . $thiscategory['ID'] . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
-              }
-            } elseif ($CPpage > ($CPtotalPages - $CPrange + 1)) {
-              echo '<a href="?categoryid=' . $thiscategory['ID'] . '&cppage=1" class="pagination-link">1</a>';
+          
+                <a href="#" class="pagination-link">1</a>
+             
+               <span class="pagination-dots">....</span>
+                <a href="?categoryid=' . $thiscategory['ID'] . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
+             <a href="?categoryid=' . $thiscategory['ID'] . '&cppage=1" class="pagination-link">1</a>
               echo '<span class="pagination-dots">....</span>';
               for($i = $CPtotalPages - $CPrange + 1; $i <= $CPtotalPages; $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
-                <a href="?categoryid=<?php echo $thiscategory['ID'];?>&cppage=<?php echo $i;?>" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
+                <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
               <?php }
             } else {
               echo '<a href="?categoryid=' . $thiscategory['ID'] . '&cppage=1" class="pagination-link">1</a>';
               echo '<span class="pagination-dots">....</span>';
               for($i = $CPpage - floor($CPvisiblePages / 2); $i <= $CPpage + floor($CPvisiblePages / 2); $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
-                <a href="?categoryid=<?php echo $thiscategory['ID'];?>&cppage=<?php echo $i;?>" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
+                <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>">4</a>
               <?php }
               echo '<span class="pagination-dots">....</span>';
               echo '<a href="?categoryid=' . $thiscategory['ID'] . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
             }?>
 
             <?php if($CPpage < $CPtotalPages){?>
-              <a href="?categoryid=<?php echo $thiscategory['ID'];?>&cppage=<?php echo ($CPpage+1);?>" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
+              <a href="?categoryid=2&cppage=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
             <?php } ?>
 
           </div>
