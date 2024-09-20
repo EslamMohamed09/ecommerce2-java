@@ -827,7 +827,7 @@ if(header){
  CHECKOUT PAGE
 ##############
 */
-if(document.querySelector(".checkout-page")){
+if(document.querySelector(".checkout-page") || document.querySelector(".payment-section")){
 
  const deliveryChecks = document.querySelectorAll(".checkout-page .col-left .delivery-block .check-parent .check");
  deliveryChecks.forEach((deliveryCheck) => {
@@ -897,5 +897,15 @@ if(document.querySelector(".checkout-page")){
  }
 
  renderItemsCheckout();
+
+}
+
+/*
+#############
+ PAYMENT PAGE
+#############
+*/
+if(document.querySelector(".payment-section")){
+   const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
 
 }
