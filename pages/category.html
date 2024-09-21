@@ -72,19 +72,11 @@
 
   <div class="category-information d-flex-r-bt-c"> <!-- BAR -->
 
-    <?php if(!empty($categoryItems)){?>
-      <h1><?php echo $categoryItems[0]["level1_name"];?></h1>
-    <?php } elseif(!empty($thiscatProducts)){?>
-      <h1><?php echo $thiscategory['Name'];?></h1>
-    <?php } ?>
+    <h1>electronics</h1>
     
     <div class="cat-stats">
-      <?php if(!empty($categoryItems)){?>
-        <span><?php echo count($categoryItems);?> categories</span>
-      <?php } elseif(!empty($thiscatProducts)){?>
-        <span><?php echo count($thisCategoryProducts);?> products</span> |
-        <span><?php echo count(productscomments($catproductsIds));?> comments</span>
-      <?php } ?>
+      <span>5 categories</span>
+      <span>9 products</span>
     </div>
 
   </div>
@@ -93,314 +85,103 @@
 
     <div class="filter-col col-lg-2 col-md-3">
 
-      <div class="categories-block block"> <!-- categories -->
-        <h4><i class="fa-solid fa-bars" id="icon"></i>categories</h4>
-
-        <?php $categories = getAllCategories(); if(!empty($categories)){?>
-          <ul>
-            <?php for($i=0; $i<7 && count($categories) > $i; $i++){?>
-
-              <li><a href="category.php?categoryid=<?php echo $categories[$i]['ID'];?>" target="_blank" class="cat-title"> <?php echo $categories[$i]['Name'];?> </a></li>
-
-            <?php } ?>
-          </ul>
-        <?php } else { ?> <p class="there-is-no">there is no category</p> <?php } ?>
-
-      </div>
-
-      <div class="parent-categories-block block"> <!-- parent-categories -->
-        <ul class="catmenu" id="catmenu">
-          <?php $categoryPCategories  = categoryPCategories($thiscategory['ID']);
-                echo categoriesNames_Ids($categoryPCategories);
-                if(!empty($categoryItems)){
-                  foreach($categoryItems as $categoryItem){
-                    echo '<li class="childs-catlist"><a href="?categoryid='. $categoryItem['id2'] .'" class="childs-catlink categorylink">' . $categoryItem['level2_name'] . '</a></li>';
-                  }
-                }  
-          ?>
-        </ul>
-      </div>
-
-      <?php if(!empty($thiscatProducts)){?>
-
-        <form action="categoryproducts_filter.php?categoryid=4" method="POST">
-
-          <div class="price-block block"> <!--price-->
-            <h4>price</h4>
-            <div class="price-range d-flex-r-st-c">
-              <input type="text" placeholder="From">
-              <span>-</span>
-              <input type="text" placeholder="To">
-            </div>
-          </div>
-
-          <?php if(!empty($productssizes)){?> <!--sizes-->
-            <div class="size-block block">            
-
-              <h4>size</h4>
-
-              <ul>
-                <?php foreach($productssizes as $productsize){ ?>
-                  <li>
-                      <input type="checkbox" name="size[]" value="<?php echo $productsize;?>" id="<?php echo $productsize;?>">
-                      <label for="<?php echo $productsize;?>">
-                        <i class="fas fa-check" id="fa-check"></i>
-                        <p style="text-transform:uppercase;"><?php echo $productsize;?></p>
-                      </label>
-                  </li>
-                <?php } ?>              
-              </ul>
-
-            </div>
-          <?php } ?>
-
-          <?php if(!empty($productsbrands)){?> <!--brands-->
-            <div class="brands-block block">
-
-              <h4>brands</h4>
-
-              <ul>
-                <?php foreach($productsbrands as $productsbrand){ ?>
-
-                <li>
-                  <input type="checkbox" name="brand[]" value="<?php echo $productsbrand;?>" id="<?php echo $productsbrand;?>">
-                  <label for="<?php echo $productsbrand;?>">
-                    <p><?php echo $productsbrand;?></p>
-                    <i class="fas fa-check" id="fa-check"></i>
-                  </label>
-                </li>
-
-                <?php } ?>
-              </ul>
-
-            </div>
-          <?php } ?>
-
-          <?php if(!empty($productscolors)){?> <!--colors-->
-            <div class="colors-block block"> 
-
-              <h4>colors</h4>
-
-              <ul>
-                <?php foreach($productscolors as $productscolor){ ?>
-
-                  <li>
-                    <input type="checkbox" name="color[]" value="<?php echo $productscolor;?>" id="<?php echo $productscolor;?>">
-                    <label for="<?php echo $productscolor;?>">
-                      <i class="fas fa-check" id="fa-check"></i>
-                      <p><?php echo $productscolor;?></p>
-                    </label>
-                  </li>
-
-                <?php } ?>
-              </ul>
-
-            </div>
-          <?php } ?>
-
-          <?php if(!empty($productsrates)){?> <!--rating-->
-            <div class="rating-block block"> 
-
-              <h4>rating</h4>
-
-              <ul>
-                <?php foreach($productsrates as $productsrate){ ?>
-
-                <li>
-                  <input type="checkbox" name="rate[]" value="<?php echo $productsrate;?>" id="<?php echo $productsrate;?>">
-                  <label for="<?php echo $productsrate;?>">
-                    <div class="rating">
-                      <?php if($productsrate == '5'){ ?>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                      <?php } elseif($productsrate == '4.4'){ ?>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star-half" id="star"></i>
-                      <?php } elseif($productsrate == '4'){ ?>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                      <?php } elseif($productsrate == '3'){ ?>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                      <?php } elseif($productsrate == '2'){ ?>
-                        <i class="fas fa-star" id="star"></i>
-                        <i class="fas fa-star" id="star"></i>
-                      <?php } ?>
-                    </div>
-                    <i class="fas fa-check" id="fa-check"></i>
-                  </label>
-                </li>
-
-                <?php } ?>
-              </ul>
-
-            </div>
-          <?php } ?>
-
-          <input type="submit" name="submit-search" value="filter" class="submit-button btn2" style="opacity:0;">
-
-        </form>
-
-      <?php } ?>
-
     </div> <!-- End filter-col -->
 
     <div class="col-right col-lg-10 col-md-9">
 
-      <?php if(!empty($categoryItems)){?> <!-- category-items -->
+      <div class="category-items">
 
-        <div class="category-items">
-
-          <?php foreach($categoryItems as $categoryItem){
-                $categoryItemProducts = catProducts($categoryItem['id2']);
-                $categoryItemChilds = categoryChilds($categoryItem['id2']);
-
-              if(!empty($categoryItemProducts) || !empty($categoryItemChilds)){?>
-
-                <div class="category-item">
-                   <a href="category.php?categoryid=<?php echo $categoryItem['id2'];?>">
-                     <div class="image d-flex-r-c-c"><img src="inc/img/categories/?php echo $categoryItem['level2_image'];?>" alt="<?php echo $categoryItem['level2_name'];?>"></div>
-                     <h4><?php echo $categoryItem['level2_name'];?></h4>
-                   </a>
-                   <?php if(!empty($categoryItemChilds)){?>
-                      <div class="cat-item-footer d-flex-c-st-st">
-                        <?php foreach($categoryItemChilds as $categoryItemChild){?>
-                          <a href="category.php?categoryid=?php echo $categoryItemChild['id2'];?>" class="category-btn"><?php echo $categoryItemChild['level2_name'];?></a>                        
-                        <?php } ?>
-                      </div>
-                   <?php } ?>
-                </div>
-              
-              <?php } else { ?>
-
-                <div class="category-item">
-                  <div class="image d-flex-r-c-c"><img src="inc/img/categories/?php echo $categoryItem['level2_image'];?>" alt="<?php echo $categoryItem['level2_name'];?>"></div>
-                  <h4><?php echo $categoryItem['level2_name'];?></h4>
-                </div>
-
-              <?php } ?>
-        
-          <?php } ?>
-
+        <div class="category-item">
+          <a href="category.html?categoryid=2">
+            <div class="image d-flex-r-c-c"><img src="../images/ echo $categoryItem['level2_image']" alt=""></div>
+            <h4>categoryItem['level2_name']</h4>
+          </a>
+          <div class="cat-item-footer d-flex-c-st-st">
+            <a href="category.html?categoryid=5" class="category-btn">categoryItemChild level2_name</a>
+          </div>
         </div>
 
-      <?php } ?>
-
-      <!-- !empty thiscatProducts -->
+      </div>
 
         <div class="this-category-products">
 
           <div class="products-area">
 
-              <div class="product-item">
-                <div class="image d-flex-r-c-c">
-                  <img src="inc/img/" alt="">
-                </div>
-                <div class="icons d-flex-c-bt-c">
-                  <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                  <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
-                </div>
-                <div class="content d-flex-c-st-c">
-                  <a href="single.php?productid=5" class="product-name">product name</a>
-                  <div class="product-price d-flex-r-c-c">
-                    <strong class="oldprice">$15</strong>
-                    <strong class="price">$14</strong>
-                  </div>
-                  <button type="button" class="add-btn">add to card</button>
-                </div>
+            <div class="product-item">
+              <div class="image d-flex-r-c-c">
+                <img src="../images" alt="">
               </div>
+              <div class="icons d-flex-c-bt-c">
+                <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+              </div>
+              <div class="content d-flex-c-st-c">
+                <a href="single.html?productid=5" class="product-name">product name</a>
+                <div class="product-price d-flex-r-c-c">
+                  <strong class="oldprice">$15</strong>
+                  <strong class="price">$14</strong>
+                </div>
+                <button type="button" class="add-btn">add to card</button>
+              </div>
+            </div>
 
           </div>
 
-            <div class="pagination">
+          <div class="pagination">
+            
+            <a href="?categoryid=4&page=<?php echo ($page-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
+          
+            <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
+          
+            <span class="pagination-dots">....</span>';
+            <a href="?categoryid=4 . '&page=' . $totalPages . '" class="pagination-link">15</a>
+            
+          
+            <a href="?categoryid=4 . '&page=1" class="pagination-link">1</a>';
+            <span class="pagination-dots">....</span>';
+          
+            <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
+            
+            <a href="?categoryid=4 . '&page=1" class="pagination-link">1</a>';
+            <span class="pagination-dots">....</span>';
+            
+            <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
+            <span class="pagination-dots">....</span>';
+            <a href="?categoryid=4 . '&page=' . $totalPages . '" class="pagination-link">15</a>';
+          
+            <a href="?categoryid=4&page=5" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
 
-             
-                  <a href="?categoryid=4&page=<?php echo ($page-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
-                
-                    <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
-                
-                   <span class="pagination-dots">....</span>';
-                   <a href="?categoryid=4 . '&page=' . $totalPages . '" class="pagination-link">15</a>
-                  
-                
-                  <a href="?categoryid=4 . '&page=1" class="pagination-link">1</a>';
-                  <span class="pagination-dots">....</span>';
-               
-                    <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
-                 
-                  <a href="?categoryid=4 . '&page=1" class="pagination-link">1</a>';
-                  <span class="pagination-dots">....</span>';
-                  
-                    <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
-                  <span class="pagination-dots">....</span>';
-                  <a href="?categoryid=4 . '&page=' . $totalPages . '" class="pagination-link">15</a>';
-               
-                  <a href="?categoryid=4&page=5" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
-                
-
-              ?>
-
-            </div>
-
-          <?php } ?>
+          </div>
 
         </div>
 
-      <?php } ?>
-
-      <?php $allCategoryChilds = allCategoryChilds($_GET['categoryid']);
-            $allCategoryChildsIds = implode(',', array_column($allCategoryChilds, 'ID'));
-            if(!empty($allCategoryChildsIds)) {$allCategoryChildsProducts = manyCatsProducts($allCategoryChildsIds);}
-      ?>
-
-      <?php if(!empty($categoryItems) && count($allCategoryChildsProducts) > 0 && count($allCategoryChildsProducts) >= 10){?>
-
-        <div class="categories-products">
+        <div class="categories-products"><!-- get products for all categories childs -->
 
           <div class="categoriesproducts1 owl-carousel">
 
-            <?php for($i=0; $i<15 && count($allCategoryChildsProducts) > $i; $i++){?>
-
-              <div class="product-item">
-                <a href="single.php?productid=<?php echo $allCategoryChildsProducts[$i]['Item_ID'];?>">
-                  <div class="image d-flex-r-c-c">
-                    <?php $allCategoryChildsProductsImages = explode(',', $allCategoryChildsProducts[$i]['Images']);
-                        for($j=0; $j<2 && count($allCategoryChildsProductsImages) > $j; $j++){?>
-                          <img src="inc/img/<?php echo $allCategoryChildsProductsImages[$j];?>" alt="<?php echo $allCategoryChildsProducts[$i]['Name'];?>">
-                    <?php } ?>
-                  </div>
-                </a>
-                <div class="icons d-flex-c-bt-c">
-                  <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                  <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+            <div class="product-item">
+              <a href="single.html?id=8">
+                <div class="image d-flex-r-c-c">
+                  <img src="../images/electronics/computer/case2/1.png" alt="">
+                  <img src="../images/electronics/computer/case2/2.png" alt="">
                 </div>
-                <div class="content d-flex-c-st-st">
-                  <?php $words = explode(' ', $allCategoryChildsProducts[$i]['Name']);
-                        $productName = implode(' ', array_slice($words, 0, 3));?>
-                  <h5><a href="single.php?productid=<?php echo $allCategoryChildsProducts[$i]['Item_ID'];?>" class="productlink"><?php echo $productName;?></a></h5>
-                  <div class="product-price d-flex-r-bt-c">
-                    <?php if(!empty($allCategoryChildsProducts[$i]['oldPrice'])){?> <strong class="oldprice"><?php echo $allCategoryChildsProducts[$i]['oldPrice'];?></strong> <?php } ?>
-                    <strong class="price"><?php echo $allCategoryChildsProducts[$i]['Price'];?></strong>
-                  </div>
+              </a>
+              <div class="icons d-flex-c-bt-c">
+                <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+              </div>
+              <div class="content d-flex-c-st-st">
+                <h5><a href="single.html?id=9" class="productlink">product name (3 words only)</a></h5>
+                <div class="product-price d-flex-r-bt-c">
+                  <strong class="oldprice">$40</strong>
+                  <strong class="price">$35</strong>
                 </div>
               </div>
+            </div>
             
-            <?php } ?>
-
           </div>
 
         </div> <!-- END category-childs-products -->
-
-      <?php } ?>
 
     </div> <!-- End col-right -->
 
@@ -408,122 +189,103 @@
 
 </section>
 
-<?php if(!empty($categoryItems) && count($allCategoryChildsProducts) > 15 && count($allCategoryChildsProducts) >= 25){?>
 
-  <section id="category-page-categoriesproducts">
-    
-    <div class="categoriesproducts2 d-flex-r-c-c">
+<section id="category-page-categoriesproducts">
+  
+  <div class="categoriesproducts2 d-flex-r-c-c">
 
-      <div class="categoriesproducts2-container owl-carousel">
+    <div class="categoriesproducts2-container owl-carousel"> <!-- maximum 30 -->
 
-        <?php for($y=15; $y<30; $y++){?>
-
-          <div class="product-item d-flex-c-end-c">
-            <div class="image">
-              <?php $allCategoryChildsProductsImages = explode(',', $allCategoryChildsProducts[$y]['Images']);
-                  for($j=0; $j<4 && count($allCategoryChildsProductsImages) > $j; $j++){?>
-                    <img src="inc/img/<?php echo $allCategoryChildsProductsImages[$j];?>" alt="<?php echo $allCategoryChildsProducts[$y]['Name'];?>">
-              <?php } ?>
-            </div>
-            <div class="content">
-              <div class="img-btns d-flex-r-bt-c">
-                <button id="prev-img"><i class="fa fa-angle-left"></i></button>
-                <button id="next-img"><i class="fa fa-angle-right"></i></button>
-              </div>
-              <?php $words = explode(' ', $allCategoryChildsProducts[$y]['Name']);$productName = implode(' ', array_slice($words, 0, 3));?>
-              <h5><a href="single.php?productid=<?php echo $allCategoryChildsProducts[$y]['Item_ID'];?>" class="productlink"><?php echo $productName;?></a></h5>
-              <div class="product-price d-flex-r-bt-c">
-                <?php if(!empty($allCategoryChildsProducts[$y]['oldPrice'])){?> <strong class="oldprice"><?php echo $allCategoryChildsProducts[$y]['oldPrice'];?></strong> <?php } ?>
-                <strong class="price"><?php echo $allCategoryChildsProducts[$y]['Price'];?></strong>
-              </div>
-            </div>
+      <div class="product-item d-flex-c-end-c">
+        <div class="image">
+          <img src="../images/electronics/camera/c2/1.png" alt="">
+          <img src="../images/electronics/camera/c2/2.png" alt="">
+          <img src="../images/electronics/camera/c2/3.png" alt="">
+          <img src="../images/electronics/camera/c2/4.png" alt="">
+        </div>
+        <div class="content">
+          <div class="img-btns d-flex-r-bt-c">
+            <button id="prev-img"><i class="fa fa-angle-left"></i></button>
+            <button id="next-img"><i class="fa fa-angle-right"></i></button>
           </div>
+          <h5><a href="single.html?id=3" class="productlink">productName (3 words)</a></h5>
+          <div class="product-price d-flex-r-bt-c">
+            <strong class="oldprice">$40</strong>
+            <strong class="price">$33</strong>
+          </div>
+        </div>
+      </div>
 
+    </div>
+
+  </div> <!-- END categoriesproducts2 -->
+
+  <div class="categoriesproducts3">
+
+    <div class="products-area">
+
+      <?php foreach($allCategoryChildsProductsWF30Limit as $allCategoryChildsProductLimit){?>
+
+        <div class="product-item">
+          <div class="image d-flex-r-c-c">
+            <?php $allCategoryChildsProductsLimitImages = explode(',', $allCategoryChildsProductLimit['Images']);
+                for($j=0; $j<2 && count($allCategoryChildsProductsLimitImages) > $j; $j++){?>
+                  <img src="../images<?php echo $allCategoryChildsProductsLimitImages[$j];?>" alt="<?php echo $allCategoryChildsProductLimit['Name'];?>">
+            <?php } ?>
+          </div>
+          <div class="icons d-flex-c-bt-c">
+            <button type="button"><i class="far fa-heart" id="icon"></i></button>
+            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+          </div>
+          <div class="content d-flex-c-st-c">
+            <a href="single.html?productid=<?php echo $allCategoryChildsProductLimit['Item_ID'];?>" class="product-name"><?php echo $allCategoryChildsProductLimit['Name'];?></a>
+            <div class="product-price d-flex-r-c-c">
+              <?php if(!empty($allCategoryChildsProductLimit['oldPrice'])){?> <strong class="oldprice"><?php echo $allCategoryChildsProductLimit['oldPrice'];?></strong> <?php } ?>
+              <strong class="price"><?php echo $allCategoryChildsProductLimit['Price'];?></strong>
+            </div>
+            <button type="button" class="add-btn">add to card</button>
+          </div>
+        </div>
+      
+      <?php } ?>
+
+    </div>
+
+
+      <div class="pagination">
+          <a href="?categoryid=2&cppage=<?php echo ($CPpage-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
+
+      
+            <a href="#" class="pagination-link">1</a>
+          
+            <span class="pagination-dots">....</span>
+            <a href="?categoryid=4 . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
+          <a href="?categoryid=4 . '&cppage=1" class="pagination-link">1</a>
+          echo '<span class="pagination-dots">....</span>';
+          for($i = $CPtotalPages - $CPrange + 1; $i <= $CPtotalPages; $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
+            <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
+          <?php }
+        } else {
+          echo '<a href="?categoryid=4 . '&cppage=1" class="pagination-link">1</a>';
+          echo '<span class="pagination-dots">....</span>';
+          for($i = $CPpage - floor($CPvisiblePages / 2); $i <= $CPpage + floor($CPvisiblePages / 2); $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
+            <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>">4</a>
+          <?php }
+          echo '<span class="pagination-dots">....</span>';
+          echo '<a href="?categoryid=4 . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
+        }?>
+
+        <?php if($CPpage < $CPtotalPages){?>
+          <a href="?categoryid=2&cppage=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
         <?php } ?>
 
       </div>
 
-    </div> <!-- END categoriesproducts2 -->
-
-    <?php $CPlimit = 30;
-          if(isset($_GET['cppage'])) {$CPpage = $_GET['cppage'];} else {$CPpage = 1;}
-          $CPstart = ($CPpage - 1) * $CPlimit;
-
-          $allCategoryChildsProductsWF30 = array_slice($allCategoryChildsProducts, 30);
-          $allCategoryChildsProductsWF30Limit = array_slice($allCategoryChildsProductsWF30, $CPstart, $CPlimit);
-          if(!empty($allCategoryChildsProductsWF30)){
-    ?>
-
-      <div class="categoriesproducts3">
-
-        <div class="products-area">
-
-          <?php foreach($allCategoryChildsProductsWF30Limit as $allCategoryChildsProductLimit){?>
-
-            <div class="product-item">
-              <div class="image d-flex-r-c-c">
-                <?php $allCategoryChildsProductsLimitImages = explode(',', $allCategoryChildsProductLimit['Images']);
-                    for($j=0; $j<2 && count($allCategoryChildsProductsLimitImages) > $j; $j++){?>
-                      <img src="inc/img/<?php echo $allCategoryChildsProductsLimitImages[$j];?>" alt="<?php echo $allCategoryChildsProductLimit['Name'];?>">
-                <?php } ?>
-              </div>
-              <div class="icons d-flex-c-bt-c">
-                <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
-              </div>
-              <div class="content d-flex-c-st-c">
-                <a href="single.php?productid=<?php echo $allCategoryChildsProductLimit['Item_ID'];?>" class="product-name"><?php echo $allCategoryChildsProductLimit['Name'];?></a>
-                <div class="product-price d-flex-r-c-c">
-                  <?php if(!empty($allCategoryChildsProductLimit['oldPrice'])){?> <strong class="oldprice"><?php echo $allCategoryChildsProductLimit['oldPrice'];?></strong> <?php } ?>
-                  <strong class="price"><?php echo $allCategoryChildsProductLimit['Price'];?></strong>
-                </div>
-                <button type="button" class="add-btn">add to card</button>
-              </div>
-            </div>
-          
-          <?php } ?>
-
-        </div>
-
-
-          <div class="pagination">
-              <a href="?categoryid=2&cppage=<?php echo ($CPpage-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
-
-          
-                <a href="#" class="pagination-link">1</a>
-             
-               <span class="pagination-dots">....</span>
-                <a href="?categoryid=4 . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
-             <a href="?categoryid=4 . '&cppage=1" class="pagination-link">1</a>
-              echo '<span class="pagination-dots">....</span>';
-              for($i = $CPtotalPages - $CPrange + 1; $i <= $CPtotalPages; $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
-                <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
-              <?php }
-            } else {
-              echo '<a href="?categoryid=4 . '&cppage=1" class="pagination-link">1</a>';
-              echo '<span class="pagination-dots">....</span>';
-              for($i = $CPpage - floor($CPvisiblePages / 2); $i <= $CPpage + floor($CPvisiblePages / 2); $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
-                <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>">4</a>
-              <?php }
-              echo '<span class="pagination-dots">....</span>';
-              echo '<a href="?categoryid=4 . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
-            }?>
-
-            <?php if($CPpage < $CPtotalPages){?>
-              <a href="?categoryid=2&cppage=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
-            <?php } ?>
-
-          </div>
-
-        <?php } ?>
-
-      </div> <!-- END categoriesproducts3 -->
-
     <?php } ?>
 
-  </section>
+  </div> <!-- END categoriesproducts3 -->
 
-<?php } ?>
+</section>
 
 <footer>
   <div class="container">
