@@ -92,12 +92,12 @@
       <div class="category-items">
 
         <div class="category-item">
-          <a href="category.html?categoryid=2">
-            <div class="image d-flex-r-c-c"><img src="../images/ echo $categoryItem['level2_image']" alt=""></div>
+          <a href="category.html?id=2">
+            <div class="image d-flex-r-c-c"><img src="../images/" alt=""></div>
             <h4>categoryItem['level2_name']</h4>
           </a>
           <div class="cat-item-footer d-flex-c-st-st">
-            <a href="category.html?categoryid=5" class="category-btn">categoryItemChild level2_name</a>
+            <a href="category.html?id=5" class="category-btn">categoryItemChild level2_name</a>
           </div>
         </div>
 
@@ -129,27 +129,7 @@
 
           <div class="pagination">
             
-            <a href="?categoryid=4&page=<?php echo ($page-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
-          
-            <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
-          
-            <span class="pagination-dots">....</span>';
-            <a href="?categoryid=4 . '&page=' . $totalPages . '" class="pagination-link">15</a>
             
-          
-            <a href="?categoryid=4 . '&page=1" class="pagination-link">1</a>';
-            <span class="pagination-dots">....</span>';
-          
-            <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
-            
-            <a href="?categoryid=4 . '&page=1" class="pagination-link">1</a>';
-            <span class="pagination-dots">....</span>';
-            
-            <a href="?categoryid=4&page=4" class="pagination-link active">4</a>
-            <span class="pagination-dots">....</span>';
-            <a href="?categoryid=4 . '&page=' . $totalPages . '" class="pagination-link">15</a>';
-          
-            <a href="?categoryid=4&page=5" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
 
           </div>
 
@@ -157,7 +137,7 @@
 
         <div class="categories-products"><!-- get products for all categories childs -->
 
-          <div class="categoriesproducts1 owl-carousel">
+          <div class="categoriesproducts1 owl-carousel"> <!-- view first 15 -->
 
             <div class="product-item">
               <a href="single.html?id=8">
@@ -194,7 +174,7 @@
   
   <div class="categoriesproducts2 d-flex-r-c-c">
 
-    <div class="categoriesproducts2-container owl-carousel"> <!-- maximum 30 -->
+    <div class="categoriesproducts2-container owl-carousel"> <!-- maximum 10 from 15 to 25 -->
 
       <div class="product-item d-flex-c-end-c">
         <div class="image">
@@ -220,68 +200,35 @@
 
   </div> <!-- END categoriesproducts2 -->
 
-  <div class="categoriesproducts3">
+  <div class="categoriesproducts3"> <!-- make pagination view 30 -->
 
     <div class="products-area">
 
-      <?php foreach($allCategoryChildsProductsWF30Limit as $allCategoryChildsProductLimit){?>
-
-        <div class="product-item">
-          <div class="image d-flex-r-c-c">
-            <?php $allCategoryChildsProductsLimitImages = explode(',', $allCategoryChildsProductLimit['Images']);
-                for($j=0; $j<2 && count($allCategoryChildsProductsLimitImages) > $j; $j++){?>
-                  <img src="../images<?php echo $allCategoryChildsProductsLimitImages[$j];?>" alt="<?php echo $allCategoryChildsProductLimit['Name'];?>">
-            <?php } ?>
-          </div>
-          <div class="icons d-flex-c-bt-c">
-            <button type="button"><i class="far fa-heart" id="icon"></i></button>
-            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
-          </div>
-          <div class="content d-flex-c-st-c">
-            <a href="single.html?productid=<?php echo $allCategoryChildsProductLimit['Item_ID'];?>" class="product-name"><?php echo $allCategoryChildsProductLimit['Name'];?></a>
-            <div class="product-price d-flex-r-c-c">
-              <?php if(!empty($allCategoryChildsProductLimit['oldPrice'])){?> <strong class="oldprice"><?php echo $allCategoryChildsProductLimit['oldPrice'];?></strong> <?php } ?>
-              <strong class="price"><?php echo $allCategoryChildsProductLimit['Price'];?></strong>
-            </div>
-            <button type="button" class="add-btn">add to card</button>
-          </div>
+      <div class="product-item">
+        <div class="image d-flex-r-c-c">
+          <img src="../images/clothes/mens/sweatshirts/10/1.jpg" alt="">
+          <img src="../images/clothes/mens/sweatshirts/10/2.jpg" alt="">
         </div>
+        <div class="icons d-flex-c-bt-c">
+          <button type="button"><i class="far fa-heart" id="icon"></i></button>
+          <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+        </div>
+        <div class="content d-flex-c-st-c">
+          <a href="single.html?id=11" class="product-name">product name</a>
+          <div class="product-price d-flex-r-c-c">
+            <strong class="oldprice">$41</strong>
+            <strong class="price">$39</strong>
+          </div>
+          <button type="button" class="add-btn">add to card</button>
+        </div>
+      </div>
       
-      <?php } ?>
-
     </div>
 
 
-      <div class="pagination">
-          <a href="?categoryid=2&cppage=<?php echo ($CPpage-1);?>" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
-
-      
-            <a href="#" class="pagination-link">1</a>
-          
-            <span class="pagination-dots">....</span>
-            <a href="?categoryid=4 . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
-          <a href="?categoryid=4 . '&cppage=1" class="pagination-link">1</a>
-          echo '<span class="pagination-dots">....</span>';
-          for($i = $CPtotalPages - $CPrange + 1; $i <= $CPtotalPages; $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
-            <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>"><?php echo $i;?></a>
-          <?php }
-        } else {
-          echo '<a href="?categoryid=4 . '&cppage=1" class="pagination-link">1</a>';
-          echo '<span class="pagination-dots">....</span>';
-          for($i = $CPpage - floor($CPvisiblePages / 2); $i <= $CPpage + floor($CPvisiblePages / 2); $i++) {$CPactive_class = ($i == $CPpage) ? " active" : "";?>
-            <a href="?categoryid=2&cppage=4" class="pagination-link<?php echo $CPactive_class;?>">4</a>
-          <?php }
-          echo '<span class="pagination-dots">....</span>';
-          echo '<a href="?categoryid=4 . '&cppage=' . $CPtotalPages . '" class="pagination-link">' . $CPtotalPages . '</a>';
-        }?>
-
-        <?php if($CPpage < $CPtotalPages){?>
-          <a href="?categoryid=2&cppage=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
-        <?php } ?>
-
-      </div>
-
-    <?php } ?>
+    <div class="pagination">
+        
+    </div>
 
   </div> <!-- END categoriesproducts3 -->
 
