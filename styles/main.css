@@ -1937,7 +1937,7 @@ header .main-header .bottom nav ul li:hover {
   list-style: none;
 }
 .quick-view-modal .card .product-container .col-left .allcategoriesproduct .catlink {
-  color: var(--gray-color2);
+  color: var(--gray2);
   font-size: 0.9rem;
   font-weight: bold;
 }
@@ -2197,7 +2197,7 @@ footer .bottom-footer p {
   gap: 0.2rem;
 }
 #single-page .product-container .col-left .allcategoriesproduct .catlink {
-  color: var(--gray-color2);
+  color: var(--gray2);
   font-size: 0.9rem;
   font-weight: bold;
 }
@@ -2388,7 +2388,7 @@ footer .bottom-footer p {
   border-radius: 0.5rem;
   padding: 0.8rem 2rem;
   color: var(--white);
-  background: var(--gray-color2);
+  background: var(--gray11);
   text-shadow: 0px 0px 5px var(--white);
 }
 
@@ -2523,11 +2523,11 @@ footer .bottom-footer p {
 }
 
 #category-page .category-page-container .filter-col .categories-block ul li:not(:last-child) {
-  border-bottom: 1px solid var(--gray-color8);
+  border-bottom: 1px solid var(--gray8);
 }
 
 #category-page .category-page-container .filter-col .categories-block li .cat-title {
-  color: var(--gray-color2);
+  color: var(--gray2);
 }
 
 #category-page .category-page-container .filter-col .categories-block li .cat-title {
@@ -2547,14 +2547,14 @@ footer .bottom-footer p {
 }
 
 #category-page .category-page-container .filter-col .parent-categories-block li:not(:last-child) {
-  border-bottom: 1px solid var(--gray-color8);
+  border-bottom: 1px solid var(--gray8);
 }
 
 #category-page .category-page-container .filter-col .parent-categories-block li.thiscat {
   justify-content: space-between;
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--gray-color2);
+  color: var(--gray2);
   border-bottom: 0 !important;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -2566,7 +2566,7 @@ footer .bottom-footer p {
 }
 
 #category-page .category-page-container .filter-col .parent-categories-block .thiscat.press-thiscat {
-  border-bottom: 1px solid var(--gray-color8) !important;
+  border-bottom: 1px solid var(--gray8) !important;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -2574,7 +2574,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .filter-col .parent-categories-block li .categorylink {
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--gray-color2);
+  color: var(--gray2);
 }
 
 #category-page .category-page-container .filter-col .parent-categories-block .childs-catlist {
@@ -2608,7 +2608,7 @@ footer .bottom-footer p {
   margin: 0;
   outline: none;
   width: 45%;
-  border: 1px solid var(--gray-color1);
+  border: 1px solid var(--gray1);
 }
 
 #category-page .category-page-container .filter-col .price-block .price-range span {
@@ -2649,11 +2649,11 @@ footer .bottom-footer p {
 }
 
 #category-page .category-page-container .col-right .category-items .category-item .image {
-  width: 78%;
+  width: 11rem;
   height: 11rem;
   border-radius: 50%;
   margin: 0 auto 1rem;
-  background-color: var(--gray-color9);
+  background-color: var(--gray4);
 }
 
 #category-page .category-page-container .col-right .category-items .category-item .image img {
@@ -2661,7 +2661,6 @@ footer .bottom-footer p {
   height: 65%;
   text-align: center;
   border-radius: 50%;
-  object-fit: cover;
   transition: all 0.3s linear;
 }
 
@@ -2673,7 +2672,7 @@ footer .bottom-footer p {
   height: fit-content;
   width: 100%;
   gap: 0.5rem;
-  padding: 0;
+  padding: 0 0 0 20%;
   text-align: left;
   transform: translateY(4rem);
   opacity: 0;
@@ -2685,9 +2684,8 @@ footer .bottom-footer p {
   margin: 0;
   width: fit-content;
   text-align: left;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--gray-color2);
+  font-size: 1.2rem;
+  color: var(--black2);
 }
 
 #category-page .category-page-container .col-right .category-items .category-item.has-childs-category:hover .image {
@@ -2699,7 +2697,7 @@ footer .bottom-footer p {
 }
 
 #category-page .category-page-container .col-right .category-items .category-item.has-childs-category:hover .cat-item-footer {
-  transform: translateY(-0.7rem);
+  transform: translateY(-1.5rem);
   opacity: 1;
   visibility: visible;
 }
@@ -2770,7 +2768,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .col-right .this-category-products .products-area .product-item .icons button #icon {
   font-size: 1.2rem;
   padding: 0.6rem;
-  color: var(--gray-color1);
+  color: var(--gray1);
   background: transparent;
   border: none;
 }
@@ -2790,7 +2788,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .col-right .this-category-products .products-area .product-item .content .product-name {
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--gray-color2);
+  color: var(--gray2);
 }
 
 #category-page .category-page-container .col-right .this-category-products .products-area .product-item .content .product-price {
@@ -2851,7 +2849,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .col-right .categories-products .categoriesproducts1 .product-item .image {
   width: 100%;
   height: 10rem;
-  border-bottom: 1px solid var(--gray-color9);
+  border-bottom: 1px solid var(--gray9);
   position: relative;
 }
 
@@ -2896,7 +2894,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .col-right .categories-products .categoriesproducts1 .product-item .icons button #icon {
   font-size: 1.2rem;
   padding: 0.6rem;
-  color: var(--gray-color1);
+  color: var(--gray1);
   background: transparent;
   border: none;
 }
@@ -2913,7 +2911,7 @@ footer .bottom-footer p {
 }
 
 #category-page .category-page-container .col-right .categories-products .categoriesproducts1 .product-item .content h5 .productlink {
-  color: var(--gray-color2);
+  color: var(--gray2);
 }
 
 #category-page .category-page-container .col-right .categories-products .categoriesproducts1 .product-item .content .product-price {
@@ -3109,7 +3107,7 @@ footer .bottom-footer p {
 #category-page-categoriesproducts .categoriesproducts3 .products-area .product-item .icons button #icon {
   font-size: 1.2rem;
   padding: 0.6rem;
-  color: var(--gray-color1);
+  color: var(--gray1);
   background: transparent;
   border: none;
 }
@@ -3129,7 +3127,7 @@ footer .bottom-footer p {
 #category-page-categoriesproducts .categoriesproducts3 .products-area .product-item .content .product-name {
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--gray-color2);
+  color: var(--gray2);
 }
 
 #category-page-categoriesproducts .categoriesproducts3 .products-area .product-item .content .product-price {
