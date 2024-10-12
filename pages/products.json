@@ -790,12 +790,12 @@
     },
     {
       "id":"40",
-      "title":"Canon EOS 90D",
+      "title":"Canon EOS 90D + EF-S 18-135mm f/3.5-5.6 IS USM, Black",
       "onSale":false,
       "category":["electronics", "cameras"],
       "tags":["camera", "canon", "canon camera"],
       "image":["../images/electronics/camera/c1/1.png", "../images/electronics/camera/c1/2.png", "../images/electronics/camera/c1/3.png"],
-      "description":"High image quality with 32.5 Megapixel CMOS (APS-C) sensor, High-speed continuous shooting of up to 10 fps with no time Lag during ovf shooting, 4K UHD 30P- Full HD 120P video,45-Point All Cross-type AF System* supports up to 27 points with an F-8 meteringCanon 90D.",
+      "description":"Exceptional image quality with a 32.5 Megapixel APS-C CMOS sensor, High-speed continuous shooting at up to 10 fps without lag during OVF shooting, 4K UHD video at 30P and Full HD at 120P, 45-point all cross-type AF system* supporting up to 27 points with F-8 metering. Canon 90D.",
       "price":"$40",
       "salePrice":"$35",
       "color":"black",
@@ -809,7 +809,7 @@
     },
     {
       "id":"41",
-      "title":"Nikon Z5 Mirrorless Digital Camera",
+      "title":"Nikon Z 5 Mirrorless Digital Camera (Body Only)",
       "onSale":false,
       "category":["electronics", "cameras"],
       "tags":["camera", "black camera", "Nikon camera", "black Nikon camera", "Nikon Z5"],
@@ -860,7 +860,7 @@
     },
     {
       "id":"43",
-      "title":"Wireless Monitor Nanny Cam WIFI IP Pinhole DIY Digital Video Camera Mini Micro DVR Black",
+      "title":"Wireless Nanny Cam with WiFi IP, Pinhole DIY Digital Video Camera, Mini Micro DVR – Black",
       "onSale":false,
       "category":["electronics", "cameras"],
       "tags":["camera", "black camera"],
