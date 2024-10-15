@@ -735,6 +735,9 @@ header {position:fixed;
     }
 
   }
+
+  
+
 }
 
 @media (max-width:768px){
@@ -2197,13 +2200,13 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
                                                                                                                   transform:translateY(0);
                                                                                                                   z-index:1;}
 
-/** price-block **/
+  /** price-block **/
   .category-page-container .filter-col .price-block h4 {color:var(--white);
-                                                                     background-color:var(--light-violet10);}
+                                                        background-color:var(--light-violet10);}
 
   .category-page-container .filter-col .price-block .price-range {flex-wrap:nowrap;
-                                                                               gap:0;
-                                                                               margin:1rem 0;}
+                                                                  gap:0;
+                                                                  margin:1rem 0;}
 
   .category-page-container .filter-col .price-block .price-range input {padding:0.2rem 0.7rem;
                                                                                      margin:0;

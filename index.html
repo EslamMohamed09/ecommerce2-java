@@ -69,6 +69,43 @@
     </div>
 
   </div>
+
+  <div class="right-login-menu d-flex-c-st-c" id="right-login-menu">
+
+    <form class="signin d-flex-c-st-c">
+
+      <div class="menu-header d-flex-r-bt-c">
+        <h4>login</h4>
+        <button id="close-menu-btn"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="input-boxes d-flex-c-st-c">
+
+        <div class="input-box d-flex-r-st-c">
+          <i class="fa fa-envelope" id="icon"></i>
+          <input type="text" name="email" placeholder="Your Email or Phone number">
+        </div>
+
+        <div class="input-box d-flex-r-st-c pass-col">
+          <i class="fa fa-key" id="icon"></i>
+          <input type="password" id="input_Pass" name="password" placeholder="Write Your Password" autocomplete="new-password"/>
+          <div class="eye" onclick="passeyeFunction()">
+              <i class="fa fa-eye" id="faeye_11"></i> 
+              <i class="fa fa-eye-slash" id="faeye_22"></i> 
+          </div>
+        </div>
+
+        <input type="submit" class="submit-btn" name="login" value="login">
+
+        <a href="reset_password.php" class="forget-password">forget your password ?</a>
+
+        <a href="login.php" class="submit-btn create-account-btn">create account</a>
+
+      </div>
+
+    </form>
+
+  </div> <!-- End right-login-menu -->
 </header>
 
 <section class="banner-section d-flex-r-c-c"> <!-- banner-section -->
