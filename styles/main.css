@@ -726,6 +726,7 @@ header {
   right: 0;
   width: 100%;
   z-index: 1000000;
+  /* right-login-menu */
 }
 header .top-nav {
   padding: 0.3rem 3%;
@@ -872,6 +873,93 @@ header .main-header .bottom nav ul li a {
 }
 header .main-header .bottom nav ul li:hover {
   background-color: var(--olive14);
+}
+header .right-login-menu {
+  position: fixed;
+  right: -50rem;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  padding: 2.5rem 1.9rem;
+  border-radius: 0;
+  box-shadow: 100vh 100vh 100vh 500vh rgba(19, 19, 19, 0.829);
+  background-color: var(--white);
+  z-index: 100000;
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+header .right-login-menu.right-mlogin {
+  right: 0;
+  opacity: 1;
+  transition: all 0.4s linear;
+}
+header .right-login-menu form {
+  width: 100%;
+  gap: 1rem;
+}
+header .right-login-menu form .menu-header {
+  width: 100%;
+}
+header .right-login-menu form .menu-header #close-menu-btn {
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+header .right-login-menu form .input-boxes {
+  width: 100%;
+  gap: 1.3rem;
+}
+header .right-login-menu form .input-boxes .input-box {
+  width: 100%;
+  gap: 0.7rem;
+  padding: 0.7rem 0.5rem 0.7rem 0.7rem;
+  box-shadow: var(--box-shadow2);
+  background-color: var(--white);
+}
+header .right-login-menu form .input-boxes .input-box input {
+  width: 90%;
+  padding: 0;
+  box-shadow: none;
+}
+header .right-login-menu form .input-boxes .input-box input::placeholder {
+  color: var(--gray-color6);
+}
+header .right-login-menu form .input-boxes .input-box.pass-col {
+  padding: 0.7rem 2.5rem 0.7rem 0.7rem;
+}
+header .right-login-menu form .input-boxes .input-box #icon {
+  font-size: 1.3rem;
+  color: var(--gray-color1);
+}
+header .right-login-menu form .input-boxes .submit-btn {
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #fca4fc;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  width: 100%;
+}
+header .right-login-menu form .input-boxes .forget-password {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--gray-color3);
+  border-bottom: 1px solid var(--gray-color3);
+}
+header .right-login-menu form .input-boxes .create-account-btn {
+  margin: 0;
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+  color: rgb(64, 4, 121);
+  font-weight: bold;
+  background: transparent;
+  border: 1px solid #9b059b;
+  transition: all 0.4s linear;
+}
+header .right-login-menu form .input-boxes .create-account-btn:hover {
+  color: #fca4fc;
+  border: none;
+  background: rgb(64, 4, 121);
+  border: 1px solid rgb(64, 4, 121);
 }
 
 @media (max-width: 768px) {
