@@ -888,11 +888,6 @@ header .right-login-menu {
   opacity: 0;
   transition: all 0.4s linear;
 }
-header .right-login-menu.right-mlogin {
-  right: 0;
-  opacity: 1;
-  transition: all 0.4s linear;
-}
 header .right-login-menu form {
   width: 100%;
   gap: 1rem;
@@ -923,12 +918,12 @@ header .right-login-menu form .input-boxes .input-box input {
 header .right-login-menu form .input-boxes .input-box input::placeholder {
   color: var(--gray-color6);
 }
-header .right-login-menu form .input-boxes .input-box.pass-col {
-  padding: 0.7rem 2.5rem 0.7rem 0.7rem;
-}
 header .right-login-menu form .input-boxes .input-box #icon {
   font-size: 1.3rem;
   color: var(--gray-color1);
+}
+header .right-login-menu form .input-boxes .input-box.pass-col {
+  padding: 0.7rem 2.5rem 0.7rem 0.7rem;
 }
 header .right-login-menu form .input-boxes .submit-btn {
   margin: 0;
@@ -960,6 +955,11 @@ header .right-login-menu form .input-boxes .create-account-btn:hover {
   border: none;
   background: rgb(64, 4, 121);
   border: 1px solid rgb(64, 4, 121);
+}
+header .right-login-menu.right-mlogin {
+  right: 0;
+  opacity: 1;
+  transition: all 0.4s linear;
 }
 
 @media (max-width: 768px) {
