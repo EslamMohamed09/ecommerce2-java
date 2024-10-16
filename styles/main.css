@@ -22,6 +22,7 @@
   --violet9:#70199b;
   --violet10:#4d106b;
   --violet11:#42106b;
+  --light-violet6:#9b059b;
   --yellow:#fafaf6;
   --yellow1:#f8f8e4;
   --yellow2:#e2e0db;
@@ -56,7 +57,7 @@
   --red8:#f53030;
   --red9:#f51e1e;
   --red10:#ff0000;
-  --pink:rgb(255, 25, 82);
+  --pink9:rgb(255, 25, 82);
   --transparent-green0:#738d7b17;
   --transparent-green:#00ff4c3f;
   --green:#edfcf1;
@@ -556,21 +557,43 @@ section {
 }
 
 .btn4 {
+  margin: 0;
+  padding: 0.7rem 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   border: none;
   outline: none;
-  padding: 0.7rem 1rem;
-  color: var(--white);
+  border-radius: 0.2rem;
+  color: var(--violet);
   box-shadow: var(--box-shadow-varient);
-  background: linear-gradient(to right, #9b059b, rgb(64, 4, 121) 80%);
+  background: linear-gradient(to right, var(--light-violet6), rgb(64, 4, 121) 80%);
 }
 
 .btn4:hover {
   color: var(--white);
   background: linear-gradient(to right, #056c9b, rgb(158, 108, 204) 80%);
+}
+
+.btn4-trans {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  text-align: center;
+  background: transparent;
+  color: rgb(64, 4, 121);
+  border: 1px solid var(--light-violet6);
+  transition: all 0.4s linear;
+}
+
+.btn4-trans:hover {
+  color: #fca4fc;
+  border: none;
+  background: rgb(64, 4, 121);
+  border: 1px solid rgb(64, 4, 121);
 }
 
 .btn5 {
@@ -937,12 +960,7 @@ header .right-login-menu form .input-boxes .input-box.pass-col .pass-input .pass
   cursor: pointer;
 }
 header .right-login-menu form .input-boxes .btn4 {
-  margin: 0;
   margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #fca4fc;
-  border-radius: 0.4rem;
-  font-weight: bold;
   width: 100%;
 }
 header .right-login-menu form .input-boxes .forget-password {
@@ -951,21 +969,9 @@ header .right-login-menu form .input-boxes .forget-password {
   color: var(--gray10);
   border-bottom: 1px solid var(--gray8);
 }
-header .right-login-menu form .input-boxes .create-account-btn {
-  margin: 0;
-  margin-top: 0.2rem;
-  font-size: 1.1rem;
-  color: rgb(64, 4, 121);
-  font-weight: bold;
-  background: transparent;
-  border: 1px solid #9b059b;
-  transition: all 0.4s linear;
-}
-header .right-login-menu form .input-boxes .create-account-btn:hover {
-  color: #fca4fc;
-  border: none;
-  background: rgb(64, 4, 121);
-  border: 1px solid rgb(64, 4, 121);
+header .right-login-menu form .input-boxes .btn4-trans {
+  width: 100%;
+  text-transform: uppercase;
 }
 header .right-login-menu.right-mlogin {
   right: 0;
@@ -2528,7 +2534,7 @@ footer .bottom-footer p {
 }
 #category-page .category-page-container .filter-col .block:not(:first-child) h4 {
   color: var(--white);
-  background-color: var(--light-violet10);
+  background-color: var(--violet10);
 }
 #category-page .category-page-container .filter-col .block ul {
   padding: 0 !important;
@@ -2662,7 +2668,7 @@ footer .bottom-footer p {
 }
 #category-page .category-page-container .filter-col .price-block h4 {
   color: var(--white);
-  background-color: var(--light-violet10);
+  background-color: var(--violet10);
 }
 #category-page .category-page-container .filter-col .price-block .price-range {
   flex-wrap: nowrap;
