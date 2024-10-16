@@ -25,6 +25,20 @@ window.addEventListener('scroll', function(){
 
 document.body.style.paddingTop = `${header.offsetHeight}px`;
 
+if(document.getElementById("login-btn")){
+   const loginDrawerBtn = document.getElementById("login-btn");
+   const loginDrawer = document.getElementById("login-drawer");
+   const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
+ 
+   loginDrawerBtn.addEventListener("click", function(){
+     loginDrawer.classList.add("openingLoginDrawer");
+   });
+ 
+   closeLoginDrawerBtn.addEventListener("click", function(){
+     loginDrawer.classList.remove("openingLoginDrawer");
+   });
+}
+
 }
 
 function eyeFunction(eyeIcon) {

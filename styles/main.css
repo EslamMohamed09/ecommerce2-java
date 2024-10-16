@@ -897,39 +897,39 @@ header .main-header .bottom nav ul li a {
 header .main-header .bottom nav ul li:hover {
   background-color: var(--olive14);
 }
-header .right-login-menu {
+header .login-drawer {
   position: fixed;
-  right: 0;
+  right: -100%;
   top: 0;
   width: 25%;
   height: 100%;
-  padding: 2.5rem 1.9rem;
+  padding: 1.5rem 1.9rem;
   border-radius: 0;
   box-shadow: 100vh 100vh 100vh 500vh rgba(19, 19, 19, 0.829);
   background-color: var(--white);
   z-index: 100000;
-  opacity: 1;
+  opacity: 0;
   transition: all 0.4s linear;
 }
-header .right-login-menu form {
+header .login-drawer form {
   width: 100%;
   gap: 1rem;
 }
-header .right-login-menu form .menu-header {
+header .login-drawer form .menu-header {
   width: 100%;
+  margin-bottom: 0.7rem;
 }
-header .right-login-menu form .menu-header #close-menu-btn {
+header .login-drawer form .menu-header #close-login-drawer-btn {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
   font-weight: normal;
   border: none;
   background-color: transparent;
 }
-header .right-login-menu form .input-boxes {
+header .login-drawer form .input-boxes {
   width: 100%;
   gap: 1.3rem;
 }
-header .right-login-menu form .input-boxes .input-box {
+header .login-drawer form .input-boxes .input-box {
   width: 100%;
   gap: 0.7rem;
   padding: 0.7rem 0.5rem 0.7rem 1rem;
@@ -937,43 +937,43 @@ header .right-login-menu form .input-boxes .input-box {
   background-color: var(--white);
   border-radius: 2rem;
 }
-header .right-login-menu form .input-boxes .input-box input {
+header .login-drawer form .input-boxes .input-box input {
   width: 90%;
   padding: 0;
   box-shadow: none;
   border: none;
 }
-header .right-login-menu form .input-boxes .input-box input::placeholder {
+header .login-drawer form .input-boxes .input-box input::placeholder {
   color: var(--gray6);
 }
-header .right-login-menu form .input-boxes .input-box #icon {
+header .login-drawer form .input-boxes .input-box #icon {
   font-size: 1.3rem;
   color: var(--gray10);
 }
-header .right-login-menu form .input-boxes .input-box.pass-col {
+header .login-drawer form .input-boxes .input-box.pass-col {
   padding: 0.7rem 1rem 0.7rem 1rem;
 }
-header .right-login-menu form .input-boxes .input-box.pass-col .pass-input {
+header .login-drawer form .input-boxes .input-box.pass-col .pass-input {
   width: 100%;
 }
-header .right-login-menu form .input-boxes .input-box.pass-col .pass-input .passeye {
+header .login-drawer form .input-boxes .input-box.pass-col .pass-input .passeye {
   cursor: pointer;
 }
-header .right-login-menu form .input-boxes .btn4 {
+header .login-drawer form .input-boxes .btn4 {
   margin-top: 1rem;
   width: 100%;
 }
-header .right-login-menu form .input-boxes .forget-password {
+header .login-drawer form .input-boxes .forget-password {
   margin: 0;
   font-size: 1rem;
   color: var(--gray10);
   border-bottom: 1px solid var(--gray8);
 }
-header .right-login-menu form .input-boxes .btn4-trans {
+header .login-drawer form .input-boxes .btn4-trans {
   width: 100%;
   text-transform: uppercase;
 }
-header .right-login-menu.right-mlogin {
+header .login-drawer.openingLoginDrawer {
   right: 0;
   opacity: 1;
   transition: all 0.4s linear;

@@ -756,29 +756,29 @@ header {position:fixed;
   }
 
   /* right-login-menu */
-  .right-login-menu {position:fixed;
-                     right:0;
-                     top:0;
-                     width:25%;
-                     height:100%;
-                     padding:2.5rem 1.9rem;
-                     border-radius:0;
-                     box-shadow:100vh 100vh 100vh 500vh rgba(19, 19, 19, 0.829);
-                     background-color:var(--white);
-                     z-index:100000;
-                     opacity:1;
-                     transition:all 0.4s linear;
+  .login-drawer {position:fixed;
+                 right:-100%;
+                 top:0;
+                 width:25%;
+                 height:100%;
+                 padding:1.5rem 1.9rem;
+                 border-radius:0;
+                 box-shadow:100vh 100vh 100vh 500vh rgba(19, 19, 19, 0.829);
+                 background-color:var(--white);
+                 z-index:100000;
+                 opacity:0;
+                 transition:all 0.4s linear;
 
       form {width:100%;
             gap:1rem;
 
         .menu-header {width:100%;
+                      margin-bottom:0.7rem;
 
-          #close-menu-btn {font-size:1.2rem;
-                           margin-bottom:1rem;
-                           font-weight:normal;
-                           border:none;
-                           background-color:transparent;}
+          #close-login-drawer-btn {font-size:1.2rem;
+                                   font-weight:normal;
+                                   border:none;
+                                   background-color:transparent;}
         }
 
         .input-boxes {width:100%;
@@ -826,9 +826,9 @@ header {position:fixed;
       }
   }
 
-  .right-login-menu.right-mlogin {right:0;
-                                  opacity:1;
-                                  transition:all 0.4s linear;}
+  .login-drawer.openingLoginDrawer {right:0;
+                                    opacity:1;
+                                    transition:all 0.4s linear;}
 
 }
 
