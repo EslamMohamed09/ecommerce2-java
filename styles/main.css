@@ -876,7 +876,7 @@ header .main-header .bottom nav ul li:hover {
 }
 header .right-login-menu {
   position: fixed;
-  right: -50rem;
+  right: 0;
   top: 0;
   width: 25%;
   height: 100%;
@@ -885,7 +885,7 @@ header .right-login-menu {
   box-shadow: 100vh 100vh 100vh 500vh rgba(19, 19, 19, 0.829);
   background-color: var(--white);
   z-index: 100000;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.4s linear;
 }
 header .right-login-menu form {
@@ -909,11 +909,13 @@ header .right-login-menu form .input-boxes .input-box {
   padding: 0.7rem 0.5rem 0.7rem 0.7rem;
   box-shadow: var(--box-shadow2);
   background-color: var(--white);
+  border-radius: 2rem;
 }
 header .right-login-menu form .input-boxes .input-box input {
   width: 90%;
   padding: 0;
   box-shadow: none;
+  border: none;
 }
 header .right-login-menu form .input-boxes .input-box input::placeholder {
   color: var(--gray-color6);
@@ -923,7 +925,13 @@ header .right-login-menu form .input-boxes .input-box #icon {
   color: var(--gray-color1);
 }
 header .right-login-menu form .input-boxes .input-box.pass-col {
-  padding: 0.7rem 2.5rem 0.7rem 0.7rem;
+  padding: 0.7rem 1rem 0.7rem 0.7rem;
+}
+header .right-login-menu form .input-boxes .input-box.pass-col .pass-input {
+  width: 100%;
+}
+header .right-login-menu form .input-boxes .input-box.pass-col .pass-input .passeye {
+  cursor: pointer;
 }
 header .right-login-menu form .input-boxes .submit-btn {
   margin: 0;

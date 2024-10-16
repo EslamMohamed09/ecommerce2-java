@@ -88,10 +88,12 @@
 
         <div class="input-box d-flex-r-st-c pass-col">
           <i class="fa fa-key" id="icon"></i>
-          <input type="password" id="input_Pass" name="password" placeholder="Write Your Password" autocomplete="new-password"/>
-          <div class="eye" onclick="passeyeFunction()">
-              <i class="fa fa-eye" id="faeye_11"></i> 
-              <i class="fa fa-eye-slash" id="faeye_22"></i> 
+          <div class="pass-input d-flex-r-bt-c">
+            <input type="password" name="password" maxlength="25" pattern=".{5,25}" title="Password can't be less than 5 characters or more than 25" placeholder="Write your password" autocomplete="off" required/>
+            <div class="passeye" onclick="eyeFunction(this)">
+              <i class="fa fa-eye" style="display:none;"></i>
+              <i class="fa fa-eye-slash"></i> 
+            </div>
           </div>
         </div>
 
