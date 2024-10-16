@@ -749,7 +749,6 @@ header {
   right: 0;
   width: 100%;
   z-index: 1000000;
-  /* right-login-menu */
 }
 header .top-nav {
   padding: 0.3rem 3%;
@@ -915,11 +914,11 @@ header .login-drawer form {
   width: 100%;
   gap: 1rem;
 }
-header .login-drawer form .menu-header {
+header .login-drawer form .drawer-header {
   width: 100%;
   margin-bottom: 0.7rem;
 }
-header .login-drawer form .menu-header #close-login-drawer-btn {
+header .login-drawer form .drawer-header #close-login-drawer-btn {
   font-size: 1.2rem;
   font-weight: normal;
   border: none;

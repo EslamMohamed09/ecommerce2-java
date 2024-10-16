@@ -755,7 +755,6 @@ header {position:fixed;
 
   }
 
-  /* right-login-menu */
   .login-drawer {position:fixed;
                  right:-100%;
                  top:0;
@@ -772,8 +771,8 @@ header {position:fixed;
       form {width:100%;
             gap:1rem;
 
-        .menu-header {width:100%;
-                      margin-bottom:0.7rem;
+        .drawer-header {width:100%;
+                        margin-bottom:0.7rem;
 
           #close-login-drawer-btn {font-size:1.2rem;
                                    font-weight:normal;

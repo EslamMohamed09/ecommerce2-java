@@ -2,42 +2,28 @@
 const header = document.querySelector('header');
 
 if(header){
-/*** MOBILE HEADER ***/
-if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
-   const mobileHBtn = document.getElementById("open-mHeader");
-   const mainHeader = document.getElementById("main-header");
-   mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
-}
 
-
-window.addEventListener('scroll', function(){
-
-  if (window.scrollY > 30){
-      document.querySelector("header .top-nav").style.display = 'none';
-      document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
-  } else {
-    document.querySelector("header .top-nav").style.display = 'flex';
-    document.querySelector(".main-header").style.boxShadow = 'none';
-
+  /*** MOBILE HEADER ***/
+  if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
+    const mobileHBtn = document.getElementById("open-mHeader");
+    const mainHeader = document.getElementById("main-header");
+    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
   }
-  
-});
 
-document.body.style.paddingTop = `${header.offsetHeight}px`;
+  window.addEventListener('scroll', function(){
 
-if(document.getElementById("login-btn")){
-   const loginDrawerBtn = document.getElementById("login-btn");
-   const loginDrawer = document.getElementById("login-drawer");
-   const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
- 
-   loginDrawerBtn.addEventListener("click", function(){
-     loginDrawer.classList.add("openingLoginDrawer");
-   });
- 
-   closeLoginDrawerBtn.addEventListener("click", function(){
-     loginDrawer.classList.remove("openingLoginDrawer");
-   });
-}
+    if (window.scrollY > 30){
+        document.querySelector("header .top-nav").style.display = 'none';
+        document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
+    } else {
+      document.querySelector("header .top-nav").style.display = 'flex';
+      document.querySelector(".main-header").style.boxShadow = 'none';
+
+    }
+    
+  });
+
+  document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 }
 
@@ -70,6 +56,7 @@ const bannerSection = document.querySelector(".banner-section");
 const bannerSlides = document.querySelectorAll('.banner-section .banner-slide-item');
 
 if(bannerSection){
+
 function hideAllSlides(){
   bannerSlides.forEach(slide => {
     slide.style.display = "none";
@@ -92,17 +79,35 @@ function nextB(){
   bannerSlides[index].style.display = "flex";
 }
 
-
 let bannerSliderInterval = setInterval(nextB, 4000);
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function(){// Stop Banner Slider
   if(window.scrollY > 10){
-    clearInterval(bannerSliderInterval);
+     clearInterval(bannerSliderInterval);
   } else if(window.scrollY === 0){
     clearInterval(bannerSliderInterval);
     bannerSliderInterval = setInterval(nextB, 4000);
   }
 });
+
+if(header){
+
+  const loginDrawerBtn = document.getElementById("login-btn");
+  const loginDrawer = document.getElementById("login-drawer");
+  const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
+
+  loginDrawerBtn.addEventListener("click", function(){
+    loginDrawer.classList.add("openingLoginDrawer");
+    clearInterval(bannerSliderInterval); // Stop Banner Slider
+  });
+
+  closeLoginDrawerBtn.addEventListener("click", function(){
+    loginDrawer.classList.remove("openingLoginDrawer");
+    clearInterval(bannerSliderInterval);
+    bannerSliderInterval = setInterval(nextB, 4000);
+  });
+
+}
 
 bannerSection.addEventListener('mouseenter', function(){
   clearInterval(bannerSliderInterval);
@@ -120,6 +125,7 @@ document.querySelectorAll('.banner-section .banner-slide-item .col-left h2').for
 document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forEach((p) => {
   p.textContent = truncateWords(p.textContent, 20);
 });
+
 }
 
 /*
@@ -692,7 +698,7 @@ if(document.querySelector("#single-page")){
  ###########################
 */
 if(document.querySelectorAll("#category-page")){
-  const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
+   const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
 
   categoryItems.forEach(function(categoryItem) {
     const catItemFooter = categoryItem.querySelector("#category-page .category-page-container .category-item .cat-item-footer");
