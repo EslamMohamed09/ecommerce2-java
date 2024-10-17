@@ -1541,7 +1541,7 @@ header .login-drawer.openingLoginDrawer {
   align-items: center;
   margin-bottom: 1rem;
   overflow: hidden;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
   position: relative;
 }
 .offers-section .inner-col .offersblock .product-item .image img {

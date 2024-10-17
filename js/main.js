@@ -133,6 +133,75 @@ document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forE
 offers-section
 ###############
 */
+const secondDesiredDiscounts = ["20%", "25%", "30%", "35%"];
+
+function generateStarRating(rating) {
+  let starsHTML = '';
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 >= 0.5;
+
+  for (let i = 0; i < fullStars; i++) {starsHTML += '<i class="fas fa-star"></i>';}
+
+  if (halfStar) {starsHTML += '<i class="fas fa-star-half-alt"></i>';}
+
+  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+  for (let i = 0; i < emptyStars; i++) {starsHTML += '<i class="far fa-star"></i>';}
+
+  return starsHTML;
+}
+
+function fetchDesiredProducts(desiredProducts, desiredProductsContainer, desiredProductsBlock) {
+  fetch('/pages/products.json')
+    .then(response => response.json())
+    .then(data => {
+      const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
+
+      filteredProducts.forEach(product => {
+        const description = product.description ? product.description.slice(0, 17) 
+                            : (product.aboutThisItem 
+                            ? product.aboutThisItem.slice(0, 17) 
+                            : product.color);
+
+        const image1 = product.image && product.image[0] ? product.image[0] : 'default-image.jpg';
+        const image2 = product.image && product.image[1] ? product.image[1] : '';
+
+        const productHtml = `
+          <div class="product-item ${product.off}">
+            <div class="image">
+              <img src="${image1}" alt="Product Image">
+              ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
+            </div>
+
+            <div class="icons">
+              <a href="#"><i class="far fa-heart"></i></a>
+              <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
+            </div>
+
+            <div class="product-content d-flex-c-bt-st">
+              <a href="pages/single.html?id=${product.id}" class="product-title">${product.title.split(' ').slice(0,3).join(' ')}</a>
+              <p>${description}...</p>
+              <div class="ratings d-flex-r-st-st">
+                ${generateStarRating(product.rating)}
+              </div>
+              <div class="price d-flex-r-bt-c">
+                <strong>${product.price}</strong>
+                <strong>${product.salePrice}</strong>
+              </div>
+            </div>
+          </div>
+        `;
+
+        desiredProductsContainer.innerHTML += productHtml;
+      });
+      createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
+    })
+    .catch(error => {
+      console.error('Error fetching products:', error);
+      desiredProductsBlock.innerHTML = 'There are no products';
+    });
+}
+
 function createOneGroupedProducts(productsSelector){
 
   const productItems = Array.from(productsSelector);
@@ -199,16 +268,8 @@ function createTwoGroupedProducts(productsSelector){
 }
 
 createOneGroupedProducts(document.querySelectorAll('.offers-section .col-left .inner-col .product-item'));
-createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.offers-section .product-item .product-title').forEach(title => {
-    title.textContent = truncateWords(title.textContent, 3);
-  });
-  document.querySelectorAll('.offers-section .product-item p').forEach(p => {
-    p.textContent = truncateWords(p.textContent, 4);
-  });
-});
+fetchDesiredProducts(secondDesiredDiscounts, document.querySelector(".offers-section .col-right .inner-col"), document.querySelector(".offers-section .col-right"));
 
 $(document).ready(function(){
 
@@ -399,7 +460,7 @@ if(document.querySelector("#single-page")){
     return urlParams.get('id');
   }
 
-  function fetchProductDetails(productId){
+  function fetchProduct(productId){
     fetch('/pages/products.json')
     .then(response => response.json())
     .then(data => {
@@ -414,6 +475,12 @@ if(document.querySelector("#single-page")){
       console.error('Error fetching the product data:', error);
       document.querySelector("#single-page .product-container").innerHTML = 'Error loading product details';
     });
+  }
+
+  if(getProductId()){
+     fetchProduct(getProductId());
+  } else {
+    document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
   }
 
   function displayProductDetails(product) {
@@ -523,9 +590,9 @@ if(document.querySelector("#single-page")){
     const smallImages = document.querySelectorAll('.product-container .col-left .small-images .small-image img');
     const bigImage = document.querySelector('#single-page .product-container .col-left .big-image img');
 
-    smallImages.forEach((img) => {
-      img.addEventListener('click', function () {
-        bigImage.src = img.src;
+    smallImages.forEach((smallImg) => {
+      smallImg.addEventListener('click', function () {
+        bigImage.src = smallImg.src;
       });
     });
   }
@@ -627,14 +694,6 @@ if(document.querySelector("#single-page")){
         subtotalElement.textContent = `$${(proQuantityNumber * productPrice).toFixed(2)}`;
       }
     });
-  }
-
-  const productId = getProductId();
-
-  if(productId){
-    fetchProductDetails(productId);
-  } else {
-    document.querySelector("#single-page .product-container").innerHTML = 'no product to view';
   }
 
   function addToCart(){
