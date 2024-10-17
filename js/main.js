@@ -273,7 +273,6 @@ fetchDesiredProducts(firstDesiredDiscounts, document.querySelector(".offers-sect
 fetchDesiredProducts(secondDesiredDiscounts, document.querySelector(".offers-section .col-right .inner-col"), "col-right", createTwoGroupedProducts);
 
 
-
 $(document).ready(function(){
 
   function sliderWithFilterTabs(tabs, blocks, secondClassBlock){
