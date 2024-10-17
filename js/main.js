@@ -269,9 +269,10 @@ function createTwoGroupedProducts(productsSelector) {
   }
 }
 
+if (document.querySelector(".offers-section")){
 fetchDesiredProducts(firstDesiredDiscounts, document.querySelector(".offers-section .col-left .inner-col"), "col-left", createOneGroupedProducts);
 fetchDesiredProducts(secondDesiredDiscounts, document.querySelector(".offers-section .col-right .inner-col"), "col-right", createTwoGroupedProducts);
-
+}
 
 $(document).ready(function(){
 
