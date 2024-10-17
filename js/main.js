@@ -133,6 +133,7 @@ document.querySelectorAll('.banner-section .banner-slide-item .col-left p').forE
 offers-section
 ###############
 */
+const firstDesiredDiscounts = ["10%", "15%"];
 const secondDesiredDiscounts = ["20%", "25%", "30%", "35%"];
 
 function generateStarRating(rating) {
@@ -140,28 +141,32 @@ function generateStarRating(rating) {
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 >= 0.5;
 
-  for (let i = 0; i < fullStars; i++) {starsHTML += '<i class="fas fa-star"></i>';}
+  for (let i = 0; i < fullStars; i++) { starsHTML += '<i class="fas fa-star"></i>'; }
 
-  if (halfStar) {starsHTML += '<i class="fas fa-star-half-alt"></i>';}
+  if (halfStar) { starsHTML += '<i class="fas fa-star-half-alt"></i>'; }
 
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
-  for (let i = 0; i < emptyStars; i++) {starsHTML += '<i class="far fa-star"></i>';}
+  for (let i = 0; i < emptyStars; i++) { starsHTML += '<i class="far fa-star"></i>'; }
 
   return starsHTML;
 }
 
-function fetchDesiredProducts(desiredProducts, desiredProductsContainer, desiredProductsBlock) {
+function fetchDesiredProducts(desiredProducts, desiredProductsContainer, desiredProductsBlock, groupProductsFn) {
+  
+  desiredProductsContainer.innerHTML = '';
+
   fetch('/pages/products.json')
     .then(response => response.json())
     .then(data => {
       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
 
       filteredProducts.forEach(product => {
-        const description = product.description ? product.description.slice(0, 17) 
-                            : (product.aboutThisItem 
-                            ? product.aboutThisItem.slice(0, 17) 
-                            : product.color);
+        const description = product.description
+          ? product.description.slice(0, 17)
+          : product.aboutThisItem
+          ? product.aboutThisItem.slice(0, 17)
+          : product.color;
 
         const image1 = product.image && product.image[0] ? product.image[0] : 'default-image.jpg';
         const image2 = product.image && product.image[1] ? product.image[1] : '';
@@ -172,14 +177,14 @@ function fetchDesiredProducts(desiredProducts, desiredProductsContainer, desired
               <img src="${image1}" alt="Product Image">
               ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
             </div>
-
             <div class="icons">
               <a href="#"><i class="far fa-heart"></i></a>
               <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
             </div>
-
             <div class="product-content d-flex-c-bt-st">
-              <a href="pages/single.html?id=${product.id}" class="product-title">${product.title.split(' ').slice(0,3).join(' ')}</a>
+              <a href="pages/single.html?id=${product.id}" class="product-title">
+                ${product.title.split(' ').slice(0, 3).join(' ')}
+              </a>
               <p>${description}...</p>
               <div class="ratings d-flex-r-st-st">
                 ${generateStarRating(product.rating)}
@@ -194,7 +199,9 @@ function fetchDesiredProducts(desiredProducts, desiredProductsContainer, desired
 
         desiredProductsContainer.innerHTML += productHtml;
       });
-      createTwoGroupedProducts(document.querySelectorAll('.offers-section .col-right .inner-col .product-item'));
+
+      // Group products using the provided function
+      groupProductsFn(document.querySelectorAll(`.${desiredProductsBlock} .product-item`));
     })
     .catch(error => {
       console.error('Error fetching products:', error);
@@ -202,74 +209,70 @@ function fetchDesiredProducts(desiredProducts, desiredProductsContainer, desired
     });
 }
 
-function createOneGroupedProducts(productsSelector){
-
-  const productItems = Array.from(productsSelector);
-  const groupedProducts = {};
-  
-  productItems.forEach(productItem => { // Group products by their class names
-    const className = productItem.classList[1]; // Assumes 'product-item 20%' format
-    if (!groupedProducts[className]) {
-        groupedProducts[className] = [];
-    }
-    groupedProducts[className].push(productItem);
-  });
-   
-  for (const [className, products] of Object.entries(groupedProducts)) { // Create the offersblock and items divs
-       const offersBlock = document.createElement('div');
-             offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
-
-       products.forEach((product) => {
-         offersBlock.appendChild(product);
-       });
-        
-       document.querySelector(".offers-section .col-left .inner-col").appendChild(offersBlock);
-  }
-}
-
-function createTwoGroupedProducts(productsSelector){
-
+function createOneGroupedProducts(productsSelector) {
   const productItems = Array.from(productsSelector);
   const groupedProducts = {};
 
-  // Group products by their class names
   productItems.forEach(productItem => {
     const className = productItem.classList[1]; // Assumes 'product-item 20%' format
     if (!groupedProducts[className]) {
-        groupedProducts[className] = [];
+      groupedProducts[className] = [];
     }
     groupedProducts[className].push(productItem);
   });
-   
-  for (const [className, products] of Object.entries(groupedProducts)) { // Create the offersblock and items divs
-        const offersBlock = document.createElement('div');
-              offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
 
-        let itemsBlock = document.createElement('div');
-            itemsBlock.className = 'items';
-        let itemCount = 0;
+  for (const [className, products] of Object.entries(groupedProducts)) {
+    const offersBlock = document.createElement('div');
+    offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
 
+    products.forEach(product => {
+      offersBlock.appendChild(product);
+    });
 
-        products.forEach((product, index) => {
-          itemsBlock.appendChild(product);
-          itemCount++;
-  
-          if (itemCount === 10 || index === products.length - 1) {
-              offersBlock.appendChild(itemsBlock);
-              itemsBlock = document.createElement('div');
-              itemsBlock.className = 'items';
-              itemCount = 0;
-          }
-        });
-
-        document.querySelector(".offers-section .col-right .inner-col").appendChild(offersBlock);
-    
+    document.querySelector(".offers-section .col-left .inner-col").appendChild(offersBlock);
   }
 }
 
-createOneGroupedProducts(document.querySelectorAll('.offers-section .col-left .inner-col .product-item'));
+function createTwoGroupedProducts(productsSelector) {
+  const productItems = Array.from(productsSelector);
+  const groupedProducts = {};
 
-fetchDesiredProducts(secondDesiredDiscounts, document.querySelector(".offers-section .col-right .inner-col"), document.querySelector(".offers-section .col-right"));
+  productItems.forEach(productItem => {
+    const className = productItem.classList[1]; // Assumes 'product-item 20%' format
+    if (!groupedProducts[className]) {
+      groupedProducts[className] = [];
+    }
+    groupedProducts[className].push(productItem);
+  });
+
+  for (const [className, products] of Object.entries(groupedProducts)) {
+    const offersBlock = document.createElement('div');
+    offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
+
+    let itemsBlock = document.createElement('div');
+    itemsBlock.className = 'items';
+    let itemCount = 0;
+
+    products.forEach((product, index) => {
+      itemsBlock.appendChild(product);
+      itemCount++;
+
+      if (itemCount === 10 || index === products.length - 1) {
+        offersBlock.appendChild(itemsBlock);
+        itemsBlock = document.createElement('div');
+        itemsBlock.className = 'items';
+        itemCount = 0;
+      }
+    });
+
+    document.querySelector(".offers-section .col-right .inner-col").appendChild(offersBlock);
+  }
+}
+
+fetchDesiredProducts(firstDesiredDiscounts, document.querySelector(".offers-section .col-left .inner-col"), "col-left", createOneGroupedProducts);
+fetchDesiredProducts(secondDesiredDiscounts, document.querySelector(".offers-section .col-right .inner-col"), "col-right", createTwoGroupedProducts);
+
+
 
 $(document).ready(function(){
 
