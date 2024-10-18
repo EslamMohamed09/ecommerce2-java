@@ -124,6 +124,48 @@
 
     {"id":"62", "name":"pot", "parent_id":"53"},
 
-    {"id":"63", "name":"spoons", "parent_id":"53"}
+    {"id":"63", "name":"spoons", "parent_id":"53"},
+
+    {"id":"64", "name":"clothes", "parent_id":null},
+
+    {"id":"65", "name":"men clothes", "parent_id":"64"},
+
+    {"id":"66", "name":"women clothes", "parent_id":"64"},
+
+    {"id":"67", "name":"sweatshirt", "parent_id":"65"},
+
+    {"id":"68", "name":"shoes", "parent_id":"66"},
+
+    {"id":"69", "name":"athletic", "parent_id":"68"},
+
+    {"id":"70", "name":"boat", "parent_id":"68"},
+
+    {"id":"71", "name":"sandal", "parent_id":"68"},
+
+    {"id":"72", "name":"running", "parent_id":"69"},
+
+    {"id":"73", "name":"sport sandals & slides", "parent_id":"69"},
+
+    {"id":"74", "name":"team sports", "parent_id":"69"},
+
+    {"id":"75", "name":"walking", "parent_id":"69"},
+
+    {"id":"76", "name":"roadrunning", "parent_id":"72"},
+
+    {"id":"77", "name":"basketball", "parent_id":"74"},
+
+    {"id":"78", "name":"field hockey & lacrosse", "parent_id":"74"},
+
+    {"id":"79", "name":"soccer", "parent_id":"74"},
+
+    {"id":"80", "name":"softball & baseball", "parent_id":"74"},
+
+    {"id":"81", "name":"flats", "parent_id":"71"},
+
+    {"id":"82", "name":"flip flops", "parent_id":"71"},
+
+    {"id":"83", "name":"platforms & wedges", "parent_id":"71"},
+
+    {"id":"84", "name":"slides", "parent_id":"71"}
   ]
 }
