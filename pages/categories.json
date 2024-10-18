@@ -102,8 +102,28 @@
 
     {"id":"51", "name":"shortwave radios", "parent_id":"38"},
 
-    {"id":"52", "name":"", "parent_id":""},
+    {"id":"52", "name":"household appliances", "parent_id":null},
 
-    {"id":"53", "name":"", "parent_id":""}
+    {"id":"53", "name":"kitchen", "parent_id":"52"},
+
+    {"id":"54", "name":"cooker", "parent_id":"53"},
+
+    {"id":"55", "name":"dish", "parent_id":"53"},
+
+    {"id":"56", "name":"drying dish", "parent_id":"53"},
+
+    {"id":"57", "name":"fryer", "parent_id":"53"},
+
+    {"id":"58", "name":"glass milk", "parent_id":"53"},
+
+    {"id":"59", "name":"knife", "parent_id":"53"},
+
+    {"id":"60", "name":"microwave", "parent_id":"53"},
+
+    {"id":"61", "name":"milkpot", "parent_id":"53"},
+
+    {"id":"62", "name":"pot", "parent_id":"53"},
+
+    {"id":"63", "name":"spoons", "parent_id":"53"}
   ]
 }
