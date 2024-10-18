@@ -16,9 +16,9 @@
 
     {"id":"8", "name":"lenovo", "parent_id":"2"},
 
-    {"id":"9", "name":"blenders", "parent_id":"1"},
+    {"id":"9", "name":"blender", "parent_id":"1"},
 
-    {"id":"10", "name":"boilers and heaters", "parent_id":"1"},
+    {"id":"10", "name":"boilers & heaters", "parent_id":"1"},
 
     {"id":"11", "name":"heater", "parent_id":"10"},
 
@@ -28,9 +28,9 @@
 
     {"id":"14", "name":"camera", "parent_id":"1"},
 
-    {"id":"15", "name":"fans and air conditions", "parent_id":"1"},
+    {"id":"15", "name":"fans & air conditions", "parent_id":"1"},
 
-    {"id":"16", "name":"fridges and washing machines", "parent_id":"1"},
+    {"id":"16", "name":"fridges & washing machines", "parent_id":"1"},
 
     {"id":"17", "name":"pc accessories", "parent_id":"1"},
 
@@ -54,7 +54,7 @@
 
     {"id":"27", "name":"phones", "parent_id":"1"},
 
-    {"id":"28", "name":"televisions", "parent_id":"1"},
+    {"id":"28", "name":"television", "parent_id":"1"},
 
     {"id":"29", "name":"vacuum cleaner", "parent_id":"1"},
 
@@ -80,7 +80,7 @@
 
     {"id":"40", "name":"mp3 player accessories", "parent_id":"35"},
 
-    {"id":"41", "name":"portable speakers and docks", "parent_id":"35"},
+    {"id":"41", "name":"portable speakers & docks", "parent_id":"35"},
 
     {"id":"42", "name":"headphone adapters", "parent_id":"39"},
 
@@ -98,7 +98,7 @@
 
     {"id":"49", "name":"Over-Ear Headphones", "parent_id":"44"},
 
-    {"id":"50", "name":"amfm radios", "parent_id":"38"},
+    {"id":"50", "name":"am fm radios", "parent_id":"38"},
 
     {"id":"51", "name":"shortwave radios", "parent_id":"38"},
 
