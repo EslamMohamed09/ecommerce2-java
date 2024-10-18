@@ -1,40 +1,53 @@
 {
   "categories": [
-    {"id":"1",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"2",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"3",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"4",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"5",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"6",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"7",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"8",
-     "name":"",
-     "cate_id":""
-    },
-    {"id":"9",
-     "name":"",
-     "cate_id":""
-    }
+    {"id":"1", "name":"electronics", "parent_id":null},
+
+    {"id":"2", "name":"laptops", "parent_id":"1"},
+
+    {"id":"3", "name":"acer", "parent_id":"2"},
+
+    {"id":"4", "name":"asus", "parent_id":"2"},
+
+    {"id":"5", "name":"auusda", "parent_id":"2"},
+
+    {"id":"6", "name":"dell", "parent_id":"2"},
+
+    {"id":"7", "name":"hp", "parent_id":"2"},
+
+    {"id":"8", "name":"lenovo", "parent_id":"2"},
+
+    {"id":"9", "name":"blenders", "parent_id":"1"},
+
+    {"id":"10", "name":"boilers and heaters", "parent_id":"1"},
+
+    {"id":"11", "name":"heater", "parent_id":"10"},
+
+    {"id":"12", "name":"kettle", "parent_id":"10"},
+
+    {"id":"13", "name":"steam iron", "parent_id":"10"},
+
+    {"id":"14", "name":"camera", "parent_id":"1"},
+
+    {"id":"15", "name":"fans and air conditions", "parent_id":"1"},
+
+    {"id":"16", "name":"fridges and washing machines", "parent_id":"1"},
+
+    {"id":"17", "name":"pc accessories", "parent_id":"1"},
+
+    {"id":"18", "name":"adapter", "parent_id":"17"},
+
+    {"id":"19", "name":"cooler", "parent_id":"17"},
+
+    {"id":"20", "name":"", "parent_id":""},
+
+    {"id":"21", "name":"", "parent_id":""},
+
+    {"id":"22", "name":"", "parent_id":""},
+
+    {"id":"23", "name":"", "parent_id":""},
+
+    {"id":"24", "name":"", "parent_id":""},
+
+    {"id":"25", "name":"", "parent_id":""}
   ]
 }
