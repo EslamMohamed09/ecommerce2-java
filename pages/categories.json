@@ -76,22 +76,34 @@
 
     {"id":"38", "name":"radios & dab", "parent_id":"34"},
 
-    {"id":"39", "name":"", "parent_id":""},
+    {"id":"39", "name":"headphone, earbuds & accessories", "parent_id":"35"},
 
-    {"id":"40", "name":"", "parent_id":""},
+    {"id":"40", "name":"mp3 player accessories", "parent_id":"35"},
 
-    {"id":"41", "name":"", "parent_id":""},
+    {"id":"41", "name":"portable speakers and docks", "parent_id":"35"},
 
-    {"id":"42", "name":"", "parent_id":""},
+    {"id":"42", "name":"headphone adapters", "parent_id":"39"},
 
-    {"id":"43", "name":"", "parent_id":""},
+    {"id":"43", "name":"headphone cases", "parent_id":"39"},
 
-    {"id":"44", "name":"", "parent_id":""},
+    {"id":"44", "name":"headphones & earbuds", "parent_id":"39"},
 
-    {"id":"45", "name":"", "parent_id":""},
+    {"id":"45", "name":"headphone stands", "parent_id":"39"},
 
-    {"id":"46", "name":"", "parent_id":""},
+    {"id":"46", "name":"earbuds", "parent_id":"44"},
 
-    {"id":"47", "name":"", "parent_id":""}
+    {"id":"47", "name":"In-Ear Headphones", "parent_id":"44"},
+
+    {"id":"48", "name":"On-Ear Headphones", "parent_id":"44"},
+
+    {"id":"49", "name":"Over-Ear Headphones", "parent_id":"44"},
+
+    {"id":"50", "name":"amfm radios", "parent_id":"38"},
+
+    {"id":"51", "name":"shortwave radios", "parent_id":"38"},
+
+    {"id":"52", "name":"", "parent_id":""},
+
+    {"id":"53", "name":"", "parent_id":""}
   ]
 }
