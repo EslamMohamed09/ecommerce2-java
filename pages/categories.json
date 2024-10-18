@@ -150,7 +150,7 @@
 
     {"id":"75", "name":"walking", "parent_id":"69"},
 
-    {"id":"76", "name":"roadrunning", "parent_id":"72"},
+    {"id":"76", "name":"road running", "parent_id":"72"},
 
     {"id":"77", "name":"basketball", "parent_id":"74"},
 
@@ -162,7 +162,7 @@
 
     {"id":"81", "name":"flats", "parent_id":"71"},
 
-    {"id":"82", "name":"flip flops", "parent_id":"71"},
+    {"id":"82", "name":"flip-flops", "parent_id":"71"},
 
     {"id":"83", "name":"platforms & wedges", "parent_id":"71"},
 
