@@ -38,16 +38,60 @@
 
     {"id":"19", "name":"cooler", "parent_id":"17"},
 
-    {"id":"20", "name":"", "parent_id":""},
+    {"id":"20", "name":"pc components", "parent_id":"1"},
 
-    {"id":"21", "name":"", "parent_id":""},
+    {"id":"21", "name":"case", "parent_id":"20"},
 
-    {"id":"22", "name":"", "parent_id":""},
+    {"id":"22", "name":"hard", "parent_id":"20"},
 
-    {"id":"23", "name":"", "parent_id":""},
+    {"id":"23", "name":"motherboard", "parent_id":"20"},
 
-    {"id":"24", "name":"", "parent_id":""},
+    {"id":"24", "name":"printer", "parent_id":"20"},
 
-    {"id":"25", "name":"", "parent_id":""}
+    {"id":"25", "name":"ram memory", "parent_id":"20"},
+
+    {"id":"26", "name":"vga card", "parent_id":"20"},
+
+    {"id":"27", "name":"phones", "parent_id":"1"},
+
+    {"id":"28", "name":"televisions", "parent_id":"1"},
+
+    {"id":"29", "name":"vacuum cleaner", "parent_id":"1"},
+
+    {"id":"30", "name":"watches", "parent_id":"1"},
+
+    {"id":"31", "name":"iphone", "parent_id":"27"},
+
+    {"id":"32", "name":"oppo", "parent_id":"27"},
+
+    {"id":"33", "name":"samsung", "parent_id":"27"},
+
+    {"id":"34", "name":"portable sound & vision", "parent_id":"1"},
+
+    {"id":"35", "name":"accessories", "parent_id":"34"},
+
+    {"id":"36", "name":"mp3 & digital media players", "parent_id":"34"},
+
+    {"id":"37", "name":"personal casset players", "parent_id":"34"},
+
+    {"id":"38", "name":"radios & dab", "parent_id":"34"},
+
+    {"id":"39", "name":"", "parent_id":""},
+
+    {"id":"40", "name":"", "parent_id":""},
+
+    {"id":"41", "name":"", "parent_id":""},
+
+    {"id":"42", "name":"", "parent_id":""},
+
+    {"id":"43", "name":"", "parent_id":""},
+
+    {"id":"44", "name":"", "parent_id":""},
+
+    {"id":"45", "name":"", "parent_id":""},
+
+    {"id":"46", "name":"", "parent_id":""},
+
+    {"id":"47", "name":"", "parent_id":""}
   ]
 }
