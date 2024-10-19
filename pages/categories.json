@@ -1,171 +1,171 @@
 {
   "categories": [
-    {"id":"1", "name":"electronics", "parent_id":null},
+    {"id":"1", "name":"electronics", "parentId":null},
 
-    {"id":"2", "name":"laptops", "parent_id":"1"},
+    {"id":"2", "name":"laptops", "parentId":"1"},
 
-    {"id":"3", "name":"acer", "parent_id":"2"},
+    {"id":"3", "name":"acer", "parentId":"2"},
 
-    {"id":"4", "name":"asus", "parent_id":"2"},
+    {"id":"4", "name":"asus", "parentId":"2"},
 
-    {"id":"5", "name":"auusda", "parent_id":"2"},
+    {"id":"5", "name":"auusda", "parentId":"2"},
 
-    {"id":"6", "name":"dell", "parent_id":"2"},
+    {"id":"6", "name":"dell", "parentId":"2"},
 
-    {"id":"7", "name":"hp", "parent_id":"2"},
+    {"id":"7", "name":"hp", "parentId":"2"},
 
-    {"id":"8", "name":"lenovo", "parent_id":"2"},
+    {"id":"8", "name":"lenovo", "parentId":"2"},
 
-    {"id":"9", "name":"blender", "parent_id":"1"},
+    {"id":"9", "name":"blender", "parentId":"1"},
 
-    {"id":"10", "name":"boilers & heaters", "parent_id":"1"},
+    {"id":"10", "name":"boilers & heaters", "parentId":"1"},
 
-    {"id":"11", "name":"heater", "parent_id":"10"},
+    {"id":"11", "name":"heater", "parentId":"10"},
 
-    {"id":"12", "name":"kettle", "parent_id":"10"},
+    {"id":"12", "name":"kettle", "parentId":"10"},
 
-    {"id":"13", "name":"steam iron", "parent_id":"10"},
+    {"id":"13", "name":"steam iron", "parentId":"10"},
 
-    {"id":"14", "name":"camera", "parent_id":"1"},
+    {"id":"14", "name":"camera", "parentId":"1"},
 
-    {"id":"15", "name":"fans & air conditions", "parent_id":"1"},
+    {"id":"15", "name":"fans & air conditions", "parentId":"1"},
 
-    {"id":"16", "name":"fridges & washing machines", "parent_id":"1"},
+    {"id":"16", "name":"fridges & washing machines", "parentId":"1"},
 
-    {"id":"17", "name":"pc accessories", "parent_id":"1"},
+    {"id":"17", "name":"pc accessories", "parentId":"1"},
 
-    {"id":"18", "name":"adapter", "parent_id":"17"},
+    {"id":"18", "name":"adapter", "parentId":"17"},
 
-    {"id":"19", "name":"cooler", "parent_id":"17"},
+    {"id":"19", "name":"cooler", "parentId":"17"},
 
-    {"id":"20", "name":"pc components", "parent_id":"1"},
+    {"id":"20", "name":"pc components", "parentId":"1"},
 
-    {"id":"21", "name":"case", "parent_id":"20"},
+    {"id":"21", "name":"case", "parentId":"20"},
 
-    {"id":"22", "name":"hard", "parent_id":"20"},
+    {"id":"22", "name":"hard", "parentId":"20"},
 
-    {"id":"23", "name":"motherboard", "parent_id":"20"},
+    {"id":"23", "name":"motherboard", "parentId":"20"},
 
-    {"id":"24", "name":"printer", "parent_id":"20"},
+    {"id":"24", "name":"printer", "parentId":"20"},
 
-    {"id":"25", "name":"ram memory", "parent_id":"20"},
+    {"id":"25", "name":"ram memory", "parentId":"20"},
 
-    {"id":"26", "name":"vga card", "parent_id":"20"},
+    {"id":"26", "name":"vga card", "parentId":"20"},
 
-    {"id":"27", "name":"phones", "parent_id":"1"},
+    {"id":"27", "name":"phones", "parentId":"1"},
 
-    {"id":"28", "name":"television", "parent_id":"1"},
+    {"id":"28", "name":"television", "parentId":"1"},
 
-    {"id":"29", "name":"vacuum cleaner", "parent_id":"1"},
+    {"id":"29", "name":"vacuum cleaner", "parentId":"1"},
 
-    {"id":"30", "name":"watches", "parent_id":"1"},
+    {"id":"30", "name":"watches", "parentId":"1"},
 
-    {"id":"31", "name":"iphone", "parent_id":"27"},
+    {"id":"31", "name":"iphone", "parentId":"27"},
 
-    {"id":"32", "name":"oppo", "parent_id":"27"},
+    {"id":"32", "name":"oppo", "parentId":"27"},
 
-    {"id":"33", "name":"samsung", "parent_id":"27"},
+    {"id":"33", "name":"samsung", "parentId":"27"},
 
-    {"id":"34", "name":"portable sound & vision", "parent_id":"1"},
+    {"id":"34", "name":"portable sound & vision", "parentId":"1"},
 
-    {"id":"35", "name":"accessories", "parent_id":"34"},
+    {"id":"35", "name":"accessories", "parentId":"34"},
 
-    {"id":"36", "name":"mp3 & digital media players", "parent_id":"34"},
+    {"id":"36", "name":"mp3 & digital media players", "parentId":"34"},
 
-    {"id":"37", "name":"personal casset players", "parent_id":"34"},
+    {"id":"37", "name":"personal casset players", "parentId":"34"},
 
-    {"id":"38", "name":"radios & dab", "parent_id":"34"},
+    {"id":"38", "name":"radios & dab", "parentId":"34"},
 
-    {"id":"39", "name":"headphone, earbuds & accessories", "parent_id":"35"},
+    {"id":"39", "name":"headphone, earbuds & accessories", "parentId":"35"},
 
-    {"id":"40", "name":"mp3 player accessories", "parent_id":"35"},
+    {"id":"40", "name":"mp3 player accessories", "parentId":"35"},
 
-    {"id":"41", "name":"portable speakers & docks", "parent_id":"35"},
+    {"id":"41", "name":"portable speakers & docks", "parentId":"35"},
 
-    {"id":"42", "name":"headphone adapters", "parent_id":"39"},
+    {"id":"42", "name":"headphone adapters", "parentId":"39"},
 
-    {"id":"43", "name":"headphone cases", "parent_id":"39"},
+    {"id":"43", "name":"headphone cases", "parentId":"39"},
 
-    {"id":"44", "name":"headphones & earbuds", "parent_id":"39"},
+    {"id":"44", "name":"headphones & earbuds", "parentId":"39"},
 
-    {"id":"45", "name":"headphone stands", "parent_id":"39"},
+    {"id":"45", "name":"headphone stands", "parentId":"39"},
 
-    {"id":"46", "name":"earbuds", "parent_id":"44"},
+    {"id":"46", "name":"earbuds", "parentId":"44"},
 
-    {"id":"47", "name":"In-Ear Headphones", "parent_id":"44"},
+    {"id":"47", "name":"In-Ear Headphones", "parentId":"44"},
 
-    {"id":"48", "name":"On-Ear Headphones", "parent_id":"44"},
+    {"id":"48", "name":"On-Ear Headphones", "parentId":"44"},
 
-    {"id":"49", "name":"Over-Ear Headphones", "parent_id":"44"},
+    {"id":"49", "name":"Over-Ear Headphones", "parentId":"44"},
 
-    {"id":"50", "name":"am fm radios", "parent_id":"38"},
+    {"id":"50", "name":"am fm radios", "parentId":"38"},
 
-    {"id":"51", "name":"shortwave radios", "parent_id":"38"},
+    {"id":"51", "name":"shortwave radios", "parentId":"38"},
 
-    {"id":"52", "name":"household appliances", "parent_id":null},
+    {"id":"52", "name":"household appliances", "parentId":null},
 
-    {"id":"53", "name":"kitchen", "parent_id":"52"},
+    {"id":"53", "name":"kitchen", "parentId":"52"},
 
-    {"id":"54", "name":"cooker", "parent_id":"53"},
+    {"id":"54", "name":"cooker", "parentId":"53"},
 
-    {"id":"55", "name":"dish", "parent_id":"53"},
+    {"id":"55", "name":"dish", "parentId":"53"},
 
-    {"id":"56", "name":"drying dish", "parent_id":"53"},
+    {"id":"56", "name":"drying dish", "parentId":"53"},
 
-    {"id":"57", "name":"fryer", "parent_id":"53"},
+    {"id":"57", "name":"fryer", "parentId":"53"},
 
-    {"id":"58", "name":"glass milk", "parent_id":"53"},
+    {"id":"58", "name":"glass milk", "parentId":"53"},
 
-    {"id":"59", "name":"knife", "parent_id":"53"},
+    {"id":"59", "name":"knife", "parentId":"53"},
 
-    {"id":"60", "name":"microwave", "parent_id":"53"},
+    {"id":"60", "name":"microwave", "parentId":"53"},
 
-    {"id":"61", "name":"milkpot", "parent_id":"53"},
+    {"id":"61", "name":"milkpot", "parentId":"53"},
 
-    {"id":"62", "name":"pot", "parent_id":"53"},
+    {"id":"62", "name":"pot", "parentId":"53"},
 
-    {"id":"63", "name":"spoons", "parent_id":"53"},
+    {"id":"63", "name":"spoons", "parentId":"53"},
 
-    {"id":"64", "name":"clothes", "parent_id":null},
+    {"id":"64", "name":"clothes", "parentId":null},
 
-    {"id":"65", "name":"men clothes", "parent_id":"64"},
+    {"id":"65", "name":"men clothes", "parentId":"64"},
 
-    {"id":"66", "name":"women clothes", "parent_id":"64"},
+    {"id":"66", "name":"women clothes", "parentId":"64"},
 
-    {"id":"67", "name":"sweatshirt", "parent_id":"65"},
+    {"id":"67", "name":"sweatshirt", "parentId":"65"},
 
-    {"id":"68", "name":"shoes", "parent_id":"66"},
+    {"id":"68", "name":"shoes", "parentId":"66"},
 
-    {"id":"69", "name":"athletic", "parent_id":"68"},
+    {"id":"69", "name":"athletic", "parentId":"68"},
 
-    {"id":"70", "name":"boat", "parent_id":"68"},
+    {"id":"70", "name":"boat", "parentId":"68"},
 
-    {"id":"71", "name":"sandal", "parent_id":"68"},
+    {"id":"71", "name":"sandal", "parentId":"68"},
 
-    {"id":"72", "name":"running", "parent_id":"69"},
+    {"id":"72", "name":"running", "parentId":"69"},
 
-    {"id":"73", "name":"sport sandals & slides", "parent_id":"69"},
+    {"id":"73", "name":"sport sandals & slides", "parentId":"69"},
 
-    {"id":"74", "name":"team sports", "parent_id":"69"},
+    {"id":"74", "name":"team sports", "parentId":"69"},
 
-    {"id":"75", "name":"walking", "parent_id":"69"},
+    {"id":"75", "name":"walking", "parentId":"69"},
 
-    {"id":"76", "name":"road running", "parent_id":"72"},
+    {"id":"76", "name":"road running", "parentId":"72"},
 
-    {"id":"77", "name":"basketball", "parent_id":"74"},
+    {"id":"77", "name":"basketball", "parentId":"74"},
 
-    {"id":"78", "name":"field hockey & lacrosse", "parent_id":"74"},
+    {"id":"78", "name":"field hockey & lacrosse", "parentId":"74"},
 
-    {"id":"79", "name":"soccer", "parent_id":"74"},
+    {"id":"79", "name":"soccer", "parentId":"74"},
 
-    {"id":"80", "name":"softball & baseball", "parent_id":"74"},
+    {"id":"80", "name":"softball & baseball", "parentId":"74"},
 
-    {"id":"81", "name":"flats", "parent_id":"71"},
+    {"id":"81", "name":"flats", "parentId":"71"},
 
-    {"id":"82", "name":"flip-flops", "parent_id":"71"},
+    {"id":"82", "name":"flip-flops", "parentId":"71"},
 
-    {"id":"83", "name":"platforms & wedges", "parent_id":"71"},
+    {"id":"83", "name":"platforms & wedges", "parentId":"71"},
 
-    {"id":"84", "name":"slides", "parent_id":"71"}
+    {"id":"84", "name":"slides", "parentId":"71"}
   ]
 }

@@ -447,7 +447,7 @@ if(document.getElementById('quick-view-modal')){
     }
   });
   
-  }  
+}  
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
@@ -763,7 +763,65 @@ if(document.querySelector("#single-page")){
  ###########################
 */
 if(document.querySelector("#category-page")){
-   const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
+
+  async function loadCategories(){
+    const response = await fetch('/pages/categories.json');
+    if (!response.ok) {throw new Error('Failed to load categories');}
+    const data = await response.json();
+    return data.categories;
+  }
+
+  function getParentCategories(categoryId, categories, parentCategories = []){
+    const category = categories.find(cat => cat.id === categoryId);
+
+    if(category){
+       parentCategories.unshift(category);
+
+       if(category.parentId){
+          return getParentCategories(category.parentId, categories, parentCategories);
+       }
+    }
+
+    return parentCategories;
+  }
+
+  function buildCategoryList(categories){
+    const totalCategories = categories.length;
+    return categories.map((category, index) => {
+      if(index < totalCategories - 1){
+         return `<li class="childs-catlist"><a href="${category.id}" class="childs-catlink categorylink">${category.name}</a></li>`;
+      } else {
+        return `<li class="catlist thiscat">${category.name}</li>`;
+      }
+
+    }).join('');
+  }
+
+  async function displayParentCategories(){
+
+    try {
+      // Directly extract the category ID from the URL inside this function
+      const params = new URLSearchParams(window.location.search);
+      const currentCategoryId = params.get('id');  // Get ID from URL
+  
+      if (!currentCategoryId) {
+        console.error('No category ID found in URL');
+        return;
+      }
+  
+      const categories = await loadCategories();  // Load categories from JSON
+      const parentCategories = getParentCategories(currentCategoryId, categories);
+      const categoryListHTML = buildCategoryList(parentCategories);
+  
+      document.querySelector('#category-page .filter-col .parent-categories-block .catmenu').innerHTML = categoryListHTML;
+    } catch (error) {
+      console.error('Error loading categories:', error);
+    }
+  }
+
+  displayParentCategories();
+
+  const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
 
   categoryItems.forEach(function(categoryItem) {
     const catItemFooter = categoryItem.querySelector("#category-page .category-page-container .category-item .cat-item-footer");
@@ -1077,5 +1135,4 @@ if(document.querySelector(".checkout-page") || document.querySelector(".payment-
 */
 if(document.querySelector(".payment-section")){
    const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
-
 }

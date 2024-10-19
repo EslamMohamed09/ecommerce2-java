@@ -2271,7 +2271,7 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
         li {padding:0.7rem 1rem 0.3rem 0;
             background-color:var(--white);}
 
-        li:not(:last-child) {border-bottom:1px solid var(--gray8);}
+        li:not(:last-child) {border-bottom:1px solid var(--gray4);}
 
         li.thiscat {justify-content:space-between;
                     font-size:1.1rem;
@@ -2284,18 +2284,18 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
         li .fa-angle-right {margin:0;
                             font-size:1rem;}
 
-        .thiscat.press-thiscat {border-bottom:1px solid var(--gray8) !important;
+        .thiscat.press-thiscat {border-bottom:1px solid var(--gray4) !important;
                                 border-bottom-left-radius:0;
                                 border-bottom-right-radius:0;}
 
         li .categorylink {font-size:1.2rem;
                           font-weight:bold;
-                          color:var(--gray2);}
+                          color:var(--gray10);}
 
-        .childs-catlist {opacity:0;
-                         visibility:hidden;
-                         transform:translateY(-5rem);
-                         z-index:-1;}
+        // .childs-catlist {opacity:0;
+        //                  visibility:hidden;
+        //                  transform:translateY(-5rem);
+        //                  z-index:-1;}
 
         .childs-catlist.appear-childCatList {opacity:1;
                                              visibility:visible;
