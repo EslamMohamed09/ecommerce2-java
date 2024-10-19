@@ -2609,19 +2609,17 @@ footer .bottom-footer p {
 }
 #category-page .category-page-container .filter-col .categories-block h4 {
   text-transform: uppercase;
-  background-color: var(--light-yellow10);
+  background-color: var(--yellow10);
 }
-#category-page .category-page-container .filter-col .categories-block h4 ul li {
+#category-page .category-page-container .filter-col .categories-block ul li {
   padding: 0.7rem;
 }
-#category-page .category-page-container .filter-col .categories-block h4 ul li:not(:last-child) {
-  border-bottom: 1px solid var(--gray8);
+#category-page .category-page-container .filter-col .categories-block ul li:not(:last-child) {
+  border-bottom: 1px solid var(--gray4);
 }
-#category-page .category-page-container .filter-col .categories-block h4 li .cat-title {
-  color: var(--gray2);
-}
-#category-page .category-page-container .filter-col .categories-block h4 li .cat-title {
-  font-size: 1.2rem;
+#category-page .category-page-container .filter-col .categories-block li .cat-title {
+  color: var(--gray9);
+  font-size: 1.1rem;
 }
 #category-page .category-page-container .filter-col .parent-categories-block {
   box-shadow: none;
