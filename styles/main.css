@@ -2488,15 +2488,6 @@ footer .bottom-footer p {
 ****************/
 #category-page {
   padding: 2rem 2% 0;
-  /* left-col */
-  /* block */
-  /* categories-block */
-  /** parent-categories-block **/
-  /** price-block **/
-  /*** right-col ***/
-  /* category-items */
-  /* this-category-products */
-  /** categories-products **/
 }
 #category-page .category-information {
   width: 100%;
@@ -2516,9 +2507,17 @@ footer .bottom-footer p {
 #category-page .category-information .cat-stats {
   font-size: 1.4rem;
 }
+#category-page .category-page-container {
+  /*** left-col ***/
+  /*** right-col ***/
+}
 #category-page .category-page-container .filter-col {
   display: block;
   padding: 0 0.3rem 0 0;
+  /* block */
+  /* categories-block */
+  /** parent-categories-block **/
+  /** price-block **/
 }
 #category-page .category-page-container .filter-col .block {
   margin: 0 0 1.5rem;
@@ -2612,16 +2611,16 @@ footer .bottom-footer p {
   text-transform: uppercase;
   background-color: var(--light-yellow10);
 }
-#category-page .category-page-container .filter-col .categories-block ul li {
+#category-page .category-page-container .filter-col .categories-block h4 ul li {
   padding: 0.7rem;
 }
-#category-page .category-page-container .filter-col .categories-block ul li:not(:last-child) {
+#category-page .category-page-container .filter-col .categories-block h4 ul li:not(:last-child) {
   border-bottom: 1px solid var(--gray8);
 }
-#category-page .category-page-container .filter-col .categories-block li .cat-title {
+#category-page .category-page-container .filter-col .categories-block h4 li .cat-title {
   color: var(--gray2);
 }
-#category-page .category-page-container .filter-col .categories-block li .cat-title {
+#category-page .category-page-container .filter-col .categories-block h4 li .cat-title {
   font-size: 1.2rem;
 }
 #category-page .category-page-container .filter-col .parent-categories-block {
@@ -2700,6 +2699,9 @@ footer .bottom-footer p {
   margin: 0;
   padding: 0 0 0 0.9rem;
   background-color: transparent;
+  /* category-items */
+  /* this-category-products */
+  /** categories-products **/
 }
 #category-page .category-page-container .col-right .category-items {
   display: grid;
@@ -2852,6 +2854,7 @@ footer .bottom-footer p {
 }
 #category-page .category-page-container .col-right .categories-products .categoriesproducts1 {
   padding: 3rem 0.3rem 0;
+  margin: 1rem 0;
   border-radius: 0.5rem;
   background-color: var(--white);
   box-shadow: var(--box-shadow2);
@@ -2946,9 +2949,6 @@ footer .bottom-footer p {
   flex-wrap: nowrap;
   width: 100%;
   background-color: transparent;
-}
-#category-page .category-page-container .col-right .categories-products .categoriesproducts1 {
-  margin: 1rem 0;
 }
 
 /* categoriesproducts2 */
