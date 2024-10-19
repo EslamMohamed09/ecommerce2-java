@@ -791,7 +791,7 @@ if(document.querySelector("#category-page")){
       if(index < totalCategories - 1){
          return `<li class="childs-catlist"><a href="${category.id}" class="childs-catlink categorylink">${category.name}</a></li>`;
       } else {
-        return `<li class="catlist thiscat">${category.name}</li>`;
+        return `<li class="thiscat">${category.name}</li>`;
       }
 
     }).join('');
@@ -800,20 +800,21 @@ if(document.querySelector("#category-page")){
   async function displayParentCategories(){
 
     try {
-      // Directly extract the category ID from the URL inside this function
+    
       const params = new URLSearchParams(window.location.search);
-      const currentCategoryId = params.get('id');  // Get ID from URL
-  
+      const currentCategoryId = params.get('id');
+
       if (!currentCategoryId) {
         console.error('No category ID found in URL');
         return;
       }
-  
-      const categories = await loadCategories();  // Load categories from JSON
+
+      const categories = await loadCategories();
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const categoryListHTML = buildCategoryList(parentCategories);
-  
+
       document.querySelector('#category-page .filter-col .parent-categories-block .catmenu').innerHTML = categoryListHTML;
+
     } catch (error) {
       console.error('Error loading categories:', error);
     }
