@@ -762,7 +762,7 @@ if(document.querySelector("#single-page")){
  ###### CATEGORY PAGE ######
  ###########################
 */
-if(document.querySelectorAll("#category-page")){
+if(document.querySelector("#category-page")){
    const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
 
   categoryItems.forEach(function(categoryItem) {
