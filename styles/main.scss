@@ -1202,14 +1202,14 @@ header {position:fixed;
                 flex:1 1 25rem;
                 height:12rem;
                 gap:1rem;
-                padding:2%;
+                padding:2% 1.5%;
                 background-color:var(--blue);
 
         .content {padding:0;
-                  width:60%;
+                  width:70%;
                   
-          h3 {font-size:1.2rem;
-              font-weight:1000;
+          h3 {font-size:1.1rem;
+              font-weight:900;
               color:var(--gray11);}
   
           p {font-size:1.1rem;
@@ -1221,10 +1221,9 @@ header {position:fixed;
                  font-weight:bold;
                  padding:0.5rem 1rem;}
         }
-        .image {width:40%;
-           img {width:10rem;
-                height:10rem;
-                object-fit:contain;}
+        .image {width:30%;
+           img {width:100%;
+                height:100%;}
         }
     }
   }
@@ -2356,7 +2355,7 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
                   height:11rem;
                   border-radius:50%;
                   margin:0 auto 1rem;
-                  background-color:var(--gray4);}
+                  background-color:var(--gray3);}
 
           .image img {width:65%;
                       height:65%;
