@@ -854,7 +854,7 @@ if(document.querySelector("#category-page")){
 
     if(childsCatList.length > 0){
        for (let j=0; j<childsCatList.length; j++) {
-            childsCatList[j].style.paddingLeft = (parseFloat(lastCatListPaddingLeft) + 9) + "px";
+            childsCatList[j].style.paddingLeft = (parseFloat(lastCatListPaddingLeft) + 8) + "px";
        }
     }
   }

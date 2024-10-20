@@ -2212,7 +2212,7 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
 
           li a {font-weight:bold;
                 color:var(--gray9);
-                font-size:1.1rem;}
+                font-size:1rem;}
 
           li input[type="checkbox"] {width:0;
                                      height:0;
@@ -2274,9 +2274,7 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
         li:not(:last-child) {border-bottom:1px solid var(--gray4);}
 
         li.thiscat {justify-content:space-between;
-                    font-size:1.1rem;
                     font-weight:bold;
-                    color:var(--gray8);
                     border-bottom-left-radius:0.5rem;
                     border-bottom-right-radius:0.5rem;}
 

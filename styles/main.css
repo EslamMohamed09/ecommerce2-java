@@ -2563,7 +2563,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .filter-col .block ul li a {
   font-weight: bold;
   color: var(--gray9);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 #category-page .category-page-container .filter-col .block ul li input[type=checkbox] {
   width: 0;
@@ -2632,9 +2632,7 @@ footer .bottom-footer p {
 }
 #category-page .category-page-container .filter-col .parent-categories-block li.thiscat {
   justify-content: space-between;
-  font-size: 1.1rem;
   font-weight: bold;
-  color: var(--gray8);
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
