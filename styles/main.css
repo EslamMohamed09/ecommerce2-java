@@ -2676,7 +2676,7 @@ footer .bottom-footer p {
 #category-page .category-page-container .col-right .category-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 #category-page .category-page-container .col-right .category-items .category-item {
@@ -2697,8 +2697,8 @@ footer .bottom-footer p {
   background-color: var(--gray3);
 }
 #category-page .category-page-container .col-right .category-items .category-item .image img {
-  width: 65%;
-  height: 65%;
+  width: 69%;
+  height: 69%;
   text-align: center;
   border-radius: 50%;
   transition: all 0.3s linear;

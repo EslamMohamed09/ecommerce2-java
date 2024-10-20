@@ -812,7 +812,7 @@ if(document.querySelector("#category-page")){
 
   }
 
-  async function displayParentCategories(){
+  async function displayParentAndChildCategories(){
 
     try {
     
@@ -859,7 +859,41 @@ if(document.querySelector("#category-page")){
     }
   }
 
-  displayParentCategories();
+  displayParentAndChildCategories();
+
+  async function buildCategoryList2(){
+
+    const params = new URLSearchParams(window.location.search);
+    const currentCategoryId = params.get('id');
+
+    const categories = await loadCategories();
+
+    const childCategories = getChildCategories(currentCategoryId, categories)
+
+    let childCategoriesHtml = childCategories.map((childCategory, index) => {
+       return `<div class="category-item">
+                 <a href="category.html?id=${childCategory.id}">
+                   <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
+                   <h4>${childCategory.name}</h4>
+                 </a>
+               </div>`
+    }).join('');
+
+    return childCategoriesHtml;
+  }
+
+  async function displayCategoryItems() {
+    const categoryItemsContainer = document.querySelector("#category-page .col-right .category-items");
+  
+    const childCategoriesHtml = await buildCategoryList2();
+  
+    categoryItemsContainer.innerHTML = childCategoriesHtml;
+  }
+  
+  displayCategoryItems();
+
+
+  
 
   const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
 

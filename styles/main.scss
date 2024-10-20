@@ -2319,7 +2319,7 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
       /* category-items */
       .category-items {display:grid;
                        grid-template-columns:repeat(auto-fill,minmax(170px, 1fr));
-                       gap:1rem;
+                       gap:2rem;
                        margin-bottom:2rem;
 
         .category-item {width:100%;
@@ -2335,13 +2335,14 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
                   height:11rem;
                   border-radius:50%;
                   margin:0 auto 1rem;
-                  background-color:var(--gray3);}
+                  background-color:var(--gray3);
 
-          .image img {width:65%;
-                      height:65%;
-                      text-align:center;
-                      border-radius:50%;
-                      transition:all 0.3s linear;}
+            img {width:69%;
+                 height:69%;
+                 text-align:center;
+                 border-radius:50%;
+                 transition:all 0.3s linear;}
+          }
 
           h4 {margin:1rem 0;}
 
