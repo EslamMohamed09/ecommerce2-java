@@ -785,16 +785,31 @@ if(document.querySelector("#category-page")){
     return parentCategories;
   }
 
-  function buildCategoryList(categories){
-    const totalCategories = categories.length;
-    return categories.map((category, index) => {
+  function getChildCategories(categoryId, categories) {
+    return categories.filter(cat => cat.parentId === categoryId);
+  }
+
+  function buildCategoryList(parentCategories, childCategories = []){
+    const totalCategories = parentCategories.length;
+
+    let parentCategoryHTML = parentCategories.map((parentCategory, index) => {
       if(index < totalCategories - 1){
-         return `<li class="catlist"><a href="category.html?id=${category.id}" class="catlink">${category.name}</a></li>`;
+         return `<li class="catlist"><a href="category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a></li>`;
       } else {
-        return `<li class="catlist thiscat">${category.name}</li>`;
+        return `<li class="catlist thiscat">${parentCategory.name}</li>`;
       }
 
     }).join('');
+
+    let childCategoryHTML = '';
+    if (childCategories.length > 0) {
+        childCategoryHTML = childCategories.map(childCategory => {
+          return `<li class="childs-catlist"><a href="category.html?id=${childCategory.id}" class="childs-catlink categorylink">${childCategory.name}</a></li>`;
+        }).join('');
+    }
+  
+    return parentCategoryHTML + childCategoryHTML;
+
   }
 
   async function displayParentCategories(){
@@ -810,8 +825,11 @@ if(document.querySelector("#category-page")){
       }
 
       const categories = await loadCategories();
+
       const parentCategories = getParentCategories(currentCategoryId, categories);
-      const categoryListHTML = buildCategoryList(parentCategories);
+      const childCategories = getChildCategories(currentCategoryId, categories);
+
+      const categoryListHTML = buildCategoryList(parentCategories, childCategories);
 
       document.querySelector('#category-page .filter-col .parent-categories-block .catmenu').innerHTML = categoryListHTML;
 
