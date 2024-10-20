@@ -861,6 +861,7 @@ if(document.querySelector("#category-page")){
 
   displayParentAndChildCategories();
 
+
   async function buildCategoryList2(){
 
     const params = new URLSearchParams(window.location.search);
@@ -870,12 +871,26 @@ if(document.querySelector("#category-page")){
 
     const childCategories = getChildCategories(currentCategoryId, categories)
 
-    let childCategoriesHtml = childCategories.map((childCategory, index) => {
+    let childCategoriesHtml = childCategories.map((childCategory) => {
+      
+       const childCategoryItems = getChildCategories(childCategory.id, categories);
+
+       let childFooterHtml = '';
+       if (childCategoryItems.length > 0) {
+           childFooterHtml = `
+             <div class="cat-item-footer d-flex-c-st-st">
+               ${childCategoryItems.map(childCategoryItem => `
+                 <a href="category.html?id=${childCategoryItem.id}" class="category-btn">${childCategoryItem.name}</a>
+               `).join('')}
+             </div>`;
+       }
+
        return `<div class="category-item">
                  <a href="category.html?id=${childCategory.id}">
                    <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
                    <h4>${childCategory.name}</h4>
                  </a>
+                 ${childFooterHtml}
                </div>`
     }).join('');
 
@@ -888,6 +903,16 @@ if(document.querySelector("#category-page")){
     const childCategoriesHtml = await buildCategoryList2();
   
     categoryItemsContainer.innerHTML = childCategoriesHtml;
+
+    const categoryItems = document.querySelectorAll('#category-page .col-right .category-item');
+
+    categoryItems.forEach(function(categoryItem) {
+      const catItemFooter = categoryItem.querySelector('#category-page .col-right .category-item .cat-item-footer');
+
+      if(catItemFooter && catItemFooter.children.length > 0) {
+         categoryItem.classList.add('has-childs-category');
+      }
+    });
   }
   
   displayCategoryItems();
