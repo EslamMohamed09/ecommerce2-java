@@ -2277,17 +2277,12 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
                     font-size:1.1rem;
                     font-weight:bold;
                     color:var(--gray8);
-                    border-bottom:0 !important;
                     border-bottom-left-radius:0.5rem;
                     border-bottom-right-radius:0.5rem;}
 
-        li .fa-angle-right {margin:0;
-                            font-size:1rem;}
+        li .fa-angle-down {margin:0;
+                           font-size:1rem;}
 
-
-        li .categorylink {font-size:1.2rem;
-                          font-weight:bold;
-                          color:var(--gray10);}
       }
 
       /** price-block **/

@@ -2635,18 +2635,12 @@ footer .bottom-footer p {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--gray8);
-  border-bottom: 0 !important;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-#category-page .category-page-container .filter-col .parent-categories-block li .fa-angle-right {
+#category-page .category-page-container .filter-col .parent-categories-block li .fa-angle-down {
   margin: 0;
   font-size: 1rem;
-}
-#category-page .category-page-container .filter-col .parent-categories-block li .categorylink {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--gray10);
 }
 #category-page .category-page-container .filter-col .price-block h4 {
   color: var(--white);
