@@ -918,19 +918,6 @@ if(document.querySelector("#category-page")){
   displayCategoryItems();
 
 
-  
-
-  const categoryItems = document.querySelectorAll("#category-page .category-page-container .category-item");
-
-  categoryItems.forEach(function(categoryItem) {
-    const catItemFooter = categoryItem.querySelector("#category-page .category-page-container .category-item .cat-item-footer");
-  
-    if(catItemFooter && catItemFooter.children.length > 0) {
-       categoryItem.classList.add('has-childs-category');
-    }
-  
-  });
-
   $('#category-page .category-page-container .col-right .categories-products .categoriesproducts1').owlCarousel({
     loop:true,
     autoplay:true,
