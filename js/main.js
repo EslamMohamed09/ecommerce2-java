@@ -789,9 +789,9 @@ if(document.querySelector("#category-page")){
     const totalCategories = categories.length;
     return categories.map((category, index) => {
       if(index < totalCategories - 1){
-         return `<li class="childs-catlist"><a href="${category.id}" class="childs-catlink categorylink">${category.name}</a></li>`;
+         return `<li class="catlist"><a href="category.html?id=${category.id}" class="catlink">${category.name}</a></li>`;
       } else {
-        return `<li class="thiscat">${category.name}</li>`;
+        return `<li class="catlist thiscat">${category.name}</li>`;
       }
 
     }).join('');
@@ -817,6 +817,11 @@ if(document.querySelector("#category-page")){
 
     } catch (error) {
       console.error('Error loading categories:', error);
+    }
+
+    const catlist = document.querySelectorAll("#category-page .filter-col .parent-categories-block .catlist");
+    for(let i=0; i < catlist.length; i++){
+        catlist[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
     }
   }
 

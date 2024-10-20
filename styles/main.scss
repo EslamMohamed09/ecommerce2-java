@@ -2264,9 +2264,9 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
       }
 
       /** parent-categories-block **/
-      .parent-categories-block {box-shadow:none;
+      .parent-categories-block {box-shadow:var(--box-shadow2);
                                 background-color:transparent;
-                                border-radius:0;
+                                border-radius:0.5rem;
 
         li {padding:0.7rem 1rem 0.3rem 0;
             background-color:var(--white);}
@@ -2284,23 +2284,10 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
         li .fa-angle-right {margin:0;
                             font-size:1rem;}
 
-        .thiscat.press-thiscat {border-bottom:1px solid var(--gray7) !important;
-                                border-bottom-left-radius:0;
-                                border-bottom-right-radius:0;}
 
         li .categorylink {font-size:1.2rem;
                           font-weight:bold;
                           color:var(--gray10);}
-
-        // .childs-catlist {opacity:0;
-        //                  visibility:hidden;
-        //                  transform:translateY(-5rem);
-        //                  z-index:-1;}
-
-        .childs-catlist.appear-childCatList {opacity:1;
-                                             visibility:visible;
-                                             transform:translateY(0);
-                                             z-index:1;}
       }
 
       /** price-block **/
