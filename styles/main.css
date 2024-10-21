@@ -2824,6 +2824,109 @@ footer .bottom-footer p {
 #category-page .category-page-container .col-right .this-category-products .products-area .product-item .content .add-btn {
   background-color: transparent;
 }
+#category-page .category-page-container .col-right .products2-section .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item {
+  display: block;
+  padding: 1rem 0.2rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .image {
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  background-color: var(--gray);
+  border-bottom: 1px solid var(--gray3);
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .image img {
+  width: 80%;
+  height: 55%;
+  object-fit: contain;
+  transition: all 0.7s linear;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .image img:last-child:not(:only-child) {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .image:hover img:first-child {
+  visibility: hidden;
+  opacity: 0;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .image:hover img:last-child {
+  visibility: visible;
+  opacity: 1;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .icons {
+  width: 3rem;
+  height: 5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 0.5rem;
+  background-color: transparent;
+  transition: all 0.3s linear;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .icons button {
+  background-color: transparent;
+  border: none;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .icons button #icon {
+  font-size: 1.2rem;
+  color: var(--gray12);
+  background: transparent;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .icons button .fa-heart:hover {
+  color: var(--orange-red2) !important;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content {
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0 0.2rem;
+  text-align: center;
+  position: relative;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content .product-name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1rem;
+  color: var(--gray11);
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content p {
+  color: var(--gray5);
+  padding: 0;
+  margin: 0;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content .ratings {
+  gap: 0.1rem;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content .ratings svg {
+  color: var(--yellow10);
+  font-size: 1.1rem;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content .product-price {
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content .product-price .oldprice {
+  color: var(--gray7);
+  text-decoration: line-through !important;
+}
+#category-page .category-page-container .col-right .products2-section .products-container .product-item .content .product-price .price {
+  color: var(--orange-red2);
+}
 #category-page .category-page-container .col-right .categories-products {
   display: block;
 }
