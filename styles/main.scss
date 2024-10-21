@@ -2346,12 +2346,13 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
 
           h4 {margin:1rem 0;}
 
-          .cat-item-footer {height:fit-content;
+          .cat-item-footer {max-height:8rem;
+                            overflow-y:scroll;
                             width:100%;
                             gap:0.5rem;
                             padding:0 0 0 20%;
                             text-align:left;
-                            transform:translateY(4rem);
+                            transform:translateY(1.5rem);
                             opacity:0;
                             visibility:hidden;
                             transition:all 0.3s linear;
@@ -2359,9 +2360,12 @@ footer {background:linear-gradient(to top, var(--olive24), var(--olive23) 50%, v
               .category-btn {margin:0;
                              width:fit-content;
                              text-align:left;
-                             font-size:1.2rem;
+                             font-size:1rem;
+                             font-weight:bold;
                              color:var(--black2);}
           }
+
+          .cat-item-footer::-webkit-scrollbar {width:2px;}
 
         }
 

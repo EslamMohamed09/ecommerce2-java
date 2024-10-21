@@ -2707,12 +2707,13 @@ footer .bottom-footer p {
   margin: 1rem 0;
 }
 #category-page .category-page-container .col-right .category-items .category-item .cat-item-footer {
-  height: fit-content;
+  max-height: 8rem;
+  overflow-y: scroll;
   width: 100%;
   gap: 0.5rem;
   padding: 0 0 0 20%;
   text-align: left;
-  transform: translateY(4rem);
+  transform: translateY(1.5rem);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s linear;
@@ -2721,8 +2722,12 @@ footer .bottom-footer p {
   margin: 0;
   width: fit-content;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: var(--black2);
+}
+#category-page .category-page-container .col-right .category-items .category-item .cat-item-footer::-webkit-scrollbar {
+  width: 2px;
 }
 #category-page .category-page-container .col-right .category-items .category-item.has-childs-category:hover .image {
   transform: scale(0.7);
