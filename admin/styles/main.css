@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {margin:0;padding:0;
+   text-transform:capitalize;
+   box-sizing:border-box;
+   transition:all 0.3s linear;
+   font-family:'cairo', sans-serif;
+   scroll-behavior:smooth;
+   list-style:none;
+   text-decoration:none !important;}
+
+:root {--light:#f8f9fa;
+       --lightm:rgb(209, 209, 212);
+       --light1:rgb(245, 246, 253);
+       --light2:#c9d3df;
+       --light3:#acbfd4;
+       --light4:rgb(165, 120, 207);
+       --light5:rgb(152, 72, 228);
+       --light6:rgb(229, 252, 244);
+
+       --light-yellow:#fafaf6;
+       --light-yellow1:#eeeeee;
+       --light-yellow2:#e2e0db;
+       --light-yellow3:#dbd7ca;
+       --light-yellow4:#d6d0ba;
+       
+       --gray-yellow0:rgb(235, 236, 201);
+       --gray-yellow:rgb(221, 223, 150);
+       --gray-yellow1:rgb(214, 216, 125);
+       --gray-yellow2:rgb(182, 182, 97);
+       --gray-yellow3:rgb(139, 139, 62);
+       --gray-yellow4:rgb(112, 112, 49);
+       --gray-yellow5:rgb(128, 119, 0);
+       --gray-yellow6:rgb(90, 84, 0);
+        
+       --light-brown:rgb(255, 228, 109);
+       --light-brown1:rgb(255, 153, 0);
+
+       --light-orange:rgba(255, 248, 236, 0.774);
+       --light-orange1:rgb(255, 248, 236);
+       --light-orange2:rgb(252, 241, 222);
+       --light-orange4:rgb(252, 235, 204);
+       --light-orange5:rgb(255, 233, 193);
+       --light-orange6:rgb(250, 224, 177);
+       --light-orange7:rgb(247, 212, 147);
+       --light-orange8:rgb(248, 204, 123);
+       --light-orange9:rgb(247, 197, 104);
+       --light-orange10:rgb(248, 191, 85);
+       --light-orange11:rgb(185, 121, 0);
+       --light-orange12:rgb(151, 99, 1);
+
+       --light-green7:rgb(0, 189, 85);
+
+       --light-blue:#38baf9;
+       --light-blue2:rgb(0, 132, 255);
+       --light-blue3:rgb(0, 91, 175);
+       --light-blue4:rgb(0, 69, 134);
+       --light-blue5:#424b64;
+       --light-blue6:#2a2e35;
+       --darkblue:#343a40;
+
+       --gray:#8d8d8d;
+       --gray-color:#222;
+       --gray-color1:#333;
+       --gray-color2:#444;
+       --gray-color3:#666;
+       --gray-color4:#777;
+       --gray-color5:#888;
+       --gray-color6:#999;
+       --gray-color7:rgb(194, 192, 192);
+       --gray-color8:rgb(224, 222, 222);
+
+       --orangered:rgb(255, 87, 25);
+       --orangered1:rgb(255, 38, 0);
+       --orangered2:#d33505;
+       --darkbrown:rgb(88, 48, 33);
+       --darkbrown1:rgb(83, 59, 50);
+       --darkred:rgb(75, 0, 0);
+       --darkred1:rgb(99, 49, 49);
+       --white:#fff;
+       --black:#000;
+      
+       --primary-color:#ff5a3c;
+       --primary-color1:rgb(180, 56, 6);
+       --primary-color2:#fb3c7f;
+       --primary-color3:#f010f0;
+       --primary-color4:#eed0ee;
+       --primary-color5:#191e2e;
+       --primary-color6:rgb(26, 26, 44);
+       --primary-color7:#091a50;
+       --primary-color8:#072380;
+       --primary-color9:#3356ca;
+       --primary-color10:rgb(0, 54, 0);
+       --primary-color11:#1b011f;
+       --primary-color12:#4d106b;
+       --primary-color13:#106b6b;
+       --primary-color14:rgb(0, 219, 37);
+       --primary-color15:#00c7c7;
+       --primary-color16:#00658d;
+
+       --primary1:#2196f3;
+       --primary2:rgb(255, 38, 0);
+       --primary3:rgb(0, 189, 85);
+       --primary4:#ffbb55;
+       --background-color:#f8f9fa;
+       --color-info-dark:#7d8da1;
+       --color-info-light:#dce1eb;
+       --color-dark:#363949;
+       --color-light:rgba(132, 139, 200, 0.18);
+       --color-primary-varient:#111e88;
+       --color-dark-varient:#677483;
+
+       --font-mont:'Mont', cursive;
+       --font-Rale: 'Rale', cursive;
+
+       --box-shadow-varient:0 0.5rem 1.5rem var(--color-light);
+
+       --box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+       --box-shadow1:0 0.1rem 1rem rgba(2, 2, 2, 0.4);
+       --box-shadow2:0 0.5rem 1.5rem #0d2e2e23;
+       --box-shadow3:0 0.3rem 4rem #252c2c2f;
+       --box-shadow4:0 0 6px rgb(0, 0, 0);
+       --box-shadow5:0 0 3px #eee;
+       --box-shadow6:0 0.1rem 1rem rgba(196, 56, 1, 0.5);
+       --box-shadow7:0 0.5rem 2rem rgba(0, 16, 160, 0.7);
+       --box-shadow8:0 0.1rem 0.5rem rgb(90, 84, 0);
+
+       --text-shadow:0 0 5px rgb(5, 5, 5);
+       --text-shadow2:0 0 4px #fff;
+       --text-shadow3:0 0 4px rgb(6, 150, 42);}
+
+.dark-theme-variable {--background-color:#181a1e;
+                      --white:#202528;
+                      --color-info-light:#dce1eb;
+                      --color-dark:#edeffd;
+                      --color-light:rgba(0, 0, 0, 0.4);
+                      --color-dark-varient:#a3bdcc;
+                      --gray-color1:#cbe8ff;
+                      --gray-color8:rgb(224, 222, 222)}
+
+::-webkit-scrollbar {width:8px;}
+
+::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--orangered) 0%, var(--light-orange7) 100%);
+                           border-radius:10px;}
+
+*::selection {background:var(--light-orange7);
+              color:#fff;}
+
+h5 {font-size:1rem;}
+
+.form_control {background-color:var(--white);
+               border-radius:0.3rem !important;}
+
+input {padding:0.3rem 0.4rem;
+       border-radius:0.3rem;
+       border:1px solid var(--gray-color7);}
+
+input:focus,
+textarea:focus {outline:none;
+                border:1px solid var(--gray-color7);
+                box-shadow:var(--box-shadow-varient);}
+
+input[type="submit"] {background-color:var(--primary1);
+                      color:var(--color-info-light);
+                      font-size:1.2rem;
+                      text-transform:uppercase;
+                      box-shadow:var(--box-shadow-varient);
+                      border:none;
+                      padding:0.4rem 1rem;}
+
+input[type="submit"]:hover {color:var(--white);
+                            background-color:var(--light-blue);}
+
+
+img {max-width:100%;}
+
+ul {margin:0;
+    padding:0;
+    display:block;
+    list-style-type:disc;
+    margin-block-start:0;
+    margin-block-end:0;
+    margin-inline-start:0;
+    margin-inline-end:0;
+    padding-inline-start:0;}
+
+ul li {margin:0;
+       padding:0;}
+
+.primary {color:var(--primary1);}
+.warning {color:var(--primary2);}
+
+.btn {background-color:var(--light-blue2);
+      color:var(--white);
+      display:inline-block;
+      font-size:1.3rem;
+      text-transform:uppercase;
+      padding:0.2rem 0.4rem;
+      margin:0;
+      transition:all 0.3s linear;}
+
+.btn:hover {color:var(--white);
+            background-color:var(--light-blue);}
+
+.trans-btn {background:transparent;
+            color:var(--black);
+            display:inline-block;
+            font-size:0.9rem;
+            font-weight:bold;
+            text-transform:uppercase;
+            padding:0.2rem 0.5rem;
+            margin:0;
+            transition:all 0.3s linear;}
+
+.tab-btn {font-size:1rem;
+          font-weight:bold;
+          text-transform:uppercase;
+          padding:0.4rem 1rem;
+          margin:0;
+          color:var(--black);
+          background-color:var(--color-info-dark);
+          border-radius:2rem;
+          transition:all 0.3s linear;
+          cursor:pointer;}
+
+html {font-size:83%}
+
+body {overflow-x:hidden;
+      padding:0;
+      background-color:var(--background-color);}
+
+section {padding:0;
+         margin:0;}
+
+.section-heading {display:inline-block;
+                  font-size:1.8rem;
+                  font-weight:bold;
+                  padding:0;
+                  margin:1.2rem 0 2.5rem;
+                  position:relative;}
+
+.section-heading::before {content:"";
+                          height:3px;
+                          width:100%;
+                          background-color:var(--white);
+                          position:absolute;
+                          left:0;
+                          bottom:-0.6rem;}
+
+.section-heading::after {content:"";
+                         height:3px;
+                         width:30%;
+                         background-color:var(--black);
+                         position:absolute;
+                         left:0;
+                         bottom:-0.6rem;}
+
+@media (max-width:711px){
+      #dashboard-section .main-data .section-heading {text-align:center;
+                                                      font-size:1.5rem;}
+}
+
+.container-title {font-size:1.5rem;
+                  font-weight:bold;}
