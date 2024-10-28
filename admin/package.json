@@ -1,0 +1,13 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass styles/admin.scss styles/admin.css",
+    "watch-css": "sass --watch styles/admin.scss:styles/admin.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
