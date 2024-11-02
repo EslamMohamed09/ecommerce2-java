@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-height, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>profile</title>
+  <link rel="stylesheet" href="styles/all.css"> 
+  <link rel="stylesheet" href="styles/fontawesome.css">
+  <link rel="stylesheet" href="styles/solid.css">
+  <link rel="stylesheet" href="styles/brands.css">  
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<section class="dashboard-section" id="dashboard-section"> <!-- MANAGE PROFILE -->
+
+  <aside id="aside"></aside>
+
+  <div class="main-data main-profile-page">
+
+    <h1 class="section-heading">profile</h1>
+
+    <div class="profile-data row"> <!--### Profile-data ###-->
+
+        <div class="col-lg-3 col-md-12 col-left d-flex-c-st-c">
+
+          <div class="image-card d-flex-c-c-c">
+            <div class="image d-flex-r-c-c">
+              <img src="inc/img/eslam.jpg" alt="">
+            </div>
+            <h3><?php echo $memberRow['Username'];?></h3>
+            <p><?php echo $memberRow['FullName'];?></p>
+          </div>
+
+        </div>
+
+        <div class="col-right col-lg-9 col-md-12 d-flex-c-bt-st">
+
+          <div class="info-cards"> <!-- All Cards -->
+
+            <div class="info-card gen-info"> <!--| General Information |-->
+
+              <div class="blocks d-flex-c-st-st">
+
+                <div class="block d-flex-c-st-st"> <!-- (Personal Information) -->
+                  <div class="title-area d-flex-r-bt-st"> <!-- Title Area -->
+                    <h5>personal information</h5> 
+                    <label> <!-- toggle button -->
+                      <input type="checkbox" class="toggle-checkbox" checked/>
+                      <div class="toggle-switch"> <i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-check"></i> </div>
+                    </label> 
+                  </div>
+                  <div class="details d-flex-r-st-c">
+                    <p><span>fullname:</span> <?php echo $memberRow['FullName'];?></p>
+                    <p><span>gender:</span> <?php echo $memberRow['Gender'];?></p>
+                    <p><span>country:</span> <?php echo $memberRow['Country'];?></p>
+                  </div>
+                </div>
+
+                <div class="block d-flex-c-st-st"> <!-- (Contact) -->
+                  <div class="title-area d-flex-r-bt-st"> <!-- Title Area -->
+                      <h5>contact</h5>
+                      <label> <!-- toggle button -->
+                         <input type="checkbox" class="toggle-checkbox" checked/>
+                         <div class="toggle-switch"> <i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-check"></i> </div>
+                      </label> 
+                  </div>
+                  <div class="details d-flex-r-st-st"> <!-- Items: Email, LinkedIn, Facebook, Whatsapp -->
+
+                    <div class="item"> <!-- Email -->
+                      <i class="fas fa-envelope" id="icon"></i>
+                      <div class="desc"><span>email</span><p><?php echo $memberRow['Email'];?></p></div>
+                    </div>
+
+                    <div class="item"> <!-- LinkedIn -->
+                      <i class="fa-brands fa-linkedin" id="icon"></i>
+                      <div class="desc"><span>linkedin</span><p><?php echo $memberRow['LinkedIn'];?></p></div>
+                    </div>
+
+                    <div class="item"> <!-- Facebook -->
+                      <i class="fa-brands fa-facebook" id="icon"></i>
+                      <div class="desc"><span>facebook</span><p><?php echo $memberRow['Facebook'];?></p></div>
+                    </div>
+
+                    <div class="item"> <!-- Whatsapp -->
+                      <i class="fa-brands fa-whatsapp" id="icon"></i>
+                      <div class="desc"><span>whatsapp</span><p><?php echo $memberRow['Whatsapp'];?></p></div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>    
+            
+            <div class="info-card education row"> <!--| My Education |-->
+
+              <?php if(!empty($certifications)){
+                    foreach($certifications as $certification){ ?>
+              
+                <div class="box col-md-6 col-sm-6">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span><?php echo $certification['Duration'];?></span>
+                  <div class="title-area d-flex-r-bt-st">
+                     <h4><?php echo $certification['Title'];?></h4>
+                     <label>
+                       <input type="checkbox" class="toggle-checkbox" checked/>
+                       <div class="toggle-switch"> <i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-check"></i> </div>
+                     </label> 
+                  </div>
+                  <p><?php echo $certification['Description'];?></p>
+                </div>
+
+              <?php }} ?>
+
+            </div>   
+
+            <div class="info-card my-skills"> <!--| My Skills |-->
+
+              <div class="blocks d-flex-r-st-st">
+
+                <div class="block d-flex-c-st-st"> <!-- (computer skills) -->
+
+                  <div class="title-area d-flex-r-bt-st"> <!-- Title Area -->
+                    <h5>computer skills</h5>
+                    <label> <!-- toggle button -->
+                      <input type="checkbox" class="toggle-checkbox" checked/>
+                      <div class="toggle-switch"> <i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-check"></i> </div>
+                    </label> 
+                  </div>
+
+                  <div class="details d-flex-r-st-st"> <!-- Items -->   
+                    <?php if(!empty($memberskill['computerskill'])){ ?>
+
+                      <?php $allcomputerSkills = explode('  ', $memberskill['computerskill']);
+                      foreach ($allcomputerSkills as $computerSkill) { ?>                 
+                        <p><i class="fa-solid fa-check"></i><?php echo $computerSkill;?></p>
+                      <?php } ?>
+
+                    <?php } ?>
+                  </div>
+                  
+                </div>
+
+                <div class="block d-flex-c-st-st"> <!-- (personal skills) -->
+
+                  <div class="title-area d-flex-r-bt-st"> <!-- Title Area -->
+                    <h5>personal skills</h5> 
+                    <label> <!-- toggle button -->
+                      <input type="checkbox" class="toggle-checkbox" checked/>
+                      <div class="toggle-switch"> <i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-check"></i> </div>
+                    </label> 
+                  </div>
+
+                  <div class="details d-flex-r-st-st"> <!-- Items -->
+                    <?php if (!empty($memberskill['personalskill'])){ ?>
+                    
+                      <?php $allpersonalSkills = explode('  ', $memberskill['personalskill']);
+                          foreach($allpersonalSkills as $personalSkill){?>
+                            <p><i class="fa-solid fa-check"></i><?php echo $personalSkill ?></p>
+                      <?php } ?>
+
+                    <?php } ?>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div> 
+
+          <ul class="tabs-area d-flex-r-c-c">
+            <li filter-click="gen-info">general information</li>
+            <li filter-click="education">my education</li>
+            <li filter-click="my-skills">my skills</li>
+          </ul>
+
+        </div> <!-- end col-right -->
+
+    </div> <!-- End profile-data -->
+
+    <button class="tab-btn collapsible" id="collapsible">Edit Profile Info</button>
+
+    <div class="edit-profile-data collapsible-page">
+      
+      <form class="form-horizontal2 edit-profile-info row" action="" method="POST"> <!-- edit-profile-info -->
+
+        <div class="col-left col-lg-8 col-md-8 col-sm-12">
+
+          <div class="input-box">  <!-- Name -->
+            <label>Username</label>
+            <input type="text" name="adminname" autocomplete="off" class="form_control"/>
+          </div>
+
+          <div class="input-box">  <!-- Password -->
+            <label>Password</label>
+            <div class="pass-input">
+              <input type="password" name="newpassword" autocomplete="new-password" class="form_control" id="passInput"/>
+              <div class="passeye" onclick="eyeFunction(this)">
+                <i class="fa fa-eye" style="display:none;"></i> 
+                <i class="fa fa-eye-slash"></i> 
+              </div>
+            </div>
+          </div>
+
+          <div class="input-box">  <!-- Full Name -->
+            <label>Full Name</label>
+            <input type="text" name="full" autocomplete="off" class="form_control"/>
+          </div>
+
+          <div class="input-box">  <!-- Gender -->
+            <label>Gender</label>
+            <select name="gender" class="form_control">
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+          </div>
+
+          <div class="input-box">  <!-- Facebook -->
+            <label>Facebook</label>
+            <input type="text" name="facebook" class="form_control" placeholder="Profile title" style="width:100%;" autocomplete="off"/>
+          </div>
+
+          <div class="input-box">  <!-- LinkedIn -->
+            <label>LinkedIn</label>
+            <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" class="form_control"/>
+          </div>
+
+          <div class="input-box">  <!-- Email -->
+            <label>Email</label>
+            <input type="email" name="email" value="" placeholder="example@gmail.com" autocomplete="off" class="form_control"  />
+          </div>
+
+          <div class="input-box">  <!-- whatsapp -->
+            <label>Whatsapp</label>
+            <input type="text" name="whatsapp" value="" autocomplete="off" class="form_control"/>
+          </div>
+
+          <div class="input-box">  <!-- Country -->
+            <label>Country</label>
+            <select name="country" id="select_country" class="form_control">
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="col-right col-lg-4 col-md-4 col-sm-12">
+            
+          <div class="input-box d-flex-c-c-c">
+            <label>select your image</label>
+            <input type="file">
+          </div>
+
+        </div> <!-- End col-right -->
+
+        <input type="submit" name="save" value="save" class="btn"/>
+
+      </form>
+
+      <form class="edit-certification-form" action="" method="POST">
+      
+        <h2 class="d-flex-r-bt-c">Certification 2<hr></h2>
+
+        <div class="double-input-box d-flex-r-bt-c"> <!-- double inputs: Title, Duration -->
+
+          <div class="input-box row">  <!-- Title -->
+            <label class="control-label col-lg-2 col-md-2 col-sm-3">Title</label>
+            <div class="inputt col-lg-10 col-md-10 col-sm-9">
+              <input type="hidden" name="cid" value="">
+              <input type="text" name="ctitle" value="" placeholder="Bachelor Of Arts" autocomplete="off" class="form_control"/>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Duration -->
+            <label class="control-label col-lg-2 col-md-2 col-sm-3">duration</label>
+            <div class="inputt col-lg-10 col-md-10 col-sm-9">
+              <input type="text" name="cduration" value="" placeholder="2013 - 2018" autocomplete="off" class="form_control"/>
+            </div>  
+          </div>
+
+        </div>
+
+        <div class="input-box description-input-box row">  <!-- Description -->
+          <label class="control-label col-lg-1 col-md-2 col-sm-2">Description</label>
+          <div class="inputt col-lg-11 col-md-10 col-sm-10">
+            <input type="text" name="cdescription" class="form_control" value="" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off"/>
+          </div>  
+        </div>
+
+        <div class="input-box submit-inputs row">  <!-- Save Certification Button -->
+          <div class="col-md-2 col-sm-6"><input type="submit" name="deletecertification" value="delete" class="btn"/></div>
+          <div class="col-md-10 col-sm-6"><input type="submit" name="savecertification" value="save certification" class="btn"/></div>
+        </div> 
+
+      </form>
+
+      <form class="add-certification-form" action="" method="POST">
+
+        <div class="block-title2 d-flex-r-bt-c"><hr><h2>Add Certification</h2><hr></div>
+
+        <div class="double-input-box d-flex-r-bt-c"> <!-- double inputs -->
+
+          <div class="input-box row">  <!-- Title -->
+            <label class="control-label col-lg-2 col-md-2 col-sm-3">Title</label>
+            <div class="inputt col-lg-10 col-md-10 col-sm-9">
+              <input type="hidden" name="memberid" value="">
+              <input type="text" name="ctitle" class="form_control" placeholder="Bachelor Of Arts" autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Duration -->
+            <label class="control-label col-lg-2 col-md-2 col-sm-3">duration</label>
+            <div class="inputt col-lg-10 col-md-10 col-sm-9"><input type="text" name="cduration" class="form_control" placeholder="2013 - 2018" autocomplete="off"/></div>
+          </div>
+
+        </div>
+
+        <div class="input-box description-input-box row">  <!-- Description -->
+          <label class="control-label col-lg-1 col-md-2 col-sm-2">Description</label>
+          <div class="inputt col-lg-11 col-md-10 col-sm-10"><input type="text" name="cdescription" class="form_control" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off"/></div>
+        </div>
+
+        <div class="submit-input row">  <!-- Submit Button -->
+          <div class="col-md-12 d-flex-r-c-c">
+            <i class="fa fa-plus"></i>
+            <input type="submit" name="addcertification" value="add certification" class="btn"/>
+          </div>
+        </div> 
+
+      </form>
+
+      <form class="edit-skills-form" action="" method="POST"> <!-- Edit Skills -->
+
+        <div class="block-title2 d-flex-r-bt-c"><hr><h2>Edit skills</h2><hr></div>
+
+        <div class="skills-blocks d-flex-r-c-c">
+
+          <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
+            <label class="control-label">Computer Skills</label>
+            <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
+            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}"  maxlength="28" class="form_control" id="computerSkillsInput">
+            <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+          <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
+            <label class="control-label">Personal Skills</label>
+            <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
+            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" maxlength="28" class="form_control" id="personalSkillsInput">
+            <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+        </div> <!-- End skills-blocks -->
+        
+        <div class="submit-inputs d-flex-r-c-c">  <!-- Submit Button -->
+          <input type="submit" name="deleteskills" value="delete skills" class="btn"/>
+          <input type="submit" name="editskills" value="edit skills" class="btn"/>
+        </div>
+
+      </form>
+
+      <form class="add-skills-form" action="" method="POST"> <!-- Add Skills -->
+
+        <div class="block-title2 d-flex-r-bt-c"><hr><h2>Add skills</h2><hr></div>
+
+        <div class="skills-blocks d-flex-r-st-st">
+
+          <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
+            <label>Computer Skills</label>
+            <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
+            <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}" class="form_control" id="computerSkillsInput">
+            <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+          <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
+            <label>Personal Skills</label>
+            <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
+            <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" class="form_control" id="personalSkillsInput">
+            <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+        </div>
+        
+        <div class="submit-input d-flex-r-c-c">  <!-- Submit Button -->
+          <i class="fa fa-plus"></i>
+          <input type="submit" name="addskills" value="add skills" class="btn"/>
+        </div>
+
+      </form>
+
+    </div> <!-- edit-profile-data -->
+
+  </div> <!-- ===== End Main-Data ==== -->
+
+</section>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/all.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/aside.js"></script>
+<script>loadHtml('#aside', asideContent)</script>
+</body>
+</html>
