@@ -32,11 +32,11 @@
 
     {"id":"16", "name":"fridges & washing machines", "Image":"../images/electronics/fridges&washing/washing1/1.jpg", "parentId":"1"},
 
-    {"id":"17", "name":"pc accessories", "Image":"../images/electronics/pcacessories/adapter/adapter1/1.png", "parentId":"1"},
+    {"id":"17", "name":"pc accessories", "Image":"../images/electronics/pcaccessories/adapter/adapter1/1.png", "parentId":"1"},
 
-    {"id":"18", "name":"adapter", "Image":"../images/electronics/pcacessories/adapter/adapter1/3.jpg", "parentId":"17"},
+    {"id":"18", "name":"adapter", "Image":"../images/electronics/pcaccessories/adapter/adapter1/3.jpg", "parentId":"17"},
 
-    {"id":"19", "name":"cooler", "Image":"../images/electronics/pcacessories/cooler/cooler/1.png", "parentId":"17"},
+    {"id":"19", "name":"cooler", "Image":"../images/electronics/pcaccessories/cooler/cooler/1.png", "parentId":"17"},
 
     {"id":"20", "name":"pc components", "Image":"../images/electronics/pccomponents/case/case9/2.png", "parentId":"1"},
 
@@ -134,7 +134,7 @@
 
     {"id":"67", "name":"sweatshirt", "Image":"../images/clothes/men/sweatshirt/10/1.jpg", "parentId":"65"},
 
-    {"id":"68", "name":"shoes", "Image":"../images/clothes/women/shoes/boat/1/1.png", "parentId":"66"},
+    {"id":"68", "name":"women shoes", "Image":"../images/clothes/women/shoes/boat/1/1.png", "parentId":"66"},
 
     {"id":"69", "name":"athletic", "Image":"../images/clothes/women/shoes/athletic/running/roadrunning/1/1.png", "parentId":"68"},
 

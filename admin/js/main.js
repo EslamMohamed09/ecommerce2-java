@@ -1,0 +1,1 @@
+$('body').css('paddingTop', $('.header').innerHeight() - 1);
