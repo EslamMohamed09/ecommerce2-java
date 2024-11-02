@@ -866,6 +866,456 @@ section {padding:0;
                                                           border-radius:50%;}
 
 
+/*
+ ==================================
+ ######## USER PROFILE PAGE #######
+ ==================================
+*/
+.main-profile-page {
+
+       .profile-data {padding:0;
+                      margin:0;
+                      margin-bottom:3rem;
+                      min-height:30vh;
+                      background-color:var(--white);
+
+              .col-left {text-align:center;
+
+                     .image-card {text-align:center;
+                                  gap:0.4rem;
+                                  margin-top:3rem;
+
+                            .image {background-color:transparent;
+
+                                   img {width:7rem;
+                                        height:7rem;
+                                        object-fit:cover;
+                                        border-radius:50%;}
+                            }
+                     }
+
+                     h3 {color:var(--gray-color1);
+                         font-weight:bold;
+                         margin-top:0.6rem;}
+
+                     p {color:var(--gray-color4);
+                        font-weight:bold;}
+              }
+
+              /* col-right */
+              .col-right {background-color:transparent;
+
+                     .info-cards {width:100%;
+                                  padding:1rem;
+
+                            .info-card {width:100%;
+                                        padding:0;
+                                        background-color:transparent;
+
+                                   .blocks .block .title-area,
+                                   .box .title-area {flex-wrap:nowrap;
+                                                         width:99%;}
+
+                                   .blocks .block h5 {margin-bottom:0.5rem;
+                                                          font-size:1.2rem;
+                                                          color:var(--light-blue5);}
+
+                                   /* open/close */
+                                   .title-area {
+                                          label input[type="checkbox"],
+                                          label input[type="checkbox"]:focus {border:none;
+                                                                              outline:none;
+                                                                              appearance:none;
+                                                                              -webkit-appearance:none;
+                                                                              display:none;}
+                                                                           
+
+                                          label {
+                                                 .toggle-switch {width:4.5rem;
+                                                                 height:1.6rem;
+                                                                 padding:0 0.3rem;
+                                                                 margin:0;
+                                                                 border-radius:1rem;
+                                                                 display:flex;
+                                                                 flex-direction:row;
+                                                                 justify-content:flex-start;
+                                                                 align-items:center;
+                                                                 gap:1rem;
+                                                                 transition:all 0.3s linear;
+                                                                 cursor:pointer;
+                                                                 position:relative;
+                                                                 background-color:var(--gray-color8);
+  
+                                                        .fa-xmark {width:0.7rem;
+                                                                   height:0.7rem;
+                                                                   padding:0.3rem;
+                                                                   border-radius:50%;
+                                                                   display:flex;
+                                                                   justify-content:center;
+                                                                   align-items:center;
+                                                                   color:var(--white);
+                                                                   background-color:var(--gray-color7);
+                                                                   transition:all 0.3s linear;
+                                                                   position:absolute;
+                                                                   left:0.3rem;
+                                                                   z-index:2;
+                                                                   opacity:1;}
+ 
+                                                        .fa-check {width:0.7rem;
+                                                                   height:0.7rem;
+                                                                   padding:0.3rem;
+                                                                   border-radius:50%;
+                                                                   display:flex;
+                                                                   justify-content:center;
+                                                                   align-items:center;
+                                                                   color:var(--shin-blue2);
+                                                                   background-color:var(--white);
+                                                                   transition:all 0.3s linear;
+                                                                   position:absolute;
+                                                                   left:0.3rem;
+                                                                   z-index:1;
+                                                                   opacity:0;}
+                                                 
+                                                 }
+
+                                                 .toggle-checkbox:checked + .toggle-switch {background-color:var(--shin-blue2);}
+
+                                                 .toggle-checkbox:checked + .toggle-switch .fa-xmark {left:3rem;
+                                                                                                              opacity:0;
+                                                                                                              z-index:1;
+                                                                                                              background-color:var(--primary-color9);}
+
+                                                 .toggle-checkbox:checked + .toggle-switch .fa-check {left:3rem;
+                                                                                                              opacity:1;
+                                                                                                              z-index:2;}
+                                          }
+                                   }
+                            }
+
+                            /* gen-info */
+                            .gen-info {
+                                   .blocks {
+                                          .block {width:100%;
+                                                  padding:2rem 0;
+                                                  gap:0.7rem;
+                                                  border-bottom:1px solid var(--gray-color8);
+                                          
+
+                                                 .details {width:100%;
+                                                           flex-wrap:wrap;
+                                                           gap:5%;
+
+                                                        p {font-size:1rem;
+                                                           color:var(--gray-color3);
+
+                                                               span {color:var(--primary-color13);
+                                                                     font-weight:bold;
+                                                                     margin-right:1px;}
+                                                        }
+
+                                                        .item {display:flex;
+                                                               flex-direction:row;
+                                                               flex-wrap:wrap;
+                                                               align-items:flex-start;
+                                                               gap:0.5rem;
+                                                               margin:0;
+                                                               padding:0;
+
+                                                               #icon {color:var(--color-dark);
+                                                                      margin-top:0.2rem;}
+
+                                                               .desc {display:flex;
+                                                                      flex-direction:column;
+                                                                      gap:0.4rem;
+                                                                      margin:0;
+                                                                      padding:0;
+
+                                                                      span {font-size:1.1rem;
+                                                                            color:var(--gray-color3);}
+
+                                                                      p {text-transform:lowercase;
+                                                                         color:var(--gray-color4);}
+                                                               }
+                                                        }
+                                                 }
+                                          }
+                                          .block:last-child {border:none;}
+                                   }
+                            }
+
+                            /* education card */
+                            .education {
+
+                                   .box {display:flex;
+                                         flex-direction:column;
+                                         gap:1rem;
+                                         padding:0 1rem 1rem 1rem !important;
+                                         border-left:0.2rem solid var(--primary-color16);
+                                         position:relative;
+
+                                   
+
+                                          .fa-graduation-cap {width:2rem;
+                                                              height:2rem;
+                                                              font-size:1.5rem;
+                                                              border-radius:50%;
+                                                              padding:0.6rem;
+                                                              position:absolute;
+                                                              top:-0.2rem;
+                                                              left:-1.8rem;
+                                                              color:var(--white);
+                                                              background:radial-gradient(var(--shin-blue), var(--primary-color16));}
+
+                                          span {width:9rem;
+                                                border-radius:5rem;
+                                                padding:0.3rem 1.5rem;
+                                                margin-top:0.1rem;
+                                                margin-left:0.9rem;
+                                                font-size:1.1rem;
+                                                font-weight:bold;
+                                                box-shadow:var(--box-shadow2);
+                                                text-shadow:var(--box-shadow2);
+                                                color:var(--white);
+                                                background:radial-gradient(var(--shin-blue), var(--primary-color16));}  
+
+                                          h4 {font-weight:bold;
+                                              margin-top:0.5rem;}
+                                   }
+                                   .box:first-child,
+                                   .box:nth-child(3) {padding-right:3.5rem !important;}
+                            }
+
+                            /* my skills */
+                            .my-skills {
+                                .blocks {gap:9%;
+                                   .block {width:100%;
+                                           padding-top:0.5rem;
+                                           height:fit-content;
+                                           gap:1.1rem;
+                           
+                                          .title-area {width:100%;}
+                                                                                                   
+                                          .details {flex-wrap:wrap;
+                                                    line-height:2.5rem;
+                                                    width:80%;
+                                                    gap:0.5rem;}
+                           
+                                          .fa-check {color:var(--primary-color15);}
+                                   }
+                                 }
+                            }
+                     }
+
+                     /* tabs area */
+                     .tabs-area {width:100%;
+                                 flex-wrap:nowrap;
+                                 gap:2rem;
+                                 padding:1.2rem 0 1.2rem 1.2rem;
+
+                            li {cursor:pointer;
+                                font-weight:normal;
+                                font-size:1.3rem;
+                                position:relative;}
+                    
+                            li.button-active {color:var(--primary-color9);}
+                    
+                            li.button-active::before {content:"";
+                                                      width:100%;
+                                                      height:1.2px;
+                                                      position:absolute;
+                                                      top:3rem;
+                                                      left:0;
+                                                      background-color:var(--primary-color9);}
+                     }
+              }
+       }
+}
+
+
+
+
+.main-profile-page .edit-profile-data .edit-profile-info .btn {width:100%;}
+
+.main-profile-page .tab-btn {margin:2rem auto 1rem;}
+
+@media(max-width:400px){
+  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch {width:3.5rem;}
+  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
+  .main-profile-page .profile-data .col-right .info-cards .my-skills .blocks .block .details {width:100%;}
+}
+
+@media(max-width:266px){ .main-profile-page .profile-data .col-right .info-cards .my-skills .blocks {flex-wrap:wrap;} }
+
+/* Edit certification */
+.edit-certification-form {margin-top:2rem;
+
+       h2 {text-align:left;
+           color:var(--shin-blue7);
+           text-transform:uppercase;}
+
+       h2 hr {flex:1 1 20rem;
+              color:var(--light-aqua4);
+              margin-left:0.5rem;}
+
+       .input-box .form_control {width:100%;}
+
+       .double-input-box {width:100%;
+                          gap:1rem;
+
+              .input-box {flex:1 1 30rem;
+                          margin:0;}
+
+              .input-box:first-child {padding-right:2rem;}
+       }
+
+       .submit-inputs .btn {width:100%;}
+
+       .submit-inputs .col-md-2 .btn {height:100%;
+                                      padding:0.2rem !important;
+                                      font-size:1.2rem;}
+}
+.edit-certification-form > div {margin:1.5rem 0;}
+
+@media (min-width:575px) and (max-width:1000px) { .edit-certification-form .double-input-box .input-box:nth-child(2) .inputt {padding-left:1rem !important;} }
+
+@media(max-width:577px){ .edit-certification-form .submit-inputs .col-md-2 {margin-bottom:0.5rem;} }
+
+@media(min-width:577px){ .edit-certification-form .submit-inputs .col-md-2 .btn {width:95%;} }
+
+@media(min-width:768px) and (max-width:1288px) { .edit-certification-form .submit-inputs .col-md-2 .btn {font-size:0.9rem;} }
+
+/* Add certification */
+.add-certification-form {display:block;
+
+       .form_control {width:100%;}
+
+       .double-input-box {width:100%;
+                          gap:1rem;
+
+              .input-box {flex:1 1 30rem;
+                          margin:0;}
+
+              .input-box:first-child {padding-right:2rem;}
+       }
+}
+
+.add-certification-form > div {margin:2rem 0;}
+
+
+@media (min-width:575px) and (max-width:1000px) { .add-certification-form .double-input-box .input-box:nth-child(2) .inputt {padding-left:1rem !important;} }
+
+@media(min-width:768px){ .add-certification-form .description-input-box .inputt {padding-left:2rem !important;} }
+
+.add-certification-form {
+       .submit-input {position:relative;
+              .fa-plus {color:var(--light-violet);
+                        position:absolute;
+                        left:50%;
+                        transform:translateX(-7.5rem)}
+
+              .btn {width:100%;}
+       }
+}
+
+@media(max-width:255px){ .add-certification-form .submit-input .fa-plus {transform:translateX(-6.4rem)} }
+
+/* Edit Profile Skills */
+.edit-skills-form {margin-top:3rem;
+
+       .skills-blocks {flex-wrap:wrap;
+                       gap:1.5rem;
+                       margin-bottom:2rem;
+
+              .block {flex:1 1 20rem;
+                      gap:1rem;
+
+                     .control-label {margin-bottom:0.1rem;}
+
+                     textarea {height:10rem;
+                               width:100%;
+                               border-radius:0.2rem;
+                               color:var(--gray-color3);
+                               font-size:1.4rem;
+                               background:radial-gradient(var(--light-blue), var(--gray-color9));
+
+                            .tag {display:inline-block;
+                                  padding:0.2rem 0.5rem;
+                                  margin:0.2rem;
+                                  border-radius:0.2rem;
+                                  border:1px solid var(--gray-color7) !important;}
+                     }
+
+                     .form_control {width:100%;
+                                    padding:0.5rem 1rem;
+                                    border:1px solid var(--gray-color8);}
+
+                     .btn2 {width:9rem;
+                            margin-left:calc(100% - 9rem);
+                            border-radius:0.4rem;}
+              }
+       }
+       .submit-inputs {width:100%;
+                       gap:0.8rem;
+                       margin:0;
+
+              .btn {flex:1 1 30rem;}
+       }
+}
+
+/* Add Skills - Profile */
+.add-skills-form {
+       .submit-input {position:relative;
+              .fa-plus {color:var(--light-violet);
+                        position:absolute;
+                        left:50%;
+                        transform:translateX(-5rem)}
+
+              .btn,
+              .btn2 {width:100%;}
+       }
+}
+
+
+@media (max-width:768px){
+      .main-profile-page {
+
+              .profile-data {
+
+                     .col-left {padding-bottom:2rem;
+                            .image-card {margin-top:1rem;
+                                         margin-bottom:2rem;}
+                     }
+
+                     .col-right {
+
+                            .info-cards {
+
+                                   .info-card {
+                                          .title-area {
+                                                 label .toggle-checkbox:checked + .toggle-switch .fa-xmark {left:3.1rem;}
+
+                                                 label .toggle-checkbox:checked + .toggle-switch .fa-check {left:3.1rem;}
+
+                                                 label .toggle-switch .fa-xmark {width:0.5rem;
+                                                                                 height:0.5rem;}
+
+                                                 label .toggle-switch .fa-check {width:0.5rem;
+                                                                                 height:0.5rem;}
+                                          }
+                                   }
+                                   .info-card.my-skills .blocks .block {margin-bottom:2.5rem;}
+                            }
+                            .info-card.gen-info .blocks .block .details .item {margin-bottom:1.2rem;}
+                            .info-card.education .box .fa-graduation-cap {width:1.5rem;
+                                                                          height:1.5rem;
+                                                                          left:-1.4rem;}
+
+                     }
+              }
+       }
+}
+
+
 
 /*====DASHBOARD====*** MAIN CATEGORY ***================*/
 .main-category h1 {font-size:1.7rem;
