@@ -3,7 +3,7 @@ const asideContent = `<div class="sidebar">
   <ul class="aside-list">
 
    <li>
-    <a href="index.html" class="sidebar-item active">
+    <a href="index.html" class="sidebar-item">
       <i class="fas fa-th" id="icon"></i>
       <h3>dashboard</h3>
     </a> 
@@ -80,17 +80,17 @@ const asideContent = `<div class="sidebar">
     </li>
 
     <li>
-      <a href="#" class="sidebar-item">
-        <i class="fas fa-sign-out-alt" id="icon"></i>
-        <h3>logout</h3>
-      </a>
-    </li>
-
-    <li>
       <a href="users.html" class="sidebar-item">
         <i class="fas fa-user" id="icon"></i>
         <h3>users</h3>
       </a> 
+    </li>
+
+    <li>
+      <a href="#" class="sidebar-item">
+        <i class="fas fa-sign-out-alt" id="icon"></i>
+        <h3>logout</h3>
+      </a>
     </li>
     
   </ul>

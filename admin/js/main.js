@@ -13,6 +13,16 @@ $('body').css('paddingTop', $('.header').innerHeight() - 1);
 
 function loadHtml(selector, htmlContent){
     document.querySelector(selector).innerHTML = htmlContent;
+
+    const currentPage = window.location.pathname.split('/').pop();
+
+    document.querySelectorAll('#aside .aside-list li .sidebar-item').forEach(function(item) {
+      const itemHref = item.getAttribute('href');
+  
+      if (itemHref === currentPage) {
+          item.classList.add('active');
+      }
+    });
 }
 
 function eyeFunction(eyeIcon) {
@@ -31,9 +41,12 @@ function eyeFunction(eyeIcon) {
 }
 
 // put active btn on aside
-document.querySelectorAll('#aside .sidebar .aside-list li .sidebar-item').foreach(function (item) {
-	item.addEventListener('click', function(){
-        $(this).addClass('active').siblings().removeClass('active');
-    }) ;
-});
-console.log($('#aside .sidebar .aside-list li'));
+// document.querySelectorAll('#left-aside .aside-list li .sidebar-item').foreach(function (item) {
+// 	item.addEventListener('click', function(){
+//         $(this).addClass('active').siblings().removeClass('active');
+//     }) ;
+// });
+
+
+
+// console.log($('#aside .sidebar .aside-list li'));
