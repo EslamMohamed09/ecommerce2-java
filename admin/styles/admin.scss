@@ -1320,10 +1320,10 @@ section {padding:0;
 /*====DASHBOARD====*** MAIN CATEGORY ***================*/
 .main-category {
 
-       h1 {font-size:1.7rem;
+      h1 {font-size:1.7rem;
            font-weight:bold;}
 
-       .category-container {display:flex;
+      .category-container {display:flex;
                             flex-direction:row;
                             flex-wrap:wrap;
                             padding:0;
@@ -1332,10 +1332,10 @@ section {padding:0;
                             justify-content:center;
                             gap:1rem;
 
-              .category-data {flex:1 1 12rem;
-                              display:flex;
-                              flex-direction:column;
-                              gap:2rem;
+            .category-data {flex:1 1 12rem;
+                            display:flex;
+                            flex-direction:column;
+                            gap:2rem;
 
                      .input-group {display:flex;
                                    flex-direction:column;
@@ -1357,42 +1357,45 @@ section {padding:0;
 
                      .order-input-group #catorder-select option {text-transform:capitalize;}
 
-                     /* image input group */
-                     .image-input-group {display:flex;
-                                         flex-direction:row;
-                                         align-items:center;
-                                         justify-content:space-between;}
+                        /* image input group */
+                        .image-input-group {display:flex;
+                                            flex-direction:row;
+                                            align-items:center;
+                                            justify-content:space-between;
 
-                     .image-input-group .image {width:7rem;
-                                                height:5rem;
-                                                cursor:pointer;}
+                              .image {width:7rem;
+                                      height:5rem;
+                                      cursor:pointer;
 
-                     .image-input-group .image img {width:100%;
-                                                    height:100%;
-                                                    object-fit:cover;
-                                                    border-radius:0.5rem;}
+                                    img {width:100%;
+                                         height:100%;
+                                         object-fit:cover;
+                                         border-radius:0.5rem;}
+                              }
+                        }
 
                      /* voting input group */
                      .voting-input-group {display:flex;
                                            flex-direction:row;
                                            flex-wrap:wrap;
-                                           justify-content:space-between;}
+                                           justify-content:space-between;
 
-                     .voting-input-group .vote-group {display:flex;
-                                                      flex-direction:column;}
+                        .vote-group {display:flex;
+                                     flex-direction:column;}
 
-                     .voting-input-group .vote-group .cat-label {margin-bottom:0.4rem;}
+                        .vote-group .cat-label {margin-bottom:0.4rem;}
 
-                     .voting-input-group .vote-group > div {display:flex;
+                        .vote-group > div {display:flex;
                                                             flex-direction:row;
                                                             gap:0.4rem;
                                                             margin:0;
                                                             margin-top:0.1rem;}
 
-                     .voting-input-group .vote-group > div .vote-label {font-size:1rem;
+                        .vote-group > div .vote-label {font-size:1rem;
                                                                         cursor:pointer;}
 
-                     .voting-input-group .vote-group > div:last-child .form_control {margin-left:0.3rem;}
+                        .vote-group > div:last-child .form_control {margin-left:0.3rem;}
+                      }
 
                      input[type="submit"] {margin:0;
                                            margin-top:1rem;}
