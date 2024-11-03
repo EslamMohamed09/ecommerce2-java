@@ -1250,8 +1250,7 @@ section {
   font-weight: bold;
   margin-top: 0.5rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .education .box:first-child,
-.main-profile-page .profile-data .col-right .info-cards .education .box:nth-child(3) {
+.main-profile-page .profile-data .col-right .info-cards .education .box:first-child, .main-profile-page .profile-data .col-right .info-cards .education .box:nth-child(3) {
   padding-right: 3.5rem !important;
 }
 .main-profile-page .profile-data .col-right .info-cards .my-skills .blocks {
@@ -1299,11 +1298,9 @@ section {
   left: 0;
   background-color: var(--primary-color9);
 }
-
 .main-profile-page .edit-profile-data .edit-profile-info .btn {
   width: 100%;
 }
-
 .main-profile-page .tab-btn {
   margin: 2rem auto 1rem;
 }
@@ -1523,13 +1520,13 @@ section {
     width: 0.5rem;
     height: 0.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card.my-skills .blocks .block {
+  .main-profile-page .profile-data .col-right .info-cards.my-skills .blocks .block {
     margin-bottom: 2.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-card.gen-info .blocks .block .details .item {
+  .main-profile-page .profile-data .col-right .info-cards.gen-info .blocks .block .details .item {
     margin-bottom: 1.2rem;
   }
-  .main-profile-page .profile-data .col-right .info-card.education .box .fa-graduation-cap {
+  .main-profile-page .profile-data .col-right .info-cards.education .box .fa-graduation-cap {
     width: 1.5rem;
     height: 1.5rem;
     left: -1.4rem;
