@@ -704,23 +704,24 @@ section {padding:0;
                              background-color:var(--white);
                              box-shadow:var(--box-shadow2);
                              gap:1.6rem;
-                             border-radius:1rem;}
+                             border-radius:1rem;
 
-                     .block:nth-child(3) {padding:0;
-                                          background-color:transparent;
-                                          box-shadow:none;}
+                            &:nth-child(3) {padding:0;
+                                            background-color:transparent;
+                                            box-shadow:none;}
 
-                     .block-title {font-size:1.4rem;
-                                   font-weight:bold;
-                                   text-align:left;
-                                   width:100%;
-                                   padding:0;
-                                   padding-bottom:1rem;
-                                   margin:0.2rem 0 0;
-                                   border-bottom:1.5px solid var(--light-yellow1);}
+                            .block-title {font-size:1.4rem;
+                                          font-weight:bold;
+                                          text-align:left;
+                                          width:100%;
+                                          padding:0;
+                                          padding-bottom:1rem;
+                                          margin:0.2rem 0 0;
+                                          border-bottom:1.5px solid var(--light-yellow1);}
 
-                     .block:nth-child(3) .block-title {border-bottom:0;
-                                                       padding-bottom:0;}
+                            &:nth-child(3) .block-title {border-bottom:0;
+                                                         padding-bottom:0;}
+                     }
 
 /*****RIGHT ASIDE***** active users block **************/
                      .active-users {margin-top:3rem;
@@ -736,8 +737,6 @@ section {padding:0;
                                         object-fit:cover;}
                             }
                      }
-
-
 
 /*****RIGHT ASIDE***** recent-updates block **************/
                      .recent-updates .updates {display:flex;
@@ -863,39 +862,44 @@ section {padding:0;
                      }
 
 /*****RIGHT ASIDE***** all-users block **************/
-                     .all-users .buttons {display:flex;
-                                                  flex-direction:row;
-                                                  flex-wrap:wrap;
-                                                  justify-content:center;
-                                                  gap:1.5rem;
-                                                  width:100%;}
+                     .all-users {
+                            .buttons {display:flex;
+                                      flex-direction:row;
+                                      flex-wrap:wrap;
+                                      justify-content:center;
+                                      gap:1.5rem;
+                                      width:100%;
 
-                     .all-users .buttons .active {color:var(--white);
-                                                          background-color:var(--light-green7);}
+                                   .active {color:var(--white);
+                                            background-color:var(--light-green7);}
+                            }
 
-                     .all-users .items {width:80%;
-                                                margin:0;
-                                                margin-left:1rem;
-                                                display:flex;
-                                                flex-direction:column;
-                                                align-items:flex-start;
-                                                gap:1.5rem;
-                                                background-color:transparent;}
+                            .items {width:80%;
+                                    margin:0;
+                                    margin-left:1rem;
+                                    display:flex;
+                                    flex-direction:column;
+                                    align-items:flex-start;
+                                    gap:1.5rem;
+                                    background-color:transparent;
 
-                     .all-users .items .item {display:flex;
-                                                      flex-direction:row;
-                                                      justify-content:flex-start;
-                                                      align-items:center;
-                                                      gap:1rem;}
+                                   .item {display:flex;
+                                          flex-direction:row;
+                                          justify-content:flex-start;
+                                          align-items:center;
+                                          gap:1rem;
 
-                     .all-users .items .item h4 {font-size:1rem;
-                                                         font-weight:bold;
-                                                         color:var(--gray-color1);}
+                                          h4 {font-size:1rem;
+                                              font-weight:bold;
+                                              color:var(--gray-color1);}
 
-                     .all-users .items .item img {width:4rem;
-                                                          height:4rem;
-                                                          object-fit:cover;
-                                                          border-radius:50%;}
+                                          img {width:4rem;
+                                               height:4rem;
+                                               object-fit:cover;
+                                               border-radius:50%;}
+                                   }
+                            }
+                     }
               }
 }
 

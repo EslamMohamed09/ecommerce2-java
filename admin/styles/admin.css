@@ -813,7 +813,7 @@ section {
   background-color: transparent;
   box-shadow: none;
 }
-#dashboard-section .right-aside .block-title {
+#dashboard-section .right-aside .block .block-title {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: left;
