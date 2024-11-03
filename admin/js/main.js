@@ -9,3 +9,8 @@ themeToggler.addEventListener("click", () => {
 });
 
 $('body').css('paddingTop', $('.header').innerHeight() - 1);
+
+
+function loadHtml(selector, htmlContent){
+    document.querySelector(selector).innerHTML = htmlContent;
+}
