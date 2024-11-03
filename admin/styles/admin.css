@@ -1511,7 +1511,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow2);
   z-index: 100;
 }
-
 #header .left-header {
   display: flex;
   justify-content: space-between;
@@ -1524,18 +1523,15 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: 0;
   z-index: 5;
 }
-
 #header .left-header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-
 #header .left-header .logo img {
   width: 2rem;
 }
-
 #header .left-header .logo h2 {
   margin: 0;
   font-weight: 800;
@@ -1544,11 +1540,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   font-size: 0.8rem;
   letter-spacing: 0.8px;
 }
-
 #header .left-header #open-aside {
   cursor: pointer;
 }
-
 @media (max-width: 711px) {
   #header .left-header #open-aside {
     display: none;
@@ -1566,7 +1560,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: 0;
   z-index: 4;
 }
-
 #header .right-header .theme-toggler {
   display: flex;
   justify-content: space-around;
@@ -1576,7 +1569,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 0.3rem;
   background-color: var(--color-info-light);
 }
-
 #header .right-header .theme-toggler #icon {
   width: 50%;
   height: 100%;
@@ -1585,18 +1577,15 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--white);
   cursor: pointer;
 }
-
 #header .right-header .theme-toggler .active {
   background-color: var(--primary1);
 }
-
 #header .right-header .profile {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 1rem;
 }
-
 #header .right-header .profile .info {
   display: flex;
   flex-direction: column;
@@ -1604,35 +1593,29 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: flex-end;
   gap: 0;
 }
-
 #header .right-header .profile .info p {
   margin: 0;
   color: var(--color-info-dark);
 }
-
 #header .right-header .profile .info p b {
   color: var(--gray-color1);
 }
-
 #header .right-header .profile .info small {
   margin: 0;
   color: var(--color-info-dark);
 }
-
 #header .right-header .profile .image {
   width: 2.5rem;
   height: 2.5rem;
   margin: auto;
   display: flex;
 }
-
 #header .right-header .profile .image img {
   border-radius: 50%;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-
 #header .small-menu {
   background-color: var(--white);
   position: fixed;
@@ -1648,7 +1631,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 2.5rem;
   display: none;
 }
-
 #header .small-menu .small-menu-link {
   font-size: 1rem;
   font-weight: bold;
@@ -1661,7 +1643,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: center;
   gap: 0.4rem;
 }
-
 @media (max-width: 710px) {
   #header .small-menu {
     display: flex;
@@ -1682,6 +1663,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
     font-size: 0.6rem;
   }
 }
+
 /******************
  # Dashboard
 *******************/
