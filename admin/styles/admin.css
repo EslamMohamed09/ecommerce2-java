@@ -508,9 +508,15 @@ section {
   padding: 0;
   z-index: 2;
   position: relative;
+  /*================= ASIDE =========================*/
+  /*================= MAIN DASHBOARD =========================*/
+  /************** RECENT ORDER **************/
+  /*================= RIGHT ASIDE =========================*/
+  /*****RIGHT ASIDE***** active users block **************/
+  /*****RIGHT ASIDE***** recent-updates block **************/
+  /*****RIGHT ASIDE***** sales-analytics block **************/
+  /*****RIGHT ASIDE***** all-users block **************/
 }
-
-/*================= ASIDE =========================*/
 #dashboard-section aside {
   padding: 0;
   margin: 0;
@@ -520,19 +526,14 @@ section {
   box-shadow: var(--box-shadow2);
   z-index: 1000;
 }
-
 #dashboard-section aside.smallaside {
   width: 4rem;
 }
-
 #dashboard-section aside.smallaside h3 {
   display: none;
 }
-
-@media (min-width: 711px) and (max-width: 1340px) {
-  #dashboard-section aside {
-    width: 18rem;
-  }
+#dashboard-section aside .sidebar .aside-list li:last-child {
+  margin-top: 6rem;
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-item {
   display: flex;
@@ -545,35 +546,30 @@ section {
   border-left: 5px solid transparent;
   transition: all 300ms ease;
 }
-
 #dashboard-section aside .sidebar .aside-list li .sidebar-item #icon {
   font-size: 1.3rem;
   transition: all 300ms ease;
 }
-
 #dashboard-section aside .sidebar .aside-list li .sidebar-item h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
 }
-
-#dashboard-section aside .sidebar .aside-list li:last-child {
-  margin-top: 6rem;
-}
-
 #dashboard-section aside .sidebar .aside-list li .sidebar-item:hover {
   border-left: 5px solid var(--light-blue3);
 }
-
-#dashboard-section aside .sidebar .aside-list li .sidebar-item.active,
-#dashboard-section aside .sidebar .aside-list li .sidebar-item:focus {
+#dashboard-section aside .sidebar .aside-list li .sidebar-item.active, #dashboard-section aside .sidebar .aside-list li .sidebar-item:focus {
   color: var(--white);
   background-color: var(--primary1);
   border-left: 5px solid var(--light-blue3);
 }
-
+@media (min-width: 711px) and (max-width: 1340px) {
+  #dashboard-section #dashboard-section aside {
+    width: 18rem;
+  }
+}
 @media (max-width: 711px) {
-  #dashboard-section aside {
+  #dashboard-section #dashboard-section aside {
     position: absolute;
     top: 0;
     left: 0;
@@ -581,19 +577,18 @@ section {
     min-height: 100%;
     transition: all 0.3s linear;
   }
-  #dashboard-section aside h3 {
+  #dashboard-section #dashboard-section aside h3 {
     opacity: 0;
     transition: all 0.2s linear;
   }
-  #dashboard-section aside.active {
+  #dashboard-section #dashboard-section aside.active {
     width: 13rem;
   }
-  #dashboard-section aside.active h3 {
+  #dashboard-section #dashboard-section aside.active h3 {
     opacity: 1;
     transition: all 1s linear;
   }
 }
-/*================= MAIN DASHBOARD =========================*/
 #dashboard-section .main-data {
   width: 100%;
   padding: 1rem;
@@ -602,19 +597,18 @@ section {
   align-items: left;
   background-color: transparent;
 }
-
 @media (max-width: 711px) {
-  #dashboard-section .main-data {
+  #dashboard-section #dashboard-section .main-data {
     margin-left: 4rem;
   }
 }
-#dashboard-section .main-dashboard {
+#dashboard-section .home {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /************** INSIGHTS **************/
 }
-
-#dashboard-section .main-dashboard .middle {
+#dashboard-section .home .middle {
   flex: 1 1 40rem;
   display: flex;
   flex-direction: column;
@@ -622,32 +616,27 @@ section {
   gap: 1rem;
   background-color: transparent;
 }
-
-#dashboard-section .main-dashboard .middle h1 {
+#dashboard-section .home .middle h1 {
   display: inline-block !important;
   width: 11rem;
 }
-
-/* #dashboard-section .main-data .date {display:inline-block;
-                                     margin:0.5rem 0 0.5rem 2rem;
-                                     padding:0.5rem 1rem;
-                                     width:11rem;
-                                     border-radius:0.2rem;
-                                     background-color:var(--color-light);} */
-/* #dashboard-section .main-data .date input[type="date"] {color:var(--color-dark);
-                                                        font-weight:bold;
-                                                        cursor:pointer;
-                                                        background-color:transparent;} */
-/************** INSIGHTS **************/
-#dashboard-section .main-dashboard .insights {
+#dashboard-section .home .insights {
   width: 100%;
   justify-content: flex-start;
   padding: 0.1rem;
   margin: 0;
   background: transparent;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card {
+#dashboard-section .home .insights > div:first-child #icon {
+  background-color: var(--primary1);
+}
+#dashboard-section .home .insights > div:nth-child(2) #icon {
+  background-color: var(--primary2);
+}
+#dashboard-section .home .insights > div:last-child #icon {
+  background-color: var(--primary3);
+}
+#dashboard-section .home .insights .insight-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -658,28 +647,14 @@ section {
   box-shadow: var(--box-shadow2);
   background: var(--white);
 }
-
-#dashboard-section .main-dashboard .insights .insight-card #icon {
+#dashboard-section .home .insights .insight-card #icon {
   color: var(--white);
   padding: 0.7rem;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
 }
-
-#dashboard-section .main-dashboard .insights > div:first-child #icon {
-  background-color: var(--primary1);
-}
-
-#dashboard-section .main-dashboard .insights > div:nth-child(2) #icon {
-  background-color: var(--primary2);
-}
-
-#dashboard-section .main-dashboard .insights > div:last-child #icon {
-  background-color: var(--primary3);
-}
-
-#dashboard-section .main-dashboard .insights .insight-card .progress {
+#dashboard-section .home .insights .insight-card .progress {
   min-height: 8rem;
   display: flex;
   flex-direction: row;
@@ -688,53 +663,32 @@ section {
   position: relative;
   background-color: transparent;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .progress .left {
+#dashboard-section .home .insights .insight-card .progress .left {
   width: 100%;
   display: block;
   text-align: center;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .progress .left h5 {
+#dashboard-section .home .insights .insight-card .progress .left h5 {
   font-weight: bold;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .progress .left h4 {
+#dashboard-section .home .insights .insight-card .progress .left h4 {
   font-weight: 800;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .progress svg {
+#dashboard-section .home .insights .insight-card .progress svg {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   margin-left: 2rem;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .progress svg circle {
+#dashboard-section .home .insights .insight-card .progress svg circle {
   transform: translate(10%, 20%);
   fill: none;
   stroke: var(--primary1);
   stroke-width: 8;
   stroke-linecap: round;
 }
-
-#dashboard-section .main-dashboard .insights .sales .progress svg circle {
-  stroke-dasharray: 200;
-  stroke-dashoffset: -30;
-}
-
-#dashboard-section .main-dashboard .insights .expenses .progress svg circle {
-  stroke-dasharray: 140;
-  stroke-dashoffset: -10;
-}
-
-#dashboard-section .main-dashboard .insights .income .progress svg circle {
-  stroke-dasharray: 170;
-  stroke-dashoffset: -20;
-}
-
-#dashboard-section .main-dashboard .insights .insight-card .progress p {
+#dashboard-section .home .insights .insight-card .progress p {
   font-size: 1.1rem;
   margin: 0;
   color: var(--color-info-dark);
@@ -743,8 +697,7 @@ section {
   top: 50%;
   transform: translateY(-50%);
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .number {
+#dashboard-section .home .insights .insight-card .progress .number {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -752,15 +705,24 @@ section {
   align-items: flex-start;
   gap: 0.3rem;
 }
-
-#dashboard-section .main-dashboard .insights .insight-card .number small {
+#dashboard-section .home .insights .insight-card .progress .number small {
   font-size: 1rem;
   margin: 0;
   color: var(--color-info-dark);
 }
-
-/************** RECENT ORDER **************/
-.main-dashboard .recent-order {
+#dashboard-section .home .insights .insight-card.sales .progress svg circle {
+  stroke-dasharray: 200;
+  stroke-dashoffset: -30;
+}
+#dashboard-section .home .insights .insight-card.expenses .progress svg circle {
+  stroke-dasharray: 140;
+  stroke-dashoffset: -10;
+}
+#dashboard-section .home .insights .insight-card.income .progress svg circle {
+  stroke-dasharray: 170;
+  stroke-dashoffset: -20;
+}
+#dashboard-section .recent-order {
   width: 99%;
   display: block;
   margin: 1rem auto;
@@ -770,8 +732,7 @@ section {
   background-color: var(--white);
   box-shadow: var(--box-shadow2);
 }
-
-.main-dashboard .recent-order h3 {
+#dashboard-section .recent-order h3 {
   text-align: left;
   font-weight: bold;
   font-size: 18px;
@@ -779,8 +740,7 @@ section {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
-
-.main-dashboard .recent-order table {
+#dashboard-section .recent-order table {
   width: 100%;
   padding: 3rem;
   margin: auto;
@@ -788,53 +748,42 @@ section {
   border-radius: 0;
   background-color: transparent;
 }
-
-.main-dashboard .recent-order table thead {
+#dashboard-section .recent-order table thead {
   padding: 6rem;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
 }
-
-.main-dashboard .recent-order table thead tr {
+#dashboard-section .recent-order table thead tr {
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   padding: 7rem;
 }
-
-.main-dashboard .recent-order table thead tr th {
+#dashboard-section .recent-order table thead tr th {
   padding: 1rem 0;
   font-size: 1.2rem;
   border-right: 1px solid var(--gray-color8);
 }
-
-.main-dashboard .recent-order table thead tr th:last-child {
+#dashboard-section .recent-order table thead tr th:last-child {
   border-right: none;
 }
-
-.main-dashboard .recent-order table tbody tr:first-child {
-  border-top: 1px solid var(--gray-color8);
-}
-
-.main-dashboard .recent-order table tbody tr {
+#dashboard-section .recent-order table tbody tr {
   border-bottom: 1px solid var(--gray-color8);
 }
-
-.main-dashboard .recent-order table tbody tr td {
+#dashboard-section .recent-order table tbody tr:first-child {
+  border-top: 1px solid var(--gray-color8);
+}
+#dashboard-section .recent-order table tbody tr:last-child {
+  border-bottom: none;
+}
+#dashboard-section .recent-order table tbody tr td {
   padding: 0.6rem 0;
   font-size: 1.1rem;
   border-right: 1px solid var(--gray-color8);
 }
-
-.main-dashboard .recent-order table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.main-dashboard .recent-order table tbody tr td:last-child {
+#dashboard-section .recent-order table tbody tr td:last-child {
   border-right: none;
 }
-
-/*================= RIGHT ASIDE =========================*/
-.main-dashboard .right-aside {
+#dashboard-section .right-aside {
   flex: 1 1 5rem;
   display: flex;
   flex-direction: column;
@@ -846,8 +795,7 @@ section {
   padding-left: 1rem;
   margin: 0;
 }
-
-.main-dashboard .right-aside .block {
+#dashboard-section .right-aside .block {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -860,14 +808,12 @@ section {
   gap: 1.6rem;
   border-radius: 1rem;
 }
-
-.main-dashboard .right-aside .block:nth-child(3) {
+#dashboard-section .right-aside .block:nth-child(3) {
   padding: 0;
   background-color: transparent;
   box-shadow: none;
 }
-
-.main-dashboard .right-aside .block-title {
+#dashboard-section .right-aside .block-title {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: left;
@@ -877,34 +823,27 @@ section {
   margin: 0.2rem 0 0;
   border-bottom: 1.5px solid var(--light-yellow1);
 }
-
-.main-dashboard .right-aside .block:nth-child(3) .block-title {
+#dashboard-section .right-aside .block:nth-child(3) .block-title {
   border-bottom: 0;
   padding-bottom: 0;
 }
-
-/*****RIGHT ASIDE***** active users block **************/
-.main-dashboard .right-aside .active-users .images {
+#dashboard-section .right-aside .active-users .images {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin: 0;
 }
-
-.main-dashboard .right-aside .active-users .images img {
+#dashboard-section .right-aside .active-users .images img {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
 }
-
-.main-dashboard .right-aside .active-users {
+#dashboard-section .right-aside .active-users {
   margin-top: 3rem;
 }
-
-/*****RIGHT ASIDE***** recent-updates block **************/
-.main-dashboard .right-aside .recent-updates .updates {
+#dashboard-section .right-aside .recent-updates .updates {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -912,15 +851,13 @@ section {
   width: 100%;
   margin: 0;
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update {
+#dashboard-section .right-aside .recent-updates .updates .update {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update .image {
+#dashboard-section .right-aside .recent-updates .updates .update .image {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -929,15 +866,13 @@ section {
   align-items: center;
   background: transparent;
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update .image img {
+#dashboard-section .right-aside .recent-updates .updates .update .image img {
   width: 70%;
   height: 70%;
   object-fit: cover;
   border-radius: 50%;
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update .message {
+#dashboard-section .right-aside .recent-updates .updates .update .message {
   max-width: 17rem;
   display: flex;
   flex-direction: column;
@@ -948,25 +883,20 @@ section {
   padding: 0;
   background: transparent;
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update .message p {
+#dashboard-section .right-aside .recent-updates .updates .update .message p {
   margin: 0;
   font-size: 0.8rem;
   color: var(--color-dark-varient);
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update .message p b {
+#dashboard-section .right-aside .recent-updates .updates .update .message p b {
   color: var(--gray-color1);
   font-size: 0.9rem;
 }
-
-.main-dashboard .right-aside .recent-updates .updates .update .message small {
+#dashboard-section .right-aside .recent-updates .updates .update .message small {
   color: var(--color-dark-varient);
   font-size: 0.8rem;
 }
-
-/*****RIGHT ASIDE***** sales-analytics block **************/
-.main-dashboard .right-aside .sales-analytics .items {
+#dashboard-section .right-aside .sales-analytics .items {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -975,8 +905,7 @@ section {
   gap: 1.2rem;
   background-color: transparent;
 }
-
-.main-dashboard .right-aside .sales-analytics .item {
+#dashboard-section .right-aside .sales-analytics .item {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -987,66 +916,53 @@ section {
   box-shadow: var(--box-shadow2);
   padding: 1rem 1.4rem 1rem 0.6rem;
 }
-
-.main-dashboard .right-aside .sales-analytics .item #icon {
+#dashboard-section .right-aside .sales-analytics .item #icon {
   color: var(--white);
   padding: 0.7rem;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
 }
-
-.main-dashboard .right-aside .sales-analytics .item.online #icon {
+#dashboard-section .right-aside .sales-analytics .item.online #icon {
   background-color: var(--primary1);
 }
-
-.main-dashboard .right-aside .sales-analytics .item.offline #icon {
+#dashboard-section .right-aside .sales-analytics .item.offline #icon {
   background-color: var(--primary2);
 }
-
-.main-dashboard .right-aside .sales-analytics .item.customer #icon {
+#dashboard-section .right-aside .sales-analytics .item.customer #icon {
   background-color: var(--primary3);
 }
-
-.main-dashboard .right-aside .sales-analytics .item .info {
+#dashboard-section .right-aside .sales-analytics .item .info {
   display: block;
 }
-
-.main-dashboard .right-aside .sales-analytics .item .info h3 {
+#dashboard-section .right-aside .sales-analytics .item .info h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
   color: var(--gray-color1);
 }
-
-.main-dashboard .right-aside .sales-analytics .item .info small {
+#dashboard-section .right-aside .sales-analytics .item .info small {
   margin: 0;
   color: var(--color-dark-varient);
 }
-
-.main-dashboard .right-aside .sales-analytics .item h5 {
+#dashboard-section .right-aside .sales-analytics .item h5 {
   font-size: 1rem;
   font-weight: bold;
 }
-
-.main-dashboard .right-aside .sales-analytics .item.online h5 {
+#dashboard-section .right-aside .sales-analytics .item.online h5 {
   color: var(--primary3);
 }
-
-.main-dashboard .right-aside .sales-analytics .item.offline h5 {
+#dashboard-section .right-aside .sales-analytics .item.offline h5 {
   color: var(--primary2);
 }
-
-.main-dashboard .right-aside .sales-analytics .item.customer h5 {
+#dashboard-section .right-aside .sales-analytics .item.customer h5 {
   color: var(--primary3);
 }
-
-.main-dashboard .right-aside .sales-analytics .item h4 {
+#dashboard-section .right-aside .sales-analytics .item h4 {
   font-size: 1.1rem;
   font-weight: bold;
 }
-
-.main-dashboard .right-aside .add-btn {
+#dashboard-section .right-aside .add-btn {
   width: 100%;
   font-size: 1.2rem;
   text-align: center;
@@ -1060,20 +976,16 @@ section {
   border: 1px dashed var(--gray-color2);
   transition: all 0.3s linear;
 }
-
-.main-dashboard .right-aside .add-btn #icon {
+#dashboard-section .right-aside .add-btn #icon {
   margin-right: 0.7rem;
   font-size: 1.3rem;
 }
-
-.main-dashboard .right-aside .add-btn:hover {
+#dashboard-section .right-aside .add-btn:hover {
   color: var(--white);
   background-color: var(--primary4);
   border: 1px dashed var(--white);
 }
-
-/*****RIGHT ASIDE***** all-users block **************/
-.main-dashboard .right-aside .all-users .buttons {
+#dashboard-section .right-aside .all-users .buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1081,13 +993,11 @@ section {
   gap: 1.5rem;
   width: 100%;
 }
-
-.main-dashboard .right-aside .all-users .buttons .active {
+#dashboard-section .right-aside .all-users .buttons .active {
   color: var(--white);
   background-color: var(--light-green7);
 }
-
-.main-dashboard .right-aside .all-users .items {
+#dashboard-section .right-aside .all-users .items {
   width: 80%;
   margin: 0;
   margin-left: 1rem;
@@ -1097,22 +1007,19 @@ section {
   gap: 1.5rem;
   background-color: transparent;
 }
-
-.main-dashboard .right-aside .all-users .items .item {
+#dashboard-section .right-aside .all-users .items .item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-
-.main-dashboard .right-aside .all-users .items .item h4 {
+#dashboard-section .right-aside .all-users .items .item h4 {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray-color1);
 }
-
-.main-dashboard .right-aside .all-users .items .item img {
+#dashboard-section .right-aside .all-users .items .item img {
   width: 4rem;
   height: 4rem;
   object-fit: cover;
