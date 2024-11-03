@@ -512,10 +512,6 @@ section {
   /*================= MAIN DASHBOARD =========================*/
   /************** RECENT ORDER **************/
   /*================= RIGHT ASIDE =========================*/
-  /*****RIGHT ASIDE***** active users block **************/
-  /*****RIGHT ASIDE***** recent-updates block **************/
-  /*****RIGHT ASIDE***** sales-analytics block **************/
-  /*****RIGHT ASIDE***** all-users block **************/
 }
 #dashboard-section aside {
   padding: 0;
@@ -794,6 +790,10 @@ section {
   padding: 0;
   padding-left: 1rem;
   margin: 0;
+  /*****RIGHT ASIDE***** active users block **************/
+  /*****RIGHT ASIDE***** recent-updates block **************/
+  /*****RIGHT ASIDE***** sales-analytics block **************/
+  /*****RIGHT ASIDE***** all-users block **************/
 }
 #dashboard-section .right-aside .block {
   display: flex;
@@ -827,6 +827,9 @@ section {
   border-bottom: 0;
   padding-bottom: 0;
 }
+#dashboard-section .right-aside .active-users {
+  margin-top: 3rem;
+}
 #dashboard-section .right-aside .active-users .images {
   display: flex;
   flex-direction: row;
@@ -839,9 +842,6 @@ section {
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
-}
-#dashboard-section .right-aside .active-users {
-  margin-top: 3rem;
 }
 #dashboard-section .right-aside .recent-updates .updates {
   display: flex;
