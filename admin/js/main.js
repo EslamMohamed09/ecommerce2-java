@@ -11,12 +11,31 @@ themeToggler.addEventListener("click", () => {
 $('body').css('paddingTop', $('.header').innerHeight() - 1);
 
 
+if(document.querySelector('.header')){
+   let dropmenu = document.querySelector('.header .profile .drop-menu');
+   let rightheader = document.querySelector('.header .right-header');
+   const profileImg = document.querySelector('#profile-img');
+
+   profileImg.onclick = (event) => {
+      event.stopPropagation(); // Prevents the click event from propagating to the document body
+      dropmenu.classList.toggle('dropactive');
+      rightheader.classList.remove('dropactive');
+    };
+   document.body.addEventListener('click', (event) => { // Add click event listener to the document body
+      if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
+        dropmenu.classList.remove('dropactive');
+      }
+   });
+}
+
+
+/******** ASIDE ********/ 
 function loadHtml(selector, htmlContent){
     document.querySelector(selector).innerHTML = htmlContent;
 
     const currentPage = window.location.pathname.split('/').pop();
 
-    document.querySelectorAll('#aside .aside-list li .sidebar-item').forEach(function(item) {
+    document.querySelectorAll('#aside .aside-list li .sidebar-link').forEach(function(item) {
       const itemHref = item.getAttribute('href');
   
       if (itemHref === currentPage) {
@@ -40,13 +59,3 @@ function eyeFunction(eyeIcon) {
     }
 }
 
-// put active btn on aside
-// document.querySelectorAll('#left-aside .aside-list li .sidebar-item').foreach(function (item) {
-// 	item.addEventListener('click', function(){
-//         $(this).addClass('active').siblings().removeClass('active');
-//     }) ;
-// });
-
-
-
-// console.log($('#aside .sidebar .aside-list li'));

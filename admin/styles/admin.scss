@@ -258,7 +258,7 @@ body {overflow-x:hidden;
                       --black2:rgb(52, 65, 82);
                       --white:#202528;
                       --white2:#b0c1cf;
-                      --light-blue2:#dce1eb;
+                      --shin-blue2:#dce1eb;
                       --color-dark:#edeffd;
                       --color-light:rgba(0, 0, 0, 0.4);
                       --color-dark-varient:#a3bdcc;
@@ -269,7 +269,7 @@ body {overflow-x:hidden;
 
 ::-webkit-scrollbar {width:8px;}
 
-::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--light-blue5) 0%, var(--shin-blue) 100%);
+::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--shin-blue5) 0%, var(--shin-blue) 100%);
                            border-radius:10px;}
 
 *::selection {background:var(--gray2);
@@ -324,7 +324,7 @@ select option {border:none;
                font-size:1.3rem;
                color:var(--gray2);
                box-shadow:var(--box-shadow3);
-               background:var(--light-blue);}
+               background:var(--shin-blue);}
 
 .d-flex-r-st-st {display:flex;
                  flex-direction:row;
@@ -617,7 +617,7 @@ button:focus {box-shadow:var(--box-shadow2);}
 .wrong-message span {color:var(--black);
                      font-size:1.4rem;
                      text-transform:uppercase;
-                     color:var(--light-blue5);}
+                     color:var(--shin-blue5);}
 
 .error-msg {font-size:1.2rem;
             font-weight:bold;
@@ -827,7 +827,7 @@ section {margin:0 auto;
                 border-radius:0.3rem !important;
                 box-shadow:var(--box-shadow2);
                 color:var(--gray2);
-                background:radial-gradient(var(--light-blue), var(--gray2));}
+                background:radial-gradient(var(--shin-blue), var(--gray2));}
 
 input {text-transform:none;}
 
@@ -1054,9 +1054,9 @@ input[type="file"] {cursor:pointer;}
               #submit-search {width:3rem;
                               padding:0.3rem 0.6rem;
                               border-radius:0 0.2rem 0.2rem 0;
-                              background-color:var(--light-blue5);
+                              background-color:var(--shin-blue5);
 
-                     #submit-searchi {color:var(--light-blue2);}
+                     #submit-searchi {color:var(--shin-blue2);}
               }
        }
 
@@ -1130,7 +1130,7 @@ table {width:100%;
        }
 
 /* body */
-       tbody tr:nth-child(even) {background-color:var(--light-blue);
+       tbody tr:nth-child(even) {background-color:var(--shin-blue);
 
               tr {
                      td {padding:1.1rem 1rem 2rem;
@@ -1277,17 +1277,45 @@ table {width:100%;
                             small {margin:0;
                                   color:var(--color-info-dark);}
                      }
+                     
+                     img {border-radius:50%;
+                          object-fit:cover;
+                          width:2.5rem;
+                          height:2.5rem;
+                          cursor:pointer;}
 
-                     .image {width:2.5rem;
-                             height:2.5rem;
-                             margin:auto;
-                             display:flex;
+                     .drop-menu {position:absolute;
+                                 top:100%;
+                                 right:0.1rem;
+                                 width:12rem;
+                                 padding:0;
+                                 border-radius:0.5rem;
+                                 background-color:var(--white);
+                                 box-shadow:var(--box-shadow11);
+                                 animation:fadeIn 0.2s linear;
+                                 display:none;
 
-                            img {border-radius:50%;
-                                 object-fit:cover;
-                                 width:100%;
-                                 height:100%;}
+                            .drop-link {padding:0.4rem 0.6rem 0.4rem 1rem;
+                                        width:100%;
+                                        color:var(--gray10);
+                                        font-size:1rem;
+                                        font-weight:bold;
+
+                                   &:first-child {border-bottom:1px solid var(--gray3);
+                                                  background-color:var(--blue3);
+                                                  border-top-left-radius:0.5rem;
+                                                  border-top-right-radius:0.5rem;}
+
+                                   &:last-child {border-bottom-left-radius:0.5rem;
+                                                 border-bottom-right-radius:0.5rem;}
+
+                                   &:hover {background-color:var(--blue3);}
+                            }
+
+                            &.dropactive {display:flex;}
                      }
+
+                     @keyframes fadeIn { 0% {transform:translateY(1rem);} }
               }
        }                         
 
@@ -1365,7 +1393,7 @@ table {width:100%;
                             li {
                                    &:last-child {margin-top:6rem;}
 
-                                   .sidebar-item {display:flex;
+                                   .sidebar-link {display:flex;
                                                   flex-direction:row;
                                                   align-items:center;
                                                   gap:1.8rem;
@@ -1875,7 +1903,7 @@ table {width:100%;
 
                                    .blocks .block h5 {margin-bottom:0.5rem;
                                                       font-size:1.2rem;
-                                                      color:var(--light-blue5);}
+                                                      color:var(--shin-blue5);}
 
                                    /* open/close */
                                    .title-area {
@@ -2191,7 +2219,7 @@ table {width:100%;
                                border-radius:0.2rem;
                                color:var(--gray-color3);
                                font-size:1.4rem;
-                               background:radial-gradient(var(--light-blue), var(--gray-color9));
+                               background:radial-gradient(var(--shin-blue), var(--gray-color9));
 
                             .tag {display:inline-block;
                                   padding:0.2rem 0.5rem;
