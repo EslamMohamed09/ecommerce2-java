@@ -791,73 +791,76 @@ section {padding:0;
 
 /*****RIGHT ASIDE***** sales-analytics block **************/
                      .sales-analytics .items {width:100%;
-                                                      display:flex;
-                                                      flex-direction:column;
-                                                      padding:0;
-                                                      margin:0;
-                                                      gap:1.2rem;
-                                                      background-color:transparent;}
+                                              display:flex;
+                                              flex-direction:column;
+                                              padding:0;
+                                              margin:0;
+                                              gap:1.2rem;
+                                              background-color:transparent;
 
-                     .sales-analytics .item {width:100%;
-                                                     display:flex;
-                                                     flex-direction:row;
-                                                     justify-content:space-between;
-                                                     align-items:flex-start;
-                                                     border-radius:1rem;
-                                                     background-color:var(--white);
-                                                     box-shadow:var(--box-shadow2);
-                                                     padding:1rem 1.4rem 1rem 0.6rem;}
+                            .item {width:100%;
+                                   display:flex;
+                                   flex-direction:row;
+                                   justify-content:space-between;
+                                   align-items:flex-start;
+                                   border-radius:1rem;
+                                   background-color:var(--white);
+                                   box-shadow:var(--box-shadow2);
+                                   padding:1rem 1.4rem 1rem 0.6rem;
 
-                     .sales-analytics .item #icon {color:var(--white);
-                                                           padding:0.7rem;
-                                                           width:2.8rem;
-                                                           height:2.8rem;
-                                                           border-radius:50%;}
+                                   #icon {color:var(--white);
+                                          padding:0.7rem;
+                                          width:2.8rem;
+                                          height:2.8rem;
+                                          border-radius:50%;}
 
-                     .sales-analytics .item.online #icon {background-color: var(--primary1);}
-                     .sales-analytics .item.offline #icon {background-color: var(--primary2)}
-                     .sales-analytics .item.customer #icon {background-color: var(--primary3)}
+                                   &.online #icon {background-color: var(--primary1);}
+                                   &.offline #icon {background-color: var(--primary2)}
+                                   &.customer #icon {background-color: var(--primary3)}
 
+                                   .info {display:block;
 
-                     .sales-analytics .item .info {display:block;}
+                                          h3 {font-size:1.1rem;
+                                              font-weight:bold;
+                                              margin:0;
+                                              color:var(--gray-color1);}
 
-                     .sales-analytics .item .info h3 {font-size:1.1rem;
-                                                              font-weight:bold;
-                                                              margin:0;
-                                                              color:var(--gray-color1);}
+                                          small {margin:0;
+                                                 color:var(--color-dark-varient);}
+                                   }
 
-                     .sales-analytics .item .info small {margin:0;
-                                                                 color:var(--color-dark-varient);}
+                                   h5 {font-size:1rem;
+                                       font-weight:bold;}
 
-                     .sales-analytics .item h5 {font-size:1rem;
-                                                        font-weight:bold;}
+                                   &.online h5 {color:var(--primary3);}
+                                   &.offline h5 {color:var(--primary2);}
+                                   &.customer h5 {color:var(--primary3);}
 
-                     .sales-analytics .item.online h5 {color:var(--primary3);}
-                     .sales-analytics .item.offline h5 {color:var(--primary2);}
-                     .sales-analytics .item.customer h5 {color:var(--primary3);}
+                                    h4 {font-size:1.1rem;
+                                        font-weight:bold;}
 
-                     .sales-analytics .item h4 {font-size:1.1rem;
-                                                        font-weight:bold;}
+                                   .add-btn {width:100%;
+                                             font-size:1.2rem;
+                                             text-align:center;
+                                             text-transform:capitalize;
+                                             font-weight:bold;
+                                             padding:0.9rem 0.4rem;
+                                             color:var(--gray-color2);
+                                             background-color:transparent;
+                                             border-radius:1rem;
+                                             outline:none;
+                                             border:1px dashed var(--gray-color2);
+                                             transition:all 0.3s linear;
 
-                     .add-btn {width:100%;
-                                       font-size:1.2rem;
-                                       text-align:center;
-                                       text-transform:capitalize;
-                                       font-weight:bold;
-                                       padding:0.9rem 0.4rem;
-                                       color:var(--gray-color2);
-                                       background-color:transparent;
-                                       border-radius:1rem;
-                                       outline:none;
-                                       border:1px dashed var(--gray-color2);
-                                       transition:all 0.3s linear;}
+                                          #icon {margin-right:0.7rem;
+                                                 font-size:1.3rem;}
 
-                     .add-btn #icon {margin-right:0.7rem;
-                                             font-size:1.3rem;}
-
-                     .add-btn:hover {color:var(--white);
-                                             background-color:var(--primary4);
-                                             border:1px dashed var(--white);}
+                                          &:hover {color:var(--white);
+                                                   background-color:var(--primary4);
+                                                   border:1px dashed var(--white);}
+                                   }
+                            }
+                     }
 
 /*****RIGHT ASIDE***** all-users block **************/
                      .all-users .buttons {display:flex;

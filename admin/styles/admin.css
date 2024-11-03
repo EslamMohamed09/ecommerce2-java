@@ -905,7 +905,7 @@ section {
   gap: 1.2rem;
   background-color: transparent;
 }
-#dashboard-section .right-aside .sales-analytics .item {
+#dashboard-section .right-aside .sales-analytics .items .item {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -916,53 +916,53 @@ section {
   box-shadow: var(--box-shadow2);
   padding: 1rem 1.4rem 1rem 0.6rem;
 }
-#dashboard-section .right-aside .sales-analytics .item #icon {
+#dashboard-section .right-aside .sales-analytics .items .item #icon {
   color: var(--white);
   padding: 0.7rem;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
 }
-#dashboard-section .right-aside .sales-analytics .item.online #icon {
+#dashboard-section .right-aside .sales-analytics .items .item.online #icon {
   background-color: var(--primary1);
 }
-#dashboard-section .right-aside .sales-analytics .item.offline #icon {
+#dashboard-section .right-aside .sales-analytics .items .item.offline #icon {
   background-color: var(--primary2);
 }
-#dashboard-section .right-aside .sales-analytics .item.customer #icon {
+#dashboard-section .right-aside .sales-analytics .items .item.customer #icon {
   background-color: var(--primary3);
 }
-#dashboard-section .right-aside .sales-analytics .item .info {
+#dashboard-section .right-aside .sales-analytics .items .item .info {
   display: block;
 }
-#dashboard-section .right-aside .sales-analytics .item .info h3 {
+#dashboard-section .right-aside .sales-analytics .items .item .info h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
   color: var(--gray-color1);
 }
-#dashboard-section .right-aside .sales-analytics .item .info small {
+#dashboard-section .right-aside .sales-analytics .items .item .info small {
   margin: 0;
   color: var(--color-dark-varient);
 }
-#dashboard-section .right-aside .sales-analytics .item h5 {
+#dashboard-section .right-aside .sales-analytics .items .item h5 {
   font-size: 1rem;
   font-weight: bold;
 }
-#dashboard-section .right-aside .sales-analytics .item.online h5 {
+#dashboard-section .right-aside .sales-analytics .items .item.online h5 {
   color: var(--primary3);
 }
-#dashboard-section .right-aside .sales-analytics .item.offline h5 {
+#dashboard-section .right-aside .sales-analytics .items .item.offline h5 {
   color: var(--primary2);
 }
-#dashboard-section .right-aside .sales-analytics .item.customer h5 {
+#dashboard-section .right-aside .sales-analytics .items .item.customer h5 {
   color: var(--primary3);
 }
-#dashboard-section .right-aside .sales-analytics .item h4 {
+#dashboard-section .right-aside .sales-analytics .items .item h4 {
   font-size: 1.1rem;
   font-weight: bold;
 }
-#dashboard-section .right-aside .add-btn {
+#dashboard-section .right-aside .sales-analytics .items .item .add-btn {
   width: 100%;
   font-size: 1.2rem;
   text-align: center;
@@ -976,11 +976,11 @@ section {
   border: 1px dashed var(--gray-color2);
   transition: all 0.3s linear;
 }
-#dashboard-section .right-aside .add-btn #icon {
+#dashboard-section .right-aside .sales-analytics .items .item .add-btn #icon {
   margin-right: 0.7rem;
   font-size: 1.3rem;
 }
-#dashboard-section .right-aside .add-btn:hover {
+#dashboard-section .right-aside .sales-analytics .items .item .add-btn:hover {
   color: var(--white);
   background-color: var(--primary4);
   border: 1px dashed var(--white);
