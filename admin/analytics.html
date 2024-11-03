@@ -4,15 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-height, initial-scale=1.0">
-  <meta name="describtion" content="">
+  <meta name="description" content="">
   <meta name="keywords" content="">
   <title>analytics</title>
-  <link rel="stylesheet" href="css/all.css"> 
-  <link rel="stylesheet" href="css/fontawesome.css">
-  <link rel="stylesheet" href="css/solid.css">
-  <link rel="stylesheet" href="css/brands.css">  
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="styles/all.css">  
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/admin.css">
 </head>
 
 <body>
@@ -79,101 +76,7 @@
 
 <section class="dashboard-section" id="dashboard-section">
 
-  <aside id="aside">  
-
-    <div class="sidebar">
-
-     <ul class="aside-list">
-
-      <li>
-        <a href="dashboard.html" class="sidebar-item">
-          <i class="fas fa-th" id="icon"></i>
-          <h3>dashboard</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="customers.html" class="sidebar-item">
-          <i class="fas fa-user" id="icon"></i>
-          <h3>customers</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="category.html" class="sidebar-item">
-          <i class="fa-solid fa-layer-group" id="icon"></i>
-          <h3>categories</h3>
-        </a> 
-      </li>
-      
-      <li>
-        <a href="orders.html" class="sidebar-item">
-          <i class="fas fa-clipboard-list" id="icon"></i>
-          <h3>orders</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="analytics.html" class="sidebar-item active">
-          <i class="fas fa-chart-line" id="icon"></i>
-          <h3>analytics</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="messages.html" class="sidebar-item">
-          <i class="fas fa-envelope" id="icon"></i>
-          <h3>messages</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="products.html" class="sidebar-item">
-          <i class="fas fa-store-alt" id="icon"></i>
-          <h3>products</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="file_manager.html" class="sidebar-item">
-          <i class="fas fa-folder" id="icon"></i>
-          <h3>file manager</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="reports.html" class="sidebar-item">
-          <i class="fas fa-exclamation-triangle" id="icon"></i>
-          <h3>reports</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="settings.html" class="sidebar-item">
-          <i class="fas fa-cog" id="icon"></i>
-          <h3>settings</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="add_product.html" class="sidebar-item">
-          <i class="fas fa-cart-plus" id="icon"></i>
-          <h3>add product</h3>
-        </a> 
-      </li>
-
-      <li>
-        <a href="#" class="sidebar-item">
-          <i class="fas fa-sign-out-alt" id="icon"></i>
-          <h3>logout</h3>
-        </a>
-      </li>
-
-     </ul>
-
-    </div>
-
-  </aside>
+  <aside id="aside"></aside>
 
   <div class="main-data main-analytics"> 
 
@@ -184,19 +87,12 @@
 </section> <!-- ===== Main-Data ==== -->
 
 
-
-
-
-
-
-
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/all.min.js"></script>
-<script src="js/solid.js"></script>
 <script src="js/solid.min.js"></script>
-<script src="js/regular.js"></script>
-<script src="js/regular.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/aside.js"></script>
+<script>loadHtml('#aside', asideContent)</script>
 </body>
 </html>
