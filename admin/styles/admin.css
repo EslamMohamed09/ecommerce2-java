@@ -1535,7 +1535,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #header .left-header .logo h2 {
   margin: 0;
   font-weight: 800;
-  color: var(--primary1);
+  color: var(--shin-blue6);
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.8px;
@@ -1578,7 +1578,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   cursor: pointer;
 }
 #header .right-header .theme-toggler .active {
-  background-color: var(--primary1);
+  background-color: var(--shin-blue6);
 }
 #header .right-header .profile {
   display: flex;
@@ -1720,12 +1720,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin: 0;
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-item:hover {
-  border-left: 5px solid var(--light-blue3);
+  border-left: 5px solid var(--shin-blue6);
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-item.active, #dashboard-section aside .sidebar .aside-list li .sidebar-item:focus {
   color: var(--white);
-  background-color: var(--primary1);
-  border-left: 5px solid var(--light-blue3);
+  background-color: var(--shin-blue4);
+  border-left: 5px solid var(--shin-blue6);
 }
 @media (min-width: 711px) and (max-width: 1340px) {
   #dashboard-section #dashboard-section aside {
@@ -1792,7 +1792,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background: transparent;
 }
 #dashboard-section .home .insights > div:first-child #icon {
-  background-color: var(--primary1);
+  background-color: var(--shin-blue6);
 }
 #dashboard-section .home .insights > div:nth-child(2) #icon {
   background-color: var(--primary2);
@@ -1848,7 +1848,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section .home .insights .insight-card .progress svg circle {
   transform: translate(10%, 20%);
   fill: none;
-  stroke: var(--primary1);
+  stroke: var(--shin-blue6);
   stroke-width: 8;
   stroke-linecap: round;
 }
@@ -2092,7 +2092,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 50%;
 }
 #dashboard-section .right-aside .sales-analytics .items .item.online #icon {
-  background-color: var(--primary1);
+  background-color: var(--shin-blue6);
 }
 #dashboard-section .right-aside .sales-analytics .items .item.offline #icon {
   background-color: var(--primary2);

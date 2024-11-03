@@ -29,3 +29,11 @@ function eyeFunction(eyeIcon) {
       eyeIcons[1].style.display = "block";
     }
 }
+
+// put active btn on aside
+document.querySelectorAll('#aside .sidebar .aside-list li .sidebar-item').foreach(function (item) {
+	item.addEventListener('click', function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    }) ;
+});
+console.log($('#aside .sidebar .aside-list li'));
