@@ -1,0 +1,529 @@
+<!DOCTYPE HTML>
+<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-height, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>users</title>
+  <link rel="stylesheet" href="styles/all.css"> 
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body> 
+<header class="header" id="header"></header>
+
+<section class="dashboard-section" id="dashboard-section"> <!-- Manage Users -->
+
+  <aside id="aside"></aside>
+
+  <div class="main-data manage-members-page">
+
+    <h1 class="section-heading">Manage users</h1>
+
+    <div class="managing-table"> <!-- manage members -->
+
+        <div class="table-details d-flex-r-end-c">
+
+          <form class="form-search d-flex-r-st-c" action="member_search.php" method="POST">
+              <input type="search" name="search" placeholder="Search User" id="searchinput-members">
+              <button type="submit" name="submit-search" id="submit-search"><i class="fas fa-search" id="submit-searchi"></i></button>
+          </form>
+
+          <div class="counting">
+              <span>all users</span> 
+              <span class="no">12</span>
+          </div>
+
+          <div class="ordering-btns">
+            <a href="?sort=ASC">ASC</a> /
+            <a href="?sort=DESC">DESC</a> 
+          </div>
+
+        </div>
+
+        <form action="" method="POST" style="width:100%;"> <!-- multiple-delete & multiple-approve -->
+
+          <table>
+
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="first-all-checkbox" class="checkboxinput"></th>
+                <th><label for="first-all-checkbox">Username</label></th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Registerd Date</th>
+                <th>Rank</th>
+                <th>status</th>
+                <th>#ID</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td><input type="checkbox" id="user-name-1" name="checkbox[]" class="checkboxinput" value="1"></td>
+                <td>
+                  <label for="user-name-1"> eslam
+                  <div class="buttons"> 
+                    <a href="#" target="_blank">edit</a>|
+                    <a href="#" class="confirm">delete</a>| 
+                      <i class="fas fa-check"></i>
+                  </div> 
+                </td>
+                <td>eslammohamed@gmail.com</td>
+                <td>eslam mohamed fahmi</td>
+                <td>2023</td>
+                <td><p style="color:green;">Admin</p></td>
+                <td><p class="activated">activated</p></td>
+                <td>1</td>
+              </tr>
+
+              <tr>
+                <td><input type="checkbox" id="user-name-1" name="checkbox[]" class="checkboxinput" value="1"></td>
+                <td>
+                  <label for="user-name-1"> eslam
+                  <div class="buttons"> 
+                    <a href="#" target="_blank">edit</a>|
+                    <a href="#" class="confirm">delete</a>| 
+                    <a href="#" class="not-active">Activate</a>
+                  </div> 
+                </td>
+                <td>eslammohamed@gmail.com</td>
+                <td>eslam mohamed fahmi</td>
+                <td>2023</td>
+                <td><p style="color:#b18200;">User</p></td>
+                <td><p class="not-activated">Not Active</p></td>
+                <td>1</td>
+              </tr>
+
+            </tbody>
+
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="second-all-checkbox" class="checkboxinput"></th>
+                <th><label for="second-all-checkbox">name</label></th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Registerd Date</th>
+                <th>Rank</th>
+                <th>status</th>
+                <th>#ID</th>
+              </tr>
+            </thead>
+        
+          </table>
+
+          <div class="pagination">
+              
+            <a href="#" class="pagination-link">previous</a>
+
+            <a href="#" class="pagination-link active">1</a>
+            <a href="#" class="pagination-link">2</a>
+
+            <a href="#" class="pagination-link">next</a>
+
+          </div>
+
+          <div class="submit-buttons d-flex-r-st-c" style="gap:1rem;margin-left:1rem;width:fit-content;display:none;">
+            <input type="submit" name="multipledelete" value="delete" class="btn2" style="padding:0.5rem 1rem;">
+            <input type="submit" name="multipleapprove" value="approve" class="btn2" style="padding:0.5rem 1rem;">
+          </div>
+
+        </form>
+
+    </div> <!-- End managing-table -->
+
+    <button class="tab-btn collapsible" id="collapsible">Add User</button>
+
+    <div class="add-member-area collapsible-page" style="display:none;"> <!-- # Add User Area # -->
+
+      <form class="add-member-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
+
+        <div class="add-user-info form-block d-flex-c-st-st"> <!-- add user info -->
+
+          <div class="sub-heading"> <!-- Title -->
+              <h3 class="sub-title">personal information</h3>
+              <i class="fas fa-star"></i>
+          </div>
+          
+          <div class="input-box row">  <!-- Username -->
+            <label class="col-sm-2 control-label">Username</label>
+            <div class="col-md-10 col-sm-10">
+              <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" class="form_control" required/>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Password -->
+            <label class="col-sm-2 control-label">Password</label>
+            <div class="col-md-10 col-sm-10 pass-col"> 
+              <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="form_control" id="passInput" required/>
+              <div class="eye" onclick="eyeFunction()">
+                <i class="fa fa-eye" id="faeye-1"></i> 
+                <i class="fa fa-eye-slash" id="faeye-2"></i> 
+              </div>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- FullName -->
+            <label class="col-sm-2 control-label">Full Name</label>
+            <div class="col-md-10 col-sm-10">
+              <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" class="form_control" required/>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Gender -->
+            <label class="col-sm-2 control-label">Gender</label>
+            <div class="col-md-10 col-sm-10">
+              <select name="gender" class="form_control">
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Rank -->
+            <label class="col-sm-2 control-label">Rank</label>
+            <div class="col-md-10 col-sm-10">
+              <select name="rank" class="form_control">
+                <option value="0">user</option>    
+                <option value="1">admin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="double-input-box d-flex-r-bt-c">  <!-- Facebook, LinkedIn -->
+
+            <div class="input-box row">  <!-- Facebook -->
+              <label class="col-sm-4 control-label">Facebook</label>
+              <div class="col-md-8 col-sm-8">
+                <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" class="form_control"/>
+              </div>  
+            </div>
+
+            <div class="input-box row">  <!-- LinkedIn -->
+              <label class="col-sm-3 control-label">LinkedIn</label>
+              <div class="col-md-9 col-sm-9">
+                <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" class="form_control"/>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="double-input-box d-flex-r-bt-c">  <!-- Email, Whatsapp -->
+
+            <div class="input-box row">  <!-- Email -->
+              <label class="col-sm-4 control-label">Email</label>
+              <div class="col-md-8 col-sm-8">
+                <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" class="form_control" required/>
+              </div>
+            </div>
+
+            <div class="input-box row">  <!-- whatsapp -->
+              <label class="col-sm-3 control-label">Whatsapp</label>
+              <div class="col-md-9 col-sm-9">
+                <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" class="form_control"/>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="input-box row">  <!-- Country -->
+            <label class="col-sm-2 control-label">Country</label>
+            <div class="col-md-10 col-sm-10">
+              <select name="country" id="select_country" class="form_control">
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Egypt">Egypt</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Estonia">Estonia</option>
+              </select>
+            </div>
+          </div>
+
+        </div> <!-- End add user info -->
+
+        <div class="form-blocks" id="certificationsContainer"></div> <!-- |CERTIFICATIONS| -->
+        <div class="add-delete-btns d-flex-r-end-st" style="margin-bottom:1rem;gap:1rem;">
+          <button type="button" id="addCertificationBtn" class="btn2">Add Certification</button>
+          <button type="button" id="deleteCertificationBtn" class="btn2" style="display:none;">Delete Certification</button>
+        </div>
+        <p id="maxCertificationMessage" style="color:red;display:none;text-align:right;">Maximum 4 certifications reached.</p>
+
+        <div id="skillsContainer"></div> <!-- |SKILLS| -->
+        <div class="add-delete-btns d-flex-c-end-end" style="margin-top:1rem;margin-bottom:1rem;gap:1rem;">
+          <button type="button" id="addSkillsBtn" class="btn2">Add Skills</button>
+          <button type="button" class="btn2" id="deleteSkillsBtn" style="display:none;">Delete Skills</button>
+        </div>
+
+        <input type="submit" name="addmemberdata" value="add user" class="btn"/>  <!-- Add Button -->
+
+      </form>
+
+    </div> <!-- End add-member-area -->
+
+  </div> <!-- End manage-members-page -->
+
+</section>
+
+<section class="dashboard-section" id="dashboard-section">
+
+  <aside id="aside"></aside>
+
+  <div class="main-data edit-member-page">
+
+    <h1 class="edit-heading">edit user eslam mohamed</h1>
+
+    <div class="sub-heading"> <!--- sub-heading --->
+      <h3 class="sub-title">personal information</h3>
+      <i class="fas fa-star"></i>
+    </div>
+
+    <form class="form-horizontal2 row" action="?do=UpdateMemberInfo" method="POST"> <!-- member info -->
+
+      <input type="hidden" name="memberid" value="2">
+
+      <div class="col-left col-lg-8 col-md-8 col-sm-12">
+    
+        <div class="input-box">  <!-- Username -->
+          <label>Username</label>
+          <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" value="eslam mohamed" class="form_control" required/>
+        </div>
+
+        <div class="input-box">  <!-- Password -->
+          <label class="control-label">Password</label>
+          <div class="pass-input">
+            <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="form_control" id="passInput"/>
+            <div class="passeye" onclick="eyeFunction(this)">
+              <i class="fa fa-eye" style="display:none;"></i> 
+              <i class="fa fa-eye-slash"></i> 
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box">  <!-- FullName -->
+          <label class="control-label">Full Name</label>
+          <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" value="eslam mohamed fahmi" class="form_control" required/>
+        </div>
+
+        <div class="input-box">  <!-- Gender -->
+          <label class="control-label">Gender</label>
+          <select name="gender" class="form_control">
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
+        </div>
+
+        <div class="input-box">  <!-- Rank -->
+          <label class="control-label">Rank</label>
+          <select name="rank" class="form_control">
+            <option value="0">user</option>    
+            <option value="1">admin</option>
+          </select>
+        </div>
+
+        <div class="input-box">  <!-- Facebook -->
+          <label class="control-label">Facebook</label>
+          <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" value="eslam mohamed" class="form_control"/>
+        </div>
+
+        <div class="input-box">  <!-- LinkedIn -->
+          <label>LinkedIn</label>
+          <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" value="eslam mohamed" class="form_control"/>
+        </div>
+
+        <div class="input-box">  <!-- Email -->
+          <label>Email</label>
+          <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" value="email@gmail.com" class="form_control" required/>
+        </div>
+
+        <div class="input-box">  <!-- whatsapp -->
+          <label>Whatsapp</label>
+          <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" value="01210203662" class="form_control"/>
+        </div>
+
+        <div class="input-box">  <!-- Country -->
+          <label>Country</label>
+          <select name="country" id="select_country" class="form_control">
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+          </select>
+        </div>
+
+      </div> <!-- End-col-left -->
+
+      <div class="col-right col-lg-4 col-md-4 col-sm-12">
+        
+        <div class="input-box d-flex-c-c-c">
+          <label>select your image</label>
+          <input type="file">
+        </div>
+
+      </div> <!-- End col-right -->
+
+      <input type="submit" name="updatememberinfo" value="save user info" class="btn"/>
+
+    </form>
+
+    
+      <form class="edit-certification-form" action="" method="POST"> <!-- Edit Certification -->
+
+        <h2 class="d-flex-r-bt-c">Certification 2<hr></h2>
+
+        <div class="double-input-box d-flex-r-bt-c"> <!-- double inputs: Title, Duration -->
+
+          <div class="input-box row">  <!-- Title -->
+            <label class="col-md-4 col-sm-4">Title</label>
+            <div class="inputt col-md-8 col-sm-8">
+              <input type="hidden" name="memberid" value="">
+              <input type="hidden" name="cid" value="bachelor degree">
+              <input type="text" name="ctitle" value="bachelor degree" placeholder="Bachelor Of Arts" autocomplete="off" class="form_control"/>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Duration -->
+            <label class="col-md-3 col-sm-3">duration</label>
+            <div class="inputt col-md-9 col-sm-9"><input type="text" name="cduration" value="2020- 2021" placeholder="2013 - 2018" autocomplete="off" class="form_control"/></div>  
+          </div>
+
+        </div>
+
+        <div class="input-box description-input-box row">  <!-- Description -->
+          <label class="col-lg-1 col-md-2 col-sm-2">Description</label>
+          <div class="inputt col-lg-11 col-md-10 col-sm-10"><input type="text" name="cdescription" value="<?php echo $certification['Description'];?>" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off" class="form_control"/></div>  
+        </div>
+
+        <div class="input-box submit-input row">  <!-- Save Certification Button -->
+          <div class="col-md-2 col-sm-6"><input type="submit" name="deletecertification" value="delete" class="btn"/></div>
+          <div class="col-md-10 col-sm-6"><input type="submit" name="savecertification" value="save certification" class="btn"/></div>
+        </div> 
+
+      </form>
+    <?php }} ?>
+
+    
+      <form class="add-certification-form" action="?do=AddMemberCertification" method="POST"> <!-- Add Certification -->
+
+        <div class="block-title2 d-flex-r-bt-c"><hr><h2>Add Certification</h2><hr></div>
+
+        <div class="double-input-box d-flex-r-bt-c"> <!-- double inputs -->
+
+          <div class="input-box row">  <!-- Title -->
+            <label class="control-label col-lg-2 col-md-3 col-sm-3">Title</label>
+            <div class="inputt col-lg-10 col-md-9 col-sm-9">
+              <input type="hidden" name="memberid" value="">
+              <input type="text" name="ctitle" class="form_control" placeholder="Bachelor Of Arts" autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="input-box row">  <!-- Duration -->
+            <label class="control-label col-lg-2 col-md-3 col-sm-3">duration</label>
+            <div class="inputt col-lg-10 col-md-9 col-sm-9"><input type="text" name="cduration" class="form_control" placeholder="2013 - 2018" autocomplete="off"/></div>  
+          </div>
+
+        </div>
+
+        <div class="input-box description-input-box row">  <!-- Description -->
+          <label class="control-label col-lg-1 col-md-2 col-sm-3">Description</label>
+          <div class="inputt col-lg-11 col-md-10 col-sm-9"><input type="text" name="cdescription" class="form_control" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off"/></div>
+        </div>
+
+        <div class="submit-input row">  <!-- Submit Button -->
+          <div class="col-md-12 d-flex-r-c-c">
+            <i class="fa fa-plus"></i>
+            <input type="submit" name="addcertification" value="add certification" class="btn"/>
+          </div>
+        </div> 
+
+      </form>
+
+      <form class="edit-skills-form" action="?do=UpdateMemberSkills" method="POST"> <!-- Edit Skills -->
+
+        <div class="block-title2 d-flex-r-bt-c"><hr><h2>Edit skills</h2><hr></div>
+
+        <div class="skills-blocks d-flex-r-c-c">
+
+          <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
+            <input type="hidden" name="memberid" value="<?php echo $memberid;?>">
+            <label class="control-label">Computer Skills</label>
+            <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
+            <input type="text" value="html - css" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}"  maxlength="28" class="form_control" id="computerSkillsInput">
+            <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+          <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
+            <label class="control-label">Personal Skills</label>
+            <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
+            <input type="text" value="<?php echo $memberskill['personalskill'];?>" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" maxlength="28" class="form_control" id="personalSkillsInput">
+            <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+        </div>
+    
+        <div class="submit-inputs d-flex-r-c-c">  <!-- Submit Buttons -->
+          <input type="submit" name="deleteskills" value="delete skills" class="btn"/>
+          <input type="submit" name="editskills" value="edit skills" class="btn"/>
+        </div>
+
+      </form>
+    
+
+      <form class="add-skills-form" action="?do=AddMemberSkills" method="POST"> <!-- Add Skills -->
+
+        <div class="block-title2 d-flex-r-bt-c"><hr><h2>Add skills</h2><hr></div>
+
+        <div class="skills-blocks d-flex-r-st-st">
+
+          <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
+            <input type="hidden" name="memberid" value="<?php echo $memberid;?>">
+            <label>Computer Skills</label>
+            <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
+            <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}" class="form_control" id="computerSkillsInput">
+            <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+          <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
+            <label>Personal Skills</label>
+            <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
+            <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" class="form_control" id="personalSkillsInput">
+            <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+          </div>
+
+        </div>
+        
+        <div class="d-flex-r-c-c submit-input">  <!-- Submit Button -->
+          <i class="fa fa-plus"></i>
+          <input type="submit" name="addskills" value="add skills" class="btn2"/>
+        </div>
+
+      </form>
+    <?php } ?>
+
+  </div> <!-- End Edit-member-page -->
+
+</section>
+
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/all.min.js"></script>
+<script src="js/solid.min.js"></script>
+<script src="pages/header.js"></script>
+<script src="pages/aside.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
