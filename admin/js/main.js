@@ -1,36 +1,41 @@
-// convert color mode
-const themeToggler = document.getElementById("theme-toggler");
-themeToggler.addEventListener("click", () => {
-    document.body.classList.toggle('dark-theme-variable');
-    
-    themeToggler.querySelector('.fa-moon').classList.toggle('active');
-    themeToggler.querySelector('.fa-adjust').classList.toggle('active');
-    
-});
+function loadHtml(selector, htmlContent){
+  document.querySelector(selector).innerHTML = htmlContent;
+  document.dispatchEvent(new Event("headerLoaded"));
+}
 
-$('body').css('paddingTop', $('.header').innerHeight() - 1);
+document.addEventListener('headerLoaded', () => {
 
+  // convert color mode
+  const themeToggler = document.getElementById("theme-toggler");
+  themeToggler.addEventListener("click", () => {
+      document.body.classList.toggle('dark-theme-variable');
+      
+      themeToggler.querySelector('.fa-moon').classList.toggle('active');
+      themeToggler.querySelector('.fa-adjust').classList.toggle('active');
+  });
 
-if(document.querySelector('.header')){
-   let dropmenu = document.querySelector('.header .profile .drop-menu');
-   let rightheader = document.querySelector('.header .right-header');
-   const profileImg = document.querySelector('#profile-img');
+  if(document.querySelector('.header')){
+    let dropmenu = document.querySelector('.header .profile .drop-menu');
+    let rightheader = document.querySelector('.header .right-header');
+    const profileImg = document.querySelector('#profile-img');
 
-   profileImg.onclick = (event) => {
+    profileImg.onclick = (event) => {
       event.stopPropagation(); // Prevents the click event from propagating to the document body
       dropmenu.classList.toggle('dropactive');
       rightheader.classList.remove('dropactive');
     };
-   document.body.addEventListener('click', (event) => { // Add click event listener to the document body
+    document.body.addEventListener('click', (event) => { // Add click event listener to the document body
       if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
         dropmenu.classList.remove('dropactive');
       }
-   });
-}
+    });
+  }
+});
 
+$('body').css('paddingTop', $('.header').innerHeight() - 1);
 
 /******** ASIDE ********/ 
-function loadHtml(selector, htmlContent){
+function loadAcideHtml(selector, htmlContent){
     document.querySelector(selector).innerHTML = htmlContent;
 
     const currentPage = window.location.pathname.split('/').pop();
