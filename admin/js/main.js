@@ -1,10 +1,11 @@
-function loadHtml(selector, htmlContent){
+function loadHtml(selector, htmlContent, type){
   document.querySelector(selector).innerHTML = htmlContent;
-  document.dispatchEvent(new Event("headerLoaded"));
+
+  if(type === "header"){document.dispatchEvent(new Event("headerLoaded"));}
+  if(type === "aside"){document.dispatchEvent(new Event("asideLoaded"));}
 }
 
 document.addEventListener('headerLoaded', () => {
-
   // convert color mode
   const themeToggler = document.getElementById("theme-toggler");
   themeToggler.addEventListener("click", () => {
@@ -32,22 +33,26 @@ document.addEventListener('headerLoaded', () => {
   }
 });
 
+loadHtml('#header', headerContent, "header");
+
 $('body').css('paddingTop', $('.header').innerHeight() - 1);
 
-/******** ASIDE ********/ 
-function loadAcideHtml(selector, htmlContent){
-    document.querySelector(selector).innerHTML = htmlContent;
-
-    const currentPage = window.location.pathname.split('/').pop();
-
-    document.querySelectorAll('#aside .aside-list li .sidebar-link').forEach(function(item) {
-      const itemHref = item.getAttribute('href');
+/******** ASIDE ********/
+document.addEventListener('asideLoaded', () => {
   
-      if (itemHref === currentPage) {
-          item.classList.add('active');
-      }
-    });
-}
+  const currentPage = window.location.pathname.split('/').pop();
+
+  document.querySelectorAll('#aside .aside-list li .sidebar-link').forEach(function(item) {
+    const itemHref = item.getAttribute('href');
+
+    if (itemHref === currentPage) {
+        item.classList.add('active');
+    }
+  });
+
+});
+
+loadHtml('#aside', asideContent, "aside");
 
 function eyeFunction(eyeIcon) {
     const passInput = eyeIcon.previousElementSibling;
