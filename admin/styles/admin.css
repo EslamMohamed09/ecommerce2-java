@@ -1749,12 +1749,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section aside .sidebar .aside-list li .sidebar-link:hover {
   border-left: 5px solid var(--shin-blue6);
 }
-#dashboard-section aside .sidebar .aside-list li .sidebar-link.active, #dashboard-section aside .sidebar .aside-list li .sidebar-link:focus {
+#dashboard-section aside .sidebar .aside-list li .sidebar-link.active {
   color: var(--white2);
   background-color: var(--shin-blue5);
   border-left: 5px solid var(--shin-blue6);
 }
-#dashboard-section aside .sidebar .aside-list li .sidebar-link.active h3, #dashboard-section aside .sidebar .aside-list li .sidebar-link:focus h3 {
+#dashboard-section aside .sidebar .aside-list li .sidebar-link.active h3 {
   color: var(--white2);
 }
 @media (min-width: 711px) and (max-width: 1340px) {
@@ -3073,6 +3073,67 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 .settings-page .cards .card .content-card .social-group:focus-within #social-link #sicon {
   color: var(--light-blue3);
+}
+
+/*
+ ================================
+ ########## USERS PAGE ##########
+ ================================
+*/
+/*******USERS******
+ # Edit
+*******************/
+.edit-member-page {
+  /* Edit certification */
+}
+.edit-member-page .sub-heading {
+  margin: 1rem 0;
+}
+.edit-member-page .edit-certification-form:first-child {
+  margin-top: 4rem;
+}
+.edit-member-page .edit-certification-form > div {
+  margin: 1.5rem 0;
+}
+.edit-member-page .edit-certification-form h2 {
+  text-align: left;
+  color: var(--shin-blue7);
+}
+.edit-member-page .edit-certification-form h2 hr {
+  flex: 1 1 20rem;
+  color: var(--light-aqua4);
+  margin-left: 0.4rem;
+}
+.edit-member-page .edit-certification-form .control-label {
+  color: var(--shin-blue4);
+}
+.edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {
+  height: 100%;
+  padding: 0.2rem !important;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 577px) {
+  .edit-member-page .edit-certification-form .submit-input .col-md-2 {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 577px) {
+  .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {
+    width: 95%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1288px) {
+  .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {
+    font-size: 0.9rem;
+  }
+}
+/*******MEMBERS******
+ # Add
+*********************/
+/* Add Member Skills */
+.manage-members-page .add-member-area .add-member-form #skillsContainer .add-skills-form .skills-blocks .block {
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=admin.css.map */

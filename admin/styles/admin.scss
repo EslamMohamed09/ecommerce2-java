@@ -1402,13 +1402,11 @@ table {width:100%;
 
                                           &:hover {border-left:5px solid var(--shin-blue6);}
 
-                                          &.active,
-                                          &:focus {color:var(--white2);
-                                                   background-color:var(--shin-blue5);
-                                                   border-left:5px solid var(--shin-blue6);}
+                                          &.active {color:var(--white2);
+                                                    background-color:var(--shin-blue5);
+                                                    border-left:5px solid var(--shin-blue6);}
 
-                                          &.active h3,
-                                          &:focus h3 {color:var(--white2);}
+                                          &.active h3 {color:var(--white2);}
                                    }
                             }
                      }
@@ -2598,3 +2596,51 @@ table {width:100%;
               }
        }
 }
+
+/*
+ ================================
+ ########## USERS PAGE ##########
+ ================================
+*/
+/*******USERS******
+ # Edit
+*******************/
+.edit-member-page {
+
+       .sub-heading {margin:1rem 0;}
+
+       /* Edit certification */
+       .edit-certification-form:first-child {margin-top:4rem;}
+
+       .edit-certification-form > div {margin:1.5rem 0;}
+
+       .edit-certification-form {
+              h2 {text-align:left;
+                  color:var(--shin-blue7);
+
+                 hr {flex:1 1 20rem;
+                     color:var(--light-aqua4);
+                     margin-left:0.4rem;}
+              }
+
+              .control-label {color:var(--shin-blue4);}
+
+              .submit-input .col-md-2 .btn {height:100%;
+                                            padding:0.2rem !important;
+                                            font-size:1.2rem;}
+       }
+}
+
+@media(max-width:577px){ .edit-member-page .edit-certification-form .submit-input .col-md-2 {margin-bottom:0.5rem;} }
+
+@media(min-width:577px){ .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {width:95%;} }
+
+@media(min-width:768px) and (max-width:1288px) { .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {font-size:0.9rem;} }
+
+
+
+/*******MEMBERS******
+ # Add
+*********************/
+/* Add Member Skills */
+.manage-members-page .add-member-area .add-member-form #skillsContainer .add-skills-form .skills-blocks .block {gap:1rem;}
