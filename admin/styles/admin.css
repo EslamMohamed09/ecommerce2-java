@@ -2901,7 +2901,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   /* First Card */
   /* Second Card */
   /* Third Card */
-  /* Fourth Card */
 }
 .settings-page .cards .card h2 {
   font-size: 1.3rem;
@@ -3028,6 +3027,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--gray-color3);
+}
+.settings-page .cards .card .content-card {
+  /* Fourth Card */
 }
 .settings-page .cards .card .content-card .line {
   display: flex;
