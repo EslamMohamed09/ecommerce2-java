@@ -146,7 +146,7 @@ body {
   --dark-blue3:#202733;
   --transparent-blue:#176ec021;
   --transparent-gray:rgba(201, 183, 183, 0.075);
-  --transparent-gray2:rgba(214, 214, 214, 0.192);
+  --transparent-gray10:rgba(214, 214, 214, 0.192);
   --light-gray:#8d8d8d;
   --gray:#f2f2f7;
   --gray1:#f0f0f8;
@@ -255,7 +255,7 @@ body {
 }
 
 *::selection {
-  background: var(--gray2);
+  background: var(--gray10);
   color: #fff;
 }
 
@@ -351,7 +351,7 @@ select option {
   border: none;
   outline: none;
   font-size: 1.3rem;
-  color: var(--gray2);
+  color: var(--gray10);
   box-shadow: var(--box-shadow3);
   background: var(--shin-blue);
 }
@@ -959,6 +959,33 @@ section {
   margin-left: 0.1rem;
 }
 
+.input-control {
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem !important;
+  box-shadow: var(--box-shadow4);
+  color: var(--gray10);
+  background: radial-gradient(var(--gray), var(--gray4));
+}
+
+.input-control2 {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem !important;
+  box-shadow: var(--box-shadow2);
+  color: var(--gray10);
+  background: radial-gradient(var(--shin-blue), var(--gray10));
+}
+
+.control-label {
+  margin: auto 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  color: var(--gray10);
+}
+
 /*
 ==================
  # Forms
@@ -978,26 +1005,14 @@ section {
   flex-wrap: wrap;
 }
 
-.control-label {
-  margin: auto 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: left;
-  color: var(--gray10);
-}
-
-.form_control {
-  padding: 0.7rem 1rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.3rem !important;
-  box-shadow: var(--box-shadow2);
-  color: var(--gray2);
-  background: radial-gradient(rgb(241, 240, 240), var(--gray4));
-}
-
 .form-horizontal .double-input-box {
   padding: 0;
+}
+
+.form-horizontal .double-input-box .input-box {
+  flex: 1 1 20rem;
+  padding: 0;
+  margin: 0 !important;
 }
 
 @media (min-width: 768px) {
@@ -1015,29 +1030,14 @@ section {
     flex-wrap: wrap;
   }
 }
-.form-horizontal .double-input-box .input-box {
-  flex: 1 1 20rem;
-  padding: 0;
-  margin: 0 !important;
-}
-
 @media (min-width: 574px) {
   .form-horizontal .double-input-box .input-box:last-child .control-label {
     text-align: center;
   }
-  .form-horizontal .double-input-box .input-box:first-child .form_control {
+  .form-horizontal .double-input-box .input-box:first-child .input-control {
     margin-left: 0.4rem;
   }
 }
-.form_control2 {
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.3rem !important;
-  box-shadow: var(--box-shadow2);
-  color: var(--gray2);
-  background: radial-gradient(var(--shin-blue), var(--gray2));
-}
-
 input {
   text-transform: none;
 }
@@ -1098,7 +1098,7 @@ input[type=file] {
 .form-horizontal2 .col-left .input-box {
   display: block;
 }
-.form-horizontal2 .col-left .input-box .form_control {
+.form-horizontal2 .col-left .input-box .input-control {
   width: 100%;
 }
 .form-horizontal2 .col-left .input-box .pass-input {
@@ -1210,7 +1210,7 @@ input[type=file] {
   .multi-form-horizontal .double-input-box .input-box:last-child .control-label {
     text-align: center;
   }
-  .multi-form-horizontal .double-input-box .input-box:first-child .form_control {
+  .multi-form-horizontal .double-input-box .input-box:first-child .input-control {
     margin-left: 0.4rem;
   }
 }
@@ -1251,7 +1251,7 @@ input[type=file] {
 .edit-page form .input-boxes .input-box .pass-col {
   flex: 1 1 30rem;
 }
-.edit-page form .input-boxes .input-box .form_control {
+.edit-page form .input-boxes .input-box .input-control {
   flex: 1 1 30rem;
   padding: 0.7rem 1rem;
   box-shadow: var(--box-shadow2);
@@ -1599,7 +1599,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--color-info-dark);
 }
 #header .right-header .profile .info p b {
-  color: var(--gray-color1);
+  color: var(--gray1);
 }
 #header .right-header .profile .info small {
   margin: 0;
@@ -1964,16 +1964,16 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section .recent-order table thead tr th {
   padding: 1rem 0;
   font-size: 1.2rem;
-  border-right: 1px solid var(--gray-color8);
+  border-right: 1px solid var(--gray8);
 }
 #dashboard-section .recent-order table thead tr th:last-child {
   border-right: none;
 }
 #dashboard-section .recent-order table tbody tr {
-  border-bottom: 1px solid var(--gray-color8);
+  border-bottom: 1px solid var(--gray8);
 }
 #dashboard-section .recent-order table tbody tr:first-child {
-  border-top: 1px solid var(--gray-color8);
+  border-top: 1px solid var(--gray8);
 }
 #dashboard-section .recent-order table tbody tr:last-child {
   border-bottom: none;
@@ -1981,7 +1981,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section .recent-order table tbody tr td {
   padding: 0.6rem 0;
   font-size: 1.1rem;
-  border-right: 1px solid var(--gray-color8);
+  border-right: 1px solid var(--gray8);
 }
 #dashboard-section .recent-order table tbody tr td:last-child {
   border-right: none;
@@ -2096,7 +2096,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--color-dark-varient);
 }
 #dashboard-section .right-aside .recent-updates .updates .update .message p b {
-  color: var(--gray-color1);
+  color: var(--gray1);
   font-size: 0.9rem;
 }
 #dashboard-section .right-aside .recent-updates .updates .update .message small {
@@ -2146,7 +2146,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
-  color: var(--gray-color1);
+  color: var(--gray1);
 }
 #dashboard-section .right-aside .sales-analytics .items .item .info small {
   margin: 0;
@@ -2176,11 +2176,11 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   text-transform: capitalize;
   font-weight: bold;
   padding: 0.9rem 0.4rem;
-  color: var(--gray-color2);
+  color: var(--gray10);
   background-color: transparent;
   border-radius: 1rem;
   outline: none;
-  border: 1px dashed var(--gray-color2);
+  border: 1px dashed var(--gray10);
   transition: all 0.3s linear;
 }
 #dashboard-section .right-aside .sales-analytics .items .item .add-btn #icon {
@@ -2224,7 +2224,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section .right-aside .all-users .items .item h4 {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--gray-color1);
+  color: var(--gray1);
 }
 #dashboard-section .right-aside .all-users .items .item img {
   width: 4rem;
@@ -2264,12 +2264,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 50%;
 }
 .main-profile-page .profile-data .col-left h3 {
-  color: var(--gray-color1);
+  color: var(--gray1);
   font-weight: bold;
   margin-top: 0.6rem;
 }
 .main-profile-page .profile-data .col-left p {
-  color: var(--gray-color4);
+  color: var(--gray4);
   font-weight: bold;
 }
 .main-profile-page .profile-data .col-right {
@@ -2321,7 +2321,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   transition: all 0.3s linear;
   cursor: pointer;
   position: relative;
-  background-color: var(--gray-color8);
+  background-color: var(--gray8);
 }
 .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch .fa-xmark {
   width: 0.7rem;
@@ -2332,7 +2332,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   justify-content: center;
   align-items: center;
   color: var(--white);
-  background-color: var(--gray-color7);
+  background-color: var(--gray7);
   transition: all 0.3s linear;
   position: absolute;
   left: 0.3rem;
@@ -2373,7 +2373,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   width: 100%;
   padding: 2rem 0;
   gap: 0.7rem;
-  border-bottom: 1px solid var(--gray-color8);
+  border-bottom: 1px solid var(--gray8);
 }
 .main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details {
   width: 100%;
@@ -2382,7 +2382,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 .main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details p {
   font-size: 1rem;
-  color: var(--gray-color3);
+  color: var(--gray3);
 }
 .main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details p span {
   color: var(--primary-color13);
@@ -2411,11 +2411,11 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 .main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item .desc span {
   font-size: 1.1rem;
-  color: var(--gray-color3);
+  color: var(--gray3);
 }
 .main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item .desc p {
   text-transform: lowercase;
-  color: var(--gray-color4);
+  color: var(--gray4);
 }
 .main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block:last-child {
   border: none;
@@ -2542,7 +2542,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--light-aqua4);
   margin-left: 0.5rem;
 }
-.edit-certification-form .input-box .form_control {
+.edit-certification-form .input-box .input-control {
   width: 100%;
 }
 .edit-certification-form .double-input-box {
@@ -2593,7 +2593,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 .add-certification-form {
   display: block;
 }
-.add-certification-form .form_control {
+.add-certification-form .input-control {
   width: 100%;
 }
 .add-certification-form .double-input-box {
@@ -2626,7 +2626,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
 }
 .add-certification-form .submit-input .fa-plus {
-  color: var(--light-violet);
+  color: var(--violet);
   position: absolute;
   left: 50%;
   transform: translateX(-7.5rem);
@@ -2660,21 +2660,18 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   height: 10rem;
   width: 100%;
   border-radius: 0.2rem;
-  color: var(--gray-color3);
   font-size: 1.4rem;
-  background: radial-gradient(var(--shin-blue), var(--gray-color9));
+  background: radial-gradient(var(--gray), var(--gray4));
 }
 .edit-skills-form .skills-blocks .block textarea .tag {
   display: inline-block;
   padding: 0.2rem 0.5rem;
   margin: 0.2rem;
   border-radius: 0.2rem;
-  border: 1px solid var(--gray-color7) !important;
+  border: 1px solid var(--gray7) !important;
 }
-.edit-skills-form .skills-blocks .block .form_control {
+.edit-skills-form .skills-blocks .block .input-control {
   width: 100%;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--gray-color8);
 }
 .edit-skills-form .skills-blocks .block .btn2 {
   width: 9rem;
@@ -2695,7 +2692,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
 }
 .add-skills-form .submit-input .fa-plus {
-  color: var(--light-violet);
+  color: var(--violet);
   position: absolute;
   left: 50%;
   transform: translateX(-5rem);
@@ -2772,7 +2769,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 .main-category .category-container .category-data .input-group .cat-label {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--gray-color1);
+  color: var(--gray1);
 }
 .main-category .category-container .category-data .input-group.order-input-group #catorder-select, .main-category .category-container .category-data .input-group.order-input-group #catorder-select:focus {
   border: none;
@@ -2824,7 +2821,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   font-size: 1rem;
   cursor: pointer;
 }
-.main-category .category-container .category-data .input-group.voting-input-group .vote-group > div:last-child .form_control {
+.main-category .category-container .category-data .input-group.voting-input-group .vote-group > div:last-child .input-control {
   margin-left: 0.3rem;
 }
 .main-category .category-container .category-data .input-group input[type=submit] {
@@ -2834,22 +2831,22 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 .main-category .category-container table {
   flex: 1 1 38rem;
   background-color: #fff;
-  border: 1px solid var(--gray-color8);
+  border: 1px solid var(--gray8);
   /* head */
   /* body */
 }
 .main-category .category-container table thead {
   padding: 1rem 0.9rem;
   background-color: var(--white);
-  border-bottom: 1px solid var(--gray-color8);
+  border-bottom: 1px solid var(--gray8);
 }
 .main-category .category-container table thead:last-child {
-  border-top: 1px solid var(--gray-color8);
+  border-top: 1px solid var(--gray8);
 }
 .main-category .category-container table thead tr th {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: var(--gray-color1);
+  color: var(--gray1);
 }
 .main-category .category-container table thead tr th:first-child {
   padding: 0.6rem 0.4rem 0.3rem 0.4rem;
@@ -2865,7 +2862,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 .main-category .category-container table tbody tr td {
   padding: 1.1rem 1rem 2rem;
-  color: var(--gray-color1);
+  color: var(--gray1);
   position: relative;
 }
 .main-category .category-container table tbody tr td img {

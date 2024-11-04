@@ -160,7 +160,7 @@ body {overflow-x:hidden;
        --transparent-blue:#176ec021;
 
        --transparent-gray:rgba(201, 183, 183, 0.075);
-       --transparent-gray2:rgba(214, 214, 214, 0.192);
+       --transparent-gray10:rgba(214, 214, 214, 0.192);
 
        --light-gray:#8d8d8d;
 
@@ -273,7 +273,7 @@ body {overflow-x:hidden;
 ::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--shin-blue5) 0%, var(--shin-blue) 100%);
                            border-radius:10px;}
 
-*::selection {background:var(--gray2);
+*::selection {background:var(--gray10);
               color:#fff;}
 
 ::placeholder {color:var(--gray5);}
@@ -323,7 +323,7 @@ select::-webkit-scrollbar {width:0;}
 select option {border:none;
                outline:none;
                font-size:1.3rem;
-               color:var(--gray2);
+               color:var(--gray10);
                box-shadow:var(--box-shadow3);
                background:var(--shin-blue);}
 
@@ -783,11 +783,34 @@ section {margin:0 auto;
        hr:last-child {margin-left:0.1rem;}
 }
 
+.input-control {padding:0.7rem 1rem;
+                font-size:1.2rem;
+                border:none;
+                border-radius:0.3rem !important;
+                box-shadow:var(--box-shadow4);
+                color:var(--gray10);
+                background:radial-gradient(var(--gray), var(--gray4));}
+
+.input-control2 {font-size:1.2rem;
+                 border:none;
+                 border-radius:0.3rem !important;
+                 box-shadow:var(--box-shadow2);
+                 color:var(--gray10);
+                 background:radial-gradient(var(--shin-blue), var(--gray10));}
+
+.control-label {margin:auto 0;
+                font-size:1.2rem;
+                font-weight:bold;
+                text-align:left;
+                color:var(--gray10);}
+
 /*
 ==================
  # Forms
 ==================
 */
+
+
 .form-horizontal {display:block;
                   width:100%;}
 
@@ -796,39 +819,21 @@ section {margin:0 auto;
 .form-horizontal .input-box {gap:0.5rem;
                              flex-wrap:wrap;}
 
-.control-label {margin:auto 0;
-                font-size:1.2rem;
-                font-weight:bold;
-                text-align:left;
-                color:var(--gray10);}
-
-.form_control {padding:0.7rem 1rem;
-               font-size:1.2rem;
-               border:none;
-               border-radius:0.3rem !important;
-               box-shadow:var(--box-shadow2);
-               color:var(--gray2);
-               background:radial-gradient(rgb(241, 240, 240), var(--gray4));}
-
 .form-horizontal .double-input-box {padding:0;}
-
-@media (min-width:768px){ .form-horizontal .double-input-box {gap:2rem;} }
-@media (max-width:768px){ .form-horizontal .double-input-box {gap:1rem;} }
-@media (max-width:400px){ .form-horizontal .double-input-box {flex-wrap:wrap;} }
 
 .form-horizontal .double-input-box .input-box {flex:1 1 20rem;
                                                padding:0;
                                                margin:0 !important;}
 
-@media (min-width:574px){ .form-horizontal .double-input-box .input-box:last-child .control-label {text-align:center;} 
-                          .form-horizontal .double-input-box .input-box:first-child .form_control {margin-left:0.4rem;} }
+@media (min-width:768px){ .form-horizontal .double-input-box {gap:2rem;} }
+@media (max-width:768px){ .form-horizontal .double-input-box {gap:1rem;} }
+@media (max-width:400px){ .form-horizontal .double-input-box {flex-wrap:wrap;} }
 
-.form_control2 {font-size:1.2rem;
-                border:none;
-                border-radius:0.3rem !important;
-                box-shadow:var(--box-shadow2);
-                color:var(--gray2);
-                background:radial-gradient(var(--shin-blue), var(--gray2));}
+
+
+@media (min-width:574px){ .form-horizontal .double-input-box .input-box:last-child .control-label {text-align:center;} 
+                          .form-horizontal .double-input-box .input-box:first-child .input-control {margin-left:0.4rem;} }
+
 
 input {text-transform:none;}
 
@@ -869,7 +874,7 @@ input[type="file"] {cursor:pointer;}
 
               .input-box {display:block;
 
-                     .form_control {width:100%;}
+                     .input-control {width:100%;}
 
                      .pass-input {margin:0;
                                   padding:0;}
@@ -955,7 +960,7 @@ input[type="file"] {cursor:pointer;}
 @media (min-width:768px){ .multi-form-horizontal .double-input-box {gap:2rem;} }
 
 @media (min-width:574px){ .multi-form-horizontal .double-input-box .input-box:last-child .control-label {text-align:center;} 
-                          .multi-form-horizontal .double-input-box .input-box:first-child .form_control {margin-left:0.4rem;} }
+                          .multi-form-horizontal .double-input-box .input-box:first-child .input-control {margin-left:0.4rem;} }
 
 @media (max-width:768px){ .multi-form-horizontal .double-input-box {gap:1rem;} }
 @media (max-width:400px){ .multi-form-horizontal .double-input-box {flex-wrap:wrap;} }
@@ -982,7 +987,7 @@ input[type="file"] {cursor:pointer;}
 
                             .pass-col {flex:1 1 30rem;}
 
-                            .form_control {flex:1 1 30rem;
+                            .input-control {flex:1 1 30rem;
                                            padding:0.7rem 1rem;
                                            box-shadow:var(--box-shadow2);}
                      }
@@ -1273,7 +1278,7 @@ table {width:100%;
                             p {margin:0;
                                color:var(--color-info-dark);}
 
-                            p b {color:var(--gray-color1);}
+                            p b {color:var(--gray1);}
 
                             small {margin:0;
                                   color:var(--color-info-dark);}
@@ -1610,22 +1615,22 @@ table {width:100%;
 
                                        th {padding:1rem 0;
                                            font-size:1.2rem;
-                                           border-right:1px solid var(--gray-color8);}
+                                           border-right:1px solid var(--gray8);}
 
                                        th:last-child {border-right:none;}
                                    }
                             }
 
                             tbody {
-                                   tr {border-bottom:1px solid var(--gray-color8);
+                                   tr {border-bottom:1px solid var(--gray8);
 
-                                      &:first-child {border-top:1px solid var(--gray-color8);}
+                                      &:first-child {border-top:1px solid var(--gray8);}
 
                                       &:last-child {border-bottom:none;}
 
                                       td {padding:0.6rem 0;
                                           font-size:1.1rem;
-                                          border-right:1px solid var(--gray-color8);
+                                          border-right:1px solid var(--gray8);
 
                                           &:last-child {border-right:none;}
                                       }
@@ -1731,7 +1736,7 @@ table {width:100%;
                                           font-size:0.8rem;
                                           color:var(--color-dark-varient);}
 
-                                   p b {color:var(--gray-color1);
+                                   p b {color:var(--gray1);
                                           font-size:0.9rem;}
 
                                    small {color:var(--color-dark-varient);
@@ -1774,7 +1779,7 @@ table {width:100%;
                                    h3 {font-size:1.1rem;
                                           font-weight:bold;
                                           margin:0;
-                                          color:var(--gray-color1);}
+                                          color:var(--gray1);}
 
                                    small {margin:0;
                                           color:var(--color-dark-varient);}
@@ -1796,11 +1801,11 @@ table {width:100%;
                                           text-transform:capitalize;
                                           font-weight:bold;
                                           padding:0.9rem 0.4rem;
-                                          color:var(--gray-color2);
+                                          color:var(--gray10);
                                           background-color:transparent;
                                           border-radius:1rem;
                                           outline:none;
-                                          border:1px dashed var(--gray-color2);
+                                          border:1px dashed var(--gray10);
                                           transition:all 0.3s linear;
 
                                    #icon {margin-right:0.7rem;
@@ -1843,7 +1848,7 @@ table {width:100%;
 
                                    h4 {font-size:1rem;
                                           font-weight:bold;
-                                          color:var(--gray-color1);}
+                                          color:var(--gray1);}
 
                                    img {width:4rem;
                                           height:4rem;
@@ -1883,11 +1888,11 @@ table {width:100%;
                             }
                      }
 
-                     h3 {color:var(--gray-color1);
+                     h3 {color:var(--gray1);
                          font-weight:bold;
                          margin-top:0.6rem;}
 
-                     p {color:var(--gray-color4);
+                     p {color:var(--gray4);
                         font-weight:bold;}
               }
 
@@ -1916,8 +1921,7 @@ table {width:100%;
                                                                               outline:none;
                                                                               appearance:none;
                                                                               -webkit-appearance:none;
-                                                                              display:none;}
-                                                                           
+                                                                              display:none;}       
 
                                           label {
                                                  .toggle-switch {width:4.5rem;
@@ -1933,7 +1937,7 @@ table {width:100%;
                                                                  transition:all 0.3s linear;
                                                                  cursor:pointer;
                                                                  position:relative;
-                                                                 background-color:var(--gray-color8);
+                                                                 background-color:var(--gray8);
   
                                                         .fa-xmark {width:0.7rem;
                                                                    height:0.7rem;
@@ -1943,7 +1947,7 @@ table {width:100%;
                                                                    justify-content:center;
                                                                    align-items:center;
                                                                    color:var(--white);
-                                                                   background-color:var(--gray-color7);
+                                                                   background-color:var(--gray7);
                                                                    transition:all 0.3s linear;
                                                                    position:absolute;
                                                                    left:0.3rem;
@@ -1987,7 +1991,7 @@ table {width:100%;
                                           .block {width:100%;
                                                   padding:2rem 0;
                                                   gap:0.7rem;
-                                                  border-bottom:1px solid var(--gray-color8);
+                                                  border-bottom:1px solid var(--gray8);
                                           
 
                                                  .details {width:100%;
@@ -1995,7 +1999,7 @@ table {width:100%;
                                                            gap:5%;
 
                                                         p {font-size:1rem;
-                                                           color:var(--gray-color3);
+                                                           color:var(--gray3);
 
                                                                span {color:var(--primary-color13);
                                                                      font-weight:bold;
@@ -2020,10 +2024,10 @@ table {width:100%;
                                                                       padding:0;
 
                                                                       span {font-size:1.1rem;
-                                                                            color:var(--gray-color3);}
+                                                                            color:var(--gray3);}
 
                                                                       p {text-transform:lowercase;
-                                                                         color:var(--gray-color4);}
+                                                                         color:var(--gray4);}
                                                                }
                                                         }
                                                  }
@@ -2143,7 +2147,7 @@ table {width:100%;
                   margin-left:0.5rem;}
        }
 
-       .input-box .form_control {width:100%;}
+       .input-box .input-control {width:100%;}
 
        .double-input-box {width:100%;
                           gap:1rem;
@@ -2174,7 +2178,7 @@ table {width:100%;
 /* Add certification */
 .add-certification-form {display:block;
 
-       .form_control {width:100%;}
+       .input-control {width:100%;}
 
        .double-input-box {width:100%;
                           gap:1rem;
@@ -2196,7 +2200,7 @@ table {width:100%;
 
 .add-certification-form {
        .submit-input {position:relative;
-              .fa-plus {color:var(--light-violet);
+              .fa-plus {color:var(--violet);
                         position:absolute;
                         left:50%;
                         transform:translateX(-7.5rem)}
@@ -2213,6 +2217,7 @@ table {width:100%;
        .skills-blocks {flex-wrap:wrap;
                        gap:1.5rem;
                        margin-bottom:2rem;
+
               .block {flex:1 1 20rem;
                       gap:1rem;
 
@@ -2221,20 +2226,17 @@ table {width:100%;
                      textarea {height:10rem;
                                width:100%;
                                border-radius:0.2rem;
-                               color:var(--gray-color3);
                                font-size:1.4rem;
-                               background:radial-gradient(var(--shin-blue), var(--gray-color9));
+                               background:radial-gradient(var(--gray), var(--gray4));;
 
                             .tag {display:inline-block;
                                   padding:0.2rem 0.5rem;
                                   margin:0.2rem;
                                   border-radius:0.2rem;
-                                  border:1px solid var(--gray-color7) !important;}
+                                  border:1px solid var(--gray7) !important;}
                      }
 
-                     .form_control {width:100%;
-                                    padding:0.5rem 1rem;
-                                    border:1px solid var(--gray-color8);}
+                     .input-control {width:100%;}
 
                      .btn2 {width:9rem;
                             margin-left:calc(100% - 9rem);
@@ -2253,7 +2255,7 @@ table {width:100%;
 /* Add Skills - Profile */
 .add-skills-form {
        .submit-input {position:relative;
-              .fa-plus {color:var(--light-violet);
+              .fa-plus {color:var(--violet);
                         position:absolute;
                         left:50%;
                         transform:translateX(-5rem)}
@@ -2328,7 +2330,7 @@ table {width:100%;
 
                             .cat-label {font-size:1rem;
                                         font-weight:bold;
-                                        color:var(--gray-color1);}
+                                        color:var(--gray1);}
 
                             /* order input group */
                             &.order-input-group #catorder-select,
@@ -2376,7 +2378,7 @@ table {width:100%;
                                           > div .vote-label {font-size:1rem;
                                                              cursor:pointer;}
 
-                                          > div:last-child .form_control {margin-left:0.3rem;}
+                                          > div:last-child .input-control {margin-left:0.3rem;}
                                    }
                             }
 
@@ -2387,19 +2389,19 @@ table {width:100%;
 
               table {flex:1 1 38rem;
                      background-color: #fff;
-                     border:1px solid var(--gray-color8);
+                     border:1px solid var(--gray8);
        
                      /* head */
                      thead {padding:1rem 0.9rem;
                             background-color:var(--white);
-                            border-bottom:1px solid var(--gray-color8);
+                            border-bottom:1px solid var(--gray8);
 
-                            &:last-child {border-top:1px solid var(--gray-color8);}
+                            &:last-child {border-top:1px solid var(--gray8);}
 
                             tr {
                                 th {padding:0.5rem 1rem;
                                     font-size:1rem;
-                                    color:var(--gray-color1);
+                                    color:var(--gray1);
 
                                    &:first-child {padding:0.6rem 0.4rem 0.3rem 0.4rem;}
 
@@ -2415,7 +2417,7 @@ table {width:100%;
                             tr td:nth-child(even) {font-weight:bold;}
 
                             tr td {padding:1.1rem 1rem 2rem;
-                                  color:var(--gray-color1);
+                                  color:var(--gray1);
                                   position:relative;}
 
                             tr td img {width:4rem;
