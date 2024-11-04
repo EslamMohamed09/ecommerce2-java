@@ -783,6 +783,9 @@ section {margin:0 auto;
        hr:last-child {margin-left:0.1rem;}
 }
 
+/*******************
+ # TITLES
+********************/
 .input-control {padding:0.7rem 1rem;
                 font-size:1.2rem;
                 border:none;
@@ -803,37 +806,6 @@ section {margin:0 auto;
                 font-weight:bold;
                 text-align:left;
                 color:var(--gray10);}
-
-/*
-==================
- # Forms
-==================
-*/
-
-
-.form-horizontal {display:block;
-                  width:100%;}
-
-.form-horizontal > div:not(:first-child) {margin:1.5rem 0;}
-
-.form-horizontal .input-box {gap:0.5rem;
-                             flex-wrap:wrap;}
-
-.form-horizontal .double-input-box {padding:0;}
-
-.form-horizontal .double-input-box .input-box {flex:1 1 20rem;
-                                               padding:0;
-                                               margin:0 !important;}
-
-@media (min-width:768px){ .form-horizontal .double-input-box {gap:2rem;} }
-@media (max-width:768px){ .form-horizontal .double-input-box {gap:1rem;} }
-@media (max-width:400px){ .form-horizontal .double-input-box {flex-wrap:wrap;} }
-
-
-
-@media (min-width:574px){ .form-horizontal .double-input-box .input-box:last-child .control-label {text-align:center;} 
-                          .form-horizontal .double-input-box .input-box:first-child .input-control {margin-left:0.4rem;} }
-
 
 input {text-transform:none;}
 
@@ -864,7 +836,38 @@ textarea:focus {border:none;}
 
 input[type="file"] {cursor:pointer;}
 
-/* form-horizontal2 */
+/*
+==================
+ # Forms
+==================
+*/
+.form-horizontal {display:block;
+                  width:100%;
+
+       > div:not(:first-child) {margin:1.5rem 0;}
+
+       .input-box {gap:0.5rem;
+                   flex-wrap:wrap;}
+
+       .double-input-box {padding:0;
+
+              .input-box {flex:1 1 20rem;
+                          padding:0;
+                          margin:0 !important;}
+       }
+
+@media (min-width:768px){ .double-input-box {gap:2rem;} }
+@media (max-width:768px){ .double-input-box {gap:1rem;} }
+@media (max-width:400px){ .double-input-box {flex-wrap:wrap;} }
+
+
+
+@media (min-width:574px){ .double-input-box .input-box:last-child .control-label {text-align:center;} 
+                          .double-input-box .input-box:first-child .input-control {margin-left:0.4rem;} }
+
+}
+
+/*** Form Horizontal2 ***/
 .form-horizontal2 {margin:0;
                    padding:3rem 0 0;
 
@@ -880,9 +883,10 @@ input[type="file"] {cursor:pointer;}
                                   padding:0;}
               }
 
-              .textarea-input-box {grid-column:span 2;}
+              .textarea-input-box {grid-column:span 2;
 
-              .textarea-input-box textarea {min-height:8rem;}
+                     textarea {min-height:8rem;}
+              }
 
               label {margin:0 0 0.5rem;
                      font-size:1.2rem;
@@ -898,9 +902,9 @@ input[type="file"] {cursor:pointer;}
               > div {margin:0 0 2rem;}
 
               .input-box label {font-size:1.5rem;
-                                    margin-bottom:1rem;
-                                    font-weight:bold;
-                                    text-transform:uppercase;}
+                                margin-bottom:1rem;
+                                font-weight:bold;
+                                text-transform:uppercase;}
 
               .image {width:100%;
                       padding:0;
@@ -930,12 +934,7 @@ input[type="file"] {cursor:pointer;}
        .passeye .fa-eye {display:none;}
 }
 
-
-/* 
--------------------------
- # multi form horizontal 
--------------------------
-*/
+/*** Multi Form Horizontal ***/
 .multi-form-horizontal {display:block;
                         width:100%;
 
@@ -965,17 +964,14 @@ input[type="file"] {cursor:pointer;}
 @media (max-width:768px){ .multi-form-horizontal .double-input-box {gap:1rem;} }
 @media (max-width:400px){ .multi-form-horizontal .double-input-box {flex-wrap:wrap;} }
 
-/*
-==================
- # Edit Form
-==================
-*/
+
+/*** Edit Form ***/
 .edit-page {
       .container {display:block;}
 
        form {width:100%;
-                 margin:0;
-                 margin-bottom:5rem;
+             margin:0;
+             margin-bottom:5rem;
 
               .input-boxes {gap:2rem;
 
@@ -1174,14 +1170,12 @@ table {width:100%;
                      &:hover .buttons {opacity:1;}
               }
        }
+
+       @media(max-width:768px){ tbody tr td .buttons {top:3.5rem;
+                                                      left:-0.5rem;} }
 }
 
 @media(max-width:545px){ table {width:20%;} }
-
-@media(max-width:768px){
-       table tbody tr td .buttons {top:3.5rem;
-                                   left:-0.5rem;}
-}
 
 
 /*******************
@@ -1231,9 +1225,7 @@ table {width:100%;
               #open-aside {cursor:pointer;}
        }
 
-       @media (max-width:711px){
-              .left-header #open-aside {display:none;}
-       }
+       @media (max-width:711px){ .left-header #open-aside {display:none;} }
 
        .right-header {display:flex;
                       flex-direction:row;
@@ -1351,21 +1343,13 @@ table {width:100%;
                                 gap:0.4rem;}
        }
 
-       @media (max-width:710px){
-              .small-menu {display:flex;}
-       }
+       @media (max-width:710px){ .small-menu {display:flex;} }
 
-       @media (max-width:400px){
-              .small-menu {width:98%;}
-       }
+       @media (max-width:400px){ .small-menu {width:98%;} }
 
-       @media (max-width:360px){
-              .small-menu .small-menu-link {font-size:0.8rem;}
-       }
+       @media (max-width:360px){ .small-menu .small-menu-link {font-size:0.8rem;} }
 
-       @media (max-width:290px){
-              .small-menu .small-menu-link {font-size:0.6rem;}
-       }
+       @media (max-width:290px){ .small-menu .small-menu-link {font-size:0.6rem;} }
 }
 
 /******************
@@ -1431,9 +1415,7 @@ table {width:100%;
               }
        }
 
-@media (min-width:711px) and (max-width:1340px){
-       #dashboard-section aside {width:18rem;}
-}
+@media (min-width:711px) and (max-width:1340px){ #dashboard-section aside {width:18rem;} }
 
 @media (max-width:711px){
       #dashboard-section aside {position:absolute;
@@ -1472,9 +1454,7 @@ table {width:100%;
        //                                     cursor:pointer;
        //                                     background-color:transparent;}
 
-@media (max-width:711px){
-      #dashboard-section .main-data {margin-left:4rem;}
-}
+@media (max-width:711px){ #dashboard-section .main-data {margin-left:4rem;} }
 
        .home {display:flex;
               flex-direction:row;

@@ -959,6 +959,9 @@ section {
   margin-left: 0.1rem;
 }
 
+/*******************
+ # TITLES
+********************/
 .input-control {
   padding: 0.7rem 1rem;
   font-size: 1.2rem;
@@ -986,58 +989,6 @@ section {
   color: var(--gray10);
 }
 
-/*
-==================
- # Forms
-==================
-*/
-.form-horizontal {
-  display: block;
-  width: 100%;
-}
-
-.form-horizontal > div:not(:first-child) {
-  margin: 1.5rem 0;
-}
-
-.form-horizontal .input-box {
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.form-horizontal .double-input-box {
-  padding: 0;
-}
-
-.form-horizontal .double-input-box .input-box {
-  flex: 1 1 20rem;
-  padding: 0;
-  margin: 0 !important;
-}
-
-@media (min-width: 768px) {
-  .form-horizontal .double-input-box {
-    gap: 2rem;
-  }
-}
-@media (max-width: 768px) {
-  .form-horizontal .double-input-box {
-    gap: 1rem;
-  }
-}
-@media (max-width: 400px) {
-  .form-horizontal .double-input-box {
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 574px) {
-  .form-horizontal .double-input-box .input-box:last-child .control-label {
-    text-align: center;
-  }
-  .form-horizontal .double-input-box .input-box:first-child .input-control {
-    margin-left: 0.4rem;
-  }
-}
 input {
   text-transform: none;
 }
@@ -1084,7 +1035,55 @@ input[type=file] {
   cursor: pointer;
 }
 
-/* form-horizontal2 */
+/*
+==================
+ # Forms
+==================
+*/
+.form-horizontal {
+  display: block;
+  width: 100%;
+}
+.form-horizontal > div:not(:first-child) {
+  margin: 1.5rem 0;
+}
+.form-horizontal .input-box {
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-horizontal .double-input-box {
+  padding: 0;
+}
+.form-horizontal .double-input-box .input-box {
+  flex: 1 1 20rem;
+  padding: 0;
+  margin: 0 !important;
+}
+@media (min-width: 768px) {
+  .form-horizontal .double-input-box {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .form-horizontal .double-input-box {
+    gap: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .form-horizontal .double-input-box {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 574px) {
+  .form-horizontal .double-input-box .input-box:last-child .control-label {
+    text-align: center;
+  }
+  .form-horizontal .double-input-box .input-box:first-child .input-control {
+    margin-left: 0.4rem;
+  }
+}
+
+/*** Form Horizontal2 ***/
 .form-horizontal2 {
   margin: 0;
   padding: 3rem 0 0;
@@ -1169,11 +1168,7 @@ input[type=file] {
   display: none;
 }
 
-/* 
--------------------------
- # multi form horizontal 
--------------------------
-*/
+/*** Multi Form Horizontal ***/
 .multi-form-horizontal {
   display: block;
   width: 100%;
@@ -1224,11 +1219,7 @@ input[type=file] {
     flex-wrap: wrap;
   }
 }
-/*
-==================
- # Edit Form
-==================
-*/
+/*** Edit Form ***/
 .edit-page .container {
   display: block;
 }
@@ -1481,16 +1472,16 @@ table tbody tr:nth-child(even) tr td .buttons .fa-check {
 table tbody tr:nth-child(even) tr:hover .buttons {
   opacity: 1;
 }
-
-@media (max-width: 545px) {
-  table {
-    width: 20%;
-  }
-}
 @media (max-width: 768px) {
   table tbody tr td .buttons {
     top: 3.5rem;
     left: -0.5rem;
+  }
+}
+
+@media (max-width: 545px) {
+  table {
+    width: 20%;
   }
 }
 /*******************
