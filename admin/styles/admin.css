@@ -2678,7 +2678,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   flex: 1 1 30rem;
 }
 
-/* Add Skills - Profile */
 @media (max-width: 768px) {
   .main-profile-page .profile-data .col-left {
     padding-bottom: 2rem;

@@ -50,6 +50,33 @@ document.addEventListener('asideLoaded', () => {
     }
   });
 
+  /*** BIG & SMALL ASIDE ***/
+  if(document.getElementById("aside") && document.getElementById("open-aside")){
+      const mainAside = document.getElementById("aside");
+      const smallasideBtn = document.getElementById("open-aside");
+      const openasideBtn = document.getElementById("open-btn");
+
+      // big aside in small screen
+      const openAsideArr = [openasideBtn];
+      const elemToggleFunc = function (elem) {elem.classList.toggle("active");}
+
+      for (let i = 0; i < openAsideArr.length; i++) {
+          openAsideArr[i].addEventListener("click", function () {
+              elemToggleFunc(mainAside);
+          });
+      }
+
+      // small aside in big screen
+      const smallAsideArr = [smallasideBtn];
+      const smallAsideFunc = function (elem) {elem.classList.toggle("smallaside");}
+
+      for (let i = 0; i < smallAsideArr.length; i++) {
+          smallAsideArr[i].addEventListener("click", function () {
+              smallAsideFunc(mainAside);
+          });
+      }
+  }
+
 });
 
 loadHtml('#aside', asideContent, "aside");
