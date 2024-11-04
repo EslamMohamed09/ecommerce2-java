@@ -135,11 +135,12 @@ body {overflow-x:hidden;
        --shin-blue2:#38baf9;
        --shin-blue3:#15acf8;
        --shin-blue4:#05a5f5;
-       --shin-blue5:#0077ff;
-       --shin-blue6:#0464d1;
-       --shin-blue7:#0555b1;
-       --shin-blue8:#044794;
-       --shin-blue9:#0c3e77;
+       --shin-blue5:#2085f8;
+       --shin-blue6:#0077ff;
+       --shin-blue7:#0c5fbd;
+       --shin-blue8:#074fa1;
+       --shin-blue9:#134d91;
+       --shin-blue10:#0c3e77;
 
        --blue:#eef2f7;
        --blue1:#e8ebf0;
@@ -237,16 +238,16 @@ body {overflow-x:hidden;
        --box-shadow2:0 0.5rem 1.5rem #0d2e2e23;
        --box-shadow3:0 0.3rem 4rem #252c2c2f;
        --box-shadow4:0 0 6px rgba(0, 0, 0, 0.13);
-       --box-shadow5:0 1px 0.9rem #fd9103c5;
-       --box-shadow6:0 0 3px #eee;
-       --box-shadow7:0 0.1rem 1rem #e9290779;
-       --box-shadow8:0 0 6px #00c7c7;
-       --box-shadow9:0 0 6px #3356ca;
-       --box-shadow10:0 0.1rem 0.5rem #fce07b46;
-       --box-shadow11:0 0 3px rgba(2, 2, 2, 0.199);
-       --box-shadow12:0 0 6px rgba(2, 2, 2, 0.199);
+       --box-shadow5:0 0 3px #eee;
+       --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
+       --box-shadow7:0 0 6px rgba(2, 2, 2, 0.199);
+       --box-shadow8:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
 
-       --box-shadow12: -5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+       --orange-box-shadow:0 1px 0.9rem #fd9103c5;
+       --red-box-shadow:0 0.1rem 1rem #e9290779;
+       --aqua-box-shadow:0 0 6px #00c7c7;
+       --blue-box-shadow:0 0 6px #3356ca;
+       --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
 
        --text-shadow:0 0 5px rgb(5, 5, 5);
        --text-shadow2:0 0 4px #fff;
@@ -1291,7 +1292,7 @@ table {width:100%;
                                  padding:0;
                                  border-radius:0.5rem;
                                  background-color:var(--white);
-                                 box-shadow:var(--box-shadow11);
+                                 box-shadow:var(--box-shadow6);
                                  animation:fadeIn 0.2s linear;
                                  display:none;
 
@@ -1413,9 +1414,12 @@ table {width:100%;
                                           &:hover {border-left:5px solid var(--shin-blue6);}
 
                                           &.active,
-                                          &:focus {color:var(--white);
-                                                   background-color:var(--shin-blue4);
+                                          &:focus {color:var(--white2);
+                                                   background-color:var(--shin-blue5);
                                                    border-left:5px solid var(--shin-blue6);}
+
+                                          &.active h3,
+                                          &:focus h3 {color:var(--white2);}
                                    }
                             }
                      }

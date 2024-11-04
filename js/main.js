@@ -757,10 +757,10 @@ if(document.querySelector("#single-page")){
 
 }
 
-/* 
- ###########################
- ###### CATEGORY PAGE ######
- ###########################
+/*
+ ==============================
+ ######## CATEGORY PAGE #######
+ ==============================
 */
 if(document.querySelector("#category-page")){
 

@@ -394,16 +394,16 @@
 
           <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
             <label class="control-label">Computer Skills</label>
-            <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
-            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}"  maxlength="28" class="form_control" id="computerSkillsInput">
-            <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+            <textarea name="computerskills" class="computerSkillsTextarea"></textarea>
+            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.computer-skills-block .computerSkillsInput', '.computer-skills-block .computerSkillsTextarea'); return false;}"  maxlength="28" class="form_control computerSkillsInput">
+            <button type="button" onclick="addTag(null, '.computerSkillsInput', '.computerSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
           <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
             <label class="control-label">Personal Skills</label>
-            <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
-            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" maxlength="28" class="form_control" id="personalSkillsInput">
-            <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+            <textarea name="personalskills" class="personalSkillsTextarea"></textarea>
+            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.personal-skills-block .personalSkillsInput', '.personal-skills-block .personalSkillsTextarea'); return false;}" maxlength="28" class="form_control personalSkillsInput">
+            <button type="button" onclick="addTag(null, '.personalSkillsInput', '.personalSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
         </div> <!-- End skills-blocks -->

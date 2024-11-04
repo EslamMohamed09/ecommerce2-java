@@ -59,3 +59,31 @@ function eyeFunction(eyeIcon) {
     }
 }
 
+/*
+ =============================
+ ######## PROFILE PAGE #######
+ =============================
+*/
+/*
+** ####################
+** Add Tags to Textarea 
+** ####################
+*/
+function addTag(event, inputElement, textareaElement){
+  if(event && event.keycode !== 13){return}
+
+  const input = document.querySelector(inputElement);
+  const textarea = document.querySelector(textareaElement);
+
+  if(input.value.trim() !== ''){
+     const P = document.createElement('div');
+     P.className = 'tag';
+     P.textContent = input.value.trim();
+
+     textarea.value += `[${input.value.trim()}]`;
+     textarea.appendChild(P);
+     input.value = '';
+  }
+
+}
+
