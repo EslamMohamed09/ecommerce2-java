@@ -2190,7 +2190,7 @@ table {width:100%;
 @media(max-width:255px){ .add-certification-form .submit-input .fa-plus {transform:translateX(-6.4rem)} }
 
 /* Edit Profile Skills */
-.edit-skills-form {margin-top:3rem;
+.skills-form {margin-top:3rem;
 
        .skills-blocks {flex-wrap:wrap;
                        gap:1.5rem;
@@ -2231,17 +2231,17 @@ table {width:100%;
 }
 
 /* Add Skills - Profile */
-.add-skills-form {
-       .submit-input {position:relative;
-              .fa-plus {color:var(--violet);
-                        position:absolute;
-                        left:50%;
-                        transform:translateX(-5rem)}
+// .skills-form {
+//        .submit-input {position:relative;
+//               .fa-plus {color:var(--violet);
+//                         position:absolute;
+//                         left:50%;
+//                         transform:translateX(-5rem)}
 
-              .btn,
-              .btn2 {width:100%;}
-       }
-}
+//               .btn,
+//               .btn2 {width:100%;}
+//        }
+// }
 
 @media (max-width:768px){
       .main-profile-page {
@@ -2421,9 +2421,9 @@ table {width:100%;
 }
 
 /*
- ==================================
- ########## SETTINGS PAGE #########
- ==================================
+ ===============================
+ ######## SETTINGS PAGE ########
+ ===============================
 */
 .settings-page {
        .cards {display:flex;
@@ -2643,4 +2643,4 @@ table {width:100%;
  # Add
 *********************/
 /* Add Member Skills */
-.manage-members-page .add-member-area .add-member-form #skillsContainer .add-skills-form .skills-blocks .block {gap:1rem;}
+.manage-members-page .add-member-area .add-member-form #skillsContainer .skills-form .skills-blocks .block {gap:1rem;}
