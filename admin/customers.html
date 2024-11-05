@@ -148,23 +148,23 @@
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer Fullname -->
             <label class="control-label">Fullname</label>
-            <input type="text" name="fullname" maxlength="18" pattern=".{4,18}" value="fullname" class="form_control" required/>
+            <input type="text" name="fullname" maxlength="18" pattern=".{4,18}" value="fullname" class="input-control" required/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer Email -->
             <label class="control-label">Email</label>
-            <input type="text" name="email" maxlength="45" value="email" class="form_control" required/>
+            <input type="text" name="email" maxlength="45" value="email" class="input-control" required/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer Phone number -->
             <label class="control-label">phone number</label>
-            <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="phone_no" class="form_control" required/>
+            <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="phone_no" class="input-control" required/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer Password -->
             <label class="control-label">password</label>
             <div class="pass-col">
-              <input type="password" name="newpassword" id="passInput" style="width:100%;" autocomplete="new-password" class="form_control"/>
+              <input type="password" name="newpassword" id="passInput" style="width:100%;" autocomplete="new-password" class="input-control"/>
               <div class="eye" onclick="eyeFunction()">
                 <i class="fa fa-eye" id="faeye-1"></i> 
                 <i class="fa fa-eye-slash" id="faeye-2"></i> 
@@ -174,7 +174,7 @@
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer gender -->
             <label class="control-label">gender</label>
-            <select name="gender" class="form_control">
+            <select name="gender" class="input-control">
               <option value="male" selected>male</option>
               <option value="female">female</option>
             </select>
@@ -190,27 +190,27 @@
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer city -->
             <label class="control-label">city</label>
-            <input type="text" name="customercity" maxlength="16" pattern=".{4,16}" value="city" class="form_control" required/>
+            <input type="text" name="customercity" maxlength="16" pattern=".{4,16}" value="city" class="input-control" required/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer address -->
             <label class="control-label">address</label>
-            <input type="text" name="customeraddress" maxlength="35" pattern=".{11,35}" value="address" class="form_control" required/>
+            <input type="text" name="customeraddress" maxlength="35" pattern=".{11,35}" value="address" class="input-control" required/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer Postal code -->
             <label class="control-label">Postal code</label>
-            <input type="text" name="customerpostalcode" maxlength="10" pattern=".{4,10}" value="postalcode" class="form_control" required/>
+            <input type="text" name="customerpostalcode" maxlength="10" pattern=".{4,10}" value="postalcode" class="input-control" required/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- Customer visa number -->
             <label class="control-label">visa number</label>
-            <input type="text" name="customervisa_no" id="visaInput" maxlength="19" pattern=".{3,19}" value="visa_no" class="form_control"/>
+            <input type="text" name="customervisa_no" id="visaInput" maxlength="19" pattern=".{3,19}" value="visa_no" class="input-control"/>
           </div>
 
           <div class="input-box d-flex-r-bt-c">  <!-- QUESTIONS -->
             <label class="control-label">questions</label>
-            <select name="question" class="form_control" id="question_select" onchange="selectquestion()">
+            <select name="question" class="input-control" id="question_select" onchange="selectquestion()">
               <option value="0"> choose question </option>
               <option value="father name" selected>father name</option>
               <option value="school name">school name</option>
@@ -222,12 +222,12 @@
 
           <div class="input-box d-flex-r-bt-c" id="other_question"> <!-- other question -->
             <label class="control-label">other question</label>
-            <input type="text" name="otherquestion" class="form_control" value="other_question">
+            <input type="text" name="otherquestion" class="input-control" value="other_question">
           </div>
 
           <div class="input-box d-flex-r-bt-c" id="answer_question"> <!-- answer -->
             <label class="control-label">answer question</label>
-            <input type="text" name="answer" class="form_control" maxlength="35" pattern=".{3,35}" value="answer" required/>
+            <input type="text" name="answer" class="input-control" maxlength="35" pattern=".{3,35}" value="answer" required/>
           </div>
 
         </div> <!-- End col-md-8 -->
