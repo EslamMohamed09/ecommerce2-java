@@ -17,7 +17,7 @@
 
   <div class="forms d-flex-c-st-c">
 
-    <form class="login-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST"> <!-- login-form -->
+    <form class="login-form" action="" method="POST"> <!-- login-form -->
 
       <div class="login-form-container">
 
@@ -61,7 +61,7 @@
 
     </form> <!-- End login-form -->
 
-    <form class="register-form d-flex-c-st-c" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return checkErrors();">
+    <form class="register-form d-flex-c-st-c" action="" method="POST" enctype="multipart/form-data" onsubmit="return checkErrors();">
 
         <div class="steps-block">
           <div class="line"></div>
@@ -91,7 +91,7 @@
                 <div class="pass-input">
                   <input type="password" name="password" maxlength="25" pattern=".{8,25}" title="password can't less than 8 letters or more than 25" placeholder="write your password" autocomplete="new-password" id="passinput" required/>
                   <div class="passeye" onclick="eyeFunction(this)">
-                    <i class="fa fa-eye" style="display:none;"></i> 
+                    <i class="fa fa-eye" style="display:none;"></i>
                     <i class="fa fa-eye-slash"></i> 
                   </div>
                 </div>
@@ -126,7 +126,6 @@
 
               <div class="input-box d-flex-r-bt-c">  <!-- country -->
                 <i class="fa-solid fa-globe" id="icon"></i>
-               
                 <select name="" id="">
                   <option value="egypt">egypt</option>
                   <option value="syria">syria</option>

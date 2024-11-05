@@ -37,6 +37,29 @@ loadHtml('#header', headerContent, "header");
 
 $('body').css('paddingTop', $('.header').innerHeight() - 1);
 
+/*
+ ======================================
+ ######## LOGIN & REGISTER PAGE #######
+ ======================================
+*/
+// Show Register & Login Form
+$(document).ready(function(){
+  const registerForm = $(".register-form");
+  const loginForm = $(".login-form");
+
+  registerForm.hide();
+
+  $("#register-link").click(function(){
+    registerForm.show();
+    loginForm.hide();
+  });
+
+  $("#login-link").click(function(){
+    loginForm.show();
+    registerForm.hide();
+  });
+});
+
 /******** ASIDE ********/
 document.addEventListener('asideLoaded', () => {
   
@@ -117,7 +140,6 @@ function filterWithTabs(tabButton, cardItem) {
     $(this).addClass('button-active').siblings().removeClass('button-active');
   });
   tabButton.first().addClass('button-active');
-
 }
 
 // profile-info
