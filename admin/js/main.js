@@ -60,6 +60,45 @@ $(document).ready(function(){
   });
 });
 
+function checkErrors() {
+  var errors = [];
+
+  var username = document.getElementById("usernameinput");
+  var password = document.getElementById("passinput");
+  var fullname = document.getElementById("fullnameinput");
+  var email = document.getElementById("emailinput");
+  var whatsapp = document.getElementById("whatsinput");
+
+  if(username && !username.validity.valid) {errors.push(username.title);}
+  if(password && !password.validity.valid) {errors.push(password.title);}
+  if(fullname && !fullname.validity.valid) {errors.push(fullname.title);}
+  if(email && !email.validity.valid) {errors.push(email.title);}
+  if(whatsapp && !whatsapp.validity.valid) {errors.push(whatsapp.title);}
+
+  if(errors.length > 0) {
+     var errorMessage = "Please fix the following errors:\n" + errors.join("\n");
+     alert(errorMessage);
+
+  //    var errorContainer = document.getElementById("error-container");
+  //        errorContainer.innerHTML = errorMessage;
+  //        errorContainer.classList.add("error-alert");
+
+  //    for (var i=0; i<errors.length; i++) {
+  //         // errorContainer.children[i].classList.add("error-object");
+
+  //         var errorElement = document.createElement("div");
+  //         errorElement.classList.add("error-object");
+  //         errorElement.innerHTML = errors[i];
+  //         errorContainer.appendChild(errorElement);
+  //    }
+
+     return false;
+  }
+
+  return true;
+
+}
+
 /******** ASIDE ********/
 document.addEventListener('asideLoaded', () => {
   
