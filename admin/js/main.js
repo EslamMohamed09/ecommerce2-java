@@ -60,6 +60,50 @@ $(document).ready(function(){
   });
 });
 
+/** Register Steps **/
+document.addEventListener("DOMContentLoaded", function () {
+  const registerphase1 = document.getElementById("registerphase1");
+  const registerphase2 = document.getElementById("registerphase2");
+  const registerphase3 = document.getElementById("registerphase3");
+
+  const Rstep1 = document.getElementById("Rstep1");
+  const Rstep2 = document.getElementById("Rstep2");
+  const Rstep3 = document.getElementById("Rstep3");
+
+  const submitRphase1 = document.getElementById("submitregisterphase1");
+  const backRphase2 = document.getElementById("backregisterphase2");
+  const submitRphase2 = document.getElementById("submitregisterphase2");
+  const backRphase3 = document.getElementById("backregisterphase3");
+
+  submitRphase1.addEventListener("click", function () {
+      registerphase1.classList.remove("active");
+      registerphase2.classList.add("active");
+      Rstep1.classList.remove("active");
+      Rstep2.classList.add("active");
+  });
+
+  backRphase2.addEventListener("click", function () {
+      registerphase2.classList.remove("active");
+      registerphase1.classList.add("active");
+      Rstep2.classList.remove("active");
+      Rstep1.classList.add("active");
+  });
+
+  submitRphase2.addEventListener("click", function () {
+      registerphase2.classList.remove("active");
+      registerphase3.classList.add("active");
+      Rstep2.classList.remove("active");
+      Rstep3.classList.add("active");
+  });
+
+  backRphase3.addEventListener("click", function () {
+      registerphase3.classList.remove("active");
+      registerphase2.classList.add("active");
+      Rstep3.classList.remove("active");
+      Rstep2.classList.add("active");
+  });
+});
+
 function checkErrors() {
   var errors = [];
 
