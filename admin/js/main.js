@@ -250,3 +250,22 @@ function addTag(event, inputElement, textareaElement){
 
 }
 
+
+/*
+ ===============================
+ ######## CUSTOMERS PAGE #######
+ ===============================
+*/
+if(document.getElementById("visaInput")){
+
+  const VisaInput = document.getElementById("visaInput");
+
+  VisaInput.addEventListener("input", function (event) {
+      var inputValue = event.target.value.replace(/[^0-9]/g, "");
+
+      var formattedValue = inputValue.replace(/(\d{4})(?=\d)/g, "$1-");
+
+      event.target.value = formattedValue;
+  });
+}
+
