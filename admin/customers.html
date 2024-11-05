@@ -132,137 +132,119 @@
   </section>
 
   
-    <section class="dashboard-section" id="dashboard-section">
+  <section class="dashboard-section" id="dashboard-section">
 
-      <aside id="aside"></aside>
+    <aside id="aside"></aside>
 
-      <div class="main-data edit-page container">
+    <div class="main-data edit-page container">
 
-        <h1 class="text-center edit-heading">edit customer yassen</h1>
+      <h1 class="text-center edit-heading">edit customer yassen</h1>
 
-        <form class="row" action="?do=Update" method="POST">
+      <form class="row" action="?do=Update" method="POST">
 
-          <input type="hidden" name="customerid" value="24">
+        <input type="hidden" name="customerid" value="24">
 
-          <div class="col-md-8 input-boxes d-flex-c-st-c">
+        <div class="col-md-8 input-boxes d-flex-c-st-c">
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer Fullname -->
-              <label class="control-label">Fullname</label>
-              <input type="text" name="fullname" maxlength="18" pattern=".{4,18}" value="fullname" class="form_control" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer Fullname -->
+            <label class="control-label">Fullname</label>
+            <input type="text" name="fullname" maxlength="18" pattern=".{4,18}" value="fullname" class="form_control" required/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer Email -->
-              <label class="control-label">Email</label>
-              <input type="text" name="email" maxlength="45" value="email" class="form_control" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer Email -->
+            <label class="control-label">Email</label>
+            <input type="text" name="email" maxlength="45" value="email" class="form_control" required/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer Phone number -->
-              <label class="control-label">phone number</label>
-              <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="phone_no" class="form_control" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer Phone number -->
+            <label class="control-label">phone number</label>
+            <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="phone_no" class="form_control" required/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer Password -->
-              <label class="control-label">password</label>
-              <div class="pass-col">
-                <input type="password" name="newpassword" id="passInput" style="width:100%;" autocomplete="new-password" class="form_control"/>
-                <div class="eye" onclick="eyeFunction()">
-                  <i class="fa fa-eye" id="faeye-1"></i> 
-                  <i class="fa fa-eye-slash" id="faeye-2"></i> 
-                </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer Password -->
+            <label class="control-label">password</label>
+            <div class="pass-col">
+              <input type="password" name="newpassword" id="passInput" style="width:100%;" autocomplete="new-password" class="form_control"/>
+              <div class="eye" onclick="eyeFunction()">
+                <i class="fa fa-eye" id="faeye-1"></i> 
+                <i class="fa fa-eye-slash" id="faeye-2"></i> 
               </div>
             </div>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer gender -->
-              <label class="control-label">gender</label>
-              <select name="gender" class="form_control">
-                <option value="male" selected>male</option>
-                <option value="female">female</option>
-              </select>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer gender -->
+            <label class="control-label">gender</label>
+            <select name="gender" class="form_control">
+              <option value="male" selected>male</option>
+              <option value="female">female</option>
+            </select>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer Country -->
-              <label class="control-label">customer country</label>
-              <select name="" id="">
-                <option value="egypt">egypt</option>
-                <option value="syria">syria</option>
-              </select>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer Country -->
+            <label class="control-label">customer country</label>
+            <select name="" id="">
+              <option value="egypt">egypt</option>
+              <option value="syria">syria</option>
+            </select>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer city -->
-              <label class="control-label">city</label>
-              <input type="text" name="customercity" maxlength="16" pattern=".{4,16}" value="city" class="form_control" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer city -->
+            <label class="control-label">city</label>
+            <input type="text" name="customercity" maxlength="16" pattern=".{4,16}" value="city" class="form_control" required/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer address -->
-              <label class="control-label">address</label>
-              <input type="text" name="customeraddress" maxlength="35" pattern=".{11,35}" value="address" class="form_control" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer address -->
+            <label class="control-label">address</label>
+            <input type="text" name="customeraddress" maxlength="35" pattern=".{11,35}" value="address" class="form_control" required/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer Postal code -->
-              <label class="control-label">Postal code</label>
-              <input type="text" name="customerpostalcode" maxlength="10" pattern=".{4,10}" value="postalcode" class="form_control" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer Postal code -->
+            <label class="control-label">Postal code</label>
+            <input type="text" name="customerpostalcode" maxlength="10" pattern=".{4,10}" value="postalcode" class="form_control" required/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- Customer visa number -->
-              <label class="control-label">visa number</label>
-              <input type="text" name="customervisa_no" id="visaInput" maxlength="19" pattern=".{3,19}" value="visa_no" class="form_control"/>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- Customer visa number -->
+            <label class="control-label">visa number</label>
+            <input type="text" name="customervisa_no" id="visaInput" maxlength="19" pattern=".{3,19}" value="visa_no" class="form_control"/>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c">  <!-- QUESTIONS -->
-              <label class="control-label">questions</label>
-              <select name="question" class="form_control" id="question_select" onchange="selectquestion()">
-                <option value="0"> choose question </option>
-                <option value="father name" selected>father name</option>
-                <option value="school name">school name</option>
-                <option value="favourite time">favourite time</option>
-                <option value="favourite sport">favourite sport</option>
-                <option value="other">other</option>
-              </select>
-            </div>
+          <div class="input-box d-flex-r-bt-c">  <!-- QUESTIONS -->
+            <label class="control-label">questions</label>
+            <select name="question" class="form_control" id="question_select" onchange="selectquestion()">
+              <option value="0"> choose question </option>
+              <option value="father name" selected>father name</option>
+              <option value="school name">school name</option>
+              <option value="favourite time">favourite time</option>
+              <option value="favourite sport">favourite sport</option>
+              <option value="other">other</option>
+            </select>
+          </div>
 
-            <div class="input-box d-flex-r-bt-c" id="other_question"> <!-- other question -->
-              <label class="control-label">other question</label>
-              <input type="text" name="otherquestion" class="form_control" value="other_question">
-            </div>
+          <div class="input-box d-flex-r-bt-c" id="other_question"> <!-- other question -->
+            <label class="control-label">other question</label>
+            <input type="text" name="otherquestion" class="form_control" value="other_question">
+          </div>
 
-            <div class="input-box d-flex-r-bt-c" id="answer_question"> <!-- answer -->
-              <label class="control-label">answer question</label>
-              <input type="text" name="answer" class="form_control" maxlength="35" pattern=".{3,35}" value="answer" required/>
-            </div>
+          <div class="input-box d-flex-r-bt-c" id="answer_question"> <!-- answer -->
+            <label class="control-label">answer question</label>
+            <input type="text" name="answer" class="form_control" maxlength="35" pattern=".{3,35}" value="answer" required/>
+          </div>
 
-          </div> <!-- End col-md-8 -->
+        </div> <!-- End col-md-8 -->
 
-          <div class="col-md-4 img-box d-flex-c-c-c">
-            <h4>customer image</h4>
-            <input type="file">
-            <img src="inc/img/Perfume/perfume.png" alt="">
-          </div> <!-- End col-md-4 -->
-          
-          <input type="submit" value="update" class="btn"/>
+        <div class="col-md-4 img-box d-flex-c-c-c">
+          <h4>customer image</h4>
+          <input type="file">
+          <img src="inc/img/Perfume/perfume.png" alt="">
+        </div> <!-- End col-md-4 -->
+        
+        <input type="submit" value="update" class="btn"/>
 
-        </form>
+      </form>
 
-      </div> <!-- ===== End Main-Data ==== -->
+    </div> <!-- ===== End Main-Data ==== -->
 
-    </section>
-
-     <section class="dashboard-section" id="dashboard-section">
-
-        <aside id="aside"></aside>
-
-        <div class="main-data main-customers">
-
-            <div class="customer-container">
-              
-              <?php $theMsg = '<p class="wrong-message d-flex-r-st-st" style="margin:10rem auto 1rem;">There No Customer <i class="fas fa-times" id="icon" onclick="this.parentElement.remove();"></i> 
-                               </p>';?>
-              <?php redirectPage($theMsg, 'back');?>
-
-            </div> <!-- End Customer container -->
-
-        </div> <!-- ===== End Main-Data ==== -->
-
-     </section> 
+  </section>
 
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

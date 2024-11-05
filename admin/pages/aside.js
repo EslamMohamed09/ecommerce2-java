@@ -16,6 +16,13 @@ const asideContent = `<div class="sidebar">
     </a> 
    </li>
 
+   <li>
+    <a href="customers.html" class="sidebar-link">
+      <i class="fas fa-user" id="icon"></i>
+      <h3>customers</h3>
+    </a> 
+   </li>
+
     <li>
       <a href="category.html" class="sidebar-link">
         <i class="fa-solid fa-layer-group" id="icon"></i>
