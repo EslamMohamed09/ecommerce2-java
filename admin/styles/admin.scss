@@ -1485,7 +1485,7 @@ table {width:100%;
                                  padding:2rem !important;
                                  border-top-right-radius:0.5rem;
                                  border-bottom-right-radius:0.5rem;
-                                 background:radial-gradient(var(--shin-blue), var(--primary-color16));
+                                 background:radial-gradient(var(--shin-blue), var(--shin-blue7));
 
                             h2,
                             p {color:var(--white);}
@@ -1532,7 +1532,7 @@ table {width:100%;
                                        color:var(--white2);
                                        background:radial-gradient(var(--shin-blue), var(--shin-blue7));}
 
-                                   li.active {background:radial-gradient(var(--light-aqua2), var(--shin-blue3))}
+                                   li.active {background:radial-gradient(var(--aqua2), var(--shin-blue3))}
                             }
                      }
 
@@ -1591,7 +1591,7 @@ table {width:100%;
                                     padding-right:2rem;
                                     border-radius:2rem;
                                     font-size:1.2rem;
-                                    color:var(--gray2);
+                                    color:var(--gray10);
                                     background:var(--white);
                                     background-color:var(--white);
                                     box-shadow:var(--box-shadow2);

@@ -1840,7 +1840,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 2rem !important;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background: radial-gradient(var(--shin-blue), var(--primary-color16));
+  background: radial-gradient(var(--shin-blue), var(--shin-blue7));
 }
 #login-section .forms .login-form .login-form-container .desc-form h2,
 #login-section .forms .login-form .login-form-container .desc-form p {
@@ -1891,7 +1891,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background: radial-gradient(var(--shin-blue), var(--shin-blue7));
 }
 #login-section .forms .register-form .steps-block ul li.active {
-  background: radial-gradient(var(--light-aqua2), var(--shin-blue3));
+  background: radial-gradient(var(--aqua2), var(--shin-blue3));
 }
 #login-section .forms .register-form .registerphase {
   width: 70%;
@@ -1952,7 +1952,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding-right: 2rem;
   border-radius: 2rem;
   font-size: 1.2rem;
-  color: var(--gray2);
+  color: var(--gray10);
   background: var(--white);
   background-color: var(--white);
   box-shadow: var(--box-shadow2);
