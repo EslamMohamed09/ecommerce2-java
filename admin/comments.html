@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-height, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <title>comments</title>
+  <title>customers</title>
   <link rel="stylesheet" href="styles/all.css">  
   <link rel="stylesheet" href="styles/bootstrap.css">
   <link rel="stylesheet" href="styles/admin.css">
@@ -107,36 +107,16 @@
                 </table>
 
                 <div class="pagination">
-
-                  
-                  <a href="?page=4" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
-
-                 
-                      <a href="?page=4" class="pagination-link active">5></a>
-                     
-                      <span class="pagination-dots">....</span>
-                      <a href="?page=31" class="pagination-link">31</a>
-                      
-                    <a href="?page=1" class="pagination-link">1</a>
-                      echo '<span class="pagination-dots">....</span>';
-                      for($i = $totalPages - $range + 1; $i <= $totalPages; $i++) {$active_class = ($i == $page) ? " active" : "";?>
-                        <a href="?page=<?php echo $i;?>" class="pagination-link<?php echo $active_class;?>"><?php echo $i;?></a>
-                    
-                      echo '<a href="?page=1" class="pagination-link">1</a>';
-                      echo '<span class="pagination-dots">....</span>';
-                      for($i = $page - floor($visiblePages / 2); $i <= $page + floor($visiblePages / 2); $i++) {$active_class = ($i == $page) ? " active" : "";?>
-                        <a href="?page=<?php echo $i;?>" class="pagination-link<?php echo $active_class;?>"><?php echo $i;?></a>
-                      <?php }
-                      echo '<span class="pagination-dots">....</span>';
-                      echo '<a href="?page=' . $totalPages . '" class="pagination-link">' . $totalPages . '</a>';
-                    }?>
-
-                    <?php if($page < $totalPages){?>
-                      <a href="?page=<?php echo ($page+1);?>" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
-                    <?php }
-
-                  } ?>
-
+                  <a href="?page=2" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
+                
+                  <a href="?page=1" class="pagination-link">1</a>
+                  <a href="?page=2" class="pagination-link">2</a>
+                  <a href="?page=3" class="pagination-link active">3</a>
+                  <span class="pagination-dots">....</span>
+                  <a href="?page=6" class="pagination-link">6</a>
+                  <a href="?page=7" class="pagination-link">7</a>
+                
+                  <a href="?page=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
                 </div>
 
                 <div class="submit-buttons d-flex-r-st-c" style="gap:2rem;width:fit-content;display:none;">
