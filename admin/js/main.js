@@ -102,9 +102,30 @@ function eyeFunction(eyeIcon) {
  =============================
 */
 /*
-** ####################
-** Add Tags to Textarea 
-** ####################
+ #### Profile-Data ####
+*/
+function filterWithTabs(tabButton, cardItem) {
+
+  let firstFilterclick = tabButton.first().attr('filter-click');
+  cardItem.not('.' + firstFilterclick).hide(0);
+  cardItem.filter('.' + firstFilterclick).show(0);
+
+  tabButton.click(function () {
+    filterClick = $(this).attr('filter-click');
+    cardItem.not('.' + filterClick).hide(0);
+    cardItem.filter('.' + filterClick).show(0);
+    $(this).addClass('button-active').siblings().removeClass('button-active');
+  });
+  tabButton.first().addClass('button-active');
+
+}
+
+// profile-info
+filterWithTabs($('.main-profile-page .profile-data .tabs-area li'), $('.main-profile-page .profile-data .info-card'));
+
+
+/*
+ #### Add Tags to Textarea ####
 */
 function addTag(event, inputElement, textareaElement){
   if(event && event.keycode !== 13){return}

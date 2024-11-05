@@ -1909,11 +1909,11 @@ table {width:100%;
                             }
                      }
 
-                     h3 {color:var(--gray1);
+                     h3 {color:var(--gray11);
                          font-weight:bold;
                          margin-top:0.6rem;}
 
-                     p {color:var(--gray4);
+                     p {color:var(--gray7);
                         font-weight:bold;}
               }
 
@@ -1927,22 +1927,22 @@ table {width:100%;
                                         padding:0;
                                         background-color:transparent;
 
-                                   .blocks .block .title-area,
-                                   .box .title-area {flex-wrap:nowrap;
-                                                     width:99%;}
+                                   .blocks .block .heading,
+                                   .box .heading {flex-wrap:nowrap;
+                                                  width:99%;}
 
                                    .blocks .block h5 {margin-bottom:0.5rem;
                                                       font-size:1.2rem;
-                                                      color:var(--shin-blue5);}
+                                                      color:var(--shin-blue6);}
 
                                    /* open/close */
-                                   .title-area {
+                                   .heading {
                                           label input[type="checkbox"],
                                           label input[type="checkbox"]:focus {border:none;
                                                                               outline:none;
                                                                               appearance:none;
                                                                               -webkit-appearance:none;
-                                                                              display:none;}       
+                                                                              display:none;}
 
                                           label {
                                                  .toggle-switch {width:4.5rem;
@@ -1958,31 +1958,31 @@ table {width:100%;
                                                                  transition:all 0.3s linear;
                                                                  cursor:pointer;
                                                                  position:relative;
-                                                                 background-color:var(--gray8);
-  
-                                                        .fa-xmark {width:0.7rem;
-                                                                   height:0.7rem;
+                                                                 background-color:var(--gray3);
+
+                                                        .fa-xmark {width:1.2rem;
+                                                                   height:1.2rem;
                                                                    padding:0.3rem;
                                                                    border-radius:50%;
                                                                    display:flex;
                                                                    justify-content:center;
                                                                    align-items:center;
                                                                    color:var(--white);
-                                                                   background-color:var(--gray7);
+                                                                   background-color:var(--gray5);
                                                                    transition:all 0.3s linear;
                                                                    position:absolute;
                                                                    left:0.3rem;
                                                                    z-index:2;
                                                                    opacity:1;}
- 
-                                                        .fa-check {width:0.7rem;
-                                                                   height:0.7rem;
+
+                                                        .fa-check {width:1.2rem;
+                                                                   height:1.2rem;
                                                                    padding:0.3rem;
                                                                    border-radius:50%;
                                                                    display:flex;
                                                                    justify-content:center;
                                                                    align-items:center;
-                                                                   color:var(--shin-blue2);
+                                                                   color:var(--shin-blue4);
                                                                    background-color:var(--white);
                                                                    transition:all 0.3s linear;
                                                                    position:absolute;
@@ -1992,39 +1992,38 @@ table {width:100%;
                                                  
                                                  }
 
-                                                 .toggle-checkbox:checked + .toggle-switch {background-color:var(--shin-blue2);}
+                                                 input[type="checkbox"]:checked + .toggle-switch {background-color:var(--shin-blue4);}
 
-                                                 .toggle-checkbox:checked + .toggle-switch .fa-xmark {left:3rem;
-                                                                                                      opacity:0;
-                                                                                                      z-index:1;
-                                                                                                      background-color:var(--primary-color9);}
+                                                 input[type="checkbox"]:checked + .toggle-switch .fa-xmark {left:3rem;
+                                                                                                            opacity:0;
+                                                                                                            z-index:1;
+                                                                                                            background-color:var(--gray4);}
 
-                                                 .toggle-checkbox:checked + .toggle-switch .fa-check {left:3rem;
-                                                                                                      opacity:1;
-                                                                                                      z-index:2;}
+                                                 input[type="checkbox"]:checked + .toggle-switch .fa-check {left:3rem;
+                                                                                                            opacity:1;
+                                                                                                            z-index:2;}
                                           }
                                    }
                             }
 
                             /* gen-info */
-                            .gen-info {
+                            .general-info {
                                    .blocks {
                                           .block {width:100%;
                                                   padding:2rem 0;
                                                   gap:0.7rem;
                                                   border-bottom:1px solid var(--gray8);
-                                          
 
                                                  .details {width:100%;
                                                            flex-wrap:wrap;
                                                            gap:5%;
 
                                                         p {font-size:1rem;
-                                                           color:var(--gray3);
+                                                           color:var(--gray9);
 
-                                                               span {color:var(--primary-color13);
+                                                               span {font-size:1rem;
                                                                      font-weight:bold;
-                                                                     margin-right:1px;}
+                                                                     color:var(--gray11);}
                                                         }
 
                                                         .item {display:flex;
@@ -2044,11 +2043,12 @@ table {width:100%;
                                                                       margin:0;
                                                                       padding:0;
 
-                                                                      span {font-size:1.1rem;
-                                                                            color:var(--gray3);}
+                                                                      span {font-size:1rem;
+                                                                            font-weight:bold;
+                                                                            color:var(--gray11);}
 
                                                                       p {text-transform:lowercase;
-                                                                         color:var(--gray4);}
+                                                                         color:var(--gray8);}
                                                                }
                                                         }
                                                  }
@@ -2105,7 +2105,7 @@ table {width:100%;
                                                   height:fit-content;
                                                   gap:1.1rem;
                             
-                                                 .title-area {width:100%;}
+                                                 .heading {width:100%;}
                                                                                                          
                                                  .details {flex-wrap:wrap;
                                                         line-height:2.5rem;
@@ -2149,8 +2149,8 @@ table {width:100%;
 }
 
 @media(max-width:400px){
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch {width:3.5rem;}
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {width:3.5rem;}
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
   .main-profile-page .profile-data .col-right .info-cards .my-skills .blocks .block .details {width:100%;}
 }
 
@@ -2286,7 +2286,7 @@ table {width:100%;
                             .info-cards {
 
                                    .info-card {
-                                          .title-area {
+                                          .heading {
                                                  label .toggle-checkbox:checked + .toggle-switch .fa-xmark {left:3.1rem;}
 
                                                  label .toggle-checkbox:checked + .toggle-switch .fa-check {left:3.1rem;}

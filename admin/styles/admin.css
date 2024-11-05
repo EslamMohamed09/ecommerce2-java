@@ -2306,12 +2306,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 50%;
 }
 .main-profile-page .profile-data .col-left h3 {
-  color: var(--gray1);
+  color: var(--gray11);
   font-weight: bold;
   margin-top: 0.6rem;
 }
 .main-profile-page .profile-data .col-left p {
-  color: var(--gray4);
+  color: var(--gray7);
   font-weight: bold;
 }
 .main-profile-page .profile-data .col-right {
@@ -2331,25 +2331,25 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background-color: transparent;
   /* open/close */
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .blocks .block .title-area,
-.main-profile-page .profile-data .col-right .info-cards .info-card .box .title-area {
+.main-profile-page .profile-data .col-right .info-cards .info-card .blocks .block .heading,
+.main-profile-page .profile-data .col-right .info-cards .info-card .box .heading {
   flex-wrap: nowrap;
   width: 99%;
 }
 .main-profile-page .profile-data .col-right .info-cards .info-card .blocks .block h5 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  color: var(--shin-blue5);
+  color: var(--shin-blue6);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label input[type=checkbox],
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label input[type=checkbox]:focus {
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   display: none;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch {
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
   width: 4.5rem;
   height: 1.6rem;
   padding: 0 0.3rem;
@@ -2363,33 +2363,33 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   transition: all 0.3s linear;
   cursor: pointer;
   position: relative;
-  background-color: var(--gray8);
+  background-color: var(--gray3);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch .fa-xmark {
-  width: 0.7rem;
-  height: 0.7rem;
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+  width: 1.2rem;
+  height: 1.2rem;
   padding: 0.3rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
-  background-color: var(--gray7);
+  background-color: var(--gray5);
   transition: all 0.3s linear;
   position: absolute;
   left: 0.3rem;
   z-index: 2;
   opacity: 1;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch .fa-check {
-  width: 0.7rem;
-  height: 0.7rem;
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
+  width: 1.2rem;
+  height: 1.2rem;
   padding: 0.3rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--shin-blue2);
+  color: var(--shin-blue4);
   background-color: var(--white);
   transition: all 0.3s linear;
   position: absolute;
@@ -2397,41 +2397,41 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   z-index: 1;
   opacity: 0;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch {
-  background-color: var(--shin-blue2);
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
+  background-color: var(--shin-blue4);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
   left: 3rem;
   opacity: 0;
   z-index: 1;
-  background-color: var(--primary-color9);
+  background-color: var(--gray4);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-check {
+.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
   left: 3rem;
   opacity: 1;
   z-index: 2;
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block {
   width: 100%;
   padding: 2rem 0;
   gap: 0.7rem;
   border-bottom: 1px solid var(--gray8);
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details {
   width: 100%;
   flex-wrap: wrap;
   gap: 5%;
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details p {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details p {
   font-size: 1rem;
-  color: var(--gray3);
+  color: var(--gray9);
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details p span {
-  color: var(--primary-color13);
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details p span {
+  font-size: 1rem;
   font-weight: bold;
-  margin-right: 1px;
+  color: var(--gray11);
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details .item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2440,26 +2440,27 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin: 0;
   padding: 0;
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item #icon {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details .item #icon {
   color: var(--color-dark);
   margin-top: 0.2rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item .desc {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details .item .desc {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin: 0;
   padding: 0;
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item .desc span {
-  font-size: 1.1rem;
-  color: var(--gray3);
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details .item .desc span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--gray11);
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block .details .item .desc p {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block .details .item .desc p {
   text-transform: lowercase;
-  color: var(--gray4);
+  color: var(--gray8);
 }
-.main-profile-page .profile-data .col-right .info-cards .gen-info .blocks .block:last-child {
+.main-profile-page .profile-data .col-right .info-cards .general-info .blocks .block:last-child {
   border: none;
 }
 .main-profile-page .profile-data .col-right .info-cards .education .box {
@@ -2511,7 +2512,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   height: fit-content;
   gap: 1.1rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .my-skills .blocks .block .title-area {
+.main-profile-page .profile-data .col-right .info-cards .my-skills .blocks .block .heading {
   width: 100%;
 }
 .main-profile-page .profile-data .col-right .info-cards .my-skills .blocks .block .details {
@@ -2555,10 +2556,10 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 
 @media (max-width: 400px) {
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch {
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
     width: 3.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-check {
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
     left: 2.2rem;
   }
   .main-profile-page .profile-data .col-right .info-cards .my-skills .blocks .block .details {
@@ -2737,17 +2738,17 @@ table tbody tr:nth-child(even) tr:hover .buttons {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
     left: 3.1rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-checkbox:checked + .toggle-switch .fa-check {
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
     left: 3.1rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch .fa-xmark {
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
     width: 0.5rem;
     height: 0.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .title-area label .toggle-switch .fa-check {
+  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
     width: 0.5rem;
     height: 0.5rem;
   }
