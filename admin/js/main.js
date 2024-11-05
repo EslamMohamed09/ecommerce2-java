@@ -121,7 +121,7 @@ function filterWithTabs(tabButton, cardItem) {
 }
 
 // profile-info
-filterWithTabs($('.main-profile-page .profile-data .tabs-area li'), $('.main-profile-page .profile-data .info-card'));
+filterWithTabs($('.main-profile-page .profile-data .tabs-area li'), $('.main-profile-page .profile-data .info-cards .info-card'));
 
 
 /*
