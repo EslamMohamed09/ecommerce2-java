@@ -1742,9 +1742,272 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   }
 }
 
-/******************
- # Dashboard
-*******************/
+/*
+ =============================
+ ########### LOGIN ###########
+ =============================
+*/
+/* login */
+#login-section {
+  background: #eef1f8;
+  min-height: 100vh;
+}
+#login-section .forms {
+  width: 100%;
+  margin: auto !important;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  /** Register **/
+}
+#login-section .forms form {
+  padding: 0;
+  width: 100%;
+}
+#login-section .forms form h2 {
+  margin: 2rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#login-section .forms form .input-boxes .input-box #icon {
+  margin: 0;
+}
+#login-section .forms form .input-boxes .input-box input:focus {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  background-color: transparent;
+}
+#login-section .forms form p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#login-section .forms form p span {
+  color: var(--shin-blue2);
+  font-weight: bold;
+  cursor: pointer;
+}
+#login-section .forms .login-form .login-form-container {
+  padding: 0;
+  width: 70%;
+  margin: auto;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  box-shadow: 2px 2px 30px rgba(66, 57, 238, 0.2);
+  background-color: var(--white);
+}
+#login-section .forms .login-form .login-form-container .input-boxes .input-box .pass-input {
+  flex: 1 1 20rem;
+}
+#login-section .forms .login-form .login-form-container .input-boxes .input-box .pass-input input {
+  width: 100%;
+}
+#login-section .forms .login-form .login-form-container .col-left .input-boxes {
+  width: 100%;
+  gap: 1.5rem;
+}
+#login-section .forms .login-form .login-form-container .col-left .input-boxes .input-box {
+  width: 90%;
+  gap: 0.6rem;
+  border-radius: 1.5rem;
+  padding-left: 0.9rem;
+  padding-right: 0;
+  background: var(--white);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow2);
+}
+#login-section .forms .login-form .login-form-container .col-left .input-boxes .input-box input {
+  flex: 1 1 20rem;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--gray10);
+  background-color: transparent;
+  background: transparent;
+}
+#login-section .forms .login-form .login-form-container .btn3 {
+  width: 89%;
+  margin: 2rem auto;
+}
+#login-section .forms .login-form .login-form-container .desc-form {
+  min-height: 35vh;
+  gap: 1rem;
+  padding: 2rem !important;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: radial-gradient(var(--shin-blue), var(--primary-color16));
+}
+#login-section .forms .login-form .login-form-container .desc-form h2,
+#login-section .forms .login-form .login-form-container .desc-form p {
+  color: var(--white);
+}
+@media (max-width: 768px) {
+  #login-section .forms form .input-box {
+    width: 90%;
+  }
+  #login-section .forms .login-form .desc-form {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+#login-section .forms .register-form {
+  min-height: 100vh;
+  text-align: center;
+  /* steps-block */
+  /* registerphase */
+  /* registerphase1 */
+}
+#login-section .forms .register-form .steps-block {
+  position: relative;
+  margin: 4rem auto 5rem;
+  width: 80%;
+  height: 1rem;
+}
+#login-section .forms .register-form .steps-block .line {
+  width: 90%;
+  margin: auto;
+  height: 1px;
+  background-color: var(--shin-blue);
+}
+#login-section .forms .register-form .steps-block ul {
+  position: absolute;
+  top: -2.5rem;
+  width: 100%;
+}
+#login-section .forms .register-form .steps-block ul li {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  text-align: center;
+  color: var(--white2);
+  background: radial-gradient(var(--shin-blue), var(--shin-blue7));
+}
+#login-section .forms .register-form .steps-block ul li.active {
+  background: radial-gradient(var(--light-aqua2), var(--shin-blue3));
+}
+#login-section .forms .register-form .registerphase {
+  width: 70%;
+  margin: 2.5rem auto 2rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: 2px 2px 30px rgba(66, 57, 238, 0.2);
+  display: none;
+}
+#login-section .forms .register-form .registerphase.active {
+  display: flex;
+}
+#login-section .forms .register-form .registerphase .input-boxes {
+  gap: 1.5rem;
+}
+#login-section .forms .register-form .registerphase .input-boxes .input-box {
+  width: 95%;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+  border-radius: 1.5rem;
+  padding-left: 0.9rem;
+  padding-right: 0;
+  box-shadow: var(--box-shadow2);
+  background: var(--white);
+  background-color: var(--white);
+}
+#login-section .forms .register-form .registerphase .input-boxes .input-box #icon {
+  margin: 0;
+}
+#login-section .forms .register-form .registerphase .input-boxes .input-box input {
+  flex: 1 1 20rem;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--gray10);
+  background-color: transparent;
+  background: transparent;
+}
+#login-section .forms .register-form .registerphase .input-boxes .input-box .pass-input {
+  flex: 1 1 20rem;
+}
+#login-section .forms .register-form .registerphase .input-boxes .input-box .pass-input input {
+  width: 100%;
+}
+#login-section .forms .register-form .registerphase #file-input {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 3rem;
+  width: 95%;
+}
+#login-section .forms .register-form .registerphase select {
+  width: 95%;
+  padding: 0.8rem 0.5rem;
+  padding-right: 2rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  color: var(--gray2);
+  background: var(--white);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow2);
+}
+#login-section .forms .register-form .registerphase select option {
+  color: var(--gray2);
+  font-size: 1.2rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow3);
+}
+#login-section .forms .register-form .registerphase select option:first-child {
+  color: var(--gray3);
+}
+#login-section .forms .register-form .registerphase select option:hover {
+  background: rgb(223, 172, 228);
+}
+#login-section .forms .register-form .registerphase .btn3 {
+  width: 100%;
+  border-radius: 0.3rem;
+}
+@media (max-width: 1200px) {
+  #login-section .forms .register-form .registerphase {
+    width: 80%;
+  }
+}
+@media (max-width: 968px) {
+  #login-section .forms .register-form .registerphase {
+    width: 90%;
+  }
+}
+#login-section .forms .register-form #registerphase1 h2 {
+  margin: 1rem 0 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#login-section .forms .register-form #registerphase1 .blocks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  border-radius: 0.5rem;
+}
+@media (max-width: 968px) {
+  #login-section .forms .register-form #registerphase1 .blocks .left-block {
+    margin-bottom: 1.5rem;
+  }
+}
+#login-section .forms .register-form #registerphase1 .btn3 {
+  margin: 2rem 0 1.5rem;
+}
+
+/*
+ ============================
+ ########### HOME ###########
+ ============================
+*/
 #dashboard-section {
   display: flex;
   flex-direction: row;
