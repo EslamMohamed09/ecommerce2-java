@@ -1299,10 +1299,10 @@ table {width:100%;
                      .active {background-color:var(--shin-blue6);}
               }
 
-              .profile {display:flex;
+              .content {display:flex;
                         flex-direction:row;
                         justify-content:flex-end;
-                        gap:1rem;
+                        gap:0.5rem;
 
                      .info {display:flex;
                             flex-direction:column;
@@ -1320,9 +1320,9 @@ table {width:100%;
                      }
                      
                      img {border-radius:50%;
-                          object-fit:cover;
                           width:2.5rem;
                           height:2.5rem;
+                          object-fit:fill;
                           cursor:pointer;}
 
                      .drop-menu {position:absolute;

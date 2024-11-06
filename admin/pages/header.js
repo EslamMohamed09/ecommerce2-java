@@ -19,12 +19,12 @@ const headerContent = `
       <i class="far fa-moon" id="icon"></i>
     </div>
 
-    <div class="profile">
+    <div class="content">
       <div class="info">
         <p>Hey, <b>eslam</b></p>
         <small>admin</small>
       </div>
-      <img src="img/eslam.jpg" id="profile-img" alt="">
+      <img src="images/users/eslam(3).jpg" id="profile-img" alt="">
       <div class="drop-menu d-flex-c-st-st">
         <a href="#" class="drop-link">update profile</a>
         <a href="logout.php" class="drop-link">logout <i class="fas fa-sign-out-alt" id="icon"></i></a>

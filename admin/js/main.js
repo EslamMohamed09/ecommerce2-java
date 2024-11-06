@@ -16,7 +16,7 @@ document.addEventListener('headerLoaded', () => {
   });
 
   if(document.querySelector('.header')){
-    let dropmenu = document.querySelector('.header .profile .drop-menu');
+    let dropmenu = document.querySelector('.header .right-header .content .drop-menu');
     let rightheader = document.querySelector('.header .right-header');
     const profileImg = document.querySelector('#profile-img');
 
@@ -27,7 +27,7 @@ document.addEventListener('headerLoaded', () => {
     };
     document.body.addEventListener('click', (event) => { // Add click event listener to the document body
       if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
-        dropmenu.classList.remove('dropactive');
+          dropmenu.classList.remove('dropactive');
       }
     });
   }

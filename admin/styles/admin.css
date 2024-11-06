@@ -1623,38 +1623,38 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #header .right-header .theme-toggler .active {
   background-color: var(--shin-blue6);
 }
-#header .right-header .profile {
+#header .right-header .content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.5rem;
 }
-#header .right-header .profile .info {
+#header .right-header .content .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   gap: 0;
 }
-#header .right-header .profile .info p {
+#header .right-header .content .info p {
   margin: 0;
   color: var(--gray8);
 }
-#header .right-header .profile .info p b {
+#header .right-header .content .info p b {
   color: var(--gray9);
 }
-#header .right-header .profile .info small {
+#header .right-header .content .info small {
   margin: 0;
   color: var(--gray8);
 }
-#header .right-header .profile img {
+#header .right-header .content img {
   border-radius: 50%;
-  object-fit: cover;
   width: 2.5rem;
   height: 2.5rem;
+  object-fit: fill;
   cursor: pointer;
 }
-#header .right-header .profile .drop-menu {
+#header .right-header .content .drop-menu {
   position: absolute;
   top: 100%;
   right: 0.1rem;
@@ -1666,27 +1666,27 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   animation: fadeIn 0.2s linear;
   display: none;
 }
-#header .right-header .profile .drop-menu .drop-link {
+#header .right-header .content .drop-menu .drop-link {
   padding: 0.4rem 0.6rem 0.4rem 1rem;
   width: 100%;
   color: var(--gray10);
   font-size: 1rem;
   font-weight: bold;
 }
-#header .right-header .profile .drop-menu .drop-link:first-child {
+#header .right-header .content .drop-menu .drop-link:first-child {
   border-bottom: 1px solid var(--gray3);
   background-color: var(--blue3);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
-#header .right-header .profile .drop-menu .drop-link:last-child {
+#header .right-header .content .drop-menu .drop-link:last-child {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-#header .right-header .profile .drop-menu .drop-link:hover {
+#header .right-header .content .drop-menu .drop-link:hover {
   background-color: var(--blue3);
 }
-#header .right-header .profile .drop-menu.dropactive {
+#header .right-header .content .drop-menu.dropactive {
   display: flex;
 }
 @keyframes fadeIn {
