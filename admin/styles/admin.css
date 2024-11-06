@@ -1610,7 +1610,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   width: 4rem;
   height: 1.6rem;
   border-radius: 0.3rem;
-  background-color: var(--color-info-light);
+  background-color: var(--gray3);
 }
 #header .right-header .theme-toggler #icon {
   width: 50%;
@@ -1705,7 +1705,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 1.5rem 0.3rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--box-shadow6);
   border-radius: 2.5rem;
   display: none;
 }
