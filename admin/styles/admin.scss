@@ -1265,10 +1265,10 @@ table {width:100%;
                          letter-spacing:0.8px;}
               }
 
-              #open-aside {cursor:pointer;}
+              #asidebutton {cursor:pointer;}
        }
 
-       @media (max-width:711px){ .left-header #open-aside {display:none;} }
+       @media (max-width:711px){ .left-header #asidebutton {display:none;} }
 
        .right-header {display:flex;
                       flex-direction:row;
@@ -1436,7 +1436,6 @@ table {width:100%;
               }
 
               .login-form {
-
                      .login-form-container {padding:0;
                                             width:70%;
                                             margin:auto;
@@ -1544,9 +1543,6 @@ table {width:100%;
                                      background-color:var(--white);
                                      box-shadow:2px 2px 30px rgba(66, 57, 238, 0.2);
                                      display:none;
-
-                            
-       
 
                             &.active {display:flex;}
 
@@ -1697,23 +1693,15 @@ table {width:100%;
               }
        }
 
-@media (min-width:711px) and (max-width:1340px){ #dashboard-section aside {width:18rem;} }
+@media (min-width:711px) and (max-width:1340px){ aside {width:17rem;} }
 
 @media (max-width:711px){
-      #dashboard-section aside {position:absolute;
-                                top:0;
-                                left:0;
-                                width:4rem;
-                                min-height:100%;
-                                transition:all 0.3s linear;}
-
-      #dashboard-section aside h3 {opacity:0;
-                                   transition:all 0.2s linear;}
-
-      #dashboard-section aside.active {width:13rem;}
-
-      #dashboard-section aside.active h3 {opacity:1;
-                                          transition:all 1s linear;}
+       aside {position:absolute;
+              top:0;
+              left:0;
+              width:13rem;
+              min-height:100%;
+              transition:all 0.3s linear;}
 }
 
 /*================= MAIN DASHBOARD =========================*/

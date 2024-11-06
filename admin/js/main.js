@@ -294,7 +294,11 @@ if(document.getElementById('addCertificationBtn') && document.getElementById('de
   });
 }
 
-/******** ASIDE ********/
+/*
+ ======================
+ ######## ASIDE #######
+ ======================
+*/
 document.addEventListener('asideLoaded', () => {
   
   const currentPage = window.location.pathname.split('/').pop();
@@ -308,30 +312,36 @@ document.addEventListener('asideLoaded', () => {
   });
 
   /*** BIG & SMALL ASIDE ***/
-  if(document.getElementById("aside") && document.getElementById("open-aside")){
-      const mainAside = document.getElementById("aside");
-      const smallasideBtn = document.getElementById("open-aside");
-      const openasideBtn = document.getElementById("open-btn");
+  if(document.getElementById("aside") && document.getElementById("asidebutton")){
+     const asideMenu = document.getElementById("aside");
+     const asideButton = document.getElementById("asidebutton");
+     const asideButton2 = document.getElementById("asidebutton2");
+     let isToggledByButton = false;
 
-      // big aside in small screen
-      const openAsideArr = [openasideBtn];
-      const elemToggleFunc = function (elem) {elem.classList.toggle("active");}
-
-      for (let i = 0; i < openAsideArr.length; i++) {
-          openAsideArr[i].addEventListener("click", function () {
-              elemToggleFunc(mainAside);
-          });
+      function updateAsideMenuClass(){
+        if(!isToggledByButton){
+          if(window.innerWidth < 711){
+             asideMenu.classList.add("smallaside");
+          } else {
+            asideMenu.classList.remove("smallaside");
+          }
+        }
       }
 
-      // small aside in big screen
-      const smallAsideArr = [smallasideBtn];
-      const smallAsideFunc = function (elem) {elem.classList.toggle("smallaside");}
+      updateAsideMenuClass();
 
-      for (let i = 0; i < smallAsideArr.length; i++) {
-          smallAsideArr[i].addEventListener("click", function () {
-              smallAsideFunc(mainAside);
-          });
-      }
+      window.addEventListener("resize", updateAsideMenuClass);
+
+      asideButton.addEventListener('click', function(){
+        asideMenu.classList.toggle("smallaside");
+        isToggledByButton = asideMenu.classList.contains("smallaside");
+      });
+
+      asideButton2.addEventListener('click', function(){
+        asideMenu.classList.toggle("smallaside");
+        isToggledByButton = asideMenu.classList.contains("smallaside");
+      });
+
   }
 
 });

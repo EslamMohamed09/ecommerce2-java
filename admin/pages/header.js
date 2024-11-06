@@ -1,11 +1,12 @@
-const headerContent = `<div class="left-header">
-
+const headerContent = `
+  <div class="left-header">
+  
     <div class="logo">
       <img src="img/buyhome.png" alt="">
       <h2>ecommerce</h2>
     </div>
 
-    <div id="open-aside">
+    <div id="asidebutton">
       <i class="fas fa-bars"></i>
     </div>
 
@@ -49,9 +50,9 @@ const headerContent = `<div class="left-header">
       <span>products</span>
     </a>
 
-    <a href="#" class="small-menu-link" id="open-btn">
+    <button class="small-menu-link" id="asidebutton2">
       <i class="fas fa-bars" id="icon"></i>
       <span>menu</span>
-    </a>
+    </button>
 
   </div>`;
