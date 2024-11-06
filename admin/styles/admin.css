@@ -2092,6 +2092,11 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background-color: transparent;
 }
 
+@media (max-width: 711px) {
+  #dashboard-section .section-container {
+    margin-left: 4rem;
+  }
+}
 /*
  ============================
  ########### HOME ###########
@@ -2101,13 +2106,14 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 .home-page .home-container .section-holder .middle {
   flex: 1 1 40rem;
   display: flex;
   flex-direction: column;
   padding: 0;
-  gap: 1rem;
+  gap: 2rem;
   background-color: transparent;
   /************** INSIGHTS **************/
   /************** RECENT ORDER **************/
@@ -2235,7 +2241,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 .home-page .home-container .section-holder .middle .recent-order {
   width: 99%;
   display: block;
-  margin: 1rem auto;
+  margin: 0 auto;
   padding: 1rem;
   text-align: left;
   border-radius: 0.7rem;
@@ -2295,14 +2301,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 .home-page .home-container .section-holder .right-aside {
   flex: 1 1 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 3rem;
+  gap: 2rem;
   background: transparent;
   padding: 0;
-  padding-left: 1rem;
   margin: 0;
   /******* active users block *******/
   /******* recent updates *******/
@@ -2319,7 +2320,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin: 0;
   background-color: var(--white);
   box-shadow: var(--box-shadow6);
-  gap: 1.6rem;
+  gap: 1.1rem;
   border-radius: 1rem;
 }
 .home-page .home-container .section-holder .right-aside .block:nth-child(3) {
@@ -2328,12 +2329,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: none;
 }
 .home-page .home-container .section-holder .right-aside .block .block-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: left;
   width: 100%;
   padding: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
   margin: 0.2rem 0 0;
   border-bottom: 1.5px solid var(--yellow1);
 }
@@ -2352,7 +2353,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: fill;
 }
 .home-page .home-container .section-holder .right-aside .recent-updates .updates {
   display: flex;
@@ -2537,11 +2538,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 50%;
 }
 
-@media (max-width: 711px) {
-  #dashboard-section .section-container {
-    margin-left: 4rem;
-  }
-}
 /*
  =============================
  ######## USER PROFILE #######

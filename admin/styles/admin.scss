@@ -1708,6 +1708,8 @@ table {width:100%;
                            background-color:transparent;}
 }
 
+@media (max-width:711px){ #dashboard-section .section-container {margin-left:4rem;} }
+
 /*
  ============================
  ########### HOME ###########
@@ -1718,12 +1720,13 @@ table {width:100%;
               .section-holder {display:flex;
                                flex-direction:row;
                                flex-wrap:wrap;
+                               gap:2rem;
 
                      .middle {flex:1 1 40rem;
                               display:flex;
                               flex-direction:column;
                               padding:0;
-                              gap:1rem;
+                              gap:2rem;
                               background-color:transparent;
 
                             /************** INSIGHTS **************/
@@ -1827,7 +1830,7 @@ table {width:100%;
                             /************** RECENT ORDER **************/
                             .recent-order {width:99%;
                                            display:block;
-                                           margin:1rem auto;
+                                           margin:0 auto;
                                            padding:1rem;
                                            text-align:left;
                                            border-radius:0.7rem;
@@ -1884,14 +1887,9 @@ table {width:100%;
                      }
 
                      .right-aside {flex:1 1 5rem;
-                                   display:flex;
-                                   flex-direction:column;
-                                   justify-content:flex-start;
-                                   align-items:flex-start;
-                                   gap:3rem;
+                                   gap:2rem;
                                    background:transparent;
                                    padding:0;
-                                   padding-left:1rem;
                                    margin:0;
 
                             .block {display:flex;
@@ -1903,19 +1901,19 @@ table {width:100%;
                                     margin:0;
                                     background-color:var(--white);
                                     box-shadow:var(--box-shadow6);
-                                    gap:1.6rem;
+                                    gap:1.1rem;
                                     border-radius:1rem;
 
                                    &:nth-child(3) {padding:0;
                                                    background-color:transparent;
                                                    box-shadow:none;}
 
-                                   .block-title {font-size:1.4rem;
+                                   .block-title {font-size:1.3rem;
                                                  font-weight:bold;
                                                  text-align:left;
                                                  width:100%;
                                                  padding:0;
-                                                 padding-bottom:1rem;
+                                                 padding-bottom:0.8rem;
                                                  margin:0.2rem 0 0;
                                                  border-bottom:1.5px solid var(--yellow1);}
 
@@ -1934,7 +1932,7 @@ table {width:100%;
                                           img {width:4rem;
                                                height:4rem;
                                                border-radius:50%;
-                                               object-fit:cover;}
+                                               object-fit:fill;}
                                    }
                             }
 
@@ -2104,8 +2102,6 @@ table {width:100%;
               }
        }
 }
-
-@media (max-width:711px){ #dashboard-section .section-container {margin-left:4rem;} }
 
 /*
  =============================
