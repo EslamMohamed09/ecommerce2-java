@@ -867,7 +867,7 @@ section {
 }
 
 @media (max-width: 711px) {
-  #dashboard-section .main-data .section-heading {
+  #dashboard-section .section-container .section-heading {
     text-align: center;
     font-size: 1.5rem;
   }
@@ -2019,7 +2019,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
   /*================= ASIDE =========================*/
   /*================= MAIN DASHBOARD =========================*/
-  /************** RECENT ORDER **************/
   /*================= RIGHT ASIDE =========================*/
 }
 #dashboard-section aside {
@@ -2086,7 +2085,8 @@ table tbody tr:nth-child(even) tr:hover .buttons {
     transition: all 0.3s linear;
   }
 }
-#dashboard-section .main-data {
+#dashboard-section .section-container {
+  display: block;
   width: 100%;
   padding: 1rem;
   margin: 0;
@@ -2095,62 +2095,61 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background-color: transparent;
 }
 @media (max-width: 711px) {
-  #dashboard-section #dashboard-section .main-data {
+  #dashboard-section .section-container {
     margin-left: 4rem;
   }
 }
-#dashboard-section .home {
+#dashboard-section .home-container .section-holder {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /************** INSIGHTS **************/
 }
-#dashboard-section .home .middle {
+#dashboard-section .home-container .section-holder .middle {
   flex: 1 1 40rem;
   display: flex;
   flex-direction: column;
   padding: 0;
   gap: 1rem;
   background-color: transparent;
+  /************** INSIGHTS **************/
+  /************** RECENT ORDER **************/
 }
-#dashboard-section .home .middle h1 {
-  display: inline-block !important;
-  width: 11rem;
-}
-#dashboard-section .home .insights {
+#dashboard-section .home-container .section-holder .middle .insights {
   width: 100%;
   gap: 1rem;
+  flex-wrap: wrap;
   margin: 0;
   background: transparent;
 }
-#dashboard-section .home .insights > div:first-child {
+#dashboard-section .home-container .section-holder .middle .insights > div:first-child {
   border-left: 0.3rem solid var(--shin-blue5);
 }
-#dashboard-section .home .insights > div:nth-child(2) {
+#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(2) {
   border-left: 0.3rem solid var(--red7);
 }
-#dashboard-section .home .insights > div:nth-child(3) {
+#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(3) {
   border-left: 0.3rem solid var(--green12);
 }
-#dashboard-section .home .insights > div:first-child #icon {
+#dashboard-section .home-container .section-holder .middle .insights > div:first-child #icon {
   background-color: var(--shin-blue5);
 }
-#dashboard-section .home .insights > div:nth-child(2) #icon {
+#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(2) #icon {
   background-color: var(--red7);
 }
-#dashboard-section .home .insights > div:nth-child(3) #icon {
+#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(3) #icon {
   background-color: var(--green12);
 }
-#dashboard-section .home .insights > div:first-child svg circle {
+#dashboard-section .home-container .section-holder .middle .insights > div:first-child svg circle {
   stroke: var(--shin-blue5);
 }
-#dashboard-section .home .insights > div:nth-child(2) svg circle {
+#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(2) svg circle {
   stroke: var(--red7);
 }
-#dashboard-section .home .insights > div:nth-child(3) svg circle {
+#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(3) svg circle {
   stroke: var(--green12);
 }
-#dashboard-section .home .insights .insight-card {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card {
+  flex: 1 1 17rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2161,14 +2160,14 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow4);
   background: var(--white);
 }
-#dashboard-section .home .insights .insight-card #icon {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card #icon {
   color: var(--white);
   padding: 0.65rem;
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
 }
-#dashboard-section .home .insights .insight-card .progress {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress {
   min-height: 6rem;
   display: flex;
   flex-direction: row;
@@ -2177,31 +2176,31 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
   background-color: transparent;
 }
-#dashboard-section .home .insights .insight-card .progress .left {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .left {
   width: 100%;
   display: block;
   text-align: left;
 }
-#dashboard-section .home .insights .insight-card .progress .left h5 {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .left h5 {
   font-weight: bold;
 }
-#dashboard-section .home .insights .insight-card .progress .left h4 {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .left h4 {
   font-weight: 800;
 }
-#dashboard-section .home .insights .insight-card .progress svg {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress svg {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   margin-left: 2rem;
 }
-#dashboard-section .home .insights .insight-card .progress svg circle {
-  transform: translate(20%, 2%);
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress svg circle {
+  transform: translate(20%, 1%);
   fill: none;
   stroke-width: 4;
   stroke-linecap: round;
 }
-#dashboard-section .home .insights .insight-card .progress p {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress p {
   font-size: 1.1rem;
   margin: 0;
   color: var(--gray5);
@@ -2210,7 +2209,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   top: 50%;
   transform: translateY(-50%);
 }
-#dashboard-section .home .insights .insight-card .progress .number {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .number {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2218,24 +2217,24 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: flex-start;
   gap: 0.3rem;
 }
-#dashboard-section .home .insights .insight-card .progress .number span {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .number span {
   font-size: 1rem;
   margin: 0;
   color: var(--gray5);
 }
-#dashboard-section .home .insights .insight-card.sales .progress svg circle {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card.sales .progress svg circle {
   stroke-dasharray: 200;
   stroke-dashoffset: -30;
 }
-#dashboard-section .home .insights .insight-card.expenses .progress svg circle {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card.expenses .progress svg circle {
   stroke-dasharray: 140;
   stroke-dashoffset: -10;
 }
-#dashboard-section .home .insights .insight-card.income .progress svg circle {
+#dashboard-section .home-container .section-holder .middle .insights .insight-card.income .progress svg circle {
   stroke-dasharray: 170;
   stroke-dashoffset: -20;
 }
-#dashboard-section .recent-order {
+#dashboard-section .home-container .section-holder .middle .recent-order {
   width: 99%;
   display: block;
   margin: 1rem auto;
@@ -2243,9 +2242,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   text-align: left;
   border-radius: 0.7rem;
   background-color: var(--white);
-  box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow6);
 }
-#dashboard-section .recent-order h3 {
+#dashboard-section .home-container .section-holder .middle .recent-order h3 {
   text-align: left;
   font-weight: bold;
   font-size: 18px;
@@ -2253,7 +2252,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
-#dashboard-section .recent-order table {
+#dashboard-section .home-container .section-holder .middle .recent-order table {
   width: 100%;
   padding: 3rem;
   margin: auto;
@@ -2261,39 +2260,39 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 0;
   background-color: transparent;
 }
-#dashboard-section .recent-order table thead {
+#dashboard-section .home-container .section-holder .middle .recent-order table thead {
   padding: 6rem;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
 }
-#dashboard-section .recent-order table thead tr {
+#dashboard-section .home-container .section-holder .middle .recent-order table thead tr {
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   padding: 7rem;
 }
-#dashboard-section .recent-order table thead tr th {
+#dashboard-section .home-container .section-holder .middle .recent-order table thead tr th {
   padding: 1rem 0;
   font-size: 1.2rem;
   border-right: 1px solid var(--gray8);
 }
-#dashboard-section .recent-order table thead tr th:last-child {
+#dashboard-section .home-container .section-holder .middle .recent-order table thead tr th:last-child {
   border-right: none;
 }
-#dashboard-section .recent-order table tbody tr {
+#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr {
   border-bottom: 1px solid var(--gray8);
 }
-#dashboard-section .recent-order table tbody tr:first-child {
+#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr:first-child {
   border-top: 1px solid var(--gray8);
 }
-#dashboard-section .recent-order table tbody tr:last-child {
+#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr:last-child {
   border-bottom: none;
 }
-#dashboard-section .recent-order table tbody tr td {
+#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr td {
   padding: 0.6rem 0;
   font-size: 1.1rem;
   border-right: 1px solid var(--gray8);
 }
-#dashboard-section .recent-order table tbody tr td:last-child {
+#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr td:last-child {
   border-right: none;
 }
 #dashboard-section .right-aside {
@@ -2321,7 +2320,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 1rem;
   margin: 0;
   background-color: var(--white);
-  box-shadow: var(--box-shadow4);
+  box-shadow: var(--box-shadow6);
   gap: 1.6rem;
   border-radius: 1rem;
 }
@@ -2338,14 +2337,11 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 0;
   padding-bottom: 1rem;
   margin: 0.2rem 0 0;
-  border-bottom: 1.5px solid var(--light-yellow1);
+  border-bottom: 1.5px solid var(--yellow1);
 }
 #dashboard-section .right-aside .block:nth-child(3) .block-title {
   border-bottom: 0;
   padding-bottom: 0;
-}
-#dashboard-section .right-aside .active-users {
-  margin-top: 3rem;
 }
 #dashboard-section .right-aside .active-users .images {
   display: flex;
@@ -2386,7 +2382,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section .right-aside .recent-updates .updates .update .image img {
   width: 70%;
   height: 70%;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 50%;
 }
 #dashboard-section .right-aside .recent-updates .updates .update .message {
@@ -2403,14 +2399,14 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 #dashboard-section .right-aside .recent-updates .updates .update .message p {
   margin: 0;
   font-size: 0.8rem;
-  color: var(--color-dark-varient);
+  color: var(--blue3);
 }
 #dashboard-section .right-aside .recent-updates .updates .update .message p b {
-  color: var(--gray1);
+  color: var(--gray11);
   font-size: 0.9rem;
 }
 #dashboard-section .right-aside .recent-updates .updates .update .message small {
-  color: var(--color-dark-varient);
+  color: var(--blue3);
   font-size: 0.8rem;
 }
 #dashboard-section .right-aside .sales-analytics .items {
@@ -2430,7 +2426,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: flex-start;
   border-radius: 1rem;
   background-color: var(--white);
-  box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow6);
   padding: 1rem 1.4rem 1rem 0.6rem;
 }
 #dashboard-section .right-aside .sales-analytics .items .item #icon {
@@ -2444,10 +2440,10 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background-color: var(--shin-blue6);
 }
 #dashboard-section .right-aside .sales-analytics .items .item.offline #icon {
-  background-color: var(--primary2);
+  background-color: var(--red7);
 }
 #dashboard-section .right-aside .sales-analytics .items .item.customer #icon {
-  background-color: var(--primary3);
+  background-color: var(--green12);
 }
 #dashboard-section .right-aside .sales-analytics .items .item .info {
   display: block;
@@ -2456,24 +2452,24 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
-  color: var(--gray1);
+  color: var(--gray11);
 }
 #dashboard-section .right-aside .sales-analytics .items .item .info small {
   margin: 0;
-  color: var(--color-dark-varient);
+  color: var(--blue3);
 }
 #dashboard-section .right-aside .sales-analytics .items .item h5 {
   font-size: 1rem;
   font-weight: bold;
 }
 #dashboard-section .right-aside .sales-analytics .items .item.online h5 {
-  color: var(--primary3);
+  color: var(--shin-blue6);
 }
 #dashboard-section .right-aside .sales-analytics .items .item.offline h5 {
-  color: var(--primary2);
+  color: var(--red7);
 }
 #dashboard-section .right-aside .sales-analytics .items .item.customer h5 {
-  color: var(--primary3);
+  color: var(--green12);
 }
 #dashboard-section .right-aside .sales-analytics .items .item h4 {
   font-size: 1.1rem;
@@ -2548,7 +2544,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
  ######## USER PROFILE PAGE #######
  ==================================
 */
-.main-profile-page .profile-data {
+.profile-container .profile-data {
   padding: 0;
   margin: 0;
   margin-bottom: 3rem;
@@ -2557,68 +2553,68 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow5);
   /* col-right */
 }
-.main-profile-page .profile-data .col-left {
+.profile-container .profile-data .col-left {
   text-align: center;
 }
-.main-profile-page .profile-data .col-left .image-card {
+.profile-container .profile-data .col-left .image-card {
   text-align: center;
   gap: 0.4rem;
   margin-top: 3rem;
 }
-.main-profile-page .profile-data .col-left .image-card .image {
+.profile-container .profile-data .col-left .image-card .image {
   background-color: transparent;
 }
-.main-profile-page .profile-data .col-left .image-card .image img {
+.profile-container .profile-data .col-left .image-card .image img {
   width: 9rem;
   height: 9rem;
   object-fit: fill;
   border-radius: 50%;
 }
-.main-profile-page .profile-data .col-left h3 {
+.profile-container .profile-data .col-left h3 {
   color: var(--gray11);
   font-weight: bold;
   margin-top: 0.6rem;
 }
-.main-profile-page .profile-data .col-left p {
+.profile-container .profile-data .col-left p {
   color: var(--gray7);
   font-weight: bold;
 }
-.main-profile-page .profile-data .col-right {
+.profile-container .profile-data .col-right {
   background-color: transparent;
   /* tabs area */
 }
-.main-profile-page .profile-data .col-right .info-cards {
+.profile-container .profile-data .col-right .info-cards {
   width: 100%;
   padding: 1rem;
   /* general-info-card */
   /* education-card card */
   /* my skills */
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card {
+.profile-container .profile-data .col-right .info-cards .info-card {
   width: 100%;
   padding: 0;
   background-color: transparent;
   /* open/close */
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .blocks .block .heading,
-.main-profile-page .profile-data .col-right .info-cards .info-card .box .heading {
+.profile-container .profile-data .col-right .info-cards .info-card .blocks .block .heading,
+.profile-container .profile-data .col-right .info-cards .info-card .box .heading {
   flex-wrap: nowrap;
   width: 99%;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .blocks .block h5 {
+.profile-container .profile-data .col-right .info-cards .info-card .blocks .block h5 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   color: var(--shin-blue6);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
+.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   display: none;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
   width: 4.5rem;
   height: 1.6rem;
   padding: 0 0.3rem;
@@ -2634,7 +2630,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
   background-color: var(--gray3);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.3rem;
@@ -2650,7 +2646,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   z-index: 2;
   opacity: 1;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.3rem;
@@ -2666,40 +2662,40 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   z-index: 1;
   opacity: 0;
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
   background-color: var(--shin-blue4);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
   left: 3rem;
   opacity: 0;
   z-index: 1;
   background-color: var(--gray4);
 }
-.main-profile-page .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
+.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
   left: 3rem;
   opacity: 1;
   z-index: 2;
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block {
   width: 100%;
   padding: 2rem 0;
   gap: 0.7rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details {
   width: 100%;
   flex-wrap: wrap;
   gap: 5%;
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details p {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p {
   font-size: 1rem;
   color: var(--gray9);
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details p span {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2708,30 +2704,30 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin: 0;
   padding: 0;
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item #icon {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item #icon {
   color: var(--color-dark);
   margin-top: 0.2rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin: 0;
   padding: 0;
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc span {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc p {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc p {
   text-transform: lowercase;
   color: var(--gray8);
 }
-.main-profile-page .profile-data .col-right .info-cards .general-info-card .blocks .block:not(:last-child) {
+.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block:not(:last-child) {
   border-bottom: 1px solid var(--gray4);
 }
-.main-profile-page .profile-data .col-right .info-cards .education-card .box {
+.profile-container .profile-data .col-right .info-cards .education-card .box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2739,7 +2735,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-left: 0.2rem solid var(--shin-blue7);
   position: relative;
 }
-.main-profile-page .profile-data .col-right .info-cards .education-card .box .fa-graduation-cap {
+.profile-container .profile-data .col-right .info-cards .education-card .box .fa-graduation-cap {
   width: 2rem;
   height: 2rem;
   font-size: 1.5rem;
@@ -2751,7 +2747,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--white);
   background: radial-gradient(var(--shin-blue2), var(--shin-blue7));
 }
-.main-profile-page .profile-data .col-right .info-cards .education-card .box span {
+.profile-container .profile-data .col-right .info-cards .education-card .box span {
   width: 9rem;
   border-radius: 5rem;
   padding: 0.3rem 1.2rem 0.2rem;
@@ -2764,50 +2760,50 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--white);
   background: radial-gradient(var(--shin-blue), var(--shin-blue7));
 }
-.main-profile-page .profile-data .col-right .info-cards .education-card .box h4 {
+.profile-container .profile-data .col-right .info-cards .education-card .box h4 {
   font-weight: bold;
   margin-top: 0.5rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .education-card .box:first-child, .main-profile-page .profile-data .col-right .info-cards .education-card .box:nth-child(3) {
+.profile-container .profile-data .col-right .info-cards .education-card .box:first-child, .profile-container .profile-data .col-right .info-cards .education-card .box:nth-child(3) {
   padding-right: 3.5rem !important;
 }
-.main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks {
+.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks {
   gap: 9%;
 }
-.main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block {
+.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block {
   width: 100%;
   padding-top: 0.5rem;
   height: fit-content;
   gap: 1.1rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .heading {
+.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .heading {
   width: 100%;
 }
-.main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
+.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
   flex-wrap: wrap;
   line-height: 2.5rem;
   width: 80%;
   gap: 0.5rem;
 }
-.main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
+.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
   color: var(--primary-color15);
 }
-.main-profile-page .profile-data .col-right .tabs-area {
+.profile-container .profile-data .col-right .tabs-area {
   width: 100%;
   flex-wrap: nowrap;
   gap: 2rem;
   padding: 1.2rem 0 1.2rem 1.2rem;
 }
-.main-profile-page .profile-data .col-right .tabs-area li {
+.profile-container .profile-data .col-right .tabs-area li {
   cursor: pointer;
   font-weight: normal;
   font-size: 1.3rem;
   position: relative;
 }
-.main-profile-page .profile-data .col-right .tabs-area li.button-active {
+.profile-container .profile-data .col-right .tabs-area li.button-active {
   color: var(--shin-blue6);
 }
-.main-profile-page .profile-data .col-right .tabs-area li.button-active::before {
+.profile-container .profile-data .col-right .tabs-area li.button-active::before {
   content: "";
   width: 100%;
   height: 1.2px;
@@ -2816,26 +2812,26 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   left: 0;
   background-color: var(--shin-blue6);
 }
-.main-profile-page .edit-profile-data .edit-profile-info .btn {
+.profile-container .edit-profile-data .edit-profile-info .btn {
   width: 100%;
 }
-.main-profile-page .tab-btn {
+.profile-container .tab-btn {
   margin: 2rem auto 1rem;
 }
 
 @media (max-width: 400px) {
-  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
+  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
     width: 3.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
+  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
     left: 2.2rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
+  .profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
     width: 100%;
   }
 }
 @media (max-width: 266px) {
-  .main-profile-page .profile-data .col-right .info-cards .my-skills-card .blocks {
+  .profile-page .profile-data .col-right .info-cards .my-skills-card .blocks {
     flex-wrap: wrap;
   }
 }
@@ -2999,34 +2995,34 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 
 @media (max-width: 768px) {
-  .main-profile-page .profile-data .col-left {
+  .profile-page .profile-data .col-left {
     padding-bottom: 2rem;
   }
-  .main-profile-page .profile-data .col-left .image-card {
+  .profile-page .profile-data .col-left .image-card {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
     left: 3.1rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
+  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
     left: 3.1rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
     width: 0.5rem;
     height: 0.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
+  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
     width: 0.5rem;
     height: 0.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards.my-skills-card .blocks .block {
+  .profile-page .profile-data .col-right .info-cards.my-skills-card .blocks .block {
     margin-bottom: 2.5rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards.general-info-card .blocks .block .details .item {
+  .profile-page .profile-data .col-right .info-cards.general-info-card .blocks .block .details .item {
     margin-bottom: 1.2rem;
   }
-  .main-profile-page .profile-data .col-right .info-cards.education-card .box .fa-graduation-cap {
+  .profile-page .profile-data .col-right .info-cards.education-card .box .fa-graduation-cap {
     width: 1.5rem;
     height: 1.5rem;
     left: -1.4rem;
