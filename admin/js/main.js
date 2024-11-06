@@ -335,11 +335,13 @@ document.addEventListener('asideLoaded', () => {
       asideButton.addEventListener('click', function(){
         asideMenu.classList.toggle("smallaside");
         isToggledByButton = asideMenu.classList.contains("smallaside");
+        if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
       });
 
       asideButton2.addEventListener('click', function(){
         asideMenu.classList.toggle("smallaside");
         isToggledByButton = asideMenu.classList.contains("smallaside");
+        if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
       });
 
   }
