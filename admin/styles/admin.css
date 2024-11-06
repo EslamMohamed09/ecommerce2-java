@@ -2004,9 +2004,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 
 /*
- ============================
- ########### HOME ###########
- ============================
+ =================================
+ ########### DASHBOARD ###########
+ =================================
 */
 #dashboard-section {
   display: flex;
@@ -2017,9 +2017,6 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 0;
   z-index: 2;
   position: relative;
-  /*================= ASIDE =========================*/
-  /*================= MAIN DASHBOARD =========================*/
-  /*================= RIGHT ASIDE =========================*/
 }
 #dashboard-section aside {
   padding: 0;
@@ -2094,17 +2091,18 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: left;
   background-color: transparent;
 }
-@media (max-width: 711px) {
-  #dashboard-section .section-container {
-    margin-left: 4rem;
-  }
-}
-#dashboard-section .home-container .section-holder {
+
+/*
+ ============================
+ ########### HOME ###########
+ ============================
+*/
+.home-page .home-container .section-holder {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-#dashboard-section .home-container .section-holder .middle {
+.home-page .home-container .section-holder .middle {
   flex: 1 1 40rem;
   display: flex;
   flex-direction: column;
@@ -2114,41 +2112,41 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   /************** INSIGHTS **************/
   /************** RECENT ORDER **************/
 }
-#dashboard-section .home-container .section-holder .middle .insights {
+.home-page .home-container .section-holder .middle .insights {
   width: 100%;
   gap: 1rem;
   flex-wrap: wrap;
   margin: 0;
   background: transparent;
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:first-child {
+.home-page .home-container .section-holder .middle .insights > div:first-child {
   border-left: 0.3rem solid var(--shin-blue5);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(2) {
+.home-page .home-container .section-holder .middle .insights > div:nth-child(2) {
   border-left: 0.3rem solid var(--red7);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(3) {
+.home-page .home-container .section-holder .middle .insights > div:nth-child(3) {
   border-left: 0.3rem solid var(--green12);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:first-child #icon {
+.home-page .home-container .section-holder .middle .insights > div:first-child #icon {
   background-color: var(--shin-blue5);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(2) #icon {
+.home-page .home-container .section-holder .middle .insights > div:nth-child(2) #icon {
   background-color: var(--red7);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(3) #icon {
+.home-page .home-container .section-holder .middle .insights > div:nth-child(3) #icon {
   background-color: var(--green12);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:first-child svg circle {
+.home-page .home-container .section-holder .middle .insights > div:first-child svg circle {
   stroke: var(--shin-blue5);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(2) svg circle {
+.home-page .home-container .section-holder .middle .insights > div:nth-child(2) svg circle {
   stroke: var(--red7);
 }
-#dashboard-section .home-container .section-holder .middle .insights > div:nth-child(3) svg circle {
+.home-page .home-container .section-holder .middle .insights > div:nth-child(3) svg circle {
   stroke: var(--green12);
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card {
+.home-page .home-container .section-holder .middle .insights .insight-card {
   flex: 1 1 17rem;
   display: flex;
   flex-direction: column;
@@ -2160,14 +2158,14 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow4);
   background: var(--white);
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card #icon {
+.home-page .home-container .section-holder .middle .insights .insight-card #icon {
   color: var(--white);
   padding: 0.65rem;
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress {
   min-height: 6rem;
   display: flex;
   flex-direction: row;
@@ -2176,31 +2174,31 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
   background-color: transparent;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .left {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress .left {
   width: 100%;
   display: block;
   text-align: left;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .left h5 {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress .left h5 {
   font-weight: bold;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .left h4 {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress .left h4 {
   font-weight: 800;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress svg {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress svg {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   margin-left: 2rem;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress svg circle {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress svg circle {
   transform: translate(20%, 1%);
   fill: none;
   stroke-width: 4;
   stroke-linecap: round;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress p {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress p {
   font-size: 1.1rem;
   margin: 0;
   color: var(--gray5);
@@ -2209,7 +2207,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   top: 50%;
   transform: translateY(-50%);
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .number {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress .number {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2217,24 +2215,24 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: flex-start;
   gap: 0.3rem;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card .progress .number span {
+.home-page .home-container .section-holder .middle .insights .insight-card .progress .number span {
   font-size: 1rem;
   margin: 0;
   color: var(--gray5);
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card.sales .progress svg circle {
+.home-page .home-container .section-holder .middle .insights .insight-card.sales .progress svg circle {
   stroke-dasharray: 200;
   stroke-dashoffset: -30;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card.expenses .progress svg circle {
+.home-page .home-container .section-holder .middle .insights .insight-card.expenses .progress svg circle {
   stroke-dasharray: 140;
   stroke-dashoffset: -10;
 }
-#dashboard-section .home-container .section-holder .middle .insights .insight-card.income .progress svg circle {
+.home-page .home-container .section-holder .middle .insights .insight-card.income .progress svg circle {
   stroke-dasharray: 170;
   stroke-dashoffset: -20;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order {
+.home-page .home-container .section-holder .middle .recent-order {
   width: 99%;
   display: block;
   margin: 1rem auto;
@@ -2244,7 +2242,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   background-color: var(--white);
   box-shadow: var(--box-shadow6);
 }
-#dashboard-section .home-container .section-holder .middle .recent-order h3 {
+.home-page .home-container .section-holder .middle .recent-order h3 {
   text-align: left;
   font-weight: bold;
   font-size: 18px;
@@ -2252,7 +2250,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table {
+.home-page .home-container .section-holder .middle .recent-order table {
   width: 100%;
   padding: 3rem;
   margin: auto;
@@ -2260,42 +2258,42 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 0;
   background-color: transparent;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table thead {
+.home-page .home-container .section-holder .middle .recent-order table thead {
   padding: 6rem;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table thead tr {
+.home-page .home-container .section-holder .middle .recent-order table thead tr {
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   padding: 7rem;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table thead tr th {
+.home-page .home-container .section-holder .middle .recent-order table thead tr th {
   padding: 1rem 0;
   font-size: 1.2rem;
   border-right: 1px solid var(--gray8);
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table thead tr th:last-child {
+.home-page .home-container .section-holder .middle .recent-order table thead tr th:last-child {
   border-right: none;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr {
+.home-page .home-container .section-holder .middle .recent-order table tbody tr {
   border-bottom: 1px solid var(--gray8);
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr:first-child {
+.home-page .home-container .section-holder .middle .recent-order table tbody tr:first-child {
   border-top: 1px solid var(--gray8);
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr:last-child {
+.home-page .home-container .section-holder .middle .recent-order table tbody tr:last-child {
   border-bottom: none;
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr td {
+.home-page .home-container .section-holder .middle .recent-order table tbody tr td {
   padding: 0.6rem 0;
   font-size: 1.1rem;
   border-right: 1px solid var(--gray8);
 }
-#dashboard-section .home-container .section-holder .middle .recent-order table tbody tr td:last-child {
+.home-page .home-container .section-holder .middle .recent-order table tbody tr td:last-child {
   border-right: none;
 }
-#dashboard-section .right-aside {
+.home-page .home-container .section-holder .right-aside {
   flex: 1 1 5rem;
   display: flex;
   flex-direction: column;
@@ -2306,12 +2304,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 0;
   padding-left: 1rem;
   margin: 0;
-  /*****RIGHT ASIDE***** active users block **************/
-  /*****RIGHT ASIDE***** recent-updates block **************/
-  /*****RIGHT ASIDE***** sales-analytics block **************/
-  /*****RIGHT ASIDE***** all-users block **************/
+  /******* active users block *******/
+  /******* recent updates *******/
+  /******* sales analytics *******/
+  /******* all users *******/
 }
-#dashboard-section .right-aside .block {
+.home-page .home-container .section-holder .right-aside .block {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2324,12 +2322,12 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 1.6rem;
   border-radius: 1rem;
 }
-#dashboard-section .right-aside .block:nth-child(3) {
+.home-page .home-container .section-holder .right-aside .block:nth-child(3) {
   padding: 0;
   background-color: transparent;
   box-shadow: none;
 }
-#dashboard-section .right-aside .block .block-title {
+.home-page .home-container .section-holder .right-aside .block .block-title {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: left;
@@ -2339,24 +2337,24 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin: 0.2rem 0 0;
   border-bottom: 1.5px solid var(--yellow1);
 }
-#dashboard-section .right-aside .block:nth-child(3) .block-title {
+.home-page .home-container .section-holder .right-aside .block:nth-child(3) .block-title {
   border-bottom: 0;
   padding-bottom: 0;
 }
-#dashboard-section .right-aside .active-users .images {
+.home-page .home-container .section-holder .right-aside .active-users .images {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin: 0;
 }
-#dashboard-section .right-aside .active-users .images img {
+.home-page .home-container .section-holder .right-aside .active-users .images img {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
 }
-#dashboard-section .right-aside .recent-updates .updates {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2364,13 +2362,13 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   width: 100%;
   margin: 0;
 }
-#dashboard-section .right-aside .recent-updates .updates .update {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#dashboard-section .right-aside .recent-updates .updates .update .image {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .image {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -2379,13 +2377,13 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: center;
   background: transparent;
 }
-#dashboard-section .right-aside .recent-updates .updates .update .image img {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .image img {
   width: 70%;
   height: 70%;
   object-fit: fill;
   border-radius: 50%;
 }
-#dashboard-section .right-aside .recent-updates .updates .update .message {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message {
   max-width: 17rem;
   display: flex;
   flex-direction: column;
@@ -2396,20 +2394,20 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 0;
   background: transparent;
 }
-#dashboard-section .right-aside .recent-updates .updates .update .message p {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message p {
   margin: 0;
   font-size: 0.8rem;
   color: var(--blue3);
 }
-#dashboard-section .right-aside .recent-updates .updates .update .message p b {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message p b {
   color: var(--gray11);
   font-size: 0.9rem;
 }
-#dashboard-section .right-aside .recent-updates .updates .update .message small {
+.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message small {
   color: var(--blue3);
   font-size: 0.8rem;
 }
-#dashboard-section .right-aside .sales-analytics .items {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2418,7 +2416,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 1.2rem;
   background-color: transparent;
 }
-#dashboard-section .right-aside .sales-analytics .items .item {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -2429,53 +2427,53 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow6);
   padding: 1rem 1.4rem 1rem 0.6rem;
 }
-#dashboard-section .right-aside .sales-analytics .items .item #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item #icon {
   color: var(--white);
   padding: 0.7rem;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
 }
-#dashboard-section .right-aside .sales-analytics .items .item.online #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.online #icon {
   background-color: var(--shin-blue6);
 }
-#dashboard-section .right-aside .sales-analytics .items .item.offline #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.offline #icon {
   background-color: var(--red7);
 }
-#dashboard-section .right-aside .sales-analytics .items .item.customer #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.customer #icon {
   background-color: var(--green12);
 }
-#dashboard-section .right-aside .sales-analytics .items .item .info {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info {
   display: block;
 }
-#dashboard-section .right-aside .sales-analytics .items .item .info h3 {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
   color: var(--gray11);
 }
-#dashboard-section .right-aside .sales-analytics .items .item .info small {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info small {
   margin: 0;
   color: var(--blue3);
 }
-#dashboard-section .right-aside .sales-analytics .items .item h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item h5 {
   font-size: 1rem;
   font-weight: bold;
 }
-#dashboard-section .right-aside .sales-analytics .items .item.online h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.online h5 {
   color: var(--shin-blue6);
 }
-#dashboard-section .right-aside .sales-analytics .items .item.offline h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.offline h5 {
   color: var(--red7);
 }
-#dashboard-section .right-aside .sales-analytics .items .item.customer h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.customer h5 {
   color: var(--green12);
 }
-#dashboard-section .right-aside .sales-analytics .items .item h4 {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item h4 {
   font-size: 1.1rem;
   font-weight: bold;
 }
-#dashboard-section .right-aside .sales-analytics .items .item .add-btn {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .add-btn {
   width: 100%;
   font-size: 1.2rem;
   text-align: center;
@@ -2489,16 +2487,16 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border: 1px dashed var(--gray10);
   transition: all 0.3s linear;
 }
-#dashboard-section .right-aside .sales-analytics .items .item .add-btn #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .add-btn #icon {
   margin-right: 0.7rem;
   font-size: 1.3rem;
 }
-#dashboard-section .right-aside .sales-analytics .items .item .add-btn:hover {
+.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .add-btn:hover {
   color: var(--white);
   background-color: var(--primary4);
   border: 1px dashed var(--white);
 }
-#dashboard-section .right-aside .all-users .buttons {
+.home-page .home-container .section-holder .right-aside .all-users .buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2506,11 +2504,11 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 1.5rem;
   width: 100%;
 }
-#dashboard-section .right-aside .all-users .buttons .active {
+.home-page .home-container .section-holder .right-aside .all-users .buttons .active {
   color: var(--white);
   background-color: var(--light-green7);
 }
-#dashboard-section .right-aside .all-users .items {
+.home-page .home-container .section-holder .right-aside .all-users .items {
   width: 80%;
   margin: 0;
   margin-left: 1rem;
@@ -2520,31 +2518,36 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 1.5rem;
   background-color: transparent;
 }
-#dashboard-section .right-aside .all-users .items .item {
+.home-page .home-container .section-holder .right-aside .all-users .items .item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-#dashboard-section .right-aside .all-users .items .item h4 {
+.home-page .home-container .section-holder .right-aside .all-users .items .item h4 {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray1);
 }
-#dashboard-section .right-aside .all-users .items .item img {
+.home-page .home-container .section-holder .right-aside .all-users .items .item img {
   width: 4rem;
   height: 4rem;
   object-fit: cover;
   border-radius: 50%;
 }
 
+@media (max-width: 711px) {
+  #dashboard-section .section-container {
+    margin-left: 4rem;
+  }
+}
 /*
- ==================================
- ######## USER PROFILE PAGE #######
- ==================================
+ =============================
+ ######## USER PROFILE #######
+ =============================
 */
-.profile-container .profile-data {
+.profile-page .profile-container .profile-data {
   padding: 0;
   margin: 0;
   margin-bottom: 3rem;
@@ -2553,68 +2556,68 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow5);
   /* col-right */
 }
-.profile-container .profile-data .col-left {
+.profile-page .profile-container .profile-data .col-left {
   text-align: center;
 }
-.profile-container .profile-data .col-left .image-card {
+.profile-page .profile-container .profile-data .col-left .image-card {
   text-align: center;
   gap: 0.4rem;
   margin-top: 3rem;
 }
-.profile-container .profile-data .col-left .image-card .image {
+.profile-page .profile-container .profile-data .col-left .image-card .image {
   background-color: transparent;
 }
-.profile-container .profile-data .col-left .image-card .image img {
+.profile-page .profile-container .profile-data .col-left .image-card .image img {
   width: 9rem;
   height: 9rem;
   object-fit: fill;
   border-radius: 50%;
 }
-.profile-container .profile-data .col-left h3 {
+.profile-page .profile-container .profile-data .col-left h3 {
   color: var(--gray11);
   font-weight: bold;
   margin-top: 0.6rem;
 }
-.profile-container .profile-data .col-left p {
+.profile-page .profile-container .profile-data .col-left p {
   color: var(--gray7);
   font-weight: bold;
 }
-.profile-container .profile-data .col-right {
+.profile-page .profile-container .profile-data .col-right {
   background-color: transparent;
   /* tabs area */
 }
-.profile-container .profile-data .col-right .info-cards {
+.profile-page .profile-container .profile-data .col-right .info-cards {
   width: 100%;
   padding: 1rem;
   /* general-info-card */
   /* education-card card */
   /* my skills */
 }
-.profile-container .profile-data .col-right .info-cards .info-card {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card {
   width: 100%;
   padding: 0;
   background-color: transparent;
   /* open/close */
 }
-.profile-container .profile-data .col-right .info-cards .info-card .blocks .block .heading,
-.profile-container .profile-data .col-right .info-cards .info-card .box .heading {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .blocks .block .heading,
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .box .heading {
   flex-wrap: nowrap;
   width: 99%;
 }
-.profile-container .profile-data .col-right .info-cards .info-card .blocks .block h5 {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .blocks .block h5 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   color: var(--shin-blue6);
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
-.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   display: none;
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
   width: 4.5rem;
   height: 1.6rem;
   padding: 0 0.3rem;
@@ -2630,7 +2633,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   position: relative;
   background-color: var(--gray3);
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.3rem;
@@ -2646,7 +2649,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   z-index: 2;
   opacity: 1;
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.3rem;
@@ -2662,40 +2665,40 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   z-index: 1;
   opacity: 0;
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
   background-color: var(--shin-blue4);
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
   left: 3rem;
   opacity: 0;
   z-index: 1;
   background-color: var(--gray4);
 }
-.profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
+.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
   left: 3rem;
   opacity: 1;
   z-index: 2;
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block {
   width: 100%;
   padding: 2rem 0;
   gap: 0.7rem;
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details {
   width: 100%;
   flex-wrap: wrap;
   gap: 5%;
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p {
   font-size: 1rem;
   color: var(--gray9);
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p span {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2704,30 +2707,30 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   margin: 0;
   padding: 0;
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item #icon {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item #icon {
   color: var(--color-dark);
   margin-top: 0.2rem;
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin: 0;
   padding: 0;
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc span {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc p {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc p {
   text-transform: lowercase;
   color: var(--gray8);
 }
-.profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block:not(:last-child) {
+.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block:not(:last-child) {
   border-bottom: 1px solid var(--gray4);
 }
-.profile-container .profile-data .col-right .info-cards .education-card .box {
+.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2735,7 +2738,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-left: 0.2rem solid var(--shin-blue7);
   position: relative;
 }
-.profile-container .profile-data .col-right .info-cards .education-card .box .fa-graduation-cap {
+.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box .fa-graduation-cap {
   width: 2rem;
   height: 2rem;
   font-size: 1.5rem;
@@ -2747,7 +2750,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--white);
   background: radial-gradient(var(--shin-blue2), var(--shin-blue7));
 }
-.profile-container .profile-data .col-right .info-cards .education-card .box span {
+.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box span {
   width: 9rem;
   border-radius: 5rem;
   padding: 0.3rem 1.2rem 0.2rem;
@@ -2760,50 +2763,50 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--white);
   background: radial-gradient(var(--shin-blue), var(--shin-blue7));
 }
-.profile-container .profile-data .col-right .info-cards .education-card .box h4 {
+.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box h4 {
   font-weight: bold;
   margin-top: 0.5rem;
 }
-.profile-container .profile-data .col-right .info-cards .education-card .box:first-child, .profile-container .profile-data .col-right .info-cards .education-card .box:nth-child(3) {
+.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box:first-child, .profile-page .profile-container .profile-data .col-right .info-cards .education-card .box:nth-child(3) {
   padding-right: 3.5rem !important;
 }
-.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks {
+.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks {
   gap: 9%;
 }
-.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block {
+.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block {
   width: 100%;
   padding-top: 0.5rem;
   height: fit-content;
   gap: 1.1rem;
 }
-.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .heading {
+.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .heading {
   width: 100%;
 }
-.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
+.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
   flex-wrap: wrap;
   line-height: 2.5rem;
   width: 80%;
   gap: 0.5rem;
 }
-.profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
+.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
   color: var(--primary-color15);
 }
-.profile-container .profile-data .col-right .tabs-area {
+.profile-page .profile-container .profile-data .col-right .tabs-area {
   width: 100%;
   flex-wrap: nowrap;
   gap: 2rem;
   padding: 1.2rem 0 1.2rem 1.2rem;
 }
-.profile-container .profile-data .col-right .tabs-area li {
+.profile-page .profile-container .profile-data .col-right .tabs-area li {
   cursor: pointer;
   font-weight: normal;
   font-size: 1.3rem;
   position: relative;
 }
-.profile-container .profile-data .col-right .tabs-area li.button-active {
+.profile-page .profile-container .profile-data .col-right .tabs-area li.button-active {
   color: var(--shin-blue6);
 }
-.profile-container .profile-data .col-right .tabs-area li.button-active::before {
+.profile-page .profile-container .profile-data .col-right .tabs-area li.button-active::before {
   content: "";
   width: 100%;
   height: 1.2px;
@@ -2812,10 +2815,10 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   left: 0;
   background-color: var(--shin-blue6);
 }
-.profile-container .edit-profile-data .edit-profile-info .btn {
+.profile-page .profile-container .edit-profile-data .edit-profile-info .btn {
   width: 100%;
 }
-.profile-container .tab-btn {
+.profile-page .profile-container .tab-btn {
   margin: 2rem auto 1rem;
 }
 
@@ -3028,7 +3031,11 @@ table tbody tr:nth-child(even) tr:hover .buttons {
     left: -1.4rem;
   }
 }
-/*====DASHBOARD====*** MAIN CATEGORY ***================*/
+/*
+ ============================
+ ####### MAIN CATEGORY ######
+ ============================
+*/
 .main-category h1 {
   font-size: 1.7rem;
   font-weight: bold;
@@ -3182,9 +3189,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 
 /*
- =============================
- ####### CUSTOMERS PAGE ######
- =============================
+ ========================
+ ####### CUSTOMERS ######
+ ========================
 */
 .main-customers .customer-container {
   width: 99%;
@@ -3253,9 +3260,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 
 /*
- ===============================
- ######## SETTINGS PAGE ########
- ===============================
+ ==========================
+ ######## SETTINGS ########
+ ==========================
 */
 .settings-page .cards {
   display: flex;
@@ -3448,9 +3455,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 
 /*
- ================================
- ########## USERS PAGE ##########
- ================================
+ ===========================
+ ########## USERS ##########
+ ===========================
 */
 /*******USERS******
  # Edit

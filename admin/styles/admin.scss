@@ -1472,24 +1472,21 @@ table {width:100%;
                                                  background-color:transparent;
                                                  background:transparent;}
                                    }
+                            }  
+
+                            .btn3 {width:89%;
+                                   margin:2rem auto;}
+
+                            .desc-form {min-height:35vh;
+                                        gap:1rem;
+                                        padding:2rem !important;
+                                        border-top-right-radius:0.5rem;
+                                        border-bottom-right-radius:0.5rem;
+                                        background:radial-gradient(var(--shin-blue), var(--shin-blue7));
+
+                                   h2,
+                                   p {color:var(--white);}
                             }
-
-                            
-
-                     .btn3 {width:89%;
-                            margin:2rem auto;}
-
-                     .desc-form {min-height:35vh;
-                                 gap:1rem;
-                                 padding:2rem !important;
-                                 border-top-right-radius:0.5rem;
-                                 border-bottom-right-radius:0.5rem;
-                                 background:radial-gradient(var(--shin-blue), var(--shin-blue7));
-
-                            h2,
-                            p {color:var(--white);}
-                     }
-
                      }
               }
 
@@ -1631,9 +1628,9 @@ table {width:100%;
 }
 
 /*
- ============================
- ########### HOME ###########
- ============================
+ =================================
+ ########### DASHBOARD ###########
+ =================================
 */
 #dashboard-section {display:flex;
                     flex-direction:row;
@@ -1644,7 +1641,6 @@ table {width:100%;
                     z-index:2;
                     position:relative;
 
-/*================= ASIDE =========================*/
        aside {padding:0;
               margin:0;
               width:15%;
@@ -1703,7 +1699,6 @@ table {width:100%;
               min-height:100%;
               transition:all 0.3s linear;} }
 
-/*================= MAIN DASHBOARD =========================*/
        .section-container {display:block;
                            width:100%;
                            padding:1rem;
@@ -1711,21 +1706,14 @@ table {width:100%;
                            text-align:left;
                            align-items:left;
                            background-color:transparent;}
+}
 
-       // .section-container .date {display:inline-block;
-       //                   margin:0.5rem 0 0.5rem 2rem;
-       //                   padding:0.5rem 1rem;
-       //                   width:11rem;
-       //                   border-radius:0.2rem;
-       //                   background-color:var(--color-light);} 
-
-       // .section-container .date input[type="date"] {color:var(--color-dark);
-       //                                     font-weight:bold;
-       //                                     cursor:pointer;
-       //                                     background-color:transparent;}
-
-@media (max-width:711px){ .section-container {margin-left:4rem;} }
-
+/*
+ ============================
+ ########### HOME ###########
+ ============================
+*/
+.home-page {
        .home-container {
               .section-holder {display:flex;
                                flex-direction:row;
@@ -1776,12 +1764,12 @@ table {width:100%;
                                                  border-radius:50%;}
 
                                           .progress {min-height:6rem;
-                                                 display:flex;
-                                                 flex-direction:row;
-                                                 justify-content:space-between;
-                                                 align-items:center;
-                                                 position:relative;
-                                                 background-color:transparent;
+                                                     display:flex;
+                                                     flex-direction:row;
+                                                     justify-content:space-between;
+                                                     align-items:center;
+                                                     position:relative;
+                                                     background-color:transparent;
 
                                                  .left {width:100%;
                                                         display:block;
@@ -1793,58 +1781,58 @@ table {width:100%;
                                                  }
 
                                                  svg {width:100%;
-                                                 height:100%;
-                                                 padding:0;
-                                                 margin:0;
-                                                 margin-left:2rem;
+                                                      height:100%;
+                                                      padding:0;
+                                                      margin:0;
+                                                      margin-left:2rem;
 
                                                         circle {transform:translate(20%, 1%);
-                                                               fill:none;
-                                                               stroke-width:4;
-                                                               stroke-linecap:round;}
+                                                                fill:none;
+                                                                stroke-width:4;
+                                                                stroke-linecap:round;}
                                                  }
 
                                                  p {font-size:1.1rem;
-                                                 margin:0;
-                                                 color:var(--gray5);
-                                                 position:absolute;
-                                                 left:75%;
-                                                 top:50%;
-                                                 transform:translateY(-50%);}
+                                                    margin:0;
+                                                    color:var(--gray5);
+                                                    position:absolute;
+                                                    left:75%;
+                                                    top:50%;
+                                                    transform:translateY(-50%);}
 
                                                  .number {width:100%;
-                                                        display:flex;
-                                                        flex-direction:column;
-                                                        justify-content:flex-start;
-                                                        align-items:flex-start;
-                                                        gap:0.3rem;
+                                                          display:flex;
+                                                          flex-direction:column;
+                                                          justify-content:flex-start;
+                                                          align-items:flex-start;
+                                                          gap:0.3rem;
 
                                                         span {font-size:1rem;
-                                                        margin:0;
-                                                        color:var(--gray5);}
+                                                              margin:0;
+                                                              color:var(--gray5);}
                                                  }
                                           }
 
                                           &.sales .progress svg circle {stroke-dasharray:200;
-                                                                      stroke-dashoffset:-30;}
+                                                                        stroke-dashoffset:-30;}
 
                                           &.expenses .progress svg circle {stroke-dasharray:140;
-                                                                      stroke-dashoffset:-10;}
+                                                                           stroke-dashoffset:-10;}
 
                                           &.income .progress svg circle {stroke-dasharray:170;
-                                                                      stroke-dashoffset:-20;}
+                                                                         stroke-dashoffset:-20;}
                                    }
                             }
 
                             /************** RECENT ORDER **************/
                             .recent-order {width:99%;
-                                          display:block;
-                                          margin:1rem auto;
-                                          padding:1rem;
-                                          text-align:left;
-                                          border-radius:0.7rem;
-                                          background-color:var(--white);
-                                          box-shadow:var(--box-shadow6);
+                                           display:block;
+                                           margin:1rem auto;
+                                           padding:1rem;
+                                           text-align:left;
+                                           border-radius:0.7rem;
+                                           background-color:var(--white);
+                                           box-shadow:var(--box-shadow6);
 
                                    h3 {text-align:left;
                                        font-weight:bold;
@@ -1865,12 +1853,12 @@ table {width:100%;
                                                  border-top-right-radius:0.7rem;
 
                                                  tr {border-top-left-radius:0.7rem;
-                                                 border-top-right-radius:0.7rem;
-                                                 padding:7rem;
+                                                     border-top-right-radius:0.7rem;
+                                                     padding:7rem;
 
                                                  th {padding:1rem 0;
-                                                        font-size:1.2rem;
-                                                        border-right:1px solid var(--gray8);}
+                                                     font-size:1.2rem;
+                                                     border-right:1px solid var(--gray8);}
 
                                                  th:last-child {border-right:none;}
                                                  }
@@ -1884,8 +1872,8 @@ table {width:100%;
                                                  &:last-child {border-bottom:none;}
 
                                                  td {padding:0.6rem 0;
-                                                        font-size:1.1rem;
-                                                        border-right:1px solid var(--gray8);
+                                                     font-size:1.1rem;
+                                                     border-right:1px solid var(--gray8);
 
                                                         &:last-child {border-right:none;}
                                                  }
@@ -1894,495 +1882,498 @@ table {width:100%;
                                    }
                             }
                      }
-              }
-       }
 
-/*================= RIGHT ASIDE =========================*/
-       .right-aside {flex:1 1 5rem;
-                     display:flex;
-                     flex-direction:column;
-                     justify-content:flex-start;
-                     align-items:flex-start;
-                     gap:3rem;
-                     background:transparent;
-                     padding:0;
-                     padding-left:1rem;
-                     margin:0;
-
-              .block {display:flex;
-                      flex-direction:column;
-                      justify-content:center;
-                      align-items:flex-start;
-                      width:100%;
-                      padding:1rem;
-                      margin:0;
-                      background-color:var(--white);
-                      box-shadow:var(--box-shadow6);
-                      gap:1.6rem;
-                      border-radius:1rem;
-
-                     &:nth-child(3) {padding:0;
-                                     background-color:transparent;
-                                     box-shadow:none;}
-
-                     .block-title {font-size:1.4rem;
-                                   font-weight:bold;
-                                   text-align:left;
-                                   width:100%;
-                                   padding:0;
-                                   padding-bottom:1rem;
-                                   margin:0.2rem 0 0;
-                                   border-bottom:1.5px solid var(--yellow1);}
-
-                     &:nth-child(3) .block-title {border-bottom:0;
-                                                  padding-bottom:0;}
-              }
-
-/*****RIGHT ASIDE***** active users block **************/
-              .active-users {
-                     .images {display:flex;
-                              flex-direction:row;
-                              width:100%;
-                              justify-content:space-between;
-                              margin:0;
-
-                            img {width:4rem;
-                                 height:4rem;
-                                 border-radius:50%;
-                                 object-fit:cover;}
-                     }
-              }
-
-/*****RIGHT ASIDE***** recent-updates block **************/
-              .recent-updates .updates {display:flex;
-                                        flex-direction:column;
-                                        justify-content:center;
-                                        gap:1rem;
-                                        width:100%;
-                                        margin:0;
-
-                     .update {display:flex;
-                              flex-direction:row;
-                              justify-content:center;
-                              align-items:center;
-
-                            .image {width:4rem;
-                                    height:4rem;
-                                    border-radius:50%;
-                                    display:flex;
-                                    justify-content:flex-start;
-                                    align-items:center;
-                                    background:transparent;
-
-                                   img {width:70%;
-                                        height:70%;
-                                        object-fit:fill;
-                                        border-radius:50%;}
-                            }
-
-                            .message {max-width:17rem;
-                                      display:flex;
-                                      flex-direction:column;
-                                      justify-content:center;
-                                      align-items:left;
-                                      text-align:left;
-                                      gap:0.2rem;
-                                      padding:0;
-                                      background:transparent;
-
-                                   p {margin:0;
-                                      font-size:0.8rem;
-                                      color:var(--blue3);}
-
-                                   p b {color:var(--gray11);
-                                        font-size:0.9rem;}
-
-                                   small {color:var(--blue3);
-                                          font-size:0.8rem;}
-                            }
-                     }
-              }
-
-/*****RIGHT ASIDE***** sales-analytics block **************/
-              .sales-analytics .items {width:100%;
-                                       display:flex;
-                                       flex-direction:column;
-                                       padding:0;
-                                       margin:0;
-                                       gap:1.2rem;
-                                       background-color:transparent;
-
-                     .item {width:100%;
-                            display:flex;
-                            flex-direction:row;
-                            justify-content:space-between;
-                            align-items:flex-start;
-                            border-radius:1rem;
-                            background-color:var(--white);
-                            box-shadow:var(--box-shadow6);
-                            padding:1rem 1.4rem 1rem 0.6rem;
-
-                            #icon {color:var(--white);
-                                   padding:0.7rem;
-                                   width:2.8rem;
-                                   height:2.8rem;
-                                   border-radius:50%;}
-
-                            &.online #icon {background-color: var(--shin-blue6);}
-                            &.offline #icon {background-color: var(--red7)}
-                            &.customer #icon {background-color: var(--green12)}
-
-                            .info {display:block;
-
-                                   h3 {font-size:1.1rem;
-                                       font-weight:bold;
-                                       margin:0;
-                                       color:var(--gray11);}
-
-                                   small {margin:0;
-                                          color:var(--blue3);}
-                            }
-
-                            h5 {font-size:1rem;
-                                font-weight:bold;}
-
-                            &.online h5 {color:var(--shin-blue6);}
-                            &.offline h5 {color:var(--red7);}
-                            &.customer h5 {color:var(--green12);}
-
-                                   h4 {font-size:1.1rem;
-                                       font-weight:bold;}
-
-                            .add-btn {width:100%;
-                                          font-size:1.2rem;
-                                          text-align:center;
-                                          text-transform:capitalize;
-                                          font-weight:bold;
-                                          padding:0.9rem 0.4rem;
-                                          color:var(--gray10);
-                                          background-color:transparent;
-                                          border-radius:1rem;
-                                          outline:none;
-                                          border:1px dashed var(--gray10);
-                                          transition:all 0.3s linear;
-
-                                   #icon {margin-right:0.7rem;
-                                          font-size:1.3rem;}
-
-                                   &:hover {color:var(--white);
-                                                 background-color:var(--primary4);
-                                                 border:1px dashed var(--white);}
-                            }
-                     }
-              }
-
-/*****RIGHT ASIDE***** all-users block **************/
-              .all-users {
-                     .buttons {display:flex;
-                                   flex-direction:row;
-                                   flex-wrap:wrap;
-                                   justify-content:center;
-                                   gap:1.5rem;
-                                   width:100%;
-
-                            .active {color:var(--white);
-                                          background-color:var(--light-green7);}
-                     }
-
-                     .items {width:80%;
-                                   margin:0;
-                                   margin-left:1rem;
+                     .right-aside {flex:1 1 5rem;
                                    display:flex;
                                    flex-direction:column;
-                                   align-items:flex-start;
-                                   gap:1.5rem;
-                                   background-color:transparent;
-
-                            .item {display:flex;
-                                   flex-direction:row;
                                    justify-content:flex-start;
-                                   align-items:center;
-                                   gap:1rem;
+                                   align-items:flex-start;
+                                   gap:3rem;
+                                   background:transparent;
+                                   padding:0;
+                                   padding-left:1rem;
+                                   margin:0;
 
-                                   h4 {font-size:1rem;
-                                          font-weight:bold;
-                                          color:var(--gray1);}
+                            .block {display:flex;
+                                    flex-direction:column;
+                                    justify-content:center;
+                                    align-items:flex-start;
+                                    width:100%;
+                                    padding:1rem;
+                                    margin:0;
+                                    background-color:var(--white);
+                                    box-shadow:var(--box-shadow6);
+                                    gap:1.6rem;
+                                    border-radius:1rem;
 
-                                   img {width:4rem;
-                                          height:4rem;
-                                          object-fit:cover;
-                                          border-radius:50%;}
+                                   &:nth-child(3) {padding:0;
+                                                   background-color:transparent;
+                                                   box-shadow:none;}
+
+                                   .block-title {font-size:1.4rem;
+                                                 font-weight:bold;
+                                                 text-align:left;
+                                                 width:100%;
+                                                 padding:0;
+                                                 padding-bottom:1rem;
+                                                 margin:0.2rem 0 0;
+                                                 border-bottom:1.5px solid var(--yellow1);}
+
+                                   &:nth-child(3) .block-title {border-bottom:0;
+                                                                padding-bottom:0;}
+                            }
+
+                            /******* active users block *******/
+                            .active-users {
+                                   .images {display:flex;
+                                            flex-direction:row;
+                                            width:100%;
+                                            justify-content:space-between;
+                                            margin:0;
+
+                                          img {width:4rem;
+                                               height:4rem;
+                                               border-radius:50%;
+                                               object-fit:cover;}
+                                   }
+                            }
+
+                            /******* recent updates *******/
+                            .recent-updates .updates {display:flex;
+                                                      flex-direction:column;
+                                                      justify-content:center;
+                                                      gap:1rem;
+                                                      width:100%;
+                                                      margin:0;
+
+                                   .update {display:flex;
+                                            flex-direction:row;
+                                            justify-content:center;
+                                            align-items:center;
+
+                                          .image {width:4rem;
+                                                  height:4rem;
+                                                  border-radius:50%;
+                                                  display:flex;
+                                                  justify-content:flex-start;
+                                                  align-items:center;
+                                                  background:transparent;
+
+                                                 img {width:70%;
+                                                      height:70%;
+                                                      object-fit:fill;
+                                                      border-radius:50%;}
+                                          }
+
+                                          .message {max-width:17rem;
+                                                    display:flex;
+                                                    flex-direction:column;
+                                                    justify-content:center;
+                                                    align-items:left;
+                                                    text-align:left;
+                                                    gap:0.2rem;
+                                                    padding:0;
+                                                    background:transparent;
+
+                                                 p {margin:0;
+                                                    font-size:0.8rem;
+                                                    color:var(--blue3);}
+
+                                                 p b {color:var(--gray11);
+                                                      font-size:0.9rem;}
+
+                                                 small {color:var(--blue3);
+                                                        font-size:0.8rem;}
+                                          }
+                                   }
+                            }
+
+                            /******* sales analytics *******/
+                            .sales-analytics .items {width:100%;
+                                                     display:flex;
+                                                     flex-direction:column;
+                                                     padding:0;
+                                                     margin:0;
+                                                     gap:1.2rem;
+                                                     background-color:transparent;
+
+                                   .item {width:100%;
+                                          display:flex;
+                                          flex-direction:row;
+                                          justify-content:space-between;
+                                          align-items:flex-start;
+                                          border-radius:1rem;
+                                          background-color:var(--white);
+                                          box-shadow:var(--box-shadow6);
+                                          padding:1rem 1.4rem 1rem 0.6rem;
+
+                                          #icon {color:var(--white);
+                                                 padding:0.7rem;
+                                                 width:2.8rem;
+                                                 height:2.8rem;
+                                                 border-radius:50%;}
+
+                                          &.online #icon {background-color: var(--shin-blue6);}
+                                          &.offline #icon {background-color: var(--red7)}
+                                          &.customer #icon {background-color: var(--green12)}
+
+                                          .info {display:block;
+
+                                                 h3 {font-size:1.1rem;
+                                                     font-weight:bold;
+                                                     margin:0;
+                                                     color:var(--gray11);}
+
+                                                 small {margin:0;
+                                                        color:var(--blue3);}
+                                          }
+
+                                          h5 {font-size:1rem;
+                                              font-weight:bold;}
+
+                                          &.online h5 {color:var(--shin-blue6);}
+                                          &.offline h5 {color:var(--red7);}
+                                          &.customer h5 {color:var(--green12);}
+
+                                          h4 {font-size:1.1rem;
+                                              font-weight:bold;}
+
+                                          .add-btn {width:100%;
+                                                    font-size:1.2rem;
+                                                    text-align:center;
+                                                    text-transform:capitalize;
+                                                    font-weight:bold;
+                                                    padding:0.9rem 0.4rem;
+                                                    color:var(--gray10);
+                                                    background-color:transparent;
+                                                    border-radius:1rem;
+                                                    outline:none;
+                                                    border:1px dashed var(--gray10);
+                                                    transition:all 0.3s linear;
+
+                                                 #icon {margin-right:0.7rem;
+                                                        font-size:1.3rem;}
+
+                                                 &:hover {color:var(--white);
+                                                          background-color:var(--primary4);
+                                                          border:1px dashed var(--white);}
+                                          }
+                                   }
+                            }
+
+                            /******* all users *******/
+                            .all-users {
+                                   .buttons {display:flex;
+                                             flex-direction:row;
+                                             flex-wrap:wrap;
+                                             justify-content:center;
+                                             gap:1.5rem;
+                                             width:100%;
+
+                                          .active {color:var(--white);
+                                                   background-color:var(--light-green7);}
+                                   }
+
+                                   .items {width:80%;
+                                           margin:0;
+                                           margin-left:1rem;
+                                           display:flex;
+                                           flex-direction:column;
+                                           align-items:flex-start;
+                                           gap:1.5rem;
+                                           background-color:transparent;
+
+                                          .item {display:flex;
+                                                 flex-direction:row;
+                                                 justify-content:flex-start;
+                                                 align-items:center;
+                                                 gap:1rem;
+
+                                                 h4 {font-size:1rem;
+                                                     font-weight:bold;
+                                                     color:var(--gray1);}
+
+                                                 img {width:4rem;
+                                                      height:4rem;
+                                                      object-fit:cover;
+                                                      border-radius:50%;}
+                                          }
+                                   }
                             }
                      }
               }
        }
 }
 
+@media (max-width:711px){ #dashboard-section .section-container {margin-left:4rem;} }
+
 /*
- ==================================
- ######## USER PROFILE PAGE #######
- ==================================
+ =============================
+ ######## USER PROFILE #######
+ =============================
 */
-.profile-container {
+.profile-page {
+       .profile-container {
 
-       .profile-data {padding:0;
-                      margin:0;
-                      margin-bottom:3rem;
-                      min-height:30vh;
-                      background-color:var(--white);
-                      box-shadow:var(--box-shadow5);
+              .profile-data {padding:0;
+                             margin:0;
+                             margin-bottom:3rem;
+                             min-height:30vh;
+                             background-color:var(--white);
+                             box-shadow:var(--box-shadow5);
 
-              .col-left {text-align:center;
+                     .col-left {text-align:center;
 
-                     .image-card {text-align:center;
-                                  gap:0.4rem;
-                                  margin-top:3rem;
+                            .image-card {text-align:center;
+                                         gap:0.4rem;
+                                         margin-top:3rem;
 
-                            .image {background-color:transparent;
+                                   .image {background-color:transparent;
 
-                                   img {width:9rem;
-                                        height:9rem;
-                                        object-fit:fill;
-                                        border-radius:50%;}
-                            }
-                     }
-
-                     h3 {color:var(--gray11);
-                         font-weight:bold;
-                         margin-top:0.6rem;}
-
-                     p {color:var(--gray7);
-                        font-weight:bold;}
-              }
-
-              /* col-right */
-              .col-right {background-color:transparent;
-
-                     .info-cards {width:100%;
-                                  padding:1rem;
-
-                            .info-card {width:100%;
-                                        padding:0;
-                                        background-color:transparent;
-
-                                   .blocks .block .heading,
-                                   .box .heading {flex-wrap:nowrap;
-                                                  width:99%;}
-
-                                   .blocks .block h5 {margin-bottom:0.5rem;
-                                                      font-size:1.2rem;
-                                                      color:var(--shin-blue6);}
-
-                                   /* open/close */
-                                   .heading {
-                                          label input[type="checkbox"],
-                                          label input[type="checkbox"]:focus {border:none;
-                                                                              outline:none;
-                                                                              appearance:none;
-                                                                              -webkit-appearance:none;
-                                                                              display:none;}
-
-                                          label {
-                                                 .toggle-switch {width:4.5rem;
-                                                                 height:1.6rem;
-                                                                 padding:0 0.3rem;
-                                                                 margin:0;
-                                                                 border-radius:1rem;
-                                                                 display:flex;
-                                                                 flex-direction:row;
-                                                                 justify-content:flex-start;
-                                                                 align-items:center;
-                                                                 gap:1rem;
-                                                                 transition:all 0.3s linear;
-                                                                 cursor:pointer;
-                                                                 position:relative;
-                                                                 background-color:var(--gray3);
-
-                                                        .fa-xmark {width:1.2rem;
-                                                                   height:1.2rem;
-                                                                   padding:0.3rem;
-                                                                   border-radius:50%;
-                                                                   display:flex;
-                                                                   justify-content:center;
-                                                                   align-items:center;
-                                                                   color:var(--white);
-                                                                   background-color:var(--gray5);
-                                                                   transition:all 0.3s linear;
-                                                                   position:absolute;
-                                                                   left:0.3rem;
-                                                                   z-index:2;
-                                                                   opacity:1;}
-
-                                                        .fa-check {width:1.2rem;
-                                                                   height:1.2rem;
-                                                                   padding:0.3rem;
-                                                                   border-radius:50%;
-                                                                   display:flex;
-                                                                   justify-content:center;
-                                                                   align-items:center;
-                                                                   color:var(--shin-blue4);
-                                                                   background-color:var(--white);
-                                                                   transition:all 0.3s linear;
-                                                                   position:absolute;
-                                                                   left:0.3rem;
-                                                                   z-index:1;
-                                                                   opacity:0;}
-                                                 
-                                                 }
-
-                                                 input[type="checkbox"]:checked + .toggle-switch {background-color:var(--shin-blue4);}
-
-                                                 input[type="checkbox"]:checked + .toggle-switch .fa-xmark {left:3rem;
-                                                                                                            opacity:0;
-                                                                                                            z-index:1;
-                                                                                                            background-color:var(--gray4);}
-
-                                                 input[type="checkbox"]:checked + .toggle-switch .fa-check {left:3rem;
-                                                                                                            opacity:1;
-                                                                                                            z-index:2;}
-                                          }
+                                          img {width:9rem;
+                                               height:9rem;
+                                               object-fit:fill;
+                                               border-radius:50%;}
                                    }
                             }
 
-                            /* general-info-card */
-                            .general-info-card {
-                                   .blocks {
-                                          .block {width:100%;
-                                                  padding:2rem 0;
-                                                  gap:0.7rem;
+                            h3 {color:var(--gray11);
+                                font-weight:bold;
+                                margin-top:0.6rem;}
 
-                                                 .details {width:100%;
-                                                           flex-wrap:wrap;
-                                                           gap:5%;
+                            p {color:var(--gray7);
+                               font-weight:bold;}
+                     }
 
-                                                        p {font-size:1rem;
-                                                           color:var(--gray9);
+                     /* col-right */
+                     .col-right {background-color:transparent;
 
-                                                               span {font-size:1rem;
-                                                                     font-weight:bold;
-                                                                     color:var(--gray11);}
+                            .info-cards {width:100%;
+                                         padding:1rem;
+
+                                   .info-card {width:100%;
+                                               padding:0;
+                                               background-color:transparent;
+
+                                          .blocks .block .heading,
+                                          .box .heading {flex-wrap:nowrap;
+                                                         width:99%;}
+
+                                          .blocks .block h5 {margin-bottom:0.5rem;
+                                                             font-size:1.2rem;
+                                                             color:var(--shin-blue6);}
+
+                                          /* open/close */
+                                          .heading {
+                                                 label input[type="checkbox"],
+                                                 label input[type="checkbox"]:focus {border:none;
+                                                                                     outline:none;
+                                                                                     appearance:none;
+                                                                                     -webkit-appearance:none;
+                                                                                     display:none;}
+
+                                                 label {
+                                                        .toggle-switch {width:4.5rem;
+                                                                        height:1.6rem;
+                                                                        padding:0 0.3rem;
+                                                                        margin:0;
+                                                                        border-radius:1rem;
+                                                                        display:flex;
+                                                                        flex-direction:row;
+                                                                        justify-content:flex-start;
+                                                                        align-items:center;
+                                                                        gap:1rem;
+                                                                        transition:all 0.3s linear;
+                                                                        cursor:pointer;
+                                                                        position:relative;
+                                                                        background-color:var(--gray3);
+
+                                                               .fa-xmark {width:1.2rem;
+                                                                          height:1.2rem;
+                                                                          padding:0.3rem;
+                                                                          border-radius:50%;
+                                                                          display:flex;
+                                                                          justify-content:center;
+                                                                          align-items:center;
+                                                                          color:var(--white);
+                                                                          background-color:var(--gray5);
+                                                                          transition:all 0.3s linear;
+                                                                          position:absolute;
+                                                                          left:0.3rem;
+                                                                          z-index:2;
+                                                                          opacity:1;}
+
+                                                               .fa-check {width:1.2rem;
+                                                                          height:1.2rem;
+                                                                          padding:0.3rem;
+                                                                          border-radius:50%;
+                                                                          display:flex;
+                                                                          justify-content:center;
+                                                                          align-items:center;
+                                                                          color:var(--shin-blue4);
+                                                                          background-color:var(--white);
+                                                                          transition:all 0.3s linear;
+                                                                          position:absolute;
+                                                                          left:0.3rem;
+                                                                          z-index:1;
+                                                                          opacity:0;}
+                                                        
                                                         }
 
-                                                        .item {display:flex;
-                                                               flex-direction:row;
-                                                               flex-wrap:wrap;
-                                                               align-items:flex-start;
-                                                               gap:0.5rem;
-                                                               margin:0;
-                                                               padding:0;
+                                                        input[type="checkbox"]:checked + .toggle-switch {background-color:var(--shin-blue4);}
 
-                                                               #icon {color:var(--color-dark);
-                                                                      margin-top:0.2rem;}
+                                                        input[type="checkbox"]:checked + .toggle-switch .fa-xmark {left:3rem;
+                                                                                                                   opacity:0;
+                                                                                                                   z-index:1;
+                                                                                                                   background-color:var(--gray4);}
 
-                                                               .desc {display:flex;
-                                                                      flex-direction:column;
-                                                                      gap:0.4rem;
-                                                                      margin:0;
-                                                                      padding:0;
+                                                        input[type="checkbox"]:checked + .toggle-switch .fa-check {left:3rem;
+                                                                                                                   opacity:1;
+                                                                                                                   z-index:2;}
+                                                 }
+                                          }
+                                   }
+
+                                   /* general-info-card */
+                                   .general-info-card {
+                                          .blocks {
+                                                 .block {width:100%;
+                                                         padding:2rem 0;
+                                                         gap:0.7rem;
+
+                                                        .details {width:100%;
+                                                                  flex-wrap:wrap;
+                                                                  gap:5%;
+
+                                                               p {font-size:1rem;
+                                                                  color:var(--gray9);
 
                                                                       span {font-size:1rem;
                                                                             font-weight:bold;
                                                                             color:var(--gray11);}
+                                                               }
 
-                                                                      p {text-transform:lowercase;
-                                                                         color:var(--gray8);}
+                                                               .item {display:flex;
+                                                                      flex-direction:row;
+                                                                      flex-wrap:wrap;
+                                                                      align-items:flex-start;
+                                                                      gap:0.5rem;
+                                                                      margin:0;
+                                                                      padding:0;
+
+                                                                      #icon {color:var(--color-dark);
+                                                                             margin-top:0.2rem;}
+
+                                                                      .desc {display:flex;
+                                                                             flex-direction:column;
+                                                                             gap:0.4rem;
+                                                                             margin:0;
+                                                                             padding:0;
+
+                                                                             span {font-size:1rem;
+                                                                                   font-weight:bold;
+                                                                                   color:var(--gray11);}
+
+                                                                             p {text-transform:lowercase;
+                                                                                color:var(--gray8);}
+                                                                      }
                                                                }
                                                         }
+                                                        &:not(:last-child) {border-bottom:1px solid var(--gray4);}
                                                  }
-                                                 &:not(:last-child) {border-bottom:1px solid var(--gray4);}
                                           }
                                    }
-                            }
 
-                            /* education-card card */
-                            .education-card {
-                                   .box {display:flex;
-                                         flex-direction:column;
-                                         gap:1rem;
-                                         padding:0 1rem 1rem 1rem !important;
-                                         border-left:0.2rem solid var(--shin-blue7);
-                                         position:relative;
+                                   /* education-card card */
+                                   .education-card {
+                                          .box {display:flex;
+                                                flex-direction:column;
+                                                gap:1rem;
+                                                padding:0 1rem 1rem 1rem !important;
+                                                border-left:0.2rem solid var(--shin-blue7);
+                                                position:relative;
 
-                                          .fa-graduation-cap {width:2rem;
-                                                              height:2rem;
-                                                              font-size:1.5rem;
-                                                              border-radius:50%;
-                                                              padding:0.3rem;
-                                                              position:absolute;
-                                                              top:-0.2rem;
-                                                              left:-1.1rem;
-                                                              color:var(--white);
-                                                              background:radial-gradient(var(--shin-blue2), var(--shin-blue7));}
+                                                 .fa-graduation-cap {width:2rem;
+                                                                     height:2rem;
+                                                                     font-size:1.5rem;
+                                                                     border-radius:50%;
+                                                                     padding:0.3rem;
+                                                                     position:absolute;
+                                                                     top:-0.2rem;
+                                                                     left:-1.1rem;
+                                                                     color:var(--white);
+                                                                     background:radial-gradient(var(--shin-blue2), var(--shin-blue7));}
 
-                                          span {width:9rem;
-                                                border-radius:5rem;
-                                                padding:0.3rem 1.2rem 0.2rem;
-                                                margin-top:0.1rem;
-                                                margin-left:0.9rem;
-                                                font-size:1.1rem;
-                                                font-weight:bold;
-                                                box-shadow:var(--box-shadow2);
-                                                text-shadow:var(--box-shadow2);
-                                                color:var(--white);
-                                                background:radial-gradient(var(--shin-blue), var(--shin-blue7));}  
+                                                 span {width:9rem;
+                                                       border-radius:5rem;
+                                                       padding:0.3rem 1.2rem 0.2rem;
+                                                       margin-top:0.1rem;
+                                                       margin-left:0.9rem;
+                                                       font-size:1.1rem;
+                                                       font-weight:bold;
+                                                       box-shadow:var(--box-shadow2);
+                                                       text-shadow:var(--box-shadow2);
+                                                       color:var(--white);
+                                                       background:radial-gradient(var(--shin-blue), var(--shin-blue7));}  
 
-                                          h4 {font-weight:bold;
-                                              margin-top:0.5rem;}
+                                                 h4 {font-weight:bold;
+                                                     margin-top:0.5rem;}
+                                          
+                                                 &:first-child,
+                                                 &:nth-child(3) {padding-right:3.5rem !important;}
+                                          }
+                                   }
+
+                                   /* my skills */
+                                   .my-skills-card {
+                                          .blocks {gap:9%;
+                                                 .block {width:100%;
+                                                         padding-top:0.5rem;
+                                                         height:fit-content;
+                                                         gap:1.1rem;
                                    
-                                          &:first-child,
-                                          &:nth-child(3) {padding-right:3.5rem !important;}
-                                   }
-                            }
-
-                            /* my skills */
-                            .my-skills-card {
-                                   .blocks {gap:9%;
-                                          .block {width:100%;
-                                                  padding-top:0.5rem;
-                                                  height:fit-content;
-                                                  gap:1.1rem;
-                            
-                                                 .heading {width:100%;}
-                                                                                                         
-                                                 .details {flex-wrap:wrap;
-                                                        line-height:2.5rem;
-                                                        width:80%;
-                                                        gap:0.5rem;}
-                            
-                                                 .fa-check {color:var(--primary-color15);}
+                                                        .heading {width:100%;}
+                                                                                                                
+                                                        .details {flex-wrap:wrap;
+                                                                  line-height:2.5rem;
+                                                                  width:80%;
+                                                                  gap:0.5rem;}
+                                   
+                                                        .fa-check {color:var(--primary-color15);}
+                                                 }
                                           }
                                    }
                             }
-                     }
 
-                     /* tabs area */
-                     .tabs-area {width:100%;
-                                 flex-wrap:nowrap;
-                                 gap:2rem;
-                                 padding:1.2rem 0 1.2rem 1.2rem;
+                            /* tabs area */
+                            .tabs-area {width:100%;
+                                        flex-wrap:nowrap;
+                                        gap:2rem;
+                                        padding:1.2rem 0 1.2rem 1.2rem;
 
-                            li {cursor:pointer;
-                                font-weight:normal;
-                                font-size:1.3rem;
-                                position:relative;
-                    
-                                   &.button-active {color:var(--shin-blue6);}
-                    
-                                   &.button-active::before {content:"";
-                                                            width:100%;
-                                                            height:1.2px;
-                                                            position:absolute;
-                                                            top:3rem;
-                                                            left:0;
-                                                            background-color:var(--shin-blue6);}
+                                   li {cursor:pointer;
+                                       font-weight:normal;
+                                       font-size:1.3rem;
+                                       position:relative;
+                     
+                                          &.button-active {color:var(--shin-blue6);}
+                     
+                                          &.button-active::before {content:"";
+                                                                   width:100%;
+                                                                   height:1.2px;
+                                                                   position:absolute;
+                                                                   top:3rem;
+                                                                   left:0;
+                                                                   background-color:var(--shin-blue6);}
+                                   }
                             }
                      }
               }
+
+              .edit-profile-data .edit-profile-info .btn {width:100%;}
+
+              .tab-btn {margin:2rem auto 1rem;}
        }
-
-       .edit-profile-data .edit-profile-info .btn {width:100%;}
-
-       .tab-btn {margin:2rem auto 1rem;}
 }
 
 @media(max-width:400px){
@@ -2548,7 +2539,11 @@ table {width:100%;
        }
 }
 
-/*====DASHBOARD====*** MAIN CATEGORY ***================*/
+/*
+ ============================
+ ####### MAIN CATEGORY ######
+ ============================
+*/
 .main-category {
 
        h1 {font-size:1.7rem;
@@ -2688,9 +2683,9 @@ table {width:100%;
 }
 
 /*
- =============================
- ####### CUSTOMERS PAGE ######
- =============================
+ ========================
+ ####### CUSTOMERS ######
+ ========================
 */
 .main-customers .customer-container {width:99%;
                                      display:block;
@@ -2744,10 +2739,11 @@ table {width:100%;
               }
        }
 }
+
 /*
- ===============================
- ######## SETTINGS PAGE ########
- ===============================
+ ==========================
+ ######## SETTINGS ########
+ ==========================
 */
 .settings-page {
        .cards {display:flex;
@@ -2922,9 +2918,9 @@ table {width:100%;
 }
 
 /*
- ================================
- ########## USERS PAGE ##########
- ================================
+ ===========================
+ ########## USERS ##########
+ ===========================
 */
 /*******USERS******
  # Edit
