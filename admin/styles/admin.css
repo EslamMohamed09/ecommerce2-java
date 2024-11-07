@@ -327,7 +327,10 @@ span {
 }
 
 ul {
+  margin: 0;
   padding: 0;
+}
+ul li {
   margin: 0;
 }
 
@@ -1389,9 +1392,6 @@ table thead {
   padding: 1rem 0.9rem;
   background-color: var(--white);
 }
-table thead tr th:nth-child(2) {
-  text-align: left;
-}
 table thead tr th:nth-child(2) label {
   cursor: pointer;
 }
@@ -1427,7 +1427,7 @@ table thead tr th {
   color: var(--gray10);
 }
 table tbody tr:nth-child(even) {
-  background-color: var(--shin-blue);
+  background-color: var(--gray);
 }
 table tbody tr:nth-child(even) tr td {
   padding: 1.1rem 1rem 2rem;
@@ -1538,7 +1538,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 /*******************
   # Header
 ********************/
-#header {
+header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -1554,7 +1554,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow2);
   z-index: 100;
 }
-#header .left-header {
+header .left-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1566,16 +1566,16 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: 0;
   z-index: 5;
 }
-#header .left-header .logo {
+header .left-header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-#header .left-header .logo img {
+header .left-header .logo img {
   width: 2rem;
 }
-#header .left-header .logo h2 {
+header .left-header .logo h2 {
   margin: 0;
   font-weight: 800;
   color: var(--shin-blue6);
@@ -1583,15 +1583,15 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   font-size: 0.8rem;
   letter-spacing: 0.8px;
 }
-#header .left-header #asidebutton {
+header .left-header #asidebutton {
   cursor: pointer;
 }
 @media (max-width: 711px) {
-  #header .left-header #asidebutton {
+  header .left-header #asidebutton {
     display: none;
   }
 }
-#header .right-header {
+header .right-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -1603,7 +1603,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: 0;
   z-index: 4;
 }
-#header .right-header .theme-toggler {
+header .right-header .theme-toggler {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1612,7 +1612,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 0.3rem;
   background-color: var(--gray3);
 }
-#header .right-header .theme-toggler #icon {
+header .right-header .theme-toggler #icon {
   width: 50%;
   height: 100%;
   padding: 0.3rem;
@@ -1620,41 +1620,41 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   color: var(--white);
   cursor: pointer;
 }
-#header .right-header .theme-toggler .active {
+header .right-header .theme-toggler .active {
   background-color: var(--shin-blue6);
 }
-#header .right-header .content {
+header .right-header .content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 0.5rem;
 }
-#header .right-header .content .info {
+header .right-header .content .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   gap: 0;
 }
-#header .right-header .content .info p {
+header .right-header .content .info p {
   margin: 0;
   color: var(--gray8);
 }
-#header .right-header .content .info p b {
+header .right-header .content .info p b {
   color: var(--gray9);
 }
-#header .right-header .content .info small {
+header .right-header .content .info small {
   margin: 0;
   color: var(--gray8);
 }
-#header .right-header .content img {
+header .right-header .content img {
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
   object-fit: fill;
   cursor: pointer;
 }
-#header .right-header .content .drop-menu {
+header .right-header .content .drop-menu {
   position: absolute;
   top: 100%;
   right: 0.1rem;
@@ -1666,27 +1666,27 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   animation: fadeIn 0.2s linear;
   display: none;
 }
-#header .right-header .content .drop-menu .drop-link {
+header .right-header .content .drop-menu .drop-link {
   padding: 0.4rem 0.6rem 0.4rem 1rem;
   width: 100%;
   color: var(--gray10);
   font-size: 1rem;
   font-weight: bold;
 }
-#header .right-header .content .drop-menu .drop-link:first-child {
+header .right-header .content .drop-menu .drop-link:first-child {
   border-bottom: 1px solid var(--gray3);
   background-color: var(--blue3);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
-#header .right-header .content .drop-menu .drop-link:last-child {
+header .right-header .content .drop-menu .drop-link:last-child {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-#header .right-header .content .drop-menu .drop-link:hover {
+header .right-header .content .drop-menu .drop-link:hover {
   background-color: var(--blue3);
 }
-#header .right-header .content .drop-menu.dropactive {
+header .right-header .content .drop-menu.dropactive {
   display: flex;
 }
 @keyframes fadeIn {
@@ -1694,7 +1694,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
     transform: translateY(1rem);
   }
 }
-#header .small-menu {
+header .small-menu {
   background-color: var(--white);
   position: fixed;
   left: 50%;
@@ -1709,7 +1709,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-radius: 2.5rem;
   display: none;
 }
-#header .small-menu .small-menu-link {
+header .small-menu .small-menu-link {
   font-size: 1rem;
   font-weight: bold;
   color: var(--color-dark);
@@ -1722,22 +1722,22 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 0.4rem;
 }
 @media (max-width: 710px) {
-  #header .small-menu {
+  header .small-menu {
     display: flex;
   }
 }
 @media (max-width: 400px) {
-  #header .small-menu {
+  header .small-menu {
     width: 98%;
   }
 }
 @media (max-width: 360px) {
-  #header .small-menu .small-menu-link {
+  header .small-menu .small-menu-link {
     font-size: 0.8rem;
   }
 }
 @media (max-width: 290px) {
-  #header .small-menu .small-menu-link {
+  header .small-menu .small-menu-link {
     font-size: 0.6rem;
   }
 }
@@ -2246,7 +2246,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   width: 99%;
   display: block;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
   text-align: left;
   border-radius: 0.7rem;
   background-color: var(--white);
@@ -2256,22 +2256,24 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   text-align: left;
   font-weight: bold;
   font-size: 18px;
-  margin: 0;
-  margin-bottom: 2rem;
+  margin: 1rem;
   text-transform: uppercase;
 }
 .home-page .home-container .section-holder .middle .recent-order table {
   width: 100%;
-  padding: 3rem;
+  padding: 0;
   margin: auto;
   text-align: center;
   border-radius: 0;
   background-color: transparent;
+  box-shadow: none;
 }
 .home-page .home-container .section-holder .middle .recent-order table thead {
   padding: 6rem;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
+  border-top: 1px solid var(--gray4);
+  border-bottom: 1px solid var(--gray4);
 }
 .home-page .home-container .section-holder .middle .recent-order table thead tr {
   border-top-left-radius: 0.7rem;
@@ -2281,27 +2283,30 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 .home-page .home-container .section-holder .middle .recent-order table thead tr th {
   padding: 1rem 0;
   font-size: 1.2rem;
-  border-right: 1px solid var(--gray8);
+  border-right: 1px solid var(--gray4);
 }
 .home-page .home-container .section-holder .middle .recent-order table thead tr th:last-child {
   border-right: none;
 }
 .home-page .home-container .section-holder .middle .recent-order table tbody tr {
-  border-bottom: 1px solid var(--gray8);
-}
-.home-page .home-container .section-holder .middle .recent-order table tbody tr:first-child {
-  border-top: 1px solid var(--gray8);
-}
-.home-page .home-container .section-holder .middle .recent-order table tbody tr:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid var(--gray4);
 }
 .home-page .home-container .section-holder .middle .recent-order table tbody tr td {
   padding: 0.6rem 0;
   font-size: 1.1rem;
-  border-right: 1px solid var(--gray8);
+  border-right: 1px solid var(--gray4);
 }
 .home-page .home-container .section-holder .middle .recent-order table tbody tr td:last-child {
   border-right: none;
+}
+.home-page .home-container .section-holder .middle .recent-order .block-footer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+.home-page .home-container .section-holder .middle .recent-order .block-footer .showall-btn {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--gray11);
 }
 .home-page .home-container .section-holder .right-aside {
   flex: 1 1 5rem;
@@ -2346,20 +2351,20 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-bottom: 0;
   padding-bottom: 0;
 }
-.home-page .home-container .section-holder .right-aside .active-users .images {
+.home-page .home-container .section-holder .right-aside .active-users-block .images {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin: 0;
 }
-.home-page .home-container .section-holder .right-aside .active-users .images img {
+.home-page .home-container .section-holder .right-aside .active-users-block .images img {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   object-fit: fill;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2367,13 +2372,13 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   width: 100%;
   margin: 0;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .image {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .image {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -2382,13 +2387,13 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: center;
   background: transparent;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .image img {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .image img {
   width: 70%;
   height: 70%;
   object-fit: fill;
   border-radius: 50%;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message {
   max-width: 17rem;
   display: flex;
   flex-direction: column;
@@ -2399,20 +2404,20 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   padding: 0;
   background: transparent;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message p {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message p {
   margin: 0;
   font-size: 0.8rem;
   color: var(--blue4);
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message p b {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message p b {
   color: var(--gray11);
   font-size: 0.9rem;
 }
-.home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message small {
+.home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message small {
   color: var(--blue4);
   font-size: 0.8rem;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2421,7 +2426,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 1.2rem;
   background-color: transparent;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -2432,53 +2437,53 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   box-shadow: var(--box-shadow6);
   padding: 1rem 1.4rem 1rem 0.6rem;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item #icon {
   color: var(--white);
   padding: 0.7rem;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.online #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.online #icon {
   background-color: var(--shin-blue6);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.offline #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.offline #icon {
   background-color: var(--red7);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.customer #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.customer #icon {
   background-color: var(--green12);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .info {
   display: block;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info h3 {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .info h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
   color: var(--gray11);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info small {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .info small {
   margin: 0;
   color: var(--blue4);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item h5 {
   font-size: 1rem;
   font-weight: bold;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.online h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.online h5 {
   color: var(--shin-blue6);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.offline h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.offline h5 {
   color: var(--red7);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item.customer h5 {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.customer h5 {
   color: var(--green12);
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item h4 {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item h4 {
   font-size: 1.1rem;
   font-weight: bold;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .add-btn {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .add-btn {
   width: 100%;
   font-size: 1.2rem;
   text-align: center;
@@ -2492,28 +2497,33 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border: 1px dashed var(--gray10);
   transition: all 0.3s linear;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .add-btn #icon {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .add-btn #icon {
   margin-right: 0.7rem;
   font-size: 1.3rem;
 }
-.home-page .home-container .section-holder .right-aside .sales-analytics .items .item .add-btn:hover {
+.home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .add-btn:hover {
   color: var(--white);
   background-color: var(--primary4);
   border: 1px dashed var(--white);
 }
-.home-page .home-container .section-holder .right-aside .all-users .buttons {
-  display: flex;
-  flex-direction: row;
+.home-page .home-container .section-holder .right-aside .all-users-block .buttons {
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 0.9rem;
   width: 100%;
+  height: fit-content;
 }
-.home-page .home-container .section-holder .right-aside .all-users .buttons .active {
+.home-page .home-container .section-holder .right-aside .all-users-block .buttons li {
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0.2rem 0.6rem;
+  margin: 0;
+  font-size: 1rem;
+}
+.home-page .home-container .section-holder .right-aside .all-users-block .buttons .active {
   color: var(--white);
-  background-color: var(--light-green7);
+  background-color: var(--green13);
 }
-.home-page .home-container .section-holder .right-aside .all-users .items {
+.home-page .home-container .section-holder .right-aside .all-users-block .all-users {
   width: 80%;
   margin: 0;
   margin-left: 1rem;
@@ -2523,22 +2533,24 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   gap: 1.5rem;
   background-color: transparent;
 }
-.home-page .home-container .section-holder .right-aside .all-users .items .item {
+.home-page .home-container .section-holder .right-aside .all-users-block .all-users .items {
+  gap: 1rem;
+}
+.home-page .home-container .section-holder .right-aside .all-users-block .all-users .items .item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-.home-page .home-container .section-holder .right-aside .all-users .items .item h4 {
+.home-page .home-container .section-holder .right-aside .all-users-block .all-users .items .item h4 {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--gray1);
+  color: var(--gray11);
 }
-.home-page .home-container .section-holder .right-aside .all-users .items .item img {
+.home-page .home-container .section-holder .right-aside .all-users-block .all-users .items .item img {
   width: 4rem;
   height: 4rem;
-  object-fit: cover;
   border-radius: 50%;
 }
 
