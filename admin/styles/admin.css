@@ -234,11 +234,11 @@ body {
   --black:#fff;
   --black2:rgb(52, 65, 82);
   --white:#202528;
-  --white2:#b0c1cf;
+  --white2:#000;
+  --gray10:#fff;
+  --gray11:#fff;
+  --blue4:#e5e5e7;
   --shin-blue2:#dce1eb;
-  --color-dark:#edeffd;
-  --color-light:rgba(0, 0, 0, 0.4);
-  --color-dark-varient:#a3bdcc;
   --gray1:#cbe8ff;
   --gray8:rgb(224, 222, 222);
   --primary-color10:rgb(230, 130, 0);
@@ -2049,6 +2049,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link #icon {
   font-size: 1.3rem;
+  color: var(--gray11);
   transition: all 300ms ease;
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link h3 {
@@ -2065,6 +2066,9 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   border-left: 5px solid var(--shin-blue6);
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link.active h3 {
+  color: var(--white2);
+}
+#dashboard-section aside .sidebar .aside-list li .sidebar-link.active #icon {
   color: var(--white2);
 }
 @media (min-width: 711px) and (max-width: 1340px) {
@@ -2213,7 +2217,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   top: 50%;
   transform: translateY(-50%);
 }
-.home-page .home-container .section-holder .middle .insights .insight-card .progress .number {
+.home-page .home-container .section-holder .middle .insights .insight-card .number {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2221,10 +2225,10 @@ table tbody tr:nth-child(even) tr:hover .buttons {
   align-items: flex-start;
   gap: 0.3rem;
 }
-.home-page .home-container .section-holder .middle .insights .insight-card .progress .number span {
+.home-page .home-container .section-holder .middle .insights .insight-card .number span {
   font-size: 1rem;
   margin: 0;
-  color: var(--gray5);
+  color: var(--gray7);
 }
 .home-page .home-container .section-holder .middle .insights .insight-card.sales .progress svg circle {
   stroke-dasharray: 200;
@@ -2398,14 +2402,14 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 .home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message p {
   margin: 0;
   font-size: 0.8rem;
-  color: var(--blue3);
+  color: var(--blue4);
 }
 .home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message p b {
   color: var(--gray11);
   font-size: 0.9rem;
 }
 .home-page .home-container .section-holder .right-aside .recent-updates .updates .update .message small {
-  color: var(--blue3);
+  color: var(--blue4);
   font-size: 0.8rem;
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics .items {
@@ -2455,7 +2459,7 @@ table tbody tr:nth-child(even) tr:hover .buttons {
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics .items .item .info small {
   margin: 0;
-  color: var(--blue3);
+  color: var(--blue4);
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics .items .item h5 {
   font-size: 1rem;
