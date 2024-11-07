@@ -562,18 +562,18 @@ button:focus {
   border: none;
   outline: none;
   margin: 0;
-  padding: 0.8rem 2.1rem !important;
+  padding: 0.8rem 1.8rem !important;
   border-radius: 0.3rem;
   cursor: pointer;
-  color: var(--milky1);
+  color: var(--white2);
   background-color: var(--shin-blue6);
-  text-shadow: var(--box-shadow2);
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--box-shadow5);
   transition: all 0.5s linear;
 }
 
 .btn:hover {
   color: var(--white);
+  box-shadow: 0 0.1rem 0.5rem #0059ff;
   background-color: var(--shin-blue5);
 }
 
@@ -589,13 +589,13 @@ button:focus {
   text-align: center;
   color: var(--white2);
   border-radius: 0.3rem;
-  box-shadow: var(--box-shadow1);
+  box-shadow: var(--box-shadow6);
   transition: all 0.3s linear;
   background-color: #397dfc;
 }
 
 .btn2:hover {
-  box-shadow: 0 0.1rem 1rem #0059ff;
+  box-shadow: 0 0.1rem 0.5rem #0059ff;
 }
 
 .btn3 {
@@ -938,6 +938,10 @@ section {
 }
 
 .block-title2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0 0 1rem;
   padding: 0;
@@ -951,13 +955,7 @@ section {
   flex: 1 1 20rem;
 }
 .block-title2 h2 {
-  flex: 1 1 3rem;
-}
-.block-title2 hr:first-child {
-  margin-right: 0.1rem;
-}
-.block-title2 hr:last-child {
-  margin-left: 0.1rem;
+  flex: 1 1 2rem;
 }
 
 /*******************
@@ -2968,7 +2966,7 @@ header .small-menu .small-menu-link {
 .skills-form .skills-blocks {
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .skills-form .skills-blocks .block {
   flex: 1 1 20rem;
@@ -2994,9 +2992,9 @@ header .small-menu .small-menu-link {
 .skills-form .skills-blocks .block .input-control {
   width: 100%;
 }
-.skills-form .skills-blocks .block .btn2 {
-  width: 9rem;
-  margin-left: calc(100% - 9rem);
+.skills-form .skills-blocks .block .btn {
+  width: 10.5rem;
+  margin-left: calc(100% - 10.5rem);
   border-radius: 0.4rem;
 }
 .skills-form .submit-inputs-holder {
