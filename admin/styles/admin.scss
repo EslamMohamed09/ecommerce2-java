@@ -1924,7 +1924,7 @@ header {width:100%;
                                                  padding:0;
                                                  padding-bottom:0.8rem;
                                                  margin:0.2rem 0 0;
-                                                 border-bottom:1.5px solid var(--yellow1);}
+                                                 border-bottom:1.5px solid var(--yellow2);}
 
                                    &:nth-child(3) .block-title {border-bottom:0;
                                                                 padding-bottom:0;}
@@ -1997,12 +1997,12 @@ header {width:100%;
 
                             /******* sales analytics *******/
                             .sales-analytics-block .items {width:100%;
-                                                     display:flex;
-                                                     flex-direction:column;
-                                                     padding:0;
-                                                     margin:0;
-                                                     gap:1.2rem;
-                                                     background-color:transparent;
+                                                           display:flex;
+                                                           flex-direction:column;
+                                                           padding:0;
+                                                           margin:0;
+                                                           gap:1.2rem;
+                                                           background-color:transparent;
 
                                    .item {width:100%;
                                           display:flex;
@@ -2044,27 +2044,6 @@ header {width:100%;
 
                                           h4 {font-size:1.1rem;
                                               font-weight:bold;}
-
-                                          .add-btn {width:100%;
-                                                    font-size:1.2rem;
-                                                    text-align:center;
-                                                    text-transform:capitalize;
-                                                    font-weight:bold;
-                                                    padding:0.9rem 0.4rem;
-                                                    color:var(--gray10);
-                                                    background-color:transparent;
-                                                    border-radius:1rem;
-                                                    outline:none;
-                                                    border:1px dashed var(--gray10);
-                                                    transition:all 0.3s linear;
-
-                                                 #icon {margin-right:0.7rem;
-                                                        font-size:1.3rem;}
-
-                                                 &:hover {color:var(--white);
-                                                          background-color:var(--primary4);
-                                                          border:1px dashed var(--white);}
-                                          }
                                    }
                             }
 
@@ -2117,6 +2096,27 @@ header {width:100%;
 
                                           }
                                    }
+                            }
+
+                            .add-btn {width:100%;
+                                      font-size:1.2rem;
+                                      text-align:center;
+                                      text-transform:capitalize;
+                                      font-weight:bold;
+                                      padding:0.9rem 0.4rem;
+                                      color:var(--gray10);
+                                      background-color:transparent;
+                                      border-radius:1rem;
+                                      outline:none;
+                                      border:1px dashed var(--gray10);
+                                      transition:all 0.3s linear;
+
+                                          #icon {margin-right:0.7rem;
+                                                 font-size:1.3rem;}
+
+                                          &:hover {color:var(--white);
+                                                   background-color:var(--primary4);
+                                                   border:1px dashed var(--white);}
                             }
                      }
               }
