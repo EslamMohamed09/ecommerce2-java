@@ -2511,6 +2511,7 @@ header .small-menu .small-menu-link {
   gap: 0.9rem;
   width: 100%;
   height: fit-content;
+  margin-bottom: 1rem;
 }
 .home-page .home-container .section-holder .right-aside .all-users-block .buttons li {
   width: fit-content;
@@ -2518,8 +2519,11 @@ header .small-menu .small-menu-link {
   padding: 0.2rem 0.6rem;
   margin: 0;
   font-size: 1rem;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--blue5);
 }
-.home-page .home-container .section-holder .right-aside .all-users-block .buttons .active {
+.home-page .home-container .section-holder .right-aside .all-users-block .buttons .button-active {
   color: var(--white);
   background-color: var(--green13);
 }

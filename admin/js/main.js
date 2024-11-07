@@ -390,6 +390,7 @@ function filterWithTabs(tabButton, cardItem) {
 
 // profile-info
 filterWithTabs($('.profile-page .profile-data .tabs-area li'), $('.profile-page .profile-data .info-cards .info-card'));
+filterWithTabs($('.home-page .right-aside .all-users-block .buttons li'), $('.home-page .right-aside .all-users-block .items'));
 
 
 /*

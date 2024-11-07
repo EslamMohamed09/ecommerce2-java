@@ -2074,15 +2074,19 @@ header {width:100%;
                                              gap:0.9rem;
                                              width:100%;
                                              height:fit-content;
+                                             margin-bottom:1rem;
                                             
                                           li {width:fit-content;
                                               border-radius:1rem;
                                               padding:0.2rem 0.6rem;
                                               margin:0;
-                                              font-size:1rem;}
+                                              font-size:1rem;
+                                              cursor:pointer;
+                                              color:var(--white);
+                                              background-color:var(--blue5);}
 
-                                          .active {color:var(--white);
-                                                   background-color:var(--green13);}
+                                          .button-active {color:var(--white);
+                                                          background-color:var(--green13);}
                                    }
 
                                    .all-users {width:80%;

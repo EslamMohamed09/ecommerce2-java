@@ -343,82 +343,82 @@ month deal section
 ###################
 */
 if(document.querySelector(".month-deal-section")){
-let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
-let monthDealCurrentSlide = 1;
-let monthDealPrevBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-left");
-let monthDealNextBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-right");
-let paginationIndicators = document.createElement("ul");
-
-for(let i=1; i<=monthDealSliders.length; i++){
-    let paginationIndicator = document.createElement('li');
-        paginationIndicator.setAttribute('data-index', i);
-    paginationIndicators.appendChild(paginationIndicator);
-}
-
-document.querySelector(".month-deal-section .product-card .col-left .indicators").appendChild(paginationIndicators);
-
-let monthDealPaginationDots = document.querySelectorAll(".month-deal-section .product-card .col-left .indicators ul li");
-
-function monthDealPrevSlide(){
-  if(monthDealPrevBtn.classList.contains('disabled')){
-
-     return false;
-
-  } else {
-    monthDealCurrentSlide--;
-    monthDealSliderChecker();
+  let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
+  let monthDealCurrentSlide = 1;
+  let monthDealPrevBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-left");
+  let monthDealNextBtn = document.querySelector(".month-deal-section .product-card .col-left .arrows .arrow-right");
+  let paginationIndicators = document.createElement("ul");
+  
+  for(let i=1; i<=monthDealSliders.length; i++){
+      let paginationIndicator = document.createElement('li');
+          paginationIndicator.setAttribute('data-index', i);
+      paginationIndicators.appendChild(paginationIndicator);
   }
-}
-
-function monthDealNextSlide(){
-  if(monthDealNextBtn.classList.contains('disabled')){
-
-     return false;
-
-  } else {
-    monthDealCurrentSlide++;
-    monthDealSliderChecker();
+  
+  document.querySelector(".month-deal-section .product-card .col-left .indicators").appendChild(paginationIndicators);
+  
+  let monthDealPaginationDots = document.querySelectorAll(".month-deal-section .product-card .col-left .indicators ul li");
+  
+  function monthDealPrevSlide(){
+    if(monthDealPrevBtn.classList.contains('disabled')){
+  
+       return false;
+  
+    } else {
+      monthDealCurrentSlide--;
+      monthDealSliderChecker();
+    }
   }
-}
-
-monthDealPrevBtn.onclick = monthDealPrevSlide;
-monthDealNextBtn.onclick = monthDealNextSlide;
-
-function monthDealSliderChecker(){
-
-  monthDealSliders.forEach((slider) => {
-    slider.classList.remove('active');
-  });
-
+  
+  function monthDealNextSlide(){
+    if(monthDealNextBtn.classList.contains('disabled')){
+  
+       return false;
+  
+    } else {
+      monthDealCurrentSlide++;
+      monthDealSliderChecker();
+    }
+  }
+  
+  monthDealPrevBtn.onclick = monthDealPrevSlide;
+  monthDealNextBtn.onclick = monthDealNextSlide;
+  
+  function monthDealSliderChecker(){
+  
+    monthDealSliders.forEach((slider) => {
+      slider.classList.remove('active');
+    });
+  
+    monthDealPaginationDots.forEach((dot) => {
+      dot.classList.remove('active');
+    });
+  
+    monthDealSliders[monthDealCurrentSlide - 1].classList.add("active");
+    monthDealPaginationDots[monthDealCurrentSlide - 1].classList.add("active");
+  
+    if(monthDealCurrentSlide == 1) {
+       monthDealPrevBtn.classList.add("disabled");
+    } else {
+      monthDealPrevBtn.classList.remove("disabled");
+    }
+  
+    if(monthDealCurrentSlide == monthDealSliders.length) {
+       monthDealNextBtn.classList.add("disabled");
+    } else {
+      monthDealNextBtn.classList.remove("disabled");
+    }
+  
+  }
+  
+  monthDealSliderChecker();
+  
   monthDealPaginationDots.forEach((dot) => {
-    dot.classList.remove('active');
+    dot.onclick = function (){
+      monthDealCurrentSlide = parseInt(this.getAttribute('data-index'));
+      monthDealSliderChecker();
+    }
   });
-
-  monthDealSliders[monthDealCurrentSlide - 1].classList.add("active");
-  monthDealPaginationDots[monthDealCurrentSlide - 1].classList.add("active");
-
-  if(monthDealCurrentSlide == 1) {
-     monthDealPrevBtn.classList.add("disabled");
-  } else {
-    monthDealPrevBtn.classList.remove("disabled");
-  }
-
-  if(monthDealCurrentSlide == monthDealSliders.length) {
-     monthDealNextBtn.classList.add("disabled");
-  } else {
-    monthDealNextBtn.classList.remove("disabled");
-  }
-
-}
-
-monthDealSliderChecker();
-
-monthDealPaginationDots.forEach((dot) => {
-  dot.onclick = function (){
-    monthDealCurrentSlide = parseInt(this.getAttribute('data-index'));
-    monthDealSliderChecker();
-  }
-});
 }
 
 /* 
@@ -972,9 +972,9 @@ if(document.querySelector("#category-page")){
 }
 
 /* 
- #######################
+========================
  ###### CART PAGE ######
- #######################
+========================
 */
 const maxTotal = 1000;
 
@@ -1137,9 +1137,9 @@ if(header){
 }
 
 /* 
- ###########################
+ ===========================
  ###### CHECKOUT PAGE ######
- ###########################
+ ===========================
 */
 if(document.querySelector(".checkout-page") || document.querySelector(".payment-section")){
 
@@ -1215,9 +1215,9 @@ if(document.querySelector(".checkout-page") || document.querySelector(".payment-
 }
 
 /*
-#############
- PAYMENT PAGE
-#############
+======================
+#### PAYMENT PAGE ####
+======================
 */
 if(document.querySelector(".payment-section")){
    const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
