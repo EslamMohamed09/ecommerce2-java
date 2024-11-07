@@ -366,7 +366,7 @@
 
       </form>
 
-      <form class="skills-form" action="" method="POST"> <!-- Edit Skills -->
+      <form class="skills-form add-skills-form" action="" method="POST"> <!-- Edit Skills -->
 
         <div class="block-title2 d-flex-r-bt-c"><hr><h2>Edit skills</h2><hr></div>
 
@@ -375,14 +375,14 @@
           <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
             <label class="control-label">Computer Skills</label>
             <textarea name="computerskills" class="computerSkillsTextarea"></textarea>
-            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.computer-skills-block .computerSkillsInput', '.computer-skills-block .computerSkillsTextarea'); return false;}"  maxlength="28" class="input-control computerSkillsInput">
+            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.add-skills-form .computerSkillsInput', '.add-skills-form .computerSkillsTextarea'); return false;}"  maxlength="28" class="input-control computerSkillsInput">
             <button type="button" onclick="addTag(null, '.computerSkillsInput', '.computerSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
           <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
             <label class="control-label">Personal Skills</label>
             <textarea name="personalskills" class="personalSkillsTextarea"></textarea>
-            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.personal-skills-block .personalSkillsInput', '.personal-skills-block .personalSkillsTextarea'); return false;}" maxlength="28" class="input-control personalSkillsInput">
+            <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.add-skills-form .personalSkillsInput', '.add-skills-form .personalSkillsTextarea'); return false;}" maxlength="28" class="input-control personalSkillsInput">
             <button type="button" onclick="addTag(null, '.personalSkillsInput', '.personalSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
@@ -395,7 +395,7 @@
 
       </form>
 
-      <form class="skills-form" action="" method="POST"> <!-- Add Skills -->
+      <form class="skills-form edit-skills-form" action="" method="POST"> <!-- Add Skills -->
 
         <div class="block-title2 d-flex-r-bt-c"><hr><h2>Add skills</h2><hr></div>
 
@@ -404,15 +404,15 @@
           <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
             <label>Computer Skills</label>
             <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
-            <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}" class="input-control" id="computerSkillsInput">
-            <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+            <input type="text" value="" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, '.edit-skills-form .computerSkillsInput', '#computerSkillsTextarea'); return false;}" class="input-control computerSkillsInput">
+            <button type="button" onclick="addTag(null, '.edit-skills-form .computerSkillsInput', '.edit-skills-form #computerSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
           <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
             <label>Personal Skills</label>
             <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
-            <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" class="input-control" id="personalSkillsInput">
-            <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+            <input type="text" value="" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, '.edit-skills-form .personalSkillsInput', '#personalSkillsTextarea'); return false;}" class="input-control personalSkillsInput">
+            <button type="button" onclick="addTag(null, '.edit-skills-form .personalSkillsInput', '.edit-skills-form #personalSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
         </div>
