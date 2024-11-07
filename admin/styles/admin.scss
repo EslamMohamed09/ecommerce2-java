@@ -691,26 +691,27 @@ section {margin:0 auto;
                   padding:0;
                   margin:1.2rem 0 3rem;
                   color:var(--gray10);
-                  position:relative;}
+                  position:relative;
 
-.section-heading::before {content:"";
-                          height:3px;
-                          width:100%;
-                          position:absolute;
-                          left:0;
-                          bottom:-0.6rem;
-                          background-color:var(--white2);}
+       &::before {content:"";
+                  height:3px;
+                  width:100%;
+                  position:absolute;
+                  left:0;
+                  bottom:-0.6rem;
+                  background-color:var(--white2);}
 
-.section-heading::after {content:"";
-                         height:3px;
-                         width:30%;
-                         position:absolute;
-                         left:0;
-                         bottom:-0.6rem;
-                         background-color:var(--black2);}
+       &::after {content:"";
+                 height:3px;
+                 width:30%;
+                 position:absolute;
+                 left:0;
+                 bottom:-0.6rem;
+                 background-color:var(--black2);}
+}
 
 @media (max-width:711px){ #dashboard-section .section-container .section-heading {text-align:center;
-                                                                          font-size:1.5rem;} }
+                                                                                  font-size:1.5rem;} }
 
 .sub-heading {width:fit-content;
               position:relative;
@@ -2403,6 +2404,8 @@ header {width:100%;
 /* Edit certification */
 .edit-certification-form {margin-top:2rem;
 
+       > div {margin:1.5rem 0;}
+
        h2 {text-align:left;
            color:var(--shin-blue7);
            text-transform:uppercase;
@@ -2429,20 +2432,20 @@ header {width:100%;
        .submit-inputs .col-md-2 .btn {height:100%;
                                       padding:0.2rem !important;
                                       font-size:1.2rem;}
+
+       @media (min-width:575px) and (max-width:1000px) { .double-input-box .input-box:nth-child(2) .input-holder {padding-left:1rem !important;} }
+
+       @media(max-width:577px){ .submit-inputs .col-md-2 {margin-bottom:0.5rem;} }
+
+       @media(min-width:577px){ .submit-inputs .col-md-2 .btn {width:95%;} }
+
+       @media(min-width:768px) and (max-width:1288px) { .submit-inputs .col-md-2 .btn {font-size:0.9rem;} }
 }
-
-.edit-certification-form > div {margin:1.5rem 0;}
-
-@media (min-width:575px) and (max-width:1000px) { .edit-certification-form .double-input-box .input-box:nth-child(2) .input-holder {padding-left:1rem !important;} }
-
-@media(max-width:577px){ .edit-certification-form .submit-inputs .col-md-2 {margin-bottom:0.5rem;} }
-
-@media(min-width:577px){ .edit-certification-form .submit-inputs .col-md-2 .btn {width:95%;} }
-
-@media(min-width:768px) and (max-width:1288px) { .edit-certification-form .submit-inputs .col-md-2 .btn {font-size:0.9rem;} }
 
 /* Add certification */
 .add-certification-form {display:block;
+
+       > div {margin:2rem 0;}
 
        .input-control {width:100%;}
 
@@ -2455,16 +2458,8 @@ header {width:100%;
                      &:first-child {padding-right:2rem;}
               }
        }
-}
 
-.add-certification-form > div {margin:2rem 0;}
-
-@media (min-width:575px) and (max-width:1000px) { .add-certification-form .double-input-box .input-box:nth-child(2) .input-holder {padding-left:1rem !important;} }
-
-@media(min-width:768px){ .add-certification-form .description-input-box .input-holder {padding-left:2rem !important;} }
-
-.add-certification-form {
-       .submit-input {position:relative;
+       .submit-input-holder {position:relative;
               .fa-plus {color:var(--violet);
                         position:absolute;
                         left:50%;
@@ -2472,11 +2467,15 @@ header {width:100%;
 
               .btn {width:100%;}
        }
+
+       @media (min-width:575px) and (max-width:1000px) { .double-input-box .input-box:nth-child(2) .input-holder {padding-left:1rem !important;} }
+
+       @media(min-width:768px){ .description-input-box .input-holder {padding-left:2rem !important;} }
+
+       @media(max-width:255px){ .submit-input .fa-plus {transform:translateX(-6.4rem)} }
 }
 
-@media(max-width:255px){ .add-certification-form .submit-input .fa-plus {transform:translateX(-6.4rem)} }
-
-/* Edit Profile Skills */
+/* Skills Form */
 .skills-form {margin-top:3rem;
 
        .skills-blocks {flex-wrap:wrap;
@@ -2509,11 +2508,25 @@ header {width:100%;
               }
        }
 
-       .submit-inputs {width:100%;
-                       gap:0.8rem;
-                       margin:0;
+       .submit-inputs-holder {width:100%;
+                              gap:0.8rem;
+                              margin:0;
 
-              .btn {flex:1 1 30rem;}
+              .btn {width:100%;}
+       }
+
+       &.add-skills-form {
+              .submit-input-holder {width:100%;
+                                    margin:0;
+                                    position:relative;
+
+                     .fa-plus {color:var(--white2);
+                               position:absolute;
+                               left:50%;
+                               transform:translateX(-4.9rem)}
+                  
+                     .btn {width:100%;}
+              }
        }
 }
 
@@ -2972,7 +2985,6 @@ header {width:100%;
 @media(min-width:577px){ .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {width:95%;} }
 
 @media(min-width:768px) and (max-width:1288px) { .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {font-size:0.9rem;} }
-
 
 
 /*******MEMBERS******

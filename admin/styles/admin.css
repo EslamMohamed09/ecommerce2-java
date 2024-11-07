@@ -848,7 +848,6 @@ section {
   color: var(--gray10);
   position: relative;
 }
-
 .section-heading::before {
   content: "";
   height: 3px;
@@ -858,7 +857,6 @@ section {
   bottom: -0.6rem;
   background-color: var(--white2);
 }
-
 .section-heading::after {
   content: "";
   height: 3px;
@@ -2858,6 +2856,9 @@ header .small-menu .small-menu-link {
 .edit-certification-form {
   margin-top: 2rem;
 }
+.edit-certification-form > div {
+  margin: 1.5rem 0;
+}
 .edit-certification-form h2 {
   text-align: left;
   color: var(--shin-blue7);
@@ -2890,11 +2891,6 @@ header .small-menu .small-menu-link {
   padding: 0.2rem !important;
   font-size: 1.2rem;
 }
-
-.edit-certification-form > div {
-  margin: 1.5rem 0;
-}
-
 @media (min-width: 575px) and (max-width: 1000px) {
   .edit-certification-form .double-input-box .input-box:nth-child(2) .input-holder {
     padding-left: 1rem !important;
@@ -2915,9 +2911,13 @@ header .small-menu .small-menu-link {
     font-size: 0.9rem;
   }
 }
+
 /* Add certification */
 .add-certification-form {
   display: block;
+}
+.add-certification-form > div {
+  margin: 2rem 0;
 }
 .add-certification-form .input-control {
   width: 100%;
@@ -2933,11 +2933,18 @@ header .small-menu .small-menu-link {
 .add-certification-form .double-input-box .input-box:first-child {
   padding-right: 2rem;
 }
-
-.add-certification-form > div {
-  margin: 2rem 0;
+.add-certification-form .submit-input-holder {
+  position: relative;
 }
-
+.add-certification-form .submit-input-holder .fa-plus {
+  color: var(--violet);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-7.5rem);
+}
+.add-certification-form .submit-input-holder .btn {
+  width: 100%;
+}
 @media (min-width: 575px) and (max-width: 1000px) {
   .add-certification-form .double-input-box .input-box:nth-child(2) .input-holder {
     padding-left: 1rem !important;
@@ -2948,25 +2955,13 @@ header .small-menu .small-menu-link {
     padding-left: 2rem !important;
   }
 }
-.add-certification-form .submit-input {
-  position: relative;
-}
-.add-certification-form .submit-input .fa-plus {
-  color: var(--violet);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-7.5rem);
-}
-.add-certification-form .submit-input .btn {
-  width: 100%;
-}
-
 @media (max-width: 255px) {
   .add-certification-form .submit-input .fa-plus {
     transform: translateX(-6.4rem);
   }
 }
-/* Edit Profile Skills */
+
+/* Skills Form */
 .skills-form {
   margin-top: 3rem;
 }
@@ -3004,13 +2999,27 @@ header .small-menu .small-menu-link {
   margin-left: calc(100% - 9rem);
   border-radius: 0.4rem;
 }
-.skills-form .submit-inputs {
+.skills-form .submit-inputs-holder {
   width: 100%;
   gap: 0.8rem;
   margin: 0;
 }
-.skills-form .submit-inputs .btn {
-  flex: 1 1 30rem;
+.skills-form .submit-inputs-holder .btn {
+  width: 100%;
+}
+.skills-form.add-skills-form .submit-input-holder {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+.skills-form.add-skills-form .submit-input-holder .fa-plus {
+  color: var(--white2);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-4.9rem);
+}
+.skills-form.add-skills-form .submit-input-holder .btn {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
