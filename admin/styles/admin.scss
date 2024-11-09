@@ -237,8 +237,8 @@ body {overflow-x:hidden;
        --box-shadow1:0 0.1rem 1rem rgba(2, 2, 2, 0.4);
        --box-shadow2:0 0.5rem 1.5rem #0d2e2e23;
        --box-shadow3:0 0.3rem 4rem #252c2c2f;
-       --box-shadow4:0 0 6px rgba(0, 0, 0, 0.13);
-       --box-shadow5:0 0 3px #eee;
+       --box-shadow4:0 0 3px #eee;
+       --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
        --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
        --box-shadow7:0 0 6px rgba(2, 2, 2, 0.199);
        --box-shadow8:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
@@ -263,10 +263,12 @@ body {overflow-x:hidden;
                       --gray11:#fff;
                       --blue4:#e5e5e7;
                       --shin-blue2:#dce1eb;
+                      --gray:#343535;
                       --gray1:#cbe8ff;
-                      --gray8:rgb(224, 222, 222);
+                      --gray8:#f0eded;
                       --primary-color10:rgb(230, 130, 0);
-                      --gray-yellow6:rgb(255, 196, 0);}
+                      --gray-yellow6:rgb(255, 196, 0);
+                      --box-shadow6:0 0 3px rgb(0, 0, 0);}
 
 ::-webkit-scrollbar {width:8px;}
 
@@ -450,7 +452,7 @@ select option {border:none;
                    align-items:flex-end}
 
 img {max-width:100%;
-     object-fit:contain;}
+     object-fit:fill;}
 
 /*
 ==================
@@ -898,7 +900,7 @@ input[type="file"] {cursor:pointer;}
                      color:var(--gray10);}
        }
 
-/* col-right */
+       /* col-right */
        .col-right {padding:0 1rem;
                    text-align:center;
 
@@ -1133,16 +1135,14 @@ table {width:100%;
        }
 
        /* body */
-       tbody tr:nth-child(even) {background-color:var(--gray);
+       tbody {
+              tr:nth-child(even) {background-color:var(--gray);}
 
               tr {
                      td {padding:1.1rem 1rem 2rem;
-                         color:var(--gray10);
+                         color:var(--gray11);
+                         text-align:center;
                          position:relative;
-
-                            &:not(:nth-child(2)) {text-align:center;}
-
-                            &:nth-child(2) {text-align:left;}
 
                             &:nth-child(2) label {cursor:pointer;}
 
@@ -1397,9 +1397,9 @@ header {width:100%;
 }
 
 /*
- =============================
- ########### LOGIN ###########
- =============================
+=============================
+########### LOGIN ###########
+=============================
 */
 /* login */
 #login-section {background:#eef1f8;
@@ -1629,9 +1629,9 @@ header {width:100%;
 }
 
 /*
- =================================
- ########### DASHBOARD ###########
- =================================
+=================================
+########### DASHBOARD ###########
+=================================
 */
 #dashboard-section {display:flex;
                     flex-direction:row;
@@ -1715,9 +1715,9 @@ header {width:100%;
 @media (max-width:711px){ #dashboard-section .section-container {margin-left:4rem;} }
 
 /*
- ============================
- ########### HOME ###########
- ============================
+============================
+########### HOME ###########
+============================
 */
 .home-page {
        .home-container {
@@ -1761,7 +1761,7 @@ header {width:100%;
                                                   padding:1rem;
                                                   border-radius:0.7rem;
                                                   gap:0.2rem;
-                                                  box-shadow:var(--box-shadow4);
+                                                  box-shadow:var(--box-shadow6);
                                                   background:var(--white);
 
                                           #icon {color:var(--white);
@@ -1876,8 +1876,6 @@ header {width:100%;
                                           tbody {
                                                  tr {border-bottom:1px solid var(--gray4);
 
-                                                 // &:last-child {border-bottom:none;}
-
                                                         td {padding:0.6rem 0;
                                                             font-size:1.1rem;
                                                             border-right:1px solid var(--gray4);
@@ -1941,8 +1939,7 @@ header {width:100%;
 
                                           img {width:4rem;
                                                height:4rem;
-                                               border-radius:50%;
-                                               object-fit:fill;}
+                                               border-radius:50%;}
                                    }
                             }
 
