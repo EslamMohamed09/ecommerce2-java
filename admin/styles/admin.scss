@@ -451,6 +451,8 @@ select option {border:none;
                    justify-content:flex-end;
                    align-items:flex-end}
 
+.wfull {width:100%;}
+
 img {max-width:100%;
      object-fit:fill;}
 
@@ -471,68 +473,170 @@ button:focus {box-shadow:var(--box-shadow2);}
            padding:0.6rem 1rem;
            border-radius:0.2rem;}
 
-.btn {font-size:1.2rem;
-      font-weight:bold;
-      text-transform:uppercase;
-      border:none;
-      outline:none;
-      margin:0;
-      padding:0.8rem 1.8rem !important;
-      border-radius:0.3rem;
-      cursor:pointer;
+/******************* # BUTTONS ********************/
+.add-btn {font-size:0.9rem;
+          font-weight:bold;
+          text-transform:uppercase;
+          color:var(--gray11);
+          border:none;
+          background-color:transparent;}
+
+.trans-btn {display:inline-block;
+            padding:0.7rem 1rem;
+            font-size:1rem;
+            text-transform:capitalize;
+            text-align:center;
+            box-shadow:none;
+            outline:none;
+            color:var(--black2);
+            background-color:transparent;
+            border:1.5px solid var(--black2);
+            transition:all 0.3s linear;}
+
+.trans-btn:hover {border:1.5px solid var(--black2);
+                  color:var(--white2);
+                  background-color:var(--black2);}
+
+.b-btn {display:inline-block;
+        padding:0.7rem 1rem;
+        font-size:1rem;
+        text-transform:capitalize;
+        text-align:center;
+        color:var(--white2);
+        background-color:var(--black2);
+        border:none;
+        outline:none;
+        transition:all 0.6s linear;}
+
+.b-btn:hover {color:var(--white2);
+              background-color:var(--black2);}
+
+.btn {display:inline-block;
+      padding:0.7rem 1rem;
+      font-size:1rem;
+      text-transform:capitalize;
+      text-align:center;
       color:var(--white2);
-      background-color:var(--shin-blue6);
-      box-shadow:var(--box-shadow5);
-      transition:all 0.5s linear;}
+      background-color:var(--black2);
+      border:1px solid var(--black2);
+      outline:none;
+      transition:all 0.6s linear;}
 
-.btn:hover {color:var(--white);
-            box-shadow:0 0.1rem 0.5rem #0059ff;
-            background-color:var(--shin-blue5);}
+.btn:hover {color:var(--black);
+            background-color:transparent;}
 
-.btn:focus {border:none;
-            outline:none;}
-
-.btn2 {padding:0.6rem 1rem;
-       font-size:1.3rem;
-       text-transform:uppercase;
+.btn2 {display:inline-block;
+       padding:0.6rem 1rem !important;
+       margin:0;
+       font-size:14px;
+       text-transform:capitalize;
        text-align:center;
-       color:var(--white2);
-       border-radius:0.3rem;
-       box-shadow:var(--box-shadow6);
-       transition:all 0.3s linear;
-       background-color:#397dfc;}
-
-.btn2:hover {box-shadow:0 0.1rem 0.5rem #0059ff;}
-
-.btn3 {padding:0.7rem 2rem;
-       font-size:1.3rem;
-       font-weight:bold;
-       text-transform:uppercase;
-       text-align:center;
-       color:var(--violet);
        border-radius:0.2rem;
-       transition:all 0.3s linear;
-       background:linear-gradient(to right, #9b059b, rgb(64, 4, 121) 80%);}
+       border:none;
+       outline:none;
+       color:var(--white2);
+       background-color:var(--shin-blue5);
+       box-shadow:var(--box-shadow5);
+       transition:all 0.3s linear;}
 
-.btn3:hover {color:var(--white);
-             transition:all 0.3s linear;
-             background:linear-gradient(to right, var(--violet5), #056c9b 80%);}
+.btn2:hover {color:var(--white2);
+             box-shadow:0 0 6px #0084ff7a;}
 
-.btn4 {display:inline-block;
+.btn3 {padding:0.6rem 1.3rem !important;
+       font-size:14px;
        text-transform:uppercase;
-       font-size:1rem;
        text-align:center;
-       font-weight:bold;
-       padding:0.4rem 1.4rem;
-       outline:0;
-       border-radius:0;
-       color:var(--white);
-       background-color:var(--black);
-       border:1px solid var(--black);
-       transition:all 0.6s linear;}
+       border-radius:0.2rem;
+       color:var(--white2);
+       border:1px solid var(--blue7);
+       background-color:var(--blue7);
+       box-shadow:var(--box-shadow5);
+       transition:all 0.3s linear;}
 
-.btn4:hover {color:var(--black);
-             background-color:transparent;}
+.btn3:hover {background-color:transparent;
+             color:var(--blue7);}
+
+.btn4 {margin:0;
+       padding:0.7rem 1rem;
+       font-size:1.2rem;
+       font-weight:bold;
+       text-align:center;
+       text-transform:uppercase;
+       border:none;
+       outline:none;
+       border-radius:0.2rem;
+       color:var(--violet);
+       box-shadow:var(--box-shadow-varient);
+       background:linear-gradient(to right,var(--light-violet6), rgb(64, 4, 121) 80%);}
+
+.btn4:hover {color:var(--white);
+             background:linear-gradient(to right,#056c9b, rgb(158, 108, 204) 80%);}
+
+.btn4-trans {margin:0;
+             padding:0.7rem 1rem;
+             font-size:1.1rem;
+             border-radius:0.2rem;
+             font-weight:bold;
+             text-align:center;
+             background:transparent;
+             color:rgb(64, 4, 121);
+             border:1px solid var(--light-violet6);
+             transition:all 0.4s linear;}
+
+.btn4-trans:hover {color:#fca4fc;
+                   border:none;
+                   background:rgb(64, 4, 121);
+                   border:1px solid rgb(64, 4, 121);}
+
+.btn5 {font-size:1rem;
+       font-weight:bold;
+       text-align:center;
+       text-transform:uppercase;
+       border-radius:0.1rem;
+       color:var(--primary5);
+       outline:none;
+       border:1px solid var(--yellow10);
+       background:var(--yellow10);
+       box-shadow:var(--box-shadow-varient);}
+
+.btn5:hover {background:transparent}
+
+.line-btn {font-size:1rem;
+           font-weight:bold;
+           text-align:center;
+           text-transform:uppercase;
+           border-radius:0.1rem;
+           color:var(--black2);
+           outline:none;
+           border:none;
+           background:transparent;
+           position:relative;}
+
+.line-btn::before {content:"";
+                   position:absolute;
+                   bottom:-0.2rem;
+                   width:100%;
+                   height:2px;
+                   display:block;
+                   margin:auto;
+                   transition:0.5s;
+                   background-color:var(--black);
+                   z-index:0;}
+
+.line-btn::after {content:"";
+                  position:absolute;
+                  bottom:-0.2rem;
+                  width:0;
+                  height:2px;
+                  display:block;
+                  margin:auto;
+                  transition:0.5s;
+                  background-color:var(--gray5);
+                  z-index:20;}
+
+.line-btn:hover {color:var(--black2);}
+
+.line-btn:hover::after {width:100%;}
 
 .tab-btn {width:100%;
           text-align:center;
@@ -572,24 +676,23 @@ button:focus {box-shadow:var(--box-shadow2);}
           cursor:pointer;
           transition:all 0.5s linear;}
 
-.d-btn {color:var(--light-red);background-color:var(--primary-color2);}
+.d-btn {color:var(--light-red);
+        background-color:var(--primary-color2);}
                    
-.trans-btn {background:transparent;
-            color:var(--gray10);
-            display:inline-block;
-            font-size:0.9rem;
-            font-weight:bold;
-            text-transform:uppercase;
-            padding:0.2rem 0.5rem;
-            margin:0;
-            transition:all 0.3s linear;}
-
-.trans-btn:hover {color:var(--gray10)}
+.view-btn {background:transparent;
+           color:var(--gray10);
+           display:inline-block;
+           font-size:0.9rem;
+           font-weight:bold;
+           text-transform:uppercase;
+           padding:0.2rem 0.5rem;
+           margin:0;
+           transition:all 0.3s linear;}
 
 #power-off {color:var(--black);
             margin-left:0.3rem;}
 
-.trans-btn:hover #power-off {color:red;}
+.view-btn:hover #power-off {color:red;}
 
 #ticon {margin:0;}
 
@@ -2134,7 +2237,7 @@ header {width:100%;
                              margin-bottom:3rem;
                              min-height:30vh;
                              background-color:var(--white);
-                             box-shadow:var(--box-shadow5);
+                             box-shadow:var(--box-shadow6);
 
                      .col-left {text-align:center;
 
@@ -2384,8 +2487,6 @@ header {width:100%;
                      }
               }
 
-              .edit-profile-data .edit-profile-info .btn {width:100%;}
-
               .tab-btn {margin:2rem auto 1rem;}
        }
 }
@@ -2424,19 +2525,14 @@ header {width:100%;
               }
        }
 
-       .submit-inputs .btn {width:100%;}
-
-       .submit-inputs .col-md-2 .btn {height:100%;
-                                      padding:0.2rem !important;
-                                      font-size:1.2rem;}
+       .submit-inputs {gap:0.7rem;
+              .btn3 {padding:0.4rem !important;
+                     font-size:1.2rem;}
+       }
 
        @media (min-width:575px) and (max-width:1000px) { .double-input-box .input-box:nth-child(2) .input-holder {padding-left:1rem !important;} }
 
-       @media(max-width:577px){ .submit-inputs .col-md-2 {margin-bottom:0.5rem;} }
-
-       @media(min-width:577px){ .submit-inputs .col-md-2 .btn {width:95%;} }
-
-       @media(min-width:768px) and (max-width:1288px) { .submit-inputs .col-md-2 .btn {font-size:0.9rem;} }
+       @media(min-width:768px) and (max-width:1288px) { .submit-inputs .btn3 {font-size:0.9rem;} }
 }
 
 /* Add certification */
@@ -2462,7 +2558,9 @@ header {width:100%;
                         left:50%;
                         transform:translateX(-7.5rem)}
 
-              .btn {width:100%;}
+              .btn3 {width:100%;}
+
+              &:hover .fa-plus {color:var(--blue7);}
        }
 
        @media (min-width:575px) and (max-width:1000px) { .double-input-box .input-box:nth-child(2) .input-holder {padding-left:1rem !important;} }
@@ -2499,9 +2597,8 @@ header {width:100%;
 
                      .input-control {width:100%;}
 
-                     .btn {width:10.5rem;
-                           margin-left:calc(100% - 10.5rem);
-                           border-radius:0.4rem;}
+                     .btn2 {width:9rem;
+                            margin-left:calc(100% - 9rem);}
               }
        }
 
@@ -2509,7 +2606,7 @@ header {width:100%;
                               gap:0.8rem;
                               margin:0;
 
-              .btn {width:100%;}
+              .btn3 {width:100%;}
        }
 
        &.add-skills-form {
@@ -2522,7 +2619,9 @@ header {width:100%;
                                left:50%;
                                transform:translateX(-4.9rem)}
                   
-                     .btn {width:100%;}
+                     .btn3 {width:100%;}
+
+                     &:hover .fa-plus {color:var(--blue7);}
               }
        }
 }

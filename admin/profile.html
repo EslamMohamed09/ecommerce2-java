@@ -208,7 +208,7 @@
 
     <div class="edit-profile-data collapsible-page">
       
-      <form class="form-horizontal2 edit-profile-info row" action="" method="POST"> <!-- edit-profile-info -->
+      <form class="form-horizontal2 row" action="" method="POST">
 
         <div class="col-left col-lg-8 col-md-8 col-sm-12">
 
@@ -288,7 +288,7 @@
 
         </div> <!-- End col-right -->
 
-        <input type="submit" name="save" value="save" class="btn"/>
+        <input type="submit" value="save" class="btn2"/>
 
       </form>
 
@@ -322,9 +322,9 @@
           </div>  
         </div>
 
-        <div class="input-box submit-inputs row">  <!-- Save Certification Button -->
-          <div class="col-md-2 col-sm-6"><input type="submit" name="deletecertification" value="delete" class="btn"/></div>
-          <div class="col-md-10 col-sm-6"><input type="submit" name="savecertification" value="save certification" class="btn"/></div>
+        <div class="submit-inputs d-flex-c-st-st">  <!-- Save Certification Button -->
+          <input type="submit" name="deletecertification" value="delete" class="btn3 wfull"/>
+          <input type="submit" name="savecertification" value="update certification" class="btn3 wfull"/>
         </div> 
 
       </form>
@@ -360,7 +360,7 @@
         <div class="submit-input-holder row">  <!-- Submit Button -->
           <div class="col-md-12 d-flex-r-c-c">
             <i class="fa fa-plus"></i>
-            <input type="submit" name="addcertification" value="add certification" class="btn"/>
+            <input type="submit" name="addcertification" value="add certification" class="btn3"/>
           </div>
         </div> 
 
@@ -376,21 +376,21 @@
             <label class="control-label">Computer Skills</label>
             <textarea name="computerskills" class="computerSkillsTextarea"></textarea>
             <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.edit-skills-form .computerSkillsInput', '.edit-skills-form .computerSkillsTextarea'); return false;}"  maxlength="28" class="input-control computerSkillsInput">
-            <button type="button" onclick="addTag(null, '.edit-skills-form .computerSkillsInput', '.edit-skills-form .computerSkillsTextarea')" class="btn">add skill</button>
+            <button type="button" onclick="addTag(null, '.edit-skills-form .computerSkillsInput', '.edit-skills-form .computerSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
           <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
             <label class="control-label">Personal Skills</label>
             <textarea name="personalskills" class="personalSkillsTextarea"></textarea>
             <input type="text" value="" onkeydown="if(event.keyCode === 13) {addTag(null, '.edit-skills-form .personalSkillsInput', '.edit-skills-form .personalSkillsTextarea'); return false;}" maxlength="28" class="input-control personalSkillsInput">
-            <button type="button" onclick="addTag(null, '.edit-skills-form .personalSkillsInput', '.edit-skills-form .personalSkillsTextarea')" class="btn">add skill</button>
+            <button type="button" onclick="addTag(null, '.edit-skills-form .personalSkillsInput', '.edit-skills-form .personalSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
         </div> <!-- End skills-blocks -->
         
         <div class="submit-inputs-holder d-flex-c-c-c">  <!-- Submit Button -->
-          <input type="submit" name="deleteskills" value="delete skills" class="btn"/>
-          <input type="submit" name="editskills" value="edit skills" class="btn"/>
+          <input type="submit" name="deleteskills" value="delete skills" class="btn3"/>
+          <input type="submit" name="editskills" value="edit skills" class="btn3"/>
         </div>
 
       </form>
@@ -419,7 +419,7 @@
         
         <div class="submit-input-holder d-flex-r-c-c">  <!-- Submit Button -->
           <i class="fa fa-plus"></i>
-          <input type="submit" name="addskills" value="add skills" class="btn"/>
+          <input type="submit" name="addskills" value="add skills" class="btn3"/>
         </div>
 
       </form>
