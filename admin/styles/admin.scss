@@ -1424,10 +1424,12 @@ header {width:100%;
                      }
                      
                      img {border-radius:50%;
-                          width:2.5rem;
-                          height:2.5rem;
+                          width:2.6rem;
+                          height:2.6rem;
                           object-fit:fill;
-                          cursor:pointer;}
+                          cursor:pointer;
+                     //      padding:0.1rem;
+                          box-shadow:var(--box-shadow6);}
 
                      .drop-menu {position:absolute;
                                  top:100%;
@@ -2250,6 +2252,8 @@ header {width:100%;
                                           img {width:9rem;
                                                height:9rem;
                                                object-fit:fill;
+                                               padding:0.4rem;
+                                               box-shadow:var(--box-shadow6);
                                                border-radius:50%;}
                                    }
                             }
@@ -2363,7 +2367,7 @@ header {width:100%;
                                                                   gap:5%;
 
                                                                p {font-size:1rem;
-                                                                  color:var(--gray9);
+                                                                  color:var(--gray10);
 
                                                                       span {font-size:1rem;
                                                                             font-weight:bold;
@@ -2378,7 +2382,7 @@ header {width:100%;
                                                                       margin:0;
                                                                       padding:0;
 
-                                                                      #icon {color:var(--color-dark);
+                                                                      #icon {color:var(--gray11);
                                                                              margin-top:0.2rem;}
 
                                                                       .desc {display:flex;
@@ -2605,8 +2609,6 @@ header {width:100%;
        .submit-inputs-holder {width:100%;
                               gap:0.8rem;
                               margin:0;
-
-              .btn3 {width:100%;}
        }
 
        &.add-skills-form {

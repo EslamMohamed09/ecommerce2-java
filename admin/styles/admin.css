@@ -1770,10 +1770,11 @@ header .right-header .content .info small {
 }
 header .right-header .content img {
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
   object-fit: fill;
   cursor: pointer;
+  box-shadow: var(--box-shadow6);
 }
 header .right-header .content .drop-menu {
   position: absolute;
@@ -2707,6 +2708,8 @@ header .small-menu .small-menu-link {
   width: 9rem;
   height: 9rem;
   object-fit: fill;
+  padding: 0.4rem;
+  box-shadow: var(--box-shadow6);
   border-radius: 50%;
 }
 .profile-page .profile-container .profile-data .col-left h3 {
@@ -2827,7 +2830,7 @@ header .small-menu .small-menu-link {
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p {
   font-size: 1rem;
-  color: var(--gray9);
+  color: var(--gray10);
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p span {
   font-size: 1rem;
@@ -2844,7 +2847,7 @@ header .small-menu .small-menu-link {
   padding: 0;
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item #icon {
-  color: var(--color-dark);
+  color: var(--gray11);
   margin-top: 0.2rem;
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc {
@@ -3113,9 +3116,6 @@ header .small-menu .small-menu-link {
   width: 100%;
   gap: 0.8rem;
   margin: 0;
-}
-.skills-form .submit-inputs-holder .btn3 {
-  width: 100%;
 }
 .skills-form.add-skills-form .submit-input-holder {
   width: 100%;
