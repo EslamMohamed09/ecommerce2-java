@@ -15,8 +15,8 @@ const headerContent = `
   <div class="right-header">
 
     <div class="theme-toggler" id="theme-toggler">
-      <i class="fas fa-adjust active" id="icon"></i>
-      <i class="far fa-moon" id="icon"></i>
+      <i class="fas fa-adjust" id="adjust-icon"></i>
+      <i class="far fa-moon" id="moon-icon"></i>
     </div>
 
     <div class="content">

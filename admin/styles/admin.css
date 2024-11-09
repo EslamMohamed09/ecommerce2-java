@@ -1738,7 +1738,7 @@ header .right-header .theme-toggler {
   border-radius: 0.3rem;
   background-color: var(--gray3);
 }
-header .right-header .theme-toggler #icon {
+header .right-header .theme-toggler svg {
   width: 50%;
   height: 100%;
   padding: 0.3rem;
@@ -1767,7 +1767,7 @@ header .right-header .content .info p {
   color: var(--gray8);
 }
 header .right-header .content .info p b {
-  color: var(--gray9);
+  color: var(--gray10);
 }
 header .right-header .content .info small {
   margin: 0;

@@ -6,13 +6,32 @@ function loadHtml(selector, htmlContent, type){
 }
 
 document.addEventListener('headerLoaded', () => {
-  // convert color mode
   const themeToggler = document.getElementById("theme-toggler");
+  const adjustIcon = document.getElementById("adjust-icon");
+  const moonIcon = document.getElementById("moon-icon");
+
+  function saveTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme-variable');
+        moonIcon.classList.add('active');
+        adjustIcon.classList.remove('active');
+    } else {
+      document.body.classList.remove('dark-theme-variable');
+      adjustIcon.classList.add('active');
+      moonIcon.classList.remove('active');
+    }
+  }
+
+  saveTheme(localStorage.getItem('ecommerce2-dashboard-theme'));
+
   themeToggler.addEventListener("click", () => {
       document.body.classList.toggle('dark-theme-variable');
       
       themeToggler.querySelector('.fa-moon').classList.toggle('active');
       themeToggler.querySelector('.fa-adjust').classList.toggle('active');
+
+      const currentTheme = document.body.classList.contains('dark-theme-variable') ? 'dark' : 'light';
+      localStorage.setItem('ecommerce2-dashboard-theme', currentTheme);
   });
 
   if(document.querySelector('.header')){
