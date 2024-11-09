@@ -1576,8 +1576,9 @@ table tbody tr td:nth-child(even) {
 }
 table tbody tr td img {
   width: 4rem;
-  height: 3rem;
-  border-radius: 0.3rem;
+  height: 3.5rem;
+  object-fit: fill;
+  border-radius: 0.2rem;
 }
 table tbody tr td:first-child {
   padding: 1.4rem 0rem 2rem 0.5rem;
@@ -1620,7 +1621,7 @@ table tbody tr:hover .buttons {
   gap: 0;
   border-radius: 0.6rem;
   background-color: var(--white);
-  box-shadow: var(--box-shadow4);
+  box-shadow: var(--box-shadow6);
 }
 .pagination .pagination-link {
   padding: 0.5rem 1.6rem;
@@ -3184,6 +3185,75 @@ header .small-menu .small-menu-link {
   }
 }
 /*
+ ========================
+ ####### CUSTOMERS ######
+ ========================
+*/
+.customers-page .customer-container {
+  width: 99%;
+  display: block;
+  margin: 1rem auto;
+  padding: 0;
+  text-align: left;
+  border-radius: 0.7rem;
+  /** table **/
+  /* head */
+}
+.customers-page .customer-container table {
+  border: none;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: var(--white);
+  /* body */
+}
+.customers-page .customer-container table thead {
+  background-color: var(--white);
+}
+.customers-page .customer-container table thead:first-child {
+  border-bottom: 1px solid var(--gray3);
+}
+.customers-page .customer-container table thead:last-child {
+  border-top: 1px solid var(--gray3);
+}
+.customers-page .customer-container table thead tr th:not(:first-child) {
+  padding: 0.4rem 1rem 1rem;
+  text-align: center;
+}
+.customers-page .customer-container table thead tr th:first-child {
+  padding: 0 0.1rem 0.3rem 1rem;
+  text-align: center;
+}
+.customers-page .customer-container table thead tr th:nth-child(2) {
+  text-align: left;
+}
+.customers-page .customer-container table tbody tr:nth-child(odd) {
+  background-color: rgba(216, 140, 0, 0.041);
+}
+.customers-page .customer-container table tbody tr td:nth-child(odd) {
+  font-weight: bold;
+}
+.customers-page .customer-container table tbody tr td:not(:first-child) {
+  padding: 1.1rem 1rem 2rem;
+  color: var(--gray10);
+  text-align: center;
+}
+.customers-page .customer-container table tbody tr td:first-child {
+  padding: 0 0.1rem 0.3rem 1rem;
+  text-align: center;
+}
+.customers-page .customer-container table tbody tr td:nth-child(2) {
+  text-align: left;
+}
+.customers-page .customer-container table tbody tr td .buttons {
+  left: 1rem;
+}
+.customers-page .customer-container table tbody tr td .buttons > a {
+  color: var(--gray-yellow6);
+  text-transform: uppercase;
+}
+
+/*
  ============================
  ####### MAIN CATEGORY ######
  ============================
@@ -3338,77 +3408,6 @@ header .small-menu .small-menu-link {
 }
 .main-category .category-container table tbody tr:hover .buttons {
   opacity: 1;
-}
-
-/*
- ========================
- ####### CUSTOMERS ######
- ========================
-*/
-.main-customers .customer-container {
-  width: 99%;
-  display: block;
-  margin: 1rem auto;
-  padding: 0;
-  text-align: left;
-  border-radius: 0.7rem;
-  /** table **/
-  /* head */
-}
-.main-customers .customer-container table {
-  border: none;
-  width: 100%;
-  margin: 0;
-  border-radius: 0.7rem;
-  background-color: var(--white);
-}
-.main-customers .customer-container table {
-  /* body */
-}
-.main-customers .customer-container table thead {
-  background-color: var(--white);
-}
-.main-customers .customer-container table thead:first-child {
-  border-bottom: 1px solid var(--gray3);
-}
-.main-customers .customer-container table thead:last-child {
-  border-top: 1px solid var(--gray3);
-}
-.main-customers .customer-container table thead tr th:not(:first-child) {
-  padding: 0.4rem 1rem 1rem;
-  text-align: center;
-}
-.main-customers .customer-container table thead tr th:first-child {
-  padding: 0 0.1rem 0.3rem 1rem;
-  text-align: center;
-}
-.main-customers .customer-container table thead tr th:nth-child(2) {
-  text-align: left;
-}
-.main-customers .customer-container table tbody tr:nth-child(odd) {
-  background-color: rgba(216, 140, 0, 0.041);
-}
-.main-customers .customer-container table tbody tr td:nth-child(odd) {
-  font-weight: bold;
-}
-.main-customers .customer-container table tbody tr td:not(:first-child) {
-  padding: 1.1rem 1rem 2rem;
-  color: var(--gray10);
-  text-align: center;
-}
-.main-customers .customer-container table tbody tr td:first-child {
-  padding: 0 0.1rem 0.3rem 1rem;
-  text-align: center;
-}
-.main-customers .customer-container table tbody tr td:nth-child(2) {
-  text-align: left;
-}
-.main-customers .customer-container table tbody tr td .buttons {
-  left: 1rem;
-}
-.main-customers .customer-container table tbody tr td .buttons > a {
-  color: var(--gray-yellow6);
-  text-transform: uppercase;
 }
 
 /*
