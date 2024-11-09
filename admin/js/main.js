@@ -57,9 +57,9 @@ loadHtml('#header', headerContent, "header");
 $('body').css('paddingTop', $('.header').innerHeight() - 1);
 
 /*
- ======================================
- ######## LOGIN & REGISTER PAGE #######
- ======================================
+======================================
+######## LOGIN & REGISTER PAGE #######
+======================================
 */
 // Show Register & Login Form
 $(document).ready(function(){
@@ -314,9 +314,9 @@ if(document.getElementById('addCertificationBtn') && document.getElementById('de
 }
 
 /*
- ======================
- ######## ASIDE #######
- ======================
+======================
+######## ASIDE #######
+======================
 */
 document.addEventListener('asideLoaded', () => {
   
@@ -385,10 +385,26 @@ function eyeFunction(eyeIcon) {
 }
 
 /*
- =============================
- ######## PROFILE PAGE #######
- =============================
+=============================
+######## PROFILE PAGE #######
+=============================
 */
+/**** Collapsible in Profile Page ****/
+var collBtnProfileUser = document.getElementsById("edit-profile-collapsible");
+var i;
+
+for (i=0; i<collBtnProfileUser.length; i++) {
+    collBtnProfileUser[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var standardPage = this.parentNode.querySelector(".collapsible-page");
+    if (standardPage.style.display === "block") {
+        standardPage.style.display = "none";
+    } else {
+        standardPage.style.display = "block";
+    }
+  });
+}
+
 /*
  #### Profile-Data ####
 */
