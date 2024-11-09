@@ -120,6 +120,7 @@ body {
   --aqua8:#8bcaca;
   --aqua9:#40f7f7;
   --aqua10:#00c7c7;
+  --aqua11:#03a7a7;
   --shin-blue:#60c8fc;
   --shin-blue1:#00b7ff;
   --shin-blue2:#38baf9;
@@ -208,7 +209,6 @@ body {
   --color-dark-varient:#677483;
   --font-mont:"Mont", cursive;
   --font-Rale: "Rale", cursive;
-  --box-shadow-varient:0 0.5rem 1.5rem var(--color-light);
   --box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   --box-shadow1:0 0.1rem 1rem rgba(2, 2, 2, 0.4);
   --box-shadow2:0 0.5rem 1.5rem #0d2e2e23;
@@ -221,7 +221,9 @@ body {
   --orange-box-shadow:0 1px 0.9rem #fd9103c5;
   --red-box-shadow:0 0.1rem 1rem #e9290779;
   --aqua-box-shadow:0 0 6px #00c7c7;
-  --blue-box-shadow:0 0 6px #3356ca;
+  --blue-box-shadow:0 0 6px #3356ca48;
+  --blue2-box-shadow:0 0 6px #3356ca65;
+  --blue3-box-shadow:0 0 6px #3356ca;
   --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
   --text-shadow:0 0 5px rgb(5, 5, 5);
   --text-shadow2:0 0 4px #fff;
@@ -241,10 +243,12 @@ body {
   --shin-blue2:#dce1eb;
   --gray:#343535;
   --gray1:#cbe8ff;
+  --gray4:#1d1d1d;
   --gray8:#f0eded;
   --primary-color10:rgb(230, 130, 0);
   --gray-yellow6:rgb(255, 196, 0);
   --box-shadow6:0 0 3px rgb(0, 0, 0);
+  --blue-box-shadow:0 0 3px #0240696c;
 }
 
 ::-webkit-scrollbar {
@@ -677,7 +681,7 @@ button:focus {
   outline: none;
   border-radius: 0.2rem;
   color: var(--violet);
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--blue-box-shadow);
   background: linear-gradient(to right, var(--light-violet6), rgb(64, 4, 121) 80%);
 }
 
@@ -716,7 +720,7 @@ button:focus {
   outline: none;
   border: 1px solid var(--yellow10);
   background: var(--yellow10);
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--blue-box-shadow);
 }
 
 .btn5:hover {
@@ -779,13 +783,13 @@ button:focus {
   margin: 2rem 0 1rem;
   font-size: 2.3rem;
   font-weight: bold;
-  color: var(--light-aqua2);
-  background-color: var(--light-aqua7);
+  color: var(--aqua2);
+  background-color: var(--aqua11);
 }
 
 .tab-btn:hover {
-  color: var(--light-aqua);
-  background-color: var(--light-aqua6);
+  color: var(--aqua);
+  background-color: var(--aqua10);
 }
 
 .tab-btn2 {
@@ -1063,8 +1067,8 @@ section {
   padding: 0.8rem 0;
   font-size: 2.3rem;
   font-weight: bold;
-  color: var(--light-aqua2);
-  background-color: var(--light-aqua7);
+  color: var(--aqua2);
+  background-color: var(--aqua7);
 }
 
 .block-title2 {
@@ -1096,7 +1100,7 @@ section {
   font-size: 1.2rem;
   border: none;
   border-radius: 0.3rem !important;
-  box-shadow: var(--box-shadow4);
+  box-shadow: var(--box-shadow6);
   color: var(--gray10);
   background: radial-gradient(var(--gray), var(--gray4));
 }
@@ -1135,7 +1139,7 @@ input:focus,
 textarea:focus {
   outline: none;
   border: none;
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--blue-box-shadow);
 }
 
 textarea {
@@ -1145,7 +1149,7 @@ textarea {
   padding: 0.4rem 1rem;
   color: var(--gray10);
   font-size: 1.2rem;
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--blue-box-shadow);
 }
 
 textarea::-webkit-scrollbar {
@@ -1256,6 +1260,7 @@ input[type=file] {
 .form-horizontal2 .col-right .input-box label {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--gray11);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -2928,7 +2933,7 @@ header .small-menu .small-menu-link {
   gap: 0.5rem;
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
-  color: var(--primary-color15);
+  color: var(--shin-blue4);
 }
 .profile-page .profile-container .profile-data .col-right .tabs-area {
   width: 100%;
@@ -2940,6 +2945,7 @@ header .small-menu .small-menu-link {
   cursor: pointer;
   font-weight: normal;
   font-size: 1.3rem;
+  color: var(--gray11);
   position: relative;
 }
 .profile-page .profile-container .profile-data .col-right .tabs-area li.button-active {
@@ -2988,7 +2994,7 @@ header .small-menu .small-menu-link {
 }
 .edit-certification-form h2 hr {
   flex: 1 1 20rem;
-  color: var(--light-aqua4);
+  color: var(--aqua4);
   margin-left: 0.5rem;
 }
 .edit-certification-form .input-box .input-control {
@@ -3414,7 +3420,7 @@ header .small-menu .small-menu-link {
   border: none;
   border-radius: 0.3rem;
   background-color: var(--white);
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--blue-box-shadow);
   /* First Card */
   /* Second Card */
   /* Third Card */
@@ -3618,7 +3624,7 @@ header .small-menu .small-menu-link {
 }
 .edit-member-page .edit-certification-form h2 hr {
   flex: 1 1 20rem;
-  color: var(--light-aqua4);
+  color: var(--aqua4);
   margin-left: 0.4rem;
 }
 .edit-member-page .edit-certification-form .control-label {
