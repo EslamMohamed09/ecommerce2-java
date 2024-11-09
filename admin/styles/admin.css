@@ -101,11 +101,13 @@ body {
   --green16:#053a15;
   --green17:#063113;
   --green18:#05270f;
-  --olive1:#027a7a;
-  --olive2:#026b6b;
-  --olive3:#015050;
-  --olive4:#004242;
-  --olive5:#013535;
+  --olive:#05afaf;
+  --olive2:#039292;
+  --olive2:#027a7a;
+  --olive3:#026b6b;
+  --olive4:#015050;
+  --olive5:#004242;
+  --olive6:#013535;
   --transparent-olive:#0aa0a01e;
   --milky1:rgb(208, 241, 253);
   --milky2:rgb(183, 233, 253);
@@ -2960,8 +2962,14 @@ header .small-menu .small-menu-link {
   left: 0;
   background-color: var(--shin-blue6);
 }
-.profile-page .profile-container .tab-btn {
+.profile-page .profile-container #edit-profile-collapsible {
   margin: 2rem auto 1rem;
+}
+.profile-page .profile-container #edit-profile-collapsible.active {
+  background: radial-gradient(var(--olive), var(--olive3));
+}
+.profile-page .profile-container .edit-profile-data {
+  display: none;
 }
 
 @media (max-width: 400px) {

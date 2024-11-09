@@ -107,11 +107,13 @@ body {overflow-x:hidden;
        --green17:#063113;
        --green18:#05270f;
 
-       --olive1:#027a7a;
-       --olive2:#026b6b;
-       --olive3:#015050;
-       --olive4:#004242;
-       --olive5:#013535;
+       --olive:#05afaf;
+       --olive2:#039292;
+       --olive2:#027a7a;
+       --olive3:#026b6b;
+       --olive4:#015050;
+       --olive5:#004242;
+       --olive6:#013535;
 
        --transparent-olive:#0aa0a01e;
 
@@ -2495,7 +2497,11 @@ header {width:100%;
                      }
               }
 
-              .tab-btn {margin:2rem auto 1rem;}
+              #edit-profile-collapsible {margin:2rem auto 1rem;}
+
+              #edit-profile-collapsible.active {background:radial-gradient(var(--olive), var(--olive3));}
+
+              .edit-profile-data {display:none;}
        }
 }
 

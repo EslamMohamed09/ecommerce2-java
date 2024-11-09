@@ -389,22 +389,6 @@ function eyeFunction(eyeIcon) {
 ######## PROFILE PAGE #######
 =============================
 */
-/**** Collapsible in Profile Page ****/
-var collBtnProfileUser = document.getElementsById("edit-profile-collapsible");
-var i;
-
-for (i=0; i<collBtnProfileUser.length; i++) {
-    collBtnProfileUser[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var standardPage = this.parentNode.querySelector(".collapsible-page");
-    if (standardPage.style.display === "block") {
-        standardPage.style.display = "none";
-    } else {
-        standardPage.style.display = "block";
-    }
-  });
-}
-
 /*
  #### Profile-Data ####
 */
@@ -426,6 +410,19 @@ function filterWithTabs(tabButton, cardItem) {
 // profile-info
 filterWithTabs($('.profile-page .profile-data .tabs-area li'), $('.profile-page .profile-data .info-cards .info-card'));
 filterWithTabs($('.home-page .right-aside .all-users-block .buttons li'), $('.home-page .right-aside .all-users-block .items'));
+
+/**** Collapsible in Profile Page ****/
+const collapsibleProfileBtn = document.getElementById("edit-profile-collapsible");
+
+collapsibleProfileBtn.addEventListener("click", function() {
+  this.classList.toggle("active");
+  let editProfileData = document.querySelector(".profile-page .edit-profile-data");
+  if (editProfileData.style.display === "block") {
+      editProfileData.style.display = "none";
+  } else {
+      editProfileData.style.display = "block";
+  }
+});
 
 /*
  #### Add Tags to Textarea ####
