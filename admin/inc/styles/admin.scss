@@ -43,6 +43,8 @@ body {overflow-x:hidden;
        --yellow9:#fde077;
        --yellow10:#fdd852;
        --yellow11:#ffcc14;
+       --yellow12:#f7c205;
+       --yellow13:#dfb006;
 
        --transparent-yellow:#f7db6b4f;
        --transparent-yellow2:#b6b61d27;
@@ -95,17 +97,22 @@ body {overflow-x:hidden;
        --green5:#aef0c2cb;
        --green6:#658f72;
        --green7:#7ef8a3;
-       --green8:#27fc67;
-       --green9:#07fc50;
-       --green10:#03ce40;
-       --green11:#00b135;
-       --green12:#03912e;
-       --green13:#017524;
-       --green14:#045a1e;
-       --green15:#044919;
-       --green16:#053a15;
-       --green17:#063113;
-       --green18:#05270f;
+       --green8:#60d480;
+       --green9:#27fc67;
+       --green10:#3ef326;
+       --green11:#07fc50;
+       --green12:#03ce40;
+       --green13:#00b135;
+       --green14:#03912e;
+       --green15:#00A97F;
+       --green16:#209978;
+       --green17:#17795E;       
+       --green18:#017524;
+       --green19:#045a1e;
+       --green20:#044919;
+       --green21:#053a15;
+       --green22:#063113;
+       --green23:#05270f;
 
        --olive:#05afaf;
        --olive2:#039292;
@@ -130,8 +137,11 @@ body {overflow-x:hidden;
        --aqua7:#a0cccc;
        --aqua8:#8bcaca;
        --aqua9:#40f7f7;
-       --aqua10:#00c7c7;
-       --aqua11:#03a7a7;
+       --aqua10:#28f0f0;
+       --aqua11:#0ce9e9;
+       --aqua12:#09caca;
+       --aqua13:#00c7c7;
+       --aqua16:#03a7a7;
 
        --shin-blue:#60c8fc;
        --shin-blue1:#00b7ff;
@@ -149,16 +159,18 @@ body {overflow-x:hidden;
        --blue1:#e8ebf0;
        --blue2:#c9d3df;
        --blue3:#acbfd4;
-       --blue4:#6a7a8d; 
+       --blue4:#6a7a8d;
        --blue5:#424b64;
        --blue6:#2b3a5f;
        --blue7:#0734ca;
        --blue8:#052aa1;
        --blue9:#162753;
 
-       --dark-blue:#343a40;
-       --dark-blue2:#2a2e35;
-       --dark-blue3:#202733;
+       --navy-blue:#343a40;
+       --navy-blue2:#2a2e35;
+       --navy-blue3:#202733;
+       --navyblue4:#32303e;
+       --navyblue5:#252532;
 
        --transparent-blue:#176ec021;
 
@@ -232,7 +244,7 @@ body {overflow-x:hidden;
        --color-dark-varient:#677483;
 
        --font-mont:'Mont', cursive;
-       --font-Rale: 'Rale', cursive;
+       --font-Rale:'Rale', cursive;
 
        --box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.7);
        --box-shadow1:0 0.1rem 1rem rgba(2, 2, 2, 0.4);
@@ -249,7 +261,10 @@ body {overflow-x:hidden;
        --aqua-box-shadow:0 0 6px #00c7c7;
        --blue-box-shadow:0 0 6px #3356ca48;
        --blue2-box-shadow:0 0 6px #3356ca65;
-       --blue3-box-shadow:0 0 6px #3356ca;
+       --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
+       --blue4-box-shadow:0 16px 12px rgba(39, 94, 254, 0.28);
+       --blue5-box-shadow:0 0 6px #3356ca;
+       --green-box-shadow:0 0 6px #09995d;
        --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
 
        --text-shadow:0 0 5px rgb(5, 5, 5);
@@ -281,7 +296,7 @@ body {overflow-x:hidden;
                            border-radius:10px;}
 
 *::selection {background:var(--gray10);
-              color:#fff;}
+              color:var(--white);}
 
 ::placeholder {color:var(--gray5);}
 ::-moz-placeholder {color:var(--gray5);}
@@ -1334,7 +1349,7 @@ table {width:100%;
 
 /*******************
   # Header
-********************/
+*******************/
 header {width:100%;
         position:fixed;
         top:0;

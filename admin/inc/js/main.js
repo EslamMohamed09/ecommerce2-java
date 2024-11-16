@@ -52,7 +52,9 @@ document.addEventListener('headerLoaded', () => {
   }
 });
 
-loadHtml('#header', headerContent, "header");
+if(window.location.pathname.split('/').pop().split('.')[0] !== "login"){
+   loadHtml('#header', headerContent, "header");
+}
 
 $('body').css('paddingTop', $('.header').innerHeight() - 1);
 
@@ -367,7 +369,9 @@ document.addEventListener('asideLoaded', () => {
 
 });
 
-loadHtml('#aside', asideContent, "aside");
+if(window.location.pathname.split('/').pop().split('.')[0] !== "login"){
+   loadHtml('#aside', asideContent, "aside");
+}
 
 function eyeFunction(eyeIcon) {
     const passInput = eyeIcon.previousElementSibling;
@@ -414,6 +418,7 @@ filterWithTabs($('.home-page .right-aside .all-users-block .buttons li'), $('.ho
 /**** Collapsible in Profile Page ****/
 const collapsibleProfileBtn = document.getElementById("edit-profile-collapsible");
 
+if(collapsibleProfileBtn){
 collapsibleProfileBtn.addEventListener("click", function() {
   this.classList.toggle("active");
   let editProfileData = document.querySelector(".profile-page .edit-profile-data");
@@ -423,6 +428,7 @@ collapsibleProfileBtn.addEventListener("click", function() {
       editProfileData.style.display = "block";
   }
 });
+}
 
 /*
  #### Add Tags to Textarea ####
