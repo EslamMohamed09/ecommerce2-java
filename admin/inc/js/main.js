@@ -64,22 +64,24 @@ $('body').css('paddingTop', $('.header').innerHeight() - 1);
 ======================================
 */
 // Show Register & Login Form
-$(document).ready(function(){
-  const registerForm = $(".register-form");
-  const loginForm = $(".login-form");
 
-  registerForm.hide();
+const registerForm = document.querySelector("#login-section .register-form");
+const loginForm = document.querySelector("#login-section .login-form");
+const registerFormBtn = document.querySelector('#login-section #register-form-btn');
+const loginFormBtn = document.querySelector('#login-section #login-form-btn');
 
-  $("#register-link").click(function(){
-    registerForm.show();
-    loginForm.hide();
-  });
+registerForm.style.display = "none";
 
-  $("#login-link").click(function(){
-    loginForm.show();
-    registerForm.hide();
-  });
+registerFormBtn.addEventListener('click', function(){
+  registerForm.style.display = "block";
+  loginForm.style.display = "none";
 });
+
+loginFormBtn.addEventListener('click', function(){
+  registerForm.style.display = "none";
+  loginForm.style.display = "block";
+});
+ 
 
 /** Register Steps **/
 document.addEventListener("DOMContentLoaded", function () {
