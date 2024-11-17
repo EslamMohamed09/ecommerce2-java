@@ -63,6 +63,25 @@ $('body').css('paddingTop', $('.header').innerHeight() - 1);
 ######## LOGIN & REGISTER PAGE #######
 ======================================
 */
+/* #### Add Tags to Textarea #### */
+function addTag(event, inputElement, textareaElement){
+  if(event && event.keycode !== 13){return}
+
+  const input = document.querySelector(inputElement);
+  const textarea = document.querySelector(textareaElement);
+
+  if(input.value.trim() !== ''){
+     const P = document.createElement('div');
+     P.className = 'tag';
+     P.textContent = input.value.trim();
+
+     textarea.value += `[${input.value.trim()}]`;
+     textarea.appendChild(P);
+     input.value = '';
+  }
+
+}
+
 // Show Register & Login Form
 if(document.querySelector("#login-section")){
 
@@ -225,27 +244,26 @@ if(document.querySelector("#login-section")){
           <div class="skills-blocks d-flex-r-st-st">
 
             <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
-              <label>Computer Skills</label>
-              <textarea name="skills[computerskills]" id="computerSkillsTextarea"></textarea>
-              <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'computerSkillsInput', 'computerSkillsTextarea'); return false;}" class="input-control" id="computerSkillsInput">
-              <button type="button" onclick="addTag(null, 'computerSkillsInput', 'computerSkillsTextarea')" class="btn2">add skill</button>
+              <label class="control-label">Computer Skills</label>
+              <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
+              <input type="text" value="" maxlength="28" class="computerSkillsInput input-control" onkeydown="if(event.keyCode === 13) {addTag(null, '#skillsContainer .computerSkillsInput', '#skillsContainer #computerSkillsTextarea'); return false;}">
+              <button type="button" class="btn2" onclick="addTag(null, '#skillsContainer .computerSkillsInput', '#skillsContainer #computerSkillsTextarea')">add skill</button>
             </div>
 
             <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
-              <label>Personal Skills</label>
-              <textarea name="skills[personalskills]" id="personalSkillsTextarea"></textarea>
-              <input type="text" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, 'personalSkillsInput', 'personalSkillsTextarea'); return false;}" class="input-control" id="personalSkillsInput">
-              <button type="button" onclick="addTag(null, 'personalSkillsInput', 'personalSkillsTextarea')" class="btn2">add skill</button>
+              <label class="control-label">Personal Skills</label>
+              <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
+              <input type="text" value="" maxlength="28" class="personalSkillsInput input-control" onkeydown="if(event.keyCode === 13) {addTag(null, '#skillsContainer .personalSkillsInput', '#skillsContainer #personalSkillsTextarea'); return false;}">
+              <button type="button" class="btn2" onclick="addTag(null, '#skillsContainer .personalSkillsInput', '#skillsContainer #personalSkillsTextarea')">add skill</button>
             </div>
 
           </div>
       `;
-
       skillsContainer.appendChild(skillsform);
       skillsCounter++;
 
-      if(skillsCounter > 0) {addSkillsBtn.style.display = `none`;
-                             deleteSkillsBtn.style.display = `block`;
+      if(skillsCounter > 0) {deleteSkillsBtn.style.display = `block`;
+                             addSkillsBtn.style.display = `none`;
                              submitRegister.value = `register`;}
 
       if(skillsCounter === 0) {addSkillsBtn.style.display = `block`;
@@ -286,18 +304,18 @@ if(document.querySelector("#login-section")){
         var errorMessage = "Please fix the following errors:\n" + errors.join("\n");
         alert(errorMessage);
   
-    //    var errorContainer = document.getElementById("error-container");
-    //        errorContainer.innerHTML = errorMessage;
-    //        errorContainer.classList.add("error-alert");
-  
-    //    for (var i=0; i<errors.length; i++) {
-    //         // errorContainer.children[i].classList.add("error-object");
-  
-    //         var errorElement = document.createElement("div");
-    //         errorElement.classList.add("error-object");
-    //         errorElement.innerHTML = errors[i];
-    //         errorContainer.appendChild(errorElement);
-    //    }
+        // var errorContainer = document.getElementById("error-container");
+        //     errorContainer.innerHTML = errorMessage;
+        //     errorContainer.classList.add("error-alert");
+   
+        // for (var i=0; i<errors.length; i++) {
+        //      // errorContainer.children[i].classList.add("error-object");
+   
+        //      var errorElement = document.createElement("div");
+        //      errorElement.classList.add("error-object");
+        //      errorElement.innerHTML = errors[i];
+        //      errorContainer.appendChild(errorElement);
+        // }
   
         return false;
     }
@@ -423,26 +441,6 @@ collapsibleProfileBtn.addEventListener("click", function() {
 });
 }
 
-/*
- #### Add Tags to Textarea ####
-*/
-function addTag(event, inputElement, textareaElement){
-  if(event && event.keycode !== 13){return}
-
-  const input = document.querySelector(inputElement);
-  const textarea = document.querySelector(textareaElement);
-
-  if(input.value.trim() !== ''){
-     const P = document.createElement('div');
-     P.className = 'tag';
-     P.textContent = input.value.trim();
-
-     textarea.value += `[${input.value.trim()}]`;
-     textarea.appendChild(P);
-     input.value = '';
-  }
-
-}
 
 /*
  ===============================

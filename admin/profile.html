@@ -411,14 +411,14 @@
           <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
             <label class="control-label">Computer Skills</label>
             <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
-            <input type="text" value="" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, '.add-skills-form .computerSkillsInput', '.add-skills-form #computerSkillsTextarea'); return false;}" class="input-control computerSkillsInput">
-            <button type="button" onclick="addTag(null, '.add-skills-form .computerSkillsInput', '.add-skills-form #computerSkillsTextarea')" class="btn2">add skill</button>
+            <input type="text" value="" maxlength="28" class="computerSkillsInput input-control" onkeydown="if(event.keyCode === 13) {addTag(null, '.add-skills-form .computerSkillsInput', '.add-skills-form #computerSkillsTextarea'); return false;}">
+            <button type="button" class="btn2" onclick="addTag(null, '.add-skills-form .computerSkillsInput', '.add-skills-form #computerSkillsTextarea')">add skill</button>
           </div>
 
           <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
             <label class="control-label">Personal Skills</label>
             <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
-            <input type="text" value="" maxlength="28" onkeydown="if(event.keyCode === 13) {addTag(null, '.add-skills-form .personalSkillsInput', '.add-skills-form #personalSkillsTextarea'); return false;}" class="input-control personalSkillsInput">
+            <input type="text" value="" maxlength="28" class="personalSkillsInput input-control" onkeydown="if(event.keyCode === 13) {addTag(null, '.add-skills-form .personalSkillsInput', '.add-skills-form #personalSkillsTextarea'); return false;}">
             <button type="button" onclick="addTag(null, '.add-skills-form .personalSkillsInput', '.add-skills-form #personalSkillsTextarea')" class="btn2">add skill</button>
           </div>
 
