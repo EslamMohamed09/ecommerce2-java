@@ -417,7 +417,7 @@ body {overflow-x:hidden;
 
 ::-webkit-scrollbar {width:8px;}
 
-::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--shin-blue5) 0%, var(--shin-blue) 100%);
+::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--blue5) 0%, var(--blue) 100%);
                            border-radius:10px;}
 
 *::selection {background:var(--gray10);
@@ -474,7 +474,7 @@ select {border:none;
                  font-size:1.3rem;
                  color:var(--gray10);
                  box-shadow:var(--box-shadow3);
-                 background:var(--shin-blue);}
+                 background:var(--blue);}
 }
 
 .wfull {width:100%;}
@@ -562,7 +562,7 @@ button:focus {box-shadow:var(--box-shadow2);}
        border:none;
        outline:none;
        color:var(--white2);
-       background-color:var(--shin-blue5);
+       background-color:var(--blue5);
        box-shadow:var(--box-shadow5);
        transition:all 0.3s linear;
 
@@ -754,7 +754,7 @@ button:focus {box-shadow:var(--box-shadow2);}
 .wrong-message span {color:var(--black);
                      font-size:1.4rem;
                      text-transform:uppercase;
-                     color:var(--shin-blue5);}
+                     color:var(--blue5);}
 
 .error-msg {font-size:1.2rem;
             font-weight:bold;
@@ -936,7 +936,7 @@ section {margin:0 auto;
                  border-radius:0.3rem !important;
                  box-shadow:var(--box-shadow2);
                  color:var(--gray10);
-                 background:radial-gradient(var(--shin-blue), var(--gray10));}
+                 background:radial-gradient(var(--blue), var(--gray10));}
 
 .control-label {margin:auto 0;
                 font-size:1.2rem;
@@ -1196,9 +1196,9 @@ input[type="file"] {cursor:pointer;}
               #submit-search {width:3rem;
                               padding:0.3rem 0.6rem;
                               border-radius:0 0.2rem 0.2rem 0;
-                              background-color:var(--shin-blue5);
+                              background-color:var(--blue5);
 
-                     #submit-searchi {color:var(--shin-blue2);}
+                     #submit-searchi {color:var(--blue2);}
               }
        }
 
@@ -1396,7 +1396,7 @@ header {width:100%;
 
                      h2 {margin:0;
                          font-weight:800;
-                         color:var(--shin-blue6);
+                         color:var(--blue6);
                          text-transform:uppercase;
                          font-size:0.8rem;
                          letter-spacing:0.8px;}
@@ -1433,7 +1433,7 @@ header {width:100%;
                             color:var(--white);
                             cursor:pointer;}
 
-                     .active {background-color:var(--shin-blue6);}
+                     .active {background-color:var(--blue6);}
               }
 
               .content {display:flex;
@@ -1567,7 +1567,7 @@ header {width:100%;
                      p {text-align:center;
                         margin-bottom:1.5rem;
 
-                            span {color:var(--shin-blue2);
+                            span {color:var(--blue2);
                                   font-weight:bold;
                                   cursor:pointer;}
                      }
@@ -1591,13 +1591,13 @@ header {width:100%;
                                                  gap:1.5rem;
 
                                           .input-box {width:90%;
-                                                 gap:0.6rem;
-                                                 border-radius:1.5rem;
-                                                 padding-left:0.9rem;
-                                                 padding-right:0;
-                                                 background:var(--white);
-                                                 background-color:var(--white);
-                                                 box-shadow:var(--box-shadow2);
+                                                      gap:0.6rem;
+                                                      border-radius:1.5rem;
+                                                      padding-left:0.9rem;
+                                                      padding-right:0;
+                                                      background:var(--white);
+                                                      background-color:var(--white);
+                                                      box-shadow:var(--box-shadow2);
 
                                                  input {flex:1 1 20rem;
                                                         margin:0;
@@ -1612,18 +1612,16 @@ header {width:100%;
                                                         background:transparent;}
                                           }
                                    }
-                                   .btn3 {width:80%;
+                                   .btn3 {width:89%;
                                           margin:2rem auto;}
-                            }  
-
-                            
+                            }
 
                             .col-right {min-height:35vh;
                                         gap:1rem;
                                         padding:2rem !important;
                                         border-top-right-radius:0.5rem;
                                         border-bottom-right-radius:0.5rem;
-                                        background:radial-gradient(var(--shin-blue), var(--shin-blue7));
+                                        background:radial-gradient(var(--blue), var(--blue7));
 
                                    h2,
                                    p {color:var(--white);}
@@ -1653,7 +1651,7 @@ header {width:100%;
                             .line {width:90%;
                                    margin:auto;
                                    height:1px;
-                                   background-color:var(--shin-blue);}
+                                   background-color:var(--blue);}
 
                             ul {position:absolute;
                                 top:-2.5rem;
@@ -1667,9 +1665,9 @@ header {width:100%;
                                        line-height:5rem;
                                        text-align:center;
                                        color:var(--white2);
-                                       background:radial-gradient(var(--shin-blue), var(--shin-blue7));}
+                                       background:radial-gradient(var(--blue), var(--blue7));}
 
-                                   li.active {background:radial-gradient(var(--aqua2), var(--shin-blue3))}
+                                   li.active {background:radial-gradient(var(--aqua2), var(--blue3))}
                             }
                      }
 
@@ -1818,11 +1816,11 @@ header {width:100%;
                                               font-weight:bold;
                                               margin:0;}
 
-                                          &:hover {border-left:5px solid var(--shin-blue6);}
+                                          &:hover {border-left:5px solid var(--blue6);}
 
                                           &.active {color:var(--white2);
-                                                    background-color:var(--shin-blue5);
-                                                    border-left:5px solid var(--shin-blue6);}
+                                                    background-color:var(--blue5);
+                                                    border-left:5px solid var(--blue6);}
 
                                           &.active h3 {color:var(--white2);}
 
@@ -1880,15 +1878,15 @@ header {width:100%;
                                        margin:0;
                                        background:transparent;
 
-                                   > div:first-child {border-left:0.3rem solid var(--shin-blue5);}
+                                   > div:first-child {border-left:0.3rem solid var(--blue5);}
                                    > div:nth-child(2) {border-left:0.3rem solid var(--red7);}
                                    > div:nth-child(3) {border-left:0.3rem solid var(--green12);}
 
-                                   > div:first-child #icon {background-color:var(--shin-blue5);}
+                                   > div:first-child #icon {background-color:var(--blue5);}
                                    > div:nth-child(2) #icon {background-color:var(--red7);}
                                    > div:nth-child(3) #icon {background-color:var(--green12)}
 
-                                   > div:first-child svg circle {stroke:var(--shin-blue5);}
+                                   > div:first-child svg circle {stroke:var(--blue5);}
                                    > div:nth-child(2) svg circle {stroke:var(--red7);}
                                    > div:nth-child(3) svg circle {stroke:var(--green12)}
                                    
@@ -2158,7 +2156,7 @@ header {width:100%;
                                                  height:2.8rem;
                                                  border-radius:50%;}
 
-                                          &.online #icon {background-color: var(--shin-blue6);}
+                                          &.online #icon {background-color: var(--blue6);}
                                           &.offline #icon {background-color: var(--red7)}
                                           &.customer #icon {background-color: var(--green12)}
 
@@ -2176,7 +2174,7 @@ header {width:100%;
                                           h5 {font-size:1rem;
                                               font-weight:bold;}
 
-                                          &.online h5 {color:var(--shin-blue6);}
+                                          &.online h5 {color:var(--blue6);}
                                           &.offline h5 {color:var(--red7);}
                                           &.customer h5 {color:var(--green12);}
 
@@ -2317,7 +2315,7 @@ header {width:100%;
 
                                           .blocks .block h5 {margin-bottom:0.5rem;
                                                              font-size:1.2rem;
-                                                             color:var(--shin-blue6);}
+                                                             color:var(--blue6);}
 
                                           /* open/close */
                                           .heading {
@@ -2366,7 +2364,7 @@ header {width:100%;
                                                                           display:flex;
                                                                           justify-content:center;
                                                                           align-items:center;
-                                                                          color:var(--shin-blue4);
+                                                                          color:var(--blue4);
                                                                           background-color:var(--white);
                                                                           transition:all 0.3s linear;
                                                                           position:absolute;
@@ -2376,7 +2374,7 @@ header {width:100%;
                                                         
                                                         }
 
-                                                        input[type="checkbox"]:checked + .toggle-switch {background-color:var(--shin-blue4);}
+                                                        input[type="checkbox"]:checked + .toggle-switch {background-color:var(--blue4);}
 
                                                         input[type="checkbox"]:checked + .toggle-switch .fa-xmark {left:3rem;
                                                                                                                    opacity:0;
@@ -2446,7 +2444,7 @@ header {width:100%;
                                                 flex-direction:column;
                                                 gap:1rem;
                                                 padding:0 1rem 1rem 1rem !important;
-                                                border-left:0.2rem solid var(--shin-blue7);
+                                                border-left:0.2rem solid var(--blue7);
                                                 position:relative;
 
                                                  .fa-graduation-cap {width:2rem;
@@ -2458,7 +2456,7 @@ header {width:100%;
                                                                      top:-0.2rem;
                                                                      left:-1.1rem;
                                                                      color:var(--white);
-                                                                     background:radial-gradient(var(--shin-blue2), var(--shin-blue7));}
+                                                                     background:radial-gradient(var(--blue2), var(--blue7));}
 
                                                  span {width:9rem;
                                                        border-radius:5rem;
@@ -2470,7 +2468,7 @@ header {width:100%;
                                                        box-shadow:var(--box-shadow2);
                                                        text-shadow:var(--box-shadow2);
                                                        color:var(--white);
-                                                       background:radial-gradient(var(--shin-blue), var(--shin-blue7));}  
+                                                       background:radial-gradient(var(--blue), var(--blue7));}  
 
                                                  h4 {font-weight:bold;
                                                      margin-top:0.5rem;}
@@ -2495,7 +2493,7 @@ header {width:100%;
                                                                   width:80%;
                                                                   gap:0.5rem;}
                                    
-                                                        .fa-check {color:var(--shin-blue4);}
+                                                        .fa-check {color:var(--blue4);}
                                                  }
                                           }
                                    }
@@ -2513,7 +2511,7 @@ header {width:100%;
                                        color:var(--gray11);
                                        position:relative;
                      
-                                          &.button-active {color:var(--shin-blue6);}
+                                          &.button-active {color:var(--blue6);}
                      
                                           &.button-active::before {content:"";
                                                                    width:100%;
@@ -2521,7 +2519,7 @@ header {width:100%;
                                                                    position:absolute;
                                                                    top:3rem;
                                                                    left:0;
-                                                                   background-color:var(--shin-blue6);}
+                                                                   background-color:var(--blue6);}
                                    }
                             }
                      }
@@ -2549,7 +2547,7 @@ header {width:100%;
        > div {margin:1.5rem 0;}
 
        h2 {text-align:left;
-           color:var(--shin-blue7);
+           color:var(--blue7);
            text-transform:uppercase;
 
               hr {flex:1 1 20rem;
@@ -3105,14 +3103,14 @@ header {width:100%;
 
        .edit-certification-form {
               h2 {text-align:left;
-                  color:var(--shin-blue7);
+                  color:var(--blue7);
 
                  hr {flex:1 1 20rem;
                      color:var(--aqua4);
                      margin-left:0.4rem;}
               }
 
-              .control-label {color:var(--shin-blue4);}
+              .control-label {color:var(--blue4);}
 
               .submit-input .col-md-2 .btn {height:100%;
                                             padding:0.2rem !important;

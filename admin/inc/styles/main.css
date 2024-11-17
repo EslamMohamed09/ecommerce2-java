@@ -447,7 +447,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(125deg, var(--shin-blue5) 0%, var(--shin-blue) 100%);
+  background-image: linear-gradient(125deg, var(--blue5) 0%, var(--blue) 100%);
   border-radius: 10px;
 }
 
@@ -551,7 +551,7 @@ select option {
   font-size: 1.3rem;
   color: var(--gray10);
   box-shadow: var(--box-shadow3);
-  background: var(--shin-blue);
+  background: var(--blue);
 }
 
 .wfull {
@@ -660,7 +660,7 @@ button:focus {
   border: none;
   outline: none;
   color: var(--white2);
-  background-color: var(--shin-blue5);
+  background-color: var(--blue5);
   box-shadow: var(--box-shadow5);
   transition: all 0.3s linear;
 }
@@ -898,7 +898,7 @@ button:focus {
   color: var(--black);
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: var(--shin-blue5);
+  color: var(--blue5);
 }
 
 .error-msg {
@@ -1119,7 +1119,7 @@ section {
   border-radius: 0.3rem !important;
   box-shadow: var(--box-shadow2);
   color: var(--gray10);
-  background: radial-gradient(var(--shin-blue), var(--gray10));
+  background: radial-gradient(var(--blue), var(--gray10));
 }
 
 .control-label {
@@ -1467,10 +1467,10 @@ input[type=file] {
   width: 3rem;
   padding: 0.3rem 0.6rem;
   border-radius: 0 0.2rem 0.2rem 0;
-  background-color: var(--shin-blue5);
+  background-color: var(--blue5);
 }
 .table-details .form-search #submit-search #submit-searchi {
-  color: var(--shin-blue2);
+  color: var(--blue2);
 }
 .table-details .counting {
   font-weight: bold;
@@ -1709,7 +1709,7 @@ header .left-header .logo img {
 header .left-header .logo h2 {
   margin: 0;
   font-weight: 800;
-  color: var(--shin-blue6);
+  color: var(--blue6);
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.8px;
@@ -1752,7 +1752,7 @@ header .right-header .theme-toggler svg {
   cursor: pointer;
 }
 header .right-header .theme-toggler .active {
-  background-color: var(--shin-blue6);
+  background-color: var(--blue6);
 }
 header .right-header .content {
   display: flex;
@@ -1915,7 +1915,7 @@ header .small-menu .small-menu-link {
   margin-bottom: 1.5rem;
 }
 #login-section .forms form p span {
-  color: var(--shin-blue2);
+  color: var(--blue2);
   font-weight: bold;
   cursor: pointer;
 }
@@ -1963,7 +1963,7 @@ header .small-menu .small-menu-link {
   background: transparent;
 }
 #login-section .forms .login-form .login-form-container .col-left .btn3 {
-  width: 80%;
+  width: 89%;
   margin: 2rem auto;
 }
 #login-section .forms .login-form .login-form-container .col-right {
@@ -1972,7 +1972,7 @@ header .small-menu .small-menu-link {
   padding: 2rem !important;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background: radial-gradient(var(--shin-blue), var(--shin-blue7));
+  background: radial-gradient(var(--blue), var(--blue7));
 }
 #login-section .forms .login-form .login-form-container .col-right h2,
 #login-section .forms .login-form .login-form-container .col-right p {
@@ -2004,7 +2004,7 @@ header .small-menu .small-menu-link {
   width: 90%;
   margin: auto;
   height: 1px;
-  background-color: var(--shin-blue);
+  background-color: var(--blue);
 }
 #login-section .forms .register-form .steps-block ul {
   position: absolute;
@@ -2020,10 +2020,10 @@ header .small-menu .small-menu-link {
   line-height: 5rem;
   text-align: center;
   color: var(--white2);
-  background: radial-gradient(var(--shin-blue), var(--shin-blue7));
+  background: radial-gradient(var(--blue), var(--blue7));
 }
 #login-section .forms .register-form .steps-block ul li.active {
-  background: radial-gradient(var(--aqua2), var(--shin-blue3));
+  background: radial-gradient(var(--aqua2), var(--blue3));
 }
 #login-section .forms .register-form .registerphase {
   width: 70%;
@@ -2190,12 +2190,12 @@ header .small-menu .small-menu-link {
   margin: 0;
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link:hover {
-  border-left: 5px solid var(--shin-blue6);
+  border-left: 5px solid var(--blue6);
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link.active {
   color: var(--white2);
-  background-color: var(--shin-blue5);
-  border-left: 5px solid var(--shin-blue6);
+  background-color: var(--blue5);
+  border-left: 5px solid var(--blue6);
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link.active h3 {
   color: var(--white2);
@@ -2262,7 +2262,7 @@ header .small-menu .small-menu-link {
   background: transparent;
 }
 .home-page .home-container .section-holder .middle .insights > div:first-child {
-  border-left: 0.3rem solid var(--shin-blue5);
+  border-left: 0.3rem solid var(--blue5);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(2) {
   border-left: 0.3rem solid var(--red7);
@@ -2271,7 +2271,7 @@ header .small-menu .small-menu-link {
   border-left: 0.3rem solid var(--green12);
 }
 .home-page .home-container .section-holder .middle .insights > div:first-child #icon {
-  background-color: var(--shin-blue5);
+  background-color: var(--blue5);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(2) #icon {
   background-color: var(--red7);
@@ -2280,7 +2280,7 @@ header .small-menu .small-menu-link {
   background-color: var(--green12);
 }
 .home-page .home-container .section-holder .middle .insights > div:first-child svg circle {
-  stroke: var(--shin-blue5);
+  stroke: var(--blue5);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(2) svg circle {
   stroke: var(--red7);
@@ -2576,7 +2576,7 @@ header .small-menu .small-menu-link {
   border-radius: 50%;
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.online #icon {
-  background-color: var(--shin-blue6);
+  background-color: var(--blue6);
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.offline #icon {
   background-color: var(--red7);
@@ -2602,7 +2602,7 @@ header .small-menu .small-menu-link {
   font-weight: bold;
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.online h5 {
-  color: var(--shin-blue6);
+  color: var(--blue6);
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item.offline h5 {
   color: var(--red7);
@@ -2756,7 +2756,7 @@ header .small-menu .small-menu-link {
 .profile-page .profile-container .profile-data .col-right .info-cards .info-card .blocks .block h5 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  color: var(--shin-blue6);
+  color: var(--blue6);
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
 .profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
@@ -2806,7 +2806,7 @@ header .small-menu .small-menu-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--shin-blue4);
+  color: var(--blue4);
   background-color: var(--white);
   transition: all 0.3s linear;
   position: absolute;
@@ -2815,7 +2815,7 @@ header .small-menu .small-menu-link {
   opacity: 0;
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
-  background-color: var(--shin-blue4);
+  background-color: var(--blue4);
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
   left: 3rem;
@@ -2884,7 +2884,7 @@ header .small-menu .small-menu-link {
   flex-direction: column;
   gap: 1rem;
   padding: 0 1rem 1rem 1rem !important;
-  border-left: 0.2rem solid var(--shin-blue7);
+  border-left: 0.2rem solid var(--blue7);
   position: relative;
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .education-card .box .fa-graduation-cap {
@@ -2897,7 +2897,7 @@ header .small-menu .small-menu-link {
   top: -0.2rem;
   left: -1.1rem;
   color: var(--white);
-  background: radial-gradient(var(--shin-blue2), var(--shin-blue7));
+  background: radial-gradient(var(--blue2), var(--blue7));
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .education-card .box span {
   width: 9rem;
@@ -2910,7 +2910,7 @@ header .small-menu .small-menu-link {
   box-shadow: var(--box-shadow2);
   text-shadow: var(--box-shadow2);
   color: var(--white);
-  background: radial-gradient(var(--shin-blue), var(--shin-blue7));
+  background: radial-gradient(var(--blue), var(--blue7));
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .education-card .box h4 {
   font-weight: bold;
@@ -2938,7 +2938,7 @@ header .small-menu .small-menu-link {
   gap: 0.5rem;
 }
 .profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
-  color: var(--shin-blue4);
+  color: var(--blue4);
 }
 .profile-page .profile-container .profile-data .col-right .tabs-area {
   width: 100%;
@@ -2954,7 +2954,7 @@ header .small-menu .small-menu-link {
   position: relative;
 }
 .profile-page .profile-container .profile-data .col-right .tabs-area li.button-active {
-  color: var(--shin-blue6);
+  color: var(--blue6);
 }
 .profile-page .profile-container .profile-data .col-right .tabs-area li.button-active::before {
   content: "";
@@ -2963,7 +2963,7 @@ header .small-menu .small-menu-link {
   position: absolute;
   top: 3rem;
   left: 0;
-  background-color: var(--shin-blue6);
+  background-color: var(--blue6);
 }
 .profile-page .profile-container #edit-profile-collapsible {
   margin: 2rem auto 1rem;
@@ -3000,7 +3000,7 @@ header .small-menu .small-menu-link {
 }
 .edit-certification-form h2 {
   text-align: left;
-  color: var(--shin-blue7);
+  color: var(--blue7);
   text-transform: uppercase;
 }
 .edit-certification-form h2 hr {
@@ -3629,7 +3629,7 @@ header .small-menu .small-menu-link {
 }
 .edit-member-page .edit-certification-form h2 {
   text-align: left;
-  color: var(--shin-blue7);
+  color: var(--blue7);
 }
 .edit-member-page .edit-certification-form h2 hr {
   flex: 1 1 20rem;
@@ -3637,7 +3637,7 @@ header .small-menu .small-menu-link {
   margin-left: 0.4rem;
 }
 .edit-member-page .edit-certification-form .control-label {
-  color: var(--shin-blue4);
+  color: var(--blue4);
 }
 .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {
   height: 100%;
