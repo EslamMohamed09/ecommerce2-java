@@ -1010,7 +1010,7 @@ input[type="file"] {cursor:pointer;}
 .form-horizontal2 {margin:0;
                    padding:3rem 0 0;
 
-       .col-left {display:grid;
+       .left-block {display:grid;
                   gap:2rem;
                   grid-template-columns:repeat(auto-fill,minmax(250px, 1fr));
 
@@ -1034,8 +1034,8 @@ input[type="file"] {cursor:pointer;}
                      color:var(--gray10);}
        }
 
-       /* col-right */
-       .col-right {padding:0 1rem;
+       /* right-block */
+       .right-block {padding:0 1rem;
                    text-align:center;
 
               > div {margin:0 0 2rem;}
@@ -1058,7 +1058,7 @@ input[type="file"] {cursor:pointer;}
 }
 
 @media (max-width:768px){ .form-horizontal2 .double-input-box {gap:1rem;} 
-                          .form-horizontal2 .col-right {padding-top:4rem !important;} }
+                          .form-horizontal2 .right-block {padding-top:4rem !important;} }
 
 .pass-input {position:relative;
 
@@ -1580,13 +1580,13 @@ header {width:100%;
                                             border-radius:0.5rem;
                                             display:grid;
                                             grid-template-columns:repeat(auto-fill,minmax(400px, 1fr));
-                                            box-shadow:2px 2px 30px rgba(66, 57, 238, 0.2);
+                                            box-shadow:var(--box-shadow5);
                                             background-color:var(--white);
 
                             .input-boxes .input-box .pass-input {flex:1 1 20rem;}
                             .input-boxes .input-box .pass-input input {width:100%;}
 
-                            .col-left {
+                            .left-block {
                                    .input-boxes {width:100%;
                                                  gap:1.5rem;
 
@@ -1616,12 +1616,12 @@ header {width:100%;
                                           margin:2rem auto;}
                             }
 
-                            .col-right {min-height:35vh;
+                            .right-block {min-height:35vh;
                                         gap:1rem;
                                         padding:2rem !important;
                                         border-top-right-radius:0.5rem;
                                         border-bottom-right-radius:0.5rem;
-                                        background:radial-gradient(var(--blue), var(--blue7));
+                                        background:radial-gradient(var(--blue7), var(--blue18));
 
                                    h2,
                                    p {color:var(--white);}
@@ -1643,10 +1643,10 @@ header {width:100%;
                               text-align:center;
 
                      /* steps-block */
-                     .steps-block {position:relative;
-                                   margin:4rem auto 5rem;
-                                   width:80%;
-                                   height:1rem;
+                     .registerPhasesSteps {position:relative;
+                                           margin:4rem auto 5rem;
+                                           width:80%;
+                                           height:1rem;
 
                             .line {width:90%;
                                    margin:auto;
@@ -1677,7 +1677,7 @@ header {width:100%;
                                      padding:1.5rem 1rem;
                                      border-radius:0.5rem;
                                      background-color:var(--white);
-                                     box-shadow:2px 2px 30px rgba(66, 57, 238, 0.2);
+                                     box-shadow:var(--box-shadow5);
                                      display:none;
 
                             &.active {display:flex;}
@@ -1690,9 +1690,11 @@ header {width:100%;
                                                border-radius:1.5rem;
                                                padding-left:0.9rem;
                                                padding-right:0;
-                                               box-shadow:var(--box-shadow2);
+                                               box-shadow:var(--box-shadow5);
                                                background:var(--white);
                                                background-color:var(--white);
+
+                                          &:focus-within {box-shadow:var(--blue-box-shadow);}
 
                                           #icon {margin:0;}
 
@@ -1739,6 +1741,15 @@ header {width:100%;
                                    }
                             }
 
+                            .add-delete-btns {width:100%;
+                                              gap:1rem;
+                                              margin-bottom:1rem;}
+
+                            .backRegisterBtns {width:100%;
+                                               gap:1rem;
+                                   .back {width:fit-content;}
+                            }
+
                             .btn3 {width:100%;
                                    border-radius:0.3rem;}
                      }
@@ -1746,7 +1757,6 @@ header {width:100%;
                      @media(max-width:1200px){ .registerphase {width:80%;} }
                      @media(max-width:968px){ .registerphase {width:90%;} }
 
-                     /* registerphase1 */
                      #registerphase1 {
                             h2 {margin:1rem 0 2rem;
                                 letter-spacing:1px;
@@ -1761,6 +1771,15 @@ header {width:100%;
                             }
 
                             .btn3 {margin:2rem 0 1.5rem;}
+                     }
+
+                     #registerphase2 {
+                            .add-delete-btns {
+                                   .deleteCertificationBtn {display:none;}
+                            }
+                            #maximumCertificationMsg {color:var(--red9);
+                                                      text-align:right;
+                                                      display:none;}
                      }
               }
        }
@@ -2274,7 +2293,7 @@ header {width:100%;
                              background-color:var(--white);
                              box-shadow:var(--box-shadow6);
 
-                     .col-left {text-align:center;
+                     .left-block {text-align:center;
 
                             .image-card {text-align:center;
                                          gap:0.4rem;
@@ -2299,8 +2318,8 @@ header {width:100%;
                                font-weight:bold;}
                      }
 
-                     /* col-right */
-                     .col-right {background-color:transparent;
+                     /* right-block */
+                     .right-block {background-color:transparent;
 
                             .info-cards {width:100%;
                                          padding:1rem;
@@ -2534,12 +2553,12 @@ header {width:100%;
 }
 
 @media(max-width:400px){
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {width:3.5rem;}
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
-  .profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {width:100%;}
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {width:3.5rem;}
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
+  .profile-page .profile-data .right-block .info-cards .my-skills-card .blocks .block .details {width:100%;}
 }
 
-@media(max-width:266px){ .profile-page .profile-data .col-right .info-cards .my-skills-card .blocks {flex-wrap:wrap;} }
+@media(max-width:266px){ .profile-page .profile-data .right-block .info-cards .my-skills-card .blocks {flex-wrap:wrap;} }
 
 /* Edit certification */
 .edit-certification-form {margin-top:2rem;
@@ -2669,12 +2688,12 @@ header {width:100%;
 @media (max-width:768px){
 .profile-page {
        .profile-data {
-              .col-left {padding-bottom:2rem;
+              .left-block {padding-bottom:2rem;
                      .image-card {margin-top:1rem;
                                   margin-bottom:2rem;}
               }
 
-              .col-right {
+              .right-block {
 
                      .info-cards {
 

@@ -21,7 +21,7 @@
 
       <div class="login-form-container">
 
-        <div class="col-left d-flex-c-c-c">
+        <div class="left-block d-flex-c-c-c">
 
           <h2>login</h2>
           
@@ -47,11 +47,11 @@
 
           <input type="submit" value="login" name="login" class="btn3">
 
-          <p>I have no account <span id="register-form-btn">register</span></p>
+          <p>I have no account <span id="goToRegisterFormBtn">register</span></p>
 
-        </div> <!-- End col-left -->
+        </div> <!-- End left-block -->
 
-        <div class="col-right d-flex-c-c-c">
+        <div class="right-block d-flex-c-c-c">
           <h2>glade to see you</h2>
           <p>welcome please fill in the blanks for sign in</p>
         </div>
@@ -62,16 +62,16 @@
 
     <form class="register-form d-flex-c-st-c" action="" method="POST" enctype="multipart/form-data" onsubmit="return checkErrors();">
 
-        <div class="steps-block">
-          <div class="line"></div>
-          <ul class="links d-flex-r-bt-c">
-            <li class="active" id="Rstep1">1</li>
-            <li id="Rstep2">2</li>
-            <li id="Rstep3">3</li>
-          </ul>
-        </div>
+      <div class="registerPhasesSteps">
+        <div class="line"></div>
+        <ul class="links d-flex-r-bt-c">
+          <li class="active" id="Rstep1">1</li>
+          <li id="Rstep2">2</li>
+          <li id="Rstep3">3</li>
+        </ul>
+      </div>
 
-      <div class="registerphase d-flex-c-st-c active" id="registerphase1"> <!-- registerphase1 add user info -->
+      <div class="registerphase d-flex-c-st-c active" id="registerphase1">
 
         <h2>register</h2>
 
@@ -98,7 +98,7 @@
 
               <div class="input-box d-flex-r-bt-c"> <!-- fullname -->
                 <i class="fa fa-user" id="icon"></i>
-                <input type="text" name="fullname" autocomplete="off" placeholder="Full Name" maxlength="25" pattern=".{8,25}" title="Full Name maximum letter 25." id="fullnameinput" required/>
+                <input type="text" name="fullname" autocomplete="off" placeholder="Full Name" maxlength="34" pattern=".{8,25}" title="Full Name maximum letter 25." id="fullnameinput" required/>
               </div>
 
               <select name="gender" id="gender">  <!-- gender -->
@@ -151,39 +151,41 @@
 
         </div>
 
-        <button type="button" id="submitregisterphase1" class="btn3">submit info</button>
+        <button type="button" class="submitregisterphase1 btn3">submit info</button>
 
-        <p>Already have an account <span id="login-form-btn">sign in</span></p>
+        <p>Already have an account <span id="goToLoginFormBtn">sign in</span></p>
 
       </div> <!-- End registerphase1 add user info -->
 
-      <div class="registerphase d-flex-c-st-c" id="registerphase2"> <!-- registerphase2 add user certifications -->
+      <div class="registerphase d-flex-c-st-c" id="registerphase2">
 
         <div id="certificationsContainer"></div>
-        <div class="add-delete-btns d-flex-r-end-c">
-          <button type="button" id="addCertificationBtn" class="btn2">Add Certification</button>
-          <button type="button" id="deleteCertificationBtn" class="btn2" style="display:none;">Delete Certification</button>
-        </div>
-        <p id="maxCertificationMessage" style="color:red;text-align:right;display:none;">Maximum 4 certifications reached.</p>
 
-        <div class="buttons d-flex-r-bt-c" style="width:100%;gap:1rem;">
-          <button type="button" id="backregisterphase2" class="btn3" style="width:fit-content;">back</button>
-          <button type="button" id="submitregisterphase2" class="btn3">submit without certification</button>
+        <div class="add-delete-btns d-flex-r-end-c">
+          <button type="button" class="addCertificationBtn btn2">Add Certification</button>
+          <button type="button" class="deleteCertificationBtn btn2">Delete Certification</button>
+        </div>
+        <p id="maximumCertificationMsg">Maximum 4 certifications reached.</p>
+
+        <div class="backRegisterBtns d-flex-r-bt-c">
+          <button type="button" class="backregisterphase2 back btn3">back</button>
+          <button type="button" class="submitregisterphase2 btn3">submit without certification</button>
         </div>
 
       </div> <!-- End registerphase2 add user certifications -->
 
-      <div class="registerphase d-flex-c-st-c" id="registerphase3"> <!-- registerphase3 add user skills -->
+      <div class="registerphase d-flex-c-st-c" id="registerphase3">
 
         <div id="skillsContainer"></div>
+
         <div class="add-delete-btns d-flex-c-end-end">
           <button type="button" class="btn2" id="addSkillsBtn">add Skills</button>
           <button type="button" class="btn2" id="deleteSkillsBtn" style="display:none;">Delete Skills</button>
         </div>
 
-        <div class="buttons d-flex-r-bt-c" style="width:100%;gap:1rem;">
-          <button type="button" id="backregisterphase3" class="btn3" style="width:fit-content;">back</button>
-          <input type="submit" name="register" value="register without skills" id="submit-register" class="btn3" onclick="checkErrors()">
+        <div class="backRegisterBtns d-flex-r-bt-c">
+          <button type="button" class="backregisterphase3 back btn3">back</button>
+          <input type="submit" value="register without skills" name="register" class="submit-register btn3" onclick="checkErrors()">
         </div>
 
       </div> <!-- End registerphase3 add user skills -->

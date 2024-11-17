@@ -1224,55 +1224,55 @@ input[type=file] {
 .form-horizontal2 {
   margin: 0;
   padding: 3rem 0 0;
-  /* col-right */
+  /* right-block */
 }
-.form-horizontal2 .col-left {
+.form-horizontal2 .left-block {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-.form-horizontal2 .col-left .input-box {
+.form-horizontal2 .left-block .input-box {
   display: block;
 }
-.form-horizontal2 .col-left .input-box .input-control {
+.form-horizontal2 .left-block .input-box .input-control {
   width: 100%;
 }
-.form-horizontal2 .col-left .input-box .pass-input {
+.form-horizontal2 .left-block .input-box .pass-input {
   margin: 0;
   padding: 0;
 }
-.form-horizontal2 .col-left .textarea-input-box {
+.form-horizontal2 .left-block .textarea-input-box {
   grid-column: span 2;
 }
-.form-horizontal2 .col-left .textarea-input-box textarea {
+.form-horizontal2 .left-block .textarea-input-box textarea {
   min-height: 8rem;
 }
-.form-horizontal2 .col-left label {
+.form-horizontal2 .left-block label {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
   color: var(--gray10);
 }
-.form-horizontal2 .col-right {
+.form-horizontal2 .right-block {
   padding: 0 1rem;
   text-align: center;
 }
-.form-horizontal2 .col-right > div {
+.form-horizontal2 .right-block > div {
   margin: 0 0 2rem;
 }
-.form-horizontal2 .col-right .input-box label {
+.form-horizontal2 .right-block .input-box label {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--gray11);
   font-weight: bold;
   text-transform: uppercase;
 }
-.form-horizontal2 .col-right .image {
+.form-horizontal2 .right-block .image {
   width: 100%;
   padding: 0;
 }
-.form-horizontal2 .col-right .image img {
+.form-horizontal2 .right-block .image img {
   width: 100%;
   max-height: 25rem;
 }
@@ -1284,7 +1284,7 @@ input[type=file] {
   .form-horizontal2 .double-input-box {
     gap: 1rem;
   }
-  .form-horizontal2 .col-right {
+  .form-horizontal2 .right-block {
     padding-top: 4rem !important;
   }
 }
@@ -1926,7 +1926,7 @@ header .small-menu .small-menu-link {
   border-radius: 0.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  box-shadow: 2px 2px 30px rgba(66, 57, 238, 0.2);
+  box-shadow: var(--box-shadow5);
   background-color: var(--white);
 }
 #login-section .forms .login-form .login-form-container .input-boxes .input-box .pass-input {
@@ -1935,11 +1935,11 @@ header .small-menu .small-menu-link {
 #login-section .forms .login-form .login-form-container .input-boxes .input-box .pass-input input {
   width: 100%;
 }
-#login-section .forms .login-form .login-form-container .col-left .input-boxes {
+#login-section .forms .login-form .login-form-container .left-block .input-boxes {
   width: 100%;
   gap: 1.5rem;
 }
-#login-section .forms .login-form .login-form-container .col-left .input-boxes .input-box {
+#login-section .forms .login-form .login-form-container .left-block .input-boxes .input-box {
   width: 90%;
   gap: 0.6rem;
   border-radius: 1.5rem;
@@ -1949,7 +1949,7 @@ header .small-menu .small-menu-link {
   background-color: var(--white);
   box-shadow: var(--box-shadow2);
 }
-#login-section .forms .login-form .login-form-container .col-left .input-boxes .input-box input {
+#login-section .forms .login-form .login-form-container .left-block .input-boxes .input-box input {
   flex: 1 1 20rem;
   margin: 0;
   padding: 0.5rem 0.5rem 0.5rem 0;
@@ -1962,20 +1962,20 @@ header .small-menu .small-menu-link {
   background-color: transparent;
   background: transparent;
 }
-#login-section .forms .login-form .login-form-container .col-left .btn3 {
+#login-section .forms .login-form .login-form-container .left-block .btn3 {
   width: 89%;
   margin: 2rem auto;
 }
-#login-section .forms .login-form .login-form-container .col-right {
+#login-section .forms .login-form .login-form-container .right-block {
   min-height: 35vh;
   gap: 1rem;
   padding: 2rem !important;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background: radial-gradient(var(--blue), var(--blue7));
+  background: radial-gradient(var(--blue7), var(--blue18));
 }
-#login-section .forms .login-form .login-form-container .col-right h2,
-#login-section .forms .login-form .login-form-container .col-right p {
+#login-section .forms .login-form .login-form-container .right-block h2,
+#login-section .forms .login-form .login-form-container .right-block p {
   color: var(--white);
 }
 @media (max-width: 768px) {
@@ -1992,26 +1992,25 @@ header .small-menu .small-menu-link {
   text-align: center;
   /* steps-block */
   /* registerphase */
-  /* registerphase1 */
 }
-#login-section .forms .register-form .steps-block {
+#login-section .forms .register-form .registerPhasesSteps {
   position: relative;
   margin: 4rem auto 5rem;
   width: 80%;
   height: 1rem;
 }
-#login-section .forms .register-form .steps-block .line {
+#login-section .forms .register-form .registerPhasesSteps .line {
   width: 90%;
   margin: auto;
   height: 1px;
   background-color: var(--blue);
 }
-#login-section .forms .register-form .steps-block ul {
+#login-section .forms .register-form .registerPhasesSteps ul {
   position: absolute;
   top: -2.5rem;
   width: 100%;
 }
-#login-section .forms .register-form .steps-block ul li {
+#login-section .forms .register-form .registerPhasesSteps ul li {
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
@@ -2022,7 +2021,7 @@ header .small-menu .small-menu-link {
   color: var(--white2);
   background: radial-gradient(var(--blue), var(--blue7));
 }
-#login-section .forms .register-form .steps-block ul li.active {
+#login-section .forms .register-form .registerPhasesSteps ul li.active {
   background: radial-gradient(var(--aqua2), var(--blue3));
 }
 #login-section .forms .register-form .registerphase {
@@ -2031,7 +2030,7 @@ header .small-menu .small-menu-link {
   padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   background-color: var(--white);
-  box-shadow: 2px 2px 30px rgba(66, 57, 238, 0.2);
+  box-shadow: var(--box-shadow5);
   display: none;
 }
 #login-section .forms .register-form .registerphase.active {
@@ -2047,9 +2046,12 @@ header .small-menu .small-menu-link {
   border-radius: 1.5rem;
   padding-left: 0.9rem;
   padding-right: 0;
-  box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow5);
   background: var(--white);
   background-color: var(--white);
+}
+#login-section .forms .register-form .registerphase .input-boxes .input-box:focus-within {
+  box-shadow: var(--blue-box-shadow);
 }
 #login-section .forms .register-form .registerphase .input-boxes .input-box #icon {
   margin: 0;
@@ -2101,6 +2103,18 @@ header .small-menu .small-menu-link {
 #login-section .forms .register-form .registerphase select option:hover {
   background: rgb(223, 172, 228);
 }
+#login-section .forms .register-form .registerphase .add-delete-btns {
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#login-section .forms .register-form .registerphase .backRegisterBtns {
+  width: 100%;
+  gap: 1rem;
+}
+#login-section .forms .register-form .registerphase .backRegisterBtns .back {
+  width: fit-content;
+}
 #login-section .forms .register-form .registerphase .btn3 {
   width: 100%;
   border-radius: 0.3rem;
@@ -2133,6 +2147,14 @@ header .small-menu .small-menu-link {
 }
 #login-section .forms .register-form #registerphase1 .btn3 {
   margin: 2rem 0 1.5rem;
+}
+#login-section .forms .register-form #registerphase2 .add-delete-btns .deleteCertificationBtn {
+  display: none;
+}
+#login-section .forms .register-form #registerphase2 #maximumCertificationMsg {
+  color: var(--red9);
+  text-align: right;
+  display: none;
 }
 
 /*
@@ -2701,20 +2723,20 @@ header .small-menu .small-menu-link {
   min-height: 30vh;
   background-color: var(--white);
   box-shadow: var(--box-shadow6);
-  /* col-right */
+  /* right-block */
 }
-.profile-page .profile-container .profile-data .col-left {
+.profile-page .profile-container .profile-data .left-block {
   text-align: center;
 }
-.profile-page .profile-container .profile-data .col-left .image-card {
+.profile-page .profile-container .profile-data .left-block .image-card {
   text-align: center;
   gap: 0.4rem;
   margin-top: 3rem;
 }
-.profile-page .profile-container .profile-data .col-left .image-card .image {
+.profile-page .profile-container .profile-data .left-block .image-card .image {
   background-color: transparent;
 }
-.profile-page .profile-container .profile-data .col-left .image-card .image img {
+.profile-page .profile-container .profile-data .left-block .image-card .image img {
   width: 9rem;
   height: 9rem;
   object-fit: fill;
@@ -2722,51 +2744,51 @@ header .small-menu .small-menu-link {
   box-shadow: var(--box-shadow6);
   border-radius: 50%;
 }
-.profile-page .profile-container .profile-data .col-left h3 {
+.profile-page .profile-container .profile-data .left-block h3 {
   color: var(--gray11);
   font-weight: bold;
   margin-top: 0.6rem;
 }
-.profile-page .profile-container .profile-data .col-left p {
+.profile-page .profile-container .profile-data .left-block p {
   color: var(--gray7);
   font-weight: bold;
 }
-.profile-page .profile-container .profile-data .col-right {
+.profile-page .profile-container .profile-data .right-block {
   background-color: transparent;
   /* tabs area */
 }
-.profile-page .profile-container .profile-data .col-right .info-cards {
+.profile-page .profile-container .profile-data .right-block .info-cards {
   width: 100%;
   padding: 1rem;
   /* general-info-card */
   /* education-card card */
   /* my skills */
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card {
   width: 100%;
   padding: 0;
   background-color: transparent;
   /* open/close */
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .blocks .block .heading,
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .box .heading {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .blocks .block .heading,
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .box .heading {
   flex-wrap: nowrap;
   width: 99%;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .blocks .block h5 {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .blocks .block h5 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   color: var(--blue6);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox],
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:focus {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox],
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:focus {
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   display: none;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {
   width: 4.5rem;
   height: 1.6rem;
   padding: 0 0.3rem;
@@ -2782,7 +2804,7 @@ header .small-menu .small-menu-link {
   position: relative;
   background-color: var(--gray3);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-xmark {
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.3rem;
@@ -2798,7 +2820,7 @@ header .small-menu .small-menu-link {
   z-index: 2;
   opacity: 1;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-check {
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.3rem;
@@ -2814,40 +2836,40 @@ header .small-menu .small-menu-link {
   z-index: 1;
   opacity: 0;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
   background-color: var(--blue4);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
   left: 3rem;
   opacity: 0;
   z-index: 1;
   background-color: var(--gray4);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
+.profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
   left: 3rem;
   opacity: 1;
   z-index: 2;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block {
   width: 100%;
   padding: 2rem 0;
   gap: 0.7rem;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details {
   width: 100%;
   flex-wrap: wrap;
   gap: 5%;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details p {
   font-size: 1rem;
   color: var(--gray10);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details p span {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details p span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details .item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2856,30 +2878,30 @@ header .small-menu .small-menu-link {
   margin: 0;
   padding: 0;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item #icon {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details .item #icon {
   color: var(--gray11);
   margin-top: 0.2rem;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details .item .desc {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin: 0;
   padding: 0;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc span {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details .item .desc span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block .details .item .desc p {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block .details .item .desc p {
   text-transform: lowercase;
   color: var(--gray8);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .general-info-card .blocks .block:not(:last-child) {
+.profile-page .profile-container .profile-data .right-block .info-cards .general-info-card .blocks .block:not(:last-child) {
   border-bottom: 1px solid var(--gray4);
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box {
+.profile-page .profile-container .profile-data .right-block .info-cards .education-card .box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2887,7 +2909,7 @@ header .small-menu .small-menu-link {
   border-left: 0.2rem solid var(--blue7);
   position: relative;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box .fa-graduation-cap {
+.profile-page .profile-container .profile-data .right-block .info-cards .education-card .box .fa-graduation-cap {
   width: 2rem;
   height: 2rem;
   font-size: 1.5rem;
@@ -2899,7 +2921,7 @@ header .small-menu .small-menu-link {
   color: var(--white);
   background: radial-gradient(var(--blue2), var(--blue7));
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box span {
+.profile-page .profile-container .profile-data .right-block .info-cards .education-card .box span {
   width: 9rem;
   border-radius: 5rem;
   padding: 0.3rem 1.2rem 0.2rem;
@@ -2912,51 +2934,51 @@ header .small-menu .small-menu-link {
   color: var(--white);
   background: radial-gradient(var(--blue), var(--blue7));
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box h4 {
+.profile-page .profile-container .profile-data .right-block .info-cards .education-card .box h4 {
   font-weight: bold;
   margin-top: 0.5rem;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .education-card .box:first-child, .profile-page .profile-container .profile-data .col-right .info-cards .education-card .box:nth-child(3) {
+.profile-page .profile-container .profile-data .right-block .info-cards .education-card .box:first-child, .profile-page .profile-container .profile-data .right-block .info-cards .education-card .box:nth-child(3) {
   padding-right: 3.5rem !important;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks {
+.profile-page .profile-container .profile-data .right-block .info-cards .my-skills-card .blocks {
   gap: 9%;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block {
+.profile-page .profile-container .profile-data .right-block .info-cards .my-skills-card .blocks .block {
   width: 100%;
   padding-top: 0.5rem;
   height: fit-content;
   gap: 1.1rem;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .heading {
+.profile-page .profile-container .profile-data .right-block .info-cards .my-skills-card .blocks .block .heading {
   width: 100%;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
+.profile-page .profile-container .profile-data .right-block .info-cards .my-skills-card .blocks .block .details {
   flex-wrap: wrap;
   line-height: 2.5rem;
   width: 80%;
   gap: 0.5rem;
 }
-.profile-page .profile-container .profile-data .col-right .info-cards .my-skills-card .blocks .block .fa-check {
+.profile-page .profile-container .profile-data .right-block .info-cards .my-skills-card .blocks .block .fa-check {
   color: var(--blue4);
 }
-.profile-page .profile-container .profile-data .col-right .tabs-area {
+.profile-page .profile-container .profile-data .right-block .tabs-area {
   width: 100%;
   flex-wrap: nowrap;
   gap: 2rem;
   padding: 1.2rem 0 1.2rem 1.2rem;
 }
-.profile-page .profile-container .profile-data .col-right .tabs-area li {
+.profile-page .profile-container .profile-data .right-block .tabs-area li {
   cursor: pointer;
   font-weight: normal;
   font-size: 1.3rem;
   color: var(--gray11);
   position: relative;
 }
-.profile-page .profile-container .profile-data .col-right .tabs-area li.button-active {
+.profile-page .profile-container .profile-data .right-block .tabs-area li.button-active {
   color: var(--blue6);
 }
-.profile-page .profile-container .profile-data .col-right .tabs-area li.button-active::before {
+.profile-page .profile-container .profile-data .right-block .tabs-area li.button-active::before {
   content: "";
   width: 100%;
   height: 1.2px;
@@ -2976,18 +2998,18 @@ header .small-menu .small-menu-link {
 }
 
 @media (max-width: 400px) {
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch {
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {
     width: 3.5rem;
   }
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
     left: 2.2rem;
   }
-  .profile-page .profile-data .col-right .info-cards .my-skills-card .blocks .block .details {
+  .profile-page .profile-data .right-block .info-cards .my-skills-card .blocks .block .details {
     width: 100%;
   }
 }
 @media (max-width: 266px) {
-  .profile-page .profile-data .col-right .info-cards .my-skills-card .blocks {
+  .profile-page .profile-data .right-block .info-cards .my-skills-card .blocks {
     flex-wrap: wrap;
   }
 }
@@ -3153,34 +3175,34 @@ header .small-menu .small-menu-link {
 }
 
 @media (max-width: 768px) {
-  .profile-page .profile-data .col-left {
+  .profile-page .profile-data .left-block {
     padding-bottom: 2rem;
   }
-  .profile-page .profile-data .col-left .image-card {
+  .profile-page .profile-data .left-block .image-card {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
     left: 3.1rem;
   }
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
     left: 3.1rem;
   }
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-xmark {
     width: 0.5rem;
     height: 0.5rem;
   }
-  .profile-page .profile-data .col-right .info-cards .info-card .heading label .toggle-switch .fa-check {
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-check {
     width: 0.5rem;
     height: 0.5rem;
   }
-  .profile-page .profile-data .col-right .info-cards.my-skills-card .blocks .block {
+  .profile-page .profile-data .right-block .info-cards.my-skills-card .blocks .block {
     margin-bottom: 2.5rem;
   }
-  .profile-page .profile-data .col-right .info-cards.general-info-card .blocks .block .details .item {
+  .profile-page .profile-data .right-block .info-cards.general-info-card .blocks .block .details .item {
     margin-bottom: 1.2rem;
   }
-  .profile-page .profile-data .col-right .info-cards.education-card .box .fa-graduation-cap {
+  .profile-page .profile-data .right-block .info-cards.education-card .box .fa-graduation-cap {
     width: 1.5rem;
     height: 1.5rem;
     left: -1.4rem;
