@@ -1580,36 +1580,39 @@ header {width:100%;
                             .input-boxes .input-box .pass-input {flex:1 1 20rem;}
                             .input-boxes .input-box .pass-input input {width:100%;}
 
-                            .col-left .input-boxes {width:100%;
-                                                    gap:1.5rem;
+                            .col-left {
+                                   .input-boxes {width:100%;
+                                                 gap:1.5rem;
 
-                                   .input-box {width:90%;
-                                               gap:0.6rem;
-                                               border-radius:1.5rem;
-                                               padding-left:0.9rem;
-                                               padding-right:0;
-                                               background:var(--white);
-                                               background-color:var(--white);
-                                               box-shadow:var(--box-shadow2);
+                                          .input-box {width:90%;
+                                                 gap:0.6rem;
+                                                 border-radius:1.5rem;
+                                                 padding-left:0.9rem;
+                                                 padding-right:0;
+                                                 background:var(--white);
+                                                 background-color:var(--white);
+                                                 box-shadow:var(--box-shadow2);
 
-                                          input {flex:1 1 20rem;
-                                                 margin:0;
-                                                 padding:0.5rem 0.5rem 0.5rem 0;
-                                                 border-top-right-radius:1.5rem;
-                                                 border-bottom-right-radius:1.5rem;
-                                                 box-shadow:none;
-                                                 border:none;
-                                                 font-size:1.2rem;
-                                                 color:var(--gray10);
-                                                 background-color:transparent;
-                                                 background:transparent;}
+                                                 input {flex:1 1 20rem;
+                                                        margin:0;
+                                                        padding:0.5rem 0.5rem 0.5rem 0;
+                                                        border-top-right-radius:1.5rem;
+                                                        border-bottom-right-radius:1.5rem;
+                                                        box-shadow:none;
+                                                        border:none;
+                                                        font-size:1.2rem;
+                                                        color:var(--gray10);
+                                                        background-color:transparent;
+                                                        background:transparent;}
+                                          }
                                    }
+                                   .btn3 {width:80%;
+                                          margin:2rem auto;}
                             }  
 
-                            .btn3 {width:89%;
-                                   margin:2rem auto;}
+                            
 
-                            .desc-form {min-height:35vh;
+                            .col-right {min-height:35vh;
                                         gap:1rem;
                                         padding:2rem !important;
                                         border-top-right-radius:0.5rem;

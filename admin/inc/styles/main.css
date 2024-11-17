@@ -1981,11 +1981,11 @@ header .small-menu .small-menu-link {
   background-color: transparent;
   background: transparent;
 }
-#login-section .forms .login-form .login-form-container .btn3 {
-  width: 89%;
+#login-section .forms .login-form .login-form-container .col-left .btn3 {
+  width: 80%;
   margin: 2rem auto;
 }
-#login-section .forms .login-form .login-form-container .desc-form {
+#login-section .forms .login-form .login-form-container .col-right {
   min-height: 35vh;
   gap: 1rem;
   padding: 2rem !important;
@@ -1993,8 +1993,8 @@ header .small-menu .small-menu-link {
   border-bottom-right-radius: 0.5rem;
   background: radial-gradient(var(--shin-blue), var(--shin-blue7));
 }
-#login-section .forms .login-form .login-form-container .desc-form h2,
-#login-section .forms .login-form .login-form-container .desc-form p {
+#login-section .forms .login-form .login-form-container .col-right h2,
+#login-section .forms .login-form .login-form-container .col-right p {
   color: var(--white);
 }
 @media (max-width: 768px) {
