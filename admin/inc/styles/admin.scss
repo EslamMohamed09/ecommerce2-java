@@ -124,8 +124,14 @@ body {overflow-x:hidden;
 
        --transparent-olive:#0aa0a01e;
 
-       --milky1:rgb(208, 241, 253);
-       --milky2:rgb(183, 233, 253);
+       --milky:#eef2f7;
+       --milky2:#e8ebf0;
+       --milky3:#c9d3df;
+       --milky4:rgb(208, 241, 253);
+       --milky5:rgb(183, 233, 253);
+       --milky6:#acbfd4;
+       --milky7:#6a7a8d;
+       --milky8:#424b64;
 
        --aqua:#f1f8f8;
        --aqua1:#eafafa;
@@ -143,34 +149,33 @@ body {overflow-x:hidden;
        --aqua13:#00c7c7;
        --aqua16:#03a7a7;
 
-       --shin-blue:#60c8fc;
-       --shin-blue1:#00b7ff;
-       --shin-blue2:#38baf9;
-       --shin-blue3:#15acf8;
-       --shin-blue4:#05a5f5;
-       --shin-blue5:#2085f8;
-       --shin-blue6:#0077ff;
-       --shin-blue7:#0c5fbd;
-       --shin-blue8:#074fa1;
-       --shin-blue9:#134d91;
-       --shin-blue10:#0c3e77;
+       --blue:#60c8fc;
+       --blue1:#00b7ff;
+       --blue2:#38baf9;
+       --blue3:#15acf8;
+       --blue4:#05a5f5;
+       --blue5:#099bd4;
+       --blue6:#0888bb;
+       --blue7:#0a78a3;
+       --blue8:#08668b;
+       --blue9:#054f6d;
+       --blue10:#2085f8;
+       --blue11:#0077ff;
+       --blue12:#0734ca;
+       --blue13:#0c5fbd;
+       --blue14:#074fa1;
+       --blue15:#134d91;
+       --blue16:#0c3e77;
+       --blue17:#052aa1;
+       --blue18:#162753;
+       --blue19:#2b3a5f;
 
-       --blue:#eef2f7;
-       --blue1:#e8ebf0;
-       --blue2:#c9d3df;
-       --blue3:#acbfd4;
-       --blue4:#6a7a8d;
-       --blue5:#424b64;
-       --blue6:#2b3a5f;
-       --blue7:#0734ca;
-       --blue8:#052aa1;
-       --blue9:#162753;
-
-       --navy-blue:#343a40;
-       --navy-blue2:#2a2e35;
-       --navy-blue3:#202733;
-       --navyblue4:#32303e;
-       --navyblue5:#252532;
+       --navyblue:#8B8E98;
+       --navyblu2:#343a40;
+       --navyblue3:#2a2e35;
+       --navyblue4:#202733;
+       --navyblue5:#32303e;
+       --navyblue6:#252532;
 
        --transparent-blue:#176ec021;
 
@@ -280,7 +285,7 @@ body {overflow-x:hidden;
                       --gray10:#fff;
                       --gray11:#fff;
                       --blue4:#e5e5e7;
-                      --shin-blue2:#dce1eb;
+                      --blue2:#dce1eb;
                       --gray:#343535;
                       --gray1:#cbe8ff;
                       --gray4:#1d1d1d;
