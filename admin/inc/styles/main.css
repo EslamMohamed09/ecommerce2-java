@@ -2595,7 +2595,7 @@ header .small-menu .small-menu-link {
 }
 .home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message p {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--gray9);
 }
 .home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message p b {
@@ -2603,7 +2603,7 @@ header .small-menu .small-menu-link {
   font-size: 0.9rem;
 }
 .home-page .home-container .section-holder .right-aside .recent-updates-block .updates .update .message small {
-  color: var(--blue4);
+  color: var(--gray5);
   font-size: 0.8rem;
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items {
@@ -2653,7 +2653,7 @@ header .small-menu .small-menu-link {
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item .info small {
   margin: 0;
-  color: var(--blue4);
+  color: var(--gray5);
 }
 .home-page .home-container .section-holder .right-aside .sales-analytics-block .items .item h5 {
   font-size: 1rem;
