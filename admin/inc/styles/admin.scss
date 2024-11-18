@@ -149,6 +149,21 @@ body {overflow-x:hidden;
        --aqua13:#00c7c7;
        --aqua16:#03a7a7;
 
+       --lightblue:#f0f4f7;
+       --lightblue1:#eaeff1;
+       --lightblue2:#e5edf0;
+       --lightblue3:#dee6e9;
+       --lightblue4:#d7dfe2;
+       --lightblue5:#d5dfe2;
+       --lightblue6:#d0e0e6;
+       --lightblue7:#c9e4ee;
+       --lightblue8:#c2e2ee;
+       --lightblue9:#bfe4f1;
+       --lightblue10:#b7e1f0;
+       --lightblue11:#afdff0;
+       --lightblue12:#a7dcf0;
+       --lightblue13:#a7dcf0;
+
        --blue:#60c8fc;
        --blue1:#00b7ff;
        --blue2:#38baf9;
@@ -171,7 +186,7 @@ body {overflow-x:hidden;
        --blue19:#2b3a5f;
 
        --navyblue:#8B8E98;
-       --navyblu2:#343a40;
+       --navyblue2:#343a40;
        --navyblue3:#2a2e35;
        --navyblue4:#202733;
        --navyblue5:#32303e;
@@ -708,20 +723,23 @@ button:focus {box-shadow:var(--box-shadow2);}
 .d-btn {color:var(--light-red);
         background-color:var(--primary2);}
                    
-.view-btn {background:transparent;
-           color:var(--gray10);
-           display:inline-block;
-           font-size:0.9rem;
+.view-btn {display:inline-block;
            font-weight:bold;
-           text-transform:uppercase;
+           background:transparent;
            padding:0.2rem 0.5rem;
            margin:0;
-           transition:all 0.3s linear;}
+           color:var(--gray10);
+           font-size:0.9rem;
+           text-transform:uppercase;
+           transition:all 0.3s linear;
+       &:hover {color:var(--gray10);}
+       &:hover #power-off {color:red;}
+}
 
 #power-off {color:var(--black);
             margin-left:0.3rem;}
 
-.view-btn:hover #power-off {color:red;}
+
 
 #ticon {margin:0;}
 
@@ -1492,14 +1510,14 @@ header {width:100%;
                                         font-weight:bold;
 
                                    &:first-child {border-bottom:1px solid var(--gray3);
-                                                  background-color:var(--blue3);
+                                                  background-color:var(--gray3);
                                                   border-top-left-radius:0.5rem;
                                                   border-top-right-radius:0.5rem;}
 
                                    &:last-child {border-bottom-left-radius:0.5rem;
                                                  border-bottom-right-radius:0.5rem;}
 
-                                   &:hover {background-color:var(--blue3);}
+                                   &:hover {background-color:var(--gray3);}
                             }
 
                             &.dropactive {display:flex;}
@@ -2120,11 +2138,11 @@ header {width:100%;
 
                             /******* recent updates *******/
                             .recent-updates-block .updates {display:flex;
-                                                      flex-direction:column;
-                                                      justify-content:center;
-                                                      gap:1rem;
-                                                      width:100%;
-                                                      margin:0;
+                                                            flex-direction:column;
+                                                            justify-content:center;
+                                                            gap:1rem;
+                                                            width:100%;
+                                                            margin:0;
 
                                    .update {display:flex;
                                             flex-direction:row;
@@ -2157,7 +2175,7 @@ header {width:100%;
 
                                                  p {margin:0;
                                                     font-size:0.8rem;
-                                                    color:var(--blue4);}
+                                                    color:var(--gray9);}
 
                                                  p b {color:var(--gray11);
                                                       font-size:0.9rem;}
@@ -2235,7 +2253,7 @@ header {width:100%;
                                               font-size:1rem;
                                               cursor:pointer;
                                               color:var(--white);
-                                              background-color:var(--blue5);}
+                                              background-color:var(--milky7);}
 
                                           .button-active {color:var(--white);
                                                           background-color:var(--green13);}
@@ -2930,10 +2948,10 @@ header {width:100%;
        
                      h2 {font-size:1.3rem;
                          font-weight:bold;
-                         color:var(--gray-color2);}
+                         color:var(--gray2);}
               
                      p {font-size:1rem;
-                        color:var(--gray-color6);}
+                        color:var(--gray6);}
               
                      .content-card {display:flex;
                                     flex-direction:column;
@@ -2948,12 +2966,12 @@ header {width:100%;
               
                             .left span {font-size:1rem;
                                         font-weight:bold;
-                                        color:var(--gray-color3);
+                                        color:var(--gray3);
                                         margin:0;
                                         margin-bottom:0.3rem;}
               
                             .left p {font-size:0.9rem;
-                                     color:var(--gray-color6);}
+                                     color:var(--gray6);}
               
                             label {display:flex;
                                    flex-direction:column;
@@ -2980,7 +2998,7 @@ header {width:100%;
                                                  cursor:pointer;
                                                  position:relative;
                                                  bottom:0.5rem;
-                                                 background-color:var(--gray-color8);
+                                                 background-color:var(--gray8);
               
                                           .fa-xmark {width:1.5rem;
                                                  height:1.5rem;
@@ -2990,7 +3008,7 @@ header {width:100%;
                                                  justify-content:center;
                                                  align-items:center;
                                                  color:var(--white);
-                                                 background-color:var(--gray-color7);
+                                                 background-color:var(--gray7);
                                                  transition:all 0.3s linear;
                                                  position:absolute;
                                                  opacity:1;
@@ -3026,7 +3044,7 @@ header {width:100%;
                             }
                      }
        
-                     textarea {border:1px solid var(--gray-color7);
+                     textarea {border:1px solid var(--gray7);
                                padding:0.5rem;
                                border-radius:0.4rem;
                                width:100%;
@@ -3040,7 +3058,7 @@ header {width:100%;
               
                      .second-card .content-card .input-group label {font-size:1.1rem;
                                                                     font-weight:bold;
-                                                                    color:var(--gray-color3);}
+                                                                    color:var(--gray3);}
               
                      /* Third Card */
                      .content-card {
@@ -3051,7 +3069,7 @@ header {width:100%;
               
                                    .info span {font-size:1.1rem;
                                                font-weight:bold;
-                                               color:var(--gray-color3);}
+                                               color:var(--gray3);}
                             }
               
                             /* Fourth Card */
@@ -3061,19 +3079,19 @@ header {width:100%;
                                            justify-content:flex-start;
                                            padding:0;
                                            border-radius:0.3rem;
-                                           border:1px solid var(--gray-color7);
+                                           border:1px solid var(--gray7);
               
                                    #social-link {margin:0;
                                                  padding:0.4rem 1rem;
-                                                 background-color:var(--gray-color7);}
+                                                 background-color:var(--gray7);}
               
                                    #social-link #sicon {font-size:1.5rem;
-                                                        color:var(--gray-color2);
+                                                        color:var(--gray2);
                                                         margin:0;}
               
                                    #socialinput {flex:1 1 20rem;
                                                  font-size:1.1rem;
-                                                 color:var(--gray-color2);
+                                                 color:var(--gray2);
                                                  border:none;
                                                  outline:none;
                                                  border-radius:0;
