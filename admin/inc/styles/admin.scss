@@ -290,7 +290,7 @@ body {overflow-x:hidden;
                       --gray1:#cbe8ff;
                       --gray4:#1d1d1d;
                       --gray8:#f0eded;
-                      --primary-color10:rgb(230, 130, 0);
+                      --primary10:rgb(230, 130, 0);
                       --gray-yellow6:rgb(255, 196, 0);
                       --box-shadow6:0 0 3px rgb(0, 0, 0);
                       --blue-box-shadow:0 0 3px #0240696c;}
@@ -706,7 +706,7 @@ button:focus {box-shadow:var(--box-shadow2);}
           transition:all 0.5s linear;}
 
 .d-btn {color:var(--light-red);
-        background-color:var(--primary-color2);}
+        background-color:var(--primary2);}
                    
 .view-btn {background:transparent;
            color:var(--gray10);
@@ -854,12 +854,12 @@ section {margin:0 auto;
        .sub-title {font-size:1.4rem;
                    font-weight:bold;
                    text-transform:uppercase;
-                   color:var(--primary-color10);
+                   color:var(--primary10);
 
               &::before {content:"";
                          width:41%;
                          height:3px;
-                         background-color:var(--primary-color10);
+                         background-color:var(--primary10);
                          position:absolute;
                          top:2.3rem;
                          left:0;}
@@ -867,7 +867,7 @@ section {margin:0 auto;
               &::after {content:"";
                         width:41%;
                         height:3px;
-                        background-color:var(--primary-color10);
+                        background-color:var(--primary10);
                         position:absolute;
                         top:2.3rem;
                         right:0;}
@@ -890,7 +890,7 @@ section {margin:0 auto;
                border-radius:0.2rem;
                width:100%;
                text-align:center;
-               background-color:var(--primary-color15);}
+               background-color:var(--primary15);}
 
 .edit-heading {width:100%;
                text-align:center;
@@ -918,6 +918,15 @@ section {margin:0 auto;
        hr {flex:1 1 20rem;}
 
        h2 {flex:1 1 2rem;}
+}
+
+.block-title3 {text-align:left;
+               color:var(--blue7);
+               text-transform:uppercase;
+
+       hr {flex:1 1 20rem;
+           color:var(--aqua9);
+           margin-left:0.5rem;}
 }
 
 /*******************
@@ -1211,7 +1220,7 @@ input[type="file"] {cursor:pointer;}
                    border-radius:1.5rem;
                    margin-left:0.5rem;
                    color:rgb(0, 204, 255);
-                   background-color:var(--primary-color16);}
+                   background-color:var(--primary16);}
        }
 
        .ordering-btns {font-size:1.1rem;
@@ -1222,7 +1231,7 @@ input[type="file"] {cursor:pointer;}
                    font-size:1.1rem;
                    color:var(--gray10);}
 
-              > a:hover {color:var(--primary-color1);}
+              > a:hover {color:var(--primary1);}
        }
 }
 
@@ -1745,7 +1754,7 @@ header {width:100%;
                                               gap:1rem;
                                               margin-bottom:1rem;}
 
-                            .backRegisterBtns {width:100%;
+                            .backSubmitBtns {width:100%;
                                                gap:1rem;
                                    .back {width:fit-content;}
                             }
@@ -1774,12 +1783,20 @@ header {width:100%;
                      }
 
                      #registerphase2 {
+                            #certificationsContainer {width:100%;
+                               .add-certification-form {margin-bottom:3rem;}
+                            }
+
                             .add-delete-btns {
                                    .deleteCertificationBtn {display:none;}
                             }
                             #maximumCertificationMsg {color:var(--red9);
                                                       text-align:right;
                                                       display:none;}
+                     }
+
+                     #registerphase3 {
+                            #skillsContainer {width:100%;}
                      }
               }
        }
@@ -1867,9 +1884,8 @@ header {width:100%;
                            text-align:left;
                            align-items:left;
                            background-color:transparent;}
+@media (max-width:711px){ .section-container {margin-left:4rem;} }
 }
-
-@media (max-width:711px){ #dashboard-section .section-container {margin-left:4rem;} }
 
 /*
 ============================
@@ -2550,29 +2566,56 @@ header {width:100%;
 
               .edit-profile-data {display:none;}
        }
-}
 
-@media(max-width:400px){
-  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {width:3.5rem;}
-  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
-  .profile-page .profile-data .right-block .info-cards .my-skills-card .blocks .block .details {width:100%;}
-}
+  @media (max-width:768px){
+         .profile-data {
+                .left-block {padding-bottom:2rem;
+                       .image-card {margin-top:1rem;
+                                     margin-bottom:2rem;}
+                }
+  
+                .right-block {
+  
+                       .info-cards {
+  
+                              .info-card {
+                                     .heading {
+                                            label .toggle-checkbox:checked + .toggle-switch .fa-xmark {left:3.1rem;}
+  
+                                            label .toggle-checkbox:checked + .toggle-switch .fa-check {left:3.1rem;}
+  
+                                            label .toggle-switch .fa-xmark {width:0.5rem;
+                                                                               height:0.5rem;}
+  
+                                            label .toggle-switch .fa-check {width:0.5rem;
+                                                                               height:0.5rem;}
+                                     }
+                              }
+  
+                              &.my-skills-card .blocks .block {margin-bottom:2.5rem;}
+                       
+                              &.general-info-card .blocks .block .details .item {margin-bottom:1.2rem;}
+                              &.education-card .box .fa-graduation-cap {width:1.5rem;
+                                                                        height:1.5rem;
+                                                                        left:-1.4rem;}
+                       }
+                }
+         }
+  }
 
-@media(max-width:266px){ .profile-page .profile-data .right-block .info-cards .my-skills-card .blocks {flex-wrap:wrap;} }
+  @media(max-width:400px){
+   .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {width:3.5rem;}
+   .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.2rem;}
+   .profile-data .right-block .info-cards .my-skills-card .blocks .block .details {width:100%;}
+  }
+
+  @media(max-width:266px){ .profile-data .right-block .info-cards .my-skills-card .blocks {flex-wrap:wrap;} }
+}
 
 /* Edit certification */
 .edit-certification-form {margin-top:2rem;
 
        > div {margin:1.5rem 0;}
-
-       h2 {text-align:left;
-           color:var(--blue7);
-           text-transform:uppercase;
-
-              hr {flex:1 1 20rem;
-                  color:var(--aqua4);
-                  margin-left:0.5rem;}
-       }
 
        .input-box .input-control {width:100%;}
 
@@ -2685,43 +2728,6 @@ header {width:100%;
        }
 }
 
-@media (max-width:768px){
-.profile-page {
-       .profile-data {
-              .left-block {padding-bottom:2rem;
-                     .image-card {margin-top:1rem;
-                                  margin-bottom:2rem;}
-              }
-
-              .right-block {
-
-                     .info-cards {
-
-                            .info-card {
-                                   .heading {
-                                          label .toggle-checkbox:checked + .toggle-switch .fa-xmark {left:3.1rem;}
-
-                                          label .toggle-checkbox:checked + .toggle-switch .fa-check {left:3.1rem;}
-
-                                          label .toggle-switch .fa-xmark {width:0.5rem;
-                                                                          height:0.5rem;}
-
-                                          label .toggle-switch .fa-check {width:0.5rem;
-                                                                          height:0.5rem;}
-                                   }
-                            }
-
-                            &.my-skills-card .blocks .block {margin-bottom:2.5rem;}
-                     
-                            &.general-info-card .blocks .block .details .item {margin-bottom:1.2rem;}
-                            &.education-card .box .fa-graduation-cap {width:1.5rem;
-                                                                      height:1.5rem;
-                                                                      left:-1.4rem;}
-                     }
-              }
-       }
-}
-}
 
 /*
  ========================
@@ -3031,7 +3037,7 @@ header {width:100%;
               
                                    .toggle-checkbox:checked + .toggle-switch {background-color:var(--light-blue2);}
               
-                                   .toggle-checkbox:checked + .toggle-switch .fa-xmark {background-color:var(--primary-color9);
+                                   .toggle-checkbox:checked + .toggle-switch .fa-xmark {background-color:var(--primary9);
                                                                                     left:2.7rem;
                                                                                     opacity:0;
                                                                                     z-index:1;}
@@ -3135,14 +3141,14 @@ header {width:100%;
                                             padding:0.2rem !important;
                                             font-size:1.2rem;}
        }
+
+@media(max-width:577px){ .edit-certification-form .submit-input .col-md-2 {margin-bottom:0.5rem;} }
+
+@media(min-width:577px){ .edit-certification-form .submit-input .col-md-2 .btn {width:95%;} }
+
+@media(min-width:768px) and (max-width:1288px) { .edit-certification-form .submit-input .col-md-2 .btn {font-size:0.9rem;} }
+
 }
-
-@media(max-width:577px){ .edit-member-page .edit-certification-form .submit-input .col-md-2 {margin-bottom:0.5rem;} }
-
-@media(min-width:577px){ .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {width:95%;} }
-
-@media(min-width:768px) and (max-width:1288px) { .edit-member-page .edit-certification-form .submit-input .col-md-2 .btn {font-size:0.9rem;} }
-
 
 /*******MEMBERS******
  # Add

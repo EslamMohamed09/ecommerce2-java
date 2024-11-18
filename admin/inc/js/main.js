@@ -161,7 +161,7 @@ if(document.querySelector("#login-section")){
       newCertificationField.className = 'add-certification-form';
 
       newCertificationField.innerHTML = `
-          <div class="sub-heading"> <h3 class="sub-title">Certification ${certificationNo}</h3> <i class="fas fa-star"></i> </div>
+          <h2 class="block-title3 d-flex-r-bt-c">Certification ${certificationNo}<hr></h2>
 
           <div class="double-input-box d-flex-r-bt-c">
               

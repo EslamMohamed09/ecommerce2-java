@@ -268,7 +268,7 @@ body {
   --gray1:#cbe8ff;
   --gray4:#1d1d1d;
   --gray8:#f0eded;
-  --primary-color10:rgb(230, 130, 0);
+  --primary10:rgb(230, 130, 0);
   --gray-yellow6:rgb(255, 196, 0);
   --box-shadow6:0 0 3px rgb(0, 0, 0);
   --blue-box-shadow:0 0 3px #0240696c;
@@ -832,7 +832,7 @@ button:focus {
 
 .d-btn {
   color: var(--light-red);
-  background-color: var(--primary-color2);
+  background-color: var(--primary2);
 }
 
 .view-btn {
@@ -1024,13 +1024,13 @@ section {
   font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--primary-color10);
+  color: var(--primary10);
 }
 .sub-heading .sub-title::before {
   content: "";
   width: 41%;
   height: 3px;
-  background-color: var(--primary-color10);
+  background-color: var(--primary10);
   position: absolute;
   top: 2.3rem;
   left: 0;
@@ -1039,7 +1039,7 @@ section {
   content: "";
   width: 41%;
   height: 3px;
-  background-color: var(--primary-color10);
+  background-color: var(--primary10);
   position: absolute;
   top: 2.3rem;
   right: 0;
@@ -1063,7 +1063,7 @@ section {
   border-radius: 0.2rem;
   width: 100%;
   text-align: center;
-  background-color: var(--primary-color15);
+  background-color: var(--primary15);
 }
 
 .edit-heading {
@@ -1098,6 +1098,17 @@ section {
 }
 .block-title2 h2 {
   flex: 1 1 2rem;
+}
+
+.block-title3 {
+  text-align: left;
+  color: var(--blue7);
+  text-transform: uppercase;
+}
+.block-title3 hr {
+  flex: 1 1 20rem;
+  color: var(--aqua9);
+  margin-left: 0.5rem;
 }
 
 /*******************
@@ -1483,7 +1494,7 @@ input[type=file] {
   border-radius: 1.5rem;
   margin-left: 0.5rem;
   color: rgb(0, 204, 255);
-  background-color: var(--primary-color16);
+  background-color: var(--primary16);
 }
 .table-details .ordering-btns {
   font-size: 1.1rem;
@@ -1496,7 +1507,7 @@ input[type=file] {
   color: var(--gray10);
 }
 .table-details .ordering-btns > a:hover {
-  color: var(--primary-color1);
+  color: var(--primary1);
 }
 
 @media (max-width: 550px) {
@@ -2108,11 +2119,11 @@ header .small-menu .small-menu-link {
   gap: 1rem;
   margin-bottom: 1rem;
 }
-#login-section .forms .register-form .registerphase .backRegisterBtns {
+#login-section .forms .register-form .registerphase .backSubmitBtns {
   width: 100%;
   gap: 1rem;
 }
-#login-section .forms .register-form .registerphase .backRegisterBtns .back {
+#login-section .forms .register-form .registerphase .backSubmitBtns .back {
   width: fit-content;
 }
 #login-section .forms .register-form .registerphase .btn3 {
@@ -2148,6 +2159,12 @@ header .small-menu .small-menu-link {
 #login-section .forms .register-form #registerphase1 .btn3 {
   margin: 2rem 0 1.5rem;
 }
+#login-section .forms .register-form #registerphase2 #certificationsContainer {
+  width: 100%;
+}
+#login-section .forms .register-form #registerphase2 #certificationsContainer .add-certification-form {
+  margin-bottom: 3rem;
+}
 #login-section .forms .register-form #registerphase2 .add-delete-btns .deleteCertificationBtn {
   display: none;
 }
@@ -2155,6 +2172,9 @@ header .small-menu .small-menu-link {
   color: var(--red9);
   text-align: right;
   display: none;
+}
+#login-section .forms .register-form #registerphase3 #skillsContainer {
+  width: 100%;
 }
 
 /*
@@ -2249,12 +2269,12 @@ header .small-menu .small-menu-link {
   align-items: left;
   background-color: transparent;
 }
-
 @media (max-width: 711px) {
   #dashboard-section .section-container {
     margin-left: 4rem;
   }
 }
+
 /*
 ============================
 ########### HOME ###########
@@ -2996,7 +3016,40 @@ header .small-menu .small-menu-link {
 .profile-page .profile-container .edit-profile-data {
   display: none;
 }
-
+@media (max-width: 768px) {
+  .profile-page .profile-data .left-block {
+    padding-bottom: 2rem;
+  }
+  .profile-page .profile-data .left-block .image-card {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+    left: 3.1rem;
+  }
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
+    left: 3.1rem;
+  }
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-xmark {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-check {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .profile-page .profile-data .right-block .info-cards.my-skills-card .blocks .block {
+    margin-bottom: 2.5rem;
+  }
+  .profile-page .profile-data .right-block .info-cards.general-info-card .blocks .block .details .item {
+    margin-bottom: 1.2rem;
+  }
+  .profile-page .profile-data .right-block .info-cards.education-card .box .fa-graduation-cap {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: -1.4rem;
+  }
+}
 @media (max-width: 400px) {
   .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {
     width: 3.5rem;
@@ -3013,22 +3066,13 @@ header .small-menu .small-menu-link {
     flex-wrap: wrap;
   }
 }
+
 /* Edit certification */
 .edit-certification-form {
   margin-top: 2rem;
 }
 .edit-certification-form > div {
   margin: 1.5rem 0;
-}
-.edit-certification-form h2 {
-  text-align: left;
-  color: var(--blue7);
-  text-transform: uppercase;
-}
-.edit-certification-form h2 hr {
-  flex: 1 1 20rem;
-  color: var(--aqua4);
-  margin-left: 0.5rem;
 }
 .edit-certification-form .input-box .input-control {
   width: 100%;
@@ -3174,40 +3218,6 @@ header .small-menu .small-menu-link {
   color: var(--blue7);
 }
 
-@media (max-width: 768px) {
-  .profile-page .profile-data .left-block {
-    padding-bottom: 2rem;
-  }
-  .profile-page .profile-data .left-block .image-card {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
-    left: 3.1rem;
-  }
-  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-checkbox:checked + .toggle-switch .fa-check {
-    left: 3.1rem;
-  }
-  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-xmark {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
-  .profile-page .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-check {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
-  .profile-page .profile-data .right-block .info-cards.my-skills-card .blocks .block {
-    margin-bottom: 2.5rem;
-  }
-  .profile-page .profile-data .right-block .info-cards.general-info-card .blocks .block .details .item {
-    margin-bottom: 1.2rem;
-  }
-  .profile-page .profile-data .right-block .info-cards.education-card .box .fa-graduation-cap {
-    width: 1.5rem;
-    height: 1.5rem;
-    left: -1.4rem;
-  }
-}
 /*
  ========================
  ####### CUSTOMERS ######
@@ -3554,7 +3564,7 @@ header .small-menu .small-menu-link {
   background-color: var(--light-blue2);
 }
 .settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
-  background-color: var(--primary-color9);
+  background-color: var(--primary9);
   left: 2.7rem;
   opacity: 0;
   z-index: 1;
@@ -3666,7 +3676,6 @@ header .small-menu .small-menu-link {
   padding: 0.2rem !important;
   font-size: 1.2rem;
 }
-
 @media (max-width: 577px) {
   .edit-member-page .edit-certification-form .submit-input .col-md-2 {
     margin-bottom: 0.5rem;
@@ -3682,6 +3691,7 @@ header .small-menu .small-menu-link {
     font-size: 0.9rem;
   }
 }
+
 /*******MEMBERS******
  # Add
 *********************/
