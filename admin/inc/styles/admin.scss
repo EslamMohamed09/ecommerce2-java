@@ -793,7 +793,7 @@ button:focus {box-shadow:var(--box-shadow2);}
                       padding:0.5rem 0.9rem;
                       gap:1rem;
                       background-color:var(--white);
-                      border-left:2px solid var(--light-green6);}
+                      border-left:2px solid var(--green6);}
  
 .success-message {width:fit-content;
                   font-weight:bold;
@@ -802,7 +802,7 @@ button:focus {box-shadow:var(--box-shadow2);}
                   padding:0.5rem 0.9rem;
                   gap:1rem;
                   background-color:var(--white);
-                  border-left:2px solid var(--light-green6);}
+                  border-left:2px solid var(--green6);}
 
 .single-top-wrong-message #ticon,
 .wrong-message #ticon,
@@ -822,7 +822,7 @@ button:focus {box-shadow:var(--box-shadow2);}
 .not-activated {color:red;}
 
 .activated,
-.fa-check {color:var(--light-green7);}
+.fa-check {color:var(--green7);}
 
 .there-is-no {font-size:1.2rem;
               color:var(--gray10);
@@ -993,7 +993,7 @@ textarea {resize:none;
           font-size:1.2rem;
           box-shadow:var(--blue-box-shadow);
        &::-webkit-scrollbar {width:5px;}
-       &::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--light-green11) 0%, var(--light-green9) 100%);}
+       &::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--green11) 0%, var(--green9) 100%);}
        &:focus {outline:none;
                 border:none;
                 box-shadow:var(--blue-box-shadow);}
@@ -1272,6 +1272,9 @@ table {width:100%;
        thead {padding:1rem 0.9rem;
               background-color:var(--white);
 
+              &:first-child tr th:first-child {border-top-left-radius:0.4rem;}
+              &:first-child tr th:last-child {border-top-right-radius:0.4rem;}
+
               tr th:nth-child(2) label {cursor:pointer;}
 
               &:last-child {border-bottom-left-radius:0.7rem;
@@ -1280,8 +1283,8 @@ table {width:100%;
               &:last-child tr {border-bottom-left-radius:0.7rem;
                                border-bottom-right-radius:0.7rem;}
 
-              &:last-child tr th:first-child {border-bottom-left-radius:0.7rem;}
-              &:last-child tr th:last-child {border-bottom-right-radius:0.7rem;}
+              &:last-child tr th:first-child {border-bottom-left-radius:0.4rem;}
+              &:last-child tr th:last-child {border-bottom-right-radius:0.4rem;}
 
               tr th {padding:0.5rem 1rem;
                      font-size:1rem;
@@ -1329,7 +1332,7 @@ table {width:100%;
                                       gap:0.5rem;
                                       opacity:0;
 
-                                   .fa-check {color:var(--light-green7);}
+                                   .fa-check {color:var(--green7);}
                             }
                      }
 
@@ -2795,28 +2798,22 @@ header {width:100%;
        h1 {font-size:1.7rem;
             font-weight:bold;}
 
-      .category-container {display:flex;
-                            flex-direction:row;
-                            flex-wrap:wrap;
-                            padding:0;
-                            padding-top:2rem;
-                            align-items:center;
-                            justify-content:center;
-                            gap:1rem;
+      .category-container {flex-wrap:wrap;
+                           padding:0;
+                           padding-top:2rem; 
+                           gap:1rem;
 
               .category-data {flex:1 1 12rem;
                               display:flex;
                               flex-direction:column;
                               gap:2rem;
 
-                     .input-group {display:flex;
-                                   flex-direction:column;
-                                   gap:0.5rem;
-                                   background-color:transparent;
+                     .input-holder {gap:0.5rem;
+                                    background-color:transparent;
 
                             .cat-label {font-size:1rem;
                                         font-weight:bold;
-                                        color:var(--gray1);}
+                                        color:var(--gray11);}
 
                             /* order input group */
                             &.order-input-group #catorder-select,
@@ -2828,10 +2825,7 @@ header {width:100%;
                             &.order-input-group #catorder-select option {text-transform:capitalize;}
 
                             /* image input group */
-                            &.image-input-group {display:flex;
-                                                 flex-direction:row;
-                                                 align-items:center;
-                                                 justify-content:space-between;
+                            &.image-input-group {
 
                                    .image {width:7rem;
                                            height:5rem;
@@ -2845,10 +2839,7 @@ header {width:100%;
                             }
 
                             /* voting input group */
-                            &.voting-input-group {display:flex;
-                                                  flex-direction:row;
-                                                  flex-wrap:wrap;
-                                                  justify-content:space-between;
+                            &.voting-input-group {
 
                                    .vote-group {display:flex;
                                                 flex-direction:column;
@@ -2874,20 +2865,18 @@ header {width:100%;
               }
 
               table {flex:1 1 38rem;
-                     background-color: #fff;
-                     border:1px solid var(--gray8);
+                     background-color:var(--gray11);
+                     box-shadow:var(--box-shadow5);
+                     border:none;
        
                      /* head */
                      thead {padding:1rem 0.9rem;
                             background-color:var(--white);
-                            border-bottom:1px solid var(--gray8);
-
-                            &:last-child {border-top:1px solid var(--gray8);}
 
                             tr {
                                 th {padding:0.5rem 1rem;
                                     font-size:1rem;
-                                    color:var(--gray1);
+                                    color:var(--gray11);
 
                                    &:first-child {padding:0.6rem 0.4rem 0.3rem 0.4rem;}
 
@@ -2903,24 +2892,24 @@ header {width:100%;
                             tr td:nth-child(even) {font-weight:bold;}
 
                             tr td {padding:1.1rem 1rem 2rem;
-                                  color:var(--gray1);
-                                  position:relative;}
+                                   color:var(--gray11);
+                                   position:relative;}
 
                             tr td img {width:4rem;
-                                      height:3rem;
-                                      border-radius:0.2rem;}
+                                       height:3rem;
+                                       border-radius:0.2rem;}
 
                             tr td:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
 
                             tr td:nth-child(2) {padding:1.1rem 1rem 2rem 0.1rem;}
 
                             tr td .buttons {position:absolute;
-                                           top:3.5rem;
-                                           left:0.2rem;
-                                           display:flex;
-                                           flex-direction:row;
-                                           gap:0.5rem;
-                                           opacity:0;}
+                                            top:3.5rem;
+                                            left:0.2rem;
+                                            display:flex;
+                                            flex-direction:row;
+                                            gap:0.5rem;
+                                            opacity:0;}
 
                             tr:hover .buttons {opacity:1;}
                      }
