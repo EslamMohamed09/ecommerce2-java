@@ -1872,11 +1872,11 @@ header {width:100%;
                                               font-weight:bold;
                                               margin:0;}
 
-                                          &:hover {border-left:5px solid var(--blue6);}
+                                          &:hover {border-left:5px solid var(--blue12);}
 
                                           &.active {color:var(--white2);
-                                                    background-color:var(--blue5);
-                                                    border-left:5px solid var(--blue6);}
+                                                    background-color:var(--blue10);
+                                                    border-left:5px solid var(--blue12);}
 
                                           &.active h3 {color:var(--white2);}
 
@@ -1933,17 +1933,17 @@ header {width:100%;
                                        margin:0;
                                        background:transparent;
 
-                                   > div:first-child {border-left:0.3rem solid var(--blue5);}
+                                   > div:first-child {border-left:0.3rem solid var(--blue10);}
                                    > div:nth-child(2) {border-left:0.3rem solid var(--red7);}
-                                   > div:nth-child(3) {border-left:0.3rem solid var(--green12);}
+                                   > div:nth-child(3) {border-left:0.3rem solid var(--green14);}
 
-                                   > div:first-child #icon {background-color:var(--blue5);}
+                                   > div:first-child #icon {background-color:var(--blue10);}
                                    > div:nth-child(2) #icon {background-color:var(--red7);}
-                                   > div:nth-child(3) #icon {background-color:var(--green12)}
+                                   > div:nth-child(3) #icon {background-color:var(--green14)}
 
-                                   > div:first-child svg circle {stroke:var(--blue5);}
+                                   > div:first-child svg circle {stroke:var(--blue10);}
                                    > div:nth-child(2) svg circle {stroke:var(--red7);}
-                                   > div:nth-child(3) svg circle {stroke:var(--green12)}
+                                   > div:nth-child(3) svg circle {stroke:var(--green14)}
                                    
 
                                    .insight-card {flex:1 1 17rem;

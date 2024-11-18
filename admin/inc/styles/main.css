@@ -2248,12 +2248,12 @@ header .small-menu .small-menu-link {
   margin: 0;
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link:hover {
-  border-left: 5px solid var(--blue6);
+  border-left: 5px solid var(--blue12);
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link.active {
   color: var(--white2);
-  background-color: var(--blue5);
-  border-left: 5px solid var(--blue6);
+  background-color: var(--blue10);
+  border-left: 5px solid var(--blue12);
 }
 #dashboard-section aside .sidebar .aside-list li .sidebar-link.active h3 {
   color: var(--white2);
@@ -2320,31 +2320,31 @@ header .small-menu .small-menu-link {
   background: transparent;
 }
 .home-page .home-container .section-holder .middle .insights > div:first-child {
-  border-left: 0.3rem solid var(--blue5);
+  border-left: 0.3rem solid var(--blue10);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(2) {
   border-left: 0.3rem solid var(--red7);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(3) {
-  border-left: 0.3rem solid var(--green12);
+  border-left: 0.3rem solid var(--green14);
 }
 .home-page .home-container .section-holder .middle .insights > div:first-child #icon {
-  background-color: var(--blue5);
+  background-color: var(--blue10);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(2) #icon {
   background-color: var(--red7);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(3) #icon {
-  background-color: var(--green12);
+  background-color: var(--green14);
 }
 .home-page .home-container .section-holder .middle .insights > div:first-child svg circle {
-  stroke: var(--blue5);
+  stroke: var(--blue10);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(2) svg circle {
   stroke: var(--red7);
 }
 .home-page .home-container .section-holder .middle .insights > div:nth-child(3) svg circle {
-  stroke: var(--green12);
+  stroke: var(--green14);
 }
 .home-page .home-container .section-holder .middle .insights .insight-card {
   flex: 1 1 17rem;
