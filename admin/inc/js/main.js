@@ -158,7 +158,7 @@ if(document.querySelector("#login-section")){
 
   addCertificationBtn.addEventListener('click', function () { // Certification
       const newCertificationField = document.createElement('div');
-      newCertificationField.className = 'add-certification-form';
+      newCertificationField.className = 'certification-form';
 
       newCertificationField.innerHTML = `
           <h2 class="block-title3 d-flex-r-bt-c">Certification ${certificationNo}<hr></h2>
@@ -179,7 +179,7 @@ if(document.querySelector("#login-section")){
 
           <div class="description-input-box row">
             <label class="control-label col-lg-1 col-md-2 col-sm-2">Description</label>
-            <div class="inputt col-lg-11 col-md-10 col-sm-10"><input type="text" name="certification[${certificationCounter}][edescription]" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off" class="input-control"/></div>
+            <div class="input-holder col-lg-11 col-md-10 col-sm-10"><input type="text" name="certification[${certificationCounter}][edescription]" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off" class="input-control"/></div>
           </div>
       `;
 
