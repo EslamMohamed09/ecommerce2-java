@@ -1,0 +1,33 @@
+{
+  "customers": [
+    {"id":"1", "fullname":"moamen mohamed", "password":"12345", "phone_no":"01003384894", "cust_image":"../images/users/eslam(1).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12575", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"2", "fullname":"kahled mohamed", "password":"12346", "phone_no":"01003384816", "cust_image":"../images/users/eslam(2).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12575", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"3", "fullname":"samy ali", "password":"12347", "phone_no":"01185038568", "cust_image":"../images/users/eslam(3).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12575", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"4", "fullname":"waleed ahmed", "password":"12348", "phone_no":"01000293848", "cust_image":"../images/users/eslam(4).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12638", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"5", "fullname":"abdelrahman khaled", "password":"12349", "phone_no":"012292849275", "cust_image":"../images/users/eslam(5).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12575", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"6", "fullname":"adham ali", "password":"12310", "phone_no":"010074092041", "cust_image":"../images/users/eslam(6).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12575", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"7", "fullname":"samir rushdi", "password":"12345", "phone_no":"01215092041", "cust_image":"../images/users/eslam(7).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12575", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"8", "fullname":"kamel waleed", "password":"12345", "phone_no":"01264092041", "cust_image":"../images/users/eslam(8).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12434", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"9", "fullname":"mohaned ali", "password":"12345", "phone_no":"01274092041", "cust_image":"../images/users/eslam(9).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12909", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"10", "fullname":"kareem mohamed", "password":"12345", "phone_no":"010740920411", "cust_image":"../images/users/eslam(10).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12560", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"11", "fullname":"ramy alaa", "password":"12345", "phone_no":"01274092041", "cust_image":"../images/users/eslam(11).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12640", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"12", "fullname":"merna ali", "password":"12345", "phone_no":"01174092041", "cust_image":"../images/users/eslam(1).jpg", "gender":"female", "country":"Egypt", "city":"", "address":"", "postalcode":"12234", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"13", "fullname":"salma khaled", "password":"12345", "phone_no":"01174092042", "cust_image":"../images/users/eslam(2).jpg", "gender":"female", "country":"Egypt", "city":"", "address":"", "postalcode":"12118", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"14", "fullname":"omar fathi", "password":"12345", "phone_no":"0119030284", "cust_image":"../images/users/eslam(3).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12120", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"},
+
+    {"id":"15", "fullname":"mostafa mohamed", "password":"12345", "phone_no":"01174092043", "cust_image":"../images/users/eslam(3).jpg", "gender":"male", "country":"Egypt", "city":"", "address":"", "postalcode":"12640", "visa_no":"", "question":"", "other_question":"", "answer":"", "date":"18/11/2024"}
+  ]
+}
