@@ -14,89 +14,91 @@
 <body>
 <header class="header" id="header"></header>    
 
-<section class="dashboard-section" id="dashboard-section">
+<section class="category-page dashboard-section" id="dashboard-section">
 
   <aside id="aside"></aside>
 
-  <div class="section-container main-category"> <!-- ===== Main-Category ==== -->
+  <div class="category-page-container section-container"> <!-- ===== category page container ==== -->
 
     <h1 class="section-heading">manage categories</h1>
 
-    <div class="category-container d-flex-r-c-c">
+    <div class="managing-category d-flex-r-c-c">
 
-      <div class="category-data">
+      <form class="add-category-form d-flex-c-st-st">
 
-        <h3 class="container-title">add new category</h3>
+        <div class="sub-heading"> <!-- Add new category -->
+          <h3 class="sub-title">add new category</h3>
+          <i class="fas fa-star"></i>
+        </div>
 
-        <div class="input-holder d-flex-c-st-st">
+        <div class="input-holder d-flex-c-st-st"> <!-- Name -->
           <label for="catname" class="cat-label">name</label>
           <input type="text" name="catname" class="input-control">
         </div>
 
-        <div class="input-holder d-flex-c-st-st">
+        <div class="input-holder d-flex-c-st-st"> <!-- description -->
           <label for="catdesc" class="cat-label">description</label>
           <input type="text" name="catdesc" class="input-control">
         </div>
 
-        <div class="order-input-group input-holder d-flex-c-st-st">
-          <label for="catorder" class="cat-label">order</label>
-          <select name="catorder" id="catorder-select">
-            <option value="drama">drama</option>
-            <option value="linguistics">novel</option>
-            <option value="novel">linguistics</option>
+        <div class="parent-input-holder input-holder d-flex-c-st-st"> <!-- parent -->
+          <label for="parent-select" class="cat-label">parent</label>
+          <select name="parent" id="parent-select">
+            <option value="null">No Parent</option>
+            <option value="electronics">electronics</option>
+            <option value="laptops">laptops</option>
+            <option value="samsung">samsung</option>
           </select>
         </div>
 
-        <div class="image-input-group input-holder d-flex-r-bt-c">
+        <div class="image-input-holder input-holder d-flex-r-bt-c">
           <label class="cat-label">select category image</label>
-          <div class="image">
-            <img src="img/Landmarks/Construction of the Golden Gate Bridge.jpg" alt="">
-          </div>
+          <input type="file" name="image" required>
         </div>
         
-        <div class="voting-input-group input-holder d-flex-r-bt-c">
+        <div class="voting-input-holder input-holder d-flex-r-bt-c">
 
-          <div class="vote-group">
+          <div class="vote-holder">
             <label class="cat-label">visibility</label>
             <div>
-              <label for="vis-yes" class="vote-label">yes</label>
-              <input type="radio" name="allow_visibility" id="vis-yes" value="1" class="input-control"/>
+              <label for="vis-yes">yes</label>
+              <input type="radio" name="allow_visibility" id="vis-yes" value="1"/>
             </div>
             <div>
-              <label for="vis-no" class="vote-label">no</label>
-              <input type="radio" name="allow_visibility" id="vis-no" value="0"  class="input-control"/>
+              <label for="vis-no">no</label>
+              <input type="radio" name="allow_visibility" id="vis-no" value="0" />
             </div>
           </div>
 
-          <div class="vote-group">
+          <div class="vote-holder">
             <label class="cat-label">allow comment</label>
             <div>
-              <label for="comm-yes" class="vote-label">yes</label>
-              <input type="radio" name="allow_comment" id="comm-yes" value="1" class="input-control"/>
+              <label for="comm-yes">yes</label>
+              <input type="radio" name="allow_comment" id="comm-yes" value="1"/>
             </div>
             <div>
-              <label for="comm-no" class="vote-label">no</label>
-              <input type="radio" name="allow_comment" id="comm-no" value="0"  class="input-control"/>
+              <label for="comm-no">no</label>
+              <input type="radio" name="allow_comment" id="comm-no" value="0"/>
             </div>
           </div>
 
-          <div class="vote-group">
+          <div class="vote-holder">
             <label class="cat-label">allow ads</label>
             <div>
-              <label for="ads-yes" class="vote-label">yes</label>
-              <input type="radio" name="allow_ads" id="ads-yes" value="1" class="input-control"/>
+              <label for="ads-yes">yes</label>
+              <input type="radio" name="allow_ads" id="ads-yes" value="1"/>
             </div>
             <div>
-              <label for="ads-no" class="vote-label">no</label>
-              <input type="radio" name="allow_ads" id="ads-no" value="0"  class="input-control"/>
+              <label for="ads-no">no</label>
+              <input type="radio" name="allow_ads" id="ads-no" value="0"/>
             </div>
           </div>
 
         </div>
 
-        <input type="submit" value="add new category">
+        <input type="submit" value="add new category" class="btn2">
 
-      </div>
+      </form>
 
       <table>
 
@@ -106,10 +108,8 @@
             <th><label for="cat-name-check">name</label></th>
             <th>description</th>
             <th>image</th>
-            <th>order</th>
-            <th>visibility</th>
-            <th>allow comment</th>
-            <th>allow ads</th>
+            <th>parent</th>
+            <th>level</th>
           </tr>
         </thead>
 
@@ -122,8 +122,6 @@
             <td><img src="img/Landmarks/Ellis Island.jpg" alt=""></td>
             <td>1</td>
             <td>yes</td>
-            <td>no</td>
-            <td>yes</td>
           </tr>
 
           <tr>
@@ -132,8 +130,6 @@
             <td>many of novels</td>
             <td><img src="img/Landmarks/Construction of the Golden Gate Bridge.jpg" alt=""></td>
             <td>1</td>
-            <td>yes</td>
-            <td>no</td>
             <td>yes</td>
           </tr>
 
@@ -144,8 +140,6 @@
             <td><img src="img/Landmarks/The Massachusetts State House.jpg" alt=""></td>
             <td>1</td>
             <td>yes</td>
-            <td>yes</td>
-            <td>yes</td>
           </tr>
 
           <tr>
@@ -155,8 +149,6 @@
             <td><img src="img/Landmarks/Ellis Island.jpg" alt=""></td>
             <td>1</td>
             <td>no</td>
-            <td>no</td>
-            <td>yes</td>
           </tr>
 
         </tbody>
@@ -164,13 +156,11 @@
         <thead>
           <tr>
             <th><input type="checkbox" id="cat-name-check"></th>
-            <th>name</th>
+            <th><label for="cat-name-check">name</label></th>
             <th>description</th>
             <th>image</th>
-            <th>order</th>
-            <th>visibility</th>
-            <th>allow comment</th>
-            <th>allow ads</th>
+            <th>parent</th>
+            <th>level</th>
           </tr>
         </thead>
         

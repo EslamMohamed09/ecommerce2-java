@@ -1203,7 +1203,7 @@ input[type="file"] {cursor:pointer;}
                 border-radius:0.2rem;
                 border-top-left-radius:0.7rem;
                 border-top-right-radius:0.7rem;
-                box-shadow:var(--box-shadow2);
+                box-shadow:var(--box-shadow5);
                 background-color:var(--white);
 
 
@@ -1237,8 +1237,8 @@ input[type="file"] {cursor:pointer;}
                    font-size:1.1rem;
                    border-radius:1.5rem;
                    margin-left:0.5rem;
-                   color:rgb(0, 204, 255);
-                   background-color:var(--primary16);}
+                   color:var(--milky2);
+                   background-color:var(--blue4);}
        }
 
        .ordering-btns {font-size:1.1rem;
@@ -1263,7 +1263,7 @@ table {width:100%;
        margin-bottom:1.5rem;
        border-radius:0.7rem;
        border-collapse:collapse;
-       box-shadow:var(--box-shadow2);
+       box-shadow:var(--box-shadow5);
        background-color:transparent;
 
        /* head */
@@ -2756,10 +2756,10 @@ header {width:100%;
                             &:last-child {border-top:1px solid var(--gray3);}
 
                             tr th:not(:first-child) {padding:0.4rem 1rem 1rem;
-                                                 text-align:center;}
+                                                     text-align:center;}
 
                             tr th:first-child {padding:0 0.1rem 0.3rem 1rem;
-                                          text-align:center;}
+                                               text-align:center;}
 
                             tr th:nth-child(2) {text-align:left;}
                      }
@@ -2800,75 +2800,73 @@ header {width:100%;
  ####### MAIN CATEGORY ######
  ============================
 */
-.main-category {
+.category-page-container {
 
        h1 {font-size:1.7rem;
             font-weight:bold;}
 
-      .category-container {flex-wrap:wrap;
+       .managing-category {flex-wrap:wrap;
                            padding:0;
-                           padding-top:2rem; 
+                           padding-top:2rem;
                            gap:1rem;
 
-              .category-data {flex:1 1 12rem;
-                              display:flex;
-                              flex-direction:column;
-                              gap:2rem;
+              .add-category-form {flex:1 1 12rem;
+                                  gap:2rem;
 
-                     .input-holder {gap:0.5rem;
+                     .input-holder {width:100%;
+                                    gap:0.5rem;
                                     background-color:transparent;
 
                             .cat-label {font-size:1rem;
                                         font-weight:bold;
                                         color:var(--gray11);}
 
-                            /* order input group */
-                            &.order-input-group #catorder-select,
-                            &.order-input-group #catorder-select:focus {border:none;
-                                                                        outline:none;
-                                                                        text-transform:capitalize;
-                                                                        padding:0.4rem 0.1rem;}
+                            .input-control {width:100%;}
 
-                            &.order-input-group #catorder-select option {text-transform:capitalize;}
-
-                            /* image input group */
-                            &.image-input-group {
-
-                                   .image {width:7rem;
-                                           height:5rem;
-                                           cursor:pointer;
-
-                                          img {width:100%;
-                                               height:100%;
-                                               object-fit:cover;
-                                               border-radius:0.5rem;}
-                                   }
+                            /* parent input holder */
+                            &.parent-input-holder #parent-select {width:100%;
+                                                                  border:none;
+                                                                  outline:none;
+                                                                  text-transform:capitalize;
+                                   option {text-transform:capitalize;}
                             }
 
-                            /* voting input group */
-                            &.voting-input-group {
+                            /* image input holder */
+                            &.image-input-holder {
+                                   .cat-label {flex: 0 0 auto;}
+                                   input[type="file"] {flex: 0 0 auto;
+                                                       margin-left:auto;}
+                            }
 
-                                   .vote-group {display:flex;
+                            /* voting input holder */
+                            &.voting-input-holder {width:100%;
+
+                                   .vote-holder {display:flex;
                                                 flex-direction:column;
 
-                                          .cat-label {margin-bottom:0.4rem;}
+                                          .cat-label {font-size:1rem;
+                                                      margin-bottom:0.4rem;}
 
                                           > div {display:flex;
                                                  flex-direction:row;
-                                                 gap:0.4rem;
+                                                 justify-content:space-between;
+                                                 min-width:3rem;
                                                  margin:0;
-                                                 margin-top:0.1rem;}
+                                                 margin-top:0.1rem;
 
-                                          > div .vote-label {font-size:1rem;
-                                                             cursor:pointer;}
+                                                 label {font-size:1.1rem;
+                                                        cursor:pointer;}
 
-                                          > div:last-child .input-control {margin-left:0.3rem;}
+                                                 input[type="radio"]:focus {box-shadow:none;}
+                                          }
                                    }
                             }
 
-                            input[type="submit"] {margin:0;
-                                                  margin-top:1rem;}
-                     }    
+                     }
+
+                     input[type="submit"] {width:100%;
+                                           margin:0;
+                                           }
               }
 
               table {flex:1 1 38rem;
@@ -2887,13 +2885,14 @@ header {width:100%;
 
                                    &:first-child {padding:0.6rem 0.4rem 0.3rem 0.4rem;}
 
-                                   &:nth-child(2) {padding:0.5rem 0.4rem 0.5rem 0;}
+                                   &:nth-child(2) {padding:0.5rem 0.4rem 0.5rem 0;
+                                                   text-align:left;}
                                 }
                             }
                      }
 
                      /* body */
-                     tbody { 
+                     tbody {
                             tr:nth-child(odd) {background-color:rgb(243, 247, 252);}
 
                             tr td:nth-child(even) {font-weight:bold;}
@@ -2908,7 +2907,8 @@ header {width:100%;
 
                             tr td:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
 
-                            tr td:nth-child(2) {padding:1.1rem 1rem 2rem 0.1rem;}
+                            tr td:nth-child(2) {padding:1.1rem 1rem 2rem 0.1rem;
+                                                text-align:left;}
 
                             tr td .buttons {position:absolute;
                                             top:3.5rem;

@@ -468,32 +468,30 @@ const submitBttnsHolder = document.querySelector(".submit-buttons-holder");
 
 if (firstHeadCheckBoxes && secondHeadCheckBoxes){
     
-    function checkedCheckboxes(){
-      const selectedCheckBoxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
-      if (selectedCheckBoxes.length > 1){
-          submitBttnsHolder.style.display = "flex";
+    function checkedCheckBoxes(){
+      const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
+      if(selectedCheckBoxes.length > 1){
+         submitBttnsHolder.style.display = "flex";
       } else {
         submitBttnsHolder.style.display = "none";
       }
     }
 
     checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', checkedCheckboxes);
+      checkbox.addEventListener("change", checkedCheckBoxes);
     });
 
-    function toggleHeadCheckBoxes(clickedHeadCheckBox, targetHeadCheckBox) {
-        checkboxes.forEach(checkbox => checkbox.checked = clickedHeadCheckBox.checked);
-        targetHeadCheckBox.checked = clickedHeadCheckBox.checked; // select also another head checkbox
-        checkedCheckboxes();
-    }
-
-    // Attach event listeners
-    firstHeadCheckBoxes.addEventListener('change', () => { // Appear submit-buttons-holder on allcheckboxes - first-checkbox
-      toggleHeadCheckBoxes(firstHeadCheckBoxes, secondHeadCheckBoxes);
+    firstHeadCheckBoxes.addEventListener("change", () => {
+      checkboxes.forEach(checkbox => checkbox.checked = firstHeadCheckBoxes.checked);
+      secondHeadCheckBoxes.checked = firstHeadCheckBoxes.checked;
+      checkedCheckBoxes();
     });
 
-    secondHeadCheckBoxes.addEventListener('change', () => { // Appear submit-buttons-holder on allcheckboxes - second-checkbox
-      toggleHeadCheckBoxes(secondHeadCheckBoxes, firstHeadCheckBoxes);
+    secondHeadCheckBoxes.addEventListener("change", () => {
+      checkboxes.forEach(checkbox => checkbox.checked = secondHeadCheckBoxes.checked);
+      checkboxes.checked = secondHeadCheckBoxes.checked;
+      firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
+      checkedCheckBoxes();
     });
 
 }
