@@ -461,10 +461,11 @@ if(document.getElementById("visaInput")){
 }
 
 // Appear Multiple Buttons & Select all items
-const firstHeadCheckBoxes = document.getElementById("first-head-checkbox");
-const secondHeadCheckBoxes = document.getElementById("second-head-checkbox");
-const checkboxes = document.querySelectorAll("input[name='checkbox[]']");
-const submitBttnsHolder = document.querySelector(".submit-buttons-holder");
+document.querySelectorAll(".manage-table-form").forEach((managetable) => {
+const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
+const secondHeadCheckBoxes = managetable.querySelector("#second-head-checkbox");
+const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
+const submitBttnsHolder = managetable.querySelector(".submit-buttons-holder");
 
 if (firstHeadCheckBoxes && secondHeadCheckBoxes){
     
@@ -493,6 +494,6 @@ if (firstHeadCheckBoxes && secondHeadCheckBoxes){
       firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
       checkedCheckBoxes();
     });
-
 }
+});
 

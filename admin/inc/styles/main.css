@@ -1472,14 +1472,16 @@ input[type=file] {
   border-radius: 0.2rem;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
-  box-shadow: var(--box-shadow5);
+  box-shadow: var(--box-shadow6);
   background-color: var(--white);
 }
 .table-details .form-search {
   flex-wrap: nowrap;
   width: 30%;
+  padding: 0;
   border-radius: 0.2rem 0 0 0.2rem;
-  box-shadow: var(--box-shadow2);
+  box-shadow: none;
+  border: 1px solid var(--gray3);
 }
 .table-details .form-search input[type=search] {
   width: calc(100% - 3rem);
@@ -1492,6 +1494,7 @@ input[type=file] {
 }
 .table-details .form-search #submit-search {
   width: 3rem;
+  height: 100%;
   padding: 0.3rem 0.6rem;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: var(--blue5);
@@ -1542,7 +1545,7 @@ table {
   margin-bottom: 1.5rem;
   border-radius: 0.7rem;
   border-collapse: collapse;
-  box-shadow: var(--box-shadow5);
+  box-shadow: var(--box-shadow6);
   background-color: transparent;
   /* head */
   /* body */
@@ -3234,6 +3237,12 @@ header .small-menu .small-menu-link {
 .customers-page .customer-container table thead {
   background-color: var(--white);
 }
+.customers-page .customer-container table thead:first-child tr th:first-child {
+  border-top-left-radius: 0;
+}
+.customers-page .customer-container table thead:first-child tr th:last-child {
+  border-top-right-radius: 0;
+}
 .customers-page .customer-container table thead:first-child {
   border-bottom: 1px solid var(--gray3);
 }
@@ -3295,17 +3304,17 @@ header .small-menu .small-menu-link {
   font-size: 1.7rem;
   font-weight: bold;
 }
-.category-page-container .managing-category {
+.category-page-container .add-managing-category {
   flex-wrap: wrap;
   padding: 0;
   padding-top: 2rem;
   gap: 1rem;
 }
-.category-page-container .managing-category .add-category-form {
+.category-page-container .add-managing-category .add-category-form {
   flex: 1 1 12rem;
   gap: 2rem;
 }
-.category-page-container .managing-category .add-category-form .input-holder {
+.category-page-container .add-managing-category .add-category-form .input-holder {
   width: 100%;
   gap: 0.5rem;
   background-color: transparent;
@@ -3313,42 +3322,42 @@ header .small-menu .small-menu-link {
   /* image input holder */
   /* voting input holder */
 }
-.category-page-container .managing-category .add-category-form .input-holder .cat-label {
+.category-page-container .add-managing-category .add-category-form .input-holder .cat-label {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray11);
 }
-.category-page-container .managing-category .add-category-form .input-holder .input-control {
+.category-page-container .add-managing-category .add-category-form .input-holder .input-control {
   width: 100%;
 }
-.category-page-container .managing-category .add-category-form .input-holder.parent-input-holder #parent-select {
+.category-page-container .add-managing-category .add-category-form .input-holder.parent-input-holder #parent-select {
   width: 100%;
   border: none;
   outline: none;
   text-transform: capitalize;
 }
-.category-page-container .managing-category .add-category-form .input-holder.parent-input-holder #parent-select option {
+.category-page-container .add-managing-category .add-category-form .input-holder.parent-input-holder #parent-select option {
   text-transform: capitalize;
 }
-.category-page-container .managing-category .add-category-form .input-holder.image-input-holder .cat-label {
+.category-page-container .add-managing-category .add-category-form .input-holder.image-input-holder .cat-label {
   flex: 0 0 auto;
 }
-.category-page-container .managing-category .add-category-form .input-holder.image-input-holder input[type=file] {
+.category-page-container .add-managing-category .add-category-form .input-holder.image-input-holder input[type=file] {
   flex: 0 0 auto;
   margin-left: auto;
 }
-.category-page-container .managing-category .add-category-form .input-holder.voting-input-holder {
+.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder {
   width: 100%;
 }
-.category-page-container .managing-category .add-category-form .input-holder.voting-input-holder .vote-holder {
+.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder {
   display: flex;
   flex-direction: column;
 }
-.category-page-container .managing-category .add-category-form .input-holder.voting-input-holder .vote-holder .cat-label {
+.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder .cat-label {
   font-size: 1rem;
   margin-bottom: 0.4rem;
 }
-.category-page-container .managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div {
+.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -3356,65 +3365,67 @@ header .small-menu .small-menu-link {
   margin: 0;
   margin-top: 0.1rem;
 }
-.category-page-container .managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div label {
+.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div label {
   font-size: 1.1rem;
   cursor: pointer;
 }
-.category-page-container .managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div input[type=radio]:focus {
+.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div input[type=radio]:focus {
   box-shadow: none;
 }
-.category-page-container .managing-category .add-category-form input[type=submit] {
+.category-page-container .add-managing-category .add-category-form input[type=submit] {
   width: 100%;
   margin: 0;
 }
-.category-page-container .managing-category table {
+.category-page-container .add-managing-category .manage-category-form {
   flex: 1 1 38rem;
+}
+.category-page-container .add-managing-category .manage-category-form table {
   background-color: var(--gray11);
   box-shadow: var(--box-shadow5);
   border: none;
   /* head */
   /* body */
 }
-.category-page-container .managing-category table thead {
+.category-page-container .add-managing-category .manage-category-form table thead {
   padding: 1rem 0.9rem;
   background-color: var(--white);
 }
-.category-page-container .managing-category table thead tr th {
+.category-page-container .add-managing-category .manage-category-form table thead tr th {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: var(--gray11);
 }
-.category-page-container .managing-category table thead tr th:first-child {
+.category-page-container .add-managing-category .manage-category-form table thead tr th:first-child {
   padding: 0.6rem 0.4rem 0.3rem 0.4rem;
 }
-.category-page-container .managing-category table thead tr th:nth-child(2) {
+.category-page-container .add-managing-category .manage-category-form table thead tr th:nth-child(2) {
   padding: 0.5rem 0.4rem 0.5rem 0;
   text-align: left;
 }
-.category-page-container .managing-category table tbody tr:nth-child(odd) {
+.category-page-container .add-managing-category .manage-category-form table tbody tr:nth-child(odd) {
   background-color: rgb(243, 247, 252);
 }
-.category-page-container .managing-category table tbody tr td:nth-child(even) {
+.category-page-container .add-managing-category .manage-category-form table tbody tr td:nth-child(even) {
   font-weight: bold;
 }
-.category-page-container .managing-category table tbody tr td {
+.category-page-container .add-managing-category .manage-category-form table tbody tr td {
   padding: 1.1rem 1rem 2rem;
   color: var(--gray11);
   position: relative;
 }
-.category-page-container .managing-category table tbody tr td img {
+.category-page-container .add-managing-category .manage-category-form table tbody tr td img {
   width: 4rem;
   height: 3rem;
   border-radius: 0.2rem;
 }
-.category-page-container .managing-category table tbody tr td:first-child {
+.category-page-container .add-managing-category .manage-category-form table tbody tr td:first-child {
   padding: 1.4rem 0rem 2rem 0.5rem;
 }
-.category-page-container .managing-category table tbody tr td:nth-child(2) {
+.category-page-container .add-managing-category .manage-category-form table tbody tr td:nth-child(2) {
   padding: 1.1rem 1rem 2rem 0.1rem;
   text-align: left;
 }
-.category-page-container .managing-category table tbody tr td .buttons {
+.category-page-container .add-managing-category .manage-category-form table tbody tr td .buttons {
   position: absolute;
   top: 3.5rem;
   left: 0.2rem;
@@ -3423,8 +3434,17 @@ header .small-menu .small-menu-link {
   gap: 0.5rem;
   opacity: 0;
 }
-.category-page-container .managing-category table tbody tr:hover .buttons {
+.category-page-container .add-managing-category .manage-category-form table tbody tr:hover .buttons {
   opacity: 1;
+}
+.category-page-container .add-managing-category .manage-category-form .submit-buttons-holder {
+  width: fit-content;
+  gap: 2rem;
+  display: none;
+}
+.category-page-container .add-managing-category .manage-category-form .submit-buttons-holder input[type=submit] {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 0 0.5rem;
 }
 
 /*

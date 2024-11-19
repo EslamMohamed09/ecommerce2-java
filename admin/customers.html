@@ -43,7 +43,7 @@
 
           </div>
 
-          <form action="" method="POST" style="width:100%;"> <!-- multiple delete form -->
+          <form action="" method="POST" class="manage-table-form" style="width:100%;"> <!-- multiple delete form -->
 
             <table>
 
@@ -66,7 +66,7 @@
 
               <tbody>
                 <tr>
-                  <td><input type="checkbox" id="cu-name-21" class="checkboxinput" name="checkbox[]" value="21"></td>
+                  <td><input type="checkbox" name="checkbox[]" id="cu-name-21" value="21"></td>
                   <td>
                       <label for="cu-name-21">mohaned ahmed</label>
                       <div class="buttons">
@@ -86,7 +86,7 @@
                   <td>22</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" id="cu-name-23" class="checkboxinput" name="checkbox[]" value="21"></td>
+                  <td><input type="checkbox" name="checkbox[]" id="cu-name-23" value="21"></td>
                   <td>
                       <label for="cu-name-23">khaled ali</label>
                       <div class="buttons">
@@ -106,7 +106,7 @@
                   <td>23</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" id="cu-name-24" class="checkboxinput" name="checkbox[]" value="24"></td>
+                  <td><input type="checkbox" name="checkbox[]" id="cu-name-24" value="24"></td>
                   <td>
                       <label for="cu-name-24">waleed ali</label>
                       <div class="buttons">
@@ -126,7 +126,7 @@
                   <td>24</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" id="cu-name-25" class="checkboxinput" name="checkbox[]" value="24"></td>
+                  <td><input type="checkbox" name="checkbox[]" id="cu-name-25" value="24"></td>
                   <td>
                       <label for="cu-name-25">motaz ali</label>
                       <div class="buttons">
@@ -166,6 +166,10 @@
 
             </table>
 
+            <div class="submit-buttons-holder d-flex-r-st-c">
+              <input type="submit" name="multipledelete" value="delete" class="btn2">
+            </div>
+
             <div class="pagination">
               <a href="?page=2" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
             
@@ -177,10 +181,6 @@
               <a href="?page=7" class="pagination-link">7</a>
             
               <a href="?page=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
-            </div>
-
-            <div class="submit-buttons-holder d-flex-r-st-c">
-              <input type="submit" name="multipledelete" value="delete" class="btn2">
             </div>
 
           </form>

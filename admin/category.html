@@ -22,7 +22,7 @@
 
     <h1 class="section-heading">manage categories</h1>
 
-    <div class="managing-category d-flex-r-c-c">
+    <div class="add-managing-category d-flex-r-st-st">
 
       <form class="add-category-form d-flex-c-st-st">
 
@@ -100,71 +100,93 @@
 
       </form>
 
-      <table>
+      <form action="" class="manage-category-form manage-table-form d-flex-c-st-st">
+        <table>
 
-        <thead>
-          <tr>
-            <th><input type="checkbox" id="cat-name-check"></th>
-            <th><label for="cat-name-check">name</label></th>
-            <th>description</th>
-            <th>image</th>
-            <th>parent</th>
-            <th>level</th>
-          </tr>
-        </thead>
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="first-head-checkbox"></th>
+              <th><label for="first-head-checkbox">name</label></th>
+              <th>description</th>
+              <th>image</th>
+              <th>parent</th>
+              <th>level</th>
+            </tr>
+          </thead>
 
-        <tbody>
+          <tbody>
 
-          <tr>
-            <td><input type="checkbox" id="cat-name-1"></td>
-            <td><label for="cat-name-1">drama</label> <div class="buttons"> <a href="#">edit</a>|<a href="#">delete</a> </div> </td>
-            <td>drama of shakespear</td>
-            <td><img src="img/Landmarks/Ellis Island.jpg" alt=""></td>
-            <td>1</td>
-            <td>yes</td>
-          </tr>
+            <tr>
+              <td><input type="checkbox" name="checkbox[]" id="cat-name-1"></td>
+              <td>
+                <label for="cat-name-1">drama</label> 
+                <div class="buttons"><a href="#">edit</a>|<a href="#">delete</a></div> 
+              </td>
+              <td>drama of shakespear</td>
+              <td><img src="img/Landmarks/Ellis Island.jpg" alt=""></td>
+              <td>1</td>
+              <td>yes</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="checkbox[]" id="cat-name-2"></td>
+              <td><label for="cat-name-2">novel</label> <div class="buttons"> <a href="#">edit</a>|<a href="#">delete</a> </div> </td>
+              <td>many of novels</td>
+              <td><img src="img/Landmarks/Construction of the Golden Gate Bridge.jpg" alt=""></td>
+              <td>1</td>
+              <td>yes</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="checkbox[]" id="cat-name-3"></td>
+              <td><label for="cat-name-3">short stories</label> <div class="buttons"> <a href="#">edit</a>|<a href="#">delete</a> </div> </td>
+              <td>old short stories</td>
+              <td><img src="img/Landmarks/The Massachusetts State House.jpg" alt=""></td>
+              <td>1</td>
+              <td>yes</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="checkbox[]" id="cat-name-4"></td>
+              <td>
+                <label for="cat-name-4">linguistics</label>
+                <div class="buttons"><a href="#">edit</a>|<a href="#">delete</a></div>
+              </td>
+              <td>history of linguistics</td>
+              <td><img src="img/Landmarks/Ellis Island.jpg" alt=""></td>
+              <td>1</td>
+              <td>no</td>
+            </tr>
 
-          <tr>
-            <td><input type="checkbox" id="cat-name-2"></td>
-            <td><label for="cat-name-2">novel</label> <div class="buttons"> <a href="#">edit</a>|<a href="#">delete</a> </div> </td>
-            <td>many of novels</td>
-            <td><img src="img/Landmarks/Construction of the Golden Gate Bridge.jpg" alt=""></td>
-            <td>1</td>
-            <td>yes</td>
-          </tr>
+          </tbody>
 
-          <tr>
-            <td><input type="checkbox" id="cat-name-3"></td>
-            <td><label for="cat-name-3">short stories</label> <div class="buttons"> <a href="#">edit</a>|<a href="#">delete</a> </div> </td>
-            <td>old short stories</td>
-            <td><img src="img/Landmarks/The Massachusetts State House.jpg" alt=""></td>
-            <td>1</td>
-            <td>yes</td>
-          </tr>
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="second-head-checkbox"></th>
+              <th><label for="second-head-checkbox">name</label></th>
+              <th>description</th>
+              <th>image</th>
+              <th>parent</th>
+              <th>level</th>
+            </tr>
+          </thead>
+          
+        </table>
 
-          <tr>
-            <td><input type="checkbox" id="cat-name-4"></td>
-            <td><label for="cat-name-4">linguistics</label> <div class="buttons"> <a href="#">edit</a>|<a href="#">delete</a> </div> </td>
-            <td>history of linguistics</td>
-            <td><img src="img/Landmarks/Ellis Island.jpg" alt=""></td>
-            <td>1</td>
-            <td>no</td>
-          </tr>
+        <div class="submit-buttons-holder d-flex-r-st-c">
+          <input type="submit" name="multipledelete" value="delete" class="btn2">
+        </div>
 
-        </tbody>
-
-        <thead>
-          <tr>
-            <th><input type="checkbox" id="cat-name-check"></th>
-            <th><label for="cat-name-check">name</label></th>
-            <th>description</th>
-            <th>image</th>
-            <th>parent</th>
-            <th>level</th>
-          </tr>
-        </thead>
+        <div class="pagination">
+          <a href="?page=2" class="pagination-link previous"><i class="fas fa-chevron-left"></i> previous</a>
         
-      </table>
+          <a href="?page=1" class="pagination-link">1</a>
+          <a href="?page=2" class="pagination-link">2</a>
+          <a href="?page=3" class="pagination-link active">3</a>
+          <span class="pagination-dots">....</span>
+          <a href="?page=6" class="pagination-link">6</a>
+          <a href="?page=7" class="pagination-link">7</a>
+        
+          <a href="?page=4" class="pagination-link next">next <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </form>
 
     </div>
 
