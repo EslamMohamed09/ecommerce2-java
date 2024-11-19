@@ -2771,19 +2771,26 @@ header {width:100%;
                             tr td:nth-child(odd) {font-weight:bold;}
 
                             tr td:not(:first-child) {padding:1.1rem 1rem 2rem;
-                                                 color:var(--gray10);
-                                                 text-align:center;}
+                                                     color:var(--gray10);
+                                                     text-align:center;}
 
                             tr td:first-child {padding:0 0.1rem 0.3rem 1rem;
-                                          text-align:center;}
+                                               text-align:center;}
 
                             tr td:nth-child(2) {text-align:left;}
 
                             tr td .buttons {left:1rem;}
 
                             tr td .buttons > a {color:var(--gray-yellow6);
-                                          text-transform:uppercase;}
+                                                text-transform:uppercase;}
                      }
+              }
+
+              .submit-buttons-holder {width:fit-content;
+                                      gap:2rem;
+                                      display:none;
+                     input[type="submit"] {padding:0.5rem 1rem;
+                                           margin:1rem 0 0 0.5rem;}
               }
        }
 }

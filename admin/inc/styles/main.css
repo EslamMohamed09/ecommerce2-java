@@ -3276,6 +3276,15 @@ header .small-menu .small-menu-link {
   color: var(--gray-yellow6);
   text-transform: uppercase;
 }
+.customers-page .customer-container .submit-buttons-holder {
+  width: fit-content;
+  gap: 2rem;
+  display: none;
+}
+.customers-page .customer-container .submit-buttons-holder input[type=submit] {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 0 0.5rem;
+}
 
 /*
  ============================
