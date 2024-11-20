@@ -1,3 +1,37 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+  const preloader = document.createElement('div');
+        preloader.classList.add('loader7');
+
+  preloader.innerHTML = `
+    <div class="loader7-container">
+      <div class="loader7-block">
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+      </div>
+    </div>
+  `;
+  document.body.insertBefore(preloader, document.body.firstChild);
+
+  preloader.style.display = "flex";
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      preloader.style.transition = "opacity 0.5s ease";
+
+      preloader.addEventListener("transitionend", () => {
+        preloader.remove();
+      });
+    }, 500);
+  });
+});
+
 function loadHtml(selector, htmlContent, type){
   document.querySelector(selector).innerHTML = htmlContent;
 
