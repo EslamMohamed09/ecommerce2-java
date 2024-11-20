@@ -498,7 +498,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000000;
-  background: var(--blue6);
+  background: var(--lightblue10);
   backdrop-filter: blur(80px);
 }
 .loader7 .loader7-container {
