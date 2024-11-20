@@ -17,7 +17,21 @@ html {font-size:83%}
 body {overflow-x:hidden;
       background-color:var(--background-color);}
 
-:root {--violet:#ebddf1;
+:root {--gray:#f2f2f7;
+       --gray1:#f0f0f8;
+       --gray2:#ebebee;
+       --gray3:#e5e5e7;
+       --gray4:#c9c9ca;
+       --gray5:#999;
+       --gray6:#888;
+       --gray7:#777;
+       --gray8:#666;
+       --gray9:#444;
+       --gray10:#333;
+       --gray11:#222;
+       --gray12:#111;
+       
+       --violet:#ebddf1;
        --violet2:#dfc5ec;
        --violet3:#d8b3eb;
        --violet4:#c998e2;
@@ -28,6 +42,9 @@ body {overflow-x:hidden;
        --violet9:#70199b;
        --violet10:#4d106b;
        --violet11:#42106b;
+       --violet12:#3c0f61;
+       --violet13:#2d0d47;
+       --violet14:#1b011f;
 
        --transparent-violet:rgba(99, 49, 192, 0.137);
 
@@ -156,13 +173,15 @@ body {overflow-x:hidden;
        --lightblue4:#d7dfe2;
        --lightblue5:#d5dfe2;
        --lightblue6:#d0e0e6;
-       --lightblue7:#c9e4ee;
-       --lightblue8:#c2e2ee;
-       --lightblue9:#bfe4f1;
-       --lightblue10:#b7e1f0;
-       --lightblue11:#afdff0;
-       --lightblue12:#a7dcf0;
-       --lightblue13:#a7dcf0;
+       --lightblue7:#c9d3df;
+       --lightblue8:#acbfd4;
+       --lightblue9:#c9e4ee;
+       --lightblue10:#c2e2ee;
+       --lightblue11:#bfe4f1;
+       --lightblue12:#b7e1f0;
+       --lightblue13:#afdff0;
+       --lightblue14:#a7dcf0;
+       --lightblue15:#a7dcf0;
 
        --blue:#60c8fc;
        --blue1:#00b7ff;
@@ -183,14 +202,17 @@ body {overflow-x:hidden;
        --blue16:#0c3e77;
        --blue17:#052aa1;
        --blue18:#162753;
-       --blue19:#2b3a5f;
+       --blue19:#0e1935;
+       --blue20:#191e2e;
 
        --navyblue:#8B8E98;
        --navyblue2:#343a40;
-       --navyblue3:#2a2e35;
-       --navyblue4:#202733;
-       --navyblue5:#32303e;
-       --navyblue6:#252532;
+       --navyblue3:#2b3a5f;
+       --navyblue4:#2a2e35;
+       --navyblue5:#2a2e35;
+       --navyblue6:#202733;
+       --navyblue7:#32303e;
+       --navyblue8:#252532;
 
        --transparent-blue:#176ec021;
 
@@ -198,20 +220,6 @@ body {overflow-x:hidden;
        --transparent-gray10:rgba(214, 214, 214, 0.192);
 
        --light-gray:#8d8d8d;
-
-       --gray:#f2f2f7;
-       --gray1:#f0f0f8;
-       --gray2:#ebebee;
-       --gray3:#e5e5e7;
-       --gray4:#c9c9ca;
-       --gray5:#999;
-       --gray6:#888;
-       --gray7:#777;
-       --gray8:#666;
-       --gray9:#444;
-       --gray10:#333;
-       --gray11:#222;
-       --gray12:#111;
 
        --gray-yellow0:rgb(235, 236, 201);
        --gray-yellow:rgb(221, 223, 150);
@@ -284,6 +292,7 @@ body {overflow-x:hidden;
        --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
        --blue4-box-shadow:0 16px 12px rgba(39, 94, 254, 0.28);
        --blue5-box-shadow:0 0 6px #3356ca;
+       --blue6-box-shadow:0 0.5rem 2rem rgba(55, 0, 255, 0.7);
        --green-box-shadow:0 0 6px #09995d;
        --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
 
@@ -448,7 +457,8 @@ body {overflow-x:hidden;
           top:0;
           left:0;
           z-index:1000000;
-          background-color:var(--white);
+          background:var(--blue6);
+          backdrop-filter:blur(80px);
        .loader7-container {width:100%;
                            height:100%;
                            position:relative;
@@ -795,7 +805,7 @@ button:focus {box-shadow:var(--box-shadow2);}
           font-size:2.3rem;
           font-weight:bold;
           color:var(--aqua2);
-          background-color:var(--aqua16);
+          background-color:var(--aqua14);
        &:hover {color:var(--aqua);
                 background-color:var(--aqua12);}
 }
