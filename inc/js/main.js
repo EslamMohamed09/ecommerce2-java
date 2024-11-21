@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
         preloader.classList.add('loader17');
 
   preloader.innerHTML = `
-    <div class="loader17">
-      <svg class="loader17-container" height="128px" width="128px" viewBox="0 0 128 128">
+    <div class="loader17-container">
+      <svg class="loader17-block" height="128px" width="128px" viewBox="0 0 128 128">
           <defs>
             <linearGradient y2="1" x2="1" y1="0" x1="0" id="pl-grad">
               <stop stop-color="#000" offset="0%"></stop>

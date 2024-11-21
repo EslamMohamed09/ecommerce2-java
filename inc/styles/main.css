@@ -156,7 +156,7 @@
   --aqua11:#0ce9e9;
   --aqua12:#09caca;
   --aqua13:#00c7c7;
-  --aqua16:#03a7a7;
+  --aqua14:#03a7a7;
   --lightblue:#f0f4f7;
   --lightblue1:#eaebf1;
   --lightblue2:#e5e7f0;
@@ -515,21 +515,30 @@ body {
   align-items: center;
 }
 .loader17 .loader17-container {
-  display: block;
-  width: 8em;
-  height: 8em;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: relative;
 }
-.loader17 .loader17-container .pl1__g,
-.loader17 .loader17-container .pl1__rect {
+.loader17 .loader17-container .loader17-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 8rem;
+}
+.loader17 .loader17-container .loader17-block .pl1__g,
+.loader17 .loader17-container .loader17-block .pl1__rect {
   animation: pl1-a 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
-.loader17 .loader17-container .pl1__g {
+.loader17 .loader17-container .loader17-block .pl1__g {
   transform-origin: 64px 64px;
 }
-.loader17 .loader17-container .pl1__rect:first-child {
+.loader17 .loader17-container .loader17-block .pl1__rect:first-child {
   animation-name: pl1-b;
 }
-.loader17 .loader17-container .pl1__rect:nth-child(2) {
+.loader17 .loader17-container .loader17-block .pl1__rect:nth-child(2) {
   animation-name: pl1-c;
 }
 @keyframes pl1-a {
