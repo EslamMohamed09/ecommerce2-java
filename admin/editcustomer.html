@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-height, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <title>edit customers</title>
+  <title>edit customer</title>
   <link rel="stylesheet" href="inc/styles/all.css">  
   <link rel="stylesheet" href="inc/styles/bootstrap.css">
   <link rel="stylesheet" href="inc/styles/main.css">
@@ -27,11 +27,11 @@
 
     <h1 class="edit-heading">edit customer yassen</h1>
 
-    <form class="row" action="" method="POST">
+    <form class="form-horizontal2 row" action="" method="POST">
 
       <input type="hidden" name="customerid" value="24">
 
-      <div class="col-md-8 input-boxes d-flex-c-st-c">
+      <div class="left-block col-lg-8 col-md-8 col-sm-12">
 
         <div class="input-box d-flex-r-bt-c">  <!-- Customer Fullname -->
           <label class="control-label">Fullname</label>
@@ -48,13 +48,13 @@
           <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="phone_no" class="input-control" required/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer Password -->
-          <label class="control-label">password</label>
-          <div class="pass-col">
-            <input type="password" name="newpassword" id="passInput" style="width:100%;" autocomplete="new-password" class="input-control"/>
-            <div class="eye" onclick="eyeFunction()">
-              <i class="fa fa-eye" id="faeye-1"></i> 
-              <i class="fa fa-eye-slash" id="faeye-2"></i> 
+        <div class="input-box">  <!-- Password -->
+          <label class="control-label">Password</label>
+          <div class="pass-input">
+            <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
+            <div class="passeye" onclick="eyeFunction(this)">
+              <i class="fa fa-eye" style="display:none;"></i> 
+              <i class="fa fa-eye-slash"></i> 
             </div>
           </div>
         </div>
@@ -67,11 +67,19 @@
           </select>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer Country -->
-          <label class="control-label">customer country</label>
-          <select name="" id="">
-            <option value="egypt">egypt</option>
-            <option value="syria">syria</option>
+        <div class="input-box">  <!-- Country -->
+          <label>Country</label>
+          <select name="country" id="select_country" class="input-control">
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
           </select>
         </div>
 
@@ -125,7 +133,7 @@
         <img src="inc/img/Perfume/perfume.png" alt="">
       </div> <!-- End col-md-4 -->
       
-      <input type="submit" value="update" class="btn"/>
+      <input type="submit" value="update" class="btn3"/>
 
     </form>
 
