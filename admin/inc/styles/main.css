@@ -1188,13 +1188,13 @@ section {
   bottom: -0.6rem;
   background-color: var(--black2);
 }
-
 @media (max-width: 711px) {
-  #dashboard-section .section-container .section-heading {
+  .section-heading .section-heading {
     text-align: center;
     font-size: 1.5rem;
   }
 }
+
 .sub-heading {
   width: fit-content;
   position: relative;
@@ -1256,7 +1256,7 @@ section {
   font-size: 2.3rem;
   font-weight: bold;
   color: var(--aqua2);
-  background-color: var(--aqua7);
+  background-color: var(--aqua12);
 }
 
 .block-title2 {
@@ -3200,7 +3200,7 @@ header .small-menu .small-menu-link {
   margin: 2rem auto 1rem;
 }
 .profile-page .profile-container #edit-profile-collapsible.active {
-  background: radial-gradient(var(--olive), var(--olive3));
+  background: radial-gradient(var(--olive12), var(--olive14));
 }
 .profile-page .profile-container .edit-profile-data {
   display: none;
@@ -3380,7 +3380,7 @@ header .small-menu .small-menu-link {
  ####### CUSTOMERS ######
  ========================
 */
-.customers-page .customer-container {
+.customers-page .customers-page-container .managing-customers-table {
   width: 99%;
   display: block;
   margin: 1rem auto;
@@ -3390,7 +3390,7 @@ header .small-menu .small-menu-link {
   /** table **/
   /* head */
 }
-.customers-page .customer-container table {
+.customers-page .customers-page-container .managing-customers-table table {
   border: none;
   width: 100%;
   margin: 0;
@@ -3398,54 +3398,54 @@ header .small-menu .small-menu-link {
   background-color: var(--white);
   /* body */
 }
-.customers-page .customer-container table thead {
+.customers-page .customers-page-container .managing-customers-table table thead {
   background-color: var(--white);
 }
-.customers-page .customer-container table thead:first-child tr th:first-child {
+.customers-page .customers-page-container .managing-customers-table table thead:first-child tr th:first-child {
   border-top-left-radius: 0;
 }
-.customers-page .customer-container table thead:first-child tr th:last-child {
+.customers-page .customers-page-container .managing-customers-table table thead:first-child tr th:last-child {
   border-top-right-radius: 0;
 }
-.customers-page .customer-container table thead:first-child {
+.customers-page .customers-page-container .managing-customers-table table thead:first-child {
   border-bottom: 1px solid var(--gray3);
 }
-.customers-page .customer-container table thead:last-child {
+.customers-page .customers-page-container .managing-customers-table table thead:last-child {
   border-top: 1px solid var(--gray3);
 }
-.customers-page .customer-container table thead tr th:not(:first-child) {
+.customers-page .customers-page-container .managing-customers-table table thead tr th:not(:first-child) {
   padding: 0.4rem 1rem 1rem;
   text-align: center;
 }
-.customers-page .customer-container table thead tr th:first-child {
+.customers-page .customers-page-container .managing-customers-table table thead tr th:first-child {
   padding: 0 0.1rem 0.3rem 1rem;
   text-align: center;
 }
-.customers-page .customer-container table thead tr th:nth-child(2) {
+.customers-page .customers-page-container .managing-customers-table table thead tr th:nth-child(2) {
   text-align: left;
 }
-.customers-page .customer-container table tbody tr:nth-child(odd) {
+.customers-page .customers-page-container .managing-customers-table table tbody tr:nth-child(odd) {
   background-color: rgba(216, 140, 0, 0.041);
 }
-.customers-page .customer-container table tbody tr td:nth-child(odd) {
+.customers-page .customers-page-container .managing-customers-table table tbody tr td:nth-child(odd) {
   font-weight: bold;
 }
-.customers-page .customer-container table tbody tr td:not(:first-child) {
+.customers-page .customers-page-container .managing-customers-table table tbody tr td:not(:first-child) {
   padding: 1.1rem 1rem 2rem;
   color: var(--gray10);
   text-align: center;
 }
-.customers-page .customer-container table tbody tr td:first-child {
+.customers-page .customers-page-container .managing-customers-table table tbody tr td:first-child {
   padding: 0 0.1rem 0.3rem 1rem;
   text-align: center;
 }
-.customers-page .customer-container table tbody tr td:nth-child(2) {
+.customers-page .customers-page-container .managing-customers-table table tbody tr td:nth-child(2) {
   text-align: left;
 }
-.customers-page .customer-container table tbody tr td .buttons {
+.customers-page .customers-page-container .managing-customers-table table tbody tr td .buttons {
   left: 1rem;
 }
-.customers-page .customer-container table tbody tr td .buttons > a {
+.customers-page .customers-page-container .managing-customers-table table tbody tr td .buttons > a {
   color: var(--gray-yellow6);
   text-transform: uppercase;
 }
