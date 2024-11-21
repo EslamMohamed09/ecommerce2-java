@@ -12,6 +12,19 @@
 }
 
 :root {
+  --gray:#f2f2f7;
+  --gray1:#f0f0f8;
+  --gray2:#ebebee;
+  --gray3:#e5e5e7;
+  --gray4:#c9c9ca;
+  --gray5:#999;
+  --gray6:#888;
+  --gray7:#777;
+  --gray8:#666;
+  --gray9:#444;
+  --gray10:#333;
+  --gray11:#222;
+  --gray12:#111;
   --violet:#ebddf1;
   --violet2:#dfc5ec;
   --violet3:#d8b3eb;
@@ -97,13 +110,31 @@
   --green21:#053a15;
   --green22:#063113;
   --green23:#05270f;
-  --olive:#05afaf;
-  --olive2:#039292;
-  --olive2:#027a7a;
-  --olive3:#026b6b;
-  --olive4:#015050;
-  --olive5:#004242;
-  --olive6:#013535;
+  --olive:#eff7f7;
+  --olive1:#e5f5f5;
+  --olive2:#def3f3;
+  --olive3:#dde2e2;
+  --olive4:#cdd1d1;
+  --olive5:#b1f7f7;
+  --olive6:#9ff8f8;
+  --olive7:#87f5f5;
+  --olive8:#85fcfc;
+  --olive9:#5ff7f7;
+  --olive10:#44f7f7;
+  --olive11:#04f7f7;
+  --olive12:#02a8a8;
+  --olive13:#028d8d;
+  --olive14:#3e8181;
+  --olive15:#026b6b;
+  --olive16:#015050;
+  --olive17:#004242;
+  --olive18:#013535;
+  --olive19:#b9c2c2;
+  --olive20:#9ab1b1;
+  --olive21:#7b9494;
+  --olive22:#616666;
+  --olive23:#536e6e;
+  --olive24:#4a7474;
   --transparent-olive:#0aa0a01e;
   --milky:#eef2f7;
   --milky2:#e8ebf0;
@@ -111,8 +142,6 @@
   --milky4:rgb(208, 241, 253);
   --milky5:rgb(183, 233, 253);
   --milky6:#acbfd4;
-  --milky7:#6a7a8d;
-  --milky8:#424b64;
   --aqua:#f1f8f8;
   --aqua1:#eafafa;
   --aqua2:#e3f1f1;
@@ -129,21 +158,19 @@
   --aqua13:#00c7c7;
   --aqua16:#03a7a7;
   --lightblue:#f0f4f7;
-  --lightblue1:#eaeff1;
-  --lightblue2:#e5edf0;
-  --lightblue3:#dee6e9;
-  --lightblue4:#d7dfe2;
-  --lightblue5:#d5dfe2;
-  --lightblue6:#d0e0e6;
-  --lightblue7:#c9e4ee;
-  --lightblue8:#c2e2ee;
-  --lightblue9:#bfe4f1;
-  --lightblue10:#b7e1f0;
-  --lightblue11:#afdff0;
-  --lightblue12:#a7dcf0;
-  --lightblue13:#a7dcf0;
-  --light-blue:#38baf9;
-  --light-blue2:rgb(0, 132, 255);
+  --lightblue1:#eaebf1;
+  --lightblue2:#e5e7f0;
+  --lightblue3:#dee1e9;
+  --lightblue4:#d7d9e2;
+  --lightblue5:#d5d6e2;
+  --lightblue6:#d0d4e6;
+  --lightblue7:#c9d3ee;
+  --lightblue8:#c2caee;
+  --lightblue9:#bfc8f1;
+  --lightblue10:#b7c4f0;
+  --lightblue11:#afc6f0;
+  --lightblue12:#a7b2f0;
+  --lightblue13:#a7baf0;
   --blue:#60c8fc;
   --blue1:#00b7ff;
   --blue2:#38baf9;
@@ -165,28 +192,17 @@
   --blue18:#162753;
   --blue19:#2b3a5f;
   --navyblue:#8B8E98;
-  --navyblue2:#343a40;
-  --navyblue3:#2a2e35;
-  --navyblue4:#202733;
-  --navyblue5:#32303e;
-  --navyblue6:#252532;
+  --navyblue2:#6a7a8d;
+  --navyblue3:#424b64;
+  --navyblue4:#343a40;
+  --navyblue5:#2a2e35;
+  --navyblue6:#202733;
+  --navyblue7:#32303e;
+  --navyblue8:#252532;
   --transparent-blue:#176ec021;
   --transparent-gray:rgba(201, 183, 183, 0.075);
   --transparent-gray10:rgba(214, 214, 214, 0.192);
   --light-gray:#8d8d8d;
-  --gray:#f2f2f7;
-  --gray1:#f0f0f8;
-  --gray2:#ebebee;
-  --gray3:#e5e5e7;
-  --gray4:#c9c9ca;
-  --gray5:#999;
-  --gray6:#888;
-  --gray7:#777;
-  --gray8:#666;
-  --gray9:#444;
-  --gray10:#333;
-  --gray11:#222;
-  --gray12:#111;
   --gray-yellow0:rgb(235, 236, 201);
   --gray-yellow:rgb(221, 223, 150);
   --gray-yellow1:rgb(214, 216, 125);
@@ -481,7 +497,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(125deg, var(--olive21) 0%, var(--olive20) 100%);
+  background-image: linear-gradient(125deg, var(--olive16) 0%, var(--olive13) 100%);
   border-radius: 0;
 }
 
@@ -633,7 +649,6 @@ section {
   border: 1.5px solid var(--black2);
   transition: all 0.3s linear;
 }
-
 .trans-btn:hover {
   border: 1.5px solid var(--black2);
   color: var(--white2);
@@ -652,7 +667,6 @@ section {
   outline: none;
   transition: all 0.6s linear;
 }
-
 .b-btn:hover {
   color: var(--white2);
   background-color: var(--black2);
@@ -670,7 +684,6 @@ section {
   outline: none;
   transition: all 0.6s linear;
 }
-
 .btn:hover {
   color: var(--black);
   background-color: transparent;
@@ -678,35 +691,36 @@ section {
 
 .btn2 {
   display: inline-block;
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
+  padding: 0.6rem 1rem !important;
+  margin: 0;
+  font-size: 14px;
   text-transform: capitalize;
   text-align: center;
+  border-radius: 0.2rem;
   border: none;
   outline: none;
   color: var(--white2);
-  background-color: var(--shin-blue5);
-  box-shadow: var(--box-shadow2);
+  background-color: var(--blue5);
+  box-shadow: var(--box-shadow5);
   transition: all 0.3s linear;
 }
-
-.btn2:hover {
+.btn2 :hover {
   color: var(--white2);
-  box-shadow: 0 0.1rem 1rem rgba(0, 89, 255, 0.4784313725);
+  box-shadow: 0 0 6px rgba(0, 132, 255, 0.4784313725);
 }
 
 .btn3 {
-  padding: 0.3rem 1.3rem;
+  padding: 0.6rem 1.3rem !important;
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 2rem;
+  border-radius: 0.2rem;
   color: var(--white2);
   border: 1px solid var(--blue7);
   background-color: var(--blue7);
+  box-shadow: var(--box-shadow5);
   transition: all 0.3s linear;
 }
-
 .btn3:hover {
   background-color: transparent;
   color: var(--blue7);
@@ -723,33 +737,12 @@ section {
   outline: none;
   border-radius: 0.2rem;
   color: var(--violet);
-  box-shadow: var(--box-shadow-varient);
-  background: linear-gradient(to right, var(--light-violet6), rgb(64, 4, 121) 80%);
+  box-shadow: var(--blue-box-shadow);
+  background: linear-gradient(to right, var(--violet6), rgb(64, 4, 121) 80%);
 }
-
 .btn4:hover {
   color: var(--white);
   background: linear-gradient(to right, #056c9b, rgb(158, 108, 204) 80%);
-}
-
-.btn4-trans {
-  margin: 0;
-  padding: 0.7rem 1rem;
-  font-size: 1.1rem;
-  border-radius: 0.2rem;
-  font-weight: bold;
-  text-align: center;
-  background: transparent;
-  color: rgb(64, 4, 121);
-  border: 1px solid var(--light-violet6);
-  transition: all 0.4s linear;
-}
-
-.btn4-trans:hover {
-  color: #fca4fc;
-  border: none;
-  background: rgb(64, 4, 121);
-  border: 1px solid rgb(64, 4, 121);
 }
 
 .btn5 {
@@ -762,11 +755,29 @@ section {
   outline: none;
   border: 1px solid var(--yellow10);
   background: var(--yellow10);
-  box-shadow: var(--box-shadow-varient);
+  box-shadow: var(--blue-box-shadow);
 }
-
 .btn5:hover {
   background: transparent;
+}
+
+.btn4-trans {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  text-align: center;
+  background: transparent;
+  color: rgb(64, 4, 121);
+  border: 1px solid var(--violet6);
+  transition: all 0.4s linear;
+}
+.btn4-trans:hover {
+  color: #fca4fc;
+  border: none;
+  background: rgb(64, 4, 121);
+  border: 1px solid rgb(64, 4, 121);
 }
 
 .line-btn {
@@ -781,7 +792,6 @@ section {
   background: transparent;
   position: relative;
 }
-
 .line-btn::before {
   content: "";
   position: absolute;
@@ -794,7 +804,6 @@ section {
   background-color: var(--black);
   z-index: 0;
 }
-
 .line-btn::after {
   content: "";
   position: absolute;
@@ -807,11 +816,9 @@ section {
   background-color: var(--gray5);
   z-index: 20;
 }
-
 .line-btn:hover {
   color: var(--black2);
 }
-
 .line-btn:hover::after {
   width: 100%;
 }
@@ -892,7 +899,7 @@ h5 {
   bottom: -0.6rem;
   width: 100%;
   height: 1.6px;
-  background-color: var(--olive19);
+  background-color: var(--olive12);
 }
 
 /********************
@@ -908,13 +915,13 @@ header {
 }
 header .top-nav {
   padding: 0.3rem 3%;
-  background-color: var(--olive23);
+  background-color: var(--olive18);
 }
 header .top-nav .col-left select {
   gap: 0.1rem;
   cursor: pointer;
   color: var(--white);
-  background-color: var(--olive23);
+  background-color: var(--olive18);
   border: 1px solid var(--olive20);
 }
 header .top-nav .col-left select span {
@@ -950,7 +957,7 @@ header .top-nav .col-right ul #open-mHeader {
   cursor: pointer;
 }
 header .main-header {
-  background-color: var(--olive23);
+  background-color: var(--olive18);
   padding: 0 !important;
   margin: 0 !important;
   z-index: 1000000;
@@ -958,8 +965,8 @@ header .main-header {
 }
 header .main-header .upper {
   padding: 0.4rem 3%;
-  border-top: 1px solid var(--olive22);
-  border-bottom: 1px solid var(--olive22);
+  border-top: 1px solid var(--olive17);
+  border-bottom: 1px solid var(--olive17);
 }
 header .main-header .upper .web-title {
   cursor: pointer;
@@ -993,7 +1000,7 @@ header .main-header .upper .search-form .search-btn {
   padding: 0.6rem 1.3rem;
   height: 100%;
   border: none;
-  background-color: var(--olive22);
+  background-color: var(--olive17);
 }
 header .main-header .upper .search-form .search-btn svg {
   color: var(--olive15);
@@ -1018,7 +1025,7 @@ header .main-header .upper .icons .icon .value {
   justify-content: center;
   align-items: center;
   color: yellow;
-  background-color: var(--olive10);
+  background-color: var(--olive15);
   border-radius: 50%;
   margin-bottom: 1rem;
   position: absolute;
@@ -1603,7 +1610,7 @@ header .login-drawer.openingLoginDrawer {
   height: 12rem;
   gap: 1rem;
   padding: 2% 1.5%;
-  background-color: var(--blue);
+  background-color: var(--lightblue1);
 }
 .promo-section .section-container .card-item .content {
   padding: 0;
@@ -2086,7 +2093,7 @@ header .login-drawer.openingLoginDrawer {
   flex-wrap: wrap;
   padding: 0;
   border-radius: 0.5rem;
-  background: radial-gradient(circle at 72% 60%, var(--olive19) 1%, var(--olive24) 40%);
+  background: radial-gradient(circle at 72% 60%, var(--olive14) 1%, var(--olive18) 40%);
 }
 .today-deal-section .section-container .col-left {
   flex: 1 1 25rem;
@@ -2145,7 +2152,7 @@ header .login-drawer.openingLoginDrawer {
   }
 }
 /********************
- # New Products
+ # Feature Products
 ********************/
 .feature-products-section .product-card {
   border-radius: 0.6rem;
@@ -2567,7 +2574,7 @@ header .login-drawer.openingLoginDrawer {
 # Footer
 ********************/
 footer {
-  background: linear-gradient(to top, var(--olive24), var(--olive23) 50%, var(--olive21) 100%);
+  background: linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);
   padding: 4rem 0 0;
 }
 footer .footer-widget {
@@ -2640,7 +2647,7 @@ footer .footer-widget .social li a.youtube:hover svg {
   color: var(--orange-red1);
 }
 footer .bottom-footer {
-  background-color: var(--olive24);
+  background-color: var(--olive18);
   padding: 1.3rem 0.9rem;
   margin-top: 5rem;
 }
