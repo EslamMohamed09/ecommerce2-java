@@ -24,7 +24,7 @@ const headerContent = `
         <p>Hey, <b>eslam</b></p>
         <small>admin</small>
       </div>
-      <img src="images/users/eslam(3).jpg" id="profile-img" alt="">
+      <img src="inc/images/users/eslam(3).jpg" id="profile-img" alt="">
       <div class="drop-menu d-flex-c-st-st">
         <a href="#" class="drop-link">update profile</a>
         <a href="logout.php" class="drop-link">logout <i class="fas fa-sign-out-alt" id="icon"></i></a>

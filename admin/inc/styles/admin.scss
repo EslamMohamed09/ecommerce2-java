@@ -1168,10 +1168,10 @@ input[type="file"] {cursor:pointer;}
                    padding:3rem 0 0;
 
        .left-block {display:grid;
-                  gap:2rem;
-                  grid-template-columns:repeat(auto-fill,minmax(250px, 1fr));
+                    gap:2rem;
+                    grid-template-columns:repeat(auto-fill,minmax(250px, 1fr));
 
-              .input-box {display:block;
+              .input-holder {display:block;
 
                      .input-control {width:100%;}
 
@@ -1180,7 +1180,6 @@ input[type="file"] {cursor:pointer;}
               }
 
               .textarea-input-box {grid-column:span 2;
-
                      textarea {min-height:8rem;}
               }
 
@@ -1193,21 +1192,22 @@ input[type="file"] {cursor:pointer;}
 
        /* right-block */
        .right-block {padding:0 1rem;
-                   text-align:center;
+                     text-align:center;
 
-              > div {margin:0 0 2rem;}
+              > div {margin:0 0 6rem;}
 
-              .input-box label {font-size:1.5rem;
-                                margin-bottom:1rem;
-                                color:var(--gray11);
-                                font-weight:bold;
-                                text-transform:uppercase;}
-
-              .image {width:100%;
-                      padding:0;
-
-                     img {width:100%;
-                          max-height:25rem;}
+              .image-holder {
+                     label {font-size:1.5rem;
+                            margin-bottom:1rem;
+                            color:var(--gray11);
+                            font-weight:bold;
+                            text-transform:uppercase;}
+                     
+                            img {width:80% !important;
+                                 margin-top:1rem;
+                                 max-height:30rem !important;
+                                 box-shadow:var(--box-shadow5);
+                                 border:4px solid var(--white);}
               }
        }
 
@@ -1262,52 +1262,7 @@ input[type="file"] {cursor:pointer;}
 
 }
 
-/*** Edit Form ***/
-.edit-page {
-      .container {display:block;}
 
-       form {width:100%;
-             margin:0;
-             margin-bottom:5rem;
-
-              .input-boxes {gap:2rem;
-
-                     .input-box {width:100%;
-                                 gap:1rem;
-                                 flex-wrap:wrap;
-
-                            label {flex:1}
-
-                            .pass-col {flex:1 1 30rem;}
-
-                            .input-control {flex:1 1 30rem;
-                                           padding:0.7rem 1rem;
-                                           box-shadow:var(--box-shadow2);}
-                     }
-              }
-
-              .img-box {height:100%;
-                          gap:1.2rem;                            
-                          text-align:center;
-
-                     h4 {text-transform:uppercase;}
-
-                     input[type="file"] {width:80%;}
-
-                     img {width:80% !important;
-                          margin-top:1rem;
-                          max-height:30rem !important;
-                          box-shadow:var(--box-shadow2);
-                          border:4px solid var(--white);}
-              }
-
-              .btn {margin-top:2rem;}
-       }
-
-@media (max-width:768px){ form .input-boxes {margin-bottom:3rem;} }
-@media(max-width:500px) { form .input-boxes .input-box {gap:0.5rem;} }
-
-}
 /*
 ==================
  # TABLE
@@ -3238,41 +3193,7 @@ header {width:100%;
  ########## USERS ##########
  ===========================
 */
-/*******USERS******
- # Edit
-*******************/
-.edit-member-page {
 
-       .sub-heading {margin:1rem 0;}
-
-       /* Edit certification */
-       .certification-form:first-child {margin-top:4rem;}
-
-       .certification-form > div {margin:1.5rem 0;}
-
-       .certification-form {
-              h2 {text-align:left;
-                  color:var(--blue7);
-
-                 hr {flex:1 1 20rem;
-                     color:var(--aqua4);
-                     margin-left:0.4rem;}
-              }
-
-              .control-label {color:var(--blue4);}
-
-              .submit-input .col-md-2 .btn {height:100%;
-                                            padding:0.2rem !important;
-                                            font-size:1.2rem;}
-       }
-
-@media(max-width:577px){ .certification-form .submit-input .col-md-2 {margin-bottom:0.5rem;} }
-
-@media(min-width:577px){ .certification-form .submit-input .col-md-2 .btn {width:95%;} }
-
-@media(min-width:768px) and (max-width:1288px) { .certification-form .submit-input .col-md-2 .btn {font-size:0.9rem;} }
-
-}
 
 /*******MEMBERS******
  # Add

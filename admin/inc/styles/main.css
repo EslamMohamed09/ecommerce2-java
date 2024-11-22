@@ -1422,13 +1422,13 @@ input[type=file] {
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-.form-horizontal2 .left-block .input-box {
+.form-horizontal2 .left-block .input-holder {
   display: block;
 }
-.form-horizontal2 .left-block .input-box .input-control {
+.form-horizontal2 .left-block .input-holder .input-control {
   width: 100%;
 }
-.form-horizontal2 .left-block .input-box .pass-input {
+.form-horizontal2 .left-block .input-holder .pass-input {
   margin: 0;
   padding: 0;
 }
@@ -1450,22 +1450,21 @@ input[type=file] {
   text-align: center;
 }
 .form-horizontal2 .right-block > div {
-  margin: 0 0 2rem;
+  margin: 0 0 6rem;
 }
-.form-horizontal2 .right-block .input-box label {
+.form-horizontal2 .right-block .image-holder label {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--gray11);
   font-weight: bold;
   text-transform: uppercase;
 }
-.form-horizontal2 .right-block .image {
-  width: 100%;
-  padding: 0;
-}
-.form-horizontal2 .right-block .image img {
-  width: 100%;
-  max-height: 25rem;
+.form-horizontal2 .right-block .image-holder img {
+  width: 80% !important;
+  margin-top: 1rem;
+  max-height: 30rem !important;
+  box-shadow: var(--box-shadow5);
+  border: 4px solid var(--white);
 }
 .form-horizontal2 input[type=submit] {
   margin-top: 2rem;
@@ -1545,66 +1544,6 @@ input[type=file] {
 @media (max-width: 400px) {
   .multi-form-horizontal .double-input-box {
     flex-wrap: wrap;
-  }
-}
-
-/*** Edit Form ***/
-.edit-page .container {
-  display: block;
-}
-.edit-page form {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 5rem;
-}
-.edit-page form .input-boxes {
-  gap: 2rem;
-}
-.edit-page form .input-boxes .input-box {
-  width: 100%;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.edit-page form .input-boxes .input-box label {
-  flex: 1;
-}
-.edit-page form .input-boxes .input-box .pass-col {
-  flex: 1 1 30rem;
-}
-.edit-page form .input-boxes .input-box .input-control {
-  flex: 1 1 30rem;
-  padding: 0.7rem 1rem;
-  box-shadow: var(--box-shadow2);
-}
-.edit-page form .img-box {
-  height: 100%;
-  gap: 1.2rem;
-  text-align: center;
-}
-.edit-page form .img-box h4 {
-  text-transform: uppercase;
-}
-.edit-page form .img-box input[type=file] {
-  width: 80%;
-}
-.edit-page form .img-box img {
-  width: 80% !important;
-  margin-top: 1rem;
-  max-height: 30rem !important;
-  box-shadow: var(--box-shadow2);
-  border: 4px solid var(--white);
-}
-.edit-page form .btn {
-  margin-top: 2rem;
-}
-@media (max-width: 768px) {
-  .edit-page form .input-boxes {
-    margin-bottom: 3rem;
-  }
-}
-@media (max-width: 500px) {
-  .edit-page form .input-boxes .input-box {
-    gap: 0.5rem;
   }
 }
 
@@ -3793,54 +3732,6 @@ header .small-menu .small-menu-link {
  ########## USERS ##########
  ===========================
 */
-/*******USERS******
- # Edit
-*******************/
-.edit-member-page {
-  /* Edit certification */
-}
-.edit-member-page .sub-heading {
-  margin: 1rem 0;
-}
-.edit-member-page .certification-form:first-child {
-  margin-top: 4rem;
-}
-.edit-member-page .certification-form > div {
-  margin: 1.5rem 0;
-}
-.edit-member-page .certification-form h2 {
-  text-align: left;
-  color: var(--blue7);
-}
-.edit-member-page .certification-form h2 hr {
-  flex: 1 1 20rem;
-  color: var(--aqua4);
-  margin-left: 0.4rem;
-}
-.edit-member-page .certification-form .control-label {
-  color: var(--blue4);
-}
-.edit-member-page .certification-form .submit-input .col-md-2 .btn {
-  height: 100%;
-  padding: 0.2rem !important;
-  font-size: 1.2rem;
-}
-@media (max-width: 577px) {
-  .edit-member-page .certification-form .submit-input .col-md-2 {
-    margin-bottom: 0.5rem;
-  }
-}
-@media (min-width: 577px) {
-  .edit-member-page .certification-form .submit-input .col-md-2 .btn {
-    width: 95%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1288px) {
-  .edit-member-page .certification-form .submit-input .col-md-2 .btn {
-    font-size: 0.9rem;
-  }
-}
-
 /*******MEMBERS******
  # Add
 *********************/

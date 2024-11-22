@@ -20,11 +20,6 @@
 
   <div class="section-container edit-page container">
 
-    <div class="sub-heading">
-      <h3 class="sub-title">edit customer</h3>
-      <i class="fas fa-star"></i>
-    </div>
-
     <h1 class="edit-heading">edit customer yassen</h1>
 
     <form class="form-horizontal2 row" action="" method="POST">
@@ -33,22 +28,22 @@
 
       <div class="left-block col-lg-8 col-md-8 col-sm-12">
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer Fullname -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- Customer Fullname -->
           <label class="control-label">Fullname</label>
-          <input type="text" name="fullname" maxlength="18" pattern=".{4,18}" value="fullname" class="input-control" required/>
+          <input type="text" name="fullname" maxlength="18" pattern=".{4,18}" value="yassen mohamed" class="input-control" required/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer Email -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- Customer Email -->
           <label class="control-label">Email</label>
-          <input type="text" name="email" maxlength="45" value="email" class="input-control" required/>
+          <input type="text" name="email" maxlength="45" value="yassen@gmail.com" class="input-control" required/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer Phone number -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- Customer Phone number -->
           <label class="control-label">phone number</label>
-          <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="phone_no" class="input-control" required/>
+          <input type="text" name="phone_no" maxlength="20" pattern=".{3,20}" value="01210203662" class="input-control" required/>
         </div>
 
-        <div class="input-box">  <!-- Password -->
+        <div class="input-holder">  <!-- Password -->
           <label class="control-label">Password</label>
           <div class="pass-input">
             <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
@@ -59,7 +54,7 @@
           </div>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer gender -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- Customer gender -->
           <label class="control-label">gender</label>
           <select name="gender" class="input-control">
             <option value="male" selected>male</option>
@@ -67,7 +62,7 @@
           </select>
         </div>
 
-        <div class="input-box">  <!-- Country -->
+        <div class="input-holder">  <!-- Country -->
           <label>Country</label>
           <select name="country" id="select_country" class="input-control">
             <option value="Afghanistan">Afghanistan</option>
@@ -83,27 +78,27 @@
           </select>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer city -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- city -->
           <label class="control-label">city</label>
-          <input type="text" name="customercity" maxlength="16" pattern=".{4,16}" value="city" class="input-control" required/>
+          <input type="text" name="customercity" maxlength="16" pattern=".{4,16}" value="6 october" class="input-control" required/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer address -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- address -->
           <label class="control-label">address</label>
           <input type="text" name="customeraddress" maxlength="35" pattern=".{11,35}" value="address" class="input-control" required/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer Postal code -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- Postal code -->
           <label class="control-label">Postal code</label>
-          <input type="text" name="customerpostalcode" maxlength="10" pattern=".{4,10}" value="postalcode" class="input-control" required/>
+          <input type="text" name="customerpostalcode" maxlength="10" pattern=".{4,10}" value="12565" class="input-control" required/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- Customer visa number -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- visa number -->
           <label class="control-label">visa number</label>
-          <input type="text" name="customervisa_no" id="visaInput" maxlength="19" pattern=".{3,19}" value="visa_no" class="input-control"/>
+          <input type="text" name="customervisa_no" id="visaInput" maxlength="19" pattern=".{3,19}" value="0000-0000-0000-0000" class="input-control"/>
         </div>
 
-        <div class="input-box d-flex-r-bt-c">  <!-- QUESTIONS -->
+        <div class="input-holder d-flex-r-bt-c">  <!-- QUESTIONS -->
           <label class="control-label">questions</label>
           <select name="question" class="input-control" id="question_select" onchange="selectquestion()">
             <option value="0"> choose question </option>
@@ -115,23 +110,25 @@
           </select>
         </div>
 
-        <div class="input-box d-flex-r-bt-c" id="other_question"> <!-- other question -->
+        <div class="input-holder d-flex-r-bt-c" id="other_question"> <!-- other question -->
           <label class="control-label">other question</label>
           <input type="text" name="otherquestion" class="input-control" value="other_question">
         </div>
 
-        <div class="input-box d-flex-r-bt-c" id="answer_question"> <!-- answer -->
+        <div class="input-holder d-flex-r-bt-c" id="answer_question"> <!-- answer -->
           <label class="control-label">answer question</label>
           <input type="text" name="answer" class="input-control" maxlength="35" pattern=".{3,35}" value="answer" required/>
         </div>
 
       </div> <!-- End col-md-8 -->
 
-      <div class="col-md-4 img-box d-flex-c-c-c">
-        <h4>customer image</h4>
-        <input type="file">
-        <img src="inc/img/Perfume/perfume.png" alt="">
-      </div> <!-- End col-md-4 -->
+      <div class="right-block col-lg-4 col-md-4 col-sm-12">
+        <div class="image-holder d-flex-c-c-c">
+          <label>select your image</label>
+          <input type="file">
+          <img src="inc/images/users/eslam(7).jpg" alt="">
+        </div>
+      </div>
       
       <input type="submit" value="update" class="btn3"/>
 
