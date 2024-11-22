@@ -531,3 +531,43 @@ if (firstHeadCheckBoxes && secondHeadCheckBoxes){
 }
 });
 
+/*
+ ===============================
+ ######## CATEGORIES PAGE ######
+ ===============================
+*/
+fetch('pages/categories.json').then(response => response.json())
+.then(data => {
+  const categories = data.categories
+  const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
+
+  function getCategoryDetails(category) {
+    if (!category.parent_id) {return { parentName: 'no parent', level: 1 };}
+    const parentCategory = categoriesMap.get(category.parent_id);
+    const parentDetails = getCategoryDetails(parentCategory);
+    return { parentName: parentCategory.name, level: parentDetails.level + 1 };
+  }
+
+  const manageCategoryTable = document.getElementById('manage-category-table');
+  categories.forEach(category => {
+    const { parentName, level } = getCategoryDetails(category);
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td><input type="checkbox" name="checkbox[]" id="cat-name-${category.id}"></td>
+      <td>
+        <label for="cat-name-${category.id}">${category.name}</label>
+        <div class="buttons">
+          <a href="#">edit</a> | <a href="#">delete</a>
+        </div>
+      </td>
+      <td>Sample description</td>
+      <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
+      <td>${parentName}</td>
+      <td class="level-${level}">level${level}</td>
+    `;
+    manageCategoryTable.appendChild(row);
+  });
+
+})
+.catch(error => console.error('Error loading JSON:', error));

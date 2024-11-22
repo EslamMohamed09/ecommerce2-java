@@ -725,7 +725,7 @@ select option {
 
 img {
   max-width: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 /*
@@ -1718,7 +1718,6 @@ table tbody tr td:nth-child(even) {
 table tbody tr td img {
   width: 4rem;
   height: 3.5rem;
-  object-fit: fill;
   border-radius: 0.2rem;
 }
 table tbody tr td:first-child {
@@ -3506,11 +3505,6 @@ header .small-menu .small-menu-link {
   padding: 1.1rem 1rem 2rem;
   color: var(--gray11);
   position: relative;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr td img {
-  width: 4rem;
-  height: 3rem;
-  border-radius: 0.2rem;
 }
 .category-page-container .add-managing-category .manage-category-form table tbody tr td:first-child {
   padding: 1.4rem 0rem 2rem 0.5rem;
