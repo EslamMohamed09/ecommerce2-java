@@ -2892,7 +2892,7 @@ header {width:100%;
                                padding-top:2rem;
                                gap:1rem;
 
-              .add-category-form {flex:1 1 12rem;
+              .add-category-form {flex:1 1 5rem;
                                   gap:2rem;
 
                      .input-holder {width:100%;
@@ -2918,30 +2918,6 @@ header {width:100%;
                                    .cat-label {flex: 0 0 auto;}
                                    input[type="file"] {flex: 0 0 auto;
                                                        margin-left:auto;}
-                            }
-
-                            /* voting input holder */
-                            &.voting-input-holder {width:100%;
-
-                                   .vote-holder {display:flex;
-                                                flex-direction:column;
-
-                                          .cat-label {font-size:1rem;
-                                                      margin-bottom:0.4rem;}
-
-                                          > div {display:flex;
-                                                 flex-direction:row;
-                                                 justify-content:space-between;
-                                                 min-width:3rem;
-                                                 margin:0;
-                                                 margin-top:0.1rem;
-
-                                                 label {font-size:1.1rem;
-                                                        cursor:pointer;}
-
-                                                 input[type="radio"]:focus {box-shadow:none;}
-                                          }
-                                   }
                             }
 
                      }
@@ -2997,6 +2973,12 @@ header {width:100%;
                                                    opacity:0;}
 
                                    tr:hover .buttons {opacity:1;}
+
+                                   .level-2 {color:var(--blue14);}
+                                   .level-3 {color:var(--blue5);}
+                                   .level-4 {color:var(--green18);}
+                                   .level-5 {color:var(--green15);}
+                                   .level-6 {color:var(--green7);}
                             }
                      }
 

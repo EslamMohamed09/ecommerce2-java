@@ -564,7 +564,7 @@ fetch('pages/categories.json').then(response => response.json())
       <td>Sample description</td>
       <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
       <td>${parentName}</td>
-      <td class="level-${level}">level${level}</td>
+      <td class="level-${level}">level ${level}</td>
     `;
     manageCategoryTable.appendChild(row);
   });

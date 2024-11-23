@@ -3402,7 +3402,7 @@ header .small-menu .small-menu-link {
   gap: 1rem;
 }
 .category-page-container .add-managing-category .add-category-form {
-  flex: 1 1 12rem;
+  flex: 1 1 5rem;
   gap: 2rem;
 }
 .category-page-container .add-managing-category .add-category-form .input-holder {
@@ -3411,7 +3411,6 @@ header .small-menu .small-menu-link {
   background-color: transparent;
   /* parent input holder */
   /* image input holder */
-  /* voting input holder */
 }
 .category-page-container .add-managing-category .add-category-form .input-holder .cat-label {
   font-size: 1rem;
@@ -3436,32 +3435,6 @@ header .small-menu .small-menu-link {
 .category-page-container .add-managing-category .add-category-form .input-holder.image-input-holder input[type=file] {
   flex: 0 0 auto;
   margin-left: auto;
-}
-.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder {
-  width: 100%;
-}
-.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder {
-  display: flex;
-  flex-direction: column;
-}
-.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder .cat-label {
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-}
-.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-width: 3rem;
-  margin: 0;
-  margin-top: 0.1rem;
-}
-.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div label {
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-.category-page-container .add-managing-category .add-category-form .input-holder.voting-input-holder .vote-holder > div input[type=radio]:focus {
-  box-shadow: none;
 }
 .category-page-container .add-managing-category .add-category-form input[type=submit] {
   width: 100%;
@@ -3522,6 +3495,21 @@ header .small-menu .small-menu-link {
 }
 .category-page-container .add-managing-category .manage-category-form table tbody tr:hover .buttons {
   opacity: 1;
+}
+.category-page-container .add-managing-category .manage-category-form table tbody .level-2 {
+  color: var(--blue14);
+}
+.category-page-container .add-managing-category .manage-category-form table tbody .level-3 {
+  color: var(--blue5);
+}
+.category-page-container .add-managing-category .manage-category-form table tbody .level-4 {
+  color: var(--green18);
+}
+.category-page-container .add-managing-category .manage-category-form table tbody .level-5 {
+  color: var(--green15);
+}
+.category-page-container .add-managing-category .manage-category-form table tbody .level-6 {
+  color: var(--green7);
 }
 
 /*
