@@ -495,41 +495,45 @@ if(document.getElementById("visaInput")){
 }
 
 // Appear Multiple Buttons & Select all items
-document.querySelectorAll(".manage-table-form").forEach((managetable) => {
-const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
-const secondHeadCheckBoxes = managetable.querySelector("#second-head-checkbox");
-const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
-const submitBttnsHolder = managetable.querySelector(".submit-buttons-holder");
 
-if (firstHeadCheckBoxes && secondHeadCheckBoxes){
-    
-    function checkedCheckBoxes(){
-      const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
-      if(selectedCheckBoxes.length > 1){
-         submitBttnsHolder.style.display = "flex";
-      } else {
-        submitBttnsHolder.style.display = "none";
-      }
+function attachCheckboxListeners(){
+  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
+    const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
+    const secondHeadCheckBoxes = managetable.querySelector("#second-head-checkbox");
+    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
+    const submitBttnsHolder = managetable.querySelector(".submit-buttons-holder");
+
+    if (firstHeadCheckBoxes && secondHeadCheckBoxes){
+        
+        function checkedCheckBoxes(){
+          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
+          if(selectedCheckBoxes.length > 1){
+            submitBttnsHolder.style.display = "flex";
+          } else {
+            submitBttnsHolder.style.display = "none";
+          }
+        }
+
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener("change", checkedCheckBoxes);
+        });
+
+        firstHeadCheckBoxes.addEventListener("change", () => {
+          checkboxes.forEach(checkbox => checkbox.checked = firstHeadCheckBoxes.checked);
+          secondHeadCheckBoxes.checked = firstHeadCheckBoxes.checked;
+          checkedCheckBoxes();
+        });
+
+        secondHeadCheckBoxes.addEventListener("change", () => {
+          checkboxes.forEach(checkbox => checkbox.checked = secondHeadCheckBoxes.checked);
+          checkboxes.checked = secondHeadCheckBoxes.checked;
+          firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
+          checkedCheckBoxes();
+        });
     }
-
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener("change", checkedCheckBoxes);
-    });
-
-    firstHeadCheckBoxes.addEventListener("change", () => {
-      checkboxes.forEach(checkbox => checkbox.checked = firstHeadCheckBoxes.checked);
-      secondHeadCheckBoxes.checked = firstHeadCheckBoxes.checked;
-      checkedCheckBoxes();
-    });
-
-    secondHeadCheckBoxes.addEventListener("change", () => {
-      checkboxes.forEach(checkbox => checkbox.checked = secondHeadCheckBoxes.checked);
-      checkboxes.checked = secondHeadCheckBoxes.checked;
-      firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
-      checkedCheckBoxes();
-    });
+  });
 }
-});
+attachCheckboxListeners();
 
 /*
  ===============================
@@ -568,6 +572,6 @@ fetch('pages/categories.json').then(response => response.json())
     `;
     manageCategoryTable.appendChild(row);
   });
-
+  attachCheckboxListeners();
 })
 .catch(error => console.error('Error loading JSON:', error));
