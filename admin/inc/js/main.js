@@ -475,6 +475,84 @@ collapsibleProfileBtn.addEventListener("click", function() {
 });
 }
 
+/** pagination **/
+function pagination(data, itemsPerPage, renderContent, paginationContainer) {
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  function renderPage(page) {
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = page * itemsPerPage;
+    const currentItems = data.slice(startIndex, endIndex);
+    renderContent(currentItems, page);
+  }
+
+  function renderPagination(currentPage) {
+    paginationContainer.innerHTML = '';
+
+    const visiblePages = 3;
+    const range = Math.min(visiblePages, totalPages);
+
+    if (currentPage > 1) {
+       const prevButton = createPaginationLink('Previous', currentPage - 1);
+       paginationContainer.appendChild(prevButton);
+    }
+
+    if (currentPage <= range) {
+      for (let i = 1; i <= range; i++) {
+        paginationContainer.appendChild(createPaginationLink(i, i, currentPage));
+      }
+      if (totalPages > visiblePages) {
+        appendDots();
+        paginationContainer.appendChild(createPaginationLink(totalPages, totalPages, currentPage));
+      }
+    } else if (currentPage > totalPages - range) {
+      paginationContainer.appendChild(createPaginationLink(1, 1, currentPage));
+      appendDots();
+      for (let i = totalPages - range + 1; i <= totalPages; i++) {
+        paginationContainer.appendChild(createPaginationLink(i, i, currentPage));
+      }
+    } else {
+      paginationContainer.appendChild(createPaginationLink(1, 1, currentPage));
+      appendDots();
+      for (let i = currentPage - Math.floor(visiblePages / 2); i <= currentPage + Math.floor(visiblePages / 2); i++) {
+        paginationContainer.appendChild(createPaginationLink(i, i, currentPage));
+      }
+      appendDots();
+      paginationContainer.appendChild(createPaginationLink(totalPages, totalPages, currentPage));
+    }
+
+    if (currentPage < totalPages) {
+       const nextButton = createPaginationLink('Next', currentPage + 1);
+       paginationContainer.appendChild(nextButton);
+    }
+  }
+
+  function createPaginationLink(text, page, currentPage) {
+    const link = document.createElement('a');
+    link.href = '#';
+    link.className = 'pagination-link';
+    link.textContent = text;
+    if (page === currentPage) {
+      link.classList.add('active');
+    }
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      renderPage(page);
+      renderPagination(page);
+    });
+    return link;
+  }
+
+  function appendDots() {
+    const dots = document.createElement('span');
+    dots.className = 'pagination-dots';
+    dots.textContent = '....';
+    paginationContainer.appendChild(dots);
+  }
+
+  renderPage(1);
+  renderPagination(1);
+}
 
 /*
  ===============================
@@ -545,10 +623,7 @@ fetch('pages/categories.json').then(response => response.json())
   const categories = data.categories
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
   const manageCategoryTable = document.querySelector('.category-page #manage-category-table');
-  let paginationContainer = document.querySelector('.category-page .manage-category-form .pagination');
-
-  const categoriesPerPage = 10;
-  const totalPages = Math.ceil(categories.length / categoriesPerPage);
+  const paginationContainer = document.querySelector('.manage-table-form .pagination');
 
   function getCategoryDetails(category) {
     if (!category.parent_id) {return { parentName: 'no parent', level: 1 };}
@@ -557,14 +632,10 @@ fetch('pages/categories.json').then(response => response.json())
     return { parentName: parentCategory.name, level: parentDetails.level + 1 };
   }
 
-  function renderPage(page){
+  function renderCategoryContent(currentCategories) {
     manageCategoryTable.innerHTML = '';
 
-    const startIndex = (page - 1) * categoriesPerPage;
-    const endIndex = page * categoriesPerPage;
-    const currentCategories = categories.slice(startIndex, endIndex);
-
-    currentCategories.forEach(category => {
+    currentCategories.forEach((category) => {
       const { parentName, level } = getCategoryDetails(category);
 
       const row = document.createElement('tr');
@@ -579,102 +650,13 @@ fetch('pages/categories.json').then(response => response.json())
         <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
         <td>${parentName}</td>
         <td class="level-${level}">level ${level}</td>
-        <td class="level-${level}">${category.id}</td>
+        <td>${category.id}</td>
       `;
       manageCategoryTable.appendChild(row);
     });
-  }
-
-  function renderPagination(currentpage){
-    paginationContainer.innerHTML = '';
-
-    const visiblePages = 3;
-    const range = Math.min(visiblePages, totalPages);
-
-    if(currentpage > 1){
-      const prevButton = document.createElement('a');
-            prevButton.href = '#';
-            prevButton.className = 'previous pagination-link';
-            prevButton.textContent = 'Previous';
-      if (currentpage === 1) {
-          prevButton.classList.add('disabled');
-      } else {
-        prevButton.addEventListener('click', (e) => {
-          e.preventDefault();
-          renderPage(currentpage - 1);
-          renderPagination(currentpage - 1);
-        });
-      }
-      paginationContainer.appendChild(prevButton);
-    }
-
-    if (currentpage <= range) {
-      for (let i=1; i<=range; i++) {
-        createPageLink(i, currentpage);
-      }
-      if (totalPages > visiblePages) {
-        appendDots();
-        createPageLink(totalPages, currentpage);
-      }
-    } else if (currentpage > totalPages - range) {
-      createPageLink(1, currentpage);
-      appendDots();
-      for (let i=totalPages - range + 1; i<=totalPages; i++) {
-        createPageLink(i, currentpage);
-      }
-    } else {
-      createPageLink(1, currentpage);
-      appendDots();
-      for (let i=currentpage - Math.floor(visiblePages / 2); i<=currentpage + Math.floor(visiblePages / 2); i++) {
-        createPageLink(i, currentpage);
-      }
-      appendDots();
-      createPageLink(totalPages, currentpage);
-    }
-
-    if(currentpage < totalPages){
-       const nextButton = document.createElement('a');
-             nextButton.href = '#';
-             nextButton.className = 'next pagination-link';
-             nextButton.textContent = 'Next';
-       if (currentpage === totalPages) {
-           nextButton.classList.add('disabled');
-       } else {
-         nextButton.addEventListener('click', (e) => {
-           e.preventDefault();
-           renderPage(currentpage + 1);
-           renderPagination(currentpage + 1);
-         });
-       }
-       paginationContainer.appendChild(nextButton);
-    }
-
-    function createPageLink(page, currentPage) {
-      const link = document.createElement('a');
-      link.href = '#';
-      link.className = 'pagination-link';
-      link.textContent = page;
-      if (page === currentPage) {
-        link.classList.add('active');
-      }
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        renderPage(page);
-        renderPagination(page);
-      });
-      paginationContainer.appendChild(link);
-    }
-    
-    function appendDots() {
-      const dots = document.createElement('span');
-      dots.className = 'pagination-dots';
-      dots.textContent = '....';
-      paginationContainer.appendChild(dots);
-    }
-    
     attachCheckboxListeners();
   }
-  renderPage(1);
-  renderPagination(1);
+
+  pagination(categories, 10, renderCategoryContent, paginationContainer);
 })
 .catch(error => console.error('Error loading JSON:', error));
