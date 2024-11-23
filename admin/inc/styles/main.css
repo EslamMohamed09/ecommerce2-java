@@ -1717,13 +1717,13 @@ table tbody tr td:nth-child(even) {
 table tbody tr td img {
   width: 4rem;
   height: 3.5rem;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 table tbody tr td:first-child {
   padding: 1.4rem 0rem 2rem 0.5rem;
 }
 table tbody tr td:nth-child(2) {
-  padding: 1.1rem 1rem 2rem 0.1rem;
+  padding: 1.1rem 0.5rem 2rem 0.1rem;
 }
 table tbody tr td .buttons {
   position: absolute;

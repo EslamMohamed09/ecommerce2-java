@@ -544,6 +544,11 @@ fetch('pages/categories.json').then(response => response.json())
 .then(data => {
   const categories = data.categories
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
+  const manageCategoryTable = document.querySelector('.category-page #manage-category-table');
+  let paginationContainer = document.querySelector('.category-page .manage-category-form .pagination');
+
+  const categoriesPerPage = 10;
+  const totalPages = Math.ceil(categories.length / categoriesPerPage);
 
   function getCategoryDetails(category) {
     if (!category.parent_id) {return { parentName: 'no parent', level: 1 };}
@@ -552,26 +557,124 @@ fetch('pages/categories.json').then(response => response.json())
     return { parentName: parentCategory.name, level: parentDetails.level + 1 };
   }
 
-  const manageCategoryTable = document.getElementById('manage-category-table');
-  categories.forEach(category => {
-    const { parentName, level } = getCategoryDetails(category);
+  function renderPage(page){
+    manageCategoryTable.innerHTML = '';
 
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td><input type="checkbox" name="checkbox[]" id="cat-name-${category.id}"></td>
-      <td>
-        <label for="cat-name-${category.id}">${category.name}</label>
-        <div class="buttons">
-          <a href="#">edit</a> | <a href="#">delete</a>
-        </div>
-      </td>
-      <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
-      <td>${parentName}</td>
-      <td class="level-${level}">level ${level}</td>
-      <td class="level-${level}">${category.id}</td>
-    `;
-    manageCategoryTable.appendChild(row);
-  });
-  attachCheckboxListeners();
+    const startIndex = (page - 1) * categoriesPerPage;
+    const endIndex = page * categoriesPerPage;
+    const currentCategories = categories.slice(startIndex, endIndex);
+
+    currentCategories.forEach(category => {
+      const { parentName, level } = getCategoryDetails(category);
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td><input type="checkbox" name="checkbox[]" id="cat-name-${category.id}"></td>
+        <td>
+          <label for="cat-name-${category.id}">${category.name}</label>
+          <div class="buttons">
+            <a href="#">edit</a> | <a href="#">delete</a>
+          </div>
+        </td>
+        <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
+        <td>${parentName}</td>
+        <td class="level-${level}">level ${level}</td>
+        <td class="level-${level}">${category.id}</td>
+      `;
+      manageCategoryTable.appendChild(row);
+    });
+  }
+
+  function renderPagination(currentpage){
+    paginationContainer.innerHTML = '';
+
+    const visiblePages = 3;
+    const range = Math.min(visiblePages, totalPages);
+
+    if(currentpage > 1){
+      const prevButton = document.createElement('a');
+            prevButton.href = '#';
+            prevButton.className = 'previous pagination-link';
+            prevButton.textContent = 'Previous';
+      if (currentpage === 1) {
+          prevButton.classList.add('disabled');
+      } else {
+        prevButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          renderPage(currentpage - 1);
+          renderPagination(currentpage - 1);
+        });
+      }
+      paginationContainer.appendChild(prevButton);
+    }
+
+    if (currentpage <= range) {
+      for (let i=1; i<=range; i++) {
+        createPageLink(i, currentpage);
+      }
+      if (totalPages > visiblePages) {
+        appendDots();
+        createPageLink(totalPages, currentpage);
+      }
+    } else if (currentpage > totalPages - range) {
+      createPageLink(1, currentpage);
+      appendDots();
+      for (let i=totalPages - range + 1; i<=totalPages; i++) {
+        createPageLink(i, currentpage);
+      }
+    } else {
+      createPageLink(1, currentpage);
+      appendDots();
+      for (let i=currentpage - Math.floor(visiblePages / 2); i<=currentpage + Math.floor(visiblePages / 2); i++) {
+        createPageLink(i, currentpage);
+      }
+      appendDots();
+      createPageLink(totalPages, currentpage);
+    }
+
+    if(currentpage < totalPages){
+       const nextButton = document.createElement('a');
+             nextButton.href = '#';
+             nextButton.className = 'next pagination-link';
+             nextButton.textContent = 'Next';
+       if (currentpage === totalPages) {
+           nextButton.classList.add('disabled');
+       } else {
+         nextButton.addEventListener('click', (e) => {
+           e.preventDefault();
+           renderPage(currentpage + 1);
+           renderPagination(currentpage + 1);
+         });
+       }
+       paginationContainer.appendChild(nextButton);
+    }
+
+    function createPageLink(page, currentPage) {
+      const link = document.createElement('a');
+      link.href = '#';
+      link.className = 'pagination-link';
+      link.textContent = page;
+      if (page === currentPage) {
+        link.classList.add('active');
+      }
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        renderPage(page);
+        renderPagination(page);
+      });
+      paginationContainer.appendChild(link);
+    }
+    
+    function appendDots() {
+      const dots = document.createElement('span');
+      dots.className = 'pagination-dots';
+      dots.textContent = '....';
+      paginationContainer.appendChild(dots);
+    }
+    
+    attachCheckboxListeners();
+  }
+  renderPage(1);
+  renderPagination(1);
 })
 .catch(error => console.error('Error loading JSON:', error));
