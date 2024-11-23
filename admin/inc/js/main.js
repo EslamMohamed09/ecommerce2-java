@@ -572,8 +572,47 @@ if(document.getElementById("visaInput")){
   });
 }
 
-// Appear Multiple Buttons & Select all items
+fetch('pages/customers.json').then(response => response.json())
+.then(data => {
+  const customers = data.customers;
+  const manageCustomersTable = document.querySelector('.customers-page #manage-customers-table');
+  const paginationContainer = document.querySelector('.manage-table-form .pagination');
 
+  function renderCustomersTable(){
+    manageCustomersTable.innerHTML = '';
+
+    customers.forEach((customer) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td><input type="checkbox" name="checkbox[]" id="cu-name-${customer.id}"></td>
+        <td>
+          <label for="cu-name-${customer.id}">${customer.fullname}</label>
+          <div class="buttons">
+            <a href="editcustomer.html" target="_blank">edit</a>|
+            <a href="#" class="confirm">delete</a>
+          </div>
+        </td>
+        <td>${customer.email}</td>
+        <td>${customer.phone_no}</td>
+        <td><img src="${customer.cust_image}" alt=""></td>
+        <td>${customer.gender}</td>
+        <td>${customer.country}</td>
+        <td>${customer.city}</td>
+        <td>${customer.postalcode}</td>
+        <td>${customer.question}</td>
+        <td>${customer.date}</td>
+        <td>${customer.id}</td>
+      `;
+      manageCustomersTable.appendChild(row);
+    });
+    attachCheckboxListeners();
+  }
+
+  pagination(customers, 10, renderCustomersTable, paginationContainer);
+}).catch(error => console.error('Error loading JSON:', error));
+
+
+// Appear Multiple Buttons & Select all items
 function attachCheckboxListeners(){
   document.querySelectorAll(".manage-table-form").forEach((managetable) => {
     const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
@@ -611,7 +650,7 @@ function attachCheckboxListeners(){
     }
   });
 }
-attachCheckboxListeners();
+
 
 /*
  ===============================
@@ -622,7 +661,7 @@ fetch('pages/categories.json').then(response => response.json())
 .then(data => {
   const categories = data.categories
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
-  const manageCategoryTable = document.querySelector('.category-page #manage-category-table');
+  const manageCategoriesTable = document.querySelector('.category-page #manage-category-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
 
   function getCategoryDetails(category) {
@@ -633,7 +672,7 @@ fetch('pages/categories.json').then(response => response.json())
   }
 
   function renderCategoryContent(currentCategories) {
-    manageCategoryTable.innerHTML = '';
+    manageCategoriesTable.innerHTML = '';
 
     currentCategories.forEach((category) => {
       const { parentName, level } = getCategoryDetails(category);
@@ -652,7 +691,7 @@ fetch('pages/categories.json').then(response => response.json())
         <td class="level-${level}">level ${level}</td>
         <td>${category.id}</td>
       `;
-      manageCategoryTable.appendChild(row);
+      manageCategoriesTable.appendChild(row);
     });
     attachCheckboxListeners();
   }
