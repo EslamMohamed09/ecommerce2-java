@@ -565,10 +565,10 @@ fetch('pages/categories.json').then(response => response.json())
           <a href="#">edit</a> | <a href="#">delete</a>
         </div>
       </td>
-      <td>Sample description</td>
       <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
       <td>${parentName}</td>
       <td class="level-${level}">level ${level}</td>
+      <td class="level-${level}">${category.id}</td>
     `;
     manageCategoryTable.appendChild(row);
   });

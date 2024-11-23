@@ -3481,7 +3481,7 @@ header .small-menu .small-menu-link {
   padding: 1.4rem 0rem 2rem 0.5rem;
 }
 .category-page-container .add-managing-category .manage-category-form table tbody tr td:nth-child(2) {
-  padding: 1.1rem 1rem 2rem 0.1rem;
+  padding: 1.1rem 0 2rem 0.1rem;
   text-align: left;
 }
 .category-page-container .add-managing-category .manage-category-form table tbody tr td .buttons {
