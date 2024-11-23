@@ -475,6 +475,45 @@ collapsibleProfileBtn.addEventListener("click", function() {
 });
 }
 
+// Appear Multiple Buttons & Select all items
+function attachCheckboxListeners(){
+  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
+    const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
+    const secondHeadCheckBoxes = managetable.querySelector("#second-head-checkbox");
+    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
+    const submitBttnsHolder = managetable.querySelector(".submit-buttons-holder");
+
+    if (firstHeadCheckBoxes && secondHeadCheckBoxes){
+        
+        function checkedCheckBoxes(){
+          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
+          if(selectedCheckBoxes.length > 1){
+            submitBttnsHolder.style.display = "flex";
+          } else {
+            submitBttnsHolder.style.display = "none";
+          }
+        }
+
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener("change", checkedCheckBoxes);
+        });
+
+        firstHeadCheckBoxes.addEventListener("change", () => {
+          checkboxes.forEach(checkbox => checkbox.checked = firstHeadCheckBoxes.checked);
+          secondHeadCheckBoxes.checked = firstHeadCheckBoxes.checked;
+          checkedCheckBoxes();
+        });
+
+        secondHeadCheckBoxes.addEventListener("change", () => {
+          checkboxes.forEach(checkbox => checkbox.checked = secondHeadCheckBoxes.checked);
+          checkboxes.checked = secondHeadCheckBoxes.checked;
+          firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
+          checkedCheckBoxes();
+        });
+    }
+  });
+}
+
 /** pagination **/
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -578,7 +617,7 @@ fetch('pages/customers.json').then(response => response.json())
   const manageCustomersTable = document.querySelector('.customers-page #manage-customers-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
 
-  function renderCustomersTable(){
+  function renderCustomersTable(customers){
     manageCustomersTable.innerHTML = '';
 
     customers.forEach((customer) => {
@@ -610,46 +649,6 @@ fetch('pages/customers.json').then(response => response.json())
 
   pagination(customers, 10, renderCustomersTable, paginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
-
-
-// Appear Multiple Buttons & Select all items
-function attachCheckboxListeners(){
-  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
-    const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
-    const secondHeadCheckBoxes = managetable.querySelector("#second-head-checkbox");
-    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
-    const submitBttnsHolder = managetable.querySelector(".submit-buttons-holder");
-
-    if (firstHeadCheckBoxes && secondHeadCheckBoxes){
-        
-        function checkedCheckBoxes(){
-          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
-          if(selectedCheckBoxes.length > 1){
-            submitBttnsHolder.style.display = "flex";
-          } else {
-            submitBttnsHolder.style.display = "none";
-          }
-        }
-
-        checkboxes.forEach(checkbox => {
-          checkbox.addEventListener("change", checkedCheckBoxes);
-        });
-
-        firstHeadCheckBoxes.addEventListener("change", () => {
-          checkboxes.forEach(checkbox => checkbox.checked = firstHeadCheckBoxes.checked);
-          secondHeadCheckBoxes.checked = firstHeadCheckBoxes.checked;
-          checkedCheckBoxes();
-        });
-
-        secondHeadCheckBoxes.addEventListener("change", () => {
-          checkboxes.forEach(checkbox => checkbox.checked = secondHeadCheckBoxes.checked);
-          checkboxes.checked = secondHeadCheckBoxes.checked;
-          firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
-          checkedCheckBoxes();
-        });
-    }
-  });
-}
 
 
 /*
