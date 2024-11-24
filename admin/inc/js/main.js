@@ -700,3 +700,47 @@ fetch('pages/categories.json').then(response => response.json())
   pagination(categories, 10, renderCategoryContent, paginationContainer);
 })
 .catch(error => console.error('Error loading JSON:', error));
+
+/*
+ =============================
+ ######### USERS PAGE ########
+ =============================
+*/
+fetch('pages/users.json').then(response => response.json())
+.then(data => {
+  const users = data.users
+  const manageUsersTable = document.querySelector('#users-page #manage-users-table');
+  const usersCountElement = document.querySelector('#users-page .table-details .counting .no');
+        usersCountElement.textContent = users.length;
+  const paginationContainer = document.querySelector('.manage-table-form .pagination');
+    
+  function renderUsersTable(users){
+    manageUsersTable.innerHTML = '';
+    users.forEach((user) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <tr>
+          <td><input type="checkbox" id="user-${user.id}" name="checkbox[]" class="checkboxinput"></td>
+          <td>
+            <label for="user-${user.id}">${user.username}</label>
+            <div class="buttons"> 
+              <a href="edituser.html" target="_blank">edit</a>|
+              <a href="#" class="confirm">delete</a>| 
+              <i class="fas fa-check"></i>
+            </div> 
+          </td>
+          <td>${user.email}</td>
+          <td>${user.fullname}</td>
+          <td><p style="color:green;">${user.groupId}</p></td>
+          <td><p class="activated">${user.regStatus}</p></td>
+          <td>${user.date}</td>
+          <td>${user.id}</td>
+        </tr>
+      `;
+      manageUsersTable.appendChild(row);
+    });
+    attachCheckboxListeners();
+  }
+
+  pagination(users, 10, renderUsersTable, paginationContainer);
+}).catch(error => console.error('Error loading JSON:', error));
