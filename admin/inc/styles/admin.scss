@@ -60,7 +60,7 @@ body {overflow-x:hidden;
        --yellow12:#f7c205;
        --yellow13:#dfb006;
 
-       --transparent-yellow:#b6b61d1c;
+       --transparent-yellow:#e6e60d1f;
        --transparent-yellow2:#b6b61d27;
        --transparent-yellow3:#b6b61d36;
        --transparent-yellow4:#f7db6b4f;
@@ -78,8 +78,9 @@ body {overflow-x:hidden;
        --orange9:rgb(247, 197, 104);
        --orange10:rgb(248, 191, 85);
        
-       --transparent-orange:#af5e392a;
-       --transparent-orange1:#fdad0125;
+       --transparent-orange:#fdad0113;
+       --transparent-orange2:#fdad011c;
+       --transparent-orange3:#fdad0125;
        
        --brown11:rgb(185, 121, 0);
        --brown12:rgb(151, 99, 1);
@@ -1282,52 +1283,35 @@ table {width:100%;
        thead {padding:1rem 0.9rem;
               background-color:var(--white);
 
-              &:first-child tr th:first-child {border-top-left-radius:0;}
-              &:first-child tr th:last-child {border-top-right-radius:0;}
               &:last-child tr th:first-child {border-bottom-left-radius:0.7rem;}
               &:last-child tr th:last-child {border-bottom-right-radius:0.7rem;}
 
-              &:first-child {background-color:var(--transparent-yellow2);
+              &:first-child {background-color:var(--transparent-yellow3);
                              border-bottom:1px solid var(--gray3);}
               &:last-child {border-top:1px solid var(--gray3);}
 
-              tr th:first-child {padding:1rem 0.1rem 0.3rem 1rem;}
-
-              tr th {padding:0.7rem 0.1rem 0.3rem 1rem;
+              tr th {padding:0.7rem;
                      text-align:center;}
        }
 
        /* body */
        tbody {
-              tr:nth-child(even) {background-color:var(--transparent-yellow);}
 
               tr {
-                     td {padding:1.1rem 1rem 2rem;
+                     &:nth-child(even) {background-color:var(--transparent-yellow);}
+
+                     td {padding:1rem;
                          color:var(--gray11);
                          text-align:center;
-                         position:relative;
 
                          &:nth-child(even) {font-weight:bold;}
-
-                         &:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
-
-                         .buttons {position:absolute;
-                                   bottom:0.3rem;
-                                   left:0.9rem;
-                                   display:flex;
-                                   flex-direction:row;
-                                   gap:0.5rem;
-                                   opacity:0;
-    
-                            .fa-check {color:var(--green7);}
-                         }
 
                          img {width:4rem;
                               height:3.5rem;
                               border-radius:0.3rem;}
+
                      }
 
-                     &:hover .buttons {opacity:1;}
               }
        }
 
@@ -1338,6 +1322,7 @@ table {width:100%;
 /* table details */
 .manage-table-block {width:100%;
                      display:block;
+                     margin:1rem auto;
                      padding:0;
                      text-align:left;
                      border-radius:0.7rem;
@@ -1432,15 +1417,17 @@ table {width:100%;
                      &:first-child {border-bottom:1px solid var(--gray3);}
                      &:last-child {border-top:1px solid var(--gray3);}
 
-                     tr th:first-child {padding:1rem 0.1rem 0.3rem 1rem;
-                                        text-align:left;}
+                     tr {
+                            th {padding:0.7rem 0.3rem 0.3rem;
+                                text-align:center;
+                                   &:first-child {padding:1rem 0.1rem 0.3rem 1rem;
+                                                  text-align:left;}
 
-                     tr th:not(:first-child) {padding:0.7rem 0.1rem 0.3rem 1rem;
-                                          text-align:center;}
-
-                     tr th:nth-child(2) {padding:0.7rem 0.5rem 0.3rem 0.5rem;
-                                         text-align:left;
-                            label {cursor:pointer;}
+                                   &:nth-child(2) {padding:0.7rem 0.5rem 0.3rem 0.5rem;
+                                                   text-align:left;
+                                          label {cursor:pointer;}
+                                   }
+                            }
                      }
               }
 
@@ -1450,7 +1437,7 @@ table {width:100%;
                      tr {
                             &:nth-child(even) {background-color:var(--gray);}
 
-                            td {padding:1.1rem 1rem 2rem;
+                            td {padding:1.1rem 0.3rem 2rem;
                                 color:var(--gray11);
                                 text-align:center;
                                 position:relative;
@@ -1472,10 +1459,6 @@ table {width:100%;
               
                                           .fa-check {color:var(--green7);}
                                    }
-
-                                   img {width:4rem;
-                                        height:3.5rem;
-                                        border-radius:0.3rem;}
                             }
 
                             &:hover .buttons {opacity:1;}
@@ -2194,19 +2177,16 @@ header {width:100%;
                                           background-color:transparent;
                                           box-shadow:none;
 
-                                          thead {padding:6rem;
-                                                 border-top:1px solid var(--gray4);
+                                          thead {border-top:1px solid var(--gray4);
                                                  border-bottom:1px solid var(--gray4);
 
-                                                 tr {border-top-left-radius:0.7rem;
-                                                     border-top-right-radius:0.7rem;
-                                                     padding:7rem;
-
+                                                 tr {
                                                         th {padding:1rem 0;
                                                             font-size:1.2rem;
-                                                            border-right:1px solid var(--gray4);}
+                                                            border-right:1px solid var(--gray4);
 
-                                                        th:last-child {border-right:none;}
+                                                               &:last-child {border-right:none;}
+                                                        }
                                                  }
                                           }
 
@@ -2876,22 +2856,20 @@ header {width:100%;
 */
 #customers-page {
        .customers-page-container {
-              .manage-customers-table-block {width:99%;
-                                             display:block;
-                                             margin:1rem auto;
-                                             padding:0;
-                                             text-align:left;
-                                             border-radius:0.7rem;
+              .manage-customers-table-block {
 
                      /** table **/
                      table {
                             
                             /* body */
                             tbody {
-                                   tr:nth-child(odd) {background-color:rgba(216, 140, 0, 0.041);}
+                                   tr:nth-child(even) {background-color:var(--transparent-orange);}
                      
-                                   tr td .buttons > a {color:var(--gray-yellow6);
-                                                       text-transform:uppercase;}
+                                   tr td {
+                                          .buttons > a {color:var(--gray-yellow6);
+                                                        text-transform:uppercase;}
+                                          p {text-align:center;background-color: red;}
+                                   }
                             }
                      }
               }
@@ -3191,3 +3169,15 @@ header {width:100%;
 */
 /* Add Member Skills */
 .manage-members-page .add-user-area .add-member-form #skillsContainer .skills-form .skills-blocks .block {gap:1rem;}
+
+#users-page {
+              table {
+                     
+                     tbody {              
+                            tr td {
+                                   p {text-align:center;}
+                            }
+                     }
+              }
+}
+       
