@@ -1551,97 +1551,6 @@ input[type=file] {
  # TABLE
 ==================
 */
-.managing-table {
-  width: 100%;
-  display: block;
-  padding: 0;
-  text-align: left;
-  border-radius: 0.7rem;
-  background: transparent;
-}
-
-/* table details */
-.table-details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2.5rem;
-  padding: 0.5rem 0.9rem;
-  margin: 0;
-  margin-bottom: 1rem;
-  border-radius: 0.2rem;
-  border-top-left-radius: 0.7rem;
-  border-top-right-radius: 0.7rem;
-  box-shadow: var(--box-shadow6);
-  background-color: var(--white);
-}
-.table-details .form-search {
-  flex-wrap: nowrap;
-  width: 30%;
-  padding: 0;
-  border-radius: 0.2rem 0 0 0.2rem;
-  box-shadow: none;
-  border: 1px solid var(--gray3);
-}
-.table-details .form-search input[type=search] {
-  width: calc(100% - 3rem);
-  font-size: 1.1rem;
-  padding: 0.3rem 0.8rem 0.3rem 0.6rem;
-  box-shadow: none;
-  color: var(--gray10);
-  background-color: transparent;
-  border-radius: 0.2rem 0 0 0.2rem;
-}
-.table-details .form-search #submit-search {
-  width: 3rem;
-  height: 100%;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0 0.2rem 0.2rem 0;
-  background-color: var(--blue5);
-}
-.table-details .form-search #submit-search #submit-searchi {
-  color: var(--blue2);
-}
-.table-details .counting {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--gray10);
-}
-.table-details .counting .no {
-  padding: 0.3rem 1rem;
-  font-size: 1.1rem;
-  border-radius: 1.5rem;
-  margin-left: 0.5rem;
-  color: var(--milky2);
-  background-color: var(--blue4);
-}
-.table-details .ordering-btns {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--gray10);
-}
-.table-details .ordering-btns > a {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--gray10);
-}
-.table-details .ordering-btns > a:hover {
-  color: var(--primary1);
-}
-@media (max-width: 550px) {
-  .table-details {
-    justify-content: space-between;
-  }
-}
-@media (max-width: 500px) {
-  .table-details .counting span:first-child {
-    display: none;
-  }
-}
-
-/*** table ***/
 table {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -1660,44 +1569,37 @@ table thead {
   background-color: var(--white);
 }
 table thead:first-child tr th:first-child {
-  border-top-left-radius: 0.4rem;
+  border-top-left-radius: 0;
 }
 table thead:first-child tr th:last-child {
-  border-top-right-radius: 0.4rem;
+  border-top-right-radius: 0;
+}
+table thead:last-child tr th:first-child {
+  border-bottom-left-radius: 0.7rem;
+}
+table thead:last-child tr th:last-child {
+  border-bottom-right-radius: 0.7rem;
+}
+table thead:first-child {
+  border-bottom: 1px solid var(--gray3);
+}
+table thead:last-child {
+  border-top: 1px solid var(--gray3);
+}
+table thead tr th:first-child {
+  padding: 1rem 0.1rem 0.3rem 1rem;
+  text-align: left;
+}
+table thead tr th:not(:first-child) {
+  padding: 0.7rem 0.1rem 0.3rem 1rem;
+  text-align: center;
+}
+table thead tr th:nth-child(2) {
+  padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+  text-align: left;
 }
 table thead tr th:nth-child(2) label {
   cursor: pointer;
-}
-table thead:last-child {
-  border-bottom-left-radius: 0.7rem;
-  border-bottom-right-radius: 0.7rem;
-}
-table thead:last-child tr {
-  border-bottom-left-radius: 0.7rem;
-  border-bottom-right-radius: 0.7rem;
-}
-table thead:last-child tr th:first-child {
-  border-bottom-left-radius: 0.4rem;
-}
-table thead:last-child tr th:last-child {
-  border-bottom-right-radius: 0.4rem;
-}
-table thead tr th {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  text-align: center;
-  color: var(--gray10);
-}
-table thead tr th:first-child {
-  padding: 0.6rem 0.4rem 0.3rem 0.4rem;
-}
-table thead tr th:nth-child(2) {
-  padding: 0.5rem 0.4rem 0.5rem 0;
-}
-table thead tr th {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: var(--gray10);
 }
 table tbody tr:nth-child(even) {
   background-color: var(--gray);
@@ -1708,27 +1610,23 @@ table tbody tr td {
   text-align: center;
   position: relative;
 }
+table tbody tr td:nth-child(2) {
+  padding: 1.1rem 0.5rem 2rem 0.5rem;
+  text-align: left;
+}
 table tbody tr td:nth-child(2) label {
   cursor: pointer;
 }
 table tbody tr td:nth-child(even) {
   font-weight: bold;
 }
-table tbody tr td img {
-  width: 4rem;
-  height: 3.5rem;
-  border-radius: 0.3rem;
-}
 table tbody tr td:first-child {
   padding: 1.4rem 0rem 2rem 0.5rem;
-}
-table tbody tr td:nth-child(2) {
-  padding: 1.1rem 0.5rem 2rem 0.1rem;
 }
 table tbody tr td .buttons {
   position: absolute;
   bottom: 0.3rem;
-  left: -1rem;
+  left: 0.9rem;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -1737,11 +1635,204 @@ table tbody tr td .buttons {
 table tbody tr td .buttons .fa-check {
   color: var(--green7);
 }
+table tbody tr td img {
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 0.3rem;
+}
 table tbody tr:hover .buttons {
   opacity: 1;
 }
 @media (max-width: 768px) {
   table tbody tr td .buttons {
+    top: 3.5rem;
+    left: -0.5rem;
+  }
+}
+
+/* table details */
+.manage-table-block {
+  width: 100%;
+  display: block;
+  padding: 0;
+  text-align: left;
+  border-radius: 0.7rem;
+  background: transparent;
+  /*** table ***/
+}
+.manage-table-block .table-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0.5rem 0.9rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  box-shadow: var(--box-shadow6);
+  background-color: var(--white);
+}
+.manage-table-block .table-details .form-search {
+  flex-wrap: nowrap;
+  width: 30%;
+  padding: 0;
+  border-radius: 0.2rem 0 0 0.2rem;
+  box-shadow: none;
+  border: 1px solid var(--gray3);
+}
+.manage-table-block .table-details .form-search input[type=search] {
+  width: calc(100% - 3rem);
+  font-size: 1.1rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.6rem;
+  box-shadow: none;
+  color: var(--gray10);
+  background-color: transparent;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+.manage-table-block .table-details .form-search #submit-search {
+  width: 3rem;
+  height: 100%;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background-color: var(--blue5);
+}
+.manage-table-block .table-details .form-search #submit-search #submit-searchi {
+  color: var(--blue2);
+}
+.manage-table-block .table-details .counting {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--gray10);
+}
+.manage-table-block .table-details .counting .no {
+  padding: 0.3rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 1.5rem;
+  margin-left: 0.5rem;
+  color: var(--milky2);
+  background-color: var(--blue4);
+}
+.manage-table-block .table-details .ordering-btns {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--gray10);
+}
+.manage-table-block .table-details .ordering-btns > a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--gray10);
+}
+.manage-table-block .table-details .ordering-btns > a:hover {
+  color: var(--primary1);
+}
+@media (max-width: 550px) {
+  .manage-table-block .table-details {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  .manage-table-block .table-details .counting span:first-child {
+    display: none;
+  }
+}
+.manage-table-block table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 0.7rem;
+  border-collapse: collapse;
+  box-shadow: var(--box-shadow6);
+  background-color: transparent;
+  /* head */
+  /* body */
+}
+.manage-table-block table input[type=checkbox] {
+  cursor: pointer;
+}
+.manage-table-block table thead {
+  padding: 1rem 0.9rem;
+  background-color: var(--white);
+}
+.manage-table-block table thead:first-child tr th:first-child {
+  border-top-left-radius: 0;
+}
+.manage-table-block table thead:first-child tr th:last-child {
+  border-top-right-radius: 0;
+}
+.manage-table-block table thead:last-child tr th:first-child {
+  border-bottom-left-radius: 0.7rem;
+}
+.manage-table-block table thead:last-child tr th:last-child {
+  border-bottom-right-radius: 0.7rem;
+}
+.manage-table-block table thead:first-child {
+  border-bottom: 1px solid var(--gray3);
+}
+.manage-table-block table thead:last-child {
+  border-top: 1px solid var(--gray3);
+}
+.manage-table-block table thead tr th:first-child {
+  padding: 1rem 0.1rem 0.3rem 1rem;
+  text-align: left;
+}
+.manage-table-block table thead tr th:not(:first-child) {
+  padding: 0.7rem 0.1rem 0.3rem 1rem;
+  text-align: center;
+}
+.manage-table-block table thead tr th:nth-child(2) {
+  padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+  text-align: left;
+}
+.manage-table-block table thead tr th:nth-child(2) label {
+  cursor: pointer;
+}
+.manage-table-block table tbody tr:nth-child(even) {
+  background-color: var(--gray);
+}
+.manage-table-block table tbody tr td {
+  padding: 1.1rem 1rem 2rem;
+  color: var(--gray11);
+  text-align: center;
+  position: relative;
+}
+.manage-table-block table tbody tr td:nth-child(2) {
+  padding: 1.1rem 0.5rem 2rem 0.5rem;
+  text-align: left;
+}
+.manage-table-block table tbody tr td:nth-child(2) label {
+  cursor: pointer;
+}
+.manage-table-block table tbody tr td:nth-child(even) {
+  font-weight: bold;
+}
+.manage-table-block table tbody tr td:first-child {
+  padding: 1.4rem 0rem 2rem 0.5rem;
+}
+.manage-table-block table tbody tr td .buttons {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  opacity: 0;
+}
+.manage-table-block table tbody tr td .buttons .fa-check {
+  color: var(--green7);
+}
+.manage-table-block table tbody tr td img {
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 0.3rem;
+}
+.manage-table-block table tbody tr:hover .buttons {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .manage-table-block table tbody tr td .buttons {
     top: 3.5rem;
     left: -0.5rem;
   }
@@ -2857,9 +2948,9 @@ header .small-menu .small-menu-link {
 }
 
 /*
- =============================
- ######## USER PROFILE #######
- =============================
+ ========================
+ ######## PROFILE #######
+ ========================
 */
 .profile-page .profile-container .profile-data {
   padding: 0;
@@ -3316,7 +3407,7 @@ header .small-menu .small-menu-link {
  ####### CUSTOMERS ######
  ========================
 */
-.customers-page .customers-page-container .managing-customers-table {
+#customers-page .customers-page-container .manage-customers-table-block {
   width: 99%;
   display: block;
   margin: 1rem auto;
@@ -3324,64 +3415,14 @@ header .small-menu .small-menu-link {
   text-align: left;
   border-radius: 0.7rem;
   /** table **/
-  /* head */
 }
-.customers-page .customers-page-container .managing-customers-table table {
-  border: none;
-  width: 100%;
-  margin: 0;
-  border-radius: 0.7rem;
-  background-color: var(--white);
+#customers-page .customers-page-container .manage-customers-table-block table {
   /* body */
 }
-.customers-page .customers-page-container .managing-customers-table table thead {
-  background-color: var(--white);
-}
-.customers-page .customers-page-container .managing-customers-table table thead:first-child tr th:first-child {
-  border-top-left-radius: 0;
-}
-.customers-page .customers-page-container .managing-customers-table table thead:first-child tr th:last-child {
-  border-top-right-radius: 0;
-}
-.customers-page .customers-page-container .managing-customers-table table thead:first-child {
-  border-bottom: 1px solid var(--gray3);
-}
-.customers-page .customers-page-container .managing-customers-table table thead:last-child {
-  border-top: 1px solid var(--gray3);
-}
-.customers-page .customers-page-container .managing-customers-table table thead tr th:not(:first-child) {
-  padding: 0.4rem 1rem 1rem;
-  text-align: center;
-}
-.customers-page .customers-page-container .managing-customers-table table thead tr th:first-child {
-  padding: 0 0.1rem 0.3rem 1rem;
-  text-align: center;
-}
-.customers-page .customers-page-container .managing-customers-table table thead tr th:nth-child(2) {
-  text-align: left;
-}
-.customers-page .customers-page-container .managing-customers-table table tbody tr:nth-child(odd) {
+#customers-page .customers-page-container .manage-customers-table-block table tbody tr:nth-child(odd) {
   background-color: rgba(216, 140, 0, 0.041);
 }
-.customers-page .customers-page-container .managing-customers-table table tbody tr td:nth-child(odd) {
-  font-weight: bold;
-}
-.customers-page .customers-page-container .managing-customers-table table tbody tr td:not(:first-child) {
-  padding: 1.1rem 1rem 2rem;
-  color: var(--gray10);
-  text-align: center;
-}
-.customers-page .customers-page-container .managing-customers-table table tbody tr td:first-child {
-  padding: 0 0.1rem 0.3rem 1rem;
-  text-align: center;
-}
-.customers-page .customers-page-container .managing-customers-table table tbody tr td:nth-child(2) {
-  text-align: left;
-}
-.customers-page .customers-page-container .managing-customers-table table tbody tr td .buttons {
-  left: 1rem;
-}
-.customers-page .customers-page-container .managing-customers-table table tbody tr td .buttons > a {
+#customers-page .customers-page-container .manage-customers-table-block table tbody tr td .buttons > a {
   color: var(--gray-yellow6);
   text-transform: uppercase;
 }
@@ -3712,11 +3753,8 @@ header .small-menu .small-menu-link {
  ########## USERS ##########
  ===========================
 */
-/*******MEMBERS******
- # Add
-*********************/
 /* Add Member Skills */
-.manage-members-page .add-member-area .add-member-form #skillsContainer .skills-form .skills-blocks .block {
+.manage-members-page .add-user-area .add-member-form #skillsContainer .skills-form .skills-blocks .block {
   gap: 1rem;
 }
 

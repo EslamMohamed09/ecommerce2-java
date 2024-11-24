@@ -614,9 +614,9 @@ if(document.getElementById("visaInput")){
 fetch('pages/customers.json').then(response => response.json())
 .then(data => {
   const customers = data.customers;
-  const manageCustomersTable = document.querySelector('.customers-page #manage-customers-table');
+  const manageCustomersTable = document.querySelector('#customers-page #manage-customers-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
-  const customersCountElement = document.querySelector('.customers-page .table-details .counting .no');
+  const customersCountElement = document.querySelector('#customers-page .table-details .counting .no');
         customersCountElement.textContent = customers.length;
 
   function renderCustomersTable(customers){

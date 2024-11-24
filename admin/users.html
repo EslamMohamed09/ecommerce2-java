@@ -18,92 +18,92 @@
 
   <aside id="aside"></aside>
 
-  <div class="section-container manage-members-page">
+  <div class="users-page-container section-container">
 
     <h1 class="section-heading">Manage users</h1>
 
-    <div class="managing-table"> <!-- manage members -->
+    <div class="manage-users-table-block manage-table-block"> <!-- manage users -->
 
-        <div class="table-details d-flex-r-end-c">
+      <div class="table-details d-flex-r-end-c">
 
-          <form class="form-search d-flex-r-st-c" action="member_search.php" method="POST">
-            <input type="search" name="search" placeholder="Search User" id="searchinput-members">
-            <button type="submit" name="submit-search" id="submit-search"><i class="fas fa-search" id="submit-searchi"></i></button>
-          </form>
+        <form class="form-search d-flex-r-st-c" action="member_search.php" method="POST">
+          <input type="search" name="search" placeholder="Search User" id="searchinput-members">
+          <button type="submit" name="submit-search" id="submit-search"><i class="fas fa-search" id="submit-searchi"></i></button>
+        </form>
 
-          <div class="counting">
-            <span>all users</span> 
-            <span class="no"></span>
+        <div class="counting">
+          <span>all users</span> 
+          <span class="no"></span>
+        </div>
+
+        <div class="ordering-btns">
+          <a href="?sort=ASC">ASC</a> /
+          <a href="?sort=DESC">DESC</a> 
+        </div>
+
+      </div>
+
+      <form action="" method="POST"  class="manage-table-form" style="width:100%;"> <!-- multiple-delete & multiple-approve -->
+
+        <table>
+
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="first-head-checkbox" class="checkboxinput"></th>
+              <th><label for="first-head-checkbox">Username</label></th>
+              <th>Email</th>
+              <th>Full Name</th>
+              <th>Rank</th>
+              <th>status</th>
+              <th>Registerd Date</th>
+              <th>ID</th>
+            </tr>
+          </thead>
+
+          <tbody id="manage-users-table"></tbody>
+
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="second-head-checkbox" class="checkboxinput"></th>
+              <th><label for="second-head-checkbox">username</label></th>
+              <th>Email</th>
+              <th>Full Name</th>
+              <th>Rank</th>
+              <th>status</th>
+              <th>Registerd Date</th>
+              <th>ID</th>
+            </tr>
+          </thead>
+      
+        </table>
+
+        <div class="submit-buttons-block">
+          <div class="submit-buttons-holder d-flex-r-st-c">
+            <input type="submit" name="multipledelete" value="delete" class="btn2" style="padding:0.5rem 1rem;">
+            <input type="submit" name="multipleapprove" value="approve" class="btn2" style="padding:0.5rem 1rem;">
           </div>
+        </div>
 
-          <div class="ordering-btns">
-            <a href="?sort=ASC">ASC</a> /
-            <a href="?sort=DESC">DESC</a> 
-          </div>
+        <div class="pagination">
+            
+          <a href="#" class="pagination-link">previous</a>
+
+          <a href="#" class="pagination-link active">1</a>
+          <a href="#" class="pagination-link">2</a>
+
+          <a href="#" class="pagination-link">next</a>
 
         </div>
 
-        <form action="" method="POST"  class="manage-table-form" style="width:100%;"> <!-- multiple-delete & multiple-approve -->
-
-          <table>
-
-            <thead>
-              <tr>
-                <th><input type="checkbox" id="first-head-checkbox" class="checkboxinput"></th>
-                <th><label for="first-head-checkbox">Username</label></th>
-                <th>Email</th>
-                <th>Full Name</th>
-                <th>Rank</th>
-                <th>status</th>
-                <th>Registerd Date</th>
-                <th>#ID</th>
-              </tr>
-            </thead>
-
-            <tbody id="manage-users-table"></tbody>
-
-            <thead>
-              <tr>
-                <th><input type="checkbox" id="second-head-checkbox" class="checkboxinput"></th>
-                <th><label for="second-head-checkbox">username</label></th>
-                <th>Email</th>
-                <th>Full Name</th>
-                <th>Rank</th>
-                <th>status</th>
-                <th>Registerd Date</th>
-                <th>#ID</th>
-              </tr>
-            </thead>
-        
-          </table>
-
-          <div class="submit-buttons-block">
-            <div class="submit-buttons-holder d-flex-r-st-c">
-              <input type="submit" name="multipledelete" value="delete" class="btn2" style="padding:0.5rem 1rem;">
-              <input type="submit" name="multipleapprove" value="approve" class="btn2" style="padding:0.5rem 1rem;">
-            </div>
-          </div>
-
-          <div class="pagination">
-              
-            <a href="#" class="pagination-link">previous</a>
-
-            <a href="#" class="pagination-link active">1</a>
-            <a href="#" class="pagination-link">2</a>
-
-            <a href="#" class="pagination-link">next</a>
-
-          </div>
-
-        </form>
+      </form>
 
     </div> <!-- End managing-table -->
 
     <button class="tab-btn collapsible" id="collapsible">Add User</button>
 
-    <div class="add-member-area collapsible-page" style="display:none;"> <!-- # Add User Area # -->
+    <div class="add-user-area collapsible-page" style="display:none;"> <!-- # Add User Area # -->
 
-      <form class="add-member-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
+      <form class="add-user-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
 
         <div class="add-user-info form-block d-flex-c-st-st"> <!-- add user info -->
 

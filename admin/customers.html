@@ -14,88 +14,88 @@
 <body>
 <header class="header" id="header"></header>
 
-<section class="customers-page dashboard-section" id="dashboard-section"> <!-- MANAGE CUSTOMERS -->
+<section class="dashboard-section" id="customers-page"> <!-- MANAGE CUSTOMERS -->
 
   <aside id="aside"></aside>
 
   <div class="customers-page-container section-container">
 
-      <h1 class="section-heading">manage customers</h1>
+    <h1 class="section-heading">manage customers</h1>
 
-      <div class="managing-customers-table">
+    <div class="manage-customers-table-block manage-table-block">
 
-        <div class="table-details">
+      <div class="table-details">
 
-            <form class="form-search d-flex-r-st-c" action="customer_search.php" method="POST">
-              <input type="search" name="search" placeholder="Search Customer" id="searchinput-customers">
-              <button type="submit" name="submit-search" id="submit-search"><i class="fas fa-search" id="submit-searchi"></i></button>
-            </form>
-
-            <div class="counting">
-              <span>all customers</span> 
-              <span class="no">22</span>
-            </div>
-
-            <div class="ordering-btns">
-              <a href="?sort=ASC" class="">ASC</a> /
-              <a href="?sort=DESC" class="">DESC</a> 
-            </div>
-
-        </div>
-
-        <form action="" method="POST" class="manage-table-form" style="width:100%;"> <!-- multiple delete form -->
-
-          <table>
-
-            <thead>
-              <tr>
-                <th><input type="checkbox" id="first-head-checkbox" class="checkboxinput"></th>
-                <th><label for="first-head-checkbox">fullname</label></th>
-                <th>email</th>
-                <th>phone no.</th>
-                <th>image</th>
-                <th>gender</th>
-                <th>country</th>
-                <th>city</th>
-                <th>po. code</th>
-                <th>question</th>
-                <th>date</th>
-                <th>iD</th>
-              </tr>
-            </thead>
-
-            <tbody id="manage-customers-table"></tbody>
-
-            <thead>
-              <tr>
-                <th><input type="checkbox" id="second-head-checkbox" class="checkboxinput"></th>
-                <th><label for="second-head-checkbox">fullname</label></th>
-                <th>email</th>
-                <th>phone no.</th>
-                <th>image</th>
-                <th>gender</th>
-                <th>country</th>
-                <th>city</th>
-                <th>po. code</th>
-                <th>question</th>
-                <th>date</th>
-                <th>iD</th>
-              </tr>
-            </thead>
-
-          </table>
-
-          <div class="submit-buttons-block">
-            <div class="submit-buttons-holder d-flex-r-st-c">
-              <input type="submit" name="multipledelete" value="delete" class="btn2">
-            </div>
-          </div>
-
-          <div class="pagination"></div>
-
+        <form class="form-search d-flex-r-st-c" action="customer_search.php" method="POST">
+          <input type="search" name="search" placeholder="Search Customer" id="searchinput-customers">
+          <button type="submit" name="submit-search" id="submit-search"><i class="fas fa-search" id="submit-searchi"></i></button>
         </form>
 
-      </div> <!-- End Customer Table -->
+        <div class="counting">
+          <span>all customers</span> 
+          <span class="no"></span>
+        </div>
+
+        <div class="ordering-btns">
+          <a href="?sort=ASC" class="">ASC</a> /
+          <a href="?sort=DESC" class="">DESC</a> 
+        </div>
+
+      </div>
+
+      <form action="" method="POST" class="manage-table-form" style="width:100%;"> <!-- multiple delete form -->
+
+        <table>
+
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="first-head-checkbox" class="checkboxinput"></th>
+              <th><label for="first-head-checkbox">fullname</label></th>
+              <th>email</th>
+              <th>phone no.</th>
+              <th>image</th>
+              <th>gender</th>
+              <th>country</th>
+              <th>city</th>
+              <th>po. code</th>
+              <th>question</th>
+              <th>date</th>
+              <th>iD</th>
+            </tr>
+          </thead>
+
+          <tbody id="manage-customers-table"></tbody>
+
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="second-head-checkbox" class="checkboxinput"></th>
+              <th><label for="second-head-checkbox">fullname</label></th>
+              <th>email</th>
+              <th>phone no.</th>
+              <th>image</th>
+              <th>gender</th>
+              <th>country</th>
+              <th>city</th>
+              <th>po. code</th>
+              <th>question</th>
+              <th>date</th>
+              <th>iD</th>
+            </tr>
+          </thead>
+
+        </table>
+
+        <div class="submit-buttons-block">
+          <div class="submit-buttons-holder d-flex-r-st-c">
+            <input type="submit" name="multipledelete" value="delete" class="btn2">
+          </div>
+        </div>
+
+        <div class="pagination"></div>
+
+      </form>
+
+    </div> <!-- End Customer Table -->
 
   </div> <!-- ===== End section-container ==== -->
 
