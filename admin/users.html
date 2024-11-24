@@ -101,101 +101,75 @@
 
     <button class="tab-btn collapsible" id="collapsible">Add User</button>
 
-    <div class="add-user-area collapsible-page" style="display:none;"> <!-- # Add User Area # -->
+    <div class="add-user-area collapsible-page" > <!-- # Add User Area # -->
 
       <form class="add-user-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
 
-        <div class="add-user-info form-block d-flex-c-st-st"> <!-- add user info -->
+        <form class="form-horizontal2 row" action="" method="POST"> <!-- member info -->
 
-          <div class="sub-heading"> <!-- Title -->
-              <h3 class="sub-title">personal information</h3>
-              <i class="fas fa-star"></i>
-          </div>
-          
-          <div class="input-box row">  <!-- Username -->
-            <label class="col-sm-2 control-label">Username</label>
-            <div class="col-md-10 col-sm-10">
-              <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" class="input-control" required/>
+          <input type="hidden" name="memberid" value="2">
+  
+          <div class="left-block col-lg-8 col-md-8 col-sm-12">
+  
+            <div class="input-holder">  <!-- Username -->
+              <label>Username</label>
+              <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" value="eslam mohamed" class="input-control" required/>
             </div>
-          </div>
-
-          <div class="input-box row">  <!-- Password -->
-            <label class="col-sm-2 control-label">Password</label>
-            <div class="col-md-10 col-sm-10 pass-col"> 
-              <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput" required/>
-              <div class="eye" onclick="eyeFunction()">
-                <i class="fa fa-eye" id="faeye-1"></i> 
-                <i class="fa fa-eye-slash" id="faeye-2"></i> 
+  
+            <div class="input-holder">  <!-- Password -->
+              <label class="control-label">Password</label>
+              <div class="pass-input">
+                  <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
+                  <div class="passeye" onclick="eyeFunction(this)">
+                  <i class="fa fa-eye" style="display:none;"></i> 
+                  <i class="fa fa-eye-slash"></i> 
+                  </div>
               </div>
             </div>
-          </div>
-
-          <div class="input-box row">  <!-- FullName -->
-            <label class="col-sm-2 control-label">Full Name</label>
-            <div class="col-md-10 col-sm-10">
-              <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" class="input-control" required/>
+  
+            <div class="input-holder">  <!-- FullName -->
+              <label class="control-label">Full Name</label>
+              <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" value="eslam mohamed fahmi" class="input-control" required/>
             </div>
-          </div>
-
-          <div class="input-box row">  <!-- Gender -->
-            <label class="col-sm-2 control-label">Gender</label>
-            <div class="col-md-10 col-sm-10">
+  
+            <div class="input-holder">  <!-- Gender -->
+              <label class="control-label">Gender</label>
               <select name="gender" class="input-control">
                 <option value="male">male</option>
                 <option value="female">female</option>
               </select>
             </div>
-          </div>
-
-          <div class="input-box row">  <!-- Rank -->
-            <label class="col-sm-2 control-label">Rank</label>
-            <div class="col-md-10 col-sm-10">
+  
+            <div class="input-holder">  <!-- Rank -->
+              <label class="control-label">Rank</label>
               <select name="rank" class="input-control">
-                <option value="0">user</option>    
-                <option value="1">admin</option>
+                  <option value="0">user</option>    
+                  <option value="1">admin</option>
               </select>
             </div>
-          </div>
-
-          <div class="double-input-box d-flex-r-bt-c">  <!-- Facebook, LinkedIn -->
-
-            <div class="input-box row">  <!-- Facebook -->
-              <label class="col-sm-4 control-label">Facebook</label>
-              <div class="col-md-8 col-sm-8">
-                <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" class="input-control"/>
-              </div>  
+  
+            <div class="input-holder">  <!-- Facebook -->
+              <label class="control-label">Facebook</label>
+              <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" value="eslam mohamed" class="input-control"/>
             </div>
-
-            <div class="input-box row">  <!-- LinkedIn -->
-              <label class="col-sm-3 control-label">LinkedIn</label>
-              <div class="col-md-9 col-sm-9">
-                <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" class="input-control"/>
-              </div>
+  
+            <div class="input-holder">  <!-- LinkedIn -->
+              <label>LinkedIn</label>
+              <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" value="eslam mohamed" class="input-control"/>
             </div>
-
-          </div>
-
-          <div class="double-input-box d-flex-r-bt-c">  <!-- Email, Whatsapp -->
-
-            <div class="input-box row">  <!-- Email -->
-              <label class="col-sm-4 control-label">Email</label>
-              <div class="col-md-8 col-sm-8">
-                <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" class="input-control" required/>
-              </div>
+  
+            <div class="input-holder">  <!-- Email -->
+              <label>Email</label>
+              <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" value="email@gmail.com" class="input-control" required/>
             </div>
-
-            <div class="input-box row">  <!-- whatsapp -->
-              <label class="col-sm-3 control-label">Whatsapp</label>
-              <div class="col-md-9 col-sm-9">
-                <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" class="input-control"/>
-              </div>
+  
+            <div class="input-holder">  <!-- whatsapp -->
+              <label>Whatsapp</label>
+              <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" value="01210203662" class="input-control"/>
             </div>
-
-          </div>
-
-          <div class="input-box row">  <!-- Country -->
-            <label class="col-sm-2 control-label">Country</label>
-            <div class="col-md-10 col-sm-10">
+  
+            <div class="input-holder">  <!-- Country -->
+              <label>Country</label>
               <select name="country" id="select_country" class="input-control">
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
@@ -209,9 +183,20 @@
                 <option value="Estonia">Estonia</option>
               </select>
             </div>
+  
+          </div> <!-- End-left-block -->
+  
+          <div class="right-block col-lg-4 col-md-4 col-sm-12">
+            <div class="image-holder d-flex-c-c-c">
+              <label>select your image</label>
+              <input type="file">
+              <img src="inc/images/users/eslam(10).jpg" alt="">
+            </div>
           </div>
-
-        </div> <!-- End add user info -->
+  
+          <input type="submit" name="updatememberinfo" value="update" class="btn3"/>
+  
+        </form>
 
         <div class="form-blocks" id="certificationsContainer"></div> <!-- |CERTIFICATIONS| -->
         <div class="add-delete-btns d-flex-r-end-st" style="margin-bottom:1rem;gap:1rem;">
