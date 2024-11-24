@@ -60,8 +60,10 @@ body {overflow-x:hidden;
        --yellow12:#f7c205;
        --yellow13:#dfb006;
 
-       --transparent-yellow:#f7db6b4f;
+       --transparent-yellow:#b6b61d1c;
        --transparent-yellow2:#b6b61d27;
+       --transparent-yellow3:#b6b61d36;
+       --transparent-yellow4:#f7db6b4f;
 
        --shin-orange:rgb(255, 153, 0);
 
@@ -1285,35 +1287,25 @@ table {width:100%;
               &:last-child tr th:first-child {border-bottom-left-radius:0.7rem;}
               &:last-child tr th:last-child {border-bottom-right-radius:0.7rem;}
 
-              &:first-child {border-bottom:1px solid var(--gray3);}
+              &:first-child {background-color:var(--transparent-yellow2);
+                             border-bottom:1px solid var(--gray3);}
               &:last-child {border-top:1px solid var(--gray3);}
 
-              tr th:first-child {padding:1rem 0.1rem 0.3rem 1rem;
-                                 text-align:left;}
+              tr th:first-child {padding:1rem 0.1rem 0.3rem 1rem;}
 
-              tr th:not(:first-child) {padding:0.7rem 0.1rem 0.3rem 1rem;
-                                       text-align:center;}
-
-              tr th:nth-child(2) {padding:0.7rem 0.5rem 0.3rem 0.5rem;
-                                  text-align:left;
-                     label {cursor:pointer;}
-              }
+              tr th {padding:0.7rem 0.1rem 0.3rem 1rem;
+                     text-align:center;}
        }
 
        /* body */
        tbody {
-              tr:nth-child(even) {background-color:var(--gray);}
+              tr:nth-child(even) {background-color:var(--transparent-yellow);}
 
               tr {
                      td {padding:1.1rem 1rem 2rem;
                          color:var(--gray11);
                          text-align:center;
                          position:relative;
-
-                         &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
-                                         text-align:left;
-                            label {cursor:pointer;}
-                         }
 
                          &:nth-child(even) {font-weight:bold;}
 
@@ -1454,37 +1446,36 @@ table {width:100%;
 
               /* body */
               tbody {
-                     tr:nth-child(even) {background-color:var(--gray);}
 
                      tr {
+                            &:nth-child(even) {background-color:var(--gray);}
+
                             td {padding:1.1rem 1rem 2rem;
                                 color:var(--gray11);
                                 text-align:center;
                                 position:relative;
+
+                                   &:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
     
-                            &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
-                                          text-align:left;
-                                   label {cursor:pointer;}
-                            }
+                                   &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
+                                                   text-align:left;
+                                          label {cursor:pointer;}
+                                   }
 
-                            &:nth-child(even) {font-weight:bold;}
+                                   .buttons {position:absolute;
+                                             bottom:0.3rem;
+                                             left:0.9rem;
+                                             display:flex;
+                                             flex-direction:row;
+                                             gap:0.5rem;
+                                             opacity:0;
+              
+                                          .fa-check {color:var(--green7);}
+                                   }
 
-                            &:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
-
-                            .buttons {position:absolute;
-                                      bottom:0.3rem;
-                                      left:0.9rem;
-                                      display:flex;
-                                      flex-direction:row;
-                                      gap:0.5rem;
-                                      opacity:0;
-       
-                                   .fa-check {color:var(--green7);}
-                            }
-
-                            img {width:4rem;
-                                 height:3.5rem;
-                                 border-radius:0.3rem;}
+                                   img {width:4rem;
+                                        height:3.5rem;
+                                        border-radius:0.3rem;}
                             }
 
                             &:hover .buttons {opacity:1;}
@@ -2204,8 +2195,6 @@ header {width:100%;
                                           box-shadow:none;
 
                                           thead {padding:6rem;
-                                                 border-top-left-radius:0.7rem;
-                                                 border-top-right-radius:0.7rem;
                                                  border-top:1px solid var(--gray4);
                                                  border-bottom:1px solid var(--gray4);
 

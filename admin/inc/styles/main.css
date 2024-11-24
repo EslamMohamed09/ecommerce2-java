@@ -62,8 +62,10 @@ body {
   --yellow11:#ffcc14;
   --yellow12:#f7c205;
   --yellow13:#dfb006;
-  --transparent-yellow:#f7db6b4f;
+  --transparent-yellow:#b6b61d1c;
   --transparent-yellow2:#b6b61d27;
+  --transparent-yellow3:#b6b61d36;
+  --transparent-yellow4:#f7db6b4f;
   --shin-orange:rgb(255, 153, 0);
   --orange1:rgba(255, 248, 236, 0.774);
   --orange2:rgb(255, 248, 236);
@@ -1581,6 +1583,7 @@ table thead:last-child tr th:last-child {
   border-bottom-right-radius: 0.7rem;
 }
 table thead:first-child {
+  background-color: var(--transparent-yellow2);
   border-bottom: 1px solid var(--gray3);
 }
 table thead:last-child {
@@ -1588,34 +1591,19 @@ table thead:last-child {
 }
 table thead tr th:first-child {
   padding: 1rem 0.1rem 0.3rem 1rem;
-  text-align: left;
 }
-table thead tr th:not(:first-child) {
+table thead tr th {
   padding: 0.7rem 0.1rem 0.3rem 1rem;
   text-align: center;
 }
-table thead tr th:nth-child(2) {
-  padding: 0.7rem 0.5rem 0.3rem 0.5rem;
-  text-align: left;
-}
-table thead tr th:nth-child(2) label {
-  cursor: pointer;
-}
 table tbody tr:nth-child(even) {
-  background-color: var(--gray);
+  background-color: var(--transparent-yellow);
 }
 table tbody tr td {
   padding: 1.1rem 1rem 2rem;
   color: var(--gray11);
   text-align: center;
   position: relative;
-}
-table tbody tr td:nth-child(2) {
-  padding: 1.1rem 0.5rem 2rem 0.5rem;
-  text-align: left;
-}
-table tbody tr td:nth-child(2) label {
-  cursor: pointer;
 }
 table tbody tr td:nth-child(even) {
   font-weight: bold;
@@ -1798,18 +1786,15 @@ table tbody tr:hover .buttons {
   text-align: center;
   position: relative;
 }
+.manage-table-block table tbody tr td:first-child {
+  padding: 1.4rem 0rem 2rem 0.5rem;
+}
 .manage-table-block table tbody tr td:nth-child(2) {
   padding: 1.1rem 0.5rem 2rem 0.5rem;
   text-align: left;
 }
 .manage-table-block table tbody tr td:nth-child(2) label {
   cursor: pointer;
-}
-.manage-table-block table tbody tr td:nth-child(even) {
-  font-weight: bold;
-}
-.manage-table-block table tbody tr td:first-child {
-  padding: 1.4rem 0rem 2rem 0.5rem;
 }
 .manage-table-block table tbody tr td .buttons {
   position: absolute;
@@ -2660,8 +2645,6 @@ header .small-menu .small-menu-link {
 }
 .home-page .home-container .section-holder .middle .recent-order table thead {
   padding: 6rem;
-  border-top-left-radius: 0.7rem;
-  border-top-right-radius: 0.7rem;
   border-top: 1px solid var(--gray4);
   border-bottom: 1px solid var(--gray4);
 }

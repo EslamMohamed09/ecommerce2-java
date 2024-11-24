@@ -402,9 +402,9 @@ $(document).ready(function(){
 
 
 /*
-###################
+##################
 month deal section
-###################
+##################
 */
 if(document.querySelector(".month-deal-section")){
   let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
