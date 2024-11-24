@@ -103,33 +103,29 @@
 
     <div class="add-user-area collapsible-page" > <!-- # Add User Area # -->
 
-      <form class="add-user-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
-
-        <form class="form-horizontal2 row" action="" method="POST"> <!-- member info -->
-
-          <input type="hidden" name="memberid" value="2">
+      <form class="form-horizontal2 row" action="" method="POST"> <!-- member info -->
   
           <div class="left-block col-lg-8 col-md-8 col-sm-12">
   
             <div class="input-holder">  <!-- Username -->
               <label>Username</label>
-              <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" value="eslam mohamed" class="input-control" required/>
+              <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" class="input-control" required/>
             </div>
   
             <div class="input-holder">  <!-- Password -->
               <label class="control-label">Password</label>
               <div class="pass-input">
-                  <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
-                  <div class="passeye" onclick="eyeFunction(this)">
+                <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
+                <div class="passeye" onclick="eyeFunction(this)">
                   <i class="fa fa-eye" style="display:none;"></i> 
                   <i class="fa fa-eye-slash"></i> 
-                  </div>
+                </div>
               </div>
             </div>
   
             <div class="input-holder">  <!-- FullName -->
               <label class="control-label">Full Name</label>
-              <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" value="eslam mohamed fahmi" class="input-control" required/>
+              <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" class="input-control" required/>
             </div>
   
             <div class="input-holder">  <!-- Gender -->
@@ -143,29 +139,29 @@
             <div class="input-holder">  <!-- Rank -->
               <label class="control-label">Rank</label>
               <select name="rank" class="input-control">
-                  <option value="0">user</option>    
-                  <option value="1">admin</option>
+                <option value="0">user</option>    
+                <option value="1">admin</option>
               </select>
             </div>
   
             <div class="input-holder">  <!-- Facebook -->
               <label class="control-label">Facebook</label>
-              <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" value="eslam mohamed" class="input-control"/>
+              <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" class="input-control"/>
             </div>
   
             <div class="input-holder">  <!-- LinkedIn -->
               <label>LinkedIn</label>
-              <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" value="eslam mohamed" class="input-control"/>
+              <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" class="input-control"/>
             </div>
   
             <div class="input-holder">  <!-- Email -->
               <label>Email</label>
-              <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" value="email@gmail.com" class="input-control" required/>
+              <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" class="input-control" required/>
             </div>
   
             <div class="input-holder">  <!-- whatsapp -->
               <label>Whatsapp</label>
-              <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" value="01210203662" class="input-control"/>
+              <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" class="input-control"/>
             </div>
   
             <div class="input-holder">  <!-- Country -->
@@ -184,19 +180,20 @@
               </select>
             </div>
   
-          </div> <!-- End-left-block -->
+          </div>
   
           <div class="right-block col-lg-4 col-md-4 col-sm-12">
             <div class="image-holder d-flex-c-c-c">
               <label>select your image</label>
               <input type="file">
-              <img src="inc/images/users/eslam(10).jpg" alt="">
             </div>
           </div>
   
-          <input type="submit" name="updatememberinfo" value="update" class="btn3"/>
+          <input type="submit" name="updatememberinfo" value="add user" class="btn3"/>
   
         </form>
+
+      <form class="add-user-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
 
         <div class="form-blocks" id="certificationsContainer"></div> <!-- |CERTIFICATIONS| -->
         <div class="add-delete-btns d-flex-r-end-st" style="margin-bottom:1rem;gap:1rem;">
@@ -215,9 +212,9 @@
 
       </form>
 
-    </div> <!-- End add-member-area -->
+    </div> <!-- add-member-area -->
 
-  </div> <!-- End manage-members-page -->
+  </div> <!-- users-page-container -->
 
 </section>
 
