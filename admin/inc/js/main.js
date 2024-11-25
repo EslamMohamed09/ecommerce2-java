@@ -136,6 +136,7 @@ if(document.querySelector("#login-section")){
     loginForm.style.display = "block";
   });
 
+
   /** Register Steps **/
   const registerphase1 = document.getElementById("registerphase1");
   const registerphase2 = document.getElementById("registerphase2");
@@ -177,14 +178,15 @@ if(document.querySelector("#login-section")){
       Rstep2.classList.add("active");
   });
 
+
   /** Add Certifications & Skills Fields **/
   const certificationsContainer = document.getElementById('certificationsContainer');
   const skillsContainer = document.getElementById('skillsContainer');
-  const addCertificationBtn = document.querySelector('#login-section .addCertificationBtn');
-  const deleteCertificationBtn = document.querySelector('#login-section .add-delete-btns .deleteCertificationBtn');
+  const addCertificationBtn = document.querySelector('.addCertificationBtn');
+  const deleteCertificationBtn = document.querySelector('.add-delete-btns .deleteCertificationBtn');
   const maximumCertificationMsg = document.getElementById('maximumCertificationMsg');
-  const addSkillsBtn = document.getElementById('addSkillsBtn');
-  const deleteSkillsBtn = document.getElementById('deleteSkillsBtn');
+  const addSkillsBtn = document.querySelector('.addSkillsBtn');
+  const deleteSkillsBtn = document.querySelector('.deleteSkillsBtn');
   const submitRegister = document.querySelector('#login-section .submit-register');
 
   let certificationCounter = 0;
@@ -192,7 +194,7 @@ if(document.querySelector("#login-section")){
 
   addCertificationBtn.addEventListener('click', function () { // Certification
       const newCertificationField = document.createElement('div');
-      newCertificationField.className = 'certification-form';
+      newCertificationField.className = 'certification-block';
 
       newCertificationField.innerHTML = `
           <h2 class="block-title3 d-flex-r-bt-c">Certification ${certificationNo}<hr></h2>
@@ -236,6 +238,7 @@ if(document.querySelector("#login-section")){
 
       if (certificationCounter === 4) {
           addCertificationBtn.disabled = true;
+          addCertificationBtn.style.cursor = "not-allowed";
           maximumCertificationMsg.style.display = 'block';
       }
 
@@ -744,3 +747,134 @@ fetch('pages/users.json').then(response => response.json())
 
   pagination(users, 10, renderUsersTable, paginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
+
+
+if(document.querySelector('#users-page')){
+  const certificationsContainer = document.getElementById('certificationsContainer');
+  const skillsContainer = document.getElementById('skillsContainer');
+  const addCertificationBtn = document.querySelector('.addCertificationBtn');
+  const deleteCertificationBtn = document.querySelector('.add-delete-btns .deleteCertificationBtn');
+  const maximumCertificationMsg = document.getElementById('maximumCertificationMsg');
+  const addSkillsBtn = document.querySelector('.addSkillsBtn');
+  const deleteSkillsBtn = document.querySelector('.deleteSkillsBtn');
+
+  let certificationCounter = 0;
+  let certificationNo = 1;
+
+  addCertificationBtn.addEventListener('click', function () { // Certification
+      const newCertificationField = document.createElement('div');
+      newCertificationField.className = 'certification-block';
+
+      newCertificationField.innerHTML = `
+          <h2 class="block-title3 d-flex-r-bt-c">Certification ${certificationNo}<hr></h2>
+
+          <div class="double-input-box d-flex-r-bt-c">
+              
+              <div class="input-box row">
+                <label class="control-label col-lg-2 col-md-2 col-sm-3">Title</label>
+                <div class="inputt col-lg-10 col-md-10 col-sm-9"><input type="text" name="certification[${certificationCounter}][etitle]" placeholder="Bachelor Of Arts" autocomplete="off" class="input-control"/></div>
+              </div>
+
+              <div class="input-box row">
+                <label class="control-label col-lg-2 col-md-2 col-sm-3">Duration</label>
+                <div class="inputt col-lg-10 col-md-10 col-sm-9"><input type="text" name="certification[${certificationCounter}][eduration]" placeholder="2013 - 2018" autocomplete="off" class="input-control"/></div>
+              </div>
+
+          </div>
+
+          <div class="description-input-box row">
+            <label class="control-label col-lg-1 col-md-2 col-sm-2">Description</label>
+            <div class="input-holder col-lg-11 col-md-10 col-sm-10"><input type="text" name="certification[${certificationCounter}][edescription]" placeholder="I Succeed In Php Diploma From Egyptian Technology Center" autocomplete="off" class="input-control"/></div>
+          </div>
+      `;
+
+      certificationsContainer.appendChild(newCertificationField);
+      certificationCounter++;
+      certificationNo++;
+
+      if(certificationCounter > 0){
+        addCertificationBtn.innerHTML = `add more certification`;
+        deleteCertificationBtn.style.display = 'block';
+      }
+
+      if (certificationCounter === 4) {
+          addCertificationBtn.disabled = true;
+          addCertificationBtn.style.cursor = "not-allowed";
+          maximumCertificationMsg.style.display = 'block';
+      }
+
+  });
+
+  deleteCertificationBtn.addEventListener('click', function () {
+      if (certificationCounter > 0) {
+          const lastCertificationField = certificationsContainer.lastElementChild;
+          certificationsContainer.removeChild(lastCertificationField);
+          certificationCounter--;
+          certificationNo--;
+
+          if (certificationCounter === 0) {
+              deleteCertificationBtn.style.display = 'none';
+              addCertificationBtn.innerHTML = 'Add Certification';
+          }
+
+
+          if (certificationCounter < 4) {
+              addCertificationBtn.disabled = false;
+              maximumCertificationMsg.style.display = 'none';
+          }
+      }
+  });
+  
+  let skillsCounter = 0;
+
+  addSkillsBtn.addEventListener('click', function () { // Skills
+      const skillsform = document.createElement('form');
+      skillsform.className = 'skills-form';
+
+      skillsform.innerHTML = `
+          <div class="block-title2 d-flex-r-bt-c"><hr><h2>Add skills</h2><hr></div>
+
+          <div class="skills-blocks d-flex-r-st-st">
+
+            <div class="computer-skills-block block d-flex-c-st-st">  <!-- Computer Skills -->
+              <label class="control-label">Computer Skills</label>
+              <textarea name="computerskills" id="computerSkillsTextarea"></textarea>
+              <input type="text" value="" maxlength="28" class="computerSkillsInput input-control" onkeydown="if(event.keyCode === 13) {addTag(null, '#skillsContainer .computerSkillsInput', '#skillsContainer #computerSkillsTextarea'); return false;}">
+              <button type="button" class="btn2" onclick="addTag(null, '#skillsContainer .computerSkillsInput', '#skillsContainer #computerSkillsTextarea')">add skill</button>
+            </div>
+
+            <div class="personal-skills-block block d-flex-c-st-st">  <!-- Personal Skills -->
+              <label class="control-label">Personal Skills</label>
+              <textarea name="personalskills" id="personalSkillsTextarea"></textarea>
+              <input type="text" value="" maxlength="28" class="personalSkillsInput input-control" onkeydown="if(event.keyCode === 13) {addTag(null, '#skillsContainer .personalSkillsInput', '#skillsContainer #personalSkillsTextarea'); return false;}">
+              <button type="button" class="btn2" onclick="addTag(null, '#skillsContainer .personalSkillsInput', '#skillsContainer #personalSkillsTextarea')">add skill</button>
+            </div>
+
+          </div>
+      `;
+      skillsContainer.appendChild(skillsform);
+      skillsCounter++;
+
+      if(skillsCounter > 0) {deleteSkillsBtn.style.display = `block`;
+                             addSkillsBtn.style.display = `none`;}
+
+      if(skillsCounter === 0) {addSkillsBtn.style.display = `block`;
+                               deleteSkillsBtn.style.display = `none`;}
+  });
+
+  deleteSkillsBtn.addEventListener('click', function () {
+      if (skillsCounter > 0) {
+          const lastSkillsField = skillsContainer.lastElementChild;
+          skillsContainer.removeChild(lastSkillsField);
+          skillsCounter--;
+
+          addSkillsBtn.style.display = `none`;
+          
+          if (skillsCounter === 0) {addSkillsBtn.style.display = `block`;
+                                    deleteSkillsBtn.style.display = `none`;}
+
+          if (skillsCounter === 0) {submitRegister.value = `register without skills`;}
+      }
+  });
+
+}

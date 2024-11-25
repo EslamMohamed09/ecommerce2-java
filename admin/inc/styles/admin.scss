@@ -1934,7 +1934,7 @@ header {width:100%;
 
                      #registerphase2 {
                             #certificationsContainer {width:100%;
-                               .certification-form {margin-bottom:3rem;}
+                               .certification-block {margin-bottom:3rem;}
                             }
 
                             .add-delete-btns {
@@ -2756,8 +2756,8 @@ header {width:100%;
   @media(max-width:266px){ .profile-data .right-block .info-cards .my-skills-card .blocks {flex-wrap:wrap;} }
 }
 
-/* Edit certification */
-.certification-form {display:block;
+/* Certification */
+.certification-block {display:block;
                           margin-top:2rem;
 
        > div {margin:1.5rem 0;}
@@ -3172,12 +3172,29 @@ header {width:100%;
 
 #users-page {
               table {
-                     
                      tbody {              
                             tr td {
                                    p {text-align:center;}
                             }
                      }
+              }
+              .add-user-block {
+
+                     #certificationsContainer {width:100%;
+                            .certification-block {margin-bottom:3rem;}
+                     }
+
+                     .add-delete-btns {gap:2rem;
+                            .deleteCertificationBtn {display:none;}
+                            .deleteSkillsBtn {display:none;}
+                     }
+
+                     #maximumCertificationMsg {color:var(--red9);
+                                               text-align:right;
+                                               display:none;}
+
+                     #skillsContainer {width:100%;
+                                       margin-top:2rem;}
               }
 }
        

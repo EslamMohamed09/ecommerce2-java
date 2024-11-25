@@ -101,118 +101,113 @@
 
     <button class="tab-btn collapsible" id="collapsible">Add User</button>
 
-    <div class="add-user-area collapsible-page" > <!-- # Add User Area # -->
+    <div class="add-user-block collapsible-page"> <!-- # Add User Area # -->
 
-      <form class="form-horizontal2 row" action="" method="POST"> <!-- member info -->
+      <form class="form-horizontal2 register-user row" action="" method="POST"> <!-- member info -->
   
-          <div class="left-block col-lg-8 col-md-8 col-sm-12">
-  
-            <div class="input-holder">  <!-- Username -->
-              <label>Username</label>
-              <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" class="input-control" required/>
-            </div>
-  
-            <div class="input-holder">  <!-- Password -->
-              <label class="control-label">Password</label>
-              <div class="pass-input">
-                <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
-                <div class="passeye" onclick="eyeFunction(this)">
-                  <i class="fa fa-eye" style="display:none;"></i> 
-                  <i class="fa fa-eye-slash"></i> 
-                </div>
+        <div class="left-block col-lg-8 col-md-8 col-sm-12">
+
+          <div class="input-holder">  <!-- Username -->
+            <label>Username</label>
+            <input type="text" name="username" maxlength="20" pattern=".{4,20}" autocomplete="off" class="input-control" required/>
+          </div>
+
+          <div class="input-holder">  <!-- Password -->
+            <label class="control-label">Password</label>
+            <div class="pass-input">
+              <input type="password" name="password" autocomplete="new-password" maxlength="25" pattern=".{8,25}" class="input-control" id="passInput"/>
+              <div class="passeye" onclick="eyeFunction(this)">
+                <i class="fa fa-eye" style="display:none;"></i> 
+                <i class="fa fa-eye-slash"></i> 
               </div>
             </div>
-  
-            <div class="input-holder">  <!-- FullName -->
-              <label class="control-label">Full Name</label>
-              <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" class="input-control" required/>
-            </div>
-  
-            <div class="input-holder">  <!-- Gender -->
-              <label class="control-label">Gender</label>
-              <select name="gender" class="input-control">
-                <option value="male">male</option>
-                <option value="female">female</option>
-              </select>
-            </div>
-  
-            <div class="input-holder">  <!-- Rank -->
-              <label class="control-label">Rank</label>
-              <select name="rank" class="input-control">
-                <option value="0">user</option>    
-                <option value="1">admin</option>
-              </select>
-            </div>
-  
-            <div class="input-holder">  <!-- Facebook -->
-              <label class="control-label">Facebook</label>
-              <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" class="input-control"/>
-            </div>
-  
-            <div class="input-holder">  <!-- LinkedIn -->
-              <label>LinkedIn</label>
-              <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" class="input-control"/>
-            </div>
-  
-            <div class="input-holder">  <!-- Email -->
-              <label>Email</label>
-              <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" class="input-control" required/>
-            </div>
-  
-            <div class="input-holder">  <!-- whatsapp -->
-              <label>Whatsapp</label>
-              <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" class="input-control"/>
-            </div>
-  
-            <div class="input-holder">  <!-- Country -->
-              <label>Country</label>
-              <select name="country" id="select_country" class="input-control">
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-                <option value="Andorra">Andorra</option>
-                <option value="Angola">Angola</option>
-                <option value="Egypt">Egypt</option>
-                <option value="El Salvador">El Salvador</option>
-                <option value="Equatorial Guinea">Equatorial Guinea</option>
-                <option value="Eritrea">Eritrea</option>
-                <option value="Estonia">Estonia</option>
-              </select>
-            </div>
-  
           </div>
-  
-          <div class="right-block col-lg-4 col-md-4 col-sm-12">
-            <div class="image-holder d-flex-c-c-c">
-              <label>select your image</label>
-              <input type="file">
-            </div>
+
+          <div class="input-holder">  <!-- FullName -->
+            <label class="control-label">Full Name</label>
+            <input type="text" name="fullname" maxlength="25" pattern=".{8,25}" autocomplete="off" class="input-control" required/>
           </div>
-  
-          <input type="submit" name="updatememberinfo" value="add user" class="btn3"/>
-  
-        </form>
 
-      <form class="add-user-form multi-form-horizontal" action="" method="POST"> <!-- Add User Data -->
+          <div class="input-holder">  <!-- Gender -->
+            <label class="control-label">Gender</label>
+            <select name="gender" class="input-control">
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+          </div>
 
-        <div class="form-blocks" id="certificationsContainer"></div> <!-- |CERTIFICATIONS| -->
-        <div class="add-delete-btns d-flex-r-end-st" style="margin-bottom:1rem;gap:1rem;">
-          <button type="button" id="addCertificationBtn" class="btn2">Add Certification</button>
-          <button type="button" id="deleteCertificationBtn" class="btn2" style="display:none;">Delete Certification</button>
-        </div>
-        <p id="maxCertificationMessage" style="color:red;display:none;text-align:right;">Maximum 4 certifications reached.</p>
+          <div class="input-holder">  <!-- Rank -->
+            <label class="control-label">Rank</label>
+            <select name="rank" class="input-control">
+              <option value="0">user</option>    
+              <option value="1">admin</option>
+            </select>
+          </div>
 
-        <div id="skillsContainer"></div> <!-- |SKILLS| -->
-        <div class="add-delete-btns d-flex-c-end-end" style="margin-top:1rem;margin-bottom:1rem;gap:1rem;">
-          <button type="button" id="addSkillsBtn" class="btn2">Add Skills</button>
-          <button type="button" class="btn2" id="deleteSkillsBtn" style="display:none;">Delete Skills</button>
+          <div class="input-holder">  <!-- Facebook -->
+            <label class="control-label">Facebook</label>
+            <input type="text" name="facebook" maxlength="20" placeholder="Profile title" autocomplete="off" class="input-control"/>
+          </div>
+
+          <div class="input-holder">  <!-- LinkedIn -->
+            <label>LinkedIn</label>
+            <input type="text" name="linkedin" placeholder="Profile title" autocomplete="off" class="input-control"/>
+          </div>
+
+          <div class="input-holder">  <!-- Email -->
+            <label>Email</label>
+            <input type="email" name="email" placeholder="example@gmail.com" maxlength="35" autocomplete="off" class="input-control" required/>
+          </div>
+
+          <div class="input-holder">  <!-- whatsapp -->
+            <label>Whatsapp</label>
+            <input type="text" name="whatsapp" maxlength="20" placeholder="whatsapp number" autocomplete="off" class="input-control"/>
+          </div>
+
+          <div class="input-holder">  <!-- Country -->
+            <label>Country</label>
+            <select name="country" id="select_country" class="input-control">
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+            </select>
+          </div>
+
         </div>
 
-        <input type="submit" name="addmemberdata" value="add user" class="btn"/>  <!-- Add Button -->
+        <div class="right-block col-lg-4 col-md-4 col-sm-12">
+          <div class="image-holder d-flex-c-c-c">
+            <label>select your image</label>
+            <input type="file">
+          </div>
+        </div>
+
+        <div id="certificationsContainer"></div>
+
+        <div class="add-delete-btns d-flex-r-end-c">
+          <button type="button" class="addCertificationBtn btn2">Add Certification</button>
+          <button type="button" class="deleteCertificationBtn btn2">Delete Certification</button>
+        </div>
+        <p id="maximumCertificationMsg">Maximum 4 certifications reached.</p>
+
+        <div id="skillsContainer"></div>
+        <div class="add-delete-btns d-flex-c-end-end">
+          <button type="button" class="addSkillsBtn btn2">add Skills</button>
+          <button type="button" class="deleteSkillsBtn btn2">Delete Skills</button>
+        </div>
+
+        <input type="submit" name="register" value="register" class="btn3"/>  <!-- Add Button -->
 
       </form>
 
-    </div> <!-- add-member-area -->
+    </div> <!-- add-user-area -->
 
   </div> <!-- users-page-container -->
 

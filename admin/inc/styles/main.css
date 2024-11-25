@@ -2333,7 +2333,7 @@ header .small-menu .small-menu-link {
 #login-section .forms .register-form #registerphase2 #certificationsContainer {
   width: 100%;
 }
-#login-section .forms .register-form #registerphase2 #certificationsContainer .certification-form {
+#login-section .forms .register-form #registerphase2 #certificationsContainer .certification-block {
   margin-bottom: 3rem;
 }
 #login-section .forms .register-form #registerphase2 .add-delete-btns .deleteCertificationBtn {
@@ -3229,64 +3229,64 @@ header .small-menu .small-menu-link {
   }
 }
 
-/* Edit certification */
-.certification-form {
+/* Certification */
+.certification-block {
   display: block;
   margin-top: 2rem;
 }
-.certification-form > div {
+.certification-block > div {
   margin: 1.5rem 0;
 }
-.certification-form .input-control {
+.certification-block .input-control {
   width: 100%;
 }
-.certification-form .double-input-box {
+.certification-block .double-input-box {
   width: 100%;
   gap: 1rem;
 }
-.certification-form .double-input-box .input-box {
+.certification-block .double-input-box .input-box {
   flex: 1 1 30rem;
   margin: 0;
 }
-.certification-form .double-input-box .input-box:first-child {
+.certification-block .double-input-box .input-box:first-child {
   padding-right: 2rem;
 }
-.certification-form .submit-inputs-holder {
+.certification-block .submit-inputs-holder {
   gap: 0.7rem;
 }
-.certification-form .submit-inputs-holder .btn3 {
+.certification-block .submit-inputs-holder .btn3 {
   padding: 0.4rem !important;
   font-size: 1.2rem;
 }
-.certification-form .submit-input-holder {
+.certification-block .submit-input-holder {
   position: relative;
 }
-.certification-form .submit-input-holder .fa-plus {
+.certification-block .submit-input-holder .fa-plus {
   color: var(--violet);
   position: absolute;
   left: 50%;
   transform: translateX(-7.5rem);
 }
-.certification-form .submit-input-holder .btn4 {
+.certification-block .submit-input-holder .btn4 {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .certification-form .description-input-box .input-holder {
+  .certification-block .description-input-box .input-holder {
     padding-left: 2rem !important;
   }
 }
 @media (min-width: 575px) and (max-width: 1000px) {
-  .certification-form .double-input-box .input-box:nth-child(2) .input-holder {
+  .certification-block .double-input-box .input-box:nth-child(2) .input-holder {
     padding-left: 1rem !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1288px) {
-  .certification-form .submit-inputs .btn3 {
+  .certification-block .submit-inputs .btn3 {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 255px) {
-  .certification-form .submit-input .fa-plus {
+  .certification-block .submit-input .fa-plus {
     transform: translateX(-6.4rem);
   }
 }
@@ -3704,6 +3704,30 @@ header .small-menu .small-menu-link {
 
 #users-page table tbody tr td p {
   text-align: center;
+}
+#users-page .add-user-block #certificationsContainer {
+  width: 100%;
+}
+#users-page .add-user-block #certificationsContainer .certification-block {
+  margin-bottom: 3rem;
+}
+#users-page .add-user-block .add-delete-btns {
+  gap: 2rem;
+}
+#users-page .add-user-block .add-delete-btns .deleteCertificationBtn {
+  display: none;
+}
+#users-page .add-user-block .add-delete-btns .deleteSkillsBtn {
+  display: none;
+}
+#users-page .add-user-block #maximumCertificationMsg {
+  color: var(--red9);
+  text-align: right;
+  display: none;
+}
+#users-page .add-user-block #skillsContainer {
+  width: 100%;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
