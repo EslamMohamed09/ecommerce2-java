@@ -1296,7 +1296,6 @@ table {width:100%;
 
        /* body */
        tbody {
-
               tr {
                      &:nth-child(even) {background-color:var(--transparent-yellow);}
 
@@ -1311,7 +1310,6 @@ table {width:100%;
                               border-radius:0.3rem;}
 
                      }
-
               }
        }
 
@@ -1403,11 +1401,10 @@ table {width:100%;
               box-shadow:var(--box-shadow6);
               background-color:transparent;
 
-              /* head */
-              input[type="checkbox"] {cursor:pointer;}
-
               thead {padding:1rem 0.9rem;
                      background-color:var(--white);
+
+                     label {cursor:pointer;}
 
                      &:first-child tr th:first-child {border-top-left-radius:0;}
                      &:first-child tr th:last-child {border-top-right-radius:0;}
@@ -1431,9 +1428,7 @@ table {width:100%;
                      }
               }
 
-              /* body */
               tbody {
-
                      tr {
                             &:nth-child(even) {background-color:var(--gray);}
 
@@ -1551,7 +1546,7 @@ header {width:100%;
                      justify-content:center;
                      gap:1rem;
 
-                     img {width:2rem;}
+                     img {width:5rem;}
 
                      h2 {margin:0;
                          font-weight:800;
@@ -2868,7 +2863,7 @@ header {width:100%;
                                    tr td {
                                           .buttons > a {color:var(--gray-yellow6);
                                                         text-transform:uppercase;}
-                                          p {text-align:center;background-color: red;}
+                                          p {text-align:center;}
                                    }
                             }
                      }
@@ -2925,54 +2920,10 @@ header {width:100%;
                                            margin:0;}
               }
 
-              .manage-category-form {flex:1 1 38rem;
-                     table {
-                            background-color:var(--gray11);
-                            box-shadow:var(--box-shadow5);
+              .manage-categories-table-block {flex:1 1 38rem;
+                     table {box-shadow:var(--box-shadow5);
                             border:none;
-              
-                            /* head */
-                            thead {padding:1rem 0.9rem;
-                                   background-color:var(--white);
-
-                                   tr {
-                                   th {padding:0.5rem 1rem;
-                                          font-size:1rem;
-                                          color:var(--gray11);
-
-                                          &:first-child {padding:0.6rem 0.4rem 0.3rem 0.4rem;}
-
-                                          &:nth-child(2) {padding:0.5rem 0.4rem 0.5rem 0;
-                                                        text-align:left;}
-                                   }
-                                   }
-                            }
-
-                            /* body */
                             tbody {
-                                   tr:nth-child(odd) {background-color:rgb(243, 247, 252);}
-
-                                   tr td:nth-child(even) {font-weight:bold;}
-
-                                   tr td {padding:1.1rem 1rem 2rem;
-                                          color:var(--gray11);
-                                          position:relative;}
-
-                                   tr td:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
-
-                                   tr td:nth-child(2) {padding:1.1rem 0 2rem 0.1rem;
-                                                       text-align:left;}
-
-                                   tr td .buttons {position:absolute;
-                                                   top:3.5rem;
-                                                   left:0.2rem;
-                                                   display:flex;
-                                                   flex-direction:row;
-                                                   gap:0.5rem;
-                                                   opacity:0;}
-
-                                   tr:hover .buttons {opacity:1;}
-
                                    .level-2 {color:var(--blue14);}
                                    .level-3 {color:var(--blue5);}
                                    .level-4 {color:var(--green18);}

@@ -1708,15 +1708,13 @@ table tbody tr td img {
   border-collapse: collapse;
   box-shadow: var(--box-shadow6);
   background-color: transparent;
-  /* head */
-  /* body */
-}
-.manage-table-block table input[type=checkbox] {
-  cursor: pointer;
 }
 .manage-table-block table thead {
   padding: 1rem 0.9rem;
   background-color: var(--white);
+}
+.manage-table-block table thead label {
+  cursor: pointer;
 }
 .manage-table-block table thead:first-child tr th:first-child {
   border-top-left-radius: 0;
@@ -1886,7 +1884,7 @@ header .left-header .logo {
   gap: 1rem;
 }
 header .left-header .logo img {
-  width: 2rem;
+  width: 5rem;
 }
 header .left-header .logo h2 {
   margin: 0;
@@ -3368,7 +3366,6 @@ header .small-menu .small-menu-link {
 }
 #customers-page .customers-page-container .manage-customers-table-block table tbody tr td p {
   text-align: center;
-  background-color: red;
 }
 
 /*
@@ -3425,75 +3422,26 @@ header .small-menu .small-menu-link {
   width: 100%;
   margin: 0;
 }
-.category-page-container .add-managing-category .manage-category-form {
+.category-page-container .add-managing-category .manage-categories-table-block {
   flex: 1 1 38rem;
 }
-.category-page-container .add-managing-category .manage-category-form table {
-  background-color: var(--gray11);
+.category-page-container .add-managing-category .manage-categories-table-block table {
   box-shadow: var(--box-shadow5);
   border: none;
-  /* head */
-  /* body */
 }
-.category-page-container .add-managing-category .manage-category-form table thead {
-  padding: 1rem 0.9rem;
-  background-color: var(--white);
-}
-.category-page-container .add-managing-category .manage-category-form table thead tr th {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: var(--gray11);
-}
-.category-page-container .add-managing-category .manage-category-form table thead tr th:first-child {
-  padding: 0.6rem 0.4rem 0.3rem 0.4rem;
-}
-.category-page-container .add-managing-category .manage-category-form table thead tr th:nth-child(2) {
-  padding: 0.5rem 0.4rem 0.5rem 0;
-  text-align: left;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr:nth-child(odd) {
-  background-color: rgb(243, 247, 252);
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr td:nth-child(even) {
-  font-weight: bold;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr td {
-  padding: 1.1rem 1rem 2rem;
-  color: var(--gray11);
-  position: relative;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr td:first-child {
-  padding: 1.4rem 0rem 2rem 0.5rem;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr td:nth-child(2) {
-  padding: 1.1rem 0 2rem 0.1rem;
-  text-align: left;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr td .buttons {
-  position: absolute;
-  top: 3.5rem;
-  left: 0.2rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  opacity: 0;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody tr:hover .buttons {
-  opacity: 1;
-}
-.category-page-container .add-managing-category .manage-category-form table tbody .level-2 {
+.category-page-container .add-managing-category .manage-categories-table-block table tbody .level-2 {
   color: var(--blue14);
 }
-.category-page-container .add-managing-category .manage-category-form table tbody .level-3 {
+.category-page-container .add-managing-category .manage-categories-table-block table tbody .level-3 {
   color: var(--blue5);
 }
-.category-page-container .add-managing-category .manage-category-form table tbody .level-4 {
+.category-page-container .add-managing-category .manage-categories-table-block table tbody .level-4 {
   color: var(--green18);
 }
-.category-page-container .add-managing-category .manage-category-form table tbody .level-5 {
+.category-page-container .add-managing-category .manage-categories-table-block table tbody .level-5 {
   color: var(--green15);
 }
-.category-page-container .add-managing-category .manage-category-form table tbody .level-6 {
+.category-page-container .add-managing-category .manage-categories-table-block table tbody .level-6 {
   color: var(--green7);
 }
 
