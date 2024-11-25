@@ -1312,9 +1312,6 @@ table {width:100%;
                      }
               }
        }
-
-       @media(max-width:768px){ tbody tr td .buttons {top:3.5rem;
-                                                      left:-0.5rem;} }
 }
 
 /* table details */
@@ -1437,7 +1434,8 @@ table {width:100%;
                                 text-align:center;
                                 position:relative;
 
-                                   &:first-child {padding:1.4rem 0rem 2rem 0.5rem;}
+                                   &:first-child {padding:1.4rem 0rem 2rem 0.9rem;
+                                                  width:0;}
     
                                    &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
                                                    text-align:left;
@@ -1446,21 +1444,23 @@ table {width:100%;
 
                                    .buttons {position:absolute;
                                              bottom:0.3rem;
-                                             left:0.9rem;
+                                             left:0.5rem;
                                              display:flex;
                                              flex-direction:row;
                                              gap:0.5rem;
                                              opacity:0;
+                                             visibility:hidden;
               
                                           .fa-check {color:var(--green7);}
                                    }
                             }
 
-                            &:hover .buttons {opacity:1;}
+                            &:hover .buttons {opacity:1;
+                                              visibility:visible;}
                      }
               }
 
-              @media(max-width:768px){ tbody tr td .buttons {top:3.5rem;
+              @media(max-width:768px){ tbody tr td .buttons {bottom:0;
                                                              left:-0.5rem;} }
        }
 }

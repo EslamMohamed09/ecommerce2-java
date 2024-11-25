@@ -1604,12 +1604,6 @@ table tbody tr td img {
   height: 3.5rem;
   border-radius: 0.3rem;
 }
-@media (max-width: 768px) {
-  table tbody tr td .buttons {
-    top: 3.5rem;
-    left: -0.5rem;
-  }
-}
 
 /* table details */
 .manage-table-block {
@@ -1759,7 +1753,8 @@ table tbody tr td img {
   position: relative;
 }
 .manage-table-block table tbody tr td:first-child {
-  padding: 1.4rem 0rem 2rem 0.5rem;
+  padding: 1.4rem 0rem 2rem 0.9rem;
+  width: 0;
 }
 .manage-table-block table tbody tr td:nth-child(2) {
   padding: 1.1rem 0.5rem 2rem 0.5rem;
@@ -1771,21 +1766,23 @@ table tbody tr td img {
 .manage-table-block table tbody tr td .buttons {
   position: absolute;
   bottom: 0.3rem;
-  left: 0.9rem;
+  left: 0.5rem;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   opacity: 0;
+  visibility: hidden;
 }
 .manage-table-block table tbody tr td .buttons .fa-check {
   color: var(--green7);
 }
 .manage-table-block table tbody tr:hover .buttons {
   opacity: 1;
+  visibility: visible;
 }
 @media (max-width: 768px) {
   .manage-table-block table tbody tr td .buttons {
-    top: 3.5rem;
+    bottom: 0;
     left: -0.5rem;
   }
 }
