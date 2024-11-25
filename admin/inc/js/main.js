@@ -614,6 +614,7 @@ if(document.getElementById("visaInput")){
   });
 }
 
+if(document.querySelector('#customers-page')){
 fetch('pages/customers.json').then(response => response.json())
 .then(data => {
   const customers = data.customers;
@@ -654,18 +655,19 @@ fetch('pages/customers.json').then(response => response.json())
 
   pagination(customers, 10, renderCustomersTable, paginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
-
+}
 
 /*
  ===============================
  ######## CATEGORIES PAGE ######
  ===============================
 */
+if(document.querySelector('#category-page')){
 fetch('pages/categories.json').then(response => response.json())
 .then(data => {
   const categories = data.categories
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
-  const manageCategoriesTable = document.querySelector('.category-page #manage-category-table');
+  const manageCategoriesTable = document.querySelector('#category-page #manage-category-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
 
   function getCategoryDetails(category) {
@@ -703,12 +705,15 @@ fetch('pages/categories.json').then(response => response.json())
   pagination(categories, 10, renderCategoryContent, paginationContainer);
 })
 .catch(error => console.error('Error loading JSON:', error));
+}
 
 /*
  =============================
  ######### USERS PAGE ########
  =============================
 */
+if(document.querySelector('#users-page')){
+
 fetch('pages/users.json').then(response => response.json())
 .then(data => {
   const users = data.users
@@ -748,8 +753,6 @@ fetch('pages/users.json').then(response => response.json())
   pagination(users, 10, renderUsersTable, paginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
 
-
-if(document.querySelector('#users-page')){
   const certificationsContainer = document.getElementById('certificationsContainer');
   const skillsContainer = document.getElementById('skillsContainer');
   const addCertificationBtn = document.querySelector('.addCertificationBtn');
@@ -872,8 +875,6 @@ if(document.querySelector('#users-page')){
           
           if (skillsCounter === 0) {addSkillsBtn.style.display = `block`;
                                     deleteSkillsBtn.style.display = `none`;}
-
-          if (skillsCounter === 0) {submitRegister.value = `register without skills`;}
       }
   });
 
