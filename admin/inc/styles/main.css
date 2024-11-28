@@ -1498,57 +1498,6 @@ input[type=file] {
   display: none;
 }
 
-/*** Multi Form Horizontal ***/
-.multi-form-horizontal {
-  display: block;
-  width: 100%;
-}
-.multi-form-horizontal .form-block {
-  margin: 3.5rem 0;
-  gap: 1rem;
-}
-.multi-form-horizontal .form-block .input-box,
-.multi-form-horizontal .double-input-box {
-  width: 100%;
-  margin: 0;
-}
-.multi-form-horizontal .double-input-box .input-box {
-  flex: 1 1 20rem;
-  padding: 0;
-  margin: 0 !important;
-}
-.multi-form-horizontal .input-box .col-sm-2 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.multi-form-horizontal input[type=submit] {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .multi-form-horizontal .double-input-box {
-    gap: 2rem;
-  }
-}
-@media (min-width: 574px) {
-  .multi-form-horizontal .double-input-box .input-box:last-child .control-label {
-    text-align: center;
-  }
-  .multi-form-horizontal .double-input-box .input-box:first-child .input-control {
-    margin-left: 0.4rem;
-  }
-}
-@media (max-width: 768px) {
-  .multi-form-horizontal .double-input-box {
-    gap: 1rem;
-  }
-}
-@media (max-width: 400px) {
-  .multi-form-horizontal .double-input-box {
-    flex-wrap: wrap;
-  }
-}
-
 /*
 ==================
  # TABLE
@@ -1605,7 +1554,6 @@ table tbody tr td img {
   border-radius: 0.3rem;
 }
 
-/* table details */
 .manage-table-block {
   width: 100%;
   display: block;
@@ -1614,7 +1562,6 @@ table tbody tr td img {
   text-align: left;
   border-radius: 0.7rem;
   background: transparent;
-  /*** table ***/
 }
 .manage-table-block .table-details {
   width: 100%;
