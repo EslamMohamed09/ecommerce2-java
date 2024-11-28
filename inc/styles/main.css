@@ -2045,6 +2045,7 @@ header .login-drawer.openingLoginDrawer {
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
+  background-color: red;
 }
 .offers-section .inner-col .offersblock .owl-nav .owl-prev,
 .offers-section .inner-col .offersblock .owl-nav .owl-next {

@@ -1019,7 +1019,7 @@ if(document.querySelector("#category-page")){
     items:9, 
     nav:true,
     navText:['<i class="fa fa-angle-left"></i>',
-              '<i class="fa fa-angle-right"></i>'],
+             '<i class="fa fa-angle-right"></i>'],
     responsive:{
       0:{items:1},
       320:{items:2},

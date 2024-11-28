@@ -1739,8 +1739,6 @@ header {position:fixed;
         }
 
       }
-
-    
       
       .owl-nav {position:absolute;
                 top:-3rem;
@@ -1752,7 +1750,7 @@ header {position:fixed;
                 flex-direction:row;
                 justify-content:center;
                 align-items:center;
-                gap:1.2rem;
+                gap:1.2rem;background-color:red;
 
           .owl-prev,
           .owl-next {margin:0 !important;
