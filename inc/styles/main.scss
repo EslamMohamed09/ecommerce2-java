@@ -792,7 +792,7 @@ header {position:fixed;
   .top-nav {padding:0.3rem 3%;
             background-color:(var(--olive18));
 
-    .col-left {
+    .left-block {
       select {gap:0.1rem;
               cursor:pointer;
               color:var(--white);
@@ -810,7 +810,7 @@ header {position:fixed;
       }
     }
 
-    .col-right {
+    .right-block {
       ul {list-style:none;
           gap:1rem;
         li {
@@ -1011,7 +1011,7 @@ header {position:fixed;
 
       .top-nav {padding:0.3rem 1rem;
                 z-index:1000;
-        .col-right ul #open-mHeader {display:block;}
+        .right-block ul #open-mHeader {display:block;}
       }
 
       .main-header {position:fixed;
@@ -1051,7 +1051,7 @@ header {position:fixed;
 
 @media (max-width:600px){
   header { 
-    .top-nav .col-left #currency-select span {font-size:0.8rem;}
+    .top-nav .left-block #currency-select span {font-size:0.8rem;}
 
     .main-header {width:90%;
 
@@ -1092,7 +1092,7 @@ header {position:fixed;
 @media (max-width:316px){
   header { 
     .top-nav {
-      .col-left #currency-select {
+      .left-block #currency-select {
           select {width:6rem;
                   padding:0;
             option {font-size:0.8rem;
@@ -1100,23 +1100,23 @@ header {position:fixed;
         }
       }
 
-      .col-right { ul li a {font-size:0.9rem;} }
+      .right-block { ul li a {font-size:0.9rem;} }
     }
   }
 }
 
 @media (max-width:280px){
-  header .top-nav .col-left select {width:4rem;}
-  header .top-nav .col-right ul {gap:0.6rem;}
+  header .top-nav .left-block select {width:4rem;}
+  header .top-nav .right-block ul {gap:0.6rem;}
 }
 
 @media (max-width:263px){
   header .top-nav {padding:0.3rem 1%;
-    .col-right { ul li a {font-size:0.7rem;} }
+    .right-block { ul li a {font-size:0.7rem;} }
   }
 }
 
-@media (max-width:224px){ header .top-nav .col-left #currency-select select {width:3rem;} }
+@media (max-width:224px){ header .top-nav .left-block #currency-select select {width:3rem;} }
 
 /************
  # Banner
@@ -1128,7 +1128,7 @@ header {position:fixed;
     .banner-slide-item {width:100%;
                         flex-wrap:wrap;
 
-      .col-left {flex:1 1 25rem;
+      .left-block {flex:1 1 25rem;
 
         .semi-title {font-size:0.9rem;
                      color:var(--red7);
@@ -1152,37 +1152,37 @@ header {position:fixed;
       }
 
       /* Animation */
-      &:first-child .col-left .semi-title {animation:movebottom 0.5s linear;}
-      &:first-child .col-left h2 {animation:movebottom 0.5s linear;}
-      &:first-child .col-left p {animation:moveleft 0.5s linear;}
-      &:first-child .col-left button {animation:moveright 0.5s linear;}
+      &:first-child .left-block .semi-title {animation:movebottom 0.5s linear;}
+      &:first-child .left-block h2 {animation:movebottom 0.5s linear;}
+      &:first-child .left-block p {animation:moveleft 0.5s linear;}
+      &:first-child .left-block button {animation:moveright 0.5s linear;}
   
-      &:nth-child(2) .col-left .semi-title {animation:movebottom 0.5s linear;}
-      &:nth-child(2) .col-left h2 {animation:movebottom 0.5s linear;}
-      &:nth-child(2) .col-left p {animation:moveright 0.5s linear;}
-      &:nth-child(2) .col-left button {animation:movetop 0.5s linear;}
+      &:nth-child(2) .left-block .semi-title {animation:movebottom 0.5s linear;}
+      &:nth-child(2) .left-block h2 {animation:movebottom 0.5s linear;}
+      &:nth-child(2) .left-block p {animation:moveright 0.5s linear;}
+      &:nth-child(2) .left-block button {animation:movetop 0.5s linear;}
  
-      &:nth-child(3) .col-left .semi-title {animation:moveright 0.5s linear;}
-      &:nth-child(3) .col-left h2 {animation:moveleft 0.5s linear;}
-      &:nth-child(3) .col-left p {animation:moveright 0.5s linear;}
-      &:nth-child(3) .col-left button {animation:movetop 0.5s linear;}
+      &:nth-child(3) .left-block .semi-title {animation:moveright 0.5s linear;}
+      &:nth-child(3) .left-block h2 {animation:moveleft 0.5s linear;}
+      &:nth-child(3) .left-block p {animation:moveright 0.5s linear;}
+      &:nth-child(3) .left-block button {animation:movetop 0.5s linear;}
  
-      &:nth-child(4) .col-left .semi-title {animation:movebottom 0.5s linear;}
-      &:nth-child(4) .col-left h2 {animation:moveright 0.5s linear;}
-      &:nth-child(4) .col-left p {animation:moveleft 0.5s linear;}
-      &:nth-child(4) .col-left button {animation:moveright 0.5s linear;}
+      &:nth-child(4) .left-block .semi-title {animation:movebottom 0.5s linear;}
+      &:nth-child(4) .left-block h2 {animation:moveright 0.5s linear;}
+      &:nth-child(4) .left-block p {animation:moveleft 0.5s linear;}
+      &:nth-child(4) .left-block button {animation:moveright 0.5s linear;}
  
-      &:nth-child(5) .col-left .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
-      &:nth-child(5) .col-left h2 {animation:moveleft 0.5s linear 0.5s backwards;}
-      &:nth-child(5) .col-left p {animation:moveright 0.5s linear 0.5s backwards;}
-      &:nth-child(5) .col-left button {animation:movetop 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .left-block .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .left-block h2 {animation:moveleft 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .left-block p {animation:moveright 0.5s linear 0.5s backwards;}
+      &:nth-child(5) .left-block button {animation:movetop 0.5s linear 0.5s backwards;}
  
-      &:nth-child(6) .col-left .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
-      &:nth-child(6) .col-left h2 {animation:moveright 0.5s linear 0.5s backwards;}
-      &:nth-child(6) .col-left p {animation:moveleft 0.5s linear 0.5s backwards;}
-      &:nth-child(6) .col-left button {animation:moveright 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .left-block .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .left-block h2 {animation:moveright 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .left-block p {animation:moveleft 0.5s linear 0.5s backwards;}
+      &:nth-child(6) .left-block button {animation:moveright 0.5s linear 0.5s backwards;}
 
-      .col-right {flex:1 1 25rem;
+      .right-block {flex:1 1 25rem;
                   position:relative;
                   z-index:0;
 
@@ -1192,12 +1192,12 @@ header {position:fixed;
       }
 
       /* animation */
-      &:first-child .col-right img {animation:showimg 0.3s linear;}
-      &:nth-child(2) .col-right img {animation:showimg 0.3s linear;}
-      &:nth-child(3) .col-right img {animation:showimg 0.5s linear;}
-      &:nth-child(4) .col-right img {animation:showimg 0.5s linear;}
-      &:nth-child(5) .col-right img {animation:showimg 0.8s linear;}
-      &:nth-child(6) .col-right img {animation:showimg 0.8s linear;}
+      &:first-child .right-block img {animation:showimg 0.3s linear;}
+      &:nth-child(2) .right-block img {animation:showimg 0.3s linear;}
+      &:nth-child(3) .right-block img {animation:showimg 0.5s linear;}
+      &:nth-child(4) .right-block img {animation:showimg 0.5s linear;}
+      &:nth-child(5) .right-block img {animation:showimg 0.8s linear;}
+      &:nth-child(6) .right-block img {animation:showimg 0.8s linear;}
 
 
     }
@@ -1293,8 +1293,8 @@ header {position:fixed;
 
 }
 
-@media (min-width:768px) and (max-width:1000px) { .banner-section .banner-slide-item .col-left p {width:85%;} 
-                                                  .banner-section .banner-slide-item .col-right img {width:11rem;}
+@media (min-width:768px) and (max-width:1000px) { .banner-section .banner-slide-item .left-block p {width:85%;} 
+                                                  .banner-section .banner-slide-item .right-block img {width:11rem;}
 }
 
 @media (max-width:768px) {
@@ -1311,7 +1311,7 @@ header {position:fixed;
                                opacity:1;}
 
         .banner-section .banner-slide-item {flex-flow:column-reverse;
-          .col-left {justify-content:flex-start;
+          .left-block {justify-content:flex-start;
                      padding-left:6%;
 
             p {width:90%;}
@@ -1319,16 +1319,16 @@ header {position:fixed;
         }
 }
 
-@media (max-width:450px) { .banner-section .banner-slide-item .col-right img {width:80%;} }
+@media (max-width:450px) { .banner-section .banner-slide-item .right-block img {width:80%;} }
 
-@media (max-width:300px) { .banner-section .banner-slide-item .col-left p {width:100%;} }
+@media (max-width:300px) { .banner-section .banner-slide-item .left-block p {width:100%;} }
 
-@media (max-width:260px) { .banner-section .banner-slide-item .col-left p {font-size:1rem;} }
+@media (max-width:260px) { .banner-section .banner-slide-item .left-block p {font-size:1rem;} }
 
-@media (max-width:238px) { .banner-section .banner-slide-item .col-left h2 {font-size:1.3rem;} }
+@media (max-width:238px) { .banner-section .banner-slide-item .left-block h2 {font-size:1.3rem;} }
 
-@media (max-width:208px) { .banner-section .banner-slide-item .col-left {padding-left:3%;}
-                           .banner-section .banner-slide-item .col-left h2 {font-size:1.1rem;}
+@media (max-width:208px) { .banner-section .banner-slide-item .left-block {padding-left:3%;}
+                           .banner-section .banner-slide-item .left-block h2 {font-size:1.1rem;}
 }
 
 /********************
@@ -1503,7 +1503,7 @@ header {position:fixed;
                                           font-size:0.9rem;
                                           line-height:1.2;
                                           box-shadow:var(--box-shadow4);
-                                          &.new {background-color:var(--shin-blue5);color:var(--white2);}
+                                          &.new {background-color:var(--blue5);color:var(--white2);}
                                           &.top {background-color:var(--shin-orange);color:var(--white2);}
                                           &.hot {background-color:var(--yellow10);color:var(--white2);}
                                    }
@@ -1761,7 +1761,7 @@ header {position:fixed;
                      text-align:center;
                      width:1.7rem;
                      height:100% !important;
-                     background-color:var(--shin-blue5);
+                     background-color:var(--blue5);
                      color:var(--white);
                      display:flex !important;
                      justify-content:center;
@@ -1782,7 +1782,7 @@ header {position:fixed;
     .section-heading {position:absolute;
                       top:0;}
 
-    .col-left {
+    .left-block {
       .inner-col {
         .offersblock {
           .product-item .image {height:20rem;}
@@ -1791,7 +1791,7 @@ header {position:fixed;
       }
     }
 
-    .col-right {
+    .right-block {
       .inner-col {
         .offersblock {
           .items {display:grid;
@@ -1807,7 +1807,7 @@ header {position:fixed;
 }
 
 @media(max-width:768px){
-  .offers-section .col-left {margin-bottom:2rem;}
+  .offers-section .left-block {margin-bottom:2rem;}
     
   .offersblock .product-item .image img {height:55%;}
 }
@@ -1822,7 +1822,7 @@ header {position:fixed;
                       background:radial-gradient(circle at 72% 60%, var(--olive14) 1%, var(--olive18) 40%);
 
 
-    .col-left {flex:1 1 25rem;
+    .left-block {flex:1 1 25rem;
                padding:3rem;
 
       .content {gap:0.5rem;
@@ -1845,7 +1845,7 @@ header {position:fixed;
 
     }
 
-    .col-right {flex:1 1 25rem;
+    .right-block {flex:1 1 25rem;
                 padding:2rem;
                 height:100%;
       .image {
@@ -1860,15 +1860,15 @@ header {position:fixed;
   .today-deal-section .section-container {flex-direction:column-reverse;
                                           background:radial-gradient(circle at 50% 26%, var(--olive19) 15%, var(--olive24) 40%);}
 
-    .today-deal-section .section-container .col-left .content span {margin-top:3rem;}
+    .today-deal-section .section-container .left-block .content span {margin-top:3rem;}
 }
 
 @media(max-width:280px){
   .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive19) 8%, var(--olive24) 30%);
     
-    .col-left {padding:5% 5% 5% 7%;}
+    .left-block {padding:5% 5% 5% 7%;}
 
-    .col-right .image img {height:7rem;}
+    .right-block .image img {height:7rem;}
   }
 }
 
@@ -1886,7 +1886,7 @@ header {position:fixed;
     button {margin-top:1rem;}
   }
 
-  .col-left {
+  .left-block {
     .product-card {padding:5rem 2rem 2rem;
       .content {gap:0.4rem;
         p {font-size:1rem;
@@ -1896,7 +1896,7 @@ header {position:fixed;
     }
   }
 
-  .col-right {flex-wrap:wrap;
+  .right-block {flex-wrap:wrap;
               gap:1.5rem;
 
       .product-card {padding:1.5rem 1rem;}
@@ -1945,7 +1945,7 @@ header {position:fixed;
                  border-radius:0.6rem;
                  box-shadow:var(--box-shadow2);
 
-    .col-left {position:relative;
+    .left-block {position:relative;
       
       .arrows {width:91%;
                position:absolute;
@@ -2016,7 +2016,7 @@ header {position:fixed;
 
     }
 
-    .col-right {
+    .right-block {
       .content {
 
         span {color:var(--orange-red1);
@@ -2066,14 +2066,14 @@ header {position:fixed;
   .month-deal-section .product-card {padding:3rem 5%;
                                      grid-template-columns:1fr;
 
-      .col-right .content ul {padding-left:1.5rem;}
+      .right-block .content ul {padding-left:1.5rem;}
 
       .content-footer {margin:1rem 0 0;}
   }
 }
 
 @media(max-width:400px){
-  .month-deal-section .product-card .col-left {
+  .month-deal-section .product-card .left-block {
 
     .image img {width:13rem;
                 height:13rem;}
@@ -2083,12 +2083,12 @@ header {position:fixed;
 }
 
 @media(max-width:300px){
-  .month-deal-section .product-card .col-left .image img {width:11rem;
+  .month-deal-section .product-card .left-block .image img {width:11rem;
                                                           height:11rem;}
 }
 
 @media(max-width:215px){
-  .month-deal-section .product-card .col-left .image img {width:8rem;
+  .month-deal-section .product-card .left-block .image img {width:8rem;
                                                           height:8rem;}
 }
 
@@ -2141,12 +2141,12 @@ header {position:fixed;
          &::-webkit-scrollbar-track {width:8px;
                                      background-color:var(--gray8);}
          &::-webkit-scrollbar {width:8px;}
-         &::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--shin-blue3) 0%, var(--violet6) 100%);
+         &::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--blue3) 0%, var(--violet6) 100%);
                                         border-radius:10px;}
 
     .product-container {
 
-        .col-left {
+        .left-block {
             .allcategoriesproduct {margin-bottom:1rem;
                                    gap:0.2rem;
                                    list-style:none;
@@ -2185,7 +2185,7 @@ header {position:fixed;
             }
         }
 
-        .col-right {padding:2rem;
+        .right-block {padding:2rem;
 
             .content {width:100%;
                       gap:0.5rem;
@@ -2318,7 +2318,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         a.facebook:hover svg {color:var(--blue7);}
         a.pinterest:hover svg {color:var(--orange-red1);}
         a.instagram:hover svg {color:var(--red9);}
-        a.linkedin:hover svg {color:var(--shin-blue5);}
+        a.linkedin:hover svg {color:var(--blue5);}
         a.youtube:hover svg {color:var(--orange-red1);}
       }
     }
@@ -2371,7 +2371,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 ***************/
 #single-page .product-container {margin-bottom:3rem;
 
-      .col-left {
+      .left-block {
         .allcategoriesproduct {list-style:none;
                                margin-bottom:1rem;
                                gap:0.2rem;
@@ -2422,7 +2422,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         }
       }
 
-      .col-right {padding:2rem;
+      .right-block {padding:2rem;
 
           .content {width:100%;
                     gap:0.5rem;
@@ -2692,7 +2692,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
     }
 
     /*** right-col ***/
-    .col-right {margin:0;
+    .right-block {margin:0;
                 padding:0 0 0 0.9rem;
                 background-color:transparent;
 
@@ -2960,7 +2960,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                              line-height:0.7rem;
                              border-radius:0.2rem;
                              color:var(--white);
-                             background:var(--shin-blue3);
+                             background:var(--blue3);
                              transition:all 0.5s linear;}
           }
 
@@ -3242,7 +3242,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
   }
 
-  .col-left {
+  .left-block {
 
     table {width:100%;
            margin-bottom:1rem;
@@ -3320,7 +3320,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   
   }
 
-  .col-right {
+  .right-block {
     .col-blocks {
 
       .btn2 {width:100%;}
@@ -3424,7 +3424,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 ****************/
 .checkout-page {padding:0;
 
-  .col-left {padding:1rem 3rem 1rem 6% !important;
+  .left-block {padding:1rem 3rem 1rem 6% !important;
              background:var(--white2);
 
     .page-hierarchy {gap:1rem;
@@ -3458,7 +3458,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
           button:first-child {font-weight:bold;
             span {padding:0.3rem 0.4rem;
                   border-radius:0.4rem;
-                  color:var(--shin-blue5);
+                  color:var(--blue5);
                   background-color:var(--white2);}
             }
           button:nth-child(2) {
@@ -3486,7 +3486,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         .heading {width:100%;
                   padding:0 !important;
                   
-          .col-right {gap:0.2rem;
+          .right-block {gap:0.2rem;
                       font-size:1rem;
                       padding:0 !important;
                       border:none;
@@ -3631,7 +3631,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
   }
 
-  .col-right {padding:1rem 6% 1rem 3rem !important;
+  .right-block {padding:1rem 6% 1rem 3rem !important;
               background:var(--gray1);
               border-left:1.5px solid var(--gray4);
 
@@ -3731,7 +3731,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   .form-container {padding:0;
                    width:95%;
 
-      .col-left {padding:2.5rem 2rem;
+      .left-block {padding:2.5rem 2rem;
                  border-radius:0.4rem;
                  background-color:var(--white2);
                  box-shadow:var(--box-shadow4);
@@ -3794,7 +3794,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
       }
 
-      .col-right {padding:0 3rem;
+      .right-block {padding:0 3rem;
 
         .order-count-block {width:100%;
                             gap:1rem;
@@ -3896,6 +3896,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
       .payment-section {background:linear-gradient(180deg, #2ecc71 42%, #27ae60 50%);}
 
 
-      .payment-section .form-container .col-left {margin-bottom:3rem;}
+      .payment-section .form-container .left-block {margin-bottom:3rem;}
 
 }
