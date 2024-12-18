@@ -372,7 +372,7 @@ document.addEventListener('asideLoaded', () => {
   
   const currentPage = window.location.pathname.split('/').pop();
 
-  document.querySelectorAll('#aside .aside-list li .sidebar-link').forEach(function(item) {
+  document.querySelectorAll('#main-aside .aside-list li .sidebar-link').forEach(function(item) {
     const itemHref = item.getAttribute('href');
 
     if (itemHref === currentPage) {
@@ -381,7 +381,7 @@ document.addEventListener('asideLoaded', () => {
   });
 
   /*** BIG & SMALL ASIDE ***/
-  if(document.getElementById("aside") && document.getElementById("asidebutton")){
+  if(document.getElementById("main-aside") && document.getElementById("asidebutton")){
      const asideMenu = document.getElementById("aside");
      const asideButton = document.getElementById("asidebutton");
      const asideButton2 = document.getElementById("asidebutton2");
@@ -418,7 +418,7 @@ document.addEventListener('asideLoaded', () => {
 });
 
 if(window.location.pathname.split('/').pop().split('.')[0] !== "login"){
-   loadHtml('#aside', asideContent, "aside");
+   loadHtml('#main-aside', asideContent, "aside");
 }
 
 function eyeFunction(eyeIcon) {
