@@ -3453,12 +3453,13 @@ header .small-menu .small-menu-link {
   left: calc(100% + 1rem);
   border-radius: 4px;
   transform: translateY(-50%);
-  font-size: 13px;
+  font-size: 1.1rem;
   padding: 6px 12px;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
+  z-index: 5;
   transition: all 0.15s ease-in-out;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu > li > a:hover::before {
@@ -3487,7 +3488,7 @@ header .small-menu .small-menu-link {
   border: 2.5px solid var(--white);
   box-shadow: var(--box-shadow3);
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu {
   position: absolute;
   bottom: calc(100% + 1rem);
   left: 0.5rem;
@@ -3499,12 +3500,12 @@ header .small-menu .small-menu-link {
   visibility: hidden;
   transform-origin: left bottom;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown.dropactive {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu.dropactive {
   bottom: calc(100% + 0.1rem);
   opacity: 1;
   visibility: visible;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown li a {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu li a {
   display: flex;
   align-items: center;
   padding: 8px 12px;
@@ -3512,21 +3513,62 @@ header .small-menu .small-menu-link {
   color: var(--gray9);
   font-size: 1.2rem;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown li a:hover {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu li a:hover {
   color: var(--gray2);
   background-color: var(--lightblue13);
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown li a svg {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu li a svg {
   margin-right: 12px;
   font-size: 17px;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown li:first-child a {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu li:first-child a {
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropdown li:last-child a {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-sidebar .chat-sidebar-menu .chat-sidebar-profile .chat-sidebar-profile-dropmenu li:last-child a {
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content {
+  padding-left: 3rem;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar {
+  padding: 1rem;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar .content-sidebar-form {
+  position: relative;
+  margin-top: 24px;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar .content-sidebar-form .search-input {
+  width: 100%;
+  padding: 0.5rem 1.9rem 0.5rem 0.9rem;
+  font-size: 1.1rem;
+  color: var(--lightblue1);
+  background-color: var(--lightblue10);
+  border: 1px solid var(--lightblue12);
+  outline: 0;
+  border-radius: 0.3rem;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar .content-sidebar-form .search-input:focus {
+  border-color: var(--lightblue12);
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar .content-sidebar-form .content-sidebar-submit {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.8rem;
+  color: var(--blue11);
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .content-sidebar .content-sidebar-form .content-sidebar-submit:hover {
+  color: var(--blue5);
 }
 @media (max-width: 1600px) {
   .messages-page .messages-page-container .chat-zone .chat-container {

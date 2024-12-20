@@ -23,7 +23,7 @@
     <h1 class="section-heading">messages</h1>
 
     <div class="chat-zone">
-      <div class="chat-container">
+      <div class="chat-container d-flex-r-st-st">
 
         <aside class="chat-sidebar d-flex-c-bt-c">
           <a href="#" class="chat-sidebar-logo"><i class="fas fa-comment"></i></a>
@@ -34,13 +34,41 @@
             <li class="menu-list"><a href="#" data-title="settings"><i class="fas fa-user-cog"></i></a></li>
             <div class="chat-sidebar-profile active">
               <img src="inc/images/users/eslam5.jpg" alt="" id="chatprofile-img">
-              <ul class="chat-sidebar-profile-dropdown">
+              <ul class="chat-sidebar-profile-dropmenu">
                 <li><a href="#"><i class="fas fa-user-circle"></i>profile</a></li>
                 <li><a href="#"><i class="fas fa-sign-out-alt"></i>logout</a></li>
               </ul>
             </div>
           </ul>
         </aside> <!-- End-aside -->
+
+        <div class="chat-content">
+          <div class="content-sidebar">
+            <h3 class="title">chats</h3>
+            <form action="" class="content-sidebar-form">
+              <input type="search" class="search-input" placeholder="search...">
+              <button type="submit" class="content-sidebar-submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="content-messages">
+              <ul class="content-messsages-list">
+                <li class="message-title">recently</li>
+                <li>
+                  <a href="#">
+                    <img src="" alt="">
+                    <span>
+                      <span class="message-name">Eslam</span>
+                      <span class="message-text">frontend developer</span>
+                    </span>
+                    <span>
+                      <span class="message-unread">5</span>
+                      <span class="message-time">12:30</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div> <!-- content-messages -->
+          </div>
+        </div>
 
       </div>
     </div>

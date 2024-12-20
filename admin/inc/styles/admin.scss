@@ -2961,12 +2961,13 @@ header {width:100%;
                                                                           left:calc(100% + 1rem);
                                                                           border-radius:4px;
                                                                           transform:translateY(-50%);
-                                                                          font-size:13px;
+                                                                          font-size:1.1rem;
                                                                           padding:6px 12px;
                                                                           color:var(--white);
                                                                           background-color:rgba(0,0,0,0.6);
                                                                           opacity:0;
                                                                           visibility:hidden;
+                                                                          z-index:5;
                                                                           transition:all 0.15s ease-in-out;}
 
                                                                &:hover::before {left:100%;
@@ -2993,7 +2994,7 @@ header {width:100%;
                                                              border:2.5px solid var(--white);
                                                              box-shadow:var(--box-shadow3);}
 
-                                                        .chat-sidebar-profile-dropdown {position:absolute;
+                                                        .chat-sidebar-profile-dropmenu {position:absolute;
                                                                                         bottom:calc(100% + 1rem);
                                                                                         left:0.5rem;
                                                                                         background-color:var(--white);
@@ -3034,6 +3035,44 @@ header {width:100%;
                                                                       }
                                                                }
                                                         }
+                                                 }
+                                          }
+                                   }
+
+                                   .chat-content {padding-left:3rem;
+                                          .content-sidebar {padding:1rem;
+
+                                                 .title {font-size:1.2rem;
+                                                         font-weight:600;}
+
+                                                 .content-sidebar-form {position:relative;
+                                                                        margin-top:24px;
+                                                        .search-input {width:100%;
+                                                                       padding:0.5rem 1.9rem 0.5rem 0.9rem;
+                                                                       font-size:1.1rem;
+                                                                       color:var(--lightblue1);
+                                                                       background-color:var(--lightblue10);
+                                                                       border:1px solid var(--lightblue12);
+                                                                       outline:0;
+                                                                       border-radius:0.3rem;
+                                                               &:focus {border-color:var(--lightblue12);}
+                                                        }
+
+                                                        .content-sidebar-submit {position:absolute;
+                                                                                 top:50%;
+                                                                                 transform:translateY(-50%);
+                                                                                 right:0.8rem;
+                                                                                 color:var(--blue11);
+                                                                                 background-color:transparent;
+                                                                                 outline:transparent;
+                                                                                 border:none;
+                                                                                 cursor:pointer;
+                                                               &:hover {color:var(--blue5);}
+                                                        }
+                                                 }
+
+                                                 .content-messages {
+                                                        .content-messages-list {}
                                                  }
                                           }
                                    }

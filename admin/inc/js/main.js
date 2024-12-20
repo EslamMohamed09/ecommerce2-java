@@ -715,7 +715,7 @@ fetch('pages/categories.json').then(response => response.json())
 */
 if(document.querySelector('.messages-page .chat-sidebar')){
   const chatSidebarMenuLists = document.querySelectorAll('.messages-page .chat-sidebar .chat-sidebar-menu .menu-list');
-  let chatSidebarProfileDropdown = document.querySelector('.messages-page .chat-sidebar .chat-sidebar-profile-dropdown');
+  let chatSidebarProfileDropmenu = document.querySelector('.messages-page .chat-sidebar .chat-sidebar-profile-dropmenu');
   const chatProfileImg = document.querySelector('#chatprofile-img');
 
   chatSidebarMenuLists.forEach((chatSidebarMenuList) => {
@@ -729,11 +729,11 @@ if(document.querySelector('.messages-page .chat-sidebar')){
 
   chatProfileImg.onclick = (event) => {
     event.stopPropagation();
-    chatSidebarProfileDropdown.classList.toggle('dropactive');
+    chatSidebarProfileDropmenu.classList.toggle('dropactive');
   };
   document.body.addEventListener('click', (event) => {
-    if (!chatProfileImg.contains(event.target) && !chatSidebarProfileDropdown.contains(event.target)) {
-        chatSidebarProfileDropdown.classList.remove('dropactive');
+    if (!chatProfileImg.contains(event.target) && !chatSidebarProfileDropmenu.contains(event.target)) {
+        chatSidebarProfileDropmenu.classList.remove('dropactive');
     }
   });
 }
