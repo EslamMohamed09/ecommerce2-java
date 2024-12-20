@@ -382,7 +382,7 @@ document.addEventListener('asideLoaded', () => {
 
   /*** BIG & SMALL ASIDE ***/
   if(document.getElementById("main-aside") && document.getElementById("asidebutton")){
-     const asideMenu = document.getElementById("aside");
+     const asideMenu = document.getElementById("main-aside");
      const asideButton = document.getElementById("asidebutton");
      const asideButton2 = document.getElementById("asidebutton2");
      let isToggledByButton = false;
@@ -706,6 +706,40 @@ fetch('pages/categories.json').then(response => response.json())
 })
 .catch(error => console.error('Error loading JSON:', error));
 }
+
+
+/*
+ =============================
+ ######## MESSAGES PAGE ######
+ =============================
+*/
+if(document.querySelector('.messages-page .chat-sidebar')){
+  const chatSidebarMenuLists = document.querySelectorAll('.messages-page .chat-sidebar .chat-sidebar-menu .menu-list');
+  let chatSidebarProfileDropdown = document.querySelector('.messages-page .chat-sidebar .chat-sidebar-profile-dropdown');
+  const chatProfileImg = document.querySelector('#chatprofile-img');
+
+  chatSidebarMenuLists.forEach((chatSidebarMenuList) => {
+    chatSidebarMenuList.addEventListener('click', () => {
+      chatSidebarMenuLists.forEach((item) => {
+        item.classList.remove('active');
+      });
+      chatSidebarMenuList.classList.add('active');
+    });
+  });
+
+  chatProfileImg.onclick = (event) => {
+    event.stopPropagation();
+    chatSidebarProfileDropdown.classList.toggle('dropactive');
+  };
+  document.body.addEventListener('click', (event) => {
+    if (!chatProfileImg.contains(event.target) && !chatSidebarProfileDropdown.contains(event.target)) {
+        chatSidebarProfileDropdown.classList.remove('dropactive');
+    }
+  });
+}
+
+
+
 
 /*
  =============================
