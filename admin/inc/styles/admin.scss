@@ -3257,69 +3257,82 @@ header {width:100%;
 
                                                                       .conversation-item-content {width:100%;
 
-                                                                          .conversation-item-box {max-width:540px;
-                                                                                                  margin-bottom:8px;
-                                                                                                  position:relative;
+                                                                             .conversation-item-wrapper {
 
-                                                                             .conversation-item-text {padding:8px 16px;
-                                                                                                      background-color:var(--lightblue12);
-                                                                                                      box-shadow:0 2px 16px -2px var(--lightblue12);
-                                                                                                      color:var(--white);
-                                                                                                      font-size:14px;
-                                                                                                      border-radius:6px;}
+                                                                                    .conversation-item-box {max-width:540px;
+                                                                                                            margin-bottom:8px;
+                                                                                                            position:relative;
 
-                                                                             .conversation-item-time {font-size:12px;
-                                                                                                      color:rgba(255,255,255,0.6);
-                                                                                                      display:block;
-                                                                                                      text-align:right;
-                                                                                                      margin-top:4px;
-                                                                                                      line-height:1;}
+                                                                                           .conversation-item-text {padding:8px 16px;
+                                                                                                                    background-color:var(--lightblue12);
+                                                                                                                    box-shadow:0 2px 16px -2px var(--lightblue12);
+                                                                                                                    color:var(--white);
+                                                                                                                    font-size:14px;
+                                                                                                                    border-radius:6px;
+                                                                                                                    line-height:1.5;}
 
-                                                                             .conversation-item-dropdown {position:absolute;
-                                                                                                          top:0;
-                                                                                                          left:calc(100% + 8px);
+                                                                                           .conversation-item-time {font-size:12px;
+                                                                                                                    color:rgba(255,255,255,0.6);
+                                                                                                                    display:block;
+                                                                                                                    text-align:right;
+                                                                                                                    margin-top:4px;
+                                                                                                                    line-height:1;}
 
-                                                                                    .conversation-item-dropdown-toggle {width:24px;
-                                                                                                                        height:24px;
-                                                                                                                        display:flex;
-                                                                                                                        align-items:center;
-                                                                                                                        justify-content:center;
-                                                                                                                        border-radius:50%;
-                                                                                                                        background-color:transparent;
-                                                                                                                        outline:transparent;
-                                                                                                                        border:none;
+                                                                                           .conversation-item-dropdown {position:absolute;
+                                                                                                                        top:0;
+                                                                                                                        left:calc(100% + 8px);
 
-                                                                                                                &:hover {background-color:var(--lightblue13);
-                                                                                                                         color:var(--white);
-                                                                                                                         box-shadow:0 2px 12px -2px var(--lightblue14);}
+                                                                                                  .conversation-item-dropdown-toggle {width:24px;
+                                                                                                                                      height:24px;
+                                                                                                                                      display:flex;
+                                                                                                                                      align-items:center;
+                                                                                                                                      justify-content:center;
+                                                                                                                                      border-radius:50%;
+                                                                                                                                      background-color:transparent;
+                                                                                                                                      outline:transparent;
+                                                                                                                                      border:none;
 
-                                                                                                                &:active {background-color:var(--lightblue14);}
-                                                                                    }
+                                                                                                                              &:hover {background-color:var(--lightblue13);
+                                                                                                                                       color:var(--white);
+                                                                                                                                       box-shadow:0 2px 12px -2px var(--lightblue14);}
 
-                                                                                    .conversation-item-dropdown-list {position:absolute;
-                                                                                                                      top:100%;
-                                                                                                                      left:0;
-                                                                                                                      background-color:var(--white);
-                                                                                                                      z-index:10;
-                                                                                                                      box-shadow:0 2px 8px rgba(0,0,0,0.1);
-                                                                                                                      padding:4px 0;
+                                                                                                                              &:active {background-color:var(--lightblue14);}
+                                                                                                  }
 
-                                                                                                                a {display:flex;
-                                                                                                                   align-items:center;
-                                                                                                                   text-decoration:none;
-                                                                                                                   color:var(--lightblue10);
-                                                                                                                   font-size:13px;
-                                                                                                                   padding:6px 12px;
+                                                                                                  .conversation-item-dropdown-list {position:absolute;
+                                                                                                                                    top:100%;
+                                                                                                                                    left:0;
+                                                                                                                                    background-color:var(--white);
+                                                                                                                                    z-index:10;
+                                                                                                                                    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+                                                                                                                                    padding:4px 0;
+                                                                                                                                    opacity:0;
+                                                                                                                                    visibility:hidden;
+                                                                                                                                    transform:scale(0.9);
+                                                                                                                                    transform-origin:left top;
+                                                                                                                                    transition:all 0.15s ease-in-out;
 
-                                                                                                                   &:hover {background-color:var(--lightblue10);
-                                                                                                                            color:var(--lightblue14);}
+                                                                                                                              a {display:flex;
+                                                                                                                                 align-items:center;
+                                                                                                                                 text-decoration:none;
+                                                                                                                                 color:var(--lightblue10);
+                                                                                                                                 font-size:13px;
+                                                                                                                                 padding:6px 12px;
 
-                                                                                                                   svg {font-size:16px;
-                                                                                                                        margin-right:8px;}
-                                                                                                                }
+                                                                                                                                     &:hover {background-color:var(--lightblue10);
+                                                                                                                                              color:var(--lightblue14);}
+
+                                                                                                                                     svg {font-size:16px;
+                                                                                                                                          margin-right:8px;}
+                                                                                                                              }
+                                                                                                  }
+                                                                                           }
+
+                                                                                           .conversation-item-dropdown.active .conversation-item-dropdown-list {opacity:1;
+                                                                                                                                                                visibility:visible;
+                                                                                                                                                                transform:scale(1);}
                                                                                     }
                                                                              }
-                                                                          }
                                                                       }
                                                                }
                                                         }
