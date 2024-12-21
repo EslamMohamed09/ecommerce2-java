@@ -3765,7 +3765,11 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item {
   display: flex;
+  flex-direction: row-reverse;
   align-items: flex-end;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item.me {
+  flex-direction: row;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-side {
   margin-right: 8px;
@@ -3871,6 +3875,9 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper:hover .conversation-item-dropdown {
   opacity: 1;
   visibility: visible;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item.me .conversation-item-box {
+  margin-left: unset;
 }
 @media (max-width: 1600px) {
   .messages-page .messages-page-container .chat-zone .chat-container {
