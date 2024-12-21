@@ -736,6 +736,22 @@ if(document.querySelector('.messages-page .chat-sidebar')){
         chatSidebarProfileDropmenu.classList.remove('dropactive');
     }
   });
+
+  
+  document.querySelectorAll('.conversation-item-dropdown-toggle').forEach((item) => {
+    item.addEventListener('click', function(event){
+      event.stopPropagation();
+      this.parentElement.classList.toggle('active');
+    });
+  });
+  
+  document.body.addEventListener('click', (event) => {
+    document.querySelectorAll('.conversation-item-dropdown-toggle').forEach((item) => {
+      if (!item.contains(event.target) && !this.parentElement.contains(event.target)) {
+          this.parentElement.classList.remove('active');
+      }
+    });
+  });
 }
 
 
