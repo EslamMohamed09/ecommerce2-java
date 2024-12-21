@@ -3770,12 +3770,21 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-side {
   margin-right: 8px;
 }
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-side .conversation-item-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: fill;
+  display: block;
+}
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content {
   width: 100%;
 }
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper:not(:last-child) {
+  margin-bottom: 8px;
+}
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper .conversation-item-box {
   max-width: 540px;
-  margin-bottom: 8px;
   position: relative;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper .conversation-item-box .conversation-item-text {
