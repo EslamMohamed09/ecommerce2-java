@@ -2925,10 +2925,17 @@ header {width:100%;
                                       height:100%;
                                       box-shadow:0 8px 24px -4px rgba(0,0,0,0.1);
                                       background-color:var(--white);
+                                      position:relative;
 
                                    .chat-sidebar {width:4.5rem;
                                                   height:100%;
                                                   background-color:var(--lightblue13);
+                                                  display:flex;
+                                                  flex-direction:column;
+                                                  position:absolute;
+                                                  left:0;
+                                                  top:0;
+                                                  z-index:10;
 
                                           .chat-sidebar-logo {font-size:2rem;
                                                               color:var(--white);
@@ -3040,10 +3047,22 @@ header {width:100%;
                                    }
 
                                    .chat-content {padding-left:3rem;
-                                          .content-sidebar {padding:1rem;
+                                                  height:100%;
+                                                  position:relative;
+
+                                          .content-sidebar {width:256px;
+                                                            background-color:var(--white);
+                                                            display:flex;
+                                                            flex-direction:column;
+                                                            height:100%;
+                                                            position:absolute;
+                                                            top:0;
+                                                            left:64px;
+
 
                                                  .title {font-size:1.2rem;
-                                                         font-weight:600;}
+                                                         font-weight:600;
+                                                         padding:16px;}
 
                                                  .content-sidebar-form {position:relative;
                                                                         margin-top:24px;
@@ -3075,7 +3094,9 @@ header {width:100%;
                                                  .content-messages {overflow-y:auto;
                                                                     max-height:100%;
                                                                     margin-top:16px;
+
                                                         .content-messages-list {padding:16px 0;
+
                                                                > * > a {display:flex;
                                                                         align-items:center;
                                                                         text-decoration:none;
@@ -3138,6 +3159,91 @@ header {width:100%;
                                                                               color:var(--lightblue8);
                                                                               font-weight:500;}
                                                         }
+                                                 }
+                                          }
+
+                                          .conversation {background-color:var(--lightblue9);
+                                                         height:100%;
+                                                         padding-left:256px;
+
+                                                 .conversation-top {padding:16px;
+                                                                    background-color:rgba(255,255,255,0.5);
+                                                                    display:flex;
+                                                                    align-items:center;
+
+                                                               .conversation-user {display:flex;
+                                                                                   align-items:center;
+
+                                                                             .conversation-user-image {width:40px;
+                                                                                                       height:40px;
+                                                                                                       border-radius:50%;
+                                                                                                       object-fit:cover;
+                                                                                                       margin-right:8px;}
+                                                                                    
+                                                                             .conversation-user-name {font-weight:500;
+                                                                                                      font-size:17px;}
+
+                                                                             .conversation-user-status {color:var(--lightblue10);
+                                                                                                        font-size:13px;
+
+                                                                                                  &::before {content:'';
+                                                                                                             width:10px;
+                                                                                                             height:10px;
+                                                                                                             background-color:var(--green5);
+                                                                                                             border-radius:50%;
+                                                                                                             vertical-align:middle;
+                                                                                                             display:inline-block;
+                                                                                                             margin-right:4px;}
+
+                                                                                                  &.online &::before {background-color:var(--green12);}
+                                                                             }
+                                                               }
+
+                                                               .conversation-buttons {display:flex;
+                                                                                      align-items:center;
+                                                                                      margin-left:auto;
+
+                                                                             & > * {width:32px;
+                                                                                    height:32px;
+                                                                                    display:flex;
+                                                                                    justify-content:center;
+                                                                                    align-items:center;
+                                                                                    border-radius:4px;
+                                                                                    font-size:20px;
+                                                                                    background-color:transparent;
+                                                                                    border:none;
+                                                                                    outline:transparent;
+                                                                                    cursor:pointer;
+                                                                                    color:var(--lightblue11);
+                                                                                    margin-left:4px;}
+
+                                                                             & > :hover {background-color:var(--lightblue14);
+                                                                                         color:var(--blue5);}
+
+                                                                             & > :active {background-color:var(--lightblue13);}
+                                                               }
+
+                                                               
+                                                 }
+
+                                                 .conversation-back {background-color:transparent;
+                                                                     border:none;
+                                                                     outline:none;
+                                                                     width:32px;
+                                                                     height:32px;
+                                                                     display:flex;
+                                                                     align-items:center;
+                                                                     justify-content:center;
+                                                                     font-size:20px;
+                                                                     cursor:pointer;
+                                                                     color:var(--lightblue13);
+                                                                     margin-right:12px;
+
+                                                               &:hover {background-color:var(--lightblue10);
+                                                                        color:var(--lightblue12);
+                                                                        border-radius:50%;}
+
+                                                                        &.active {background-color:var(--lightblue11);}
                                                  }
                                           }
                                    }
