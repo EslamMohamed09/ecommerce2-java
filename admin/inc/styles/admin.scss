@@ -3067,12 +3067,77 @@ header {width:100%;
                                                                                  outline:transparent;
                                                                                  border:none;
                                                                                  cursor:pointer;
+                                                                                 transition:color 0.15s eas-in-out;
                                                                &:hover {color:var(--blue5);}
                                                         }
                                                  }
 
-                                                 .content-messages {
-                                                        .content-messages-list {}
+                                                 .content-messages {overflow-y:auto;
+                                                                    max-height:100%;
+                                                                    margin-top:16px;
+                                                        .content-messages-list {padding:16px 0;
+                                                               > * > a {display:flex;
+                                                                        align-items:center;
+                                                                        text-decoration:none;
+                                                                        color:var(--lightblue9);
+                                                                        padding:6px 16px;
+                                                                      &:hover {color:var(--lightblue11);}
+                                                               }
+
+                                                               .content-message-title {margin-left:16px;
+                                                                                       margin-right:16px;
+                                                                                       color:var(--lightblue9);
+                                                                                       font-size:13px;
+                                                                                       font-weight:500;
+                                                                                       text-transform:uppercase;
+                                                                                       margin-bottom:4px;
+                                                                                       position:relative;
+
+                                                                                    &::before {content:'';
+                                                                                               position:absolute;
+                                                                                               top:50%;
+                                                                                               transform:translateY(-50%);
+                                                                                               left:0;
+                                                                                               width:100%;
+                                                                                               height:0;
+                                                                                               border-bottom:1px solid var(--lightblue9);
+                                                                                               z-index:0;}
+
+                                                                                    > * {position:relative;
+                                                                                         z-index:1;}
+                                                               }
+                                                               
+                                                               .content-message-image {width:32px;
+                                                                                       height:32px;
+                                                                                       border-radius:50%;
+                                                                                       object-fit:cover;
+                                                                                       flex-shrink:0;
+                                                                                       margin-right:12px;}
+
+                                                               .content-message-info {margin-right:12px;;
+                                                                                      display:grid;}
+
+                                                               .message-name {display:block;
+                                                                              font-size:14px;
+                                                                              font-weight:500;}
+
+                                                               .message-text {font-size:13px;
+                                                                              color:var(--light-blue9);
+                                                                              text-overflow:ellipsis;
+                                                                              overflow:hidden;
+                                                                              white-space:nowrap;}
+
+                                                               .message-unread {font-size:13px;
+                                                                                font-weight:500;
+                                                                                color:var(--white);
+                                                                                background-color:var(--blue4);
+                                                                                padding:2px 4px;
+                                                                                border-radius:4px;}
+
+                                                               .message-time {font-size:12px;
+                                                                              color:var(--lightblue8);
+                                                                              font-weight:500;}
+                                                        }
                                                  }
                                           }
                                    }
