@@ -3799,6 +3799,9 @@ header .small-menu .small-menu-link {
   position: absolute;
   top: 0;
   left: calc(100% + 8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in-out;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper .conversation-item-box .conversation-item-dropdown .conversation-item-dropdown-toggle {
   width: 24px;
@@ -3806,10 +3809,12 @@ header .small-menu .small-menu-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: transparent;
+  border-radius: 4px;
+  background-color: var(--white);
   outline: transparent;
-  border: none;
+  border: 1px solid var(--lightblue9);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper .conversation-item-box .conversation-item-dropdown .conversation-item-dropdown-toggle:hover {
   background-color: var(--lightblue13);
@@ -3853,6 +3858,10 @@ header .small-menu .small-menu-link {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper:hover .conversation-item-dropdown {
+  opacity: 1;
+  visibility: visible;
 }
 @media (max-width: 1600px) {
   .messages-page .messages-page-container .chat-zone .chat-container {
