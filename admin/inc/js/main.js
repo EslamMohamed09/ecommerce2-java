@@ -754,7 +754,9 @@ if(document.querySelector('.messages-page')){
     });
   });
 
-  
+  document.querySelector('.messages-page .conversation-form-input').addEventListener('input', function(){
+    this.rows = this.value.split('\n').length;
+  });
 }
 
 
