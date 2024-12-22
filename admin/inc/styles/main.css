@@ -3757,6 +3757,9 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main {
   overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  padding: 16px;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-divider {
   text-align: center;
@@ -3914,11 +3917,30 @@ header .small-menu .small-menu-link {
   display: flex;
   align-items: center;
 }
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  color: var(--gray6);
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-btn:hover {
+  background-color: var(--gray4);
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-btn:active {
+  background-color: var(--gray5);
+  cursor: pointer;
+}
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-group {
   width: 100%;
   position: relative;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-group .conversation-form-input {
+  width: 100%;
   background-color: var(--gray4);
   border: 1px solid var(--gray6);
   border-radius: 4px;
@@ -3930,6 +3952,20 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-group .conversation-form-input:focus {
   border-color: var(--gray9);
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-group .record-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 20px;
+  color: var(--gray5);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-form .conversation-form-group .record-btn:hover {
+  color: var(--gray7);
 }
 @media (max-width: 1600px) {
   .messages-page .messages-page-container .chat-zone .chat-container {

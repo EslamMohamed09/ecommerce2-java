@@ -3242,6 +3242,9 @@ header {width:100%;
                                                  }
 
                                                  .conversation-main {overflow-y:auto;
+                                                                     overflow-x:hidden;
+                                                                     height:100%;
+                                                                     padding:16px;
 
                                                         .conversation-wrapper {
 
@@ -3389,12 +3392,27 @@ header {width:100%;
                                                                      display:flex;
                                                                      align-items:center;
 
-                                                        .conversation-form-btn {}
+                                                        .conversation-form-btn {width:40px;
+                                                                                height:40px;
+                                                                                display:flex;
+                                                                                align-items:center;
+                                                                                justify-content:center;
+                                                                                border-radius:4px;
+                                                                                border:none;
+                                                                                font-size:20px;
+                                                                                color:var(--gray6);
+
+                                                                             &:hover {background-color:var(--gray4);}
+
+                                                                             &:active {background-color:var(--gray5);
+                                                                                       cursor:pointer;}
+                                                        }
 
                                                         .conversation-form-group {width:100%;
                                                                                   position:relative;
 
-                                                               .conversation-form-input {background-color:var(--gray4);
+                                                               .conversation-form-input {width:100%;
+                                                                                         background-color:var(--gray4);
                                                                                          border:1px solid var(--gray6);
                                                                                          border-radius:4px;
                                                                                          outline:transparent;
@@ -3403,6 +3421,19 @@ header {width:100%;
                                                                                          font-size:16px;
                                                                                          resize:none;
                                                                                     &:focus {border-color:var(--gray9);}
+                                                               }
+
+                                                               .record-btn {position:absolute;
+                                                                            bottom:8px;
+                                                                            right:16px;
+                                                                            font-size:20px;
+                                                                            color:var(--gray5);
+                                                                            background-color:transparent;
+                                                                            border:none;
+                                                                            outline:none;
+                                                                            cursor:pointer;
+
+                                                                      &:hover {color:var(--gray7);}
                                                                }
                                                         }
                                                  }

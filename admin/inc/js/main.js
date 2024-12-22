@@ -713,7 +713,7 @@ fetch('pages/categories.json').then(response => response.json())
  ######## MESSAGES PAGE ######
  =============================
 */
-if(document.querySelector('.messages-page .chat-sidebar')){
+if(document.querySelector('.messages-page')){
   const chatSidebarMenuLists = document.querySelectorAll('.messages-page .chat-sidebar .chat-sidebar-menu .menu-list');
   let chatSidebarProfileDropmenu = document.querySelector('.messages-page .chat-sidebar .chat-sidebar-profile-dropmenu');
   const chatProfileImg = document.querySelector('#chatprofile-img');
@@ -731,6 +731,7 @@ if(document.querySelector('.messages-page .chat-sidebar')){
     event.stopPropagation();
     chatSidebarProfileDropmenu.classList.toggle('dropactive');
   };
+
   document.body.addEventListener('click', (event) => {
     if (!chatProfileImg.contains(event.target) && !chatSidebarProfileDropmenu.contains(event.target)) {
         chatSidebarProfileDropmenu.classList.remove('dropactive');
@@ -752,6 +753,8 @@ if(document.querySelector('.messages-page .chat-sidebar')){
       }
     });
   });
+
+  
 }
 
 
