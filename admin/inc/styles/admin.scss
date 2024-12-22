@@ -3059,6 +3059,7 @@ header {width:100%;
 
                                                  .content-sidebar-form {position:relative;
                                                                         margin-top:24px;
+
                                                         .search-input {width:100%;
                                                                        padding:0.5rem 1.9rem 0.5rem 0.9rem;
                                                                        font-size:1.1rem;
@@ -3383,6 +3384,28 @@ header {width:100%;
                                                         }
                                                  }
 
+                                                 .conversation-form {padding:8px 16px;
+                                                                     background-color:var(--white);
+                                                                     display:flex;
+                                                                     align-items:center;
+
+                                                        .conversation-form-btn {}
+
+                                                        .conversation-form-group {width:100%;
+                                                                                  position:relative;
+
+                                                               .conversation-form-input {background-color:var(--gray4);
+                                                                                         border:1px solid var(--gray6);
+                                                                                         border-radius:4px;
+                                                                                         outline:transparent;
+                                                                                         padding:12px 16px;
+                                                                                         font:inherit;
+                                                                                         font-size:16px;
+                                                                                         resize:none;
+                                                                                    &:focus {border-color:var(--gray9);}
+                                                               }
+                                                        }
+                                                 }
 
                                           }
                                    }
