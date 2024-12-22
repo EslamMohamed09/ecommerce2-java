@@ -2922,18 +2922,14 @@ header {width:100%;
 
                      .chat-container {width:100%;
                                       height:100%;
+                                      gap:0;
                                       box-shadow:0 8px 24px -4px rgba(0,0,0,0.1);
                                       background-color:var(--white);
                                       position:relative;
 
-                                   .chat-sidebar {flex:1 1 10rem;
+                                   .chat-sidebar {flex:1 1 2rem;
                                                   height:100%;
                                                   background-color:var(--lightblue13);
-                                                  display:flex;
-                                                  flex-direction:column;
-                                                  position:absolute;
-                                                  left:0;
-                                                  top:0;
                                                   z-index:10;
 
                                           .chat-sidebar-logo {font-size:2rem;
@@ -3045,15 +3041,13 @@ header {width:100%;
                                           }
                                    }
 
-                                   .chat-content {flex:1 1 30rem;
+                                   .chat-content {flex:1 1 80rem;
                                                   height:100%;
                                                   padding-left:3rem;
                                                   position:relative;
 
                                           .content-sidebar {flex:1 1 10rem;
                                                             background-color:var(--white);
-                                                            display:flex;
-                                                            flex-direction:column;
                                                             height:100%;
                                                             position:absolute;
                                                             top:0;
@@ -3106,7 +3100,7 @@ header {width:100%;
 
                                                                .content-message-title {margin-left:16px;
                                                                                        margin-right:16px;
-                                                                                       color:var(--lightblue9);
+                                                                                       color:var(--gray9);
                                                                                        font-size:13px;
                                                                                        font-weight:500;
                                                                                        text-transform:uppercase;
@@ -3120,7 +3114,7 @@ header {width:100%;
                                                                                                left:0;
                                                                                                width:100%;
                                                                                                height:0;
-                                                                                               border-bottom:1px solid var(--lightblue9);
+                                                                                               border-bottom:1px solid var(--gray3);
                                                                                                z-index:0;}
 
                                                                                     > * {position:relative;
@@ -3163,7 +3157,7 @@ header {width:100%;
 
                                           .conversation {flex:1 1 30rem;
                                                          height:100%;
-                                                         background-color:var(--lightblue9);
+                                                         background-color:var(--lightblue2);
                                                          padding-left:256px;
 
                                                  .conversation-top {padding:16px;
@@ -3386,7 +3380,6 @@ header {width:100%;
 
                                                                .conversation-item.me .conversation-item-text {background-color:var(--lightblue13);
                                                                                                               box-shadow:0 2px 12px -2px var(--lightblue12);}
-
                                                         }
                                                  }
 
