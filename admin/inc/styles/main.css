@@ -3767,6 +3767,7 @@ header .small-menu .small-menu-link {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
+  margin-bottom: 16px;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item.me {
   flex-direction: row;
@@ -3800,9 +3801,9 @@ header .small-menu .small-menu-link {
   border-radius: 6px;
   line-height: 1.5;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper .conversation-item-box .conversation-item-time {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper .conversation-item-box .conversation-item-text .conversation-item-time {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
   display: block;
   text-align: right;
   margin-top: 4px;
@@ -3875,6 +3876,9 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item .conversation-item-content .conversation-item-wrapper:hover .conversation-item-dropdown {
   opacity: 1;
   visibility: visible;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item.me .conversation-item-side {
+  margin-right: 8px;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-content .conversation .conversation-main .conversation-wrapper .conversation-item.me .conversation-item-box {
   margin-left: unset;
