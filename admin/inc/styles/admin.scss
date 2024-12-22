@@ -2920,14 +2920,13 @@ header {width:100%;
                           align-items:center;
                           box-shadow:inset 0 160px 0 0 rgba(0,0,0,0.1);
 
-                     .chat-container {max-width:1360px;
-                                      width:100%;
+                     .chat-container {width:100%;
                                       height:100%;
                                       box-shadow:0 8px 24px -4px rgba(0,0,0,0.1);
                                       background-color:var(--white);
                                       position:relative;
 
-                                   .chat-sidebar {width:4.5rem;
+                                   .chat-sidebar {flex:1 1 10rem;
                                                   height:100%;
                                                   background-color:var(--lightblue13);
                                                   display:flex;
@@ -3046,11 +3045,12 @@ header {width:100%;
                                           }
                                    }
 
-                                   .chat-content {padding-left:3rem;
+                                   .chat-content {flex:1 1 30rem;
                                                   height:100%;
+                                                  padding-left:3rem;
                                                   position:relative;
 
-                                          .content-sidebar {width:256px;
+                                          .content-sidebar {flex:1 1 10rem;
                                                             background-color:var(--white);
                                                             display:flex;
                                                             flex-direction:column;
@@ -3058,7 +3058,6 @@ header {width:100%;
                                                             position:absolute;
                                                             top:0;
                                                             left:64px;
-
 
                                                  .title {font-size:1.2rem;
                                                          font-weight:600;
@@ -3128,8 +3127,8 @@ header {width:100%;
                                                                                          z-index:1;}
                                                                }
                                                                
-                                                               .content-message-image {width:32px;
-                                                                                       height:32px;
+                                                               .content-message-image {width:22px;
+                                                                                       height:22px;
                                                                                        border-radius:50%;
                                                                                        object-fit:cover;
                                                                                        flex-shrink:0;
@@ -3162,8 +3161,9 @@ header {width:100%;
                                                  }
                                           }
 
-                                          .conversation {background-color:var(--lightblue9);
+                                          .conversation {flex:1 1 30rem;
                                                          height:100%;
+                                                         background-color:var(--lightblue9);
                                                          padding-left:256px;
 
                                                  .conversation-top {padding:16px;
@@ -3269,7 +3269,6 @@ header {width:100%;
 
                                                                                     span {display:inline-block;
                                                                                           padding:0 4px;}
-                                                                                    
                                                                }
 
                                                                .conversation-item {display:flex;
@@ -3390,12 +3389,13 @@ header {width:100%;
 
                                                         }
                                                  }
+
+
                                           }
                                    }
 
                             @media (max-width:1600px) {
-                                 max-width:unset;
-                                 height:100vh;
+                                    height:100vh;
                             }
                      }
               }
