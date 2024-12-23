@@ -3814,37 +3814,33 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown {
   position: absolute;
-  top: 0;
-  left: calc(100% + 8px);
+  top: 0.3rem;
+  right: 0.3rem;
   opacity: 0;
   visibility: hidden;
   transition: all 0.15s ease-in-out;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  background-color: var(--white);
+  color: var(--gray9);
+  background-color: transparent;
   outline: transparent;
-  border: 1px solid var(--lightblue9);
+  border: none;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle:hover {
-  background-color: var(--lightblue13);
-  color: var(--white);
-  box-shadow: 0 2px 12px -2px var(--lightblue14);
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle svg {
+  font-size: 1.1rem;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle:active {
-  background-color: var(--lightblue14);
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle:focus, .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle:active {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-list {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   background-color: var(--white);
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -3873,6 +3869,11 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-list a svg {
   font-size: 16px;
   margin-right: 8px;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item:hover .conversation-item-dropdown {
+  right: 1rem;
+  opacity: 1;
+  visibility: visible;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown.active .conversation-item-dropdown-list {
   opacity: 1;
