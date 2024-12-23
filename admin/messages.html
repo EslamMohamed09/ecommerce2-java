@@ -25,7 +25,7 @@
     <div class="chat-zone">
       <div class="chat-container d-flex-r-st-st">
 
-        <aside class="chat-sidebar d-flex-c-bt-c">
+        <aside class="buttons-sidebar d-flex-c-bt-c">
           <a href="#" class="chat-sidebar-logo"><i class="fas fa-comment"></i></a>
           <ul class="chat-sidebar-menu d-flex-c-st-c">
             <li class="menu-list active"><a href="#" data-title="chats"><i class="fab fa-rocketchat"></i></a></li>
@@ -42,17 +42,17 @@
           </ul>
         </aside> <!-- End aside -->
 
-        <div class="chat-content d-flex-r-st-st">
+        <div class="chat-block d-flex-r-st-st">
 
-          <div class="content-sidebar d-flex-c-st-st">
+          <div class="persons-sidebar d-flex-c-st-st">
             <h3 class="title">chats</h3>
             <form action="" class="search-person-form">
               <input type="search" class="search-input" placeholder="search...">
               <button type="submit" class="content-sidebar-submit"><i class="fas fa-search"></i></button>
             </form>
-            <div class="content-messages">
-              <ul class="content-messages-menu">
-                <li class="content-message-title"><span>recently</span><span class="line"></span></li>
+            <div class="contacted-persons">
+              <ul class="contacted-persons-menu">
+                <div class="content-message-title"><span>recently</span><span class="line"></span></div>
                 <li>
                   <a href="#">
                     <img src="inc/images/users/eslam1.jpg" class="person-image" alt="">
@@ -79,8 +79,8 @@
                   </a>
                 </li>
               </ul>
-              <ul class="content-messages-menu">
-                <li class="content-message-title"><span>recently</span><span class="line"></span></li>
+              <ul class="contacted-persons-menu">
+                <div class="content-message-title"><span>recently</span><span class="line"></span></div>
                 <li>
                   <a href="#">
                     <img src="inc/images/users/eslam3.jpg" class="person-image" alt="">
@@ -167,17 +167,17 @@
                   </a>
                 </li>
               </ul>
-            </div> <!-- content-messages -->
-          </div> <!-- End-content-sidebar -->
+            </div> <!-- contacted-persons -->
+          </div> <!-- End persons-sidebar -->
 
           <div class="conversation">
-            <div class="conversation-top">
+            <div class="top-conversation">
               <button type="button" class="conversation-back"><i class="fas fa-arrow-left"></i></button>
-              <div class="conversation-user">
-                <img src="inc/images/users/eslam3.jpg" class="conversation-user-image" alt="">
-                <div>
-                  <h6 class="conversation-user-name">eslam</h6>
-                  <span class="conversation-user-status online">online</span>
+              <div class="conversation-person d-flex-r-st-st">
+                <img src="inc/images/users/eslam3.jpg" class="conversation-person-image" alt="">
+                <div class="info">
+                  <h6 class="conversation-person-name">eslam</h6>
+                  <span class="conversation-person-status online">online</span>
                 </div>
               </div>
               <div class="conversation-buttons">
@@ -186,13 +186,11 @@
                 <button type="button"><i class="fas fa-info-circle"></i></button>
               </div>
             </div>
-            <div class="conversation-main">
+            <div class="main-conversation">
               <ul class="conversation-wrapper">
+                
                 <div class="conversation-divider"><span>today</span></div>
                 <li class="conversation-item me">
-                  <div class="conversation-item-side">
-                    <img src="inc/images/users/eslam3.jpg" class="conversation-item-image" alt="">
-                  </div>
                   <div class="conversation-item-content">
                     <div class="conversation-item-wrapper">
                       <div class="conversation-item-box">
@@ -228,9 +226,6 @@
                 </li>
 
                 <li class="conversation-item">
-                  <div class="conversation-item-side">
-                    <img src="inc/images/users/eslam4.jpg" class="conversation-item-image" alt="">
-                  </div>
                   <div class="conversation-item-content">
                     <div class="conversation-item-wrapper">
                       <div class="conversation-item-box">
@@ -265,10 +260,8 @@
                   </div>
                 </li>
 
+                <div class="conversation-divider"><span>15/10/2024</span></div>
                 <li class="conversation-item me">
-                  <div class="conversation-item-side">
-                    <img src="inc/images/users/eslam3.jpg" class="conversation-item-image" alt="">
-                  </div>
                   <div class="conversation-item-content">
                     <div class="conversation-item-wrapper">
                       <div class="conversation-item-box">

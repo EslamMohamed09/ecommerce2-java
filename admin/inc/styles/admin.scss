@@ -646,7 +646,6 @@ button:focus {box-shadow:var(--box-shadow2);}
            padding:0.6rem 1rem;
            border-radius:0.2rem;}
 
-/******************* # BUTTONS ********************/
 .add-btn {font-size:0.9rem;
           font-weight:bold;
           text-transform:uppercase;
@@ -2932,10 +2931,10 @@ header {width:100%;
                                       background-color:green;
                                       position:relative;
 
-                                   .chat-sidebar {flex:1 1 2rem;
-                                                  height:100%;
-                                                  background-color:var(--lightblue4);
-                                                  z-index:10;
+                                   .buttons-sidebar {flex:1 1 2rem;
+                                                     height:100%;
+                                                     background-color:var(--lightblue4);
+                                                     z-index:10;
 
                                           .chat-sidebar-logo {font-size:2rem;
                                                               color:var(--blue10);
@@ -3047,11 +3046,11 @@ header {width:100%;
                                           }
                                    }
 
-                                   .chat-content {flex:1 1 80rem;
-                                                  height:100%;
-                                                  position:relative;
+                                   .chat-block {flex:1 1 80rem;
+                                                height:100%;
+                                                position:relative;
 
-                                          .content-sidebar {flex:1 1 5rem;
+                                          .persons-sidebar {flex:1 1 5rem;
                                                             background-color:var(--white);
                                                             height:100%;
 
@@ -3067,7 +3066,7 @@ header {width:100%;
                                                                        padding:0.5rem 1.9rem 0.5rem 0.9rem;
                                                                        font-size:1.1rem;
                                                                        color:var(--gray11);
-                                                                       background-color:var(--lightblue3);
+                                                                       background-color:var(--lightblue2);
                                                                        border:1px solid var(--lightblue6);
                                                                        outline:0;
                                                                        border-radius:0.3rem;
@@ -3088,12 +3087,12 @@ header {width:100%;
                                                         }
                                                  }
 
-                                                 .content-messages {overflow-y:auto;
-                                                                    max-height:100%;
-                                                                    margin-top:1rem;
+                                                 .contacted-persons {overflow-y:auto;
+                                                                     max-height:100%;
+                                                                     margin-top:1rem;
 
-                                                        .content-messages-menu {padding:0;
-                                                                                margin:0 0 0.9rem;
+                                                        .contacted-persons-menu {padding:0;
+                                                                                 margin:0 0 0.9rem;
 
                                                                > * > a {display:flex;
                                                                         align-items:center;
@@ -3157,7 +3156,8 @@ header {width:100%;
 
                                                         &::-webkit-scrollbar {width:3px;}
 
-                                                        &::-webkit-scrollbar-thumb {background:var(--lightblue16)}
+                                                        &::-webkit-scrollbar-thumb {cursor:grab;
+                                                                                    background:var(--lightblue16)}
                                                  }
                                           }
 
@@ -3165,7 +3165,7 @@ header {width:100%;
                                                          height:100%;
                                                          background-color:var(--olive);
 
-                                                 .conversation-top {padding:16px;
+                                                 .top-conversation {padding:0.8rem 1rem 0.8rem 0.5rem;
                                                                     background-color:white;
                                                                     display:flex;
                                                                     align-items:center;
@@ -3189,31 +3189,32 @@ header {width:100%;
                                                                                &.active {background-color:var(--lightblue11);}
                                                                }
 
-                                                               .conversation-user {display:flex;
-                                                                                   align-items:center;
+                                                               .conversation-person {gap:0.6rem;
 
-                                                                             .conversation-user-image {width:40px;
-                                                                                                       height:40px;
-                                                                                                       border-radius:50%;
-                                                                                                       object-fit:fill;
-                                                                                                       margin-right:8px;}
-                                                                                    
-                                                                             .conversation-user-name {font-weight:500;
-                                                                                                      font-size:1.3rem;}
+                                                                             .conversation-person-image {width:40px;
+                                                                                                         height:40px;
+                                                                                                         border-radius:50%;
+                                                                                                         object-fit:fill;
+                                                                                                         margin:0;}
+                                                                             .info {height:2.5rem;
+                                                                                    .conversation-person-name {font-weight:500;
+                                                                                                               font-size:1.2rem;}
 
-                                                                             .conversation-user-status {color:var(--gray7);
-                                                                                                        font-size:13px;
+                                                                                    .conversation-person-status {color:var(--gray7);
+                                                                                                                 font-size:1rem;
+                                                                                                                 text-transform:lowercase;
 
-                                                                                                  &::before {content:'';
-                                                                                                             width:10px;
-                                                                                                             height:10px;
-                                                                                                             background-color:var(--green12);
-                                                                                                             border-radius:50%;
-                                                                                                             vertical-align:middle;
-                                                                                                             display:inline-block;
-                                                                                                             margin-right:4px;}
+                                                                                                         &::before {content:'';
+                                                                                                                    width:10px;
+                                                                                                                    height:10px;
+                                                                                                                    background-color:var(--green12);
+                                                                                                                    border-radius:50%;
+                                                                                                                    vertical-align:middle;
+                                                                                                                    display:inline-block;
+                                                                                                                    margin-right:4px;}
 
-                                                                                                  &.online &::before {background-color:var(--green12);}
+                                                                                                         &.online &::before {background-color:var(--green12);}
+                                                                                    }
                                                                              }
                                                                }
 
@@ -3226,13 +3227,12 @@ header {width:100%;
                                                                                     display:flex;
                                                                                     justify-content:center;
                                                                                     align-items:center;
-                                                                                    border-radius:4px;
-                                                                                    font-size:20px;
+                                                                                    font-size:1.3rem;
                                                                                     background-color:transparent;
                                                                                     border:none;
                                                                                     outline:transparent;
                                                                                     cursor:pointer;
-                                                                                    color:var(--gray11);
+                                                                                    color:var(--gray9);
                                                                                     margin-left:4px;}
 
                                                                              & > :hover {background-color:var(--lightblue14);
@@ -3242,9 +3242,7 @@ header {width:100%;
                                                                }
                                                  }
 
-                                                 
-
-                                                 .conversation-main {overflow-y:auto;
+                                                 .main-conversation {overflow-y:auto;
                                                                      overflow-x:hidden;
                                                                      height:100%;
                                                                      padding:16px;
@@ -3252,40 +3250,24 @@ header {width:100%;
                                                         .conversation-wrapper {
 
                                                                .conversation-divider {text-align:center;
-                                                                                      font-size:14px;
-                                                                                      font-weight:500;
-                                                                                      color:var(--lightblue10);
-                                                                                      margin-bottom:16px;
-                                                                                      position:relative;
+                                                                                      margin:1.2rem auto;
+                                                                                      width:fit-content;
+                                                                                      padding:0.1rem 0.8rem;
+                                                                                      border-radius:1rem;
+                                                                                      color:var(--gray6);
+                                                                                      background-color:var(--white);
+                                                                                      box-shadow:var(--box-shadow6);
 
-                                                                                    &::before {content:'';
-                                                                                               position:absolute;
-                                                                                               top:50%;
-                                                                                               transform:translateY(-50%);
-                                                                                               left:0;
-                                                                                               width:100%;
-                                                                                               height:0;
-                                                                                               border-bottom:1px solid var(--lightblue10);
-                                                                                    }
-
-                                                                                    span {display:inline-block;
-                                                                                          padding:0 4px;}
+                                                                                    span {font-size:14px;
+                                                                                          font-weight:500;}
                                                                }
 
                                                                .conversation-item {display:flex;
                                                                                    flex-direction:row-reverse;
                                                                                    align-items:flex-end;
-                                                                                   margin-bottom:16px;
+                                                                                   margin-bottom:1.1rem;
 
                                                                       &.me {flex-direction:row;}
-
-                                                                      .conversation-item-side {margin-right:8px;
-                                                                             .conversation-item-image {width:24px;
-                                                                                                       height:24px;
-                                                                                                       border-radius:50%;
-                                                                                                       object-fit:fill;
-                                                                                                       display:block;}
-                                                                      }
 
                                                                       .conversation-item-content {width:100%;
 
@@ -3293,20 +3275,20 @@ header {width:100%;
 
                                                                                     &:not(:last-child) {margin-bottom:8px;}
 
-                                                                                    .conversation-item-box {max-width:540px;
+                                                                                    .conversation-item-box {max-width:70%;
                                                                                                             position:relative;
                                                                                                             margin-left:auto;
 
-                                                                                           .conversation-item-text {padding:12px 16px 8px;
-                                                                                                                    background-color:var(--white);
-                                                                                                                    box-shadow:0 2px 16px -2px rgba(0,0,0,0.1);
+                                                                                           .conversation-item-text {padding:1.1rem 1.4rem 0.9rem;
                                                                                                                     color:var(--lightblue12);
                                                                                                                     font-size:14px;
                                                                                                                     border-radius:6px;
                                                                                                                     line-height:1.5;
+                                                                                                                    background-color:var(--white);
+                                                                                                                    box-shadow:0 2px 16px -2px rgba(0,0,0,0.1);
 
                                                                                                   .conversation-item-time {font-size:10px;
-                                                                                                                           color:rgba(255,255,255,0.7);
+                                                                                                                           color:var(--gray5);
                                                                                                                            display:block;
                                                                                                                            text-align:right;
                                                                                                                            margin-top:4px;
@@ -3444,6 +3426,11 @@ header {width:100%;
                                                                }
                                                         }
                                                  }
+
+                                                 ::-webkit-scrollbar {width:3px;}
+
+                                                 ::-webkit-scrollbar-thumb {cursor:grab;
+                                                                            background:var(--lightblue16);}
                                           }
                                    }
 
