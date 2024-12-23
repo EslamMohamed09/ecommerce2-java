@@ -614,13 +614,13 @@ if(document.getElementById("visaInput")){
   });
 }
 
-if(document.querySelector('#customers-page')){
+if(document.querySelector('.customers-page')){
 fetch('pages/customers.json').then(response => response.json())
 .then(data => {
   const customers = data.customers;
-  const manageCustomersTable = document.querySelector('#customers-page #manage-customers-table');
+  const manageCustomersTable = document.querySelector('.customers-page #manage-customers-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
-  const customersCountElement = document.querySelector('#customers-page .table-details .counting .no');
+  const customersCountElement = document.querySelector('.customers-page .table-details .counting .no');
         customersCountElement.textContent = customers.length;
 
   function renderCustomersTable(customers){
@@ -662,12 +662,12 @@ fetch('pages/customers.json').then(response => response.json())
  ######## CATEGORIES PAGE ######
  ===============================
 */
-if(document.querySelector('#category-page')){
+if(document.querySelector('.category-page')){
 fetch('pages/categories.json').then(response => response.json())
 .then(data => {
   const categories = data.categories
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
-  const manageCategoriesTable = document.querySelector('#category-page #manage-category-table');
+  const manageCategoriesTable = document.querySelector('.category-page #manage-category-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
 
   function getCategoryDetails(category) {
@@ -758,8 +758,6 @@ if(document.querySelector('.messages-page')){
     this.rows = this.value.split('\n').length;
   });
 }
-
-
 
 
 /*

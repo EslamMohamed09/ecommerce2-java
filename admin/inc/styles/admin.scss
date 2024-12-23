@@ -2929,11 +2929,11 @@ header {width:100%;
 
                                    .chat-sidebar {flex:1 1 2rem;
                                                   height:100%;
-                                                  background-color:var(--lightblue13);
+                                                  background-color:var(--lightblue4);
                                                   z-index:10;
 
                                           .chat-sidebar-logo {font-size:2rem;
-                                                              color:var(--white);
+                                                              color:var(--blue1);
                                                               display:block;
                                                               text-align:center;
                                                               padding:0.5rem;
@@ -2949,7 +2949,7 @@ header {width:100%;
                                                         >  a {display:block;
                                                               text-align:center;
                                                               font-size:1.5rem;
-                                                              color:var(--white);
+                                                              color:var(--lightblue14);
                                                               padding:0.4rem 0;
                                                               text-decoration:none;
                                                               transition:color 0.15s ease-in-out;
@@ -3043,7 +3043,7 @@ header {width:100%;
 
                                    .chat-content {flex:1 1 80rem;
                                                   height:100%;
-                                                  position:relative;background-color:red;
+                                                  position:relative;
 
                                           .content-sidebar {flex:1 1 5rem;
                                                             background-color:var(--white);
@@ -3204,7 +3204,7 @@ header {width:100%;
                                                                                     border:none;
                                                                                     outline:transparent;
                                                                                     cursor:pointer;
-                                                                                    color:var(--lightblue11);
+                                                                                    color:var(--gray11);
                                                                                     margin-left:4px;}
 
                                                                              & > :hover {background-color:var(--lightblue14);
