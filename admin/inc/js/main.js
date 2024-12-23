@@ -536,6 +536,7 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
     if (currentPage > 1) {
        const prevButton = createPaginationLink('Previous', currentPage - 1);
+             prevButton.classList.add('previous');
        paginationContainer.appendChild(prevButton);
     }
 
@@ -565,6 +566,7 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
     if (currentPage < totalPages) {
        const nextButton = createPaginationLink('Next', currentPage + 1);
+             nextButton.classList.add('next');
        paginationContainer.appendChild(nextButton);
     }
   }
@@ -575,7 +577,7 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
     link.className = 'pagination-link';
     link.textContent = text;
     if (page === currentPage) {
-      link.classList.add('active');
+        link.classList.add('active');
     }
     link.addEventListener('click', (e) => {
       e.preventDefault();
