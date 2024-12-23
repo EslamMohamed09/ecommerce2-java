@@ -198,6 +198,11 @@ body {overflow-x:hidden;
        --lightblue13:#a7baf0;
        --lightblue14:#97aff1;
        --lightblue15:#88a4f1;
+       --lightblue16:#7d9cf1;
+       --lightblue17:#7193f1;
+       --lightblue18:#658bf3;
+       --lightblue19:#5a82f1;
+       --lightblue20:#4774f0;
 
        --blue:#60c8fc;
        --blue1:#00b7ff;
@@ -2914,7 +2919,7 @@ header {width:100%;
 */
 .messages-page {
        .messages-page-container {
-              .chat-zone {min-height:90vh;
+              .chat-zone {min-height:100vh;
                           display:flex;
                           justify-content:center;
                           align-items:center;
@@ -2933,7 +2938,7 @@ header {width:100%;
                                                   z-index:10;
 
                                           .chat-sidebar-logo {font-size:2rem;
-                                                              color:var(--blue1);
+                                                              color:var(--blue10);
                                                               display:block;
                                                               text-align:center;
                                                               padding:0.5rem;
@@ -2949,13 +2954,13 @@ header {width:100%;
                                                         >  a {display:block;
                                                               text-align:center;
                                                               font-size:1.5rem;
-                                                              color:var(--lightblue14);
+                                                              color:var(--gray8);
                                                               padding:0.4rem 0;
                                                               text-decoration:none;
                                                               transition:color 0.15s ease-in-out;
                                                               position:relative;
 
-                                                               &:hover {color:var(--lightblue1);}
+                                                               &:hover {color:var(--lightblue20);}
 
                                                                &::before {content:attr(data-title);
                                                                           position:absolute;
@@ -2978,8 +2983,9 @@ header {width:100%;
                                                         }
                                                  }
                                                  
-                                                 > .active > a {background-color:var(--lightblue6);
-                                                                border-left:0.35rem solid var(--lightblue15);}
+                                                 > .active > a {background-color:var(--lightblue9);
+                                                                color:var(--lightblue20);
+                                                                border-left:0.35rem solid var(--lightblue19);}
 
                                                  .chat-sidebar-profile {margin-top:auto;
                                                                         position:relative;
@@ -3048,15 +3054,14 @@ header {width:100%;
                                           .content-sidebar {flex:1 1 5rem;
                                                             background-color:var(--white);
                                                             height:100%;
-                                                            
 
-                                                 .title {font-size:1.2rem;
-                                                         font-weight:600;
+                                                 .title {font-size:1.3rem;
+                                                         font-weight:800;
                                                          padding:16px;}
 
-                                                 .content-sidebar-form {width:90%;
-                                                                        position:relative;
-                                                                        margin:0.5rem auto;
+                                                 .search-person-form {width:90%;
+                                                                      position:relative;
+                                                                      margin:0.5rem auto;
 
                                                         .search-input {width:100%;
                                                                        padding:0.5rem 1.9rem 0.5rem 0.9rem;
@@ -3085,9 +3090,10 @@ header {width:100%;
 
                                                  .content-messages {overflow-y:auto;
                                                                     max-height:100%;
-                                                                    margin-top:16px;
+                                                                    margin-top:1rem;
 
-                                                        .content-messages-list {padding:16px 0;
+                                                        .content-messages-menu {padding:0;
+                                                                                margin:0 0 0.9rem;
 
                                                                > * > a {display:flex;
                                                                         align-items:center;
@@ -3117,12 +3123,12 @@ header {width:100%;
                                                                                          z-index:1;}
                                                                }
                                                                
-                                                               .content-message-image {width:2rem;
-                                                                                       height:2rem;
-                                                                                       border-radius:50%;
-                                                                                       object-fit:fill;
-                                                                                       flex-shrink:0;
-                                                                                       margin-right:12px;}
+                                                               .person-image {width:2.4rem;
+                                                                              height:2.4rem;
+                                                                              border-radius:50%;
+                                                                              object-fit:fill;
+                                                                              flex-shrink:0;
+                                                                              margin-right:12px;}
 
                                                                .content-message-info {margin-right:12px;;
                                                                                       display:grid;}
@@ -3132,34 +3138,56 @@ header {width:100%;
                                                                              font-weight:500;
                                                                              color:var(--gray10);}
 
-                                                               .message-text {font-size:13px;
-                                                                              color:var(--gray4);
-                                                                              text-overflow:ellipsis;
-                                                                              overflow:hidden;
-                                                                              white-space:nowrap;}
+                                                               .person-brief-message {font-size:13px;
+                                                                                      color:var(--gray5);
+                                                                                      text-overflow:ellipsis;
+                                                                                      overflow:hidden;
+                                                                                      white-space:nowrap;}
 
-                                                               .message-unread {font-size:13px;
-                                                                                font-weight:500;
-                                                                                color:var(--white);
-                                                                                background-color:var(--blue4);
-                                                                                padding:2px 4px;
-                                                                                border-radius:4px;}
+                                                               .unread-message-count {font-size:1rem;
+                                                                                      font-weight:500;
+                                                                                      color:var(--white);
+                                                                                      background-color:var(--blue4);
+                                                                                      padding:2px 4px;
+                                                                                      border-radius:4px;}
 
-                                                               .message-time {font-size:12px;
-                                                                              color:var(--lightblue8);
-                                                                              font-weight:500;}
+                                                               .message-time {font-size:0.9rem;
+                                                                              color:var(--gray5);}
                                                         }
+
+                                                        &::-webkit-scrollbar {width:3px;}
+
+                                                        &::-webkit-scrollbar-thumb {background:var(--lightblue16)}
                                                  }
                                           }
 
                                           .conversation {flex:1 1 50rem;
                                                          height:100%;
-                                                         background-color:var(--lightblue2);
+                                                         background-color:var(--olive);
 
                                                  .conversation-top {padding:16px;
-                                                                    background-color:rgba(255,255,255,0.5);
+                                                                    background-color:white;
                                                                     display:flex;
                                                                     align-items:center;
+
+                                                               .conversation-back {width:2.5rem;
+                                                                                   height:2.5rem;
+                                                                                   background-color:transparent;
+                                                                                   border:none;
+                                                                                   outline:none;
+                                                                                   font-size:1.3rem;
+                                                                                   display:flex;
+                                                                                   align-items:center;
+                                                                                   justify-content:center;
+                                                                                   cursor:pointer;
+                                                                                   color:var(--gray7);
+                                                                                   margin-right:1rem;
+
+                                                                      &:hover {background-color:var(--lightblue10);
+                                                                               border-radius:50%;}
+       
+                                                                               &.active {background-color:var(--lightblue11);}
+                                                               }
 
                                                                .conversation-user {display:flex;
                                                                                    align-items:center;
@@ -3167,19 +3195,19 @@ header {width:100%;
                                                                              .conversation-user-image {width:40px;
                                                                                                        height:40px;
                                                                                                        border-radius:50%;
-                                                                                                       object-fit:cover;
+                                                                                                       object-fit:fill;
                                                                                                        margin-right:8px;}
                                                                                     
                                                                              .conversation-user-name {font-weight:500;
-                                                                                                      font-size:17px;}
+                                                                                                      font-size:1.3rem;}
 
-                                                                             .conversation-user-status {color:var(--lightblue10);
+                                                                             .conversation-user-status {color:var(--gray7);
                                                                                                         font-size:13px;
 
                                                                                                   &::before {content:'';
                                                                                                              width:10px;
                                                                                                              height:10px;
-                                                                                                             background-color:var(--green5);
+                                                                                                             background-color:var(--green12);
                                                                                                              border-radius:50%;
                                                                                                              vertical-align:middle;
                                                                                                              display:inline-block;
@@ -3211,28 +3239,10 @@ header {width:100%;
                                                                                          color:var(--blue5);}
 
                                                                              & > :active {background-color:var(--lightblue13);}
-                                                               }         
+                                                               }
                                                  }
 
-                                                 .conversation-back {background-color:transparent;
-                                                                     border:none;
-                                                                     outline:none;
-                                                                     width:32px;
-                                                                     height:32px;
-                                                                     display:flex;
-                                                                     align-items:center;
-                                                                     justify-content:center;
-                                                                     font-size:20px;
-                                                                     cursor:pointer;
-                                                                     color:var(--lightblue13);
-                                                                     margin-right:12px;
-
-                                                               &:hover {background-color:var(--lightblue10);
-                                                                        color:var(--lightblue12);
-                                                                        border-radius:50%;}
-
-                                                                        &.active {background-color:var(--lightblue11);}
-                                                 }
+                                                 
 
                                                  .conversation-main {overflow-y:auto;
                                                                      overflow-x:hidden;
