@@ -458,7 +458,7 @@ body {overflow-x:hidden;
                    justify-content:flex-end;
                    align-items:flex-end}
 
-::-webkit-scrollbar {width:8px;}
+::-webkit-scrollbar {width:6px;}
 
 ::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--blue11) 0%, var(--blue) 100%);}
 
@@ -3242,137 +3242,122 @@ header {width:100%;
                                                                }
                                                  }
 
-                                                 .main-conversation {overflow-y:auto;
+                                                 .main-conversation {height:80%;
+                                                                     overflow-y:auto;
                                                                      overflow-x:hidden;
-                                                                     height:100%;
-                                                                     padding:16px;
+                                                                     padding:1.2rem;
 
-                                                        .conversation-wrapper {
+                                                        .conversation-wrapper {width:100%;
+                                                                               display:block;
 
                                                                .conversation-divider {text-align:center;
-                                                                                      margin:1.2rem auto;
                                                                                       width:fit-content;
-                                                                                      padding:0.1rem 0.8rem;
+                                                                                      margin:1.2rem auto;
+                                                                                      text-align:center;
+                                                                                      padding:0.1rem 0.6rem;
+                                                                                      font-size:14px;
+                                                                                      font-weight:500;
                                                                                       border-radius:1rem;
                                                                                       color:var(--gray6);
                                                                                       background-color:var(--white);
-                                                                                      box-shadow:var(--box-shadow6);
+                                                                                      box-shadow:var(--box-shadow6);}
 
-                                                                                    span {font-size:14px;
-                                                                                          font-weight:500;}
-                                                               }
+                                                               .conversation-item {max-width:70%;
+                                                                                   position:relative;
 
-                                                               .conversation-item {display:flex;
-                                                                                   flex-direction:row-reverse;
-                                                                                   align-items:flex-end;
-                                                                                   margin-bottom:1.1rem;
+                                                                      &:not(:last-child) {margin-bottom:1rem;}
 
-                                                                      &.me {flex-direction:row;}
+                                                                      &.me {margin-left:auto;}
 
-                                                                      .conversation-item-content {width:100%;
+                                                                      .conversation-item-text {padding:1.1rem 1.4rem 0.9rem;
+                                                                                               font-size:14px;
+                                                                                               border-radius:6px;
+                                                                                               line-height:1.5;
+                                                                                               color:var(--lightblue12);
+                                                                                               background-color:var(--white);
+                                                                                               box-shadow:var(--box-shadow6);
 
-                                                                             .conversation-item-wrapper {
+                                                                             .conversation-item-time {font-size:10px;
+                                                                                                      color:var(--gray5);
+                                                                                                      display:block;
+                                                                                                      text-align:right;
+                                                                                                      margin-top:4px;
+                                                                                                      line-height:1;}
+                                                                      }
 
-                                                                                    &:not(:last-child) {margin-bottom:8px;}
+                                                                      .conversation-item-dropdown {position:absolute;
+                                                                                                   top:0;
+                                                                                                   left:calc(100% + 8px);
+                                                                                                   opacity:0;
+                                                                                                   visibility:hidden;
+                                                                                                   transition:all 0.15s ease-in-out;
 
-                                                                                    .conversation-item-box {max-width:70%;
-                                                                                                            position:relative;
-                                                                                                            margin-left:auto;
+                                                                             .conversation-item-dropdown-toggle {width:24px;
+                                                                                                                 height:24px;
+                                                                                                                 display:flex;
+                                                                                                                 align-items:center;
+                                                                                                                 justify-content:center;
+                                                                                                                 border-radius:4px;
+                                                                                                                 background-color:var(--white);
+                                                                                                                 outline:transparent;
+                                                                                                                 border:1px solid var(--lightblue9);
+                                                                                                                 cursor:pointer;
+                                                                                                                 transition:all 0.15s ease-in-out;
 
-                                                                                           .conversation-item-text {padding:1.1rem 1.4rem 0.9rem;
-                                                                                                                    color:var(--lightblue12);
-                                                                                                                    font-size:14px;
-                                                                                                                    border-radius:6px;
-                                                                                                                    line-height:1.5;
-                                                                                                                    background-color:var(--white);
-                                                                                                                    box-shadow:0 2px 16px -2px rgba(0,0,0,0.1);
+                                                                                                         &:hover {background-color:var(--lightblue13);
+                                                                                                                  color:var(--white);
+                                                                                                                  box-shadow:0 2px 12px -2px var(--lightblue14);}
 
-                                                                                                  .conversation-item-time {font-size:10px;
-                                                                                                                           color:var(--gray5);
-                                                                                                                           display:block;
-                                                                                                                           text-align:right;
-                                                                                                                           margin-top:4px;
-                                                                                                                           line-height:1;}
-                                                                                           }
-
-                                                                                           .conversation-item-dropdown {position:absolute;
-                                                                                                                        top:0;
-                                                                                                                        left:calc(100% + 8px);
-                                                                                                                        opacity:0;
-                                                                                                                        visibility:hidden;
-                                                                                                                        transition:all 0.15s ease-in-out;
-
-                                                                                                  .conversation-item-dropdown-toggle {width:24px;
-                                                                                                                                      height:24px;
-                                                                                                                                      display:flex;
-                                                                                                                                      align-items:center;
-                                                                                                                                      justify-content:center;
-                                                                                                                                      border-radius:4px;
-                                                                                                                                      background-color:var(--white);
-                                                                                                                                      outline:transparent;
-                                                                                                                                      border:1px solid var(--lightblue9);
-                                                                                                                                      cursor:pointer;
-                                                                                                                                      transition:all 0.15s ease-in-out;
-
-                                                                                                                              &:hover {background-color:var(--lightblue13);
-                                                                                                                                       color:var(--white);
-                                                                                                                                       box-shadow:0 2px 12px -2px var(--lightblue14);}
-
-                                                                                                                              &:active {background-color:var(--lightblue14);}
-                                                                                                  }
-
-                                                                                                  .conversation-item-dropdown-list {position:absolute;
-                                                                                                                                    top:100%;
-                                                                                                                                    left:0;
-                                                                                                                                    background-color:var(--white);
-                                                                                                                                    z-index:10;
-                                                                                                                                    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-                                                                                                                                    padding:4px 0;
-                                                                                                                                    opacity:0;
-                                                                                                                                    visibility:hidden;
-                                                                                                                                    transform:scale(0.9);
-                                                                                                                                    transform-origin:left top;
-                                                                                                                                    transition:all 0.15s ease-in-out;
-
-                                                                                                                              a {display:flex;
-                                                                                                                                 align-items:center;
-                                                                                                                                 text-decoration:none;
-                                                                                                                                 color:var(--lightblue10);
-                                                                                                                                 font-size:13px;
-                                                                                                                                 padding:6px 12px;
-
-                                                                                                                                     &:hover {background-color:var(--lightblue10);
-                                                                                                                                              color:var(--lightblue14);}
-
-                                                                                                                                     &:active {background-color:var(--lightblue11);}
-
-                                                                                                                                     svg {font-size:16px;
-                                                                                                                                          margin-right:8px;}
-                                                                                                                              }
-                                                                                                  }
-                                                                                           }
-
-                                                                                           .conversation-item-dropdown.active .conversation-item-dropdown-list {opacity:1;
-                                                                                                                                                                visibility:visible;
-                                                                                                                                                                transform:scale(1);}
-                                                                                    }
+                                                                                                         &:active {background-color:var(--lightblue14);}
                                                                              }
 
-                                                                             .conversation-item-wrapper:hover .conversation-item-dropdown {opacity:1;
-                                                                                                                                           visibility:visible;}
+                                                                             .conversation-item-dropdown-list {position:absolute;
+                                                                                                               top:100%;
+                                                                                                               left:0;
+                                                                                                               background-color:var(--white);
+                                                                                                               z-index:10;
+                                                                                                               box-shadow:0 2px 8px rgba(0,0,0,0.1);
+                                                                                                               padding:4px 0;
+                                                                                                               opacity:0;
+                                                                                                               visibility:hidden;
+                                                                                                               transform:scale(0.9);
+                                                                                                               transform-origin:left top;
+                                                                                                               transition:all 0.15s ease-in-out;
+
+                                                                                                         a {display:flex;
+                                                                                                            align-items:center;
+                                                                                                            text-decoration:none;
+                                                                                                            color:var(--lightblue10);
+                                                                                                            font-size:13px;
+                                                                                                            padding:6px 12px;
+
+                                                                                                                &:hover {background-color:var(--lightblue10);
+                                                                                                                         color:var(--lightblue14);}
+
+                                                                                                                &:active {background-color:var(--lightblue11);}
+
+                                                                                                                svg {font-size:16px;
+                                                                                                                     margin-right:8px;}
+                                                                                                         }
+                                                                             }
                                                                       }
+
+                                                                      .conversation-item-dropdown.active .conversation-item-dropdown-list {opacity:1;
+                                                                                                                                            visibility:visible;
+                                                                                                                                            transform:scale(1);}
+                                                                      
+                                                                      
+
+                                                                      .conversation-item-wrapper:hover .conversation-item-dropdown {opacity:1;
+                                                                                                                                    visibility:visible;}
+                                                                      
                                                                }
 
-                                                               .conversation-item.me .conversation-item-side {margin-right:8px;}
-
-                                                               .conversation-item.me .conversation-item-box {margin-left:unset;}
-
-                                                               .conversation-item.me .conversation-item-text {background-color:var(--lightblue13);
-                                                                                                              box-shadow:0 2px 12px -2px var(--lightblue12);}
+                                                               .conversation-item.me .conversation-item-text {background-color:var(--olive2);}
                                                         }
                                                  }
 
-                                                 .conversation-form {padding:8px 16px;
+                                                 .conversation-form {padding:0.6rem 1.3rem;
                                                                      background-color:var(--white);
                                                                      display:flex;
                                                                      align-items:center;
