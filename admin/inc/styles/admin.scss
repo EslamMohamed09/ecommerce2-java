@@ -3325,14 +3325,9 @@ header {width:100%;
                                                                                                          a {display:flex;
                                                                                                             align-items:center;
                                                                                                             text-decoration:none;
-                                                                                                            color:var(--lightblue10);
+                                                                                                            color:var(--gray8);
                                                                                                             font-size:13px;
                                                                                                             padding:6px 12px;
-
-                                                                                                                &:hover {background-color:var(--lightblue10);
-                                                                                                                         color:var(--lightblue14);}
-
-                                                                                                                &:active {background-color:var(--lightblue11);}
 
                                                                                                                 svg {font-size:16px;
                                                                                                                      margin-right:8px;}
@@ -3382,6 +3377,8 @@ header {width:100%;
 
                                                         .conversation-form-group {width:100%;
                                                                                   position:relative;
+                                                                             //      background-color:var(--gray4);
+                                                                             //      border:1px solid var(--gray6);
 
                                                                .conversation-form-input {width:100%;
                                                                                          background-color:var(--gray4);
