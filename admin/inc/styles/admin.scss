@@ -1531,7 +1531,31 @@ header {width:100%;
                          letter-spacing:0.8px;}
               }
 
-              #asidebutton {cursor:pointer;}
+              .asidecomponent {display:flex;
+                               justify-content:center;
+                               align-items:center;
+                               width:2.1rem;
+                               height:2rem;
+                               margin-left:3rem;
+                               border-radius:0.2rem;
+                               text-align:center;
+                               background-color:var(--blue6);
+                               cursor:pointer;
+
+                     #asidebutton {height:100% !important;
+                                   display:flex;
+                                   justify-content:center;
+                                   align-items:center;
+                                   padding:0 !important;
+                                   margin:0 !important;
+                                   color:var(--white);
+                                   background-color:transparent;}
+                            
+                     svg {font-size:1.1rem;
+                          padding:0;
+                          margin:0;
+                          color:var(--white);}
+              }
        }
 
        @media (max-width:711px){ .left-header #asidebutton {display:none;} }

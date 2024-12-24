@@ -381,8 +381,10 @@ document.addEventListener('asideLoaded', () => {
      /*** BIG & SMALL ASIDE ***/
      const asideMenu = document.getElementById("main-aside");
      const sectionContainer = document.querySelector(".section-container");
+     const asideComponent = document.querySelector("header .asidecomponent");
      const asideButton = document.getElementById("asidebutton");
      const asideButton2 = document.getElementById("asidebutton2");
+
      let isToggledByButton = false;
 
       function updateAsideMenuClass(){
@@ -404,6 +406,11 @@ document.addEventListener('asideLoaded', () => {
       function toggleSmallAside(){
         asideMenu.classList.toggle("smallaside");
         isToggledByButton = asideMenu.classList.contains("smallaside");
+        if (asideMenu.classList.contains("smallaside")) {
+            asideButton.style.transform = "rotate(90deg)";
+        } else {
+          asideButton.style.transform = "rotate(0deg)";
+        }
         if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
         handleSectionMargin();
       }
@@ -412,7 +419,7 @@ document.addEventListener('asideLoaded', () => {
       handleSectionMargin();
 
       window.addEventListener("resize", updateAsideMenuClass);
-      asideButton.addEventListener('click', toggleSmallAside);
+      asideComponent.addEventListener('click', toggleSmallAside);
       asideButton2.addEventListener('click', toggleSmallAside);
       
       asideMenu.addEventListener("transitionend", handleSectionMargin);

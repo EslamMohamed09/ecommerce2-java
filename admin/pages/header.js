@@ -6,8 +6,8 @@ const headerContent = `
       <h2>ecommerce</h2>
     </div>
 
-    <div id="asidebutton">
-      <i class="fas fa-bars"></i>
+    <div class="asidecomponent">
+      <button id="asidebutton"><i class="fas fa-chevron-right"></i></button>
     </div>
 
   </div>
