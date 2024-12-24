@@ -3396,12 +3396,13 @@ header {width:100%;
                                                                      background-color:var(--white);
 
                                                         .conversation-form-btn {width:3rem;
-                                                                                height:100%;
+                                                                                height:3.4rem;
+                                                                                padding:0.6rem 0.3rem;
                                                                                 display:flex;
                                                                                 align-items:center;
                                                                                 justify-content:center;
                                                                                 border:none;
-                                                                                font-size:1.5rem;
+                                                                                font-size:1.3rem;
                                                                                 color:var(--gray6);
 
                                                                              &:hover {background-color:var(--gray4);}
@@ -3411,32 +3412,48 @@ header {width:100%;
                                                         }
 
                                                         .conversation-form-group {width:100%;
-                                                                                  border-radius:0.2rem;
                                                                                   background-color:var(--gray1);
-                                                                                  border:1px solid var(--gray6);
+                                                                                  border:1px solid var(--gray4);
+                                                                                  padding:0.1rem;
+                                                                                  border-radius:0.5rem;
                                                                                   position:relative;
 
                                                                .conversation-form-input {max-height:calc(20px + ((14px * 2) * 6));
                                                                                          outline:transparent;
-                                                                                         padding:0.8rem 1rem;
+                                                                                         padding:0.8rem 0.3rem;
                                                                                          font:inherit;
                                                                                          font-size:1.2rem;
                                                                                          resize:none;
                                                                                          display:block;
                                                                                          line-height:1.5;
                                                                                          background-color:transparent;
+                                                                                         box-shadow:none;
 
                                                                                     &:focus {border-color:var(--gray9);}
                                                                }
 
-                                                               .record-btn {color:var(--gray5);
-                                                                            background-color:transparent;
-                                                                            border:none;
+                                                               .record-btn {border:none;
                                                                             outline:none;
                                                                             cursor:pointer;
+                                                                            color:var(--gray5);
+                                                                            background-color:transparent;
 
                                                                       &:hover {color:var(--gray7);}
                                                                }
+                                                        }
+
+                                                        .conversation-form-submit {display:flex;
+                                                                                   justify-content:center;
+                                                                                   align-items:center;
+                                                                                   height:3.5rem;
+                                                                                   padding:0.6rem 1.3rem;
+                                                                                   margin-left:0.5rem;
+                                                                                   color:var(--gray9);
+                                                                                   background:transparent;
+
+                                                                             svg {font-size:1.7rem;}
+
+                                                                             &:hover {background:transparent;}
                                                         }
                                                  }
 

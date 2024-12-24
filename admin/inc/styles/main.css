@@ -3912,12 +3912,13 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-btn {
   width: 3rem;
-  height: 100%;
+  height: 3.4rem;
+  padding: 0.6rem 0.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--gray6);
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-btn:hover {
@@ -3929,34 +3930,52 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-group {
   width: 100%;
-  border-radius: 0.2rem;
   background-color: var(--gray1);
-  border: 1px solid var(--gray6);
+  border: 1px solid var(--gray4);
+  padding: 0.1rem;
+  border-radius: 0.5rem;
   position: relative;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-group .conversation-form-input {
   max-height: 188px;
   outline: transparent;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.3rem;
   font: inherit;
   font-size: 1.2rem;
   resize: none;
   display: block;
   line-height: 1.5;
   background-color: transparent;
+  box-shadow: none;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-group .conversation-form-input:focus {
   border-color: var(--gray9);
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-group .record-btn {
-  color: var(--gray5);
-  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+  color: var(--gray5);
+  background-color: transparent;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-group .record-btn:hover {
   color: var(--gray7);
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0.6rem 1.3rem;
+  margin-left: 0.5rem;
+  color: var(--gray9);
+  background: transparent;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-submit svg {
+  font-size: 1.7rem;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .conversation-form .conversation-form-submit:hover {
+  background: transparent;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation ::-webkit-scrollbar {
   width: 3px;
