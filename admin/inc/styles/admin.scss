@@ -2966,6 +2966,7 @@ header {width:100%;
                                       position:relative;
 
                                    .buttons-aside {flex:1 1 4rem;
+                                                   max-width:4rem;
                                                    height:50rem;
                                                    background-color:var(--lightblue4);
                                                    z-index:10;
@@ -3163,29 +3164,34 @@ header {width:100%;
                                                                               flex-shrink:0;
                                                                               margin-right:12px;}
 
-                                                               .content-message-info {margin-right:12px;;
-                                                                                      display:grid;}
+                                                               .person-info {margin-right:12px;
+                                                                             display:grid;
 
-                                                               .person-name {display:block;
-                                                                             font-size:1.1rem;
-                                                                             font-weight:500;
-                                                                             color:var(--gray10);}
+                                                                      .person-name {display:block;
+                                                                                    font-size:1.1rem;
+                                                                                    font-weight:500;
+                                                                                    color:var(--gray10);}
 
-                                                               .person-brief-message {font-size:13px;
-                                                                                      color:var(--gray5);
-                                                                                      text-overflow:ellipsis;
-                                                                                      overflow:hidden;
-                                                                                      white-space:nowrap;}
+                                                                      .person-brief-message {font-size:13px;
+                                                                                             color:var(--gray5);
+                                                                                             text-overflow:ellipsis;
+                                                                                             overflow:hidden;
+                                                                                             white-space:nowrap;}
+                                                               }
 
-                                                               .unread-message-count {font-size:1rem;
-                                                                                      font-weight:500;
-                                                                                      color:var(--white);
-                                                                                      background-color:var(--blue4);
-                                                                                      padding:2px 4px;
-                                                                                      border-radius:4px;}
+                                                               .message-time-component {display:block;
+                                                                                        text-align:center;
 
-                                                               .message-time {font-size:0.9rem;
-                                                                              color:var(--gray5);}
+                                                                      .unread-message-count {font-size:0.8rem;
+                                                                                             font-weight:500;
+                                                                                             color:var(--white);
+                                                                                             background-color:var(--blue6);
+                                                                                             padding:1.5px 5px;
+                                                                                             border-radius:3px;}
+
+                                                                      .message-time {font-size:0.9rem;
+                                                                                     color:var(--gray5);}
+                                                               }
                                                         }
 
                                                         &::-webkit-scrollbar {width:3px;}

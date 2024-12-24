@@ -3439,6 +3439,7 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside {
   flex: 1 1 4rem;
+  max-width: 4rem;
   height: 50rem;
   background-color: var(--lightblue4);
   z-index: 10;
@@ -3655,32 +3656,36 @@ header .small-menu .small-menu-link {
   flex-shrink: 0;
   margin-right: 12px;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .content-message-info {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .person-info {
   margin-right: 12px;
   display: grid;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .person-name {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .person-info .person-name {
   display: block;
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--gray10);
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .person-brief-message {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .person-info .person-brief-message {
   font-size: 13px;
   color: var(--gray5);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .unread-message-count {
-  font-size: 1rem;
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .message-time-component {
+  display: block;
+  text-align: center;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .message-time-component .unread-message-count {
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--blue4);
-  padding: 2px 4px;
-  border-radius: 4px;
+  background-color: var(--blue6);
+  padding: 1.5px 5px;
+  border-radius: 3px;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .message-time {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons .contacted-persons-menu .message-time-component .message-time {
   font-size: 0.9rem;
   color: var(--gray5);
 }
