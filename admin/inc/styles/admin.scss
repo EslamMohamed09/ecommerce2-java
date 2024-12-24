@@ -224,6 +224,8 @@ body {overflow-x:hidden;
        --blue17:#052aa1;
        --blue18:#162753;
        --blue19:#2b3a5f;
+       --blue20:#0f1d3f;
+
 
        --navyblue:#8B8E98;
        --navyblue2:#6a7a8d;
@@ -1929,18 +1931,25 @@ header {width:100%;
                     flex-direction:row;
                     flex-wrap:nowrap;
                     width:100%;
-                    height:100%;
+                    min-height:100vh;
                     padding:0;
                     z-index:2;
                     position:relative;
 
-       #main-aside {padding:0;
+       #main-aside {width:17rem;
+                    height:100vh;
+                    padding:0;
                     margin:0;
-                    width:15%;
-                    min-height:100%;
-                    background-image:linear-gradient(125deg, var(--blue3) 0%, var(--blue18) 100%);
+                    margin-top:4rem;
+                    position:fixed;
+                    top:0;
+                    left:0;
+                    bottom:0;
+                    background-image:linear-gradient(125deg, var(--blue3) 0%, var(--blue20) 100%);
                     box-shadow:var(--box-shadow2);
+                    overflow-y:scroll;
                     z-index:1000;
+                    transition:width 0.3s linear;
 
               &.smallaside {width:4rem;}
 
@@ -1948,9 +1957,9 @@ header {width:100%;
 
               .sidebar {
                      .aside-list {
-
                             li {
-                                   &:last-child {margin-top:6rem;}
+                                   &:last-child {margin-top:3rem;
+                                                 margin-bottom:6rem;}
 
                                    .sidebar-link {display:flex;
                                                   flex-direction:row;
@@ -1982,18 +1991,23 @@ header {width:100%;
                             }
                      }
               }
+
+              &::-webkit-scrollbar {width:5px;}
+              &::-webkit-scrollbar-thumb {background:var(--lightblue11);
+                                          cursor:grab;}
        }
 
        @media (min-width:711px) and (max-width:1340px){ aside {width:17rem;} }
 
-       @media (max-width:711px){
-       aside {position:absolute;
-              top:0;
-              left:0;
-              width:13rem;
-              min-height:100%;
-              transition:all 0.3s linear;} }
-
+       // @media (max-width:711px){
+       //        #main-aside {position:absolute;
+       //                     top:0;
+       //                     left:0;
+       //                     // width:13rem;
+       //                     min-height:100%;
+       //                     transition:all 0.3s linear;} 
+       // }
+       
        .section-container {display:block;
                            width:100%;
                            padding:1rem;
@@ -2002,7 +2016,7 @@ header {width:100%;
                            align-items:left;
                            background-color:transparent;
 
-              @media (max-width:711px){ margin-left:4rem; }
+              // @media (max-width:711px){ margin-left:4rem; }
        }
 }
 
@@ -2918,7 +2932,7 @@ header {width:100%;
 */
 .messages-page {
        .messages-page-container {
-              .chat-zone {min-height:100vh;
+              .chat-zone {max-height:100vh;
                           display:flex;
                           justify-content:center;
                           align-items:center;
@@ -3056,7 +3070,7 @@ header {width:100%;
 
                                                  .title {font-size:1.3rem;
                                                          font-weight:800;
-                                                         padding:16px;}
+                                                         padding:1.1rem;}
 
                                                  .search-person-form {width:90%;
                                                                       position:relative;
@@ -3164,6 +3178,7 @@ header {width:100%;
                                           .conversation {flex:1 1 50rem;
                                                          height:100%;
                                                          background-color:var(--olive);
+                                                         position:relative;
 
                                                  .top-conversation {padding:0.8rem 1rem 0.8rem 0.5rem;
                                                                     background-color:white;
@@ -3354,19 +3369,19 @@ header {width:100%;
                                                         }
                                                  }
 
-                                                 .conversation-form {padding:0.6rem 1.3rem;
+                                                 .conversation-form {width:100%;
+                                                                     position:absolute;                             
+                                                                     bottom:0;
+                                                                     padding:0.6rem 1.3rem;
                                                                      background-color:var(--white);
-                                                                     display:flex;
-                                                                     align-items:center;
 
-                                                        .conversation-form-btn {width:40px;
-                                                                                height:40px;
+                                                        .conversation-form-btn {width:3rem;
+                                                                                height:100%;
                                                                                 display:flex;
                                                                                 align-items:center;
                                                                                 justify-content:center;
-                                                                                border-radius:4px;
                                                                                 border:none;
-                                                                                font-size:20px;
+                                                                                font-size:1.5rem;
                                                                                 color:var(--gray6);
 
                                                                              &:hover {background-color:var(--gray4);}
@@ -3376,31 +3391,25 @@ header {width:100%;
                                                         }
 
                                                         .conversation-form-group {width:100%;
+                                                                                  border-radius:0.2rem;
+                                                                                  background-color:var(--gray1);
+                                                                                  border:1px solid var(--gray6);
                                                                                   position:relative;
-                                                                             //      background-color:var(--gray4);
-                                                                             //      border:1px solid var(--gray6);
 
-                                                               .conversation-form-input {width:100%;
-                                                                                         background-color:var(--gray4);
-                                                                                         border:1px solid var(--gray6);
-                                                                                         border-radius:4px;
+                                                               .conversation-form-input {max-height:calc(20px + ((14px * 2) * 6));
                                                                                          outline:transparent;
-                                                                                         padding:12px 16px;
+                                                                                         padding:0.8rem 1rem;
                                                                                          font:inherit;
-                                                                                         font-size:16px;
+                                                                                         font-size:1.2rem;
                                                                                          resize:none;
                                                                                          display:block;
                                                                                          line-height:1.5;
-                                                                                         max-height:calc(20px + ((14px * 2) * 6));
+                                                                                         background-color:transparent;
 
                                                                                     &:focus {border-color:var(--gray9);}
                                                                }
 
-                                                               .record-btn {position:absolute;
-                                                                            bottom:8px;
-                                                                            right:16px;
-                                                                            font-size:20px;
-                                                                            color:var(--gray5);
+                                                               .record-btn {color:var(--gray5);
                                                                             background-color:transparent;
                                                                             border:none;
                                                                             outline:none;
