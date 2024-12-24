@@ -729,27 +729,27 @@ fetch('pages/categories.json').then(response => response.json())
  =============================
 */
 if(document.querySelector('.messages-page')){
-  const chatSidebarMenuLists = document.querySelectorAll('.messages-page .chat-sidebar .chat-sidebar-menu .menu-list');
-  let chatSidebarProfileDropmenu = document.querySelector('.messages-page .chat-sidebar .chat-sidebar-profile-dropmenu');
-  const chatProfileImg = document.querySelector('#chatprofile-img');
+  const buttonsAsideMenuLists = document.querySelectorAll('.messages-page .buttons-aside .buttons-aside-menu .menu-list');
+  let buttonsAsideProfileDropmenu = document.querySelector('.messages-page .buttons-aside .buttons-aside-profile-image .buttons-aside-dropmenu');
+  const buttonsAsideProfileImg = document.querySelector('#buttonsAsideProfileimg');
 
-  chatSidebarMenuLists.forEach((chatSidebarMenuList) => {
-    chatSidebarMenuList.addEventListener('click', () => {
-      chatSidebarMenuLists.forEach((item) => {
+  buttonsAsideMenuLists.forEach((buttonsAsideMenuList) => {
+    buttonsAsideMenuList.addEventListener('click', () => {
+      buttonsAsideMenuLists.forEach((item) => {
         item.classList.remove('active');
       });
-      chatSidebarMenuList.classList.add('active');
+      buttonsAsideMenuList.classList.add('active');
     });
   });
 
-  chatProfileImg.onclick = (event) => {
+  buttonsAsideProfileImg.onclick = (event) => {
     event.stopPropagation();
-    chatSidebarProfileDropmenu.classList.toggle('dropactive');
+    buttonsAsideProfileDropmenu.classList.toggle('dropactive');
   };
 
   document.body.addEventListener('click', (event) => {
-    if (!chatProfileImg.contains(event.target) && !chatSidebarProfileDropmenu.contains(event.target)) {
-        chatSidebarProfileDropmenu.classList.remove('dropactive');
+    if (!buttonsAsideProfileImg.contains(event.target) && !buttonsAsideProfileDropmenu.contains(event.target)) {
+        buttonsAsideProfileDropmenu.classList.remove('dropactive');
     }
   });
 

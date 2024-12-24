@@ -2965,23 +2965,23 @@ header {width:100%;
                                       box-shadow:0 8px 24px -4px rgba(0,0,0,0.1);
                                       position:relative;
 
-                                   .buttons-sidebar {flex:1 1 4rem;
-                                                     height:50rem;
-                                                     background-color:var(--lightblue4);
-                                                     z-index:10;
+                                   .buttons-aside {flex:1 1 4rem;
+                                                   height:50rem;
+                                                   background-color:var(--lightblue4);
+                                                   z-index:10;
 
-                                          .chat-sidebar-logo {font-size:2rem;
-                                                              color:var(--blue10);
-                                                              display:block;
-                                                              text-align:center;
-                                                              padding:0.5rem;
-                                                              text-decoration:none;}
+                                          .buttons-aside-logo {font-size:2rem;
+                                                               color:var(--blue10);
+                                                               display:block;
+                                                               text-align:center;
+                                                               padding:0.5rem;
+                                                               text-decoration:none;}
                                           
-                                          .chat-sidebar-menu {list-style-type:none;
-                                                              width:100%;
-                                                              height:90%;
-                                                              padding-bottom:1rem;
-                                                              gap:0.5rem;
+                                          .buttons-aside-menu {list-style-type:none;
+                                                               width:100%;
+                                                               height:90%;
+                                                               padding-bottom:1rem;
+                                                               gap:0.5rem;
 
                                                  > li {width:100%;
                                                         >  a {display:block;
@@ -3020,8 +3020,8 @@ header {width:100%;
                                                                 color:var(--lightblue20);
                                                                 border-left:0.35rem solid var(--lightblue19);}
 
-                                                 .chat-sidebar-profile {margin-top:auto;
-                                                                        position:relative;
+                                                 .buttons-aside-profile-image {margin-top:auto;
+                                                                               position:relative;
                                                                
                                                         img {width:100%;
                                                              height:100%;
@@ -3035,16 +3035,16 @@ header {width:100%;
                                                              border:2.5px solid var(--white);
                                                              box-shadow:var(--box-shadow3);}
 
-                                                        .chat-sidebar-profile-dropmenu {position:absolute;
-                                                                                        bottom:calc(100% + 1rem);
-                                                                                        left:0.5rem;
-                                                                                        background-color:var(--white);
-                                                                                        border-radius:0.3rem;
-                                                                                        box-shadow:0 2px 8px rgba(0,0,0,0.1);
-                                                                                        padding:0;
-                                                                                        opacity:0;
-                                                                                        visibility:hidden;
-                                                                                        transform-origin:left bottom;
+                                                        .buttons-aside-dropmenu {position:absolute;
+                                                                                 bottom:calc(100% + 1rem);
+                                                                                 left:0.5rem;
+                                                                                 background-color:var(--white);
+                                                                                 border-radius:0.3rem;
+                                                                                 box-shadow:0 2px 8px rgba(0,0,0,0.1);
+                                                                                 padding:0;
+                                                                                 opacity:0;
+                                                                                 visibility:hidden;
+                                                                                 transform-origin:left bottom;
 
                                                                       &.dropactive {bottom:calc(100% + 0.1rem);
                                                                                     opacity:1;
@@ -3201,7 +3201,7 @@ header {width:100%;
                                                          position:relative;
 
                                                  .top-conversation {padding:0.8rem 1rem 0.8rem 0.5rem;
-                                                                    background-color:white;
+                                                                    background-color:var(--white);
                                                                     display:flex;
                                                                     align-items:center;
 
