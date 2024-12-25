@@ -3873,6 +3873,16 @@ header .small-menu .small-menu-link {
   overflow-x: hidden;
   padding: 1.2rem;
 }
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .start-chat {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .start-chat p {
+  font-size: 2rem;
+}
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper {
   width: 100%;
   display: none;

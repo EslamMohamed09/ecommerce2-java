@@ -740,6 +740,7 @@ if(document.querySelector('.messages-page')){
 
   const contactedPersonsLists = document.querySelectorAll('.messages-page .chat-block .contacted-persons .contacted-persons-menu li');
   const conversations = document.querySelectorAll('.messages-page .chat-block .conversation .main-conversation .conversation-wrapper');
+  const startChat = document.querySelector('.messages-page .chat-block .conversation .main-conversation .start-chat')
 
   buttonsAsideMenuLists.forEach((buttonsAsideMenuList) => {
     buttonsAsideMenuList.addEventListener('click', () => {
@@ -766,7 +767,8 @@ if(document.querySelector('.messages-page')){
           box.style.display = 'none';
         }
       });
-  
+
+      startChat.style.display = 'none';
       contactedPersonsLists.forEach((btn) => btn.classList.remove('button-active'));
       button.classList.add('button-active');
     });
