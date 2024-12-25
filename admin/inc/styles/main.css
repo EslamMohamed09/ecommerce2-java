@@ -3600,6 +3600,16 @@ header .small-menu .small-menu-link {
   .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > li > a svg {
     height: 100%;
   }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > li > a::before {
+    top: calc(0% - 3.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > li > a:hover::before {
+    top: calc(0% - 2.6rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > .active > a {
     border-left: none;
     border-top: 0.3rem solid var(--lightblue19);
@@ -4046,11 +4056,6 @@ header .small-menu .small-menu-link {
 @media (max-width: 768px) {
   .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation {
     flex: 1 1 25rem;
-  }
-}
-@media (max-width: 1600px) {
-  .messages-page .messages-page-container .chat-zone .chat-container {
-    height: 100vh;
   }
 }
 @media (max-width: 768px) {

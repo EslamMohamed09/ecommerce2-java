@@ -3105,7 +3105,15 @@ header {width:100%;
                                                                  padding:0;
                                                                  
                                                                  svg {height:100%;}
-                                                               }
+
+                                                                 &::before {top:calc(0% + -3.5rem);
+                                                                            left:50%;
+                                                                            transform:translateX(-50%);}
+
+                                                                 &:hover::before {top:calc(0% + -2.6rem);
+                                                                                  left:50%;
+                                                                                  transform:translateX(-50%);}
+                                                           }
                                                         }
 
                                                         > .active > a {border-left:none;
@@ -3509,13 +3517,7 @@ header {width:100%;
                                           }
                                    }
 
-                            @media (max-width:1600px) {
-                                    height:100vh;
-                            }
-
-                            @media(max-width:768px){
-                                   flex-direction:column-reverse;
-                            }
+                            @media(max-width:768px){flex-direction:column-reverse;}
                      }
               }
        }
