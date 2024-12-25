@@ -3448,7 +3448,7 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside {
   flex: 1 1 4rem;
-  width: 4rem;
+  max-width: 4rem;
   height: 50rem;
   background-color: var(--lightblue4);
   z-index: 10;
@@ -3571,15 +3571,15 @@ header .small-menu .small-menu-link {
 @media (max-width: 768px) {
   .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside {
     flex-direction: row;
-    width: 100% !important;
+    min-width: 100% !important;
     height: 4rem;
     padding: 0 !important;
   }
   .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-logo {
-    flex: 1 1 5rem;
+    flex: 1 1 9rem;
   }
   .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu {
-    width: 90%;
+    flex: 1 1 40rem;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -3614,7 +3614,7 @@ header .small-menu .small-menu-link {
   position: relative;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar {
-  flex: 1 1 5rem;
+  flex: 1 1 6rem;
   height: 100%;
   background-color: var(--white);
 }
@@ -3744,6 +3744,11 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons::-webkit-scrollbar-thumb {
   cursor: grab;
   background: var(--lightblue16);
+}
+@media (max-width: 768px) {
+  .messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar {
+    flex: 1 1 10rem;
+  }
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation {
   flex: 1 1 50rem;
@@ -4037,6 +4042,11 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation ::-webkit-scrollbar-thumb {
   cursor: grab;
   background: var(--lightblue16);
+}
+@media (max-width: 768px) {
+  .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation {
+    flex: 1 1 25rem;
+  }
 }
 @media (max-width: 1600px) {
   .messages-page .messages-page-container .chat-zone .chat-container {
