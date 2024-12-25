@@ -143,19 +143,21 @@ body {overflow-x:hidden;
        --olive9:#5ff7f7;
        --olive10:#44f7f7;
        --olive11:#04f7f7;
-       --olive12:#02a8a8;
-       --olive13:#028d8d;
-       --olive14:#3e8181;
-       --olive15:#026b6b;
-       --olive16:#015050;
-       --olive17:#004242;
-       --olive18:#013535;
-       --olive19:#b9c2c2;
-       --olive20:#9ab1b1;
-       --olive21:#7b9494;
-       --olive22:#616666;
-       --olive23:#536e6e;
-       --olive24:#4a7474;
+       --olive12:#04e2e2;
+       --olive13:#03d3d3;
+       --olive14:#02a8a8;
+       --olive15:#028d8d;
+       --olive16:#3e8181;
+       --olive17:#026b6b;
+       --olive18:#015050;
+       --olive19:#004242;
+       --olive20:#013535;
+       --olive21:#b9c2c2;
+       --olive22:#9ab1b1;
+       --olive23:#7b9494;
+       --olive24:#616666;
+       --olive25:#536e6e;
+       --olive26:#4a7474;
 
        --transparent-olive:#0aa0a01e;
 
@@ -2963,7 +2965,7 @@ header {width:100%;
                                       height:50rem;
                                       gap:0;
                                       box-shadow:0 8px 24px -4px rgba(0,0,0,0.1);
-                                      position:relative;margin-bottom:30rem !important;
+                                      position:relative;
 
                                    .buttons-aside {flex:1 1 4rem;
                                                    max-width:4rem;
@@ -3164,6 +3166,21 @@ header {width:100%;
                                                                                  transition:color 0.15s eas-in-out;
                                                                &:hover {color:var(--blue5);}
                                                         }
+                                                 }
+
+                                                 .chat-departments {width:90%;
+                                                                    margin:0.6rem auto;
+                                                                    gap:0.8rem;
+                                                                    flex-wrap:wrap;
+
+                                                               button {padding:0.3rem 0.6rem;
+                                                                      height:2.1rem;
+                                                                       border-radius:1.3rem;
+                                                                       font-size:1rem;
+                                                                       text-transform:capitalize;
+                                                                       line-height:1.1;
+                                                                       color:var(--white);
+                                                                       background-color:var(--olive13);}
                                                  }
 
                                                  .contacted-persons {overflow-y:auto;
