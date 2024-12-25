@@ -2359,6 +2359,12 @@ header .small-menu .small-menu-link {
 .dashboard-section #main-aside.smallaside h3 {
   display: none;
 }
+.dashboard-section #main-aside.smallaside:hover {
+  width: 17rem;
+}
+.dashboard-section #main-aside.smallaside:hover h3 {
+  display: block;
+}
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li:last-child {
   margin-top: 3rem;
   margin-bottom: 6rem;
@@ -3445,6 +3451,7 @@ header .small-menu .small-menu-link {
   gap: 0;
   box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.1);
   position: relative;
+  margin-bottom: 30rem !important;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside {
   flex: 1 1 4rem;
@@ -4061,6 +4068,11 @@ header .small-menu .small-menu-link {
 @media (max-width: 768px) {
   .messages-page .messages-page-container .chat-zone .chat-container {
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 768px) {
+  .messages-page .messages-page-container .chat-zone {
+    margin-top: 3rem;
   }
 }
 

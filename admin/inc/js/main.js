@@ -416,6 +416,7 @@ document.addEventListener('asideLoaded', () => {
       const mainAsideWidth = asideMenu.offsetWidth;
       if(window.innerWidth > 768){
         sectionContainer.style.marginLeft = `${mainAsideWidth}px`;
+        if (asideMenu.classList.contains("smallaside")){sectionContainer.style.marginLeft = '4.3rem';}
       } else {
         sectionContainer.style.marginLeft = '4.3rem';
       }
