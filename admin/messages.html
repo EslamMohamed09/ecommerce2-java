@@ -54,63 +54,63 @@
             <div class="contacted-persons">
 
               <ul class="contacted-persons-menu">
-                <div class="content-message-title"><span>recently</span><span class="line"></span></div>
-                <li>
-                  <a href="#">
+                <div class="contacted-persons-title"><span>recently</span><span class="line"></span></div>
+                <li data-filter="eslam1">
+                  <button>
                     <img src="inc/images/users/eslam1.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">Eslam</span>
                       <span class="person-brief-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tempora?</span>
                     </span>
-                    <span class="message-time-component">
+                    <p class="message-time-component">
                       <span class="unread-message-count">3</span>
                       <span class="message-time">12:30</span>
-                    </span>
-                  </a>
+                    </p>
+                  </button>
                 </li>
-                <li>
-                  <a href="#">
+                <li data-filter="khaled2">
+                  <button>
                     <img src="inc/images/users/eslam2.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">khaled</span>
                       <span class="person-brief-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, deleniti?</span>
                     </span>
-                    <span class="message-time-component">
+                    <p class="message-time-component">
                       <span class="message-time">12:30</span>
-                    </span>
-                  </a>
+                    </p>
+                  </button>
                 </li>
               </ul>
 
               <ul class="contacted-persons-menu">
-                <div class="content-message-title"><span>recently</span><span class="line"></span></div>
-                <li>
-                  <a href="#">
+                <div class="contacted-persons-title"><span>recently</span><span class="line"></span></div>
+                <li data-filter="ali3">
+                  <button>
                     <img src="inc/images/users/eslam3.jpg" class="person-image" alt="">
                     <span class="person-info">
-                      <span class="person-name">Eslam</span>
+                      <span class="person-name">ali</span>
                       <span class="person-brief-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, deleniti?</span>
                     </span>
                     <span class="message-time-component">
                       <span class="unread-message-count">7</span>
                       <span class="message-time">5:37</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
-                <li>
-                  <a href="#">
+                <li data-filter="samy4">
+                  <button>
                     <img src="inc/images/users/eslam4.jpg" class="person-image" alt="">
                     <span class="person-info">
-                      <span class="person-name">khaled</span>
+                      <span class="person-name">samy</span>
                       <span class="person-brief-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, deleniti?</span>
                     </span>
                     <span class="message-time-component">
                       <span class="message-time">4:19</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img src="inc/images/users/eslam5.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">mohamed</span>
@@ -119,10 +119,10 @@
                     <span class="message-time-component">
                       <span class="message-time">7:20</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img src="inc/images/users/eslam6.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">mohamed</span>
@@ -131,10 +131,10 @@
                     <span class="message-time-component">
                       <span class="message-time">3:10</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img src="inc/images/users/eslam7.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">mohamed</span>
@@ -143,10 +143,10 @@
                     <span class="message-time-component">
                       <span class="message-time">11:39</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img src="inc/images/users/eslam8.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">mohamed</span>
@@ -155,10 +155,10 @@
                     <span class="message-time-component">
                       <span class="message-time">1:16</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img src="inc/images/users/eslam9.jpg" class="person-image" alt="">
                     <span class="person-info">
                       <span class="person-name">mohamed</span>
@@ -167,7 +167,7 @@
                     <span class="message-time-component">
                       <span class="message-time">3:11</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
               </ul>
 
@@ -185,7 +185,7 @@
                   <span class="conversation-person-status online">online</span>
                 </div>
               </div>
-              <div class="conversation-buttons">
+              <div class="calling-buttons">
                 <button type="button"><i class="fas fa-phone"></i></button>
                 <button type="button"><i class="fas fa-video"></i></button>
                 <button type="button"><i class="fas fa-info-circle"></i></button>
@@ -193,7 +193,190 @@
             </div>
 
             <div class="main-conversation">
-              <ul class="conversation-wrapper">
+
+              <ul class="conversation-wrapper eslam1">
+                
+                <p class="conversation-divider">today</p>
+                  
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>hi, send to me brief about next.js version 15</p>
+                    <span class="conversation-item-time">12:30</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>and node.js latest version</p>
+                    <span class="conversation-item-time">12:31</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-delete"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+                  
+                <li class="conversation-item">
+                  <div class="conversation-item-text">
+                    <p>hi, ok</p>
+                    <span class="conversation-item-time">1:24</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item">
+                  <div class="conversation-item-text">
+                    <p>this is the link of next.js hasoub.com and this hasoub.com for node.js</p>
+                    <span class="conversation-item-time">1:25</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <p class="conversation-divider">15/10/2024</p>
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>ok thank you</p>
+                    <span class="conversation-item-time">2:42</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>node.js is very Important</p>
+                    <span class="conversation-item-time">2:43</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+
+              <ul class="conversation-wrapper khaled2">
+                
+                <p class="conversation-divider">today</p>
+                  
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>hi</p>
+                    <span class="conversation-item-time">12:30</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>do you have any interview questions about javascript</p>
+                    <span class="conversation-item-time">12:31</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-delete"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+                  
+                <li class="conversation-item">
+                  <div class="conversation-item-text">
+                    <p>yes I have, open this link</p>
+                    <span class="conversation-item-time">1:24</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item">
+                  <div class="conversation-item-text">
+                    <p>github.com</p>
+                    <span class="conversation-item-time">1:25</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <p class="conversation-divider">13/10/2024</p>
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>ok thanks alot</p>
+                    <span class="conversation-item-time">2:42</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>javascript is very Important</p>
+                    <span class="conversation-item-time">2:43</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+
+              <ul class="conversation-wrapper ali3">
                 
                 <p class="conversation-divider">today</p>
                   
@@ -253,7 +436,7 @@
                   </div>
                 </li>
 
-                <p class="conversation-divider">15/10/2024</p>
+                <p class="conversation-divider">21/10/2024</p>
                 <li class="conversation-item me">
                   <div class="conversation-item-text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem laborum, nam quis quasi voluptatem, odit debitis aperiam distinctio dolor mollitia esse sit quam doloribus quos inventore explicabo magnam veniam quibusdam minus. Inventore, maxime cum earum consequuntur beatae commodi vero voluptate veritatis molestiae eveniet alias exercitationem aliquid, esse nihil temporibus!</p>
@@ -283,6 +466,98 @@
                 </li>
 
               </ul>
+
+              <ul class="conversation-wrapper samy4">
+                
+                <p class="conversation-divider">today</p>
+                  
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquid reprehenderit placeat atque, nesciunt ullam ipsam id. Repellendus, consectetur nobis.</p>
+                    <span class="conversation-item-time">12:30</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, quasi.</p>
+                    <span class="conversation-item-time">12:31</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-delete"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+                  
+                <li class="conversation-item">
+                  <div class="conversation-item-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquid reprehenderit placeat atque, nesciunt ullam ipsam id. Repellendus, consectetur nobis.</p>
+                    <span class="conversation-item-time">1:24</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item">
+                  <div class="conversation-item-text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, quasi.</p>
+                    <span class="conversation-item-time">1:25</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <p class="conversation-divider">16/11/2024</p>
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem laborum, nam quis quasi voluptatem, odit debitis aperiam distinctio dolor mollitia esse sit quam doloribus quos inventore explicabo magnam veniam quibusdam minus. Inventore, maxime cum earum consequuntur beatae commodi vero voluptate veritatis molestiae eveniet alias exercitationem aliquid, esse nihil temporibus!</p>
+                    <span class="conversation-item-time">2:42</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="conversation-item me">
+                  <div class="conversation-item-text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nobis tempore natus placeat quisquam officia itaque aliquam vero corrupti voluptatem?</p>
+                    <span class="conversation-item-time">2:43</span>
+                  </div>
+                  <div class="conversation-item-dropdown">
+                    <button type="button" class="conversation-item-dropdown-toggle"><i class="fas fa-chevron-down"></i></button>
+                    <ul class="conversation-item-dropdown-list">
+                      <li><a href="#"><i class="fas fa-share"></i>forward</a></li>
+                      <li><a href="#"><i class="fas fa-trash-alt"></i>delete</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+
             </div>
 
             <div class="conversation-form d-flex-r-st-end">

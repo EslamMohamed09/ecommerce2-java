@@ -695,9 +695,9 @@ if(document.getElementById('quick-view-modal')){
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
 /* 
- ###########################
+ ===========================
  ####### SINGLE PAGE #######
- ###########################
+ ===========================
 */
 if(document.querySelector("#single-page")){
 
@@ -1215,9 +1215,9 @@ if(document.querySelector("#category-page")){
 }
 
 /* 
-========================
+ =======================
  ###### CART PAGE ######
-========================
+ =======================
 */
 const maxTotal = 1000;
 

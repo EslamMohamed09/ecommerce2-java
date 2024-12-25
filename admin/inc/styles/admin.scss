@@ -3173,25 +3173,29 @@ header {width:100%;
                                                         .contacted-persons-menu {padding:0;
                                                                                  margin:0 0 0.9rem;
 
-                                                               > * > a {display:flex;
-                                                                        align-items:center;
-                                                                        text-decoration:none;
-                                                                        color:var(--lightblue9);
-                                                                        padding:6px 16px;
+                                                               li.button-active {background:var(--lightblue2);}
+
+                                                               > * > button {display:flex;
+                                                                             justify-content:flex-start;
+                                                                             align-items:center;
+                                                                             text-decoration:none;
+                                                                             color:var(--lightblue9);
+                                                                             background-color:transparent;
+                                                                             padding:6px 16px;
                                                                       &:hover {color:var(--lightblue11);}
                                                                }
 
-                                                               .content-message-title {margin-left:16px;
-                                                                                       margin-right:16px;
-                                                                                       display:flex;
-                                                                                       justify-content:center;
-                                                                                       align-items:center;
-                                                                                       gap:0.2rem;
-                                                                                       color:var(--gray6);
-                                                                                       font-size:1.1rem;
-                                                                                       font-weight:bold;
-                                                                                       text-transform:uppercase;
-                                                                                       margin-bottom:4px;
+                                                               .contacted-persons-title {margin-left:16px;
+                                                                                         margin-right:16px;
+                                                                                         display:flex;
+                                                                                         justify-content:center;
+                                                                                         align-items:center;
+                                                                                         gap:0.2rem;
+                                                                                         color:var(--gray6);
+                                                                                         font-size:1.1rem;
+                                                                                         font-weight:bold;
+                                                                                         text-transform:uppercase;
+                                                                                         margin-bottom:4px;
 
                                                                                     .line {flex:1 1 30rem;
                                                                                            height:1px;
@@ -3210,6 +3214,7 @@ header {width:100%;
 
                                                                .person-info {margin-right:12px;
                                                                              display:grid;
+                                                                             text-align:left;
 
                                                                       .person-name {display:block;
                                                                                     font-size:1.1rem;
@@ -3305,7 +3310,7 @@ header {width:100%;
                                                                              }
                                                                }
 
-                                                               .conversation-buttons {display:flex;
+                                                               .calling-buttons {display:flex;
                                                                                       align-items:center;
                                                                                       margin-left:auto;
 
@@ -3335,7 +3340,7 @@ header {width:100%;
                                                                      padding:1.2rem;
 
                                                         .conversation-wrapper {width:100%;
-                                                                               display:block;
+                                                                               display:none;
 
                                                                .conversation-divider {text-align:center;
                                                                                       width:fit-content;

@@ -434,7 +434,6 @@ document.addEventListener('asideLoaded', () => {
 });
 
 
-
 if(window.location.pathname.split('/').pop().split('.')[0] !== "login"){
    loadHtml('#main-aside', asideContent, "aside");
 }
@@ -739,6 +738,9 @@ if(document.querySelector('.messages-page')){
   let buttonsAsideProfileDropmenu = document.querySelector('.messages-page .buttons-aside .buttons-aside-profile-image .buttons-aside-dropmenu');
   const buttonsAsideProfileImg = document.querySelector('#buttonsAsideProfileimg');
 
+  const contactedPersonsLists = document.querySelectorAll('.messages-page .chat-block .contacted-persons .contacted-persons-menu li');
+  const conversations = document.querySelectorAll('.messages-page .chat-block .conversation .main-conversation .conversation-wrapper');
+
   buttonsAsideMenuLists.forEach((buttonsAsideMenuList) => {
     buttonsAsideMenuList.addEventListener('click', () => {
       buttonsAsideMenuLists.forEach((item) => {
@@ -753,12 +755,28 @@ if(document.querySelector('.messages-page')){
     buttonsAsideProfileDropmenu.classList.toggle('dropactive');
   };
 
+  contactedPersonsLists.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+  
+      conversations.forEach((box) => {
+        if (box.classList.contains(filter)) {
+            box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+  
+      contactedPersonsLists.forEach((btn) => btn.classList.remove('button-active'));
+      button.classList.add('button-active');
+    });
+  });
+
   document.body.addEventListener('click', (event) => {
     if (!buttonsAsideProfileImg.contains(event.target) && !buttonsAsideProfileDropmenu.contains(event.target)) {
         buttonsAsideProfileDropmenu.classList.remove('dropactive');
     }
   });
-
   
   document.querySelectorAll('.conversation-item-dropdown-toggle').forEach((item) => {
     item.addEventListener('click', function(event){
