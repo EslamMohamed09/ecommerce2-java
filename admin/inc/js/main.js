@@ -374,58 +374,56 @@ document.addEventListener('asideLoaded', () => {
 
   document.querySelectorAll('#main-aside .aside-list li .sidebar-link').forEach(function(item) {
     const itemHref = item.getAttribute('href');
-
     if (itemHref === currentPage) {item.classList.add('active');}
   });
 
-     /*** BIG & SMALL ASIDE ***/
-     const asideMenu = document.getElementById("main-aside");
-     const sectionContainer = document.querySelector(".section-container");
-     const asideComponent = document.querySelector("header .asidecomponent");
-     const asideButton = document.getElementById("asidebutton");
-     const asideButton2 = document.getElementById("asidebutton2");
+    /*** BIG & SMALL ASIDE ***/
+    const asideMenu = document.getElementById("main-aside");
+    const sectionContainer = document.querySelector(".section-container");
+    const asideComponent = document.querySelector("header .asidecomponent");
+    const asideButton = document.getElementById("asidebutton");
+    const asideButton2 = document.getElementById("asidebutton2");
 
-     let isToggledByButton = false;
+    let isToggledByButton = false;
 
-      function updateAsideMenuClass(){
-        if(!isToggledByButton){
-          if(window.innerWidth < 711){
-             asideMenu.classList.add("smallaside");
-          } else {
-            asideMenu.classList.remove("smallaside");
-          }
-        }
-        handleSectionMargin();
-      }
-
-      function handleSectionMargin() {
-        const mainAsideWidth = asideMenu.offsetWidth;
-        sectionContainer.style.marginLeft = `${mainAsideWidth}px`;
-      }
-
-      function toggleSmallAside(){
-        asideMenu.classList.toggle("smallaside");
-        isToggledByButton = asideMenu.classList.contains("smallaside");
-        if (asideMenu.classList.contains("smallaside")) {
-            asideButton.style.transform = "rotate(90deg)";
+    function updateAsideMenuClass(){
+      if(!isToggledByButton){
+        if(window.innerWidth < 711){
+            asideMenu.classList.add("smallaside");
         } else {
-          asideButton.style.transform = "rotate(0deg)";
+          asideMenu.classList.remove("smallaside");
         }
-        if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
-        handleSectionMargin();
       }
-
-      updateAsideMenuClass();
       handleSectionMargin();
+    }
 
-      window.addEventListener("resize", updateAsideMenuClass);
-      asideComponent.addEventListener('click', toggleSmallAside);
-      asideButton2.addEventListener('click', toggleSmallAside);
-      
-      asideMenu.addEventListener("transitionend", handleSectionMargin);
-      sectionContainer.addEventListener("transitionend", handleSectionMargin);
+    function handleSectionMargin() {
+      const mainAsideWidth = asideMenu.offsetWidth;
+      sectionContainer.style.marginLeft = `${mainAsideWidth}px`;
+    }
+
+    function toggleSmallAside(){
+      asideMenu.classList.toggle("smallaside");
+      isToggledByButton = asideMenu.classList.contains("smallaside");
+      if (asideMenu.classList.contains("smallaside")) {
+          asideButton.style.transform = "rotate(90deg)";
+      } else {
+        asideButton.style.transform = "rotate(0deg)";
+      }
+      if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
+      handleSectionMargin();
+    }
+
+    updateAsideMenuClass();
+    handleSectionMargin();
+
+    window.addEventListener("resize", updateAsideMenuClass);
+    asideComponent.addEventListener('click', toggleSmallAside);
+    asideButton2.addEventListener('click', toggleSmallAside);
+    
+    asideMenu.addEventListener("transitionend", handleSectionMargin);
+    sectionContainer.addEventListener("transitionend", handleSectionMargin);
 });
-
 
 
 

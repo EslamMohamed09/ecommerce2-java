@@ -2347,7 +2347,7 @@ header .small-menu .small-menu-link {
   top: 0;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(125deg, var(--blue3) 0%, var(--blue20) 100%);
+  background-image: linear-gradient(180deg, var(--blue3) 0%, var(--blue20) 100%);
   box-shadow: var(--box-shadow2);
   overflow-y: scroll;
   z-index: 1000;
@@ -2389,7 +2389,8 @@ header .small-menu .small-menu-link {
 }
 .dashboard-section #main-aside .sidebar .aside-list li .sidebar-link.active {
   color: var(--white2);
-  background-color: var(--blue1);
+  background-color: #8091c0;
+  border-left: 5px solid #3c4d79;
 }
 .dashboard-section #main-aside .sidebar .aside-list li .sidebar-link.active h3 {
   color: var(--white2);
@@ -2405,7 +2406,7 @@ header .small-menu .small-menu-link {
   cursor: grab;
 }
 @media (min-width: 711px) and (max-width: 1340px) {
-  .dashboard-section aside {
+  .dashboard-section #main-aside {
     width: 17rem;
   }
 }
@@ -3439,7 +3440,7 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside {
   flex: 1 1 4rem;
-  max-width: 4rem;
+  width: 4rem;
   height: 50rem;
   background-color: var(--lightblue4);
   z-index: 10;
@@ -3497,8 +3498,8 @@ header .small-menu .small-menu-link {
   visibility: visible;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > .active > a {
-  background-color: var(--lightblue9);
   color: var(--lightblue20);
+  background-color: var(--lightblue9);
   border-left: 0.35rem solid var(--lightblue19);
 }
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu .buttons-aside-profile-image {
@@ -3558,6 +3559,46 @@ header .small-menu .small-menu-link {
 .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu .buttons-aside-profile-image .buttons-aside-dropmenu li:last-child a {
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
+}
+@media (max-width: 768px) {
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside {
+    flex-direction: row;
+    width: 100% !important;
+    height: 4rem;
+    padding: 0 !important;
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-logo {
+    flex: 1 1 5rem;
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu {
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > li {
+    flex: 1 1 5rem;
+    height: 100%;
+    margin: 0;
+    padding: 0 !important;
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > li > a {
+    width: 100% !important;
+    height: 100%;
+    padding: 0;
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > li > a svg {
+    height: 100%;
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu > .active > a {
+    border-left: none;
+    border-top: 0.3rem solid var(--lightblue19);
+  }
+  .messages-page .messages-page-container .chat-zone .chat-container .buttons-aside .buttons-aside-menu .buttons-aside-profile-image {
+    margin: 0;
+  }
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block {
   flex: 1 1 80rem;
@@ -3992,6 +4033,11 @@ header .small-menu .small-menu-link {
 @media (max-width: 1600px) {
   .messages-page .messages-page-container .chat-zone .chat-container {
     height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .messages-page .messages-page-container .chat-zone .chat-container {
+    flex-direction: column-reverse;
   }
 }
 
