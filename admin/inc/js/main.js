@@ -390,10 +390,25 @@ document.addEventListener('asideLoaded', () => {
       if(!isToggledByButton){
         if(window.innerWidth < 768){
             asideMenu.classList.add("smallaside");
+            asideButton.style.transform = "rotate(180deg)";
         } else {
           asideMenu.classList.remove("smallaside");
+          asideButton.style.transform = "rotate(0deg)";
         }
       }
+
+      handleSectionMargin();
+    }
+
+    function toggleSmallAside(){
+      asideMenu.classList.toggle("smallaside");
+      isToggledByButton = asideMenu.classList.contains("smallaside");
+      if (asideMenu.classList.contains("smallaside")) {
+          asideButton.style.transform = "rotate(180deg)";
+      } else {
+        asideButton.style.transform = "rotate(0deg)";
+      }
+      if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
       handleSectionMargin();
     }
 
@@ -404,18 +419,6 @@ document.addEventListener('asideLoaded', () => {
       } else {
         sectionContainer.style.marginLeft = '4.3rem';
       }
-    }
-
-    function toggleSmallAside(){
-      asideMenu.classList.toggle("smallaside");
-      isToggledByButton = asideMenu.classList.contains("smallaside");
-      if (asideMenu.classList.contains("smallaside")) {
-          asideButton.style.transform = "rotate(90deg)";
-      } else {
-        asideButton.style.transform = "rotate(0deg)";
-      }
-      if (asideMenu.classList.length === 0) {asideMenu.removeAttribute("class");}
-      handleSectionMargin();
     }
 
     updateAsideMenuClass();
