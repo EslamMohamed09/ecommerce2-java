@@ -1975,7 +1975,7 @@ header {width:100%;
                     z-index:1000;
                     transition:width 0.3s linear;
 
-              &.smallaside {width:4rem;}
+              &.smallaside {width:4.3rem;}
 
               &.smallaside h3 {display:none;}
 
@@ -2003,7 +2003,7 @@ header {width:100%;
                                               margin:0;
                                               color:var(--white2);}
 
-                                          &:hover {border-left:5px solid var(--blue12);}
+                                          &:hover {border-left:5px solid #3c4d79;}
 
                                           &.active {color:var(--white2);
                                                     background-color:#8091c0;

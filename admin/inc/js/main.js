@@ -388,7 +388,7 @@ document.addEventListener('asideLoaded', () => {
 
     function updateAsideMenuClass(){
       if(!isToggledByButton){
-        if(window.innerWidth < 711){
+        if(window.innerWidth < 768){
             asideMenu.classList.add("smallaside");
         } else {
           asideMenu.classList.remove("smallaside");
@@ -397,9 +397,13 @@ document.addEventListener('asideLoaded', () => {
       handleSectionMargin();
     }
 
-    function handleSectionMargin() {
+    function handleSectionMargin(){
       const mainAsideWidth = asideMenu.offsetWidth;
-      sectionContainer.style.marginLeft = `${mainAsideWidth}px`;
+      if(window.innerWidth > 768){
+        sectionContainer.style.marginLeft = `${mainAsideWidth}px`;
+      } else {
+        sectionContainer.style.marginLeft = '4.3rem';
+      }
     }
 
     function toggleSmallAside(){
