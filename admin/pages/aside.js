@@ -1,6 +1,6 @@
-const asideContent = `<div class="sidebar">
+const asideContent = `<div class="main-sidebar">
 
-  <ul class="aside-list">
+  <ul class="main-aside-menu">
 
    <li>
     <a href="index.html" class="sidebar-link">

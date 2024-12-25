@@ -372,7 +372,7 @@ document.addEventListener('asideLoaded', () => {
   
   const currentPage = window.location.pathname.split('/').pop();
 
-  document.querySelectorAll('#main-aside .aside-list li .sidebar-link').forEach(function(item) {
+  document.querySelectorAll('#main-aside .main-aside-menu li .sidebar-link').forEach(function(item) {
     const itemHref = item.getAttribute('href');
     if (itemHref === currentPage) {item.classList.add('active');}
   });

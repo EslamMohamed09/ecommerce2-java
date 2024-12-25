@@ -1979,8 +1979,8 @@ header {width:100%;
 
               &.smallaside h3 {display:none;}
 
-              .sidebar {
-                     .aside-list {
+              .main-sidebar {
+                     .main-aside-menu {
                             li {
                                    &:last-child {margin-top:3rem;
                                                  margin-bottom:6rem;}
@@ -2020,18 +2020,17 @@ header {width:100%;
               &::-webkit-scrollbar {width:5px;}
               &::-webkit-scrollbar-thumb {background:var(--lightblue11);
                                           cursor:grab;}
+
+              @media (max-width:768px){
+                     .main-sidebar .main-aside-menu li .sidebar-link:hover {border-left-width:3px;}
+
+                     .main-sidebar .main-aside-menu li .sidebar-link.active {border-left-width:3px;}
+              }
        }
 
        @media (min-width:711px) and (max-width:1340px){ #main-aside {width:17rem;} }
 
-       // @media (max-width:711px){
-       //        #main-aside {position:absolute;
-       //                     top:0;
-       //                     left:0;
-       //                     // width:13rem;
-       //                     min-height:100%;
-       //                     transition:all 0.3s linear;} 
-       // }
+       
        
        .section-container {display:block;
                            width:100%;
