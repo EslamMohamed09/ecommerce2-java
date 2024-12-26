@@ -4147,16 +4147,13 @@ header .small-menu .small-menu-link {
   display: block;
   margin: 1rem auto;
   padding: 0;
-  text-align: left;
   border-radius: 0.7rem;
-  background: transparent;
+  background: var(--white);
+  box-shadow: var(--box-shadow6);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  height: 5rem;
   gap: 2.5rem;
   padding: 0.5rem 0.9rem;
   margin: 0;
@@ -4167,7 +4164,7 @@ header .small-menu .small-menu-link {
   box-shadow: var(--box-shadow6);
   background-color: var(--white);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search {
   flex-wrap: nowrap;
   width: 30%;
   padding: 0;
@@ -4175,7 +4172,7 @@ header .small-menu .small-menu-link {
   box-shadow: none;
   border: 1px solid var(--gray3);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search input[type=search] {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search input[type=search] {
   width: calc(100% - 3rem);
   font-size: 1.1rem;
   padding: 0.3rem 0.8rem 0.3rem 0.6rem;
@@ -4184,49 +4181,35 @@ header .small-menu .small-menu-link {
   background-color: transparent;
   border-radius: 0.2rem 0 0 0.2rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search #submit-search {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search #submit-search {
   width: 3rem;
   height: 100%;
   padding: 0.3rem 0.6rem;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: var(--blue5);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search #submit-search #submit-searchi {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search #submit-search #submit-searchi {
   color: var(--blue2);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .counting {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--gray10);
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .export-btn {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  background: var(--blue6);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .counting .no {
-  padding: 0.3rem 1rem;
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .export-btn svg {
   font-size: 1.1rem;
-  border-radius: 1.5rem;
-  margin-left: 0.5rem;
-  color: var(--milky2);
-  background-color: var(--blue4);
-}
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .ordering-btns {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--gray10);
-}
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .ordering-btns > a {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--gray10);
-}
-.products-page .products-page-container .managing-products .manage-products-table-block .table-details .ordering-btns > a:hover {
-  color: var(--primary1);
+  margin-right: 0.5rem;
 }
 @media (max-width: 550px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .table-details {
+  .products-page .products-page-container .managing-products .manage-products-table-block .table-header {
     justify-content: space-between;
   }
 }
 @media (max-width: 500px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .table-details .counting span:first-child {
+  .products-page .products-page-container .managing-products .manage-products-table-block .table-header .counting span:first-child {
     display: none;
   }
 }

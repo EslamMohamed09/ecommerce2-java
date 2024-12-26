@@ -3588,24 +3588,21 @@ header {width:100%;
                                                    display:block;
                                                    margin:1rem auto;
                                                    padding:0;
-                                                   text-align:left;
                                                    border-radius:0.7rem;
-                                                   background:transparent;
-
-                                   .table-details {width:100%;
-                                                   display:flex;
-                                                   flex-direction:row;
-                                                   justify-content:flex-end;
-                                                   align-items:center;
-                                                   gap:2.5rem;
-                                                   padding:0.5rem 0.9rem;
-                                                   margin:0;
-                                                   margin-bottom:1rem;
-                                                   border-radius:0.2rem;
-                                                   border-top-left-radius:0.7rem;
-                                                   border-top-right-radius:0.7rem;
+                                                   background:var(--white);
                                                    box-shadow:var(--box-shadow6);
-                                                   background-color:var(--white);
+
+                                   .table-header {width:100%;
+                                                  height:5rem;
+                                                  gap:2.5rem;
+                                                  padding:0.5rem 0.9rem;
+                                                  margin:0;
+                                                  margin-bottom:1rem;
+                                                  border-radius:0.2rem;
+                                                  border-top-left-radius:0.7rem;
+                                                  border-top-right-radius:0.7rem;
+                                                  box-shadow:var(--box-shadow6);
+                                                  background-color:var(--white);
 
                                           .form-search {flex-wrap:nowrap;
                                                         width:30%;padding:0;
@@ -3614,44 +3611,32 @@ header {width:100%;
                                                         border:1px solid var(--gray3);
 
                                                  input[type="search"] {width:calc(100% - 3rem);
-                                                                      font-size:1.1rem;
-                                                                      padding:0.3rem 0.8rem 0.3rem 0.6rem;
-                                                                      box-shadow:none;
-                                                                      color:var(--gray10);
-                                                                      background-color:transparent;
-                                                                      border-radius:0.2rem 0 0 0.2rem;}
+                                                                       font-size:1.1rem;
+                                                                       padding:0.3rem 0.8rem 0.3rem 0.6rem;
+                                                                       box-shadow:none;
+                                                                       color:var(--gray10);
+                                                                       background-color:transparent;
+                                                                       border-radius:0.2rem 0 0 0.2rem;}
 
                                                  #submit-search {width:3rem;
-                                                        height:100%;
-                                                               padding:0.3rem 0.6rem;
-                                                               border-radius:0 0.2rem 0.2rem 0;
-                                                               background-color:var(--blue5);
+                                                                 height:100%;
+                                                                 padding:0.3rem 0.6rem;
+                                                                 border-radius:0 0.2rem 0.2rem 0;
+                                                                 background-color:var(--blue5);
 
                                                         #submit-searchi {color:var(--blue2);}
                                                  }
                                           }
 
-                                          .counting {font-weight:bold;
-                                                 font-size:1.1rem;
-                                                 color:var(--gray10);
+                                          .export-btn {width:8rem;
+                                                       height:3rem;
+                                                       border-radius:0.3rem;
+                                                       font-size:1.5rem;
+                                                       color:var(--white);
+                                                       background:var(--blue6);
 
-                                                 .no {padding:0.3rem 1rem;
-                                                 font-size:1.1rem;
-                                                 border-radius:1.5rem;
-                                                 margin-left:0.5rem;
-                                                 color:var(--milky2);
-                                                 background-color:var(--blue4);}
-                                          }
-
-                                          .ordering-btns {font-size:1.1rem;
-                                                        font-weight:bold;
-                                                        color:var(--gray10);
-
-                                                 > a {font-weight:bold;
-                                                 font-size:1.1rem;
-                                                 color:var(--gray10);}
-
-                                                 > a:hover {color:var(--primary1);}
+                                                 svg {font-size:1.1rem;
+                                                      margin-right:0.5rem;}
                                           }
 
                                           @media (max-width:550px) { & {justify-content:space-between;} }
