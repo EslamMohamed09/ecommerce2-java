@@ -4144,24 +4144,184 @@ header .small-menu .small-menu-link {
 .products-page .products-page-container .managing-products .manage-products-table-block {
   width: 100%;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block table {
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block {
+  width: 100%;
+  display: block;
+  margin: 1rem auto;
+  padding: 0;
+  text-align: left;
+  border-radius: 0.7rem;
+  background: transparent;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0.5rem 0.9rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
   box-shadow: var(--box-shadow6);
-  border: none;
+  background-color: var(--white);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-2 {
-  color: var(--blue14);
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search {
+  flex-wrap: nowrap;
+  width: 30%;
+  padding: 0;
+  border-radius: 0.2rem 0 0 0.2rem;
+  box-shadow: none;
+  border: 1px solid var(--gray3);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-3 {
-  color: var(--blue5);
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search input[type=search] {
+  width: calc(100% - 3rem);
+  font-size: 1.1rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.6rem;
+  box-shadow: none;
+  color: var(--gray10);
+  background-color: transparent;
+  border-radius: 0.2rem 0 0 0.2rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-4 {
-  color: var(--green18);
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search #submit-search {
+  width: 3rem;
+  height: 100%;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background-color: var(--blue5);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-5 {
-  color: var(--green15);
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search #submit-search #submit-searchi {
+  color: var(--blue2);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-6 {
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .counting {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--gray10);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .counting .no {
+  padding: 0.3rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 1.5rem;
+  margin-left: 0.5rem;
+  color: var(--milky2);
+  background-color: var(--blue4);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .ordering-btns {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--gray10);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .ordering-btns > a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--gray10);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .ordering-btns > a:hover {
+  color: var(--primary1);
+}
+@media (max-width: 550px) {
+  .products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  .products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .counting span:first-child {
+    display: none;
+  }
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 0.7rem;
+  border-collapse: collapse;
+  box-shadow: var(--box-shadow6);
+  background-color: transparent;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead {
+  padding: 1rem 0.9rem;
+  background-color: var(--white);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead label {
+  cursor: pointer;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:first-child tr th:first-child {
+  border-top-left-radius: 0;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:first-child tr th:last-child {
+  border-top-right-radius: 0;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:last-child tr th:first-child {
+  border-bottom-left-radius: 0.7rem;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:last-child tr th:last-child {
+  border-bottom-right-radius: 0.7rem;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:first-child {
+  border-bottom: 1px solid var(--gray3);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:last-child {
+  border-top: 1px solid var(--gray3);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th {
+  padding: 0.7rem 0.3rem 0.3rem;
+  text-align: center;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th:first-child {
+  padding: 1rem 0.1rem 0.3rem 1rem;
+  text-align: left;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th:nth-child(2) {
+  padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+  text-align: left;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th:nth-child(2) label {
+  cursor: pointer;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr:nth-child(even) {
+  background-color: var(--gray);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td {
+  padding: 1.1rem 0.3rem 2rem;
+  color: var(--gray11);
+  text-align: center;
+  position: relative;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td:first-child {
+  padding: 1.4rem 0rem 2rem 0.9rem;
+  width: 0;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td:nth-child(2) {
+  padding: 1.1rem 0.5rem 2rem 0.5rem;
+  text-align: left;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td:nth-child(2) label {
+  cursor: pointer;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td .buttons {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td .buttons .fa-check {
   color: var(--green7);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr:hover .buttons {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 768px) {
+  .products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td .buttons {
+    bottom: 0;
+    left: -0.5rem;
+  }
 }
 
 /*

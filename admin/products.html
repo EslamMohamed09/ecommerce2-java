@@ -18,7 +18,7 @@
 
   <aside id="main-aside"></aside>
 
-  <div class="products-page-container section-container"> <!-- ===== products page container ==== -->
+  <div class="products-page-container section-container">
 
     <h1 class="section-heading">products</h1>
 
@@ -27,43 +27,48 @@
       <div class="manage-products-table-block manage-table-block">
 
         <form action="" class="manage-products-table-form manage-table-form d-flex-c-st-st">
+          
           <table>
 
             <thead>
               <tr>
                 <th><input type="checkbox" id="first-head-checkbox"></th>
-                <th><label for="first-head-checkbox">name</label></th>
-                <th>image</th>
-                <th>parent</th>
-                <th>level</th>
-                <th>ID</th>
+                <th>product</th>
+                <th>category</th>
+                <th>sku</th>
+                <th>stock</th>
+                <th>price</th>
+                <th>rating</th>
+                <th>status</th>
+                <th>actions</th>
               </tr>
             </thead>
 
             <tbody id="manage-category-table">
               <tr>
-                <td><input type="checkbox" name="checkbox[]" id="cat-name-2"></td>
-                <td>
-                  <label for="cat-name-2">images</label>
-                  <div class="buttons">
-                    <a href="#">edit</a> | <a href="#">delete</a>
-                  </div>
-                </td>
-                <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
-                <td>${parentName}</td>
-                <td class="level-${level}">level ${level}</td>
-                <td>${category.id}</td>
+                <td><input type="checkbox" name="checkbox[]"></td>
+                <td><div class="d-flex-r-c-c"><a href="#"><img src="" alt=""></a><a href="#">oppo</a></div></td>
+                <td>phones</td>
+                <td>sku</td>
+                <td>300</td>
+                <td>$250</td>
+                <td>rating</td>
+                <td>sheduled</td>
+                <td>actions</td>
               </tr>
             </tbody>
 
             <thead>
               <tr>
                 <th><input type="checkbox" id="second-head-checkbox"></th>
-                <th><label for="second-head-checkbox">name</label></th>
-                <th>image</th>
-                <th>parent</th>
-                <th>level</th>
-                <th>ID</th>
+                <th>product</th>
+                <th>category</th>
+                <th>sku</th>
+                <th>stock</th>
+                <th>price</th>
+                <th>rating</th>
+                <th>status</th>
+                <th>actions</th>
               </tr>
             </thead>
             

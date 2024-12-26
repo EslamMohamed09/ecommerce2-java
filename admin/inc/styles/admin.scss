@@ -3584,14 +3584,153 @@ header {width:100%;
                                   gap:1rem;
 
                      .manage-products-table-block {width:100%;
-                            table {box-shadow:var(--box-shadow6);
-                                   border:none;
-                                   tbody {
-                                          .level-2 {color:var(--blue14);}
-                                          .level-3 {color:var(--blue5);}
-                                          .level-4 {color:var(--green18);}
-                                          .level-5 {color:var(--green15);}
-                                          .level-6 {color:var(--green7);}
+                     
+
+                            .manage-table-block {width:100%;
+                                                 display:block;
+                                                 margin:1rem auto;
+                                                 padding:0;
+                                                 text-align:left;
+                                                 border-radius:0.7rem;
+                                                 background:transparent;
+
+                                   .table-details {width:100%;
+                                                   display:flex;
+                                                   flex-direction:row;
+                                                   justify-content:flex-end;
+                                                   align-items:center;
+                                                   gap:2.5rem;
+                                                   padding:0.5rem 0.9rem;
+                                                   margin:0;
+                                                   margin-bottom:1rem;
+                                                   border-radius:0.2rem;
+                                                   border-top-left-radius:0.7rem;
+                                                   border-top-right-radius:0.7rem;
+                                                   box-shadow:var(--box-shadow6);
+                                                   background-color:var(--white);
+
+                                          .form-search {flex-wrap:nowrap;
+                                                        width:30%;padding:0;
+                                                        border-radius:0.2rem 0 0 0.2rem;
+                                                        box-shadow:none;
+                                                        border:1px solid var(--gray3);
+
+                                                 input[type="search"] {width:calc(100% - 3rem);
+                                                                      font-size:1.1rem;
+                                                                      padding:0.3rem 0.8rem 0.3rem 0.6rem;
+                                                                      box-shadow:none;
+                                                                      color:var(--gray10);
+                                                                      background-color:transparent;
+                                                                      border-radius:0.2rem 0 0 0.2rem;}
+
+                                                 #submit-search {width:3rem;
+                                                        height:100%;
+                                                               padding:0.3rem 0.6rem;
+                                                               border-radius:0 0.2rem 0.2rem 0;
+                                                               background-color:var(--blue5);
+
+                                                        #submit-searchi {color:var(--blue2);}
+                                                 }
+                                          }
+
+                                          .counting {font-weight:bold;
+                                                 font-size:1.1rem;
+                                                 color:var(--gray10);
+
+                                                 .no {padding:0.3rem 1rem;
+                                                 font-size:1.1rem;
+                                                 border-radius:1.5rem;
+                                                 margin-left:0.5rem;
+                                                 color:var(--milky2);
+                                                 background-color:var(--blue4);}
+                                          }
+
+                                          .ordering-btns {font-size:1.1rem;
+                                                        font-weight:bold;
+                                                        color:var(--gray10);
+
+                                                 > a {font-weight:bold;
+                                                 font-size:1.1rem;
+                                                 color:var(--gray10);}
+
+                                                 > a:hover {color:var(--primary1);}
+                                          }
+
+                                          @media (max-width:550px) { & {justify-content:space-between;} }
+                                          @media (max-width:500px){ .counting span:first-child {display:none;} }
+                                   }
+
+                                   table {width:100%;
+                                          margin-bottom:1.5rem;
+                                          border-radius:0.7rem;
+                                          border-collapse:collapse;
+                                          box-shadow:var(--box-shadow6);
+                                          background-color:transparent;
+
+                                          thead {padding:1rem 0.9rem;
+                                                 background-color:var(--white);
+
+                                                 label {cursor:pointer;}
+
+                                                 &:first-child tr th:first-child {border-top-left-radius:0;}
+                                                 &:first-child tr th:last-child {border-top-right-radius:0;}
+                                                 &:last-child tr th:first-child {border-bottom-left-radius:0.7rem;}
+                                                 &:last-child tr th:last-child {border-bottom-right-radius:0.7rem;}
+
+                                                 &:first-child {border-bottom:1px solid var(--gray3);}
+                                                 &:last-child {border-top:1px solid var(--gray3);}
+
+                                                 tr {
+                                                        th {padding:0.7rem 0.3rem 0.3rem;
+                                                        text-align:center;
+                                                               &:first-child {padding:1rem 0.1rem 0.3rem 1rem;
+                                                                             text-align:left;}
+
+                                                               &:nth-child(2) {padding:0.7rem 0.5rem 0.3rem 0.5rem;
+                                                                             text-align:left;
+                                                                      label {cursor:pointer;}
+                                                               }
+                                                        }
+                                                 }
+                                          }
+
+                                          tbody {
+                                                 tr {
+                                                        &:nth-child(even) {background-color:var(--gray);}
+
+                                                        td {padding:1.1rem 0.3rem 2rem;
+                                                        color:var(--gray11);
+                                                        text-align:center;
+                                                        position:relative;
+
+                                                               &:first-child {padding:1.4rem 0rem 2rem 0.9rem;
+                                                                             width:0;}
+                            
+                                                               &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
+                                                                             text-align:left;
+                                                                      label {cursor:pointer;}
+                                                               }
+
+                                                               .buttons {position:absolute;
+                                                                      bottom:0.3rem;
+                                                                      left:0.5rem;
+                                                                      display:flex;
+                                                                      flex-direction:row;
+                                                                      gap:0.5rem;
+                                                                      opacity:0;
+                                                                      visibility:hidden;
+                                          
+                                                                      .fa-check {color:var(--green7);}
+                                                               }
+                                                        }
+
+                                                        &:hover .buttons {opacity:1;
+                                                                      visibility:visible;}
+                                                 }
+                                          }
+
+                                          @media(max-width:768px){ tbody tr td .buttons {bottom:0;
+                                                                                    left:-0.5rem;} }
                                    }
                             }
                      }
