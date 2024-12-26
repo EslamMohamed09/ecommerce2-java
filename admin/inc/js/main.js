@@ -791,8 +791,8 @@ if(document.querySelector('.messages-page')){
   conversationItemDropdownToggle.forEach((item) => {
     item.addEventListener('click', function(event){
       event.stopPropagation();
-      const dropdownMenu = this.nextElementSibling;
       const isActive = this.parentElement.classList.contains('active');
+      const dropdownMenu = this.nextElementSibling;
 
       conversationItemDropdownToggle.forEach((toggle) => {
         toggle.parentElement.classList.remove('active');
@@ -801,7 +801,7 @@ if(document.querySelector('.messages-page')){
       });
 
       if (!isActive) {
-          this.parentElement.classList.toggle('active');
+          this.parentElement.classList.add('active');
 
           const rect = dropdownMenu.getBoundingClientRect();
           const viewportHeight = window.innerHeight;
@@ -811,7 +811,7 @@ if(document.querySelector('.messages-page')){
              dropdownMenu.style.bottom = '100%';
           } else {
             dropdownMenu.style.top = '100%';
-            dropdownMenu.style.bottom = '0';
+            dropdownMenu.style.bottom = 'auto';
           }
       }
     });
@@ -822,8 +822,6 @@ if(document.querySelector('.messages-page')){
     conversationItemDropdownToggle.forEach((item) => {
       if (!item.contains(event.target) && !item.parentElement.contains(event.target)) {
           item.parentElement.classList.remove('active');
-          item.nextElementSibling.style.top = '';
-          item.nextElementSibling.style.bottom = '';
       }
     });
   });

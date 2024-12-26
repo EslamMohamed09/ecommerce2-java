@@ -3410,8 +3410,8 @@ header {width:100%;
                                                                       .conversation-item-dropdown {position:absolute;
                                                                                                    top:0.3rem;
                                                                                                    right:0.3rem;
-                                                                                                  //  opacity:0;
-                                                                                                  //  visibility:hidden;
+                                                                                                   opacity:0;
+                                                                                                   visibility:hidden;
                                                                                                    transition:all 0.15s ease-in-out;
 
                                                                              .conversation-item-dropdown-toggle {color:var(--gray9);
@@ -3433,15 +3433,24 @@ header {width:100%;
                                                                              .conversation-item-dropdown-menu {position:absolute;
                                                                                                                top:100%;
                                                                                                                right:0;
-                                                                                                               background-color:var(--white);
-                                                                                                               z-index:10;
-                                                                                                               box-shadow:0 2px 8px rgba(0,0,0,0.1);
-                                                                                                               padding:4px 0;
-                                                                                                               opacity:0;
-                                                                                                               visibility:hidden;
+                                                                                                               padding:0;
+                                                                                                               border-radius:0.4rem;
                                                                                                                transform:scale(0.9);
                                                                                                                transform-origin:left top;
+                                                                                                               background-color:var(--white);
+                                                                                                               box-shadow:var(--box-shadow6);
+                                                                                                               z-index:10;
+                                                                                                               opacity:0;
+                                                                                                               visibility:hidden;
                                                                                                                transition:all 0.15s ease-in-out;
+
+                                                                                                         li:hover {background-color:var(--lightblue1);}
+
+                                                                                                         li:first-child {border-top-left-radius:0.4rem;
+                                                                                                                         border-top-right-radius:0.4rem;}
+
+                                                                                                         li:last-child {border-bottom-left-radius:0.4rem;
+                                                                                                                        border-bottom-right-radius:0.4rem;}
 
                                                                                                          a {display:flex;
                                                                                                             align-items:center;
