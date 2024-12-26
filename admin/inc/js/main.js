@@ -741,7 +741,6 @@ if(document.querySelector('.messages-page')){
   const contactedPersonsLists = document.querySelectorAll('.messages-page .chat-block .contacted-persons .contacted-persons-menu li');
   const conversations = document.querySelectorAll('.messages-page .chat-block .conversation .main-conversation .conversation-wrapper');
   const conversationItemDropdownToggle = document.querySelectorAll('.messages-page .conversation .conversation-item .conversation-item-dropdown-toggle');
-  const conversationItemDropdownMenu = document.querySelectorAll('.messages-page .conversation .conversation-item .conversation-item-dropdown-menu');
   const startChat = document.querySelector('.messages-page .chat-block .conversation .main-conversation .start-chat');
 
   buttonsAsideMenuLists.forEach((buttonsAsideMenuList) => {
@@ -792,10 +791,29 @@ if(document.querySelector('.messages-page')){
   conversationItemDropdownToggle.forEach((item) => {
     item.addEventListener('click', function(event){
       event.stopPropagation();
+      const dropdownMenu = this.nextElementSibling;
       const isActive = this.parentElement.classList.contains('active');
 
-      conversationItemDropdownToggle.forEach((item) =>{item.parentElement.classList.remove('active')});
-      if (!isActive) {this.parentElement.classList.toggle('active');}
+      conversationItemDropdownToggle.forEach((toggle) => {
+        toggle.parentElement.classList.remove('active');
+        toggle.nextElementSibling.style.top = '';
+        toggle.nextElementSibling.style.bottom = '';
+      });
+
+      if (!isActive) {
+          this.parentElement.classList.toggle('active');
+
+          const rect = dropdownMenu.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+
+          if(rect.bottom > viewportHeight){
+             dropdownMenu.style.top = 'auto';
+             dropdownMenu.style.bottom = '100%';
+          } else {
+            dropdownMenu.style.top = '100%';
+            dropdownMenu.style.bottom = '0';
+          }
+      }
     });
   });
 
@@ -804,6 +822,8 @@ if(document.querySelector('.messages-page')){
     conversationItemDropdownToggle.forEach((item) => {
       if (!item.contains(event.target) && !item.parentElement.contains(event.target)) {
           item.parentElement.classList.remove('active');
+          item.nextElementSibling.style.top = '';
+          item.nextElementSibling.style.bottom = '';
       }
     });
   });
