@@ -4194,10 +4194,19 @@ header .small-menu .small-menu-link {
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .export-btn {
   width: 8rem;
   height: 3rem;
+  margin-left: auto;
   border-radius: 0.3rem;
   font-size: 1.5rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  font-size: 1rem;
+  user-select: none;
+  cursor: pointer;
   color: var(--white);
-  background: var(--blue6);
+  background-image: linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .export-btn svg {
   font-size: 1.1rem;
