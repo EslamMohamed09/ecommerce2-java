@@ -737,7 +737,7 @@ if(document.querySelector('.messages-page')){
   const buttonsAsideMenuLists = document.querySelectorAll('.messages-page .buttons-aside .buttons-aside-menu .menu-list');
   let buttonsAsideProfileDropmenu = document.querySelector('.messages-page .buttons-aside .buttons-aside-profile-image .buttons-aside-dropmenu');
   const buttonsAsideProfileImg = document.querySelector('#buttonsAsideProfileimg');
-
+  const chatDepartmentsBtns = document.querySelectorAll('.messages-page .chat-block .chat-departments button');
   const contactedPersonsLists = document.querySelectorAll('.messages-page .chat-block .contacted-persons .contacted-persons-menu li');
   const conversations = document.querySelectorAll('.messages-page .chat-block .conversation .main-conversation .conversation-wrapper');
   const startChat = document.querySelector('.messages-page .chat-block .conversation .main-conversation .start-chat')
@@ -755,6 +755,13 @@ if(document.querySelector('.messages-page')){
     event.stopPropagation();
     buttonsAsideProfileDropmenu.classList.toggle('dropactive');
   };
+
+  chatDepartmentsBtns.forEach((button) => {
+    button.addEventListener('click', function(){
+      chatDepartmentsBtns.forEach((button) => button.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
 
   contactedPersonsLists.forEach((button) => {
     button.addEventListener('click', () => {

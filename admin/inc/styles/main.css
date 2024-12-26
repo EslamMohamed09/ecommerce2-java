@@ -3676,18 +3676,22 @@ header .small-menu .small-menu-link {
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .chat-departments {
   width: 90%;
-  margin: 0.6rem auto;
+  margin: 0.9rem auto 0.5rem;
   gap: 0.8rem;
   flex-wrap: wrap;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .chat-departments button {
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.7rem;
   height: 2.1rem;
   border-radius: 1.3rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: capitalize;
   line-height: 1.1;
   color: var(--white);
+  background-color: var(--lightblue14);
+  box-shadow: none;
+}
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .chat-departments button.active {
   background-color: var(--olive13);
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .persons-sidebar .contacted-persons {
