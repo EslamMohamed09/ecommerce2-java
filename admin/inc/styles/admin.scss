@@ -3410,8 +3410,8 @@ header {width:100%;
                                                                       .conversation-item-dropdown {position:absolute;
                                                                                                    top:0.3rem;
                                                                                                    right:0.3rem;
-                                                                                                   opacity:0;
-                                                                                                   visibility:hidden;
+                                                                                                  //  opacity:0;
+                                                                                                  //  visibility:hidden;
                                                                                                    transition:all 0.15s ease-in-out;
 
                                                                              .conversation-item-dropdown-toggle {color:var(--gray9);
@@ -3431,7 +3431,7 @@ header {width:100%;
                                                                              }
                                                                              
 
-                                                                             .conversation-item-dropdown-list {position:absolute;
+                                                                             .conversation-item-dropdown-menu {position:absolute;
                                                                                                                top:100%;
                                                                                                                right:0;
                                                                                                                background-color:var(--white);
@@ -3455,20 +3455,15 @@ header {width:100%;
                                                                                                                      margin-right:8px;}
                                                                                                          }
                                                                              }
+
+                                                                             &.active .conversation-item-dropdown-menu {opacity:1;
+                                                                                                                        visibility:visible;
+                                                                                                                        transform:scale(1);}
                                                                       }
 
                                                                       &:hover .conversation-item-dropdown {right:1rem;
                                                                                                            opacity:1;
                                                                                                            visibility:visible;}
-
-                                                                      .conversation-item-dropdown.active .conversation-item-dropdown-list {opacity:1;
-                                                                                                                                            visibility:visible;
-                                                                                                                                            transform:scale(1);}
-                                                                      
-                                                                      
-
-                                                                      .conversation-item-wrapper:hover .conversation-item-dropdown {opacity:1;
-                                                                                                                                    visibility:visible;}
                                                                       
                                                                }
 

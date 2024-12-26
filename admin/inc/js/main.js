@@ -740,7 +740,9 @@ if(document.querySelector('.messages-page')){
   const chatDepartmentsBtns = document.querySelectorAll('.messages-page .chat-block .chat-departments button');
   const contactedPersonsLists = document.querySelectorAll('.messages-page .chat-block .contacted-persons .contacted-persons-menu li');
   const conversations = document.querySelectorAll('.messages-page .chat-block .conversation .main-conversation .conversation-wrapper');
-  const startChat = document.querySelector('.messages-page .chat-block .conversation .main-conversation .start-chat')
+  const conversationItemDropdownToggle = document.querySelectorAll('.messages-page .conversation .conversation-item .conversation-item-dropdown-toggle');
+  const conversationItemDropdownMenu = document.querySelectorAll('.messages-page .conversation .conversation-item .conversation-item-dropdown-menu');
+  const startChat = document.querySelector('.messages-page .chat-block .conversation .main-conversation .start-chat');
 
   buttonsAsideMenuLists.forEach((buttonsAsideMenuList) => {
     buttonsAsideMenuList.addEventListener('click', () => {
@@ -787,15 +789,19 @@ if(document.querySelector('.messages-page')){
     }
   });
   
-  document.querySelectorAll('.conversation-item-dropdown-toggle').forEach((item) => {
+  conversationItemDropdownToggle.forEach((item) => {
     item.addEventListener('click', function(event){
       event.stopPropagation();
-      this.parentElement.classList.toggle('active');
+      const isActive = this.parentElement.classList.contains('active');
+
+      conversationItemDropdownToggle.forEach((item) =>{item.parentElement.classList.remove('active')});
+      if (!isActive) {this.parentElement.classList.add('active');}
     });
   });
+
   
   document.body.addEventListener('click', (event) => {
-    document.querySelectorAll('.conversation-item-dropdown-toggle').forEach((item) => {
+    conversationItemDropdownToggle.forEach((item) => {
       if (!item.contains(event.target) && !this.parentElement.contains(event.target)) {
           this.parentElement.classList.remove('active');
       }

@@ -3952,8 +3952,6 @@ header .small-menu .small-menu-link {
   position: absolute;
   top: 0.3rem;
   right: 0.3rem;
-  opacity: 0;
-  visibility: hidden;
   transition: all 0.15s ease-in-out;
 }
 .messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-toggle {
@@ -3973,7 +3971,7 @@ header .small-menu .small-menu-link {
   border: none;
   box-shadow: none;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-list {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
@@ -3987,7 +3985,7 @@ header .small-menu .small-menu-link {
   transform-origin: left top;
   transition: all 0.15s ease-in-out;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-list a {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-menu a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -3995,21 +3993,17 @@ header .small-menu .small-menu-link {
   font-size: 13px;
   padding: 6px 12px;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-list a svg {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown .conversation-item-dropdown-menu a svg {
   font-size: 16px;
   margin-right: 8px;
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item:hover .conversation-item-dropdown {
-  right: 1rem;
-  opacity: 1;
-  visibility: visible;
-}
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown.active .conversation-item-dropdown-list {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-dropdown.active .conversation-item-dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
 }
-.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item .conversation-item-wrapper:hover .conversation-item-dropdown {
+.messages-page .messages-page-container .chat-zone .chat-container .chat-block .conversation .main-conversation .conversation-wrapper .conversation-item:hover .conversation-item-dropdown {
+  right: 1rem;
   opacity: 1;
   visibility: visible;
 }
