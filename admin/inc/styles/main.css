@@ -67,6 +67,7 @@ body {
   --transparent-yellow3:#b6b61d36;
   --transparent-yellow4:#f7db6b4f;
   --shin-orange:rgb(255, 153, 0);
+  --shin-orange2:rgb(230, 139, 2);
   --orange1:rgba(255, 248, 236, 0.774);
   --orange2:rgb(255, 248, 236);
   --orange3:rgb(252, 241, 222);
@@ -4143,9 +4144,6 @@ header .small-menu .small-menu-link {
 }
 .products-page .products-page-container .managing-products .manage-products-table-block {
   width: 100%;
-}
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block {
-  width: 100%;
   display: block;
   margin: 1rem auto;
   padding: 0;
@@ -4153,7 +4151,7 @@ header .small-menu .small-menu-link {
   border-radius: 0.7rem;
   background: transparent;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -4169,7 +4167,7 @@ header .small-menu .small-menu-link {
   box-shadow: var(--box-shadow6);
   background-color: var(--white);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search {
   flex-wrap: nowrap;
   width: 30%;
   padding: 0;
@@ -4177,7 +4175,7 @@ header .small-menu .small-menu-link {
   box-shadow: none;
   border: 1px solid var(--gray3);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search input[type=search] {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search input[type=search] {
   width: calc(100% - 3rem);
   font-size: 1.1rem;
   padding: 0.3rem 0.8rem 0.3rem 0.6rem;
@@ -4186,22 +4184,22 @@ header .small-menu .small-menu-link {
   background-color: transparent;
   border-radius: 0.2rem 0 0 0.2rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search #submit-search {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search #submit-search {
   width: 3rem;
   height: 100%;
   padding: 0.3rem 0.6rem;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: var(--blue5);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .form-search #submit-search #submit-searchi {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .form-search #submit-search #submit-searchi {
   color: var(--blue2);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .counting {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .counting {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--gray10);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .counting .no {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .counting .no {
   padding: 0.3rem 1rem;
   font-size: 1.1rem;
   border-radius: 1.5rem;
@@ -4209,30 +4207,30 @@ header .small-menu .small-menu-link {
   color: var(--milky2);
   background-color: var(--blue4);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .ordering-btns {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .ordering-btns {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--gray10);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .ordering-btns > a {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .ordering-btns > a {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--gray10);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .ordering-btns > a:hover {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-details .ordering-btns > a:hover {
   color: var(--primary1);
 }
 @media (max-width: 550px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details {
+  .products-page .products-page-container .managing-products .manage-products-table-block .table-details {
     justify-content: space-between;
   }
 }
 @media (max-width: 500px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block .table-details .counting span:first-child {
+  .products-page .products-page-container .managing-products .manage-products-table-block .table-details .counting span:first-child {
     display: none;
   }
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table {
+.products-page .products-page-container .managing-products .manage-products-table-block table {
   width: 100%;
   margin-bottom: 1.5rem;
   border-radius: 0.7rem;
@@ -4240,85 +4238,105 @@ header .small-menu .small-menu-link {
   box-shadow: var(--box-shadow6);
   background-color: transparent;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead {
   padding: 1rem 0.9rem;
   background-color: var(--white);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead label {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead label {
   cursor: pointer;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:first-child tr th:first-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead:first-child tr th:first-child {
   border-top-left-radius: 0;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:first-child tr th:last-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead:first-child tr th:last-child {
   border-top-right-radius: 0;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:last-child tr th:first-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead:last-child tr th:first-child {
   border-bottom-left-radius: 0.7rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:last-child tr th:last-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead:last-child tr th:last-child {
   border-bottom-right-radius: 0.7rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:first-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead:first-child {
   border-bottom: 1px solid var(--gray3);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead:last-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead:last-child {
   border-top: 1px solid var(--gray3);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead tr th {
   padding: 0.7rem 0.3rem 0.3rem;
   text-align: center;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th:first-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:first-child {
   padding: 1rem 0.1rem 0.3rem 1rem;
   text-align: left;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th:nth-child(2) {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:nth-child(2) {
   padding: 0.7rem 0.5rem 0.3rem 0.5rem;
   text-align: left;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table thead tr th:nth-child(2) label {
+.products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:nth-child(2) label {
   cursor: pointer;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr:nth-child(even) {
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr:nth-child(even) {
   background-color: var(--gray);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td {
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td {
   padding: 1.1rem 0.3rem 2rem;
   color: var(--gray11);
   text-align: center;
-  position: relative;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td:first-child {
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td:first-child {
   padding: 1.4rem 0rem 2rem 0.9rem;
   width: 0;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td:nth-child(2) {
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td:nth-child(2) {
   padding: 1.1rem 0.5rem 2rem 0.5rem;
   text-align: left;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td:nth-child(2) label {
-  cursor: pointer;
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field {
+  gap: 1rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td .buttons {
-  position: absolute;
-  bottom: 0.3rem;
-  left: 0.5rem;
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .image {
+  width: 4rem;
+  height: 4rem;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .product-title {
+  color: var(--black2);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons {
+  gap: 0.7rem;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons button {
+  width: 2.4rem;
+  height: 2.1rem;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  opacity: 0;
-  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--lightblue4);
+  border-radius: 0.4rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td .buttons .fa-check {
-  color: var(--green7);
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons button.view {
+  color: var(--gray11);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr:hover .buttons {
-  opacity: 1;
-  visibility: visible;
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons button.edit {
+  color: var(--shin-orange2);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons button.delete {
+  color: var(--red11);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons button svg {
+  font-size: 1.1rem;
 }
 @media (max-width: 768px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .manage-table-block table tbody tr td .buttons {
+  .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .buttons {
     bottom: 0;
     left: -0.5rem;
   }

@@ -66,6 +66,7 @@ body {overflow-x:hidden;
        --transparent-yellow4:#f7db6b4f;
 
        --shin-orange:rgb(255, 153, 0);
+       --shin-orange2:rgb(230, 139, 2);
 
        --orange1:rgba(255, 248, 236, 0.774);
        --orange2:rgb(255, 248, 236);
@@ -3584,15 +3585,12 @@ header {width:100%;
                                   gap:1rem;
 
                      .manage-products-table-block {width:100%;
-                     
-
-                            .manage-table-block {width:100%;
-                                                 display:block;
-                                                 margin:1rem auto;
-                                                 padding:0;
-                                                 text-align:left;
-                                                 border-radius:0.7rem;
-                                                 background:transparent;
+                                                   display:block;
+                                                   margin:1rem auto;
+                                                   padding:0;
+                                                   text-align:left;
+                                                   border-radius:0.7rem;
+                                                   background:transparent;
 
                                    .table-details {width:100%;
                                                    display:flex;
@@ -3699,40 +3697,55 @@ header {width:100%;
                                                         &:nth-child(even) {background-color:var(--gray);}
 
                                                         td {padding:1.1rem 0.3rem 2rem;
-                                                        color:var(--gray11);
-                                                        text-align:center;
-                                                        position:relative;
+                                                            color:var(--gray11);
+                                                            text-align:center;
 
                                                                &:first-child {padding:1.4rem 0rem 2rem 0.9rem;
-                                                                             width:0;}
+                                                                              width:0;}
                             
                                                                &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
-                                                                             text-align:left;
-                                                                      label {cursor:pointer;}
+                                                                               text-align:left;}
+
+                                                               .product-field {gap:1rem;
+
+                                                                      .image {width:4rem;
+                                                                              height:4rem;
+
+                                                                             img {width:100%;
+                                                                                  height:100%;
+                                                                                  object-fit:contain;}
+                                                                      }
+
+                                                                      .product-title {color:var(--black2);}
                                                                }
 
-                                                               .buttons {position:absolute;
-                                                                      bottom:0.3rem;
-                                                                      left:0.5rem;
-                                                                      display:flex;
-                                                                      flex-direction:row;
-                                                                      gap:0.5rem;
-                                                                      opacity:0;
-                                                                      visibility:hidden;
-                                          
-                                                                      .fa-check {color:var(--green7);}
+                                                               .action-buttons {gap:0.7rem;
+
+                                                                  button {width:2.4rem;
+                                                                          height:2.1rem;
+                                                                          padding:0;
+                                                                          display:flex;
+                                                                          justify-content:center;
+                                                                          align-items:center;
+                                                                          text-align:center;
+                                                                          background:var(--lightblue4);
+                                                                          border-radius:0.4rem;
+
+                                                                      &.view {color:var(--gray11);}
+                                                                      &.edit {color:var(--shin-orange2);}
+                                                                      &.delete {color:var(--red11);}
+                                                                      svg {font-size:1.1rem;}
+                                                                  }
+                                                                  
                                                                }
                                                         }
-
-                                                        &:hover .buttons {opacity:1;
-                                                                      visibility:visible;}
                                                  }
                                           }
 
                                           @media(max-width:768px){ tbody tr td .buttons {bottom:0;
                                                                                     left:-0.5rem;} }
                                    }
-                            }
+                            
                      }
               }
        }

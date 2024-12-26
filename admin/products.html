@@ -27,34 +27,67 @@
       <div class="manage-products-table-block manage-table-block">
 
         <form action="" class="manage-products-table-form manage-table-form d-flex-c-st-st">
-          
+
           <table>
 
             <thead>
               <tr>
                 <th><input type="checkbox" id="first-head-checkbox"></th>
                 <th>product</th>
-                <th>category</th>
                 <th>sku</th>
                 <th>stock</th>
                 <th>price</th>
                 <th>rating</th>
                 <th>status</th>
+                <th>category</th>
                 <th>actions</th>
               </tr>
             </thead>
 
-            <tbody id="manage-category-table">
+            <tbody>
               <tr>
                 <td><input type="checkbox" name="checkbox[]"></td>
-                <td><div class="d-flex-r-c-c"><a href="#"><img src="" alt=""></a><a href="#">oppo</a></div></td>
-                <td>phones</td>
+                <td>
+                  <div class="product-field d-flex-r-c-c">
+                    <a href="#" class="image"><img src="inc/images/electronics/watches/1/1.png" alt=""></a>
+                    <a href="#" class="product-title">tomaroh</a>
+                  </div>
+                </td>  
                 <td>sku</td>
                 <td>300</td>
                 <td>$250</td>
                 <td>rating</td>
                 <td>sheduled</td>
-                <td>actions</td>
+                <td>watches</td>
+                <td>
+                  <div class="action-buttons d-flex-r-c-c">
+                    <button class="view"><i class="fas fa-eye"></i></button>
+                    <button class="edit"><i class="far fa-edit"></i></button>
+                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="checkbox[]"></td>
+                <td>
+                  <div class="product-field d-flex-r-c-c">
+                    <a href="#" class="image"><img src="inc/images/electronics/phones/oppo1/1.png" alt=""></a>
+                    <a href="#" class="product-title">oppo f31</a>
+                  </div>
+                </td>
+                <td>sku</td>
+                <td>200</td>
+                <td>$270</td>
+                <td>rating</td>
+                <td>sheduled</td>
+                <td>phones</td>
+                <td>
+                  <div class="action-buttons d-flex-r-c-c">
+                    <button class="view"><i class="fas fa-eye"></i></button>
+                    <button class="edit"><i class="far fa-edit"></i></button>
+                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                  </div>
+                </td>
               </tr>
             </tbody>
 
@@ -62,12 +95,12 @@
               <tr>
                 <th><input type="checkbox" id="second-head-checkbox"></th>
                 <th>product</th>
-                <th>category</th>
                 <th>sku</th>
                 <th>stock</th>
                 <th>price</th>
                 <th>rating</th>
                 <th>status</th>
+                <th>category</th>
                 <th>actions</th>
               </tr>
             </thead>
