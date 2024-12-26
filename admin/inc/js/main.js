@@ -813,8 +813,18 @@ if(document.querySelector('.messages-page')){
             dropdownMenu.style.top = '100%';
             dropdownMenu.style.bottom = 'auto';
           }
-      }
+        } else {
+          document.querySelectorAll('.conversation-item.active').forEach((item) => {
+            item.classList.remove('active');
+          });
+    
+          parent.classList.add('active');
+        }
     });
+
+    // item.parentElement.addEventListener('mouseleave', () => {
+    //   item.parentElement.classList.remove('active');
+    // });
   });
 
   
