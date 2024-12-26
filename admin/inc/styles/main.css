@@ -4127,6 +4127,44 @@ header .small-menu .small-menu-link {
 }
 
 /*
+ =======================
+ ####### PRODUCTS ######
+ =======================
+*/
+.products-page .products-page-container h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.products-page .products-page-container .managing-products {
+  flex-wrap: wrap;
+  padding: 0;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block {
+  width: 100%;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table {
+  box-shadow: var(--box-shadow6);
+  border: none;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-2 {
+  color: var(--blue14);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-3 {
+  color: var(--blue5);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-4 {
+  color: var(--green18);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-5 {
+  color: var(--green15);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody .level-6 {
+  color: var(--green7);
+}
+
+/*
  ==========================
  ######## SETTINGS ########
  ==========================
