@@ -795,21 +795,20 @@ if(document.querySelector('.messages-page')){
       const isActive = this.parentElement.classList.contains('active');
 
       conversationItemDropdownToggle.forEach((item) =>{item.parentElement.classList.remove('active')});
-      if (!isActive) {this.parentElement.classList.add('active');}
+      if (!isActive) {this.parentElement.classList.toggle('active');}
     });
   });
 
   
   document.body.addEventListener('click', (event) => {
     conversationItemDropdownToggle.forEach((item) => {
-      if (!item.contains(event.target) && !this.parentElement.contains(event.target)) {
-          this.parentElement.classList.remove('active');
+      if (!item.contains(event.target) && !item.parentElement.contains(event.target)) {
+          item.parentElement.classList.remove('active');
       }
     });
   });
 
   const conversationFormInput = document.querySelector('.messages-page .conversation-form-input');
-
   conversationFormInput.addEventListener('input', function () {
       this.style.height = 'auto';
       this.style.height = this.scrollHeight + 'px';
