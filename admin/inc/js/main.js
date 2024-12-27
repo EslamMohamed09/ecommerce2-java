@@ -843,6 +843,24 @@ if(document.querySelector('.messages-page')){
   });
 }
 
+/*
+ =============================
+ ######## PRODUCTS PAGE ######
+ =============================
+*/
+if(document.querySelector('.products-page')){
+fetch('pages/products.json').then(response => response.json())
+.then(data => {
+  const products = data.products;
+  const productstbody = document.querySelector('.products-page #products-tbody');
+  const productsPagepaginationContainer = document.querySelector('.products-page .pagination');
+
+  
+
+}).catch(error => console.error('Error loading JSON:', error))
+
+
+}
 
 /*
  =============================
