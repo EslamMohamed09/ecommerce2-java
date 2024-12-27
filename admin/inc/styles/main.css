@@ -4153,7 +4153,7 @@ header .small-menu .small-menu-link {
   height: 5rem;
   gap: 2.5rem;
   padding: 0.5rem 1.3rem;
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem;
   margin-bottom: 1rem;
   box-shadow: none;
   background-color: var(--white);
@@ -4304,6 +4304,23 @@ header .small-menu .small-menu-link {
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .product-title {
   font-weight: bold;
   color: var(--black2);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .rating {
+  width: 4.5rem;
+  height: 2rem;
+  gap: 0.5rem;
+  margin: auto;
+  border-radius: 0.3rem;
+  background-color: var(--gray);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .rating svg {
+  margin: 0;
+  color: var(--shin-orange);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .rating span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons {
   gap: 0.7rem;
