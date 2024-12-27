@@ -1283,7 +1283,7 @@ table {width:100%;
                          color:var(--gray11);
                          text-align:center;
 
-                         &:nth-child(even) {font-weight:bold;}
+                     //     &:nth-child(even) {font-weight:bold;}
 
                          img {width:4rem;
                               height:3.5rem;
@@ -3693,6 +3693,7 @@ header {width:100%;
                                                             font-size:1rem;
                                                             text-align:center;
                                                             text-transform:uppercase;
+                                                            color:var(--gray7);
                                                                &:first-child {padding:1rem 0.1rem 0.3rem 1rem;
                                                                               text-align:left;}
 
@@ -3704,10 +3705,11 @@ header {width:100%;
 
                                           tbody {
                                                  tr {
-                                                        &:nth-child(even) {background-color:var(--gray);}
+                                                        &:nth-child(even) {background-color:var(--background-color);}
 
                                                         td {padding:1.1rem 0.3rem 2rem;
-                                                            color:var(--gray11);
+                                                            color:var(--gray7);
+                                                            font-size:1.1rem;
                                                             text-align:center;
 
                                                                &:first-child {padding:1.4rem 0rem 2rem 0.9rem;
@@ -3720,13 +3722,17 @@ header {width:100%;
 
                                                                       .image {width:4rem;
                                                                               height:4rem;
+                                                                              padding:0.2rem 0.4rem;
+                                                                              border-radius:0.3rem;
+                                                                              background:var(--lightblue);
 
                                                                              img {width:100%;
                                                                                   height:100%;
                                                                                   object-fit:contain;}
                                                                       }
 
-                                                                      .product-title {color:var(--black2);}
+                                                                      .product-title {font-weight:bold;
+                                                                                      color:var(--black2);}
                                                                }
 
                                                                .action-buttons {gap:0.7rem;

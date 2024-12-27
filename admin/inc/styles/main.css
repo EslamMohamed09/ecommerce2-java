@@ -1555,9 +1555,6 @@ table tbody tr td {
   color: var(--gray11);
   text-align: center;
 }
-table tbody tr td:nth-child(even) {
-  font-weight: bold;
-}
 table tbody tr td img {
   width: 4rem;
   height: 3.5rem;
@@ -4262,6 +4259,7 @@ header .small-menu .small-menu-link {
   font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
+  color: var(--gray7);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:first-child {
   padding: 1rem 0.1rem 0.3rem 1rem;
@@ -4272,11 +4270,12 @@ header .small-menu .small-menu-link {
   text-align: left;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr:nth-child(even) {
-  background-color: var(--gray);
+  background-color: var(--background-color);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td {
   padding: 1.1rem 0.3rem 2rem;
-  color: var(--gray11);
+  color: var(--gray7);
+  font-size: 1.1rem;
   text-align: center;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td:first-child {
@@ -4293,6 +4292,9 @@ header .small-menu .small-menu-link {
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .image {
   width: 4rem;
   height: 4rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  background: var(--lightblue);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .image img {
   width: 100%;
@@ -4300,6 +4302,7 @@ header .small-menu .small-menu-link {
   object-fit: contain;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field .product-title {
+  font-weight: bold;
   color: var(--black2);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .action-buttons {
