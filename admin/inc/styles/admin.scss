@@ -3629,18 +3629,24 @@ header {width:100%;
                                                     height:3rem;
                                                     padding:0.2rem 0.5rem;
                                                     margin-left:auto;
-                                                    border-radius:0.3rem;
                                                     font-size:1.5rem;
                                                     text-transform:capitalize;
                                                     display:flex;
                                                     justify-content:center;
                                                     align-items:center;
-                                                    border:2px solid var(--blue16);
                                                     font-size:1rem;                                                       
                                                     user-select:none;
                                                     cursor:pointer;
                                                     color:var(--blue16);
                                                     background:transparent;
+                                                    border:2px solid transparent;
+                                                    border-image:linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
+                                                    border-image-slice:1;
+                                                    border-radius:0.3rem;
+                                                    position:relative;
+
+                                                 &:hover {color:var(--white);
+                                                          background-image:linear-gradient(124deg, var(--blue5), var(--blue16) 70%);}
 
                                                  svg {font-size:1.1rem;
                                                       margin-right:0.5rem;}
