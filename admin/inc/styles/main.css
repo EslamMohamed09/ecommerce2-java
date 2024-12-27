@@ -4155,13 +4155,10 @@ header .small-menu .small-menu-link {
   width: 100%;
   height: 5rem;
   gap: 2.5rem;
-  padding: 0.5rem 0.9rem;
-  margin: 0;
+  padding: 0.5rem 1.3rem;
+  margin: 1rem 0;
   margin-bottom: 1rem;
-  border-radius: 0.2rem;
-  border-top-left-radius: 0.7rem;
-  border-top-right-radius: 0.7rem;
-  box-shadow: var(--box-shadow6);
+  box-shadow: none;
   background-color: var(--white);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search {
@@ -4192,8 +4189,9 @@ header .small-menu .small-menu-link {
   color: var(--blue2);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-btn {
-  width: 8rem;
+  width: 9rem;
   height: 3rem;
+  padding: 0.2rem 0.5rem;
   margin-left: auto;
   border-radius: 0.3rem;
   font-size: 1.5rem;
@@ -4201,11 +4199,11 @@ header .small-menu .small-menu-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--blue10);
+  border: 2px solid var(--blue16);
   font-size: 1rem;
   user-select: none;
   cursor: pointer;
-  color: var(--blue10);
+  color: var(--blue16);
   background: transparent;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-btn svg {
@@ -4215,7 +4213,6 @@ header .small-menu .small-menu-link {
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .export-btn {
   width: 8rem;
   height: 3rem;
-  margin-left: auto;
   border-radius: 0.3rem;
   font-size: 1.5rem;
   text-transform: capitalize;
@@ -4233,42 +4230,19 @@ header .small-menu .small-menu-link {
   font-size: 1.1rem;
   margin-right: 0.5rem;
 }
-@media (max-width: 550px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .table-header {
-    justify-content: space-between;
-  }
-}
-@media (max-width: 500px) {
-  .products-page .products-page-container .managing-products .manage-products-table-block .table-header .counting span:first-child {
-    display: none;
-  }
-}
 .products-page .products-page-container .managing-products .manage-products-table-block table {
   width: 100%;
   margin-bottom: 1.5rem;
-  border-radius: 0.7rem;
+  border-radius: 0;
   border-collapse: collapse;
-  box-shadow: var(--box-shadow6);
   background-color: transparent;
+  box-shadow: none;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead {
   padding: 1rem 0.9rem;
+  border-radius: 0;
   background-color: var(--white);
-}
-.products-page .products-page-container .managing-products .manage-products-table-block table thead label {
-  cursor: pointer;
-}
-.products-page .products-page-container .managing-products .manage-products-table-block table thead:first-child tr th:first-child {
-  border-top-left-radius: 0;
-}
-.products-page .products-page-container .managing-products .manage-products-table-block table thead:first-child tr th:last-child {
-  border-top-right-radius: 0;
-}
-.products-page .products-page-container .managing-products .manage-products-table-block table thead:last-child tr th:first-child {
-  border-bottom-left-radius: 0.7rem;
-}
-.products-page .products-page-container .managing-products .manage-products-table-block table thead:last-child tr th:last-child {
-  border-bottom-right-radius: 0.7rem;
+  box-shadow: none;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead:first-child {
   border-bottom: 1px solid var(--gray3);
@@ -4278,18 +4252,17 @@ header .small-menu .small-menu-link {
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead tr th {
   padding: 0.7rem 0.3rem 0.3rem;
+  font-size: 1rem;
   text-align: center;
+  text-transform: uppercase;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:first-child {
   padding: 1rem 0.1rem 0.3rem 1rem;
   text-align: left;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:nth-child(2) {
-  padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+  padding: 0.7rem 0.5rem 0.3rem 1.5rem;
   text-align: left;
-}
-.products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:nth-child(2) label {
-  cursor: pointer;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr:nth-child(even) {
   background-color: var(--gray);
@@ -4304,7 +4277,7 @@ header .small-menu .small-menu-link {
   width: 0;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td:nth-child(2) {
-  padding: 1.1rem 0.5rem 2rem 0.5rem;
+  padding: 1.1rem 0.5rem 2rem 1.5rem;
   text-align: left;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .product-field {

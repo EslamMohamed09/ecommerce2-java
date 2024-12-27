@@ -3595,13 +3595,10 @@ header {width:100%;
                                    .table-header {width:100%;
                                                   height:5rem;
                                                   gap:2.5rem;
-                                                  padding:0.5rem 0.9rem;
-                                                  margin:0;
+                                                  padding:0.5rem 1.3rem;
+                                                  margin:1rem 0;
                                                   margin-bottom:1rem;
-                                                  border-radius:0.2rem;
-                                                  border-top-left-radius:0.7rem;
-                                                  border-top-right-radius:0.7rem;
-                                                  box-shadow:var(--box-shadow6);
+                                                  box-shadow:none;
                                                   background-color:var(--white);
 
                                           .form-search {flex-wrap:nowrap;
@@ -3628,8 +3625,9 @@ header {width:100%;
                                                  }
                                           }
 
-                                          .add-btn {width:8rem;
+                                          .add-btn {width:9rem;
                                                     height:3rem;
+                                                    padding:0.2rem 0.5rem;
                                                     margin-left:auto;
                                                     border-radius:0.3rem;
                                                     font-size:1.5rem;
@@ -3637,11 +3635,11 @@ header {width:100%;
                                                     display:flex;
                                                     justify-content:center;
                                                     align-items:center;
-                                                    border:2px solid var(--blue10);
+                                                    border:2px solid var(--blue16);
                                                     font-size:1rem;                                                       
                                                     user-select:none;
                                                     cursor:pointer;
-                                                    color:var(--blue10);
+                                                    color:var(--blue16);
                                                     background:transparent;
 
                                                  svg {font-size:1.1rem;
@@ -3650,7 +3648,6 @@ header {width:100%;
 
                                           .export-btn {width:8rem;
                                                        height:3rem;
-                                                       margin-left:auto;
                                                        border-radius:0.3rem;
                                                        font-size:1.5rem;
                                                        text-transform:capitalize;
@@ -3668,40 +3665,33 @@ header {width:100%;
                                                       margin-right:0.5rem;}
                                           }
 
-                                          @media (max-width:550px) { & {justify-content:space-between;} }
-                                          @media (max-width:500px){ .counting span:first-child {display:none;} }
                                    }
 
                                    table {width:100%;
                                           margin-bottom:1.5rem;
-                                          border-radius:0.7rem;
+                                          border-radius:0;
                                           border-collapse:collapse;
-                                          box-shadow:var(--box-shadow6);
                                           background-color:transparent;
+                                          box-shadow:none;
 
                                           thead {padding:1rem 0.9rem;
+                                                 border-radius:0;
                                                  background-color:var(--white);
-
-                                                 label {cursor:pointer;}
-
-                                                 &:first-child tr th:first-child {border-top-left-radius:0;}
-                                                 &:first-child tr th:last-child {border-top-right-radius:0;}
-                                                 &:last-child tr th:first-child {border-bottom-left-radius:0.7rem;}
-                                                 &:last-child tr th:last-child {border-bottom-right-radius:0.7rem;}
+                                                 box-shadow:none;
 
                                                  &:first-child {border-bottom:1px solid var(--gray3);}
                                                  &:last-child {border-top:1px solid var(--gray3);}
 
                                                  tr {
                                                         th {padding:0.7rem 0.3rem 0.3rem;
-                                                        text-align:center;
+                                                            font-size:1rem;
+                                                            text-align:center;
+                                                            text-transform:uppercase;
                                                                &:first-child {padding:1rem 0.1rem 0.3rem 1rem;
-                                                                             text-align:left;}
+                                                                              text-align:left;}
 
-                                                               &:nth-child(2) {padding:0.7rem 0.5rem 0.3rem 0.5rem;
-                                                                             text-align:left;
-                                                                      label {cursor:pointer;}
-                                                               }
+                                                               &:nth-child(2) {padding:0.7rem 0.5rem 0.3rem 1.5rem;
+                                                                               text-align:left;}
                                                         }
                                                  }
                                           }
@@ -3717,7 +3707,7 @@ header {width:100%;
                                                                &:first-child {padding:1.4rem 0rem 2rem 0.9rem;
                                                                               width:0;}
                             
-                                                               &:nth-child(2) {padding:1.1rem 0.5rem 2rem 0.5rem;
+                                                               &:nth-child(2) {padding:1.1rem 0.5rem 2rem 1.5rem;
                                                                                text-align:left;}
 
                                                                .product-field {gap:1rem;
@@ -3757,7 +3747,7 @@ header {width:100%;
                                           }
 
                                           @media(max-width:768px){ tbody tr td .buttons {bottom:0;
-                                                                                    left:-0.5rem;} }
+                                                                                         left:-0.5rem;} }
                                    }
                             
                      }
