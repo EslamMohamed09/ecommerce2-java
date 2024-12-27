@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -4242,6 +4243,43 @@ header .small-menu .small-menu-link {
   background-color: transparent;
   box-shadow: none;
 }
+.products-page .products-page-container .managing-products .manage-products-table-block table .checkbox-product {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table .checkbox-product input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table .checkbox-product .checkmark {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  background-color: var(--gray2);
+  border-radius: 0.2rem;
+  position: relative;
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table .checkbox-product input[type=checkbox]:checked + .checkmark {
+  background-color: var(--blue6);
+  border-color: var(--blue16);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block table .checkbox-product input[type=checkbox]:checked + .checkmark::after {
+  content: "✔";
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: var(--white);
+  font-weight: bold;
+  border: solid var(-white);
+  border-width: 0 0.2rem 0.2rem 0;
+  box-sizing: border-box;
+}
 .products-page .products-page-container .managing-products .manage-products-table-block table thead {
   padding: 1rem 0.9rem;
   border-radius: 0;
@@ -4262,7 +4300,7 @@ header .small-menu .small-menu-link {
   color: var(--gray7);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:first-child {
-  padding: 1rem 0.1rem 0.3rem 1rem;
+  padding: 1rem 0.1rem 1rem 1rem;
   text-align: left;
 }
 .products-page .products-page-container .managing-products .manage-products-table-block table thead tr th:nth-child(2) {
