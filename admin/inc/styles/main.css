@@ -4186,32 +4186,37 @@ header .small-menu .small-menu-link {
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search #submit-search #submit-searchi {
   color: var(--blue2);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-btn {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-product-btn {
   width: 9rem;
   height: 3rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.15rem;
   margin-left: auto;
   font-size: 1.5rem;
   text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
   user-select: none;
   cursor: pointer;
   color: var(--blue16);
-  background: transparent;
-  border: 2px solid transparent;
-  border-image: linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
-  border-image-slice: 1;
   border-radius: 0.3rem;
-  position: relative;
+  background: linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-btn:hover {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-product-btn span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-product-btn:hover span {
   color: var(--white);
-  background-image: linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
+  background: transparent;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-btn svg {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-product-btn svg {
   font-size: 1.1rem;
   margin-right: 0.5rem;
 }
