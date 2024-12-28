@@ -616,6 +616,10 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
   renderPagination(1);
 }
 
+function truncateWords(text, wordsCount){
+  return text.split(' ').slice(0,wordsCount).join(' ');
+}
+
 /*
  ===============================
  ######## CUSTOMERS PAGE #######
@@ -859,6 +863,7 @@ fetch('pages/products.json').then(response => response.json())
 
     products.forEach((product) => {
       const row = document.createElement('tr');
+      const truncateTitle = truncateWords(product.title, 4);
       row.innerHTML = `
         <td>
           <label class="checkbox-product">
@@ -869,7 +874,7 @@ fetch('pages/products.json').then(response => response.json())
         <td>
           <div class="product-field d-flex-r-st-c">
             <a href="#" class="image"><img src="${product.image[0]}" alt=""></a>
-            <a href="#" class="product-title">${product.title}</a>
+            <a href="#" class="product-title">${truncateTitle}</a>
           </div>
         </td>  
         <td>${product.id}</td>
@@ -894,7 +899,6 @@ fetch('pages/products.json').then(response => response.json())
 
   pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
-
 
 
 }
