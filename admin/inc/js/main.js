@@ -685,7 +685,7 @@ fetch('pages/customers.json').then(response => response.json())
 if(document.querySelector('.category-page')){
 fetch('pages/categories.json').then(response => response.json())
 .then(data => {
-  const categories = data.categories
+  const categories = data.categories;
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
   const manageCategoriesTable = document.querySelector('.category-page #manage-category-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
@@ -723,10 +723,8 @@ fetch('pages/categories.json').then(response => response.json())
   }
 
   pagination(categories, 10, renderCategoryContent, paginationContainer);
-})
-.catch(error => console.error('Error loading JSON:', error));
+}).catch(error => console.error('Error loading JSON:', error));
 }
-
 
 /*
  =============================
@@ -849,18 +847,58 @@ if(document.querySelector('.messages-page')){
  =============================
 */
 if(document.querySelector('.products-page')){
+
 fetch('pages/products.json').then(response => response.json())
 .then(data => {
   const products = data.products;
   const productstbody = document.querySelector('.products-page #products-tbody');
-  const productsPagepaginationContainer = document.querySelector('.products-page .pagination');
+  const productsPagePaginationContainer = document.querySelector('.products-page .pagination');
 
-  
+  function renderProductsTable(products){
+    productstbody.innerHTML = '';
 
-}).catch(error => console.error('Error loading JSON:', error))
+    products.forEach((product) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>
+          <label class="checkbox-product">
+            <input type="checkbox" name="checkbox[]">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td>
+          <div class="product-field d-flex-r-st-c">
+            <a href="#" class="image"><img src="${product.image[0]}" alt=""></a>
+            <a href="#" class="product-title">${product.title}</a>
+          </div>
+        </td>  
+        <td>${product.id}</td>
+        <td>${product.instock}</td>
+        <td>${product.salePrice}</td>
+        <td>
+          <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>${product.rating}</span></div>
+        </td>
+        <td>sheduled</td>
+        <td>watches</td>
+        <td>
+          <div class="action-buttons d-flex-r-c-c">
+            <button class="view"><i class="fas fa-eye"></i></button>
+            <button class="edit"><i class="far fa-edit"></i></button>
+            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        </td>
+      `;
+      productstbody.appendChild(row);
+    });
+  }
+
+  pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
+}).catch(error => console.error('Error loading JSON:', error));
+
 
 
 }
+
 
 /*
  =============================
