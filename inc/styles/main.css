@@ -257,8 +257,9 @@
   --box-shadow4:0 0 3px #eee;
   --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
   --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
-  --box-shadow7:0 0 6px rgba(2, 2, 2, 0.199);
-  --box-shadow8:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+  --box-shadow7:0 0 3px rgba(27, 27, 27, 0.116);
+  --box-shadow8:0 0 6px rgba(2, 2, 2, 0.199);
+  --box-shadow9:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
   --orange-box-shadow:0 1px 0.9rem #fd9103c5;
   --red-box-shadow:0 0.1rem 1rem #e9290779;
   --aqua-box-shadow:0 0 6px #00c7c7;
@@ -1689,8 +1690,8 @@ header .login-drawer.openingLoginDrawer {
   position: relative;
 }
 .popular-products-section .products-container .product-item .header-item .image img {
-  width: 70%;
-  height: 55%;
+  width: 60%;
+  height: 45%;
   object-fit: contain;
   transition: all 0.4s linear;
   position: absolute;
@@ -1940,6 +1941,7 @@ header .login-drawer.openingLoginDrawer {
   padding: 0;
   padding-top: 3rem;
   background-color: var(--white);
+  box-shadow: var(--box-shadow7);
 }
 .offers-section .inner-col .offersblock {
   position: relative;
@@ -1962,12 +1964,12 @@ header .login-drawer.openingLoginDrawer {
   position: relative;
 }
 .offers-section .inner-col .offersblock .product-item .image img {
-  height: 60%;
-  object-fit: contain;
-  transition: all 1s linear;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  height: 50%;
+  object-fit: contain;
+  transition: all 1s linear;
 }
 .offers-section .inner-col .offersblock .product-item .image img:last-child:not(:only-child) {
   visibility: hidden;
@@ -2003,9 +2005,9 @@ header .login-drawer.openingLoginDrawer {
   color: var(--primary);
 }
 .offers-section .inner-col .offersblock .product-item .product-content {
+  width: 100%;
   gap: 0.8rem;
   padding: 0 0.5rem;
-  width: 100%;
   background-color: transparent;
 }
 .offers-section .inner-col .offersblock .product-item .product-content .product-title {
@@ -2050,7 +2052,6 @@ header .login-drawer.openingLoginDrawer {
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  background-color: red;
 }
 .offers-section .inner-col .offersblock .owl-nav .owl-prev,
 .offers-section .inner-col .offersblock .owl-nav .owl-next {
@@ -2092,15 +2093,15 @@ header .login-drawer.openingLoginDrawer {
 .offers-section .row .right-block .inner-col .offersblock .items .product-item .image {
   height: 10rem;
 }
-
 @media (max-width: 768px) {
   .offers-section .left-block {
     margin-bottom: 2rem;
   }
-  .offersblock .product-item .image img {
+  .offers-section .offersblock .product-item .image img {
     height: 55%;
   }
 }
+
 /*
  *****************
  # Today Deal
