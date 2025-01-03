@@ -731,7 +731,6 @@ section {padding:2rem 7%;
        &:hover::after {width:100%;}
 }
 
-
 img {max-width:100%;
      object-fit:contain;}
 
@@ -830,7 +829,6 @@ header {position:fixed;
                 margin:0 !important;
                 z-index:1000000;
                 transition:all 1s linear;
-                
 
     .upper {padding:0.4rem 3%;
             border-top:1px solid var(--olive17);
@@ -900,7 +898,6 @@ header {position:fixed;
               }
         }
       }
-
     }
 
     .bottom {padding:0 3%;
@@ -925,7 +922,6 @@ header {position:fixed;
       }
       
     }
-
   }
 
   .login-drawer {position:fixed;
@@ -1288,7 +1284,6 @@ header {position:fixed;
     #prev:hover {background-color:transparent;}
 
     #next:hover {background-color:transparent;}
-
 }
 
 @media (min-width:768px) and (max-width:1000px) { .banner-section .banner-slide-item .left-block p {width:85%;} 
@@ -2089,13 +2084,25 @@ header {position:fixed;
 }
 
 
-/********************
- # Brands
-********************/
-.brand-section img {width:9rem !important;
-                    height:4rem !important;
-                    margin:4rem auto;
-                    cursor:pointer;}
+/*
+ *****************
+  # Brands
+ *****************
+*/
+.brand-section .slider-wrapper {flex-direction:row;
+                                flex-wrap:nowrap;
+                                margin:0 auto;
+                                gap:3rem;
+        .image {flex:1 1 10rem;
+                margin:3rem auto;
+                text-align:center;
+                cursor:pointer;
+ 
+              img {width:7rem;
+                   height:7rem;
+                   margin:1rem auto !important;}
+        }
+}
 
 /**************
 # Quick view
@@ -2264,9 +2271,11 @@ header {position:fixed;
 
 }
 
-/********************
-# Footer
-********************/
+/*
+ ******************
+  # Footer
+ ******************
+*/
 footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);
         padding:4rem 0 0;
 
@@ -2362,9 +2371,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   footer .bottom-footer .visa-cards img {height:1.5rem;}
 }
 
-/***************
+/*
+ ===============
  # single-page
-***************/
+ ===============
+*/
 #single-page .product-container {margin-bottom:3rem;
 
       .left-block {
@@ -2525,9 +2536,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
 @media(max-width:510px){#single-page .b-btn {width:100%;}}
 
-/****************
+/*
+ ================
  # Category-Page
-****************/
+ ================
+*/
 #category-page {padding:2rem 2% 0;
 
   .category-information {width:100%;
@@ -3193,9 +3206,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   }
 }
 
-/***************
+/*
+ ==============
  # cart-page
-***************/
+ ==============
+*/
 .cart-page {padding:2rem 5% 3rem;
 
   .page-hierarchy {gap:0.8rem;
@@ -3415,9 +3430,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   }
 }
 
-/****************
+/*
+ ===============
  # checkout-page
-****************/
+ ===============
+*/
 .checkout-page {padding:0;
 
   .left-block {padding:1rem 3rem 1rem 6% !important;
@@ -3718,9 +3735,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   
 }
 
-/*===================
- # Payment Page
-====================*/
+/*
+ ==================
+  # Payment Page
+ ==================
+*/
 .payment-section {background:var(--aqua);
                   padding:5rem 4rem 6rem;
 
