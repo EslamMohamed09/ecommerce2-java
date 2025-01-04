@@ -216,61 +216,7 @@ function generateStarRating(rating) {
   return starsHTML;
 }
 
-// function fetchDesiredProducts(desiredProducts, desiredProductsContainer, groupProductsFn) {
-  
-//   desiredProductsContainer.innerHTML = '';
-
-//   fetch('/pages/products.json').then(response => response.json())
-//   .then(data => {
-//       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
-
-//       filteredProducts.forEach(product => {
-//         const description = product.description
-//                           ? product.description.slice(0, 17)
-//                           : product.aboutThisItem
-//                           ? product.aboutThisItem.slice(0, 17)
-//                           : product.color;
-
-//         const image1 = product.image && product.image[0] ? product.image[0] : 'default-image.jpg';
-//         const image2 = product.image && product.image[1] ? product.image[1] : '';
-
-//         const productHtml = `
-//           <div class="product-item ${product.off}">
-//             <div class="image">
-//               <img src="${image1}" alt="Product Image">
-//               ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
-//             </div>
-//             <div class="icons">
-//               <a href="#"><i class="far fa-heart"></i></a>
-//               <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
-//             </div>
-//             <div class="product-content d-flex-c-bt-st">
-//               <a href="pages/single.html?id=${product.id}" class="product-title">
-//                 ${product.title.split(' ').slice(0, 3).join(' ')}
-//               </a>
-//               <p>${description}...</p>
-//               <div class="ratings d-flex-r-st-st">
-//                 ${generateStarRating(product.rating)}
-//               </div>
-//               <div class="price d-flex-r-bt-c">
-//                 <strong>${product.price}</strong>
-//                 <strong>${product.salePrice}</strong>
-//               </div>
-//             </div>
-//           </div>
-//         `;
-
-//         desiredProductsContainer.innerHTML += productHtml;
-//       });
-
-//       groupProductsFn(document.querySelectorAll(`.${desiredProductsContainer.classList[0]} .product-item`));
-
-//   }).catch(error => {
-//     console.error('Error fetching products:', error);
-//   });
-// }
-
-function createOneGroupedProducts(desiredProducts, desiredProductsContainer, productsSelector) {
+function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
   desiredProductsContainer.innerHTML = '';
 
@@ -278,153 +224,65 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer, pro
   .then(data => {
       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
 
+      const groupedProducts = {};
+
       filteredProducts.forEach(product => {
-        const description = product.description
-                          ? product.description.slice(0, 17)
-                          : product.aboutThisItem
-                          ? product.aboutThisItem.slice(0, 17)
-                          : product.color;
-
-        const image1 = product.image && product.image[0] ? product.image[0] : 'default-image.jpg';
-        const image2 = product.image && product.image[1] ? product.image[1] : '';
-
-        const productHtml = `
-          <div class="product-item ${product.off}">
-            <div class="image">
-              <img src="${image1}" alt="Product Image">
-              ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
-            </div>
-            <div class="icons">
-              <a href="#"><i class="far fa-heart"></i></a>
-              <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
-            </div>
-            <div class="product-content d-flex-c-bt-st">
-              <a href="pages/single.html?id=${product.id}" class="product-title">
-                ${product.title.split(' ').slice(0, 3).join(' ')}
-              </a>
-              <p>${description}...</p>
-              <div class="ratings d-flex-r-st-st">
-                ${generateStarRating(product.rating)}
-              </div>
-              <div class="price d-flex-r-bt-c">
-                <strong>${product.price}</strong>
-                <strong>${product.salePrice}</strong>
-              </div>
-            </div>
-          </div>
-        `;
-
-        desiredProductsContainer.innerHTML += productHtml;
+        const discountClass = product.off.replace('%', '');
+        if (!groupedProducts[discountClass]) {groupedProducts[discountClass] = [];}
+        groupedProducts[discountClass].push(product);
       });
+
+      for (const [discount, products] of Object.entries(groupedProducts)) {
+          
+         const offersBlock = document.createElement('div');
+               offersBlock.className = `offersblock offersblock${discount}`;
+
+          products.forEach((product) => {
+            const productItem = document.createElement('div');
+                  productItem.className = `product-item ${product.off}`;
+
+                  const description = product.description
+                                    ? product.description.slice(0, 17)
+                                    : product.aboutThisItem
+                                    ? product.aboutThisItem.slice(0, 17)
+                                    : product.color;
+
+                  const image1 = product.image?.[0] ?? 'default-image.jpg';
+                  const image2 = product.image?.[1] ?? '';
+
+                  productItem.innerHTML = `
+                      <div class="image">
+                        <img src="${image1}" alt="Product Image">
+                        ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
+                      </div>
+                      <div class="icons">
+                        <a href="#"><i class="far fa-heart"></i></a>
+                        <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
+                      </div>
+                      <div class="product-content d-flex-c-bt-st">
+                        <a href="pages/single.html?id=${product.id}" class="product-title">
+                          ${product.title.split(' ').slice(0, 3).join(' ')}
+                        </a>
+                        <p>${description}...</p>
+                        <div class="ratings d-flex-r-st-st">
+                          ${generateStarRating(product.rating)}
+                        </div>
+                        <div class="price d-flex-r-bt-c">
+                          <strong>${product.price}</strong>
+                          <strong>${product.salePrice}</strong>
+                        </div>
+                      </div>
+                  `;
+
+            offersBlock.appendChild(productItem);
+          });
+        desiredProductsContainer.appendChild(offersBlock);
+      }
 
   }).catch(error => {
     console.error('Error fetching products:', error);
   });
-
-  const productItems = Array.from(productsSelector);
-  const groupedProducts = {};
-
-  productItems.forEach(productItem => {
-    const className = productItem.classList[1];
-    if (!groupedProducts[className]) {groupedProducts[className] = [];}
-    groupedProducts[className].push(productItem);
-  });
-
-  for (const [className, products] of Object.entries(groupedProducts)) {
-       const offersBlock = document.createElement('div');
-             offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
- 
-       products.forEach(product => {
-         offersBlock.appendChild(product);
-       });
- 
-       desiredProductsContainer.appendChild(offersBlock);
-  }
 }
-
-// function createTwoGroupedProducts(desiredProducts, desiredProductsContainer, productsSelector) {
-
-//   desiredProductsContainer.innerHTML = '';
-
-//   fetch('/pages/products.json').then(response => response.json())
-//   .then(data => {
-//       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
-
-//       filteredProducts.forEach(product => {
-//         const description = product.description
-//                           ? product.description.slice(0, 17)
-//                           : product.aboutThisItem
-//                           ? product.aboutThisItem.slice(0, 17)
-//                           : product.color;
-
-//         const image1 = product.image && product.image[0] ? product.image[0] : 'default-image.jpg';
-//         const image2 = product.image && product.image[1] ? product.image[1] : '';
-
-//         const productHtml = `
-//           <div class="product-item ${product.off}">
-//             <div class="image">
-//               <img src="${image1}" alt="Product Image">
-//               ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
-//             </div>
-//             <div class="icons">
-//               <a href="#"><i class="far fa-heart"></i></a>
-//               <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
-//             </div>
-//             <div class="product-content d-flex-c-bt-st">
-//               <a href="pages/single.html?id=${product.id}" class="product-title">
-//                 ${product.title.split(' ').slice(0, 3).join(' ')}
-//               </a>
-//               <p>${description}...</p>
-//               <div class="ratings d-flex-r-st-st">
-//                 ${generateStarRating(product.rating)}
-//               </div>
-//               <div class="price d-flex-r-bt-c">
-//                 <strong>${product.price}</strong>
-//                 <strong>${product.salePrice}</strong>
-//               </div>
-//             </div>
-//           </div>
-//         `;
-
-//         desiredProductsContainer.innerHTML += productHtml;
-//       });
-
-//   }).catch(error => {
-//     console.error('Error fetching products:', error);
-//   });
-
-//   const productItems = Array.from(productsSelector);
-//   const groupedProducts = {};
-
-//   productItems.forEach(productItem => {
-//     const className = productItem.classList[1];
-//     if (!groupedProducts[className]) {groupedProducts[className] = [];}
-//     groupedProducts[className].push(productItem);
-//   });
-
-//   for (const [className, products] of Object.entries(groupedProducts)) {
-//     const offersBlock = document.createElement('div');
-//     offersBlock.className = `offersblock offersblock${className.replace('%', '')}`;
-
-//     // let itemsBlock = document.createElement('div');
-//     //     itemsBlock.className = 'items';
-//     let itemCount = 0;
-
-//     products.forEach((product, index) => {
-//       itemCount++;
-
-//       if (itemCount === 10 || index === products.length - 1) {
-//           let itemsBlock = document.createElement('div');
-//               itemsBlock.className = 'items';
-//               itemsBlock.appendChild(product);
-//           offersBlock.appendChild(itemsBlock);
-//             itemCount = 0;
-//       }
-//     });
-
-//     desiredProductsContainer.appendChild(offersBlock);
-//   }
-// }
 
 function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
   desiredProductsContainer.innerHTML = ''; 
@@ -497,21 +355,13 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 
         desiredProductsContainer.appendChild(offersBlock);
       }
-    })
-    .catch(error => {
-      console.error('Error fetching products:', error);
+    }).catch(error => {
+       console.error('Error fetching products:', error);
     });
 }
 
 if (document.querySelector(".offers-section")){
-    // createOneGroupedProducts(firstDesiredDiscounts, 
-    //                          document.querySelector(".offers-section .left-block .inner-col"), 
-    //                          document.querySelectorAll(".offers-section .left-block .inner-col .product-item"));
-    
-    // createTwoGroupedProducts(secondDesiredDiscounts, 
-    //                          document.querySelector(".offers-section .right-block .inner-col"),
-    //                          document.querySelectorAll(".offers-section .right-block .inner-col .product-item"));
-
+    createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .inner-col"));
     createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .inner-col"));
 }
 
@@ -544,13 +394,11 @@ $(document).ready(function(){
     
   }
 
-  // sliderWithFilterTabs('.offers-section .left-block .tabs li', '.offers-section .left-block .inner-col > div', '.offersblock');
+  sliderWithFilterTabs('.offers-section .left-block .tabs li', '.offers-section .left-block .inner-col > div', '.offersblock');
 
   sliderWithFilterTabs('.offers-section .right-block .tabs li', '.offers-section .right-block .inner-col > div', '.offersblock');
 
 });
-
-// sure that there is error because the browser not view any thing and the code damaged all project, I want to use fetchDesiredProducts function twice, the first time in the left block on the section and the second time on the right block of the section
 
 /* 
  ############################
