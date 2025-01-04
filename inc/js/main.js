@@ -276,6 +276,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
             offersBlock.appendChild(productItem);
           });
+          
         desiredProductsContainer.appendChild(offersBlock);
       }
 

@@ -906,9 +906,9 @@ h5 {
 }
 
 /*
- **************
+ *************
  # Header
- **************
+ *************
 */
 header {
   position: fixed;
@@ -2100,9 +2100,9 @@ header .login-drawer.openingLoginDrawer {
 }
 
 /*
- *****************
+ ***************
  # Today Deal
- *****************
+ ***************
 */
 .today-deal-section .section-container {
   flex-wrap: wrap;
@@ -2145,7 +2145,6 @@ header .login-drawer.openingLoginDrawer {
 .today-deal-section .section-container .right-block .image img {
   height: 10rem;
 }
-
 @media (max-width: 768px) {
   .today-deal-section .section-container {
     flex-direction: column-reverse;
@@ -2166,6 +2165,7 @@ header .login-drawer.openingLoginDrawer {
     height: 7rem;
   }
 }
+
 /*
  ******************
  # Feature Products
@@ -2173,26 +2173,40 @@ header .login-drawer.openingLoginDrawer {
 */
 .feature-products-section .product-card {
   border-radius: 0.6rem;
-  box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow6);
 }
 .feature-products-section .product-card h4 {
   color: var(--gray11);
   font-size: 1.1rem;
 }
-.feature-products-section .product-card button {
-  margin-top: 1rem;
-}
 .feature-products-section .left-block .product-card {
   padding: 5rem 2rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.7rem;
 }
 .feature-products-section .left-block .product-card .content {
-  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.3rem;
 }
 .feature-products-section .left-block .product-card .content p {
   font-size: 1rem;
   font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.feature-products-section .left-block .product-card .image img {
+  height: 28rem;
 }
 .feature-products-section .right-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -2206,8 +2220,9 @@ header .login-drawer.openingLoginDrawer {
   justify-content: center;
   align-items: flex-end;
 }
-.feature-products-section .right-block .product-card:first-child .content h4 {
-  margin-bottom: 1rem;
+.feature-products-section .right-block .product-card:first-child .content p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 .feature-products-section .right-block .product-card:first-child .image img {
   height: 14rem;
@@ -2217,31 +2232,56 @@ header .login-drawer.openingLoginDrawer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 .feature-products-section .right-block .product-card:nth-child(2) .image {
+  width: 100%;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 .feature-products-section .right-block .product-card:nth-child(2) .image img {
-  height: 11rem;
+  height: 9rem;
+}
+.feature-products-section .right-block .product-card:nth-child(2) .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.feature-products-section .right-block .product-card:nth-child(2) .content h4 {
+  margin-bottom: 0.5rem;
 }
 .feature-products-section .right-block .product-card:nth-child(3) {
   flex: 1 1 15rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 .feature-products-section .right-block .product-card:nth-child(3) .image {
+  width: 100%;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 .feature-products-section .right-block .product-card:nth-child(3) .image img {
-  height: 11rem;
+  height: 9rem;
+}
+.feature-products-section .right-block .product-card:nth-child(3) .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.feature-products-section .right-block .product-card:nth-child(3) .content h4 {
+  margin-bottom: 0.5rem;
 }
 
 /*
- *******************
+ *****************
   # month deal
- *******************
+ *****************
 */
 .month-deal-section .product-card {
   display: grid;
@@ -2425,9 +2465,11 @@ header .login-drawer.openingLoginDrawer {
   margin: 1rem auto !important;
 }
 
-/**************
-# Quick view
-**************/
+/*
+ *************
+ # Quick view
+ *************
+*/
 .quick-view-modal {
   display: none;
   position: fixed;
@@ -2603,9 +2645,9 @@ header .login-drawer.openingLoginDrawer {
 }
 
 /*
- ******************
+ **************
   # Footer
- ******************
+ **************
 */
 footer {
   background: linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);

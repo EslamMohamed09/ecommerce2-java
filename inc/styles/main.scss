@@ -781,9 +781,9 @@ h5 {font-size:1rem;}
 }
 
 /*
- **************
+ *************
  # Header
- **************
+ *************
 */
 header {position:fixed;
         top:0;
@@ -1809,9 +1809,9 @@ header {position:fixed;
 }
 
 /*
- *****************
+ ***************
  # Today Deal
- *****************
+ ***************
 */
 .today-deal-section {
   .section-container {flex-wrap:wrap;
@@ -1852,23 +1852,24 @@ header {position:fixed;
     }
 
   }
-}
 
-@media(max-width:768px){
-  .today-deal-section .section-container {flex-direction:column-reverse;
-                                          background:radial-gradient(circle at 50% 26%, var(--olive19) 15%, var(--olive24) 40%);}
+  @media(max-width:768px){
+    .section-container {flex-direction:column-reverse;
+                        background:radial-gradient(circle at 50% 26%, var(--olive19) 15%, var(--olive24) 40%);}
 
-    .today-deal-section .section-container .left-block .content span {margin-top:3rem;}
-}
+    .section-container .left-block .content span {margin-top:3rem;}
+  }
 
-@media(max-width:280px){
-  .today-deal-section .section-container {background:radial-gradient(circle at 50% 26%, var(--olive19) 8%, var(--olive24) 30%);
-    
-    .left-block {padding:5% 5% 5% 7%;}
-
-    .right-block .image img {height:7rem;}
+  @media(max-width:280px){
+    .section-container {background:radial-gradient(circle at 50% 26%, var(--olive19) 8%, var(--olive24) 30%);
+      
+      .left-block {padding:5% 5% 5% 7%;}
+  
+      .right-block .image img {height:7rem;}
+    }
   }
 }
+
 
 /*
  ******************
@@ -1878,66 +1879,108 @@ header {position:fixed;
 .feature-products-section {
 
   .product-card {border-radius:0.6rem;
-                 box-shadow:var(--box-shadow2);
+                 box-shadow:var(--box-shadow6);
 
     h4 {color:var(--gray11);
         font-size:1.1rem;}
-
-    button {margin-top:1rem;}
   }
 
   .left-block {
     .product-card {padding:5rem 2rem 2rem;
-      .content {gap:0.4rem;
+                   display:flex;
+                   flex-direction:row;
+                   justify-content:center;
+                   align-items:flex-start;
+                   gap:0.7rem;
+
+      .content {display:flex;
+                flex-direction:column;
+                justify-content:flex-start;
+                align-items:flex-start;
+                gap:0.3rem;
+
         p {font-size:1rem;
-           font-weight:bold;}
-        
+           font-weight:bold;
+           margin-bottom:0.3rem;}
+      }
+
+      .image {
+        img {height:28rem;}
       }
     }
   }
 
-  .right-block {flex-wrap:wrap;
-              gap:1.5rem;
+  .right-block {display:flex;
+                flex-direction:row;
+                justify-content:center;
+                align-items:center;
+                flex-wrap:wrap;
+                gap:1.5rem;
 
-      .product-card {padding:1.5rem 1rem;}
+      .product-card {padding:1.5rem 1rem;
 
-      .product-card:first-child {flex:1 1 30rem;
-                                 display:flex;
-                                 flex-direction:row;
-                                 justify-content:center;
-                                 align-items:flex-end;
-        .content {
-          h4 {margin-bottom:1rem;}
+        &:first-child {flex:1 1 30rem;
+                       display:flex;
+                       flex-direction:row;
+                       justify-content:center;
+                       align-items:flex-end;
+          .content {
+            p {margin-bottom:0.5rem;
+               font-weight:bold;}
+          }
+          .image {
+            img {height:14rem;}
+          }
         }
-        .image img {height:14rem;}
-      }
+
+        &:nth-child(2) {flex:1 1 15rem;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items:flex-start;
+                        gap:0.6rem;
+
+          .image {width:100%;
+                  margin-bottom:0.7rem;
+                  text-align:center;
+            img {height:9rem;}
+          }
+          .content {display:flex;
+                    flex-direction:column;
+                    justify-content:flex-start;
+                    align-items:flex-start;
+            h4 {margin-bottom:0.5rem;}
+          }
+        }
       
-      .product-card:nth-child(2) {flex:1 1 15rem;
-                                  display:flex;
-                                  flex-direction:column;
-                                  justify-content:center;
-                                  align-items:center;
-        .image {margin-bottom:0.7rem;
-          img {height:11rem;}
-        }
-      }
-      
-      .product-card:nth-child(3) {flex:1 1 15rem;
-                                  display:flex;
-                                  flex-direction:column;
-                                  align-items:center;
-        .image {margin-bottom:0.7rem;
-          img {height:11rem;}
-        }
-      }
+        &:nth-child(3) {flex:1 1 15rem;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items:flex-start;
+                        gap:0.6rem;
 
+          .image {width:100%;
+                  margin-bottom:0.7rem;
+                  text-align:center;
+
+            img {height:9rem;}
+          }
+          .content {display:flex;
+                    flex-direction:column;
+                    justify-content:flex-start;
+                    align-items:flex-start;
+            h4 {margin-bottom:0.5rem;}
+          }
+        }
+      }
   }
 }
 
 /*
- *******************
+ *****************
   # month deal
- *******************
+ *****************
 */
 .month-deal-section {
   .product-card {display:grid;
@@ -2114,9 +2157,11 @@ header {position:fixed;
         }
 }
 
-/**************
-# Quick view
-**************/
+/*
+ *************
+ # Quick view
+ *************
+*/
 .quick-view-modal {display:none;
                    position:fixed;
                    top:19%;
@@ -2279,9 +2324,9 @@ header {position:fixed;
 }
 
 /*
- ******************
+ **************
   # Footer
- ******************
+ **************
 */
 footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);
         padding:4rem 0 0;
