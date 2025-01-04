@@ -1904,6 +1904,10 @@ header .login-drawer.openingLoginDrawer {
   # Offers
  ************
 */
+.offers-section .section-heading {
+  top: 1.49rem;
+  margin: 0;
+}
 .offers-section .tabs {
   gap: 1.5rem;
   margin: 0 0 1.5rem 0;
@@ -1950,7 +1954,6 @@ header .login-drawer.openingLoginDrawer {
   margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
-  /* content */
 }
 .offers-section .inner-col .offersblock .product-item .image {
   width: 90%;
@@ -2029,6 +2032,7 @@ header .login-drawer.openingLoginDrawer {
 .offers-section .inner-col .offersblock .product-item .product-content .price {
   flex-wrap: nowrap;
   width: 100%;
+  padding: 0 1%;
   background-color: transparent;
 }
 .offers-section .inner-col .offersblock .product-item .product-content .price strong:first-child {
@@ -2074,13 +2078,6 @@ header .login-drawer.openingLoginDrawer {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 0;
-}
-.offers-section .row {
-  position: relative;
-}
-.offers-section .row .section-heading {
-  position: absolute;
-  top: 0;
 }
 .offers-section .row .left-block .inner-col .offersblock .product-item .image {
   height: 20rem;
