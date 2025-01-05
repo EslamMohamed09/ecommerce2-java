@@ -280,6 +280,11 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
         desiredProductsContainer.appendChild(offersBlock);
       }
 
+      const offersBlock = document.querySelectorAll('.offers-section .left-block .inner-col .offersblock');
+            offersBlock.forEach((block) => {block.style.display = "none"});
+
+      filterTabs(document.querySelectorAll('.offers-section .left-block .tabs li'), offersBlock);
+
   }).catch(error => {
     console.error('Error fetching products:', error);
   });
@@ -356,6 +361,12 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 
         desiredProductsContainer.appendChild(offersBlock);
       }
+
+      const offersBlock = document.querySelectorAll('.offers-section .right-block .inner-col .offersblock');
+            offersBlock.forEach((block) => {block.style.display = "none"});
+
+      filterTabs(document.querySelectorAll('.offers-section .right-block .tabs li'), offersBlock);
+
     }).catch(error => {
        console.error('Error fetching products:', error);
     });
@@ -364,42 +375,67 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 if (document.querySelector(".offers-section")){
     createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .inner-col"));
     createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .inner-col"));
+
+    function filterTabs(tabs, blocks){
+
+      if (tabs.length === 0 || blocks.length === 0) return;
+
+      tabs[0].classList.add('active');
+      blocks[0].style.display = "block";
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          let offerClass = tab.getAttribute('class').replace('%', '');
+
+          tabs.forEach((tab) => {tab.classList.remove('active')});
+          blocks.forEach((block) => {block.style.display = "none";});
+
+          tab.classList.add('active');
+          
+          blocks.forEach((block) => {
+            if(block.classList.contains(`offersblock${offerClass}`)){block.style.display = "block"}
+          });
+
+        });
+      });
+    }
 }
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  function sliderWithFilterTabs(tabs, blocks, secondClassBlock){
+//   function sliderWithFilterTabs(tabs, blocks, secondClassBlock){
 
-    $(tabs).first().addClass('active');
-    $(blocks).hide();
-    $(blocks).first().show();
+//     $(tabs).first().addClass('active');
+//     $(blocks).hide();
+//     $(blocks).first().show();
 
-    $(tabs).click(function() {
-      var offerClass = secondClassBlock + $(this).attr('class').replace('%', '');
-      $(tabs).removeClass('active');
-      $(this).addClass('active');
-      $(blocks).hide().removeClass('active');
-      $(offerClass).show().addClass('active');
-    });
+//     $(tabs).click(function() {
+//       var offerClass = secondClassBlock + $(this).attr('class').replace('%', '');
+//       $(tabs).removeClass('active');
+//       $(this).addClass('active');
+//       $(blocks).hide().removeClass('active');
+//       $(offerClass).show().addClass('active');
+//     });
 
-    $(blocks).each(function() {
-      $(this).addClass('owl-carousel');
-      $(this).owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        dots:false,
-        items:1
-      });
-    });
+//     $(blocks).each(function() {
+//       $(this).addClass('owl-carousel');
+//       $(this).owlCarousel({
+//         loop:true,
+//         margin:10,
+//         nav:true,
+//         dots:false,
+//         items:1
+//       });
+//     });
     
-  }
+//   }
 
-  sliderWithFilterTabs('.offers-section .left-block .tabs li', '.offers-section .left-block .inner-col > div', '.offersblock');
+//   sliderWithFilterTabs('.offers-section .left-block .tabs li', '.offers-section .left-block .inner-col > div', '.offersblock');
+//   sliderWithFilterTabs('.offers-section .right-block .tabs li', '.offers-section .right-block .inner-col > div', '.offersblock');
 
-  sliderWithFilterTabs('.offers-section .right-block .tabs li', '.offers-section .right-block .inner-col > div', '.offersblock');
+// });
 
-});
+
 
 /* 
  ############################
