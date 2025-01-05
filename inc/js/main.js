@@ -216,6 +216,191 @@ function generateStarRating(rating) {
   return starsHTML;
 }
 
+function dotsSlider2(options) {
+    const {
+        section = 'slider-section',
+        containerSelector = '.slides-container',
+        dotsSelector = '#sliderdots',
+        prevArrowSelector = '.arrow-left',
+        nextArrowSelector = '.arrow-right',
+        autoplaySpeed = 3000
+    } = options;
+
+    let sliderSection = document.querySelector(section);
+    let sliderContainer = document.querySelector(containerSelector);
+    let currentIndex = 0;
+    let slides;
+    let dotsWrapper = document.querySelector(dotsSelector);
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+    let autoSlideInterval;
+    const gapSize = 0;
+
+    function setupSlider() {
+        slides = sliderContainer.children;
+        sliderContainer.style.display = 'flex';
+        sliderContainer.style.overflow = 'hidden';
+        updateSlidesToShow();
+    }
+
+    function buildDots() {
+        dotsWrapper.innerHTML = '';
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.index = i;
+            dotsWrapper.appendChild(dot);
+        }
+        updateDots();
+    }
+
+    function updateDots() {
+        const dots = dotsWrapper.children;
+        Array.from(dots).forEach(dot => dot.classList.remove('active'));
+        if (dots[currentIndex]) {
+            dots[currentIndex].classList.add('active');
+        }
+    }
+
+    function updateSlidesToShow() {
+        const wrapperWidth = sliderContainer.clientWidth;
+        const slideWidth = wrapperWidth; // Full width for one slide
+        Array.from(slides).forEach(slide => {
+            slide.style.flex = `0 0 ${slideWidth}px`;
+            slide.style.maxWidth = `${slideWidth}px`;
+        });
+    }
+
+    function scrollToSlide() {
+        const wrapperWidth = sliderContainer.clientWidth;
+        const scrollPosition = currentIndex * wrapperWidth;
+
+        function animateScroll(start, end, duration) {
+            let startTime = null;
+    
+            function animation(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuad(timeElapsed, start, end - start, duration);
+    
+                sliderContainer.scrollLeft = run;
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+    
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+    
+            requestAnimationFrame(animation);
+        }
+
+        animateScroll(sliderContainer.scrollLeft, scrollPosition, 700);
+        
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+            sliderContainer.scrollTo({ left: 0 });
+        }
+
+        updateDots();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+        scrollToSlide();
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        scrollToSlide();
+    }
+
+    function attachEvents() {
+        const prevButton = document.querySelector(prevArrowSelector);
+        const nextButton = document.querySelector(nextArrowSelector);
+
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+        window.addEventListener('resize', updateSlidesToShow);
+
+        Array.from(dotsWrapper.children).forEach(dot => {
+            dot.addEventListener('click', e => {
+                currentIndex = parseInt(e.target.dataset.index);
+                scrollToSlide();
+            });
+        });
+
+        sliderContainer.addEventListener('mousedown', startDrag);
+        sliderContainer.addEventListener('mousemove', duringDrag);
+        sliderContainer.addEventListener('mouseup', endDrag);
+        sliderContainer.addEventListener('mouseleave', endDrag);
+    }
+
+    function startDrag(e) {
+      isDragging = true;
+      startX = e.clientX;
+      scrollStart = sliderContainer.scrollLeft;
+    }
+
+    function duringDrag(e) {
+      if (!isDragging) return;
+      const dragDistance = e.clientX - startX;
+      sliderContainer.scrollLeft = scrollStart - dragDistance;
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+
+      const wrapperWidth = sliderContainer.clientWidth;
+      const threshold = wrapperWidth / 4; // Drag sensitivity threshold
+      const currentScroll = sliderContainer.scrollLeft;
+      const targetScroll = currentIndex * wrapperWidth;
+
+      if (Math.abs(currentScroll - targetScroll) > threshold) {
+          if (currentScroll > targetScroll) {
+              nextSlide();
+          } else {
+              prevSlide();
+          }
+      } else {
+          scrollToSlide();
+      }
+    }
+
+    setupSlider();
+    buildDots();
+    updateSlidesToShow();
+    attachEvents();
+}
+
+function filterTabs(tabs, blocks){
+
+  if (tabs.length === 0 || blocks.length === 0) return;
+
+  tabs[0].classList.add('active');
+  blocks[0].style.display = "block";
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      let offerClass = tab.getAttribute('class').replace('%', '');
+
+      tabs.forEach((tab) => {tab.classList.remove('active')});
+      blocks.forEach((block) => {block.style.display = "none";});
+
+      tab.classList.add('active');
+      
+      blocks.forEach((block) => {
+        if(block.classList.contains(`offersblock${offerClass}`)){block.style.display = "block"}
+      });
+
+    });
+  });
+}
+
 function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
   desiredProductsContainer.innerHTML = '';
@@ -375,30 +560,6 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 if (document.querySelector(".offers-section")){
     createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .inner-col"));
     createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .inner-col"));
-
-    function filterTabs(tabs, blocks){
-
-      if (tabs.length === 0 || blocks.length === 0) return;
-
-      tabs[0].classList.add('active');
-      blocks[0].style.display = "block";
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          let offerClass = tab.getAttribute('class').replace('%', '');
-
-          tabs.forEach((tab) => {tab.classList.remove('active')});
-          blocks.forEach((block) => {block.style.display = "none";});
-
-          tab.classList.add('active');
-          
-          blocks.forEach((block) => {
-            if(block.classList.contains(`offersblock${offerClass}`)){block.style.display = "block"}
-          });
-
-        });
-      });
-    }
 }
 
 // $(document).ready(function(){
