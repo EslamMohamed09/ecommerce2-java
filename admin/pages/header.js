@@ -2,7 +2,7 @@ const headerContent = `
   <div class="left-header">
   
     <div class="logo">
-      <img src="inc/images/brand/brand6.png" alt="">
+      <img src="inc/images/brands/underarmour.png" alt="">
       <h2>ecommerce</h2>
     </div>
 
