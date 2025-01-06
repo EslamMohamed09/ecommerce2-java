@@ -236,7 +236,8 @@ function blockSlider(options) {
     const gapSize = 0;
 
     function setupSlider() {
-        slides = Array.from(sliderContainer.children).filter(slide => slide.classList.contains('items'));
+        slides = Array.from(sliderContainer.children).filter(slide => !slide.classList.contains('arrows') 
+                                                                   && !slide.id.includes('sliderdots'));
         sliderContainer.style.display = 'flex';
         sliderContainer.style.overflow = 'hidden';
         updateSlidesToShow();
