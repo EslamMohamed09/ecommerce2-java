@@ -431,12 +431,31 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
             offersBlock.appendChild(productItem);
           });
+
+          const arrowsHolder = document.createElement('div');
+                arrowsHolder.classList.add('arrows');
+                arrowsHolder.innerHTML = `
+                  <button class="prev-btn"><i class="fa fa-angle-left"></i></button>
+                  <button class="next-btn"><i class="fa fa-angle-right"></i></button>
+                `;
+
+        offersBlock.appendChild(arrowsHolder);
           
         desiredProductsContainer.appendChild(offersBlock);
       }
 
       const offersBlock = document.querySelectorAll('.offers-section .left-block .inner-col .offersblock');
-            offersBlock.forEach((block) => {block.style.display = "none"});
+
+      offersBlock.forEach((block) => {
+        blockSlider({
+          section:'.offers-section .left-block',
+          containerSelector:block,
+          prevArrowSelector:block.querySelector('.arrows .prev-btn'),
+          nextArrowSelector:block.querySelector('.arrows .next-btn'),
+        });
+      });
+
+      offersBlock.forEach((block) => {block.style.display = "none"});
 
       filterTabs(document.querySelectorAll('.offers-section .left-block .tabs li'), offersBlock);
 
