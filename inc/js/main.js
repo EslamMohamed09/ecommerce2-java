@@ -216,21 +216,19 @@ function generateStarRating(rating) {
   return starsHTML;
 }
 
-function dotsSlider2(options) {
+function blockSlider(options) {
     const {
         section = 'slider-section',
         containerSelector = '.slides-container',
-        dotsSelector = '#sliderdots',
         prevArrowSelector = '.arrow-left',
         nextArrowSelector = '.arrow-right',
         autoplaySpeed = 3000
     } = options;
 
     let sliderSection = document.querySelector(section);
-    let sliderContainer = document.querySelector(containerSelector);
+    let sliderContainer = containerSelector instanceof Element ? containerSelector : document.querySelector(containerSelector);
     let currentIndex = 0;
     let slides;
-    let dotsWrapper = document.querySelector(dotsSelector);
     let isDragging = false;
     let startX = 0;
     let scrollStart = 0;
@@ -238,29 +236,10 @@ function dotsSlider2(options) {
     const gapSize = 0;
 
     function setupSlider() {
-        slides = sliderContainer.children;
+        slides = Array.from(sliderContainer.children).filter(slide => !slide.classList.contains('arrows'));
         sliderContainer.style.display = 'flex';
         sliderContainer.style.overflow = 'hidden';
         updateSlidesToShow();
-    }
-
-    function buildDots() {
-        dotsWrapper.innerHTML = '';
-        for (let i = 0; i < slides.length; i++) {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            dot.dataset.index = i;
-            dotsWrapper.appendChild(dot);
-        }
-        updateDots();
-    }
-
-    function updateDots() {
-        const dots = dotsWrapper.children;
-        Array.from(dots).forEach(dot => dot.classList.remove('active'));
-        if (dots[currentIndex]) {
-            dots[currentIndex].classList.add('active');
-        }
     }
 
     function updateSlidesToShow() {
@@ -304,8 +283,6 @@ function dotsSlider2(options) {
             currentIndex = 0;
             sliderContainer.scrollTo({ left: 0 });
         }
-
-        updateDots();
     }
 
     function prevSlide() {
@@ -319,19 +296,12 @@ function dotsSlider2(options) {
     }
 
     function attachEvents() {
-        const prevButton = document.querySelector(prevArrowSelector);
-        const nextButton = document.querySelector(nextArrowSelector);
+        const prevButton = prevArrowSelector;
+        const nextButton = nextArrowSelector;
 
         prevButton.addEventListener('click', prevSlide);
         nextButton.addEventListener('click', nextSlide);
         window.addEventListener('resize', updateSlidesToShow);
-
-        Array.from(dotsWrapper.children).forEach(dot => {
-            dot.addEventListener('click', e => {
-                currentIndex = parseInt(e.target.dataset.index);
-                scrollToSlide();
-            });
-        });
 
         sliderContainer.addEventListener('mousedown', startDrag);
         sliderContainer.addEventListener('mousemove', duringDrag);
@@ -372,7 +342,6 @@ function dotsSlider2(options) {
     }
 
     setupSlider();
-    buildDots();
     updateSlidesToShow();
     attachEvents();
 }
@@ -382,7 +351,7 @@ function filterTabs(tabs, blocks){
   if (tabs.length === 0 || blocks.length === 0) return;
 
   tabs[0].classList.add('active');
-  blocks[0].style.display = "block";
+  blocks[0].style.display = "flex";
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -394,7 +363,7 @@ function filterTabs(tabs, blocks){
       tab.classList.add('active');
       
       blocks.forEach((block) => {
-        if(block.classList.contains(`offersblock${offerClass}`)){block.style.display = "block"}
+        if(block.classList.contains(`offersblock${offerClass}`)){block.style.display = "flex"}
       });
 
     });
@@ -476,7 +445,6 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 }
 
 function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
-  desiredProductsContainer.innerHTML = ''; 
 
   fetch('/pages/products.json').then(response => response.json())
     .then(data => {
@@ -544,11 +512,30 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
             }
           });
 
+          const arrowsHolder = document.createElement('div');
+                arrowsHolder.classList.add('arrows');
+                arrowsHolder.innerHTML = `
+                  <button class="prev-btn"><i class="fa fa-angle-left"></i></button>
+                  <button class="next-btn"><i class="fa fa-angle-right"></i></button>
+                `;
+
+              offersBlock.appendChild(arrowsHolder);
+
         desiredProductsContainer.appendChild(offersBlock);
       }
 
       const offersBlock = document.querySelectorAll('.offers-section .right-block .inner-col .offersblock');
-            offersBlock.forEach((block) => {block.style.display = "none"});
+
+      offersBlock.forEach((block) => {
+        blockSlider({
+          section:'.offers-section .right-block',
+          containerSelector:block,
+          prevArrowSelector:block.querySelector('.arrows .prev-btn'),
+          nextArrowSelector:block.querySelector('.arrows .next-btn'),
+        });
+      });
+
+      offersBlock.forEach((block) => {block.style.display = "none"});
 
       filterTabs(document.querySelectorAll('.offers-section .right-block .tabs li'), offersBlock);
 
@@ -561,41 +548,6 @@ if (document.querySelector(".offers-section")){
     createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .inner-col"));
     createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .inner-col"));
 }
-
-// $(document).ready(function(){
-
-//   function sliderWithFilterTabs(tabs, blocks, secondClassBlock){
-
-//     $(tabs).first().addClass('active');
-//     $(blocks).hide();
-//     $(blocks).first().show();
-
-//     $(tabs).click(function() {
-//       var offerClass = secondClassBlock + $(this).attr('class').replace('%', '');
-//       $(tabs).removeClass('active');
-//       $(this).addClass('active');
-//       $(blocks).hide().removeClass('active');
-//       $(offerClass).show().addClass('active');
-//     });
-
-//     $(blocks).each(function() {
-//       $(this).addClass('owl-carousel');
-//       $(this).owlCarousel({
-//         loop:true,
-//         margin:10,
-//         nav:true,
-//         dots:false,
-//         items:1
-//       });
-//     });
-    
-//   }
-
-//   sliderWithFilterTabs('.offers-section .left-block .tabs li', '.offers-section .left-block .inner-col > div', '.offersblock');
-//   sliderWithFilterTabs('.offers-section .right-block .tabs li', '.offers-section .right-block .inner-col > div', '.offersblock');
-
-// });
-
 
 
 /* 
