@@ -2628,7 +2628,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
       .block {margin:0 0 1.5rem;
               border-radius:0.5rem;
               background-color:var(--white);
-              box-shadow:var(--box-shadow2);
+              box-shadow:var(--box-shadow6);
 
         h4 {font-weight:bold;
             border-top-left-radius:0.5rem;
@@ -2652,83 +2652,84 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
               align-items:center;
               gap:1rem;
               flex-wrap:nowrap;
-              padding-left:0.7rem;}
+              padding-left:0.7rem;
 
-          li:first-child {border-top-left-radius:0.5rem;
-                          border-top-right-radius:0.5rem;}
+            &:first-child {border-top-left-radius:0.5rem;
+                           border-top-right-radius:0.5rem;}
 
-          li:last-child {border-bottom-left-radius:0.5rem;
-                         border-bottom-right-radius:0.5rem;}
+            &:last-child {border-bottom-left-radius:0.5rem;
+                          border-bottom-right-radius:0.5rem;}
 
-          li a {font-weight:bold;
-                color:var(--gray9);
-                font-size:1rem;}
+            a {font-weight:bold;
+               color:var(--gray9);
+               font-size:1rem;}
 
-          li input[type="checkbox"] {width:0;
-                                     height:0;
-                                     opacity:0;
-                                     cursor:pointer;}
+            input[type="checkbox"] {width:0;
+                                    height:0;
+                                    opacity:0;
+                                    cursor:pointer;}
 
-          li label {display:flex;
-                    flex-direction:row;
-                    gap:1rem;
-                    cursor:pointer;
-                    margin:0;
-                    padding-left:1rem;
-                    position:relative;}
+            label {display:flex;
+                   flex-direction:row;
+                   gap:1rem;
+                   cursor:pointer;
+                   margin:0;
+                   padding-left:1rem;
+                   position:relative;
 
-          li label p {font-size:1.3rem;}
+              p {font-size:1.3rem;}
 
-          li label::before {content:"";
-                            position:absolute;
-                            left:-1rem;
-                            top:5px;
-                            width:17px;
-                            height:17px;
-                            background-color:transparent;
-                            border:1.5px solid #6d6b6b;
-                            border-radius:0.2rem;}
+              &::before {content:"";
+                         position:absolute;
+                         left:-1rem;
+                         top:5px;
+                         width:17px;
+                         height:17px;
+                         background-color:transparent;
+                         border:1.5px solid #6d6b6b;
+                         border-radius:0.2rem;}
 
-          li label #fa-check {position:absolute;
-                              left:-10.68px;
-                              top:5.5px;
-                              color:var(--black);
-                              transform:scale(0);
-                              transition:transform 0.1s ease-in-out;}
+               #fa-check {position:absolute;
+                          left:-10.68px;
+                          top:5.5px;
+                          color:var(--black);
+                          transform:scale(0);
+                          transition:transform 0.1s ease-in-out;}
+            }
 
-          li input[type="checkbox"]:checked + label #fa-check {transform:scale(1)}
+            input[type="checkbox"]:checked + label #fa-check {transform:scale(1)}
+          }
         }
       }
 
       form .submit-button {width:100%;}
 
       .categories-block {
-         h4 {text-transform:uppercase;
-             background-color:var(--yellow10);}
-                                                                          
-         ul li {padding:0.7rem;}
-
-         ul li:not(:last-child) {border-bottom:1px solid var(--gray4);}
-
+          h4 {text-transform:uppercase;
+              background-color:var(--yellow10);}
+                                                                           
+          ul li {padding:0.7rem;}
+ 
+          ul li:not(:last-child) {border-bottom:1px solid var(--gray4);}
       }
 
-      .parent-categories-block {box-shadow:var(--box-shadow2);
+      .parent-categories-block {box-shadow:var(--box-shadow6);
                                 background-color:transparent;
                                 border-radius:0.5rem;
 
         li {padding:0.7rem 1rem 0.3rem 0;
-            background-color:var(--white);}
+            background-color:var(--white);
 
-        li:not(:last-child) {border-bottom:1px solid var(--gray4);}
+          &:not(:last-child) {border-bottom:1px solid var(--gray4);}
 
-        li.thiscat {justify-content:space-between;
-                    font-weight:bold;
-                    border-bottom-left-radius:0.5rem;
-                    border-bottom-right-radius:0.5rem;}
+          &.thiscat {justify-content:space-between;
+                     font-weight:bold;
+                     border-bottom-left-radius:0.5rem;
+                     border-bottom-right-radius:0.5rem;}
 
-        li .fa-angle-down {margin:0;
-                           font-size:1rem;}
-
+          .fa-angle-down {margin:0;
+                          font-size:1rem;}
+        }
       }
 
       .price-block {
@@ -2751,7 +2752,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                 font-size:1.6rem;
                 margin:0 0.7rem;}
         }
-
       }
 
      .rating-block ul li .rating {margin-top:0.3rem;}
@@ -2760,8 +2760,8 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
     /*** right-col ***/
     .right-block {margin:0;
-                padding:0 0 0 0.9rem;
-                background-color:transparent;
+                  padding:0 0 0 0.9rem;
+                  background-color:transparent;
 
       /* category-items */
       .category-items {display:grid;
@@ -2834,7 +2834,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                         padding:0.3rem;
                         border-radius:0.5rem;
                         background-color:var(--white);
-                        box-shadow:var(--box-shadow2);
+                        box-shadow:var(--box-shadow6);
 
           .product-item {display:block;
                          padding:1rem;
@@ -2847,8 +2847,8 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                     position:relative;
 
               img {width:80%;
-                        height:70%;
-                        transition:all 0.7s linear;}
+                   height:70%;
+                   transition:all 0.7s linear;}
 
               img:last-child:not(:only-child) {visibility:hidden;
                                                opacity:0;
@@ -2906,11 +2906,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
       .products2-section {
 
-       .products-container {display:grid;
-                            grid-template-columns:repeat(auto-fill,minmax(224px, 1fr));
-                            gap:0.8rem;
-                            padding:0.3rem;
-                            border-radius:0.5rem;
+        .products-container {display:grid;
+                             grid-template-columns:repeat(auto-fill,minmax(224px, 1fr));
+                             gap:0.8rem;
+                             padding:0.3rem;
+                             border-radius:0.5rem;
               
               .product-item {display:block;
                              padding:1rem 0.2rem;
@@ -2919,96 +2919,93 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                              overflow:hidden;
                              position:relative;
 
-                     .image {width:100%;
-                             height:15rem;
-                             margin-bottom:1.2rem;
-                             position:relative;
-                             background-color:var(--gray);
-                             border-bottom:1px solid var(--gray3);
+                    .image {width:100%;
+                            height:15rem;
+                            margin-bottom:1.2rem;
+                            position:relative;
+                            background-color:var(--gray);
+                            border-bottom:1px solid var(--gray3);
 
                             img {width:80%;
                                  height:55%;
                                  object-fit:contain;
                                  transition:all 0.7s linear;}
-                     }
 
-                     .image img:last-child:not(:only-child) {visibility:hidden;
+                            img:last-child:not(:only-child) {visibility:hidden;
                                                              opacity:0;
                                                              position:absolute;
                                                              left:50%;
                                                              transform:translateX(-50%);}
 
-                     .image:hover img:first-child {visibility:hidden;
-                                                   opacity:0;}
+                            &:hover img:first-child {visibility:hidden;
+                                                     opacity:0;}
 
-                     .image:hover img:last-child {visibility:visible;
-                                                  opacity:1;}
+                            &:hover img:last-child {visibility:visible;
+                                                    opacity:1;}
+                    }
 
-                     .icons {width:3rem;
-                             height:5rem;
-                             position:absolute;
-                             top:1.3rem;
-                             right:0.5rem;
-                             background-color:transparent;
-                             transition:all 0.3s linear;
+                    .icons {width:3rem;
+                            height:5rem;
+                            position:absolute;
+                            top:1.3rem;
+                            right:0.5rem;
+                            background-color:transparent;
+                            transition:all 0.3s linear;
 
-                            button {background-color:transparent;
-                                    border:none;
+                          button {background-color:transparent;
+                                  border:none;
 
-                                   #icon {font-size:1.2rem;
-                                          color:var(--gray12);
-                                          background:transparent;}
+                                  #icon {font-size:1.2rem;
+                                        color:var(--gray12);
+                                        background:transparent;}
 
-                                   .fa-heart:hover {color:var(--orange-red2) !important;}
-                            }
+                                  .fa-heart:hover {color:var(--orange-red2) !important;}
+                          }
+                    }
 
-                     }
+                    .content {gap:0.7rem;
+                              width:100%;
+                              padding:0 0.2rem;
+                              text-align:center;
+                              position:relative;
 
-                     .content {gap:0.7rem;
-                               width:100%;
-                               padding:0 0.2rem;
-                               text-align:center;
-                               position:relative;
+                          .product-name {font-size:14px;
+                                          font-weight:bold;
+                                          line-height:1rem;
+                                          color:var(--gray11);}
 
-                            .product-name {font-size:14px;
-                                           font-weight:bold;
-                                           line-height:1rem;
-                                           color:var(--gray11);}
+                          p {color:var(--gray5);
+                              padding:0;
+                              margin:0;}
 
-                            p {color:var(--gray5);
-                               padding:0;
-                               margin:0;}
+                          .ratings {gap:0.1rem;
+                            svg {color:var(--yellow10);
+                                  font-size:1.1rem;}
+                          }
 
-                            .ratings {gap:0.1rem;
-                               svg {color:var(--yellow10);
-                                    font-size:1.1rem;}
-                            }
+                          .product-price {flex-wrap:nowrap;
+                                          width:100%;
+                                          margin:0;
+                                          background-color:transparent;
 
-                            .product-price {flex-wrap:nowrap;
-                                            width:100%;
-                                            margin:0;
-                                            background-color:transparent;
+                                  .oldprice {color:var(--gray7);
+                                            text-decoration:line-through !important;}
 
-                                   .oldprice {color:var(--gray7);
-                                              text-decoration:line-through !important;}
-
-                                   .price {color:var(--orange-red2);}
-                            }
-
-                     }
+                                  .price {color:var(--orange-red2);}
+                          }
+                    }
               }
-       }
+        }
 
       }
 
-      /** categories-products **/
       .categories-products {display:block;
 
         .categoriesproducts1 {padding:3rem 0.3rem 0;
                               margin:1rem 0;
                               border-radius:0.5rem;
                               background-color:var(--white);
-                              box-shadow:var(--box-shadow2);
+                              box-shadow:var(--box-shadow6);
                               position:relative;
 
           .owl-nav {position:absolute;
@@ -3101,7 +3098,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   .categoriesproducts2 {margin:2rem 0;
                         border-radius:0.5rem;
                         background-color:var(--white);
-                        box-shadow:var(--box-shadow2);
+                        box-shadow:var(--box-shadow6);
 
     .categoriesproducts2-container {width:90%;
                                     margin:0 auto;
