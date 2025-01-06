@@ -841,7 +841,9 @@ function infiniteScrollSlider(options) {
   autoSlide();
 }
 
-infiniteScrollSlider({section:'.brand-section', containerSelector:'.brand-section .slider-wrapper'});
+if(document.querySelector('.brand-section')){
+  infiniteScrollSlider({section:'.brand-section', containerSelector:'.brand-section .slider-wrapper'});
+}
 
 /* 
  ##########################
