@@ -68,7 +68,7 @@
   </div>
 </header>
 
-<section id="category-page">
+<section class="category-page">
 
   <div class="category-information d-flex-r-bt-c"> <!-- BAR -->
 
@@ -83,9 +83,9 @@
 
   <div class="category-page-container row">
 
-    <div class="filter-col col-lg-2 col-md-3">
+    <div class="filter-block col-lg-2 col-md-3">
       
-      <div class="categories-block block"> <!-- categories -->
+      <div class="categories-block block">
         <h4><i class="fa-solid fa-bars" id="icon"></i>categories</h4>
         <ul>
           <li><a href="category.html?categoryid=34">pc components</a></li>
@@ -95,11 +95,13 @@
         </ul>
       </div>
 
-      <div class="parent-categories-block block"> <!-- parent-categories -->
-        <ul class="catmenu" id="catmenu"></ul>
+      <div class="parent-categories-block block">
+        <ul class="catmenu" id="catmenu">
+          <!-- Fetch parent categories -->
+        </ul>
       </div>
 
-    </div> <!-- End filter-col -->
+    </div> <!-- End filter-block -->
 
     <div class="right-block col-lg-10 col-md-9">
 
@@ -107,34 +109,6 @@
 
       <div class="this-category-products">
 
-        <div class="products-area">
-
-          <div class="product-item">
-            <div class="image d-flex-r-c-c">
-              <img src="../admin/inc/images/clothes/men/sweatshirt/5/1.jpg" alt="">
-            </div>
-            <div class="icons d-flex-c-bt-c">
-              <button type="button"><i class="far fa-heart" id="icon"></i></button>
-              <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
-            </div>
-            <div class="content d-flex-c-st-c">
-              <a href="single.html?productid=5" class="product-name">Champion Authentic Originals</a>
-              <div class="product-price d-flex-r-c-c">
-                <strong class="oldprice">$15</strong>
-                <strong class="price">$14</strong>
-              </div>
-              <button type="button" class="add-btn">add to card</button>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="pagination"></div>
-
-      </div>
-
-      <section class="products2-section">
-  
         <div class="products-container">
       
           <div class="product-item"> <!-- Item 1 -->
@@ -398,8 +372,10 @@
           </div>
       
         </div>
-      
-      </section>
+
+        <div class="pagination"></div>
+
+      </div>
 
       <div class="categories-products"><!-- get products for all categories childs -->
 
@@ -595,7 +571,6 @@
 
 </section>
 
-
 <section id="category-page-categoriesproducts">
   
   <div class="categoriesproducts2 d-flex-r-c-c">
@@ -651,10 +626,7 @@
       
     </div>
 
-
-    <div class="pagination">
-        
-    </div>
+    <div class="pagination"></div>
 
   </div> <!-- END categoriesproducts3 -->
 

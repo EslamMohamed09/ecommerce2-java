@@ -888,8 +888,7 @@ if(document.querySelector("#single-page")){
   }
 
   function fetchProduct(productId){
-    fetch('/pages/products.json')
-    .then(response => response.json())
+    fetch('/pages/products.json').then(response => response.json())
     .then(data => {
       const product = data.products.find(p => p.id == productId);
       if(product){
@@ -1186,7 +1185,7 @@ if(document.querySelector("#single-page")){
  ######## CATEGORY PAGE #######
  ==============================
 */
-if(document.querySelector("#category-page")){
+if(document.querySelector(".category-page")){
 
   async function loadCategories(){
     const response = await fetch('../admin/pages/categories.json');
@@ -1201,16 +1200,16 @@ if(document.querySelector("#category-page")){
     if(category){
        parentCategories.unshift(category);
 
-       if(category.parentId){
-          return getParentCategories(category.parentId, categories, parentCategories);
-       }
+        if(category.parent_id){
+           return getParentCategories(category.parent_id, categories, parentCategories);
+        }
     }
 
     return parentCategories;
   }
 
   function getChildCategories(categoryId, categories) {
-    return categories.filter(cat => cat.parentId === categoryId);
+    return categories.filter(cat => cat.parent_id === categoryId);
   }
 
   function buildCategoryList(parentCategories, childCategories = []){
@@ -1233,7 +1232,6 @@ if(document.querySelector("#category-page")){
     }
   
     return parentCategoryHTML + childCategoryHTML;
-
   }
 
   async function displayParentAndChildCategories(){
@@ -1252,12 +1250,13 @@ if(document.querySelector("#category-page")){
 
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const childCategories = getChildCategories(currentCategoryId, categories);
-
+       
       const categoryListHTML = buildCategoryList(parentCategories, childCategories);
 
-      document.querySelector('#category-page .filter-col .parent-categories-block .catmenu').innerHTML = categoryListHTML;
+      document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = categoryListHTML;
 
-      const thisCat = document.querySelector("#category-page .filter-col .parent-categories-block .thiscat");
+      const thisCat = document.querySelector(".category-page .filter-block .parent-categories-block .thiscat");
+
       if(childCategories.length > 0){
          thisCat.innerHTML += '<i class="fa fa-angle-down"></i>';
          thisCat.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
@@ -1267,12 +1266,12 @@ if(document.querySelector("#category-page")){
       console.error('Error loading categories:', error);
     }
 
-    const catlist = document.querySelectorAll("#category-page .filter-col .parent-categories-block .catlist");
+    const catlist = document.querySelectorAll(".category-page .filter-block .parent-categories-block .catlist");
     for(let i=0; i<catlist.length; i++){
         catlist[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
     }
 
-    const childsCatList = document.querySelectorAll("#category-page .filter-col .parent-categories-block .childs-catlist");
+    const childsCatList = document.querySelectorAll(".category-page .filter-block .parent-categories-block .childs-catlist");
     const lastCatList = catlist[catlist.length - 1];
     const lastCatListPaddingLeft = window.getComputedStyle(lastCatList).paddingLeft;
 
@@ -1322,16 +1321,16 @@ if(document.querySelector("#category-page")){
   }
 
   async function displayCategoryItems() {
-    const categoryItemsContainer = document.querySelector("#category-page .right-block .category-items");
+    const categoryItemsContainer = document.querySelector(".category-page .right-block .category-items");
   
     const childCategoriesHtml = await buildCategoryList2();
   
     categoryItemsContainer.innerHTML = childCategoriesHtml;
 
-    const categoryItems = document.querySelectorAll('#category-page .right-block .category-item');
+    const categoryItems = document.querySelectorAll('.category-page .right-block .category-item');
 
     categoryItems.forEach(function(categoryItem) {
-      const catItemFooter = categoryItem.querySelector('#category-page .right-block .category-item .cat-item-footer');
+      const catItemFooter = categoryItem.querySelector('.category-page .right-block .category-item .cat-item-footer');
 
       if(catItemFooter && catItemFooter.children.length > 0) {
          categoryItem.classList.add('has-childs-category');
@@ -1342,7 +1341,7 @@ if(document.querySelector("#category-page")){
   displayCategoryItems();
 
 
-  $('#category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({
+  $('.category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({
     loop:true,
     autoplay:true,
     dots:false,
@@ -1365,7 +1364,7 @@ if(document.querySelector("#category-page")){
       1500:{items:7},
       1700:{items:8}
     }     
-  }); $('#category-page .right-block .categories-products .categoriesproducts1 .owl-nav').removeClass('disabled');
+  }); $('.category-page .right-block .categories-products .categoriesproducts1 .owl-nav').removeClass('disabled');
 
   $('#category-page-categoriesproducts .categoriesproducts2-container').owlCarousel({
     loop:true,

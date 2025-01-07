@@ -1660,8 +1660,8 @@ header {position:fixed;
       .offersblock {
 
         .product-item {margin-bottom:1.2rem;
-                      overflow:hidden;
-                      position:relative;
+                       overflow:hidden;
+                       position:relative;
       
           .image {width:90%;
                   margin:auto;
@@ -1711,7 +1711,7 @@ header {position:fixed;
           }
 
           .product-content {width:100%;
-                            gap:0.8rem;
+                            gap:0.5rem;
                             padding:0 0.5rem;
                             background-color:transparent;
 
@@ -1740,8 +1740,7 @@ header {position:fixed;
                                 color:var(--red9);}
             }
           }
-        }
-        
+        }        
       }
 
       .arrows {position:absolute;
@@ -1778,7 +1777,6 @@ header {position:fixed;
         }
       }
     }
-
   }
 
   .row {
@@ -1804,7 +1802,6 @@ header {position:fixed;
         }
       }
     }
-
   }
 
   @media(max-width:768px){
@@ -1875,7 +1872,6 @@ header {position:fixed;
     }
   }
 }
-
 
 /*
  ******************
@@ -2602,7 +2598,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
  # Category-Page
  ================
 */
-#category-page {padding:2rem 2% 0;
+.category-page {padding:2rem 2% 0;
 
   .category-information {width:100%;
                          flex-wrap:wrap;
@@ -2622,8 +2618,8 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   
   .category-page-container {
     
-    .filter-col {display:block;
-                 padding:0 0.3rem 0 0;
+    .filter-block {display:block;
+                   padding:0 0.3rem 0 0;
 
       .block {margin:0 0 1.5rem;
               border-radius:0.5rem;
@@ -2755,15 +2751,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
       }
 
      .rating-block ul li .rating {margin-top:0.3rem;}
-
     }
 
-    /*** right-col ***/
     .right-block {margin:0;
                   padding:0 0 0 0.9rem;
                   background-color:transparent;
 
-      /* category-items */
       .category-items {display:grid;
                        grid-template-columns:repeat(auto-fill,minmax(170px, 1fr));
                        gap:2rem;
@@ -2813,7 +2806,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
           }
 
           .cat-item-footer::-webkit-scrollbar {width:2px;}
-
         }
 
         .category-item.has-childs-category:hover .image {transform:scale(0.7);}
@@ -2825,86 +2817,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                                                    visibility:visible;}
       }
 
-      /* this-category-products */
       .this-category-products {
-
-        .products-area {display:grid;
-                        grid-template-columns:repeat(auto-fill,minmax(180px, 1fr));
-                        gap:1rem;
-                        padding:0.3rem;
-                        border-radius:0.5rem;
-                        background-color:var(--white);
-                        box-shadow:var(--box-shadow6);
-
-          .product-item {display:block;
-                         padding:1rem;
-                         overflow:hidden;
-                         background-color:transparent;
-                         position:relative;
-
-            .image {width:100%;
-                    height:10rem;
-                    position:relative;
-
-              img {width:80%;
-                   height:70%;
-                   transition:all 0.7s linear;}
-
-              img:last-child:not(:only-child) {visibility:hidden;
-                                               opacity:0;
-                                               position:absolute;
-                                               left:50%;
-                                               transform:translateX(-50%);}
-
-              &:hover img:first-child {visibility:hidden;
-                                       opacity:0;}
-
-              &:hover img:last-child {visibility:visible;
-                                      opacity:1;}
-            }
-
-            .icons {width:3rem;
-                    height:5rem;
-                    position:absolute;
-                    top:0;
-                    right:0;
-                    background-color:transparent;
-                    transition:all 0.3s linear;
-
-              button {background-color:transparent;
-
-                #icon {font-size:1.2rem;
-                            padding:0.6rem;
-                            color:var(--gray1);
-                            background:transparent;
-                            border:none;}
-
-                .fa-heart:hover {color:var(--orange-red2) !important;}
-              }
-            }
-
-            .content {gap:0.6rem;
-                      width:100%;
-                      padding:0;
-                      text-align:center;
-                      position:relative;
-
-              .product-name {font-size:1.1rem;
-                             font-weight:bold;
-                             color:var(--gray2);}
-
-              .product-price {flex-wrap:nowrap;
-                              gap:1.6rem;
-                              width:100%;
-                              background-color:transparent;}
-
-              .add-btn {background-color:transparent;}
-            }
-          }
-        }
-      }
-
-      .products2-section {
 
         .products-container {display:grid;
                              grid-template-columns:repeat(auto-fill,minmax(224px, 1fr));
@@ -2996,7 +2909,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                     }
               }
         }
-
       }
 
       .categories-products {display:block;
@@ -3182,7 +3094,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
     }
   }
 
-  /* categoriesproducts3 */
   .categoriesproducts3 {margin:1rem 0;
     .products-area {display:grid;
                     grid-template-columns:repeat(auto-fill,minmax(170px, 1fr));
@@ -3190,7 +3101,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                     padding:0.3rem;
                     border-radius:0.5rem;
                     background-color:var(--white);
-                    box-shadow:var(--box-shadow2);
+                    box-shadow:var(--box-shadow6);
  
       .product-item {display:block;
                      padding:1rem;
