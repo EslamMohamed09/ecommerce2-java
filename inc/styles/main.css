@@ -3178,6 +3178,7 @@ footer .bottom-footer p {
   height: 69%;
   text-align: center;
   border-radius: 50%;
+  object-fit: contain !important;
   transition: all 0.3s linear;
 }
 .category-page .category-page-container .right-block .category-items .category-item h4 {

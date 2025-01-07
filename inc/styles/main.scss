@@ -2781,6 +2781,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                  height:69%;
                  text-align:center;
                  border-radius:50%;
+                 object-fit:contain !important;
                  transition:all 0.3s linear;}
           }
 

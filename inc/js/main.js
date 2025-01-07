@@ -1251,16 +1251,16 @@ if(document.querySelector(".category-page")){
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const childCategories = getChildCategories(currentCategoryId, categories);
        
-      const categoryListHTML = buildCategoryList(parentCategories, childCategories);
+      document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
-      document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = categoryListHTML;
-
-      const thisCat = document.querySelector(".category-page .filter-block .parent-categories-block .thiscat");
+      const thisCatElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscat");
 
       if(childCategories.length > 0){
-         thisCat.innerHTML += '<i class="fa fa-angle-down"></i>';
-         thisCat.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
+         thisCatElement.innerHTML += '<i class="fa fa-angle-down"></i>';
+         thisCatElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
       }
+
+      document.querySelector(".category-page .category-information .category-title").textContent = thisCatElement.textContent.trim();
 
     } catch (error) {
       console.error('Error loading categories:', error);
