@@ -2807,15 +2807,15 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
           }
 
           .cat-item-footer::-webkit-scrollbar {width:2px;}
+
+          &.has-childs-category:hover .image {transform:scale(0.7);}
+
+          &.has-childs-category:hover h4 {transform:translateY(-1.5rem);}
+
+          &.has-childs-category:hover .cat-item-footer {transform:translateY(-1.5rem);
+                                                        opacity:1;
+                                                        visibility:visible;}
         }
-
-        .category-item.has-childs-category:hover .image {transform:scale(0.7);}
-
-        .category-item.has-childs-category:hover h4 {transform:translateY(-1.5rem);}
-
-        .category-item.has-childs-category:hover .cat-item-footer {transform:translateY(-1.5rem);
-                                                                   opacity:1;
-                                                                   visibility:visible;}
       }
 
       .this-category-products {

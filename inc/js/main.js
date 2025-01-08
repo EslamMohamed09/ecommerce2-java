@@ -1257,13 +1257,10 @@ if(document.querySelector(".category-page")){
       if(childCategories.length > 0){
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
          thisCategoryElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
+         document.querySelector(".category-page .category-information .category-stats .childs-count").textContent = `${childCategories.length} categories |`;
       }
 
       document.querySelector(".category-page .category-information .category-title").textContent = thisCategoryElement.textContent.trim();
-
-      if(childCategories.length > 0){
-         document.querySelector(".category-page .category-information .category-stats .childs-count").textContent = `${childCategories.length} categories`;
-      }
 
     } catch (error) {
       console.error('Error loading categories:', error);
