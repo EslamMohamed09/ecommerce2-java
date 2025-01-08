@@ -1296,7 +1296,6 @@ if(document.querySelector(".category-page")){
                       </a>
                       ${childChildsFooterHtml}
                     </div>`
-  
          }).join('');
 
          const categoryItemsContainer = document.createElement('div');
@@ -1309,7 +1308,60 @@ if(document.querySelector(".category-page")){
 
       const categoryProducts = getCategoryProducts(currentCategoryId, products);
 
-      console.log(categoryProducts);
+      if(categoryProducts.length > 0){
+         
+          let categoryProductsHtml = categoryProducts.map((product) => {
+
+            let imageHtml = product.image.map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+            let descriptionHtml = product.description ? `<p>${product.description}<p/>` :
+                                  product.aboutThisItem  ? `<p>${product.aboutThisItem}</p>` : '';
+
+            let ratingHtml = '';
+            if(product.rating){
+              for (let i=1; i<=5; i++) {
+                  if (i <= product.rating) {
+                      ratingHtml += `<i class="fas fa-star"></i>`;
+                  } else if (i - 0.5 === product.rating) {
+                      ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                  } else {
+                      ratingHtml += `<i class="far fa-star"></i>`;
+                  }
+              }
+              ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+            }
+
+            return `<div class="product-item">
+                      <div class="image d-flex-r-c-c">
+                        ${imageHtml}
+                      </div>
+                      <div class="icons d-flex-c-bt-c">
+                        <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                      </div>
+                      <div class="content d-flex-c-st-st">
+                        <a href="single.html" class="product-name">${product.title}</a>
+                        ${descriptionHtml}
+                        ${ratingHtml}
+                        <div class="product-price d-flex-r-bt-c">
+                          <strong class="oldprice">${product.price}</strong>
+                          <strong class="price">${product.salePrice}</strong>
+                        </div>
+                      </div>
+            </div>`
+          }).join('');
+
+          const thisCategoryProducts = document.createElement('div');
+                thisCategoryProducts.classList.add('this-category-products');
+          const productsContainer = document.createElement('div');
+                productsContainer.classList.add('products-container');
+
+          productsContainer.innerHTML = categoryProductsHtml;
+          thisCategoryProducts.appendChild(productsContainer);
+          document.querySelector(".category-page .right-block").appendChild(thisCategoryProducts);
+
+      }
+
 
     } catch (error) {
       console.error('Error loading categories:', error);
