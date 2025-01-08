@@ -1287,7 +1287,10 @@ if(document.querySelector(".category-page")){
   
          }).join('');
 
-         document.querySelector(".category-page .right-block .category-items-container").innerHTML = childCategoriesHtml;
+         const categoryItemsContainer = document.createElement('div');
+               categoryItemsContainer.classList.add('category-items-container');
+               categoryItemsContainer.innerHTML = childCategoriesHtml;
+         document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
       }
 
     } catch (error) {
