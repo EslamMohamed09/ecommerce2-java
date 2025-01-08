@@ -1194,6 +1194,13 @@ if(document.querySelector(".category-page")){
     return data.categories;
   }
 
+  async function loadProducts(){
+    const response = await fetch('../admin/pages/products.json');
+    if(!response.ok){throw new Error('Failed to load products')}
+    const data = await response.json();
+    return data.products;
+  }
+
   function getParentCategories(categoryId, categories, parentCategories = []){
     const category = categories.find(cat => cat.id === categoryId);
 
@@ -1253,7 +1260,8 @@ if(document.querySelector(".category-page")){
       document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
       const thisCategoryElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscategorylist");
-      document.querySelector(".category-page .category-information .category-title").textContent = thisCategoryElement.textContent.trim();
+      const currentCategoryName = thisCategoryElement.textContent.trim();
+      document.querySelector(".category-page .category-information .category-title").textContent = currentCategoryName;
 
       if(childCategories.length > 0){
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
@@ -1262,28 +1270,28 @@ if(document.querySelector(".category-page")){
 
          let childCategoriesHtml = childCategories.map((childCategory) => {
       
-          const childCategoryChilds = getChildCategories(childCategory.id, categories);
-  
-          let childChildsFooterHtml = '';
-          let hasChildClass = '';
-  
-          if (childCategoryChilds.length > 0) {
-              hasChildClass = 'has-child-category';
-              childChildsFooterHtml = `
-                <div class="cat-item-footer d-flex-c-st-st">
-                  ${childCategoryChilds.map(childCategoryChild => `
-                    <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
-                  `).join('')}
-                </div>`;
-          }
-  
-          return `<div class="category-item ${hasChildClass}">
-                    <a href="category.html?id=${childCategory.id}">
-                      <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
-                      <h4>${childCategory.name}</h4>
-                    </a>
-                    ${childChildsFooterHtml}
-                  </div>`
+            const childCategoryChilds = getChildCategories(childCategory.id, categories);
+    
+            let childChildsFooterHtml = '';
+            let hasChildClass = '';
+    
+            if (childCategoryChilds.length > 0) {
+                hasChildClass = 'has-child-category';
+                childChildsFooterHtml = `
+                  <div class="cat-item-footer d-flex-c-st-st">
+                    ${childCategoryChilds.map(childCategoryChild => `
+                      <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
+                    `).join('')}
+                  </div>`;
+            }
+    
+            return `<div class="category-item ${hasChildClass}">
+                      <a href="category.html?id=${childCategory.id}">
+                        <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
+                        <h4>${childCategory.name}</h4>
+                      </a>
+                      ${childChildsFooterHtml}
+                    </div>`
   
          }).join('');
 
@@ -1314,6 +1322,8 @@ if(document.querySelector(".category-page")){
   }
 
   displayParentAndChildCategories();
+
+
 
 
   $('.category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({
