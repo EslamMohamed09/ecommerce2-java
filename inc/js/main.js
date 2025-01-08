@@ -1312,7 +1312,7 @@ if(document.querySelector(".category-page")){
          
           let categoryProductsHtml = categoryProducts.map((product) => {
 
-            let imageHtml = product.image.map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
             let descriptionHtml = product.description ? `<p>${product.description}<p/>` :
                                   product.aboutThisItem  ? `<p>${product.aboutThisItem}</p>` : '';
