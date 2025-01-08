@@ -2991,7 +2991,7 @@ footer .bottom-footer p {
   text-transform: uppercase;
   color: var(--white);
 }
-.category-page .category-information .cat-stats {
+.category-page .category-information .category-stats {
   font-size: 1.4rem;
 }
 .category-page .category-page-container .filter-block {
@@ -3110,7 +3110,7 @@ footer .bottom-footer p {
 .category-page .category-page-container .filter-block .parent-categories-block li:not(:last-child) {
   border-bottom: 1px solid var(--gray4);
 }
-.category-page .category-page-container .filter-block .parent-categories-block li.thiscat {
+.category-page .category-page-container .filter-block .parent-categories-block li.thiscategorylist {
   justify-content: space-between;
   font-weight: bold;
   border-bottom-left-radius: 0.5rem;

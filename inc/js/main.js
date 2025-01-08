@@ -1213,21 +1213,20 @@ if(document.querySelector(".category-page")){
   }
 
   function buildCategoryList(parentCategories, childCategories = []){
-    const totalCategories = parentCategories.length;
+    const totalParentCategories = parentCategories.length;
 
     let parentCategoryHTML = parentCategories.map((parentCategory, index) => {
-      if(index < totalCategories - 1){
-         return `<li class="catlist"><a href="category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a></li>`;
+      if(index < totalParentCategories - 1){
+         return `<li class="categorylist parentcategorylist"><a href="category.html?id=${parentCategory.id}" class="categorylink">${parentCategory.name}</a></li>`;
       } else {
-        return `<li class="catlist thiscat">${parentCategory.name}</li>`;
+        return `<li class="categorylist thiscategorylist">${parentCategory.name}</li>`;
       }
-
     }).join('');
 
     let childCategoryHTML = '';
     if (childCategories.length > 0) {
         childCategoryHTML = childCategories.map(childCategory => {
-          return `<li class="childs-catlist"><a href="category.html?id=${childCategory.id}" class="catlink childs-catlink">${childCategory.name}</a></li>`;
+          return `<li class="childs-categorylist"><a href="category.html?id=${childCategory.id}" class="categorylink childs-categorylink">${childCategory.name}</a></li>`;
         }).join('');
     }
   
@@ -1253,31 +1252,35 @@ if(document.querySelector(".category-page")){
        
       document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
-      const thisCatElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscat");
+      const thisCategoryElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscategorylist");
 
       if(childCategories.length > 0){
-         thisCatElement.innerHTML += '<i class="fa fa-angle-down"></i>';
-         thisCatElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
+         thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
+         thisCategoryElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
       }
 
-      document.querySelector(".category-page .category-information .category-title").textContent = thisCatElement.textContent.trim();
+      document.querySelector(".category-page .category-information .category-title").textContent = thisCategoryElement.textContent.trim();
+
+      if(childCategories.length > 0){
+         document.querySelector(".category-page .category-information .category-stats .childs-count").textContent = `${childCategories.length} categories`;
+      }
 
     } catch (error) {
       console.error('Error loading categories:', error);
     }
 
-    const catlist = document.querySelectorAll(".category-page .filter-block .parent-categories-block .catlist");
-    for(let i=0; i<catlist.length; i++){
-        catlist[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
+    const categorylists = document.querySelectorAll(".category-page .filter-block .parent-categories-block .categorylist");
+    for(let i=0; i<categorylists.length; i++){
+        categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
     }
 
-    const childsCatList = document.querySelectorAll(".category-page .filter-block .parent-categories-block .childs-catlist");
-    const lastCatList = catlist[catlist.length - 1];
+    const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .parent-categories-block .childs-categorylist");
+    const lastCatList = categorylists[categorylists.length - 1];
     const lastCatListPaddingLeft = window.getComputedStyle(lastCatList).paddingLeft;
 
-    if(childsCatList.length > 0){
-       for (let j=0; j<childsCatList.length; j++) {
-            childsCatList[j].style.paddingLeft = (parseFloat(lastCatListPaddingLeft) + 8) + "px";
+    if(childsCategoryLists.length > 0){
+       for (let j=0; j<childsCategoryLists.length; j++) {
+            childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCatListPaddingLeft) + 8) + "px";
        }
     }
   }
