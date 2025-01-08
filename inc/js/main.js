@@ -1316,8 +1316,10 @@ if(document.querySelector(".category-page")){
 
             let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-            let descriptionHtml = product.description ? `<p>${product.description}<p/>` :
-                                  product.aboutThisItem  ? `<p>${product.aboutThisItem}</p>` : '';
+            let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                                    product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+            let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
 
             let ratingHtml = '';
             if(product.rating){
