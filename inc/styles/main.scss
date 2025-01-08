@@ -2716,6 +2716,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         li {padding:0.7rem 1rem 0.3rem 0;
             background-color:var(--white);
 
+            &.categorylist {color:var(--gray10);
+              a {color:var(--gray10);}
+            }
+
           &:not(:last-child) {border-bottom:1px solid var(--gray4);}
 
           &.thiscategorylist {justify-content:space-between;
@@ -2757,10 +2761,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                   padding:0 0 0 0.9rem;
                   background-color:transparent;
 
-      .category-items {display:grid;
-                       grid-template-columns:repeat(auto-fill,minmax(170px, 1fr));
-                       gap:2rem;
-                       margin-bottom:2rem;
+      .category-items-container {display:grid;
+                                 grid-template-columns:repeat(auto-fill,minmax(170px, 1fr));
+                                 gap:2rem;
+                                 margin-bottom:2rem;
 
         .category-item {width:100%;
                         display:block;
@@ -2808,13 +2812,13 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
           .cat-item-footer::-webkit-scrollbar {width:2px;}
 
-          &.has-childs-category:hover .image {transform:scale(0.7);}
+          &.has-child-category:hover .image {transform:scale(0.7);}
 
-          &.has-childs-category:hover h4 {transform:translateY(-1.5rem);}
+          &.has-child-category:hover h4 {transform:translateY(-1.5rem);}
 
-          &.has-childs-category:hover .cat-item-footer {transform:translateY(-1.5rem);
-                                                        opacity:1;
-                                                        visibility:visible;}
+          &.has-child-category:hover .cat-item-footer {transform:translateY(-1.5rem);
+                                                       opacity:1;
+                                                       visibility:visible;}
         }
       }
 

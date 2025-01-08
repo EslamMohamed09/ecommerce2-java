@@ -1262,6 +1262,35 @@ if(document.querySelector(".category-page")){
 
       document.querySelector(".category-page .category-information .category-title").textContent = thisCategoryElement.textContent.trim();
 
+      let childCategoriesHtml = childCategories.map((childCategory) => {
+      
+        const childCategoryChilds = getChildCategories(childCategory.id, categories);
+
+        let childChildsFooterHtml = '';
+        let hasChildClass = '';
+
+        if (childCategoryChilds.length > 0) {
+            hasChildClass = 'has-child-category';
+            childChildsFooterHtml = `
+              <div class="cat-item-footer d-flex-c-st-st">
+                ${childCategoryChilds.map(childCategoryChild => `
+                  <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
+                `).join('')}
+              </div>`;
+        }
+
+        return `<div class="category-item ${hasChildClass}">
+                  <a href="category.html?id=${childCategory.id}">
+                    <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
+                    <h4>${childCategory.name}</h4>
+                  </a>
+                  ${childChildsFooterHtml}
+                </div>`
+
+      }).join('');
+
+      document.querySelector(".category-page .right-block .category-items-container").innerHTML = childCategoriesHtml;
+
     } catch (error) {
       console.error('Error loading categories:', error);
     }
@@ -1271,74 +1300,67 @@ if(document.querySelector(".category-page")){
         categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
     }
 
-    const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .parent-categories-block .childs-categorylist");
-    const lastCatList = categorylists[categorylists.length - 1];
-    const lastCatListPaddingLeft = window.getComputedStyle(lastCatList).paddingLeft;
+    const lastCategoryList = categorylists[categorylists.length - 1];
+    const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
 
+    const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .parent-categories-block .childs-categorylist");
     if(childsCategoryLists.length > 0){
        for (let j=0; j<childsCategoryLists.length; j++) {
-            childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCatListPaddingLeft) + 8) + "px";
+            childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
        }
     }
+
   }
 
   displayParentAndChildCategories();
 
 
-  async function buildCategoryList2(){
+  // async function buildCategoryList2(){
 
-    const params = new URLSearchParams(window.location.search);
-    const currentCategoryId = params.get('id');
+  //   const params = new URLSearchParams(window.location.search);
+  //   const currentCategoryId = params.get('id');
 
-    const categories = await loadCategories();
+  //   const categories = await loadCategories();
 
-    const childCategories = getChildCategories(currentCategoryId, categories)
+  //   const childCategories = getChildCategories(currentCategoryId, categories)
 
-    let childCategoriesHtml = childCategories.map((childCategory) => {
+  //   let childCategoriesHtml = childCategories.map((childCategory) => {
       
-       const childCategoryItems = getChildCategories(childCategory.id, categories);
+  //      const childCategoryItems = getChildCategories(childCategory.id, categories);
 
-       let childFooterHtml = '';
-       if (childCategoryItems.length > 0) {
-           childFooterHtml = `
-             <div class="cat-item-footer d-flex-c-st-st">
-               ${childCategoryItems.map(childCategoryItem => `
-                 <a href="category.html?id=${childCategoryItem.id}" class="category-btn">${childCategoryItem.name}</a>
-               `).join('')}
-             </div>`;
-       }
+  //      let childFooterHtml = '';
+  //      if (childCategoryItems.length > 0) {
+  //          childFooterHtml = `
+  //            <div class="cat-item-footer d-flex-c-st-st">
+  //              ${childCategoryItems.map(childCategoryItem => `
+  //                <a href="category.html?id=${childCategoryItem.id}" class="category-btn">${childCategoryItem.name}</a>
+  //              `).join('')}
+  //            </div>`;
+  //      }
 
-       return `<div class="category-item">
-                 <a href="category.html?id=${childCategory.id}">
-                   <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
-                   <h4>${childCategory.name}</h4>
-                 </a>
-                 ${childFooterHtml}
-               </div>`
-    }).join('');
+  //      return `<div class="category-item">
+  //                <a href="category.html?id=${childCategory.id}">
+  //                  <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
+  //                  <h4>${childCategory.name}</h4>
+  //                </a>
+  //                ${childFooterHtml}
+  //              </div>`
+  //   }).join('');
 
-    return childCategoriesHtml;
-  }
+  //   return childCategoriesHtml;
+  // }
 
-  async function displayCategoryItems() {
-    const categoryItemsContainer = document.querySelector(".category-page .right-block .category-items");
+  // async function displayCategoryItems() {
+  //   const categoryItemsContainer = document.querySelector(".category-page .right-block .category-items");
   
-    const childCategoriesHtml = await buildCategoryList2();
+  //   const childCategoriesHtml = await buildCategoryList2();
   
-    categoryItemsContainer.innerHTML = childCategoriesHtml;
+  //   categoryItemsContainer.innerHTML = childCategoriesHtml;
 
-    const categoryItems = document.querySelectorAll('.category-page .right-block .category-item');
-
-    categoryItems.forEach(function(categoryItem) {
-      const catItemFooter = categoryItem.querySelector('.category-page .right-block .category-item .cat-item-footer');
-
-      if(catItemFooter && catItemFooter.children.length > 0) {
-         categoryItem.classList.add('has-childs-category');
-      }
-    });
-  }
+    
+  // }
   
-  displayCategoryItems();
+  // displayCategoryItems();
 
 
   $('.category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({

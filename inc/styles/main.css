@@ -3107,6 +3107,12 @@ footer .bottom-footer p {
   padding: 0.7rem 1rem 0.3rem 0;
   background-color: var(--white);
 }
+.category-page .category-page-container .filter-block .parent-categories-block li.categorylist {
+  color: var(--gray10);
+}
+.category-page .category-page-container .filter-block .parent-categories-block li.categorylist a {
+  color: var(--gray10);
+}
 .category-page .category-page-container .filter-block .parent-categories-block li:not(:last-child) {
   border-bottom: 1px solid var(--gray4);
 }
@@ -3150,13 +3156,13 @@ footer .bottom-footer p {
   padding: 0 0 0 0.9rem;
   background-color: transparent;
 }
-.category-page .category-page-container .right-block .category-items {
+.category-page .category-page-container .right-block .category-items-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
-.category-page .category-page-container .right-block .category-items .category-item {
+.category-page .category-page-container .right-block .category-items-container .category-item {
   width: 100%;
   display: block;
   text-align: center;
@@ -3166,14 +3172,14 @@ footer .bottom-footer p {
   background-color: transparent;
   position: relative;
 }
-.category-page .category-page-container .right-block .category-items .category-item .image {
+.category-page .category-page-container .right-block .category-items-container .category-item .image {
   width: 11rem;
   height: 11rem;
   border-radius: 50%;
   margin: 0 auto 1rem;
   background-color: var(--gray3);
 }
-.category-page .category-page-container .right-block .category-items .category-item .image img {
+.category-page .category-page-container .right-block .category-items-container .category-item .image img {
   width: 69%;
   height: 69%;
   text-align: center;
@@ -3181,10 +3187,10 @@ footer .bottom-footer p {
   object-fit: contain !important;
   transition: all 0.3s linear;
 }
-.category-page .category-page-container .right-block .category-items .category-item h4 {
+.category-page .category-page-container .right-block .category-items-container .category-item h4 {
   margin: 1rem 0;
 }
-.category-page .category-page-container .right-block .category-items .category-item .cat-item-footer {
+.category-page .category-page-container .right-block .category-items-container .category-item .cat-item-footer {
   max-height: 8rem;
   overflow-y: scroll;
   width: 100%;
@@ -3196,7 +3202,7 @@ footer .bottom-footer p {
   visibility: hidden;
   transition: all 0.3s linear;
 }
-.category-page .category-page-container .right-block .category-items .category-item .cat-item-footer .category-btn {
+.category-page .category-page-container .right-block .category-items-container .category-item .cat-item-footer .category-btn {
   margin: 0;
   width: fit-content;
   text-align: left;
@@ -3204,16 +3210,16 @@ footer .bottom-footer p {
   font-weight: bold;
   color: var(--black2);
 }
-.category-page .category-page-container .right-block .category-items .category-item .cat-item-footer::-webkit-scrollbar {
+.category-page .category-page-container .right-block .category-items-container .category-item .cat-item-footer::-webkit-scrollbar {
   width: 2px;
 }
-.category-page .category-page-container .right-block .category-items .category-item.has-childs-category:hover .image {
+.category-page .category-page-container .right-block .category-items-container .category-item.has-child-category:hover .image {
   transform: scale(0.7);
 }
-.category-page .category-page-container .right-block .category-items .category-item.has-childs-category:hover h4 {
+.category-page .category-page-container .right-block .category-items-container .category-item.has-child-category:hover h4 {
   transform: translateY(-1.5rem);
 }
-.category-page .category-page-container .right-block .category-items .category-item.has-childs-category:hover .cat-item-footer {
+.category-page .category-page-container .right-block .category-items-container .category-item.has-child-category:hover .cat-item-footer {
   transform: translateY(-1.5rem);
   opacity: 1;
   visibility: visible;
