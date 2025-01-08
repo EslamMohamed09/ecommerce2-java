@@ -1314,6 +1314,8 @@ if(document.querySelector(".category-page")){
 
             let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
             let descriptionHtml = product.description ? `<p>${product.description}<p/>` :
                                   product.aboutThisItem  ? `<p>${product.aboutThisItem}</p>` : '';
 
@@ -1340,7 +1342,7 @@ if(document.querySelector(".category-page")){
                         <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
                       </div>
                       <div class="content d-flex-c-st-st">
-                        <a href="single.html" class="product-name">${product.title}</a>
+                        <a href="single.html" class="product-name">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
                         <div class="product-price d-flex-r-bt-c">
