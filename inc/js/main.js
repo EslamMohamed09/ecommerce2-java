@@ -1240,6 +1240,14 @@ if(document.querySelector(".category-page")){
     return parentCategoryHTML + childCategoryHTML;
   }
 
+  function productsCategory(categoryId, products, productsCategory = []){
+    const productCategory = products.find(product => product.catId === categoryId);
+
+    if(productCategory){productsCategory.push(productCategory)}
+
+    return productsCategory;
+  }
+
   async function displayParentAndChildCategories(){
 
     try {
