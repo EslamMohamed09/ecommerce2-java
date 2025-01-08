@@ -1253,43 +1253,42 @@ if(document.querySelector(".category-page")){
       document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
       const thisCategoryElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscategorylist");
+      document.querySelector(".category-page .category-information .category-title").textContent = thisCategoryElement.textContent.trim();
 
       if(childCategories.length > 0){
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
          thisCategoryElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
          document.querySelector(".category-page .category-information .category-stats .childs-count").textContent = `${childCategories.length} categories |`;
-      }
 
-      document.querySelector(".category-page .category-information .category-title").textContent = thisCategoryElement.textContent.trim();
-
-      let childCategoriesHtml = childCategories.map((childCategory) => {
+         let childCategoriesHtml = childCategories.map((childCategory) => {
       
-        const childCategoryChilds = getChildCategories(childCategory.id, categories);
+          const childCategoryChilds = getChildCategories(childCategory.id, categories);
+  
+          let childChildsFooterHtml = '';
+          let hasChildClass = '';
+  
+          if (childCategoryChilds.length > 0) {
+              hasChildClass = 'has-child-category';
+              childChildsFooterHtml = `
+                <div class="cat-item-footer d-flex-c-st-st">
+                  ${childCategoryChilds.map(childCategoryChild => `
+                    <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
+                  `).join('')}
+                </div>`;
+          }
+  
+          return `<div class="category-item ${hasChildClass}">
+                    <a href="category.html?id=${childCategory.id}">
+                      <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
+                      <h4>${childCategory.name}</h4>
+                    </a>
+                    ${childChildsFooterHtml}
+                  </div>`
+  
+         }).join('');
 
-        let childChildsFooterHtml = '';
-        let hasChildClass = '';
-
-        if (childCategoryChilds.length > 0) {
-            hasChildClass = 'has-child-category';
-            childChildsFooterHtml = `
-              <div class="cat-item-footer d-flex-c-st-st">
-                ${childCategoryChilds.map(childCategoryChild => `
-                  <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
-                `).join('')}
-              </div>`;
-        }
-
-        return `<div class="category-item ${hasChildClass}">
-                  <a href="category.html?id=${childCategory.id}">
-                    <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
-                    <h4>${childCategory.name}</h4>
-                  </a>
-                  ${childChildsFooterHtml}
-                </div>`
-
-      }).join('');
-
-      document.querySelector(".category-page .right-block .category-items-container").innerHTML = childCategoriesHtml;
+         document.querySelector(".category-page .right-block .category-items-container").innerHTML = childCategoriesHtml;
+      }
 
     } catch (error) {
       console.error('Error loading categories:', error);
@@ -1309,58 +1308,9 @@ if(document.querySelector(".category-page")){
             childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
        }
     }
-
   }
 
   displayParentAndChildCategories();
-
-
-  // async function buildCategoryList2(){
-
-  //   const params = new URLSearchParams(window.location.search);
-  //   const currentCategoryId = params.get('id');
-
-  //   const categories = await loadCategories();
-
-  //   const childCategories = getChildCategories(currentCategoryId, categories)
-
-  //   let childCategoriesHtml = childCategories.map((childCategory) => {
-      
-  //      const childCategoryItems = getChildCategories(childCategory.id, categories);
-
-  //      let childFooterHtml = '';
-  //      if (childCategoryItems.length > 0) {
-  //          childFooterHtml = `
-  //            <div class="cat-item-footer d-flex-c-st-st">
-  //              ${childCategoryItems.map(childCategoryItem => `
-  //                <a href="category.html?id=${childCategoryItem.id}" class="category-btn">${childCategoryItem.name}</a>
-  //              `).join('')}
-  //            </div>`;
-  //      }
-
-  //      return `<div class="category-item">
-  //                <a href="category.html?id=${childCategory.id}">
-  //                  <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
-  //                  <h4>${childCategory.name}</h4>
-  //                </a>
-  //                ${childFooterHtml}
-  //              </div>`
-  //   }).join('');
-
-  //   return childCategoriesHtml;
-  // }
-
-  // async function displayCategoryItems() {
-  //   const categoryItemsContainer = document.querySelector(".category-page .right-block .category-items");
-  
-  //   const childCategoriesHtml = await buildCategoryList2();
-  
-  //   categoryItemsContainer.innerHTML = childCategoriesHtml;
-
-    
-  // }
-  
-  // displayCategoryItems();
 
 
   $('.category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({
