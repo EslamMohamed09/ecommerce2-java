@@ -1240,12 +1240,8 @@ if(document.querySelector(".category-page")){
     return parentCategoryHTML + childCategoryHTML;
   }
 
-  function productsCategory(categoryId, products, productsCategory = []){
-    const productCategory = products.find(product => product.catId === categoryId);
-
-    if(productCategory){productsCategory.push(productCategory)}
-
-    return productsCategory;
+  function getCategoryProducts(categoryId, products){
+    return products.filter(product => product.catId === categoryId);
   }
 
   async function displayParentAndChildCategories(){
@@ -1308,6 +1304,12 @@ if(document.querySelector(".category-page")){
                categoryItemsContainer.innerHTML = childCategoriesHtml;
          document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
       }
+
+      const products = await loadProducts();
+
+      const categoryProducts = getCategoryProducts(currentCategoryId, products);
+
+      console.log(categoryProducts);
 
     } catch (error) {
       console.error('Error loading categories:', error);
