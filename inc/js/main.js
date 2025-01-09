@@ -1314,6 +1314,14 @@ if(document.querySelector(".category-page")){
 
             let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
+            let colorHtml = product.colors && product.colors.length > 0 
+              ? `<ul class="colors-holder d-flex-r-st-c">
+                    ${product.colors.slice(0,5).map((proColor) =>
+                      `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
+                    ).join('')}
+                </ul>`
+              :'';
+
             let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
@@ -1336,7 +1344,7 @@ if(document.querySelector(".category-page")){
             }
 
             return `<div class="product-item">
-                      <div class="image d-flex-r-c-c">
+                      <div class="image-holder d-flex-r-c-c">
                         ${imageHtml}
                       </div>
                       <div class="icons d-flex-c-bt-c">
@@ -1344,6 +1352,7 @@ if(document.querySelector(".category-page")){
                         <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
                       </div>
                       <div class="content d-flex-c-st-st">
+                        ${colorHtml}
                         <a href="single.html" class="product-name">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
