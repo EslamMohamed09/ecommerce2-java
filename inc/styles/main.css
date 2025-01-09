@@ -3326,7 +3326,7 @@ footer .bottom-footer p {
 }
 .category-page .category-page-container .right-block .this-category-products .products-container .product-item .content .colors-holder .circle-outer .color-circle.checked::before {
   content: "✔";
-  color: white;
+  color: var(--gray2);
   font-size: 0.8rem;
   position: absolute;
   top: 50%;

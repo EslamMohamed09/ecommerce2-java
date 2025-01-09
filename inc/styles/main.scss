@@ -2911,7 +2911,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                                        position:relative;
 
                                             &.checked::before {content:"✔";
-                                                               color:white;
+                                                               color:var(--gray2);
                                                                font-size:0.8rem;
                                                                position:absolute;
                                                                top:50%;

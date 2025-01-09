@@ -1270,7 +1270,11 @@ if(document.querySelector(".category-page")){
       if(childCategories.length > 0){
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
          thisCategoryElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
-         document.querySelector(".category-page .category-information .category-stats .childs-count").textContent = `${childCategories.length} categories |`;
+
+         const childsCount = document.createElement('span');
+               childsCount.classList.add('childs-count');
+               childsCount.textContent = `${childCategories.length} categories |`;
+         document.querySelector(".category-page .category-information .category-stats").appendChild(childsCount);
 
          let childCategoriesHtml = childCategories.map((childCategory) => {
       
@@ -1309,6 +1313,11 @@ if(document.querySelector(".category-page")){
       const categoryProducts = getCategoryProducts(currentCategoryId, products);
 
       if(categoryProducts.length > 0){
+
+          const categoryProductsCount = document.createElement('span');
+                categoryProductsCount.classList.add('category-products-count');
+                categoryProductsCount.textContent = `${categoryProducts.length} products`;
+          document.querySelector(".category-page .category-information .category-stats").appendChild(categoryProductsCount);
          
           let categoryProductsHtml = categoryProducts.map((product) => {
 
@@ -1375,7 +1384,7 @@ if(document.querySelector(".category-page")){
 
       }
 
-      handleColorProduct();
+      handleProductColor();
 
     } catch (error) {
       console.error('Error loading categories:', error);
@@ -1710,7 +1719,7 @@ if(document.querySelector(".payment-section")){
  ####### GLOBAL #######
  ######################
 */
-function handleColorProduct(){
+function handleProductColor(){
 
   const productColors = document.querySelectorAll('.colors-holder .circle-outer .color-circle');
         
