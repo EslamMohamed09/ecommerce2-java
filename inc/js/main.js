@@ -1347,7 +1347,7 @@ if(document.querySelector(".category-page")){
                         <a href="single.html" class="product-name">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
-                        <div class="product-price d-flex-r-bt-c">
+                        <div class="price-holder d-flex-r-bt-c">
                           <strong class="oldprice">${product.price}</strong>
                           <strong class="price">${product.salePrice}</strong>
                         </div>

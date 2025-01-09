@@ -1575,9 +1575,7 @@ header {position:fixed;
                                           margin:0;
                                           background-color:transparent;
 
-                                  .oldprice {color:var(--gray5);
-                                            font-weight:normal;
-                                            text-decoration:line-through !important;}
+                                  .oldprice {font-weight:normal;}
 
                                   .price {color:var(--orange-red2);}
                           }
@@ -2825,13 +2823,14 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
       .this-category-products {
 
         .products-container {display:grid;
-                             grid-template-columns:repeat(auto-fill,minmax(224px, 1fr));
+                             grid-template-columns:repeat(auto-fill,minmax(190px, 1fr));
                              gap:0.8rem;
-                             padding:0.3rem;
-                             border-radius:0.5rem;
+                             padding:0 0.3rem !important;
+                             margin:0;
               
               .product-item {display:block;
-                             padding:1rem 0.2rem;
+                             padding:0 0.2rem;
+                             margin:0;
                              margin-bottom:1rem;
                              background-color:transparent;
                              overflow:hidden;
@@ -2883,31 +2882,30 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
                     .content {gap:0.7rem;
                               width:100%;
-                              padding:0 0.2rem;
+                              padding:0 4%;
                               text-align:center;
                               position:relative;
-
+                          
                           .product-name {font-size:14px;
-                                          font-weight:bold;
-                                          line-height:1rem;
-                                          color:var(--gray11);}
+                                         font-weight:bold;
+                                         line-height:1rem;
+                                         color:var(--gray11);}
 
                           p {color:var(--gray5);
-                              padding:0;
-                              margin:0;}
+                             padding:0;
+                             margin:0;
+                             width:fit-content;
+                             text-align:left;}
 
                           .ratings {gap:0.1rem;
                             svg {color:var(--yellow10);
                                   font-size:1.1rem;}
                           }
 
-                          .product-price {flex-wrap:nowrap;
-                                          width:100%;
-                                          margin:0;
-                                          background-color:transparent;
-
-                                  .oldprice {color:var(--gray7);
-                                            text-decoration:line-through !important;}
+                          .price-holder {flex-wrap:nowrap;
+                                         width:100%;
+                                         margin:0;
+                                         background-color:transparent;
 
                                   .price {color:var(--orange-red2);}
                           }
