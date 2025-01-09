@@ -140,7 +140,7 @@
 
     {"id":"70", "name":"boat", "Image":"../admin/inc/images/clothes/women/shoes/boat/5/1.png", "parent_id":"68"},
 
-    {"id":"71", "name":"sandal", "Image":"../admin/inc/images/clothes/women/shoes/sandals/1/1.png", "parent_id":"68"},
+    {"id":"71", "name":"sandals", "Image":"../admin/inc/images/clothes/women/shoes/sandals/1/1.png", "parent_id":"68"},
 
     {"id":"72", "name":"running", "Image":"../admin/inc/images/clothes/women/shoes/athletic/running/roadrunning/2/1.png", "parent_id":"69"},
 
