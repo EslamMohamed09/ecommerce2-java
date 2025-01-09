@@ -1375,6 +1375,7 @@ if(document.querySelector(".category-page")){
 
       }
 
+      handleColorProduct();
 
     } catch (error) {
       console.error('Error loading categories:', error);
@@ -1397,8 +1398,6 @@ if(document.querySelector(".category-page")){
   }
 
   displayParentAndChildCategories();
-
-
 
 
   $('.category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({
@@ -1704,4 +1703,25 @@ if(document.querySelector(".checkout-page") || document.querySelector(".payment-
 */
 if(document.querySelector(".payment-section")){
    const cartItems = JSON.parse(localStorage.getItem('product-cart')) || [];
+}
+
+/*
+ ######################
+ ####### GLOBAL #######
+ ######################
+*/
+function handleColorProduct(){
+
+  const productColors = document.querySelectorAll('.colors-holder .circle-outer .color-circle');
+        
+  productColors.forEach((productColor) => {
+    productColor.addEventListener('click', function(){
+      const productItem = this.closest('.product-item');
+  
+      productItem.querySelectorAll('.color-circle').forEach(productC => productC.classList.remove('checked'));
+  
+      this.classList.add('checked');
+    });
+  });
+
 }
