@@ -2816,30 +2816,33 @@ footer .bottom-footer p {
   font-weight: normal;
 }
 #single-page .product-container .left-block .images-block {
-  gap: 2rem;
+  gap: 4rem;
 }
-#single-page .product-container .left-block .images-block .small-images {
+#single-page .product-container .left-block .images-block .small-images-holder {
+  width: fit-content;
   height: fit-content;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
-#single-page .product-container .left-block .images-block .small-images .small-image {
+#single-page .product-container .left-block .images-block .small-images-holder .small-image {
   flex: none;
-  width: 5rem;
-  height: 6rem;
+  width: 6rem;
+  height: 7rem;
   cursor: pointer;
   padding: 0.3rem;
   border: 1px solid rgb(204, 202, 202);
 }
-#single-page .product-container .left-block .images-block .small-images .small-image img {
+#single-page .product-container .left-block .images-block .small-images-holder .small-image img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 #single-page .product-container .left-block .images-block .big-image {
   flex: 1 1 25rem;
+  text-align: left;
+  margin-top: 1rem;
   position: relative;
 }
 #single-page .product-container .left-block .images-block .big-image img {
-  width: 20rem;
   height: 20rem;
   cursor: crosshair;
 }
@@ -2970,15 +2973,27 @@ footer .bottom-footer p {
   width: 60%;
   border-radius: 2rem;
 }
+@media (max-width: 1200px) {
+  #single-page .product-container .left-block .images-block {
+    gap: 2rem;
+  }
+}
 @media (max-width: 768px) {
-  #single-page .product-container .images-block {
-    flex-direction: column;
+  #single-page .product-container .left-block .parent-categories-holder {
+    margin-bottom: 2rem;
+  }
+  #single-page .product-container .left-block .images-block {
+    flex-direction: column-reverse;
     align-items: center;
   }
-  #single-page .product-container .images-block .small-images {
+  #single-page .product-container .left-block .images-block .small-images-holder {
     width: 100%;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
+  }
+  #single-page .product-container .left-block .images-block .big-image {
+    text-align: center;
   }
 }
 @media (max-width: 510px) {

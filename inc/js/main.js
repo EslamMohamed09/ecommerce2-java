@@ -851,7 +851,7 @@ if(document.querySelector('.brand-section')){
  ##########################
 */
 if(document.getElementById('quick-view-modal')){
-  const smallImgs = document.querySelectorAll('.quick-view-modal .product-container .left-block .small-images .small-image img');
+  const smallImgs = document.querySelectorAll('.quick-view-modal .product-container .left-block .small-images-holder .small-image img');
   const bigImg = document.querySelector('.quick-view-modal .product-container .left-block .big-image img');
   const quickViewModal = document.getElementById('quick-view-modal');
   const quickViewBtn = document.querySelector('.quick-view-btn');
@@ -928,7 +928,7 @@ if(document.querySelector("#single-page")){
       let parentCategoriesHtml = parentCategories.map((parentCategory, index) => `
       <li class="d-flex-r-c-c">
         ${index !== 0 ? '<i class="fas fa-angle-left"></i>' : ''}
-        <a href="pages/category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a>
+        <a href="category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a>
       </li>`).join('');
    
       const parentCategoriesHolder = document.querySelector('#single-page .product-container .left-block .parent-categories-holder');  
@@ -965,7 +965,7 @@ if(document.querySelector("#single-page")){
   function displayProductDetails(product) {
     const productContainer = document.querySelector("#single-page .product-container");
 
-    const smallImagesContainer = productContainer.querySelector(".left-block .small-images");
+    const smallImagesContainer = productContainer.querySelector(".left-block .small-images-holder");
     smallImagesContainer.innerHTML = '';
 
     if (product.image && Array.isArray(product.image)) {
@@ -1061,7 +1061,7 @@ if(document.querySelector("#single-page")){
   }
 
   function setupImageClickEvents() {
-    const smallImages = document.querySelectorAll('.product-container .left-block .small-images .small-image img');
+    const smallImages = document.querySelectorAll('.product-container .left-block .small-images-holder .small-image img');
     const bigImage = document.querySelector('#single-page .product-container .left-block .big-image img');
 
     smallImages.forEach((smallImg) => {
