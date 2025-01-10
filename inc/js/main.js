@@ -887,8 +887,61 @@ if(document.querySelector("#single-page")){
     return urlParams.get('id');
   }
 
+  async function loadProduct(productId){
+    const response = await fetch('../admin/pages/products.json');
+    if(!response.ok){throw new Error('Failed to load products')}
+    const data = await response.json();
+
+    const product = data.products.find(product => product.id === productId);
+    if(!product){throw new Error('Product not found')}
+    return product;
+  }
+
+  async function loadCategories(){
+    const response = await fetch('../admin/pages/categories.json');
+    if (!response.ok) {throw new Error('Failed to load categories');}
+    const data = await response.json();
+    return data.categories;
+  }
+
+  function getParentCategories(categoryId, categories, parentCategories = []){
+    const category = categories.find(cat => cat.id === categoryId);
+
+    if(category){
+       parentCategories.unshift(category);
+
+        if(category.parent_id){
+           return getParentCategories(category.parent_id, categories, parentCategories);
+        }
+    }
+
+    return parentCategories;
+  }
+
+  async function displayParentCategories(){
+    try {
+      const categories = await loadCategories();
+      const product = await loadProduct(getProductId());
+      const categoryId = product.catId;
+      const parentCategories = getParentCategories(categoryId, categories);
+
+      let parentCategoriesHtml = parentCategories.map((parentCategory, index) => `
+      <li class="d-flex-r-c-c">
+        ${index !== 0 ? '<i class="fas fa-angle-left"></i>' : ''}
+        <a href="pages/category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a>
+      </li>`).join('');
+   
+      const parentCategoriesHolder = document.querySelector('#single-page .product-container .left-block .parent-categories-holder');  
+            parentCategoriesHolder.innerHTML = parentCategoriesHtml;
+    } catch (error) {
+      console.error('error loading parent categories:', error);
+    }
+  }
+
+  displayParentCategories();
+
   function fetchProduct(productId){
-    fetch('/pages/products.json').then(response => response.json())
+    fetch('../admin/pages/products.json').then(response => response.json())
     .then(data => {
       const product = data.products.find(p => p.id == productId);
       if(product){
@@ -899,7 +952,7 @@ if(document.querySelector("#single-page")){
     })
     .catch(error => {
       console.error('Error fetching the product data:', error);
-      document.querySelector("#single-page .product-container").innerHTML = 'Error loading product details';
+      document.querySelector("#single-page .product-container").innerHTML = 'Error loading product';
     });
   }
 
@@ -926,7 +979,7 @@ if(document.querySelector("#single-page")){
       productContainer.querySelector(".left-block .big-image img").src = product.image[0];
     }
 
-    if (product.title) {productContainer.querySelector(".right-block .content h1").textContent = product.title;}
+    if (product.title) {productContainer.querySelector(".right-block .content h1").textContent = product.title}
     if (product.id){productContainer.querySelector(".right-block .content .description-block .id").textContent = product.id}
 
     if (product.description) {
@@ -1007,11 +1060,6 @@ if(document.querySelector("#single-page")){
 
   }
 
-  const smallImages = document.querySelectorAll('.product-container .left-block .small-images .small-image img');
-  const bigImage = document.querySelector('#single-page .product-container .left-block .big-image img');
-  const lens = document.querySelector('#single-page .product-container .left-block .big-image .lens');
-  const magnifierImage = document.querySelector('#single-page .product-container .right-block .content .magnifier-img');
-
   function setupImageClickEvents() {
     const smallImages = document.querySelectorAll('.product-container .left-block .small-images .small-image img');
     const bigImage = document.querySelector('#single-page .product-container .left-block .big-image img');
@@ -1070,8 +1118,8 @@ if(document.querySelector("#single-page")){
   }
 
   function flippingColors() {
-    const selectedColor = document.querySelector(".color-block #selected-color");
-    const colorCircles = document.querySelectorAll(".color-block .color-circle");
+    const selectedColor = document.querySelector("#single-page .right-block .color-block #selected-color");
+    const colorCircles = document.querySelectorAll("#single-page .right-block .color-block .color-circle");
 
     colorCircles.forEach((colorCircle) => {
       colorCircle.addEventListener('click', function() {
