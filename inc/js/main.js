@@ -70,7 +70,7 @@ if(header){
   document.querySelectorAll('header .main-header .upper .buttons .service-button .value span').forEach((span) => {
     let number = span.textContent.trim();
 
-    if(number.length >= 3){
+    if(/^\d{3,}$/.test(number)){
 
        if (window.innerWidth < 490) {
            span.parentElement.style.padding = '4px 2px 4px 1.5px';
@@ -78,10 +78,10 @@ if(header){
          span.parentElement.style.padding = '5px 2px';
        }
 
-    } else if(number.length === 2) {
+    } else if(/^\d{2}$/.test(number)) {
 
       if (window.innerWidth < 490) {
-          span.parentElement.style.padding = '4px 3px 4px 3.5px';
+          span.parentElement.style.padding = '4px 2.5px 4px 3.5px';
       } else {
         span.parentElement.style.padding = '5px 3.5px';
       }

@@ -1067,7 +1067,7 @@ header {position:fixed;
     .main-header.mobile-header {width:90% !important;
 
       .upper {
-        .web-title {font-size:1.1rem;}
+        .web-title {font-size:1.4rem;}
         .buttons {
           .value {
             span {}
@@ -1075,7 +1075,7 @@ header {position:fixed;
         }
       }
 
-      .bottom nav ul li a {font-size:1rem;}
+      .bottom nav ul li a {font-size:1.2rem;}
 
     }
   }
@@ -1090,6 +1090,7 @@ header {position:fixed;
 
   @media(max-width:400px) {
     .main-header {
+
       .upper {position:relative;
               padding:0 5% 4rem 3%;
   
@@ -1100,6 +1101,7 @@ header {position:fixed;
         .buttons .service-button .value {padding:3px;}
   
       }
+
       .bottom {margin-top:1.1rem;}
     }
   }

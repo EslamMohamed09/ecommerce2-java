@@ -1218,10 +1218,10 @@ header .login-drawer.openingLoginDrawer {
     width: 90% !important;
   }
   header .main-header.mobile-header .upper .web-title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   header .main-header.mobile-header .bottom nav ul li a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 490px) {
