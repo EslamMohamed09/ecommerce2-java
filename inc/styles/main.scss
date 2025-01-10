@@ -1064,7 +1064,7 @@ header {position:fixed;
   @media (max-width:640px){ 
     .top-nav .left-block #currency-select span {font-size:0.8rem;}
 
-    .main-header {width:90%;
+    .main-header.mobile-header {width:90% !important;
 
       .upper {
         .web-title {font-size:1.1rem;}
@@ -1081,8 +1081,10 @@ header {position:fixed;
   }
 
   @media(max-width:490px) {
-    .main-header .upper {gap:1.5rem;
-      .buttons {gap:1.9rem;}
+    .main-header {
+      .upper {gap:1.5rem;
+        .buttons {gap:1.9rem;}
+      }
     }
   }
 

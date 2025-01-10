@@ -69,14 +69,32 @@ if(header){
 
   document.querySelectorAll('header .main-header .upper .buttons .service-button .value span').forEach((span) => {
     let number = span.textContent.trim();
-    if(number.length >= 3){
-       span.parentElement.style.padding = '5px 2px';
-    } else if(number.length >= 2) {
-      span.parentElement.style.padding = '5px 3.5px';
-    } else {
-      span.parentElement.style.padding = '5px';
-    }
 
+    if(number.length >= 3){
+
+       if (window.innerWidth < 490) {
+           span.parentElement.style.padding = '4px 2px 4px 1.5px';
+       } else {
+         span.parentElement.style.padding = '5px 2px';
+       }
+
+    } else if(number.length === 2) {
+
+      if (window.innerWidth < 490) {
+          span.parentElement.style.padding = '4px 3px 4px 3.5px';
+      } else {
+        span.parentElement.style.padding = '5px 3.5px';
+      }
+
+    } else {
+
+      if (window.innerWidth < 490) {
+          span.parentElement.style.padding = '3px 4px';
+      } else {
+        span.parentElement.style.padding = '5px';
+      }
+
+    }
   });
 
   /*** MOBILE HEADER ***/

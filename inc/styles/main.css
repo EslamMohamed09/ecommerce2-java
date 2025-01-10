@@ -1214,13 +1214,13 @@ header .login-drawer.openingLoginDrawer {
   header .top-nav .left-block #currency-select span {
     font-size: 0.8rem;
   }
-  header .main-header {
-    width: 90%;
+  header .main-header.mobile-header {
+    width: 90% !important;
   }
-  header .main-header .upper .web-title {
+  header .main-header.mobile-header .upper .web-title {
     font-size: 1.1rem;
   }
-  header .main-header .bottom nav ul li a {
+  header .main-header.mobile-header .bottom nav ul li a {
     font-size: 1rem;
   }
 }
