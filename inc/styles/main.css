@@ -1016,33 +1016,34 @@ header .main-header .upper .search-form .search-btn svg {
   color: var(--olive15);
   font-size: 1.1rem;
 }
-header .main-header .upper .icons {
+header .main-header .upper .buttons {
+  width: fit-content;
   gap: 2.8rem;
 }
-header .main-header .upper .icons .icon {
+header .main-header .upper .buttons .service-button {
   gap: 0.1rem;
   position: relative;
 }
-header .main-header .upper .icons .icon svg {
+header .main-header .upper .buttons .service-button svg {
   color: var(--white);
   font-size: 1.3rem;
 }
-header .main-header .upper .icons .icon .value {
+header .main-header .upper .buttons .service-button .value {
   width: fit-content;
   height: fit-content;
   padding: 5px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: yellow;
   background-color: var(--olive15);
-  border-radius: 50%;
-  margin-bottom: 1rem;
   position: absolute;
   top: -0.5rem;
   right: -0.8rem;
 }
-header .main-header .upper .icons .icon .value span {
+header .main-header .upper .buttons .service-button .value span {
   width: fit-content;
   height: fit-content;
   padding: 0;
@@ -1158,24 +1159,40 @@ header .login-drawer.openingLoginDrawer {
   header .top-nav .right-block ul #open-mHeader {
     display: block;
   }
+  header header.headerscroll .top-nav {
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 247, 255, 0.356);
+    transition: all 1s linear;
+    z-index: 1000000;
+  }
   header .main-header {
     position: fixed;
     top: 0;
-    left: -95%;
-    width: 80%;
+    left: 0;
+    width: 0 !important;
     height: 100%;
-    visibility: hidden;
     z-index: 1000;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s linear;
   }
   header .main-header .upper {
     padding: 0.4rem 2rem 0.4rem 1rem;
     margin-top: 1rem;
+    gap: 2rem;
     border-top: none;
     border-bottom: none;
+    opacity: 0;
+  }
+  header .main-header .upper .search-form {
+    flex: 1 1 20rem;
+  }
+  header .main-header .upper .buttons {
+    gap: 1.5rem;
   }
   header .main-header .bottom {
     padding: 0.4rem 2rem 0.4rem 1rem;
+    opacity: 0;
   }
   header .main-header .bottom nav ul {
     flex-direction: column;
@@ -1186,20 +1203,14 @@ header .login-drawer.openingLoginDrawer {
     padding: 0.5rem 0.7rem 0.5rem 0.1rem;
   }
   header .main-header.mobile-header {
-    left: 0;
-    visibility: visible;
+    width: 80% !important;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
-  header header.headerscroll .top-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 0.4rem 1.5rem rgba(0, 247, 255, 0.356);
-    transition: all 1s linear;
-    z-index: 1000000;
+  header .main-header.mobile-header .upper, header .main-header.mobile-header .bottom {
+    opacity: 1;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   header .top-nav .left-block #currency-select span {
     font-size: 0.8rem;
   }
@@ -1217,10 +1228,7 @@ header .login-drawer.openingLoginDrawer {
   header .main-header .upper {
     gap: 1.5rem;
   }
-  header .main-header .upper .search-form {
-    width: 60%;
-  }
-  header .main-header .upper .icons {
+  header .main-header .upper .buttons {
     gap: 1.9rem;
   }
 }
@@ -1234,7 +1242,7 @@ header .login-drawer.openingLoginDrawer {
     bottom: 0;
     width: 95%;
   }
-  header .main-header .upper .icons .icon .value {
+  header .main-header .upper .buttons .service-button .value {
     padding: 3px;
   }
   header .main-header .bottom {
@@ -2533,12 +2541,12 @@ header .login-drawer.openingLoginDrawer {
 .quick-view-modal .card .product-container .left-block .all-images {
   gap: 1.3rem;
 }
-.quick-view-modal .card .product-container .left-block .all-images .big-image {
+.quick-view-modal .card .product-container .left-block .all-images .big-image-holder {
   width: 100%;
   text-align: center;
   position: relative;
 }
-.quick-view-modal .card .product-container .left-block .all-images .big-image img {
+.quick-view-modal .card .product-container .left-block .all-images .big-image-holder img {
   width: 16rem;
   height: 16rem;
 }
@@ -2836,17 +2844,17 @@ footer .bottom-footer p {
   height: 100%;
   object-fit: contain;
 }
-#single-page .product-container .left-block .images-block .big-image {
+#single-page .product-container .left-block .images-block .big-image-holder {
   flex: 1 1 25rem;
   text-align: left;
   margin-top: 1rem;
   position: relative;
 }
-#single-page .product-container .left-block .images-block .big-image img {
+#single-page .product-container .left-block .images-block .big-image-holder img {
   height: 20rem;
   cursor: crosshair;
 }
-#single-page .product-container .left-block .images-block .big-image .lens {
+#single-page .product-container .left-block .images-block .big-image-holder .lens {
   position: absolute;
   width: 8rem;
   height: 8rem;
@@ -2856,7 +2864,7 @@ footer .bottom-footer p {
   pointer-events: none;
   display: none;
 }
-#single-page .product-container .left-block .images-block .big-image .lens.active {
+#single-page .product-container .left-block .images-block .big-image-holder .lens.active {
   display: block;
 }
 #single-page .product-container .right-block {
@@ -2992,7 +3000,7 @@ footer .bottom-footer p {
     justify-content: center;
     flex-wrap: wrap;
   }
-  #single-page .product-container .left-block .images-block .big-image {
+  #single-page .product-container .left-block .images-block .big-image-holder {
     text-align: center;
   }
 }

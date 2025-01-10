@@ -67,6 +67,18 @@ const header = document.querySelector('header');
 
 if(header){
 
+  document.querySelectorAll('header .main-header .upper .buttons .service-button .value span').forEach((span) => {
+    let number = span.textContent.trim();
+    if(number.length >= 3){
+       span.parentElement.style.padding = '5px 2px';
+    } else if(number.length >= 2) {
+      span.parentElement.style.padding = '5px 3.5px';
+    } else {
+      span.parentElement.style.padding = '5px';
+    }
+
+  });
+
   /*** MOBILE HEADER ***/
   if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
     const mobileHBtn = document.getElementById("open-mHeader");
@@ -852,7 +864,7 @@ if(document.querySelector('.brand-section')){
 */
 if(document.getElementById('quick-view-modal')){
   const smallImgs = document.querySelectorAll('.quick-view-modal .product-container .left-block .small-images-holder .small-image img');
-  const bigImg = document.querySelector('.quick-view-modal .product-container .left-block .big-image img');
+  const bigImg = document.querySelector('.quick-view-modal .product-container .left-block .big-image-holder img');
   const quickViewModal = document.getElementById('quick-view-modal');
   const quickViewBtn = document.querySelector('.quick-view-btn');
   const closeBtn = document.querySelector('.quick-view-modal #close-btn');
@@ -976,7 +988,7 @@ if(document.querySelector("#single-page")){
             </div>`;
         });
 
-      productContainer.querySelector(".left-block .big-image img").src = product.image[0];
+      productContainer.querySelector(".left-block .big-image-holder img").src = product.image[0];
     }
 
     if (product.title) {productContainer.querySelector(".right-block .content h1").textContent = product.title}
@@ -1052,7 +1064,7 @@ if(document.querySelector("#single-page")){
     productContainer.querySelector(".right-block .content .product-quantity-block #subtotal").textContent = product.salePrice;
 
     setupImageClickEvents();
-    magnify(document.querySelector('#single-page .product-container .left-block .big-image img'));
+    magnify(document.querySelector('#single-page .product-container .left-block .big-image-holder img'));
     flippingSizes();
     flippingColors();
     handleQuantity();
@@ -1062,7 +1074,7 @@ if(document.querySelector("#single-page")){
 
   function setupImageClickEvents() {
     const smallImages = document.querySelectorAll('.product-container .left-block .small-images-holder .small-image img');
-    const bigImage = document.querySelector('#single-page .product-container .left-block .big-image img');
+    const bigImage = document.querySelector('#single-page .product-container .left-block .big-image-holder img');
 
     smallImages.forEach((smallImg) => {
       smallImg.addEventListener('click', function () {
@@ -1072,7 +1084,7 @@ if(document.querySelector("#single-page")){
   }
 
   function magnify(bigImage){
-    const lens = document.querySelector('#single-page .product-container .left-block .big-image .lens');
+    const lens = document.querySelector('#single-page .product-container .left-block .big-image-holder .lens');
     const magnifierImage = document.querySelector('#single-page .product-container .right-block .content .magnifier-img');
 
     if (bigImage && lens && magnifierImage) {
@@ -1187,7 +1199,7 @@ if(document.querySelector("#single-page")){
 
       const productIdV = safeTextContent('.id');
       const productTitleV = safeTextContent('h1');
-      const productImageV = safeGetAttribute(".big-image img", 'src');
+      const productImageV = safeGetAttribute(".big-image-holder img", 'src');
       const productBrandV = safeTextContent('.brand-value') || '';
       const productStockV = safeTextContent('.instock');
       const oldPriceV = safeTextContent('.oldprice');
@@ -1676,7 +1688,7 @@ if(header){
   let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
   let productsCartCount = productsCart.length;
 
-  document.querySelector(".main-header .upper .icons .cart-icon span").textContent = productsCartCount;
+  document.querySelector(".main-header .upper .buttons .cart-icon span").textContent = productsCartCount;
 }
 
 /* 
