@@ -2925,21 +2925,21 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                                                            
           ul li {padding:0.7rem;}
  
-          ul li:not(:last-child) {border-bottom:1px solid var(--gray4);}
+          ul li:not(:last-child) {border-bottom:1px solid var(--gray3);}
       }
 
       .parent-categories-block {box-shadow:var(--box-shadow6);
                                 background-color:transparent;
                                 border-radius:0.5rem;
 
-        li {padding:0.7rem 1rem 0.3rem 0;
+        li {padding:0.7rem 1rem 0.6rem 0;
             background-color:var(--white);
 
             &.categorylist {color:var(--gray10);
               a {color:var(--gray10);}
             }
 
-          &:not(:last-child) {border-bottom:1px solid var(--gray4);}
+          &:not(:last-child) {border-bottom:1px solid var(--gray3);}
 
           &.thiscategorylist {justify-content:space-between;
                               font-weight:bold;

@@ -3279,7 +3279,7 @@ footer .bottom-footer p {
   padding: 0.7rem;
 }
 .category-page .category-page-container .filter-block .categories-block ul li:not(:last-child) {
-  border-bottom: 1px solid var(--gray4);
+  border-bottom: 1px solid var(--gray3);
 }
 .category-page .category-page-container .filter-block .parent-categories-block {
   box-shadow: var(--box-shadow6);
@@ -3287,7 +3287,7 @@ footer .bottom-footer p {
   border-radius: 0.5rem;
 }
 .category-page .category-page-container .filter-block .parent-categories-block li {
-  padding: 0.7rem 1rem 0.3rem 0;
+  padding: 0.7rem 1rem 0.6rem 0;
   background-color: var(--white);
 }
 .category-page .category-page-container .filter-block .parent-categories-block li.categorylist {
@@ -3297,7 +3297,7 @@ footer .bottom-footer p {
   color: var(--gray10);
 }
 .category-page .category-page-container .filter-block .parent-categories-block li:not(:last-child) {
-  border-bottom: 1px solid var(--gray4);
+  border-bottom: 1px solid var(--gray3);
 }
 .category-page .category-page-container .filter-block .parent-categories-block li.thiscategorylist {
   justify-content: space-between;

@@ -1429,7 +1429,7 @@ if(document.querySelector(".category-page")){
 
       if(childCategories.length > 0){
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
-         thisCategoryElement.style.cssText = 'border-bottom:1px solid var(--gray4);border-bottom-left-radius:0;border-bottom-right-radius:0;';
+         thisCategoryElement.style.cssText = 'border-bottom-left-radius:0;border-bottom-right-radius:0;';
 
          const childsCount = document.createElement('span'); // print categories count
                childsCount.classList.add('childs-count');
