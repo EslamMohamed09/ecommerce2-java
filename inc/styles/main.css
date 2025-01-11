@@ -956,14 +956,12 @@ header .top-nav .right-block ul {
   width: fit-content;
   gap: 1rem;
 }
-header .top-nav .right-block ul li a {
+header .top-nav .right-block ul li a,
+header .top-nav .right-block ul li button {
   color: var(--white);
   font-size: 1.1rem;
   white-space: nowrap;
   text-transform: capitalize;
-}
-header .top-nav .right-block ul button {
-  color: var(--white);
   background-color: transparent;
   border: none;
 }
@@ -990,38 +988,38 @@ header .main-header {
   z-index: 1000000;
   transition: all 1s linear;
 }
-header .main-header .upper {
+header .main-header .middle-nav {
   padding: 0.4rem 3%;
   border-top: 1px solid var(--olive17);
   border-bottom: 1px solid var(--olive17);
 }
-header .main-header .upper .web-title {
+header .main-header .middle-nav .web-title {
   cursor: pointer;
 }
-header .main-header .upper .web-title a {
+header .main-header .middle-nav .web-title a {
   color: var(--olive14);
   text-transform: uppercase;
 }
-header .main-header .upper .search-form {
-  width: 45%;
+header .main-header .middle-nav .search-form {
+  width: 35%;
   border-radius: 1.5rem;
   padding: 0;
   border: none;
-  background-color: var(--olive14);
+  background: linear-gradient(to right, var(--olive14) 96%, var(--olive17) 96%);
 }
-header .main-header .upper .search-form input[type=search] {
+header .main-header .middle-nav .search-form input[type=search] {
   width: 95%;
   padding: 0.4rem 0.6rem 0.4rem 1rem;
   border-radius: 1.5rem;
   font-size: 1.2rem;
   border: none;
   color: var(--white);
-  background-color: var(--olive14);
+  background: transparent;
 }
-header .main-header .upper .search-form input[type=search]::placeholder {
-  color: var(--white);
+header .main-header .middle-nav .search-form input[type=search]::placeholder {
+  color: var(--gray2);
 }
-header .main-header .upper .search-form .search-btn {
+header .main-header .middle-nav .search-form .search-btn {
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   padding: 0.6rem 1.3rem;
@@ -1029,23 +1027,23 @@ header .main-header .upper .search-form .search-btn {
   border: none;
   background-color: var(--olive17);
 }
-header .main-header .upper .search-form .search-btn svg {
+header .main-header .middle-nav .search-form .search-btn svg {
   color: var(--olive14);
   font-size: 1.1rem;
 }
-header .main-header .upper .buttons {
+header .main-header .middle-nav .buttons {
   width: fit-content;
   gap: 2.8rem;
 }
-header .main-header .upper .buttons .service-button {
+header .main-header .middle-nav .buttons .service-button {
   gap: 0.1rem;
   position: relative;
 }
-header .main-header .upper .buttons .service-button svg {
+header .main-header .middle-nav .buttons .service-button svg {
   color: var(--white);
   font-size: 1.3rem;
 }
-header .main-header .upper .buttons .service-button .value {
+header .main-header .middle-nav .buttons .service-button .value {
   width: fit-content;
   height: fit-content;
   padding: 5px;
@@ -1060,7 +1058,7 @@ header .main-header .upper .buttons .service-button .value {
   top: -0.5rem;
   right: -0.8rem;
 }
-header .main-header .upper .buttons .service-button .value span {
+header .main-header .middle-nav .buttons .service-button .value span {
   width: fit-content;
   height: fit-content;
   padding: 0;
@@ -1068,23 +1066,23 @@ header .main-header .upper .buttons .service-button .value span {
   font-size: 0.7rem;
   line-height: 6px;
 }
-header .main-header .bottom {
+header .main-header .bottom-nav {
   padding: 0 3%;
   margin: 0;
 }
-header .main-header .bottom nav ul {
+header .main-header .bottom-nav nav ul {
   gap: 0.5rem;
   list-style: none;
 }
-header .main-header .bottom nav ul li {
+header .main-header .bottom-nav nav ul li {
   padding: 0.7rem;
 }
-header .main-header .bottom nav ul li a {
+header .main-header .bottom-nav nav ul li a {
   color: var(--white);
   font-size: 1.1rem;
   text-transform: capitalize;
 }
-header .main-header .bottom nav ul li:hover {
+header .main-header .bottom-nav nav ul li:hover {
   background-color: var(--olive14);
 }
 header .login-drawer {
@@ -1168,6 +1166,11 @@ header .login-drawer.openingLoginDrawer {
   opacity: 1;
   transition: all 0.4s linear;
 }
+@media (min-width: 1400px) {
+  header .main-header .middle-nav .search-form {
+    width: 30%;
+  }
+}
 @media (max-width: 768px) {
   header .top-nav {
     padding: 0.6rem 3%;
@@ -1196,7 +1199,7 @@ header .login-drawer.openingLoginDrawer {
     z-index: 1000;
     transition: all 0.3s linear;
   }
-  header .main-header .upper {
+  header .main-header .middle-nav {
     padding: 0.4rem 2rem 0.4rem 1rem;
     margin-top: 2rem;
     gap: 2rem;
@@ -1204,31 +1207,31 @@ header .login-drawer.openingLoginDrawer {
     border-bottom: none;
     opacity: 0;
   }
-  header .main-header .upper .search-form .search-btn {
+  header .main-header .middle-nav .search-form .search-btn {
     padding: 0.6rem 1rem;
   }
-  header .main-header .upper .buttons {
+  header .main-header .middle-nav .buttons {
     gap: 1.5rem;
   }
-  header .main-header .bottom {
+  header .main-header .bottom-nav {
     padding: 0.4rem 2rem 0.4rem 1rem;
     opacity: 0;
   }
-  header .main-header .bottom nav ul {
+  header .main-header .bottom-nav nav ul {
     flex-direction: column;
     align-items: flex-start;
   }
-  header .main-header .bottom nav ul li {
+  header .main-header .bottom-nav nav ul li {
     width: 100%;
   }
-  header .main-header .bottom nav ul li a {
+  header .main-header .bottom-nav nav ul li a {
     font-size: 1.4rem;
   }
   header .main-header.mobile-header {
     width: 80% !important;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
-  header .main-header.mobile-header .upper, header .main-header.mobile-header .bottom {
+  header .main-header.mobile-header .upper, header .main-header.mobile-header .bottom-nav {
     opacity: 1;
   }
 }
@@ -1245,16 +1248,16 @@ header .login-drawer.openingLoginDrawer {
   header .main-header.mobile-header {
     width: 90% !important;
   }
-  header .main-header.mobile-header .upper {
+  header .main-header.mobile-header .middle-nav {
     gap: 1.5rem;
   }
-  header .main-header.mobile-header .upper .web-title {
+  header .main-header.mobile-header .middle-nav .web-title {
     font-size: 1.5rem;
   }
-  header .main-header.mobile-header .bottom {
+  header .main-header.mobile-header .bottom-nav {
     margin-top: 1rem;
   }
-  header .main-header.mobile-header .bottom nav ul li a {
+  header .main-header.mobile-header .bottom-nav nav ul li a {
     font-size: 1.3rem;
   }
 }
@@ -1272,10 +1275,10 @@ header .login-drawer.openingLoginDrawer {
   header .top-nav .right-block ul #open-mHeader {
     margin-left: 5% !important;
   }
-  header .main-header .upper {
+  header .main-header .middle-nav {
     gap: 1.5rem;
   }
-  header .main-header .upper .buttons {
+  header .main-header .middle-nav .buttons {
     gap: 1.9rem;
   }
   header .main-header nav ul li a {
@@ -1283,39 +1286,39 @@ header .login-drawer.openingLoginDrawer {
   }
 }
 @media (max-width: 440px) {
-  header .main-header .upper {
+  header .main-header .middle-nav {
     position: relative;
     padding: 0 5% 4rem 3%;
     margin-top: 2rem;
   }
-  header .main-header .upper .web-title {
+  header .main-header .middle-nav .web-title {
     font-size: 2rem !important;
   }
-  header .main-header .upper .search-form {
+  header .main-header .middle-nav .search-form {
     position: absolute;
     bottom: -1rem;
     width: 95%;
   }
-  header .main-header .upper .search-form input[type=search] {
+  header .main-header .middle-nav .search-form input[type=search] {
     padding: 0.6rem 0.6rem 0.6rem 1rem;
   }
-  header .main-header .upper .search-form .search-btn {
+  header .main-header .middle-nav .search-form .search-btn {
     padding: 0.8rem 1.2rem;
   }
-  header .main-header .upper .buttons {
+  header .main-header .middle-nav .buttons {
     gap: 2.8rem;
   }
-  header .main-header .upper .buttons .service-button svg {
+  header .main-header .middle-nav .buttons .service-button svg {
     color: var(--white);
     font-size: 1.7rem;
   }
-  header .main-header .upper .buttons .service-button .value {
+  header .main-header .middle-nav .buttons .service-button .value {
     padding: 3px;
   }
-  header .main-header .bottom {
+  header .main-header .bottom-nav {
     margin-top: 2.5rem;
   }
-  header .main-header .bottom nav ul li {
+  header .main-header .bottom-nav nav ul li {
     padding: 0.5rem 0.7rem 0.5rem 1rem;
   }
 }
@@ -1338,36 +1341,29 @@ header .login-drawer.openingLoginDrawer {
   header .top-nav .right-block ul button {
     font-size: 1.2rem;
   }
-  header .main-header .upper {
-    position: relative;
-    padding: 0 5% 4rem 3%;
-    margin-top: 2rem;
-  }
-  header .main-header .upper .web-title {
+  header .main-header .middle-nav .web-title {
     font-size: 1.8rem !important;
   }
-  header .main-header .upper .search-form {
-    position: absolute;
-    bottom: -1rem;
+  header .main-header .middle-nav .search-form {
     width: 94%;
   }
-  header .main-header .upper .search-form input[type=search] {
+  header .main-header .middle-nav .search-form input[type=search] {
     padding: 0.6rem 0.6rem 0.6rem 1rem;
   }
-  header .main-header .upper .search-form .search-btn {
+  header .main-header .middle-nav .search-form .search-btn {
     padding: 0.8rem 1.2rem;
   }
-  header .main-header .upper .buttons {
+  header .main-header .middle-nav .buttons {
     gap: 2.4rem;
   }
-  header .main-header .upper .buttons .service-button svg {
+  header .main-header .middle-nav .buttons .service-button svg {
     color: var(--white);
     font-size: 1.5rem;
   }
-  header .main-header .upper .buttons .service-button .value {
+  header .main-header .middle-nav .buttons .service-button .value {
     padding: 3px;
   }
-  header .main-header .bottom nav ul li {
+  header .main-header .bottom-nav nav ul li {
     padding: 0.5rem 0.7rem 0.5rem 0.5rem;
   }
 }
@@ -1397,10 +1393,10 @@ header .login-drawer.openingLoginDrawer {
   header .top-nav .right-block ul {
     gap: 0.6rem;
   }
-  header .main-header .upper .web-title {
+  header .main-header .middle-nav .web-title {
     font-size: 1.5rem !important;
   }
-  header .main-header .bottom nav ul li a {
+  header .main-header .bottom-nav nav ul li a {
     font-size: 1.3rem !important;
   }
 }

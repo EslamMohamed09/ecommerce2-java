@@ -67,7 +67,7 @@ const header = document.querySelector('header');
 
 if(header){
 
-  document.querySelectorAll('header .main-header .upper .buttons .service-button .value span').forEach((span) => {
+  document.querySelectorAll('header .main-header .middle-nav .buttons .service-button .value span').forEach((span) => {
     let number = span.textContent.trim();
 
     if(/^\d{3,}$/.test(number)){
@@ -1706,7 +1706,7 @@ if(header){
   let productsCart = JSON.parse(localStorage.getItem('product-cart')) || [];
   let productsCartCount = productsCart.length;
 
-  document.querySelector(".main-header .upper .buttons .cart-icon span").textContent = productsCartCount;
+  document.querySelector(".main-header .middle-nav .buttons .cart-icon span").textContent = productsCartCount;
 }
 
 /* 
