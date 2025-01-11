@@ -948,13 +948,18 @@ header .top-nav .left-block select img {
 header .top-nav .left-block select svg {
   color: var(--white);
 }
+header .top-nav .right-block {
+  width: fit-content;
+}
 header .top-nav .right-block ul {
   list-style: none;
+  width: fit-content;
   gap: 1rem;
 }
 header .top-nav .right-block ul li a {
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  white-space: nowrap;
   text-transform: capitalize;
 }
 header .top-nav .right-block ul button {
@@ -963,8 +968,20 @@ header .top-nav .right-block ul button {
   border: none;
 }
 header .top-nav .right-block ul #open-mHeader {
-  display: none;
+  height: fit-content;
   cursor: pointer;
+  display: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  line-height: 0;
+}
+header .top-nav .right-block ul #open-mHeader svg {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  color: var(--white);
 }
 header .main-header {
   background-color: var(--olive18);
@@ -993,7 +1010,7 @@ header .main-header .upper .search-form {
   background-color: var(--olive14);
 }
 header .main-header .upper .search-form input[type=search] {
-  flex: 1 1 10rem;
+  width: 95%;
   padding: 0.4rem 0.6rem 0.4rem 1rem;
   border-radius: 1.5rem;
   font-size: 1.2rem;
@@ -1013,7 +1030,7 @@ header .main-header .upper .search-form .search-btn {
   background-color: var(--olive17);
 }
 header .main-header .upper .search-form .search-btn svg {
-  color: var(--olive15);
+  color: var(--olive14);
   font-size: 1.1rem;
 }
 header .main-header .upper .buttons {
@@ -1153,8 +1170,11 @@ header .login-drawer.openingLoginDrawer {
 }
 @media (max-width: 768px) {
   header .top-nav {
-    padding: 0.3rem 1rem;
+    padding: 0.6rem 3%;
     z-index: 1000;
+  }
+  header .top-nav .right-block ul li a {
+    font-size: 1.2rem !important;
   }
   header .top-nav .right-block ul #open-mHeader {
     display: block;
@@ -1178,14 +1198,14 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header .upper {
     padding: 0.4rem 2rem 0.4rem 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     gap: 2rem;
     border-top: none;
     border-bottom: none;
     opacity: 0;
   }
-  header .main-header .upper .search-form {
-    flex: 1 1 20rem;
+  header .main-header .upper .search-form .search-btn {
+    padding: 0.6rem 1rem;
   }
   header .main-header .upper .buttons {
     gap: 1.5rem;
@@ -1200,7 +1220,9 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header .bottom nav ul li {
     width: 100%;
-    padding: 0.5rem 0.7rem 0.5rem 0.1rem;
+  }
+  header .main-header .bottom nav ul li a {
+    font-size: 1.4rem;
   }
   header .main-header.mobile-header {
     width: 80% !important;
@@ -1211,42 +1233,142 @@ header .login-drawer.openingLoginDrawer {
   }
 }
 @media (max-width: 640px) {
+  header .top-nav .left-block #currency-select select {
+    width: 6rem;
+  }
   header .top-nav .left-block #currency-select span {
     font-size: 0.8rem;
+  }
+  header .top-nav .right-block ul li a, header .top-nav button {
+    font-size: 1.2rem !important;
   }
   header .main-header.mobile-header {
     width: 90% !important;
   }
+  header .main-header.mobile-header .upper {
+    gap: 1.5rem;
+  }
   header .main-header.mobile-header .upper .web-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  header .main-header.mobile-header .bottom {
+    margin-top: 1rem;
   }
   header .main-header.mobile-header .bottom nav ul li a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 490px) {
+  header .top-nav {
+    padding: 0.6rem 7% 0.5rem 3%;
+  }
+  header .top-nav .right-block ul {
+    gap: 1rem;
+  }
+  header .top-nav .right-block ul li a,
+  header .top-nav .right-block ul button {
+    font-size: 1.3rem;
+  }
+  header .top-nav .right-block ul #open-mHeader {
+    margin-left: 5% !important;
+  }
   header .main-header .upper {
     gap: 1.5rem;
   }
   header .main-header .upper .buttons {
     gap: 1.9rem;
   }
+  header .main-header nav ul li a {
+    font-size: 1.5rem !important;
+  }
 }
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   header .main-header .upper {
     position: relative;
     padding: 0 5% 4rem 3%;
+    margin-top: 2rem;
+  }
+  header .main-header .upper .web-title {
+    font-size: 2rem !important;
   }
   header .main-header .upper .search-form {
     position: absolute;
-    bottom: 0;
+    bottom: -1rem;
     width: 95%;
+  }
+  header .main-header .upper .search-form input[type=search] {
+    padding: 0.6rem 0.6rem 0.6rem 1rem;
+  }
+  header .main-header .upper .search-form .search-btn {
+    padding: 0.8rem 1.2rem;
+  }
+  header .main-header .upper .buttons {
+    gap: 2.8rem;
+  }
+  header .main-header .upper .buttons .service-button svg {
+    color: var(--white);
+    font-size: 1.7rem;
   }
   header .main-header .upper .buttons .service-button .value {
     padding: 3px;
   }
   header .main-header .bottom {
-    margin-top: 1.1rem;
+    margin-top: 2.5rem;
+  }
+  header .main-header .bottom nav ul li {
+    padding: 0.5rem 0.7rem 0.5rem 1rem;
+  }
+}
+@media (max-width: 350px) {
+  header .top-nav {
+    padding: 0.6rem 5% 0.5rem 3%;
+  }
+  header .top-nav .right-block ul {
+    gap: 0.6rem;
+  }
+  header .top-nav .right-block ul #open-mHeader {
+    margin-left: 3% !important;
+  }
+}
+@media (max-width: 340px) {
+  header .top-nav .left-block .top-nav .left-block #currency-select select {
+    width: 5rem;
+  }
+  header .top-nav .right-block ul li a,
+  header .top-nav .right-block ul button {
+    font-size: 1.2rem;
+  }
+  header .main-header .upper {
+    position: relative;
+    padding: 0 5% 4rem 3%;
+    margin-top: 2rem;
+  }
+  header .main-header .upper .web-title {
+    font-size: 1.8rem !important;
+  }
+  header .main-header .upper .search-form {
+    position: absolute;
+    bottom: -1rem;
+    width: 94%;
+  }
+  header .main-header .upper .search-form input[type=search] {
+    padding: 0.6rem 0.6rem 0.6rem 1rem;
+  }
+  header .main-header .upper .search-form .search-btn {
+    padding: 0.8rem 1.2rem;
+  }
+  header .main-header .upper .buttons {
+    gap: 2.4rem;
+  }
+  header .main-header .upper .buttons .service-button svg {
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+  header .main-header .upper .buttons .service-button .value {
+    padding: 3px;
+  }
+  header .main-header .bottom nav ul li {
+    padding: 0.5rem 0.7rem 0.5rem 0.5rem;
   }
 }
 @media (max-width: 316px) {
@@ -1258,24 +1380,47 @@ header .login-drawer.openingLoginDrawer {
     font-size: 0.8rem;
     padding: 0;
   }
-  header .top-nav .right-block ul li a {
-    font-size: 0.9rem;
+  header .top-nav .right-block ul li a,
+  header .top-nav .right-block button {
+    font-size: 1.1rem !important;
   }
 }
-@media (max-width: 280px) {
+@media (max-width: 300px) {
+  header .top-nav .left-block #currency-select select {
+    width: 5rem;
+  }
+}
+@media (max-width: 287px) {
   header .top-nav .left-block select {
-    width: 4rem;
+    width: 4rem !important;
   }
   header .top-nav .right-block ul {
     gap: 0.6rem;
   }
-}
-@media (max-width: 263px) {
-  header .top-nav {
-    padding: 0.3rem 1%;
+  header .main-header .upper .web-title {
+    font-size: 1.5rem !important;
   }
-  header .top-nav .right-block ul li a {
-    font-size: 0.7rem;
+  header .main-header .bottom nav ul li a {
+    font-size: 1.3rem !important;
+  }
+}
+@media (max-width: 267px) {
+  header .top-nav {
+    padding: 0.6rem 3% 0.5rem 1.5%;
+  }
+  header .top-nav .right-block ul li a, header .top-nav .right-block ul button {
+    font-size: 1.1rem !important;
+  }
+  header .top-nav .right-block ul #open-mHeader {
+    margin-left: 1% !important;
+  }
+}
+@media (max-width: 256px) {
+  header .top-nav .left-block select {
+    width: 3rem !important;
+  }
+  header .top-nav .right-block ul li a, header .top-nav .right-block button {
+    font-size: 1rem !important;
   }
 }
 @media (max-width: 224px) {
