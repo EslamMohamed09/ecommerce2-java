@@ -71,9 +71,22 @@ function loadHtml(selector, htmlContent, type){
 /*** SCROLL HEADER ***/
 const header = document.querySelector('header');
 
+// header code:
 if(header){
 
   document.addEventListener('headerLoaded', () => {
+
+    const loginDrawerBtn = document.getElementById("login-btn");
+    const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
+    const loginDrawer = document.getElementById("login-drawer");
+
+    loginDrawerBtn.addEventListener("click", function(){
+      loginDrawer.classList.add("openingLoginDrawer");
+    });
+
+    closeLoginDrawerBtn.addEventListener("click", function(){
+      loginDrawer.classList.remove("openingLoginDrawer");
+    });
 
     document.querySelectorAll('header .main-header .middle-nav .buttons .service-button .value span').forEach((span) => {
       let number = span.textContent.trim();
@@ -83,7 +96,7 @@ if(header){
         if (window.innerWidth < 490) {
             span.parentElement.style.padding = '4px 2px 4px 1.5px';
         } else {
-          span.parentElement.style.padding = '5px 2px';
+          span.parentElement.style.padding = '6px 2px 5.5px';
         }
 
       } else if(/^\d{2}$/.test(number)) {
@@ -132,7 +145,6 @@ if(header){
   document.body.style.paddingTop = `${header.offsetHeight}px`;
 }
 
-
 function eyeFunction(eyeIcon) {
   const passInput = eyeIcon.previousElementSibling;
   const eyeIcons = eyeIcon.querySelectorAll(".fa-eye, .fa-eye-slash");
@@ -157,9 +169,13 @@ function truncateWords(text, wordsCount){
  #### BANNER SECTION ####
  ########################
 */
+// slider code
 let index = 0;
 const bannerSection = document.querySelector(".banner-section");
 const bannerSlides = document.querySelectorAll('.banner-section .banner-slide-item');
+const loginDrawer = document.getElementById("login-drawer");
+const loginDrawerBtn = document.getElementById("login-btn");
+const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
 
 if(bannerSection){
 
@@ -187,42 +203,42 @@ function nextB(){
 
 let bannerSliderInterval = setInterval(nextB, 4000);
 
-window.addEventListener('scroll', function(){// Stop Banner Slider
+function stopSlider(){
+  clearInterval(bannerSliderInterval);
+}
+
+function startSlider(){
+  clearInterval(bannerSliderInterval);
+  bannerSliderInterval = setInterval(nextB, 4000);
+}
+
+window.addEventListener('scroll', function(){ // Stop Banner Slider
   if(window.scrollY > 10){
-     clearInterval(bannerSliderInterval);
+    stopSlider();
   } else if(window.scrollY === 0){
-    clearInterval(bannerSliderInterval);
-    bannerSliderInterval = setInterval(nextB, 4000);
+    startSlider();
   }
 });
 
-if(header){
-
-  const loginDrawerBtn = document.getElementById("login-btn");
-  const loginDrawer = document.getElementById("login-drawer");
-  const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
-
-  loginDrawerBtn.addEventListener("click", function(){
-    loginDrawer.classList.add("openingLoginDrawer");
-    clearInterval(bannerSliderInterval); // Stop Banner Slider
-  });
-
-  closeLoginDrawerBtn.addEventListener("click", function(){
-    loginDrawer.classList.remove("openingLoginDrawer");
-    clearInterval(bannerSliderInterval);
-    bannerSliderInterval = setInterval(nextB, 4000);
-  });
-
-}
-
 bannerSection.addEventListener('mouseenter', function(){
-  clearInterval(bannerSliderInterval);
+  stopSlider()
 });
 
 bannerSection.addEventListener('mouseleave', function(){
-  clearInterval(bannerSliderInterval);
-  bannerSliderInterval = setInterval(nextB, 4000);
+  startSlider()
 });
+
+function checkLoginDrawer(){
+  if(loginDrawer.classList.contains("openingLoginDrawer")){
+    clearInterval(bannerSliderInterval);
+  } else {
+    clearInterval(bannerSliderInterval);
+    bannerSliderInterval = setInterval(nextB, 4000);
+  }
+}
+
+loginDrawerBtn.addEventListener("click", stopSlider);
+closeLoginDrawerBtn.addEventListener("click", startSlider);
 
 document.querySelectorAll('.banner-section .banner-slide-item .left-block h2').forEach((h2) => {
   h2.textContent = truncateWords(h2.textContent, 5);
