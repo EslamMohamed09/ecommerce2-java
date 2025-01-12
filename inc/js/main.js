@@ -62,64 +62,76 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function loadHtml(selector, htmlContent, type){
+  document.querySelector(selector).innerHTML = htmlContent;
+
+  if(type === "header"){document.dispatchEvent(new Event("headerLoaded"))}
+}
+
 /*** SCROLL HEADER ***/
 const header = document.querySelector('header');
 
 if(header){
 
-  document.querySelectorAll('header .main-header .middle-nav .buttons .service-button .value span').forEach((span) => {
-    let number = span.textContent.trim();
+  document.addEventListener('headerLoaded', () => {
 
-    if(/^\d{3,}$/.test(number)){
+    document.querySelectorAll('header .main-header .middle-nav .buttons .service-button .value span').forEach((span) => {
+      let number = span.textContent.trim();
 
-       if (window.innerWidth < 490) {
-           span.parentElement.style.padding = '4px 2px 4px 1.5px';
-       } else {
-         span.parentElement.style.padding = '5px 2px';
-       }
+      if(/^\d{3,}$/.test(number)){
 
-    } else if(/^\d{2}$/.test(number)) {
+        if (window.innerWidth < 490) {
+            span.parentElement.style.padding = '4px 2px 4px 1.5px';
+        } else {
+          span.parentElement.style.padding = '5px 2px';
+        }
 
-      if (window.innerWidth < 490) {
-          span.parentElement.style.padding = '4px 2.5px 4px 3.5px';
+      } else if(/^\d{2}$/.test(number)) {
+
+        if (window.innerWidth < 490) {
+            span.parentElement.style.padding = '4px 2.5px 4px 3.5px';
+        } else {
+          span.parentElement.style.padding = '5px 3.5px';
+        }
+
       } else {
-        span.parentElement.style.padding = '5px 3.5px';
+
+        if (window.innerWidth < 490) {
+            span.parentElement.style.padding = '3px 4px';
+        } else {
+          span.parentElement.style.padding = '5px';
+        }
+
       }
+    });
 
-    } else {
-
-      if (window.innerWidth < 490) {
-          span.parentElement.style.padding = '3px 4px';
-      } else {
-        span.parentElement.style.padding = '5px';
-      }
-
+    /*** MOBILE HEADER ***/
+    if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
+      const mobileHBtn = document.getElementById("open-mHeader");
+      const mainHeader = document.getElementById("main-header");
+      mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
     }
+
+    window.addEventListener('scroll', function(){
+
+      if (window.scrollY > 30){
+          document.querySelector("header .top-nav").style.display = 'none';
+          document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
+      } else {
+        document.querySelector("header .top-nav").style.display = 'flex';
+        document.querySelector(".main-header").style.boxShadow = 'none';
+
+      }
+      
+    });
+
   });
 
-  /*** MOBILE HEADER ***/
-  if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
-    const mobileHBtn = document.getElementById("open-mHeader");
-    const mainHeader = document.getElementById("main-header");
-    mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
-  }
-
-  window.addEventListener('scroll', function(){
-
-    if (window.scrollY > 30){
-        document.querySelector("header .top-nav").style.display = 'none';
-        document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
-    } else {
-      document.querySelector("header .top-nav").style.display = 'flex';
-      document.querySelector(".main-header").style.boxShadow = 'none';
-
-    }
-    
-  });
+  loadHtml("header", headerContent, "header");
 
   document.body.style.paddingTop = `${header.offsetHeight}px`;
-
 }
+
 
 function eyeFunction(eyeIcon) {
   const passInput = eyeIcon.previousElementSibling;
