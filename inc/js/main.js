@@ -636,7 +636,6 @@ if (document.querySelector(".offers-section")){
     createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .inner-col"));
 }
 
-
 /* 
  ############################
  #### MONTH DEAL SECTION ####
@@ -950,8 +949,8 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
 if(document.querySelector("#single-page")){
 
   function getProductId(){
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('id');
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
   }
 
   async function loadProduct(productId){
@@ -1334,6 +1333,23 @@ if(document.querySelector(".category-page")){
     return categories.filter(cat => cat.parent_id === categoryId);
   }
 
+  function getChildsCategories(categoryId, categories) {
+    let result = [];
+
+    function findChildren(id){
+      let children = categories.filter(cat => cat.parent_id === id);
+
+      if(children.length === 0){
+         result.push(categories.find(cat => cat.id === id));
+      } else {
+        children.forEach(child => findChildren(child.id));
+      }
+    }
+
+    findChildren(categoryId);
+    return result;
+  }
+
   function buildCategoryList(parentCategories, childCategories = []){
     const totalParentCategories = parentCategories.length;
 
@@ -1450,6 +1466,8 @@ if(document.querySelector(".category-page")){
       const categories = await loadCategories();
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const childCategories = getChildCategories(currentCategoryId, categories);
+
+      console.log(getChildsCategories(currentCategoryId, categories));
        
       document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
