@@ -433,7 +433,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
   desiredProductsContainer.innerHTML = '';
 
-  fetch('/pages/products.json').then(response => response.json())
+  fetch('../admin/pages/products.json').then(response => response.json())
   .then(data => {
       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
 
@@ -524,7 +524,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
 function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 
-  fetch('/pages/products.json').then(response => response.json())
+  fetch('../admin/pages/products.json').then(response => response.json())
     .then(data => {
       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
 
