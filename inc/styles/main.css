@@ -263,8 +263,8 @@
   --orange-box-shadow:0 1px 0.9rem #fd9103c5;
   --red-box-shadow:0 0.1rem 1rem #e9290779;
   --aqua-box-shadow:0 0 6px #00c7c7;
-  --blue-box-shadow:0 0 6px #3356ca48;
-  --blue2-box-shadow:0 0 6px #3356ca65;
+  --blue-box-shadow:0 0 3px #3356ca48;
+  --blue2-box-shadow:0 0 3px #3356ca65;
   --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
   --blue4-box-shadow:0 16px 12px rgba(39, 94, 254, 0.28);
   --blue5-box-shadow:0 0 6px #3356ca;
@@ -762,7 +762,7 @@ section {
   text-align: center;
   text-transform: uppercase;
   border-radius: 0.1rem;
-  color: var(--primary5);
+  color: var(--navyblue8);
   outline: none;
   border: 1px solid var(--yellow10);
   background: var(--yellow10);
@@ -770,6 +770,7 @@ section {
 }
 .btn5:hover {
   background: transparent;
+  color: var(--navyblue8);
 }
 
 .btn4-trans {
@@ -1802,6 +1803,7 @@ header .login-drawer.openingLoginDrawer {
   text-transform: uppercase;
   font-weight: bold;
   padding: 0.5rem 1rem;
+  box-shadow: none;
 }
 .promo-section .section-container .card-item .image-holder {
   width: 30%;
