@@ -251,6 +251,15 @@ document.querySelectorAll('.banner-section .banner-slide-item .left-block p').fo
 }
 
 /* 
+ ##########################
+ #### POPULAR PRODUCTS ####
+ ##########################
+*/
+document.querySelectorAll('.popular-products-section .product-item .product-name').forEach((title) => {
+  title.textContent = truncateWords(title.textContent, 4);
+});
+
+/* 
  ########################
  #### OFFERS SECTION ####
  ########################
