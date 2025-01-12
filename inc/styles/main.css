@@ -967,25 +967,28 @@ header .top-nav .right-block ul li button {
 }
 header .top-nav .right-block ul #open-mHeader {
   height: fit-content;
-  cursor: pointer;
   display: none;
   padding: 0 !important;
   margin: 0 !important;
   border: 0 !important;
   outline: 0 !important;
   line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 header .top-nav .right-block ul #open-mHeader svg {
   font-size: 1.2rem;
   padding: 0;
   margin: 0;
   color: var(--white);
+  border: 0 !important;
+  outline: 0 !important;
 }
 header .main-header {
   background-color: var(--olive18);
   padding: 0 !important;
   margin: 0 !important;
-  z-index: 1000000;
+  z-index: 10000000;
   transition: all 1s linear;
 }
 header .main-header .middle-nav {
@@ -997,11 +1000,11 @@ header .main-header .middle-nav .web-title {
   cursor: pointer;
 }
 header .main-header .middle-nav .web-title a {
-  color: var(--olive14);
+  color: var(--olive13);
   text-transform: uppercase;
 }
 header .main-header .middle-nav .search-form {
-  width: 35%;
+  width: 30%;
   border-radius: 1.5rem;
   padding: 0;
   border: none;
@@ -1166,9 +1169,9 @@ header .login-drawer.openingLoginDrawer {
   opacity: 1;
   transition: all 0.4s linear;
 }
-@media (min-width: 1400px) {
+@media (max-width: 1400px) {
   header .main-header .middle-nav .search-form {
-    width: 30%;
+    width: 35%;
   }
 }
 @media (max-width: 768px) {
@@ -1207,6 +1210,9 @@ header .login-drawer.openingLoginDrawer {
     border-bottom: none;
     opacity: 0;
   }
+  header .main-header .middle-nav .search-form {
+    width: 45%;
+  }
   header .main-header .middle-nav .search-form .search-btn {
     padding: 0.6rem 1rem;
   }
@@ -1231,7 +1237,7 @@ header .login-drawer.openingLoginDrawer {
     width: 80% !important;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
-  header .main-header.mobile-header .upper, header .main-header.mobile-header .bottom-nav {
+  header .main-header.mobile-header .middle-nav, header .main-header.mobile-header .bottom-nav {
     opacity: 1;
   }
 }
@@ -1316,7 +1322,7 @@ header .login-drawer.openingLoginDrawer {
     padding: 3px;
   }
   header .main-header .bottom-nav {
-    margin-top: 2.5rem;
+    margin-top: 2.5rem !important;
   }
   header .main-header .bottom-nav nav ul li {
     padding: 0.5rem 0.7rem 0.5rem 1rem;
@@ -2631,7 +2637,7 @@ header .login-drawer.openingLoginDrawer {
   padding: 0;
   background-color: var(--white);
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
-  z-index: 10000000;
+  z-index: 1000000000;
   border-radius: 0.5rem;
 }
 .quick-view-modal .close-area {
