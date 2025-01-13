@@ -1351,6 +1351,20 @@ if(document.querySelector(".category-page")){
     return result;
   }
 
+  function getSiblingCategories(categoryId, categories) {
+
+    let category = categories.find(cat => cat.id === categoryId);
+    
+    if (!category || !category.parent_id) {return [];}
+
+    // Get all categories with the same parent_id (siblings) and exclude the given category
+    return categories.filter(cat => cat.parent_id === category.parent_id && cat.id !== categoryId);
+  }
+
+  function getCategoryProducts(categoryId, products){
+    return products.filter(product => product.catId === categoryId);
+  }
+
   function buildCategoryList(parentCategories, childCategories = []){
     const totalParentCategories = parentCategories.length;
 
@@ -1372,11 +1386,7 @@ if(document.querySelector(".category-page")){
     return parentCategoryHTML + childCategoryHTML;
   }
 
-  function getCategoryProducts(categoryId, products){
-    return products.filter(product => product.catId === categoryId);
-  }
-
-  async function displayParentAndChildCategories(){
+  async function displayCategoriesAndProducts(){
 
     try {
     
@@ -1388,6 +1398,7 @@ if(document.querySelector(".category-page")){
         return;
       }
 
+      const categories = await loadCategories();
       const products = await loadProducts();
       const categoryProducts = getCategoryProducts(currentCategoryId, products);
 
@@ -1461,14 +1472,13 @@ if(document.querySelector(".category-page")){
           thisCategoryProducts.appendChild(productsContainer);
           document.querySelector(".category-page .right-block").appendChild(thisCategoryProducts);
 
-          handleProductColor();
+          console.log(getSiblingCategories(currentCategoryId, categories));
+
+          selectProductColor();
       }
 
-      const categories = await loadCategories();
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const childCategories = getChildCategories(currentCategoryId, categories);
-
-      console.log(getLeafCategories(currentCategoryId, categories));
        
       document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
@@ -1544,7 +1554,7 @@ if(document.querySelector(".category-page")){
     }
   }
 
-  displayParentAndChildCategories();
+  displayCategoriesAndProducts();
 
 
   $('.category-page .category-page-container .right-block .categories-products .categoriesproducts1').owlCarousel({
@@ -1857,7 +1867,7 @@ if(document.querySelector(".payment-section")){
  ####### GLOBAL #######
  ######################
 */
-function handleProductColor(){
+function selectProductColor(){
 
   const productColors = document.querySelectorAll('.colors-holder .circle-outer .color-circle');
         

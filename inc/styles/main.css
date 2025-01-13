@@ -843,7 +843,7 @@ img {
 .oldprice {
   font-size: 1rem;
   font-weight: normal;
-  color: var(--gray4);
+  color: var(--gray5);
   text-decoration: line-through !important;
 }
 
@@ -3524,6 +3524,7 @@ footer .bottom-footer p {
 .category-page .category-page-container .right-block .this-category-products .products-container .product-item .content .product-name {
   font-size: 14px;
   font-weight: bold;
+  text-align: left;
   line-height: 1rem;
   color: var(--gray11);
 }

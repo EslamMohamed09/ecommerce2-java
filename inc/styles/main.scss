@@ -743,7 +743,7 @@ img {max-width:100%;
 
 .oldprice {font-size:1rem;
            font-weight:normal;
-           color:var(--gray4);
+           color:var(--gray5);
            text-decoration:line-through !important;}
 
 h1, h2, h3, h4, h5 {font-weight:bold;
@@ -3147,9 +3147,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                         }
                         
                         .product-name {font-size:14px;
-                                        font-weight:bold;
-                                        line-height:1rem;
-                                        color:var(--gray11);}
+                                       font-weight:bold;
+                                       text-align:left;
+                                       line-height:1rem;
+                                       color:var(--gray11);}
 
                         p {color:var(--gray5);
                            padding:0;
