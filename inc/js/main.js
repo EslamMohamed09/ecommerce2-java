@@ -1333,17 +1333,18 @@ if(document.querySelector(".category-page")){
     return categories.filter(cat => cat.parent_id === categoryId);
   }
 
-  function getChildsCategories(categoryId, categories) {
+  function getLeafCategories(categoryId, categories) {
     let result = [];
 
     function findChildren(id){
       let children = categories.filter(cat => cat.parent_id === id);
 
+      children.forEach(child => findChildren(child.id));
+
       if(children.length === 0){
          result.push(categories.find(cat => cat.id === id));
-      } else {
-        children.forEach(child => findChildren(child.id));
       }
+
     }
 
     findChildren(categoryId);
@@ -1467,7 +1468,7 @@ if(document.querySelector(".category-page")){
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const childCategories = getChildCategories(currentCategoryId, categories);
 
-      console.log(getChildsCategories(currentCategoryId, categories));
+      console.log(getLeafCategories(currentCategoryId, categories));
        
       document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 

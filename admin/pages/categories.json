@@ -24,7 +24,7 @@
 
     {"id":"12", "name":"kettle", "Image":"../admin/inc/images/electronics/boilers&heaters/kettle1/1.png", "parent_id":"10"},
 
-    {"id":"13", "name":"steam iron", "Image":"../admin/inc/images/electronics/boilers&heaters/steamiron2/1.png", "parent_id":"10"},
+    {"id":"13", "name":"iron", "Image":"../admin/inc/images/electronics/boilers&heaters/steamiron2/1.png", "parent_id":"10"},
 
     {"id":"14", "name":"camera", "Image":"../admin/inc/images/electronics/camera/c1/1.png", "parent_id":"1"},
 
