@@ -1400,7 +1400,65 @@ if(document.querySelector(".category-page")){
 
       const categories = await loadCategories();
       const products = await loadProducts();
+      const parentCategories = getParentCategories(currentCategoryId, categories);
+      const childCategories = getChildCategories(currentCategoryId, categories);
       const categoryProducts = getCategoryProducts(currentCategoryId, products);
+
+      // print parent & child categories in filter block
+      document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
+
+      // print category title in information bar
+      const thisCategoryElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscategorylist");
+      const currentCategoryName = thisCategoryElement.textContent.trim();
+      document.querySelector(".category-page .category-information .category-title").textContent = currentCategoryName;
+
+      if(childCategories.length > 0){
+         thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
+         thisCategoryElement.style.cssText = 'border-bottom-left-radius:0;border-bottom-right-radius:0;';
+
+         const childsCount = document.createElement('span'); // print categories count
+               childsCount.classList.add('childs-count');
+               childsCount.textContent = `${childCategories.length} categories`;
+         document.querySelector(".category-page .category-information .category-stats").appendChild(childsCount);
+
+         let childCategoriesHtml = childCategories.map((childCategory) => { // create categories items with their childs
+      
+            const childCategoryChilds = getChildCategories(childCategory.id, categories);
+    
+            let childChildsFooterHtml = '';
+            let hasChildClass = '';
+    
+            if (childCategoryChilds.length > 0) {
+                hasChildClass = 'has-child-category';
+                childChildsFooterHtml = `
+                  <div class="cat-item-footer d-flex-c-st-st">
+                    ${childCategoryChilds.map(childCategoryChild => `
+                      <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
+                    `).join('')}
+                  </div>`;
+            }
+    
+            return `<div class="category-item ${hasChildClass}">
+                      <a href="category.html?id=${childCategory.id}">
+                        <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
+                        <h4>${childCategory.name}</h4>
+                      </a>
+                      ${childChildsFooterHtml}
+                    </div>`
+         }).join('');
+
+         const categoryItemsContainer = document.createElement('div');
+               categoryItemsContainer.classList.add('category-items-container');
+               categoryItemsContainer.innerHTML = childCategoriesHtml;
+         document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
+      }
+
+      if (childCategories.length > 0 && categoryProducts.length > 0) { // print | if there are category childs & category products
+          const separator = document.createElement('span');
+                separator.classList.add('separator');
+                separator.textContent = ' | ';
+          document.querySelector(".category-page .category-information .category-stats").appendChild(separator);
+      }
 
       if(categoryProducts.length > 0){
 
@@ -1475,63 +1533,6 @@ if(document.querySelector(".category-page")){
           console.log(getSiblingCategories(currentCategoryId, categories));
 
           selectProductColor();
-      }
-
-      const parentCategories = getParentCategories(currentCategoryId, categories);
-      const childCategories = getChildCategories(currentCategoryId, categories);
-       
-      document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
-
-      const thisCategoryElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscategorylist");
-      const currentCategoryName = thisCategoryElement.textContent.trim();
-      document.querySelector(".category-page .category-information .category-title").textContent = currentCategoryName;
-
-      if (childCategories.length > 0 && categoryProducts.length > 0) { // print | if there are category childs & category products
-          const separator = document.createElement('span');
-                separator.classList.add('separator');
-                separator.textContent = ' | ';
-          document.querySelector(".category-page .category-information .category-stats").appendChild(separator);
-      }
-
-      if(childCategories.length > 0){
-         thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
-         thisCategoryElement.style.cssText = 'border-bottom-left-radius:0;border-bottom-right-radius:0;';
-
-         const childsCount = document.createElement('span'); // print categories count
-               childsCount.classList.add('childs-count');
-               childsCount.textContent = `${childCategories.length} categories`;
-         document.querySelector(".category-page .category-information .category-stats").appendChild(childsCount);
-
-         let childCategoriesHtml = childCategories.map((childCategory) => { // create categories items with their childs
-      
-            const childCategoryChilds = getChildCategories(childCategory.id, categories);
-    
-            let childChildsFooterHtml = '';
-            let hasChildClass = '';
-    
-            if (childCategoryChilds.length > 0) {
-                hasChildClass = 'has-child-category';
-                childChildsFooterHtml = `
-                  <div class="cat-item-footer d-flex-c-st-st">
-                    ${childCategoryChilds.map(childCategoryChild => `
-                      <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
-                    `).join('')}
-                  </div>`;
-            }
-    
-            return `<div class="category-item ${hasChildClass}">
-                      <a href="category.html?id=${childCategory.id}">
-                        <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
-                        <h4>${childCategory.name}</h4>
-                      </a>
-                      ${childChildsFooterHtml}
-                    </div>`
-         }).join('');
-
-         const categoryItemsContainer = document.createElement('div');
-               categoryItemsContainer.classList.add('category-items-container');
-               categoryItemsContainer.innerHTML = childCategoriesHtml;
-         document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
       }
 
     } catch (error) {
