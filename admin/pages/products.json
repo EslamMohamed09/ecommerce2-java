@@ -66,8 +66,8 @@
       "country":"Bangladesh",
       "instock":"80",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"39",
+      "viewed":"94",
       "rating":5
     },
     {
@@ -89,8 +89,8 @@
       "material":"96%Polyester+4%Spandex",
       "instock":"175",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"83",
       "rating":5
     },
     {
@@ -112,8 +112,8 @@
       "material":"80% Cotton, 20% Polyester",
       "instock":"150",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"104",
       "rating":3.5
     },
     {
@@ -135,8 +135,8 @@
       "material":"Cotton Blend",
       "instock":"105",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"101",
       "rating":4
     },
     {
@@ -158,8 +158,8 @@
       "material":"100% Polyester",
       "instock":"29",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"24",
+      "viewed":"111",
       "rating":4.5
     },
     {
@@ -185,8 +185,8 @@
       "material":"Cotton+Polyester",
       "instock":"36",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"49",
+      "viewed":"77",
       "rating":4.5
     },
     {
@@ -212,8 +212,8 @@
       "Closure type":"Pull On",
       "instock":"33",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"105",
       "rating":4.5
     },
     {
@@ -238,8 +238,8 @@
       "Closure type":"Lace Up",
       "instock":"20",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"106",
       "rating":4.5
     },
     {
@@ -260,8 +260,8 @@
       "material":"75% Polyester/25% Cotton",
       "instock":"58",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"41",
+      "viewed":"60",
       "rating":5
     },
     {
@@ -285,8 +285,8 @@
       "ClosureType":"Lace Up",                                      
       "instock":"19",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"40",
+      "viewed":"101",
       "rating":4
     },
     {
@@ -312,8 +312,8 @@
       "NeckStyle":"Hooded Neck",
       "instock":"29",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"35",
+      "viewed":"99",
       "rating":4.5
     },
     {
@@ -338,8 +338,8 @@
       "ClosureType":"Zipper",
       "instock":"21",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"10",
+      "viewed":"120",
       "rating":5
     },
     {
@@ -365,8 +365,8 @@
       "Country of Origin":"Vietnam",
       "instock":"26",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"109",
       "rating":5
     },
     {
@@ -392,8 +392,8 @@
       "Country of Origin":"China",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"95",
       "rating":3.5
     },
     {
@@ -420,8 +420,8 @@
       "Country of Origin":"China",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"37",
+      "viewed":"101",
       "rating":4
     },
     {
@@ -443,8 +443,8 @@
       "material":"Polyester, Cotton and Fleece",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"11",
+      "viewed":"112",
       "rating":4.5
     },
     {
@@ -466,8 +466,8 @@
       "material":"Plastic",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -487,8 +487,8 @@
       "material":"Glass",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -507,8 +507,8 @@
       "Brand":"Braun",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -528,8 +528,8 @@
       "material":"Food grade enhanced ABS, BPAfree,PC, 304 stainless blade",
       "instock":"16",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"94",
       "rating":5
     },
     {
@@ -550,8 +550,8 @@
       "material":"mixed materials",
       "instock":"22",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"93",
       "rating":4
     },
     {
@@ -572,8 +572,8 @@
       "material":"stainless Steel",
       "instock":"19",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"99",
       "rating":4.5
     },
     {
@@ -593,8 +593,8 @@
       "material":"plastic",
       "instock":"17",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"31",
+      "viewed":"95",
       "rating":5
     },
     {
@@ -616,8 +616,8 @@
       "material":"glass",
       "instock":"11",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"36",
+      "viewed":"88",
       "rating":5
     },
     {
@@ -637,8 +637,8 @@
       "material":"glass",
       "instock":"13",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"31",
+      "viewed":"93",
       "rating":4.1
     },
     {
@@ -659,8 +659,8 @@
       "Voltage":"230 Volts",
       "instock":"25",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"87",
       "rating":4
     },
     {
@@ -682,8 +682,8 @@
       "Country":"China",
       "instock":"45",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"38",
+      "viewed":"89",
       "rating":4.5
     },
     {
@@ -704,8 +704,8 @@
       "material":"glass",
       "instock":"56",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"39",
+      "viewed":"94",
       "rating":4.5
     },
     {
@@ -728,8 +728,8 @@
       "Efficiency":"B, A+",
       "instock":"19",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"103",
       "rating":4.5
     },
     {
@@ -749,8 +749,8 @@
       "Brand":"Ariston",
       "instock":"33",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"119",
+      "viewed":"107",
       "rating":4.5
     },
     {
@@ -772,8 +772,8 @@
       "dimensions":"LxWxH 42 x 42 x 74.6 centimeters",
       "instock":"39",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"108",
       "rating":5
     },
     {
@@ -790,8 +790,8 @@
       "colors":["silver", "blue", "yellow", "black"],
       "instock":"27",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"109",
       "rating":4
     },
     {
@@ -814,8 +814,8 @@
       "materials":"Mixed Materials",
       "instock":"11",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"103",
       "rating":4.5
     },
     {
@@ -835,8 +835,8 @@
       "material":"Mixed Materials",
       "instock":"23",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -858,8 +858,8 @@
       "Country":"China",
       "instock":"33",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"119",
       "rating":5
     },
     {
@@ -879,8 +879,8 @@
       "Base Plate Type":"Ceramic",
       "instock":"39",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"110",
       "rating":4.1
     },
     {
@@ -901,8 +901,8 @@
       "weight":"1.5 Kilograms",
       "instock":"35",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"111",
       "rating":4
     },
     {
@@ -923,8 +923,8 @@
       "Maximum aperture":"3.5 Millimeters",
       "instock":"43",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"135",
       "rating":4.5
     },
     {
@@ -950,8 +950,8 @@
       "Touch screen":"Yes",
       "instock":"4",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"120",
       "rating":4.5
     },
     {
@@ -980,8 +980,8 @@
       "Touch screen":"Yes",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"101",
       "rating":4.5
     },
     {
@@ -999,8 +999,8 @@
       "color":"black",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"103",
       "rating":4.5
     },
     {
@@ -1024,8 +1024,8 @@
       "Model year":"2022",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -1050,8 +1050,8 @@
       "sIM card slot count":"single SIM",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"107",
       "rating":5
     },
     {
@@ -1078,8 +1078,8 @@
       "Model year":"2022",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"109",
       "rating":5
     },
     {
@@ -1110,8 +1110,8 @@
        "System chip":"Apple A14 Bionic",
        "Processor":"Hexa-core, 64-bit, 5 nm",
        "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"112",
       "rating":5
     },
     {
@@ -1133,10 +1133,9 @@
       "ScreenSize":"6.43 Inches",
       "Form factor":"slate",
       "Model year":2022,
- 
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -1159,8 +1158,8 @@
       "Weight":"1 Grams",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"92",
       "rating":5
     },
     {
@@ -1186,8 +1185,8 @@
       "Wireless network technology":"GSM, Wi-Fi, LTE",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"119",
       "rating":5
     },
     {
@@ -1214,8 +1213,8 @@
       "SIM card slot count":"Dual SIM",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"37",
+      "viewed":"89",
       "rating":5
     },
     {
@@ -1242,8 +1241,8 @@
       "Form factor":"Touch Bar",
       "instock":"37",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"89",
       "rating":5
     },
     {
@@ -1267,8 +1266,8 @@
       "Model year":"2022",
       "instock":"41",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"35",
+      "viewed":"89",
       "rating":5
     },
     {
@@ -1294,8 +1293,8 @@
       "Connector type":"USB Type C",
       "instock":"25",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"31",
+      "viewed":"91",
       "rating":5
     },
     {
@@ -1325,8 +1324,8 @@
       "Model Number":"Rfanc22we5w",
       "instock":"81",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"38",
+      "viewed":"93",
       "rating":5
     },
     {
@@ -1349,8 +1348,8 @@
       "Item weight":"42.2 Grams",
       "instock":"24",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"119",
       "rating":5
     },
     {
@@ -1372,8 +1371,8 @@
       "weight":"55 Grams",
       "instock":"18",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"18",
+      "viewed":"90",
       "rating":5
     },
     {
@@ -1399,8 +1398,8 @@
       "Item weight":"0.06 Kilograms",
       "instock":"22",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"16",
+      "viewed":"93",
       "rating":5
     },
     {
@@ -1425,8 +1424,8 @@
       "Item weight":"4 Grams",
       "instock":"26",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"89",
       "rating":5
     },
     {
@@ -1452,8 +1451,8 @@
       "Connectivity technology":"Wi-Fi",
       "instock":"36",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"87",
       "rating":5
     },
     {
@@ -1476,8 +1475,8 @@
       "Product dimensions":"18.5D x 73W x 48H centimeters",
       "instock":"27",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"36",
+      "viewed":"89",
       "rating":5
     },
     {
@@ -1500,8 +1499,8 @@
       "Item weight":"5400 Grams",
       "instock":"28",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"10",
+      "viewed":"50",
       "rating":5
     },
     {
@@ -1526,8 +1525,8 @@
       "Manufacturer":"Fresh",
       "instock":"39",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"36",
+      "viewed":"88",
       "rating":5
     },
     {
@@ -1551,8 +1550,8 @@
       "Manufacturer":"Mienta",
       "instock":"45",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"30",
+      "viewed":"85",
       "rating":5
     },
     {
@@ -1574,8 +1573,8 @@
       "Manufacturer":"Kenwood",
       "instock":"41",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -1602,8 +1601,8 @@
       "Country of Origin":"Egypt 1 Year Full Free Warranty",
       "instock":"16",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"51",
+      "viewed":"133",
       "rating":5
     },
     {
@@ -1620,8 +1619,8 @@
       "color":"black",
       "instock":"36",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"13",
+      "viewed":"101",
       "rating":5
     },
     {
@@ -1644,8 +1643,8 @@
       "Total USB ports":2,
       "instock":"31",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"25",
+      "viewed":"102",
       "rating":5
     },
     {
@@ -1670,8 +1669,8 @@
       "Total internal bays":"7",
       "instock":"38",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"39",
+      "viewed":"93",
       "rating":5
     },
     {
@@ -1693,8 +1692,8 @@
       "Item dimensions":"LxWxH 44.2 x 21 x 47.9 centimeters",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"34",
+      "viewed":"98",
       "rating":5
     },
     {
@@ -1717,8 +1716,8 @@
       "Total internal bays":"2",
       "instock":"15",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"99",
       "rating":5
     },
     {
@@ -1740,8 +1739,8 @@
       "Total USB ports":"2",
       "instock":"29",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"30",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -1766,8 +1765,8 @@
       "Total USB ports":"1",
       "instock":"20",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"110",
       "rating":5
     },
     {
@@ -1785,8 +1784,8 @@
       "Material":"Mixed Materials",
       "instock":"22",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -1812,8 +1811,8 @@
       "Total internal bays":"3",
       "instock":"18",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -1830,8 +1829,8 @@
       "color":"gray",
       "instock":"26",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"86",
       "rating":5
     },
     {
@@ -1850,8 +1849,8 @@
       "Material":"Mixed Materials",
       "instock":"38",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"87",
       "rating":5
     },
     {
@@ -1874,8 +1873,8 @@
       "Material":"Aluminum",
       "instock":"33",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"81",
       "rating":4
     },
     {
@@ -1902,8 +1901,8 @@
       "Hard disk size":"1TB",
       "instock":"31",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"102",
       "rating":4
     },
     {
@@ -1929,8 +1928,8 @@
       "Included components":"PHD",
       "instock":"150",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -1955,8 +1954,8 @@
       "Data transfer rate":"1050 Megabits Per Second",
       "instock":"86",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -1982,8 +1981,8 @@
       "Hard disk size":"240 GB",
       "instock":"73",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2010,8 +2009,8 @@
       "Series":"Green",
       "instock":"65",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -2037,8 +2036,8 @@
       "Hard disk size":"240 GB",
       "instock":"27",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -2061,8 +2060,8 @@
       "Material":"plastic",
       "instock":"26",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2089,8 +2088,8 @@
       "Cache size":"12",
       "instock":"23",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2116,8 +2115,8 @@
       "Specific uses for product":"Multimedia, Personal, Gaming",
       "instock":"33",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2137,8 +2136,8 @@
       "Included components":"HDD",
       "instock":"46",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2161,8 +2160,8 @@
       "Hard disk form factor":"2.5 Inches",
       "instock":"22",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -2188,8 +2187,8 @@
       "Included components":"Hard Drive",
       "instock":"29",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -2216,8 +2215,8 @@
       "Included components":"ssd",
       "instock":"66",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2240,8 +2239,8 @@
       "Wireless Type":"802.11ac",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2268,8 +2267,8 @@
       "Wireless communication standard":"802.11ax",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2295,8 +2294,8 @@
       "Operating system": "Windows",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2322,8 +2321,8 @@
       "Product dimensions":"29.5D x 43.5W x 18.9H centimeters",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2342,8 +2341,8 @@
       "Series":"ISO Up to 11 ppm",
       "instock":"22",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2367,8 +2366,8 @@
       "Product dimensions": "31.6D x 43.5W x 14.5H centimeters",
       "instock":"29",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2394,8 +2393,8 @@
       "Max. monochrome printing speed":"15 ppm",
       "instock":"33",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2418,8 +2417,8 @@
       "color":"green",
       "instock":"38",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -2436,8 +2435,8 @@
       "color":"green x black",
       "instock":"36",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2462,8 +2461,8 @@
       "Data transfer rate":"12 Gigabits",
       "instock":"32",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2490,8 +2489,8 @@
       "Series":"GV-N3050EAGLE OC-8GD",
       "instock":"44",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2518,8 +2517,8 @@
       "Graphics card interface":"PCI Express",
       "instock":"41",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2546,8 +2545,8 @@
       "Series":"GV-N1650OC-4GD",
       "instock":"46",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"2",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2567,8 +2566,8 @@
       "Wattage":"7.5 watts",
       "instock":"28",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -2587,8 +2586,8 @@
       "Product dimensions":"22.5D x 108.2W x 33.8H centimeters",
       "instock":"33",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"17",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2605,8 +2604,8 @@
       "color":"silver",
       "instock":"22",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"16",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2626,8 +2625,8 @@
       "Mounting type": "Wall Mount",
       "instock":"52",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"111",
       "rating":4.5
     },
     {
@@ -2655,8 +2654,8 @@
       "Included components": "Cord",
       "instock":"22",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"9",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -2680,8 +2679,8 @@
       "Included components": "Remote",
       "instock":"37",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"11",
+      "viewed":"129",
       "rating":4
     },
     {
@@ -2704,8 +2703,8 @@
       "Weight": "4 Kilograms",
       "instock":"39",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"119",
       "rating":4
     },
     {
@@ -2726,8 +2725,8 @@
       "Dimensions":"12D x 15W x 10H centimeters",
       "instock":"32",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"80",
       "rating":4
     },
     {
@@ -2750,8 +2749,8 @@
       "Weight": "3.7 Kilograms",
       "instock":"11",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"111",
       "rating":4
     },
     {
@@ -2775,8 +2774,8 @@
       "Included components": "ceiling fan",
       "instock":"36",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"90",
       "rating":4
     },
     {
@@ -2798,8 +2797,8 @@
       "Model Number": "FG300L-2D",
       "instock":"22",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"39",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2820,8 +2819,8 @@
       "Pattern": "Solid",
       "instock":"49",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"90",
       "rating":4
     },
     {
@@ -2842,8 +2841,8 @@
       "Model Number": "KH256 VF",
       "instock":"43",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"95",
       "rating":4
     },
     {
@@ -2860,8 +2859,8 @@
       "color":"gray",
       "instock":"49",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -2879,8 +2878,8 @@
       "colors":["darkkhaki", "gray", "silver"],
       "instock":"52",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":3.5
     },
     {
@@ -2898,8 +2897,8 @@
       "colors":["white", "gray", "silver"],
       "instock":"35",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2917,8 +2916,8 @@
       "colors":["black", "gray"],
       "instock":"63",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2940,8 +2939,8 @@
       "Capacity":"8 Kilograms",
       "instock":"48",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2970,8 +2969,8 @@
       "Maximum Spin Speed": "800 RPM",
       "instock":"57",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -2991,8 +2990,8 @@
       "Capacity": "7 Kilograms",
       "instock":"52",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -3014,8 +3013,8 @@
       "Outer Material": "Synthetic",
       "instock":"63",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -3037,8 +3036,8 @@
       "Outer Material": "Leather",
       "instock":"40",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3059,8 +3058,8 @@
       "Sole Material":"Ethylene Vinyl Acetate",
       "instock":"30",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3078,8 +3077,8 @@
       "colors":["black", "lightskyblue", "blue", "white"],
       "instock":"26",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3096,8 +3095,8 @@
       "color":"white x black",
       "instock":"27",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3119,8 +3118,8 @@
       "Outer Material": "Synthetic",
       "instock":"59",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -3142,8 +3141,8 @@
       "Sole Material": "Rubber",
       "instock":"38",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3164,8 +3163,8 @@
       "Closure Type": "Hook & Loop",
       "instock":"85",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3187,8 +3186,8 @@
       "Closure Type": "Hook & Loop",
       "instock":"34",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3210,8 +3209,8 @@
       "Closure Type": "Hook & Loop",
       "instock":"20",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3232,8 +3231,8 @@
       "Water Resistance Level": "Not Water Resistant",
       "instock":"47",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3255,8 +3254,8 @@
       "Water Resistance Level": "Not Water Resistant",
       "instock":"42",
       "off":"25%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3278,8 +3277,8 @@
       "Closure Type": "Lace-Up",
       "instock":"15",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3301,8 +3300,8 @@
       "Closure Type": "Lace-Up",
       "instock":"46",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3324,8 +3323,8 @@
       "Sole Material":"Rubber",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3347,8 +3346,8 @@
       "Sole Material": "Synthetic",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3370,8 +3369,8 @@
       "Outer Material": "Leather",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -3393,8 +3392,8 @@
       "Sole Material": "Rubber",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3416,8 +3415,8 @@
       "Closure Type":"Pull On",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3439,8 +3438,8 @@
       "Water Resistance Level": "Not Water Resistant",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3461,8 +3460,8 @@
       "Closure Type": "Lace-Up",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"103",
       "rating":5
     },
     {
@@ -3484,8 +3483,8 @@
       "Closure Type": "Lace-Up",
       "instock":"61",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"101",
       "rating":4.5
     },
     {
@@ -3507,8 +3506,8 @@
       "Closure Type": "Lace-Up",
       "instock":"62",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"25",
+      "viewed":"106",
       "rating":4
     },
     {
@@ -3528,8 +3527,8 @@
       "Closure Type":"Lace-Up",
       "instock":"71",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"109",
       "rating":4.5
     },
     {
@@ -3551,8 +3550,8 @@
       "Closure Type": "Lace-Up",
       "instock":"63",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"97",
       "rating":4.5
     },
     {
@@ -3575,8 +3574,8 @@
       "Country of Origin":"China",
       "instock":"64",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"102",
       "rating":4.5
     },
     {
@@ -3598,8 +3597,8 @@
       "Water Resistance Level": "Not Water Resistant",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"108",
       "rating":5
     },
     {
@@ -3622,8 +3621,8 @@
       "Weight":"8.2 oz",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"112",
       "rating":5
     },
     {
@@ -3641,8 +3640,8 @@
       "colors":["white", "red", "red x white"],
       "instock":"58",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"23",
+      "viewed":"106",
       "rating":5
     },
     {
@@ -3664,8 +3663,8 @@
       "Sole Material": "Rubber",
       "instock":"65",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"129",
       "rating":4.5
     },
     {
@@ -3687,8 +3686,8 @@
       "Outer Material": "Synthetic",
       "instock":"74",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"50",
       "rating":4.5
     },
     {
@@ -3710,8 +3709,8 @@
       "Sole Material": "Rubber",
       "instock":"77",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3733,8 +3732,8 @@
       "Sole Material": "Man Made",
       "instock":"78",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"60",
+      "viewed":"94",
       "rating":5
     },
     {
@@ -3756,8 +3755,8 @@
       "Sole Material": "Ethylene Vinyl Acetate",
       "instock":"73",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3779,8 +3778,8 @@
       "Sole Material": "Rubber",
       "instock":"84",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"18",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3802,8 +3801,8 @@
       "Outer Material": "Textile",
       "instock":"39",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3824,8 +3823,8 @@
       "Closure": "TypePull-On",
       "instock":"78",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3848,8 +3847,8 @@
       "Country of Origin": "China",
       "instock":"40",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -3871,8 +3870,8 @@
       "Outer Material": "Faux Leather",
       "instock":"54",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"18",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3893,8 +3892,8 @@
       "Closure Type": "Pull-On",
       "instock":"38",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"16",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -3916,8 +3915,8 @@
       "Closure Type": "Zipper",
       "instock":"50",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"9",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -3938,8 +3937,8 @@
       "Closure Type": "Zipper",
       "instock":"52",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"102",
       "rating":5
     },
     {
@@ -3961,8 +3960,8 @@
       "Water Resistance Level": "Not Water Resistant",
       "instock":"59",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"102",
       "rating":5
     },
     {
@@ -3984,8 +3983,8 @@
       "Water Resistance Level": "Water Resistant",
       "instock":"40",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"18",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -4008,8 +4007,8 @@
       "Sole Material": "Rubber",
       "instock":"57",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"16",
+      "viewed":"105",
       "rating":5
     },
     {
@@ -4032,8 +4031,8 @@
       "Country of Origin":" China",
       "instock":"69",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"101",
       "rating":5
     },
     {
@@ -4054,8 +4053,8 @@
       "Country of Origin": "China",
       "instock":"62",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"105",
       "rating":5
     },
     {
@@ -4077,8 +4076,8 @@
       "Closure Type": "Slip On",
       "instock":"68",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4100,8 +4099,8 @@
       "Closure Type": "Pull On",
       "instock":"60",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4124,8 +4123,8 @@
       "Country of Origin": "Thailand",
       "instock":"67",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4148,8 +4147,8 @@
       "Country of Origin":"China",
       "instock":"56",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4171,8 +4170,8 @@
       "Sole Material": "Oofoam",
       "instock":"82",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":3.5
     },
     {
@@ -4194,8 +4193,8 @@
       "Sole Material": "Oofoam",
       "instock":"82",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":3.5
     },
     {
@@ -4218,8 +4217,8 @@
       "Country of Origin": "China",
       "instock":"15",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"105",
       "rating":4.5
     },
     {
@@ -4241,8 +4240,8 @@
       "Closure Type": "Slip On",
       "instock":"72",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -4264,8 +4263,8 @@
       "Closure Type": "Slip On",
       "instock":"48",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"55",
       "rating":5
     },
     {
@@ -4287,8 +4286,8 @@
       "Number of Burners": 5,
       "instock":"20",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"11",
+      "viewed":"60",
       "rating":4.5
     },
     {
@@ -4305,8 +4304,8 @@
       "color": "black x silver",
       "instock":"49",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"95",
       "rating":3.5
     },
     {
@@ -4326,8 +4325,8 @@
       "Weight": "65 Kilograms",
       "instock":"78",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"90",
       "rating":3.5
     },
     {
@@ -4354,8 +4353,8 @@
       "Mounting type": "Gas",
       "instock":"19",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":3.5
     },
     {
@@ -4377,8 +4376,8 @@
       "Installation Type":"Free Standing",
       "instock":"30",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4400,8 +4399,8 @@
       "Weight":"45 Kilograms",
       "instock":"10",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4420,8 +4419,8 @@
       "Brand": "Natural Sky",
       "instock":"15",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4440,8 +4439,8 @@
       "Brand": "Grand Electronic",
       "instock":"16",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4458,8 +4457,8 @@
       "color":"transparent",
       "instock":"20",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -4485,8 +4484,8 @@
       "Is dishwasher-safe": "Yes",
       "instock":"30",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4507,8 +4506,8 @@
       "Weight":"1 Grams",
       "instock":"43",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"120",
       "rating":3.5
     },
     {
@@ -4530,8 +4529,8 @@
       "Weight":"270 Grams",
       "instock":"79",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"121",
       "rating":4
     },
     {
@@ -4550,8 +4549,8 @@
       "salePrice":"$41",
       "instock":"10",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"18",
+      "viewed":"81",
       "rating":3.5
     },
     {
@@ -4577,8 +4576,8 @@
       "Is dishwasher-safe": "Yes",
       "instock":"20",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"120",
       "rating":3.5
     },
     {
@@ -4600,8 +4599,8 @@
       "Included components": "frying pan set 2 pcs",
       "instock":"22",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"122",
       "rating":3.5
     },
     {
@@ -4621,8 +4620,8 @@
       "Material": "Glass",
       "instock":"70",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"135",
       "rating":5
     },
     {
@@ -4642,8 +4641,8 @@
       "Number of pieces": "3",
       "instock":"60",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"137",
       "rating":3.5
     },
     {
@@ -4660,8 +4659,8 @@
       "colors":["gray x green", "red", "peru", "black"],
       "instock":"63",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"119",
       "rating":3.5
     },
     {
@@ -4681,8 +4680,8 @@
       "Brand":"Other",
       "instock":"65",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"108",
       "rating":3.5
     },
     {
@@ -4699,8 +4698,8 @@
       "colors":["red x silver", "peru", "black"],
       "instock":"82",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"107",
       "rating":3.5
     },
     {
@@ -4723,8 +4722,8 @@
       "Weight":"18 Kilograms",
       "instock":"59",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"109",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4747,8 +4746,8 @@
       "Energy consumption": "700 Watts",
       "instock":"27",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":3.5
     },
     {
@@ -4775,8 +4774,8 @@
       "Efficiency": "B",
       "instock":"28",
       "off":"35%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -4797,8 +4796,8 @@
       "Weight":"5 Kilograms",
       "instock":"21",
       "off":"30%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -4824,8 +4823,8 @@
       "Model Number": "MZ2010P-B5",
       "instock":"22",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"103",
       "rating":5
     },
     {
@@ -4846,8 +4845,8 @@
       "Weight": "1.19 Kilograms",
       "instock":"16",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"25",
+      "viewed":"106",
       "rating":5
     },
     {
@@ -4865,8 +4864,8 @@
       "colors":["peru", "black", "blue", "gray"],
       "instock":"68",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"104",
       "rating":3.5
     },
     {
@@ -4889,8 +4888,8 @@
       "Product": "Made of SAE 304 stainless steel AKA 18/8 stainless steel",
       "instock":"66",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"105",
       "rating":5
     },
     {
@@ -4911,8 +4910,8 @@
       "Weight": "450 Grams",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"101",
       "rating":5
     },
     {
@@ -4934,8 +4933,8 @@
       "Number of pieces": "2",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"105",
       "rating":5
     },
     {
@@ -4959,8 +4958,8 @@
       "Weight": "1.68 Kilograms",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"102",
       "rating":5
     },
     {
@@ -4981,8 +4980,8 @@
       "Size": "24 Cm",
       "instock":"15",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"106",
       "rating":5
     },
     {
@@ -5002,8 +5001,8 @@
       "colors":["purple", "black", "red", "palevioletred"],
       "instock":"50",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"108",
       "rating":5
     },
     {
@@ -5023,8 +5022,8 @@
       "colors":["purple", "black", "red", "maroon"],
       "instock":"73",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"107",
       "rating":5
     },
     {
@@ -5044,8 +5043,8 @@
       "salePrice":"$11",
       "instock":"38",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"41",
+      "viewed":"106",
       "rating":3.5
     },
     {
@@ -5062,8 +5061,8 @@
       "colors":["white x black", "black x gray", "blue x black", "red x blue"],
       "instock":"30",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"115",
       "rating":3.5
     },
     {
@@ -5090,8 +5089,8 @@
       "GraphicsCardDescription":"Dedicated",
       "instock":"35",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"117",
       "rating":4
     },
     {
@@ -5118,8 +5117,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"39",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"130",
       "rating":4.5
     },
     {
@@ -5146,8 +5145,8 @@
       "GraphicsCardDescription":"Dedicated",
       "instock":"32",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"131",
       "rating":4.5
     },
     {
@@ -5174,8 +5173,8 @@
       "GraphicsCoprocessor":"NVIDIA GeForce RTX 3060",
       "instock":"54",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"36",
+      "viewed":"128",
       "rating":4.5
     },
     {
@@ -5203,8 +5202,8 @@
       "GraphicsCoprocessor":"Intel UHD Graphics",
       "instock":"32",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"109",
       "rating":5
     },
     {
@@ -5231,8 +5230,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"30",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"122",
       "rating":4
     },
     {
@@ -5259,8 +5258,8 @@
       "GraphicsCoprocessor":"NVIDIA GeForce RTX 3050",
       "instock":"30",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -5287,8 +5286,8 @@
       "CPUSpeed":"3.1 GHz",
       "instock":"30",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -5316,8 +5315,8 @@
       "GraphicsCoprocessor":"Intel Iris Xe Graphics",
       "instock":"39",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5344,8 +5343,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"54",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -5372,8 +5371,8 @@
       "GraphicsCardDescription":"Dedicated",
       "instock":"45",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -5400,8 +5399,8 @@
       "GraphicsCardDescription":"Iris Xe Graphics",
       "instock":"39",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -5428,8 +5427,8 @@
       "GraphicsCardDescription":"Dedicated",
       "instock":"78",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -5456,8 +5455,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"44",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5485,8 +5484,8 @@
       "GraphicsCoprocessor":"AMD Radeon Graphics",
       "instock":"40",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"102",
       "rating":4
     },
     {
@@ -5510,8 +5509,8 @@
       "RamMemoryInstalledSize":"8GB",
       "instock":"40",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -5534,8 +5533,8 @@
       "RamMemoryInstalled":"Size20 GB",
       "instock":"47",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":3.5
     },
     {
@@ -5559,8 +5558,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"30",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -5583,8 +5582,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"55",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -5611,8 +5610,8 @@
       "GraphicsCardDescription":"Dedicated",
       "instock":"24",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -5636,8 +5635,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"28",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"102",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5664,8 +5663,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"40",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"110",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5689,8 +5688,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"66",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"31",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5714,8 +5713,8 @@
       "RamMemoryInstalledSize":"12 GB",
       "instock":"40",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"30",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5739,8 +5738,8 @@
       "RamMemoryInstalledSize":"32 GB",
       "instock":"47",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5767,8 +5766,8 @@
       "GraphicsCardDescription":"Dedicated",
       "instock":"24",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5790,8 +5789,8 @@
       "RamMemoryInstalledSize":"32GB",
       "instock":"40",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -5818,8 +5817,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"30",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -5843,8 +5842,8 @@
       "RamMemoryInstalledSize":"64 GB",
       "instock":"38",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -5871,8 +5870,8 @@
       "GraphicsCard":"Integrated",
       "instock":"28",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"111",
       "rating":5
     },
     {
@@ -5896,8 +5895,8 @@
       "RamMemoryInstalledSize":"32GB",
       "instock":"28",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -5921,8 +5920,8 @@
       "RamMemoryInstalledSize":"16GB",
       "instock":"66",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"105",
       "rating":5
     },
     {
@@ -5946,8 +5945,8 @@
       "RamMemoryInstalledSize":"8GB",
       "instock":"18",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"102",
       "rating":5
     },
     {
@@ -5971,8 +5970,8 @@
       "RamMemoryInstalledSize":"8GB",
       "instock":"29",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"99",
       "rating":5
     },
     {
@@ -5996,8 +5995,8 @@
       "RamMemoryInstalledSize":"16GB",
       "instock":"35",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -6021,8 +6020,8 @@
       "RamMemoryInstalledSize":"16GB",
       "instock":"57",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -6046,8 +6045,8 @@
       "RamMemoryInstalled Size":"32 GB",
       "instock":"18",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -6071,8 +6070,8 @@
       "RamMemoryInstalledSize":"32GB",
       "instock":"38",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -6096,8 +6095,8 @@
       "RamMemoryInstalledSize":"64 GB",
       "instock":"48",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -6121,8 +6120,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"44",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -6146,8 +6145,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"8",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -6171,8 +6170,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"19",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -6196,8 +6195,8 @@
       "RamMemoryInstalledSize":"32 GB",
       "instock":"22",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -6224,8 +6223,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"65",
       "off":"15%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -6251,8 +6250,8 @@
       "SpecialFeature":"Built-In Webcam",
       "instock":"58",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -6274,8 +6273,8 @@
       "CPUModel":"Pentium",
       "instock":"60",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":5
     },
     {
@@ -6301,8 +6300,8 @@
       "GraphicsCoprocessor":"Intel Iris Xe Graphics",
       "instock":"61",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"99",
       "rating":3.5
     },
     {
@@ -6328,8 +6327,8 @@
       "SpecialFeature":"High Definition Audio",
       "instock":"77",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"95",
       "rating":5
     },
     {
@@ -6355,8 +6354,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"74",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -6380,8 +6379,8 @@
       "RamMemoryInstalled Size":"16 GB",
       "instock":"70",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6405,8 +6404,8 @@
       "RamMemoryInstalledSize":"16 GB",
       "instock":"30",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6431,8 +6430,8 @@
       "RamMemoryInstalledSize":"8GB",
       "instock":"21",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6456,8 +6455,8 @@
       "RamMemoryInstalledSize":"16GB",
       "instock":"33",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6481,8 +6480,8 @@
       "RamMemoryInstalledSize":"16GB",
       "instock":"78",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6506,8 +6505,8 @@
       "RamMemoryInstalled":"Size16GB",
       "instock":"62",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":3.5
     },
     {
@@ -6531,8 +6530,8 @@
       "RamMemoryInstalledSize":"16GB",
       "instock":"66",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6556,8 +6555,8 @@
       "RamMemory":"16 GB",
       "instock":"69",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"9",
       "rating":5
     },
     {
@@ -6581,8 +6580,8 @@
       "RamMemoryInstalledSize":"8GB",
       "instock":"49",
       "off":"20%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -6609,8 +6608,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -6637,8 +6636,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"52",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"106",
       "rating":4.5
     },
     {
@@ -6666,8 +6665,8 @@
       "HardDiskDescription":"SSD",
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"17",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -6694,8 +6693,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"30",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"89",
       "rating":4.5
     },
     {
@@ -6722,8 +6721,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"24",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"30",
+      "viewed":"88",
       "rating":4.5
     },
     {
@@ -6750,8 +6749,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"24",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -6779,8 +6778,8 @@
       "GraphicsCoprocessor":"Intel Iris Xe Graphics",
       "instock":"27",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -6807,8 +6806,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"28",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -6835,8 +6834,8 @@
       "GraphicsCoprocessor":"AMD Radeon Graphics",
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -6863,8 +6862,8 @@
       "GraphicsCoprocessor":"Intel Iris Xe Graphics",
       "instock":"44",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -6891,8 +6890,8 @@
       "GraphicsCar Description":"Dedicated",
       "instock":"40",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"102",
       "rating":3.5
     },
     {
@@ -6919,8 +6918,8 @@
       "GraphicsCoprocessor":"Intel Iris Xe Graphics",
       "instock":"8",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"101",
       "rating":4.5
     },
     {
@@ -6947,8 +6946,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"11",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"106",
       "rating":4.5
     },
     {
@@ -6975,8 +6974,8 @@
       "GraphicsCoprocessor":"Intel Iris Xe Graphics",
       "instock":"14",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"107",
       "rating":5
     },
     {
@@ -7003,8 +7002,8 @@
       "GraphicsCardDescription":"Integrated",
       "instock":"19",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7022,8 +7021,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7041,8 +7040,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7060,8 +7059,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7079,8 +7078,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7098,8 +7097,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7117,8 +7116,8 @@
       "colors":["black", "aqua", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7136,8 +7135,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7155,8 +7154,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"33",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7174,8 +7173,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7193,8 +7192,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"15",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7211,8 +7210,8 @@
       "colors":["black", "gray", "white"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"16",
+      "viewed":"88",
       "rating":5
     },
     {
@@ -7230,8 +7229,8 @@
       "colors":["black", "gray", "white"],
       "instock":"50",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7249,8 +7248,8 @@
       "colors":["black", "gray", "white"],
       "instock":"86",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7268,8 +7267,8 @@
       "colors":["black", "gray", "white"],
       "instock":"36",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -7287,8 +7286,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"47",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"25",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7306,8 +7305,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"58",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7325,8 +7324,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"57",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7344,8 +7343,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"56",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7363,8 +7362,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"76",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"14",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -7382,8 +7381,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"53",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -7401,8 +7400,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"73",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -7420,8 +7419,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"87",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"104",
       "rating":4.5
     },
     {
@@ -7439,8 +7438,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"90",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7458,8 +7457,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"92",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7477,8 +7476,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"84",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7496,8 +7495,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"82",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7514,8 +7513,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"50",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7533,8 +7532,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"65",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7552,8 +7551,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"60",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7571,8 +7570,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"66",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7590,8 +7589,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"28",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"26",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -7609,8 +7608,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"37",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"28",
+      "viewed":"50",
       "rating":4.5
     },
     {
@@ -7628,8 +7627,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"40",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"104",
       "rating":4
     },
     {
@@ -7647,8 +7646,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"42",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7666,8 +7665,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"52",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"12",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7685,8 +7684,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"59",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"50",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7704,8 +7703,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"67",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7722,8 +7721,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"69",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"23",
+      "viewed":"89",
       "rating":5
     },
     {
@@ -7741,8 +7740,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"74",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"109",
       "rating":5
     },
     {
@@ -7760,8 +7759,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"77",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"133",
       "rating":3.5
     },
     {
@@ -7779,8 +7778,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"80",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"84",
       "rating":5
     },
     {
@@ -7798,8 +7797,8 @@
       "colors":["black", "gray", "white", "sienna"],
       "instock":"86",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"99",
       "rating":5
     },
     {
@@ -7817,8 +7816,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"73",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"23",
+      "viewed":"106",
       "rating":4.5
     },
     {
@@ -7836,8 +7835,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"69",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"108",
       "rating":5
     },
     {
@@ -7854,8 +7853,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"55",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"18",
+      "viewed":"109",
       "rating":4.5
     },
     {
@@ -7872,8 +7871,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"58",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"19",
+      "viewed":"120",
       "rating":4.5
     },
     {
@@ -7891,8 +7890,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"59",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"130",
       "rating":5
     },
     {
@@ -7910,8 +7909,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"119",
       "rating":4
     },
     {
@@ -7929,8 +7928,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"110",
       "rating":4
     },
     {
@@ -7948,8 +7947,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"29",
+      "viewed":"102",
       "rating":4
     },
     {
@@ -7966,8 +7965,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"23",
+      "viewed":"109",
       "rating":4
     },
     {
@@ -7985,8 +7984,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"22",
+      "viewed":"107",
       "rating":4
     },
     {
@@ -8004,8 +8003,8 @@
       "colors":["black", "gray", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -8023,8 +8022,8 @@
       "colors":["black", "peru", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -8042,8 +8041,8 @@
       "colors":["black", "antiquewhite", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"32",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -8061,8 +8060,8 @@
       "colors":["black", "antiquewhite", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"21",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -8080,8 +8079,8 @@
       "colors":["black", "peru", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"27",
+      "viewed":"84",
       "rating":4
     },
     {
@@ -8098,8 +8097,8 @@
       "colors":["black", "gray x blue", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"20",
+      "viewed":"84",
       "rating":4.5
     },
     {
@@ -8117,8 +8116,8 @@
       "colors":["black", "peru", "white", "silver"],
       "instock":"51",
       "off":"10%",
-      "bought":"",
-      "viewed":"",
+      "bought":"11",
+      "viewed":"110",
       "rating":4
     }
   ]
