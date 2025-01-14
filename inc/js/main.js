@@ -1351,6 +1351,10 @@ if(document.querySelector(".category-page")){
     return result;
   }
 
+  function getCategoriesProducts(categoriesIds, products){
+    return products.filter(product => categoriesIds.includes(product.catId));
+  }
+
   function getSiblingCategories(categoryId, categories) {
 
     let category = categories.find(cat => cat.id === categoryId);
@@ -1403,6 +1407,7 @@ if(document.querySelector(".category-page")){
       const parentCategories = getParentCategories(currentCategoryId, categories);
       const childCategories = getChildCategories(currentCategoryId, categories);
       const categoryProducts = getCategoryProducts(currentCategoryId, products);
+      const leafCategories = getLeafCategories(currentCategoryId, categories);
 
       // print parent & child categories in filter block
       document.querySelector('.category-page .filter-block .categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
@@ -1451,6 +1456,11 @@ if(document.querySelector(".category-page")){
                categoryItemsContainer.classList.add('category-items-container');
                categoryItemsContainer.innerHTML = childCategoriesHtml;
          document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
+
+         const leafCategoriesIds = leafCategories.map(cat => cat.id);
+
+         console.log(getCategoriesProducts(leafCategoriesIds, products));
+
       }
 
       if (childCategories.length > 0 && categoryProducts.length > 0) { // print | if there are category childs & category products
