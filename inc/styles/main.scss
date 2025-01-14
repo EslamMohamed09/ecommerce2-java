@@ -2926,18 +2926,9 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
       form .submit-button {width:100%;}
 
-      .categories-block {
-          h4 {text-transform:uppercase;
-              background-color:var(--yellow10);}
-                                                                           
-          ul li {padding:0.7rem;}
- 
-          ul li:not(:last-child) {border-bottom:1px solid var(--gray3);}
-      }
-
-      .parent-categories-block {box-shadow:var(--box-shadow6);
-                                background-color:transparent;
-                                border-radius:0.5rem;
+      .categories-block {box-shadow:var(--box-shadow6);
+                         background-color:transparent;
+                         border-radius:0.5rem;
 
         li {padding:0.7rem 1rem 0.6rem 0;
             background-color:var(--white);
@@ -3267,6 +3258,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         }
       }
     }
+  }
+
+  @media(max-width:768px){
+    .filter-block {margin-bottom:2rem;}
+
+    .right-block {padding:0 !important;}
   }
 }
 

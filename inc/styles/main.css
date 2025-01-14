@@ -3279,41 +3279,31 @@ footer .bottom-footer p {
 .category-page .category-page-container .filter-block form .submit-button {
   width: 100%;
 }
-.category-page .category-page-container .filter-block .categories-block h4 {
-  text-transform: uppercase;
-  background-color: var(--yellow10);
-}
-.category-page .category-page-container .filter-block .categories-block ul li {
-  padding: 0.7rem;
-}
-.category-page .category-page-container .filter-block .categories-block ul li:not(:last-child) {
-  border-bottom: 1px solid var(--gray3);
-}
-.category-page .category-page-container .filter-block .parent-categories-block {
+.category-page .category-page-container .filter-block .categories-block {
   box-shadow: var(--box-shadow6);
   background-color: transparent;
   border-radius: 0.5rem;
 }
-.category-page .category-page-container .filter-block .parent-categories-block li {
+.category-page .category-page-container .filter-block .categories-block li {
   padding: 0.7rem 1rem 0.6rem 0;
   background-color: var(--white);
 }
-.category-page .category-page-container .filter-block .parent-categories-block li.categorylist {
+.category-page .category-page-container .filter-block .categories-block li.categorylist {
   color: var(--gray10);
 }
-.category-page .category-page-container .filter-block .parent-categories-block li.categorylist a {
+.category-page .category-page-container .filter-block .categories-block li.categorylist a {
   color: var(--gray10);
 }
-.category-page .category-page-container .filter-block .parent-categories-block li:not(:last-child) {
+.category-page .category-page-container .filter-block .categories-block li:not(:last-child) {
   border-bottom: 1px solid var(--gray3);
 }
-.category-page .category-page-container .filter-block .parent-categories-block li.thiscategorylist {
+.category-page .category-page-container .filter-block .categories-block li.thiscategorylist {
   justify-content: space-between;
   font-weight: bold;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-.category-page .category-page-container .filter-block .parent-categories-block li .fa-angle-down {
+.category-page .category-page-container .filter-block .categories-block li .fa-angle-down {
   margin: 0;
   font-size: 1rem;
 }
@@ -3651,6 +3641,14 @@ footer .bottom-footer p {
   flex-wrap: nowrap;
   width: 100%;
   background-color: transparent;
+}
+@media (max-width: 768px) {
+  .category-page .filter-block {
+    margin-bottom: 2rem;
+  }
+  .category-page .right-block {
+    padding: 0 !important;
+  }
 }
 
 #category-page-categoriesproducts {

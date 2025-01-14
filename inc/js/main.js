@@ -1405,10 +1405,10 @@ if(document.querySelector(".category-page")){
       const categoryProducts = getCategoryProducts(currentCategoryId, products);
 
       // print parent & child categories in filter block
-      document.querySelector('.category-page .filter-block .parent-categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
+      document.querySelector('.category-page .filter-block .categories-block .catmenu').innerHTML = buildCategoryList(parentCategories, childCategories);
 
       // print category title in information bar
-      const thisCategoryElement = document.querySelector(".category-page .filter-block .parent-categories-block .thiscategorylist");
+      const thisCategoryElement = document.querySelector(".category-page .filter-block .categories-block .thiscategorylist");
       const currentCategoryName = thisCategoryElement.textContent.trim();
       document.querySelector(".category-page .category-information .category-title").textContent = currentCategoryName;
 
@@ -1535,23 +1535,22 @@ if(document.querySelector(".category-page")){
           selectProductColor();
       }
 
+      // handle padding left to categories lists
+      const categorylists = document.querySelectorAll(".category-page .filter-block .categories-block .categorylist");
+      for(let i=0; i<categorylists.length; i++){
+          categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
+      }
+      const lastCategoryList = categorylists[categorylists.length - 1];
+      const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
+      const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .categories-block .childs-categorylist");
+      if(childsCategoryLists.length > 0){
+         for (let j=0; j<childsCategoryLists.length; j++) {
+              childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
+         }
+      }
+
     } catch (error) {
       console.error('Error loading categories:', error);
-    }
-
-    const categorylists = document.querySelectorAll(".category-page .filter-block .parent-categories-block .categorylist");
-    for(let i=0; i<categorylists.length; i++){
-        categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
-    }
-
-    const lastCategoryList = categorylists[categorylists.length - 1];
-    const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
-
-    const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .parent-categories-block .childs-categorylist");
-    if(childsCategoryLists.length > 0){
-       for (let j=0; j<childsCategoryLists.length; j++) {
-            childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
-       }
     }
   }
 
