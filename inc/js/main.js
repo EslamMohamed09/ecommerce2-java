@@ -1417,7 +1417,7 @@ if(document.querySelector(".category-page")){
       const currentCategoryName = thisCategoryElement.textContent.trim();
       document.querySelector(".category-page .category-information .category-title").textContent = currentCategoryName;
 
-      if(childCategories.length > 0){
+      if(childCategories.length > 0){ // *** Print first level of categories
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
          thisCategoryElement.style.cssText = 'border-bottom-left-radius:0;border-bottom-right-radius:0;';
 
@@ -1457,15 +1457,16 @@ if(document.querySelector(".category-page")){
                categoryItemsContainer.innerHTML = childCategoriesHtml;
          document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
 
+         // Products of leaf categories
          const leafCategoriesIds = leafCategories.map(cat => cat.id);
          const categoriesProducts = getCategoriesProducts(leafCategoriesIds, products);
 
          const paginationHolderCategoriesProducts = document.createElement('div');
                paginationHolderCategoriesProducts.classList.add('pagination-holder');
-         const categoriesProductsElement = document.createElement('div');
-               categoriesProductsElement.classList.add('categories-products');
          const categoriesProductsContainer = document.createElement('div');
                categoriesProductsContainer.classList.add('categories-products-container');
+         const categoriesProductsElement = document.createElement('div');
+               categoriesProductsElement.classList.add('categories-products');
 
          function rendercategoriesProducts(categoriesProducts){
            let categoriesProductsHtml = categoriesProducts.map((product) => { // create categories products html
@@ -1523,6 +1524,7 @@ if(document.querySelector(".category-page")){
  
            }).join('');
            categoriesProductsContainer.innerHTML = categoriesProductsHtml;
+           selectProductColor();
          }
 
          categoriesProductsElement.appendChild(categoriesProductsContainer);
@@ -1541,7 +1543,7 @@ if(document.querySelector(".category-page")){
           document.querySelector(".category-page .category-information .category-stats").appendChild(separator);
       }
 
-      if(categoryProducts.length > 0){
+      if(categoryProducts.length > 0){ // *** print products of category
 
           const categoryProductsCount = document.createElement('span'); // print products count
                 categoryProductsCount.classList.add('category-products-count');
@@ -1610,6 +1612,7 @@ if(document.querySelector(".category-page")){
               </div>`
             }).join('');
             productsContainer.innerHTML = categoryProductsHtml;
+            selectProductColor();
           }
 
           thisCategoryProducts.appendChild(productsContainer);
@@ -1618,7 +1621,6 @@ if(document.querySelector(".category-page")){
           pagination(categoryProducts, 45, renderCategoryProducts, paginationHolder);
 
           document.querySelector(".category-page .right-block").appendChild(thisCategoryProducts);
-
           selectProductColor();
       }
 
