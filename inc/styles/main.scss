@@ -786,6 +786,41 @@ h5 {font-size:1rem;}
     }
 }
 
+.block-heading {width:100%;
+                margin:1.2rem 0 3rem;
+                padding:0;
+                position:relative;
+
+      .block-heading-title {display:inline-block;
+                            font-size:1.8rem;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                            color:var(--gray10);
+                            position:relative;
+
+                    &::after {content:"";
+                              height:3px;
+                              width:100%;
+                              position:absolute;
+                              left:0;
+                              bottom:-0.6rem;
+                              background-color:var(--black2);}
+      }
+
+      &::before {content:"";
+                 height:3px;
+                 width:100%;
+                 position:absolute;
+                 left:0;
+                 bottom:-0.6rem;
+                 background-color:var(--gray4);}
+       
+
+      @media (max-width:711px){ .block-heading-title {text-align:center;
+                                                      font-size:1.5rem;} }
+}
+
 /*** Pagination ***/
 .pagination-holder {width:fit-content;
                     margin:2rem auto 1rem;
@@ -3347,7 +3382,8 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
               .slider-wrapper {padding:0.5rem 0;
                                margin:0 auto;
-                               gap:1.5rem;display:flex;
+                               gap:1rem;
+                               display:flex;
                      
                     .product-item {flex:1 1 20rem;
                                    display:block;
@@ -3475,7 +3511,8 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
                                   p {color:var(--gray5);
                                      padding:0;
-                                     margin:0;}
+                                     margin:0;
+                                     text-align:left;}
 
                                   .ratings {gap:0.1rem;
                                         svg {color:var(--yellow10);

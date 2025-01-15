@@ -1798,9 +1798,11 @@ table tbody tr td img {
   align-items: center;
 }
 
-/*******************
+/*
+ **************
   # Header
-*******************/
+ **************
+*/
 header {
   width: 100%;
   position: fixed;

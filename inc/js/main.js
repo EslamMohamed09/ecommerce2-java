@@ -1628,10 +1628,19 @@ if(document.querySelector(".category-page")){
 
           const topRatedThisCategoryProductsElement = document.createElement('div');
                 topRatedThisCategoryProductsElement.classList.add('top-rated-this-category-products');
-          const topRatedThisCategoryProductsContainerElement = document.createElement('div');
-                topRatedThisCategoryProductsContainerElement.classList.add('products-container');
-          const topRatedThisCategoryProductsWrapperElement = document.createElement('div');
-                topRatedThisCategoryProductsWrapperElement.classList.add('slider-wrapper');
+          const topRatedThisCategoryProductsContainer = document.createElement('div');
+                topRatedThisCategoryProductsContainer.classList.add('products-container');
+          const topRatedThisCategoryProductsWrapper = document.createElement('div');
+                topRatedThisCategoryProductsWrapper.classList.add('slider-wrapper');
+
+          const topRatedThisCategoryProductsHeading = document.createElement('div'); // block title
+                topRatedThisCategoryProductsHeading.classList.add('block-heading');
+          const topRatedThisCategoryProductsTitle = document.createElement('h3');
+                topRatedThisCategoryProductsTitle.classList.add('block-heading-title');
+
+                topRatedThisCategoryProductsTitle.textContent = 'top rated';
+                topRatedThisCategoryProductsHeading.appendChild(topRatedThisCategoryProductsTitle);
+                topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsHeading);
 
           let topRatedProductsHtml = topRatedProducts.map((product) => {
 
@@ -1690,10 +1699,10 @@ if(document.querySelector(".category-page")){
               </div>`
           }).join('');
 
-          topRatedThisCategoryProductsWrapperElement.innerHTML = topRatedProductsHtml;
+          topRatedThisCategoryProductsWrapper.innerHTML = topRatedProductsHtml;
 
-                topRatedThisCategoryProductsContainerElement.appendChild(topRatedThisCategoryProductsWrapperElement);
-                topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainerElement);
+                topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsWrapper);
+                topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainer);
           document.querySelector(".category-page .right-block").appendChild(topRatedThisCategoryProductsElement);
           selectProductColor();
 
