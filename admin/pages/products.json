@@ -7364,7 +7364,7 @@
       "off":"10%",
       "bought":"14",
       "viewed":"104",
-      "rating":4.5
+      "rating":4
     },
     {
       "id":"309",
@@ -7380,10 +7380,10 @@
       "color":"black",
       "colors":["black", "gray", "white", "sienna"],
       "instock":"53",
-      "off":"10%",
-      "bought":"12",
-      "viewed":"104",
-      "rating":4.5
+      "off":"25%",
+      "bought":"20",
+      "viewed":"89",
+      "rating":3.5
     },
     {
       "id":"310",
@@ -7399,10 +7399,10 @@
       "color":"black",
       "colors":["black", "gray", "white", "sienna"],
       "instock":"73",
-      "off":"10%",
+      "off":"35%",
       "bought":"12",
       "viewed":"104",
-      "rating":4.5
+      "rating":3.5
     },
     {
       "id":"311",
@@ -7475,10 +7475,10 @@
       "color":"black",
       "colors":["black", "gray", "white", "sienna"],
       "instock":"84",
-      "off":"10%",
-      "bought":"22",
+      "off":"35%",
+      "bought":"32",
       "viewed":"84",
-      "rating":4.5
+      "rating":3.5
     },
     {
       "id":"315",
@@ -7494,10 +7494,10 @@
       "color":"black",
       "colors":["black", "gray", "white", "sienna"],
       "instock":"82",
-      "off":"10%",
-      "bought":"22",
+      "off":"20%",
+      "bought":"34",
       "viewed":"84",
-      "rating":4.5
+      "rating":3.5
     },
     {
       "id":"316",
@@ -7512,7 +7512,7 @@
       "color":"black",
       "colors":["black", "gray", "white", "sienna"],
       "instock":"50",
-      "off":"10%",
+      "off":"30%",
       "bought":"22",
       "viewed":"84",
       "rating":4.5

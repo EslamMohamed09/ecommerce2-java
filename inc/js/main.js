@@ -1622,6 +1622,16 @@ if(document.querySelector(".category-page")){
 
           document.querySelector(".category-page .right-block").appendChild(thisCategoryProducts);
           selectProductColor();
+
+          // Top Rated Products
+          const topRatedProducts = categoryProducts.filter(product => product.rating > 4);
+
+          // Best Seller Products
+          const bestSellerProducts = categoryProducts.filter(product => product.bought > 30);
+
+          // Hot Deals Products
+          const hotDealsProducts = categoryProducts.filter(product => parseInt(product.off) > 20);
+
       }
 
       // handle padding left to categories lists
