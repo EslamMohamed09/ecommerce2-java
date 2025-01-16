@@ -1771,9 +1771,26 @@ if(document.querySelector(".category-page")){
 
             hotDealsCategoriesProductsWrapper.innerHTML = hotDealsCategoriesProductsHtml;
 
-                  hotDealsCategoriesProductsContainer.appendChild(hotDealsCategoriesProductsWrapper);
-                  hotDealsCategoriesProductsElement.appendChild(hotDealsCategoriesProductsContainer);
+            hotDealsCategoriesProductsContainer.appendChild(hotDealsCategoriesProductsWrapper);
+
+            hotDealsCategoriesProductsContainer.innerHTML += `<div class="arrows">
+                                                                <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                              </div>
+                                                              <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+            hotDealsCategoriesProductsElement.appendChild(hotDealsCategoriesProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(hotDealsCategoriesProductsElement);
+
+            if(hotDealsCategoriesProductsWrapper.children.length > 5){
+              countSlider({
+                section:'.hot-deals-categories-products',
+                containerSelector:'.hot-deals-categories-products .slider-wrapper',
+                dotsSelector:'.hot-deals-categories-products #sliderdots',
+                prevArrowSelector:'.hot-deals-categories-products .arrow-left',
+                nextArrowSelector:'.hot-deals-categories-products .arrow-right',
+              });
+            }
           }
         
          selectProductColor();
@@ -1974,17 +1991,22 @@ if(document.querySelector(".category-page")){
 
             topRatedThisCategoryProductsWrapper.innerHTML = topRatedThisCategoryProductsHtml;
 
-                  topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsWrapper);
-                  topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainer);
+            topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsWrapper);
+            topRatedThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+            topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(topRatedThisCategoryProductsElement);
 
             if(topRatedThisCategoryProductsWrapper.children.length > 5){
               countSlider({
-                section:'top-rated-this-category-products',
-                containerSelector:'top-rated-this-category-products .slider-wrapper',
-                dotsSelector:'top-rated-this-category-products #sliderdots',
-                prevArrowSelector:'top-rated-this-category-products .arrow-left',
-                nextArrowSelector:'top-rated-this-category-products .arrow-right',
+                section:'.top-rated-this-category-products',
+                containerSelector:'.top-rated-this-category-products .slider-wrapper',
+                dotsSelector:'.top-rated-this-category-products #sliderdots',
+                prevArrowSelector:'.top-rated-this-category-products .arrow-left',
+                nextArrowSelector:'.top-rated-this-category-products .arrow-right',
               });
             }
           }
@@ -2088,17 +2110,24 @@ if(document.querySelector(".category-page")){
 
             bestSellerThisCategoryProductsWrapper.innerHTML = bestSellerThisCategoryProductsHtml;
 
-                  bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsWrapper);
-                  bestSellerThisCategoryProductsElement.appendChild(bestSellerThisCategoryProductsContainer);
+            bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsWrapper);
+
+            bestSellerThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                    <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                    <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                  </div>
+                                                                  <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+            bestSellerThisCategoryProductsElement.appendChild(bestSellerThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(bestSellerThisCategoryProductsElement);
 
             if(bestSellerThisCategoryProductsWrapper.children.length > 5){
               countSlider({
-                section:'best-seller-this-category-products',
-                containerSelector:'best-seller-this-category-products .slider-wrapper',
-                dotsSelector:'best-seller-this-category-products #sliderdots',
-                prevArrowSelector:'best-seller-this-category-products .arrow-left',
-                nextArrowSelector:'best-seller-this-category-products .arrow-right',
+                section:'.best-seller-this-category-products',
+                containerSelector:'.best-seller-this-category-products .slider-wrapper',
+                dotsSelector:'.best-seller-this-category-products #sliderdots',
+                prevArrowSelector:'.best-seller-this-category-products .arrow-left',
+                nextArrowSelector:'.best-seller-this-category-products .arrow-right',
               });
             }
           }
@@ -2202,17 +2231,25 @@ if(document.querySelector(".category-page")){
 
             hotDealsThisCategoryProductsWrapper.innerHTML = hotDealsThisCategoryProductsHtml;
 
-                  hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsWrapper);
-                  hotDealsThisCategoryProductsElement.appendChild(hotDealsThisCategoryProductsContainer);
+            hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsWrapper);
+
+            hotDealsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+            hotDealsThisCategoryProductsElement.appendChild(hotDealsThisCategoryProductsContainer);
+
             document.querySelector(".category-page .right-block").appendChild(hotDealsThisCategoryProductsElement);
 
             if(hotDealsThisCategoryProductsWrapper.children.length > 5){
                 countSlider({
-                  section:'hot-deals-this-category-products',
-                  containerSelector:'hot-deals-this-category-products .slider-wrapper',
-                  dotsSelector:'hot-deals-this-category-products #sliderdots',
-                  prevArrowSelector:'hot-deals-this-category-products .arrow-left',
-                  nextArrowSelector:'hot-deals-this-category-products .arrow-right',
+                  section:'.hot-deals-this-category-products',
+                  containerSelector:'.hot-deals-this-category-products .slider-wrapper',
+                  dotsSelector:'.hot-deals-this-category-products #sliderdots',
+                  prevArrowSelector:'.hot-deals-this-category-products .arrow-left',
+                  nextArrowSelector:'.hot-deals-this-category-products .arrow-right',
                 });
             }
           }
@@ -2762,7 +2799,7 @@ function countSlider(options) {
 
     function buildDots() {
       dotsWrapper.innerHTML = '';
-  
+
       const slideCounter = document.createElement('span');
             slideCounter.classList.add('slide-counter');
       dotsWrapper.appendChild(slideCounter);
