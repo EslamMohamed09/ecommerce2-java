@@ -1465,7 +1465,7 @@ if(document.querySelector(".category-page")){
           const bestSellerCategoriesProducts = categoriesProducts.filter(product => product.bought > 30);
 
           if(bestSellerCategoriesProducts.length > 0){
-            const bestSellerCategoriesProductsElement = document.createElement('div');
+            const bestSellerCategoriesProductsElement = document.createElement('div'); // div element
                   bestSellerCategoriesProductsElement.classList.add('best-seller-categories-products');
             const bestSellerCategoriesProductsContainer = document.createElement('div');
                   bestSellerCategoriesProductsContainer.classList.add('products-container');
@@ -1484,6 +1484,10 @@ if(document.querySelector(".category-page")){
             let bestSellerCategoriesProductsHtml = bestSellerCategoriesProducts.map((product) => {
 
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+                let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
@@ -1518,7 +1522,11 @@ if(document.querySelector(".category-page")){
                           <div class="image d-flex-r-c-c">
                             ${imageHtml}
                           </div>
-                          <span class="stat new">new</span>
+                          <div class="stats d-flex-c-st-st">
+                            ${hotDealStat}
+                            ${topRateStat}
+                            ${dealStat}
+                          </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
@@ -1569,6 +1577,10 @@ if(document.querySelector(".category-page")){
 
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
+                let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
                         ${product.colors.slice(0,5).map((proColor) =>
@@ -1602,7 +1614,11 @@ if(document.querySelector(".category-page")){
                           <div class="image d-flex-r-c-c">
                             ${imageHtml}
                           </div>
-                          <span class="stat new">new</span>
+                          <div class="stats d-flex-c-st-st">
+                            ${hotDealStat}
+                            ${topRateStat}
+                            ${dealStat}
+                          </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
@@ -1653,6 +1669,10 @@ if(document.querySelector(".category-page")){
 
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
+                let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
                         ${product.colors.slice(0,5).map((proColor) =>
@@ -1686,7 +1706,11 @@ if(document.querySelector(".category-page")){
                           <div class="image d-flex-r-c-c">
                             ${imageHtml}
                           </div>
-                          <span class="stat new">new</span>
+                          <div class="stats d-flex-c-st-st">
+                            ${hotDealStat}
+                            ${topRateStat}
+                            ${dealStat}
+                          </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
@@ -1743,6 +1767,8 @@ if(document.querySelector(".category-page")){
               let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
               let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+              let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+              let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
 
               let colorHtml = product.colors && product.colors.length > 0 
                 ? `<ul class="colors-holder d-flex-r-st-c">
@@ -1779,7 +1805,8 @@ if(document.querySelector(".category-page")){
                         </div>
                         <div class="stats d-flex-c-st-st">
                           ${hotDealStat}
-                          <span class="stat sale">-${product.off}</span>
+                          ${topRateStat}
+                          ${dealStat}
                         </div>
                         <div class="icons d-flex-c-bt-c">
                           <button type="button"><i class="far fa-heart" id="icon"></i></button>
@@ -1833,6 +1860,8 @@ if(document.querySelector(".category-page")){
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
@@ -1869,7 +1898,8 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="stats d-flex-c-st-st">
                             ${hotDealStat}
-                            <span class="stat sale">-${product.off}</span>
+                            ${topRateStat}
+                            ${dealStat}
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
@@ -1922,6 +1952,8 @@ if(document.querySelector(".category-page")){
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
@@ -1958,7 +1990,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="stats d-flex-c-st-st">
                             ${hotDealStat}
-                            <span class="stat sale">-${product.off}</span>
+                            ${dealStat}
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
@@ -2010,6 +2042,10 @@ if(document.querySelector(".category-page")){
 
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
+                let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
                         ${product.colors.slice(0,5).map((proColor) =>
@@ -2043,7 +2079,10 @@ if(document.querySelector(".category-page")){
                           <div class="image d-flex-r-c-c">
                             ${imageHtml}
                           </div>
-                          <span class="stat new">new</span>
+                          <div class="stats d-flex-c-st-st">
+                            ${hotDealStat}${topRateStat}
+                            ${dealStat}
+                          </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
@@ -2097,6 +2136,8 @@ if(document.querySelector(".category-page")){
                 let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+                let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+                let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0 
                   ? `<ul class="colors-holder d-flex-r-st-c">
@@ -2133,7 +2174,8 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="stats d-flex-c-st-st">
                             ${hotDealStat}
-                            <span class="stat sale">-${product.off}</span>
+                            ${topRateStat}
+                            ${dealStat}
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
