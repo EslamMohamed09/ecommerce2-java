@@ -465,7 +465,7 @@
       "Brand":"Kenwood",
       "material":"Plastic",
       "instock":"15",
-      "off":"20%",
+      "off":"25%",
       "bought":"32",
       "viewed":"84",
       "rating":4.5
@@ -1549,10 +1549,10 @@
       "Power / Wattage":"2000 watts",
       "Manufacturer":"Mienta",
       "instock":"45",
-      "off":"20%",
+      "off":"25%",
       "bought":"30",
       "viewed":"85",
-      "rating":5
+      "rating":4
     },
     {
       "id":"65",
@@ -1575,7 +1575,7 @@
       "off":"20%",
       "bought":"32",
       "viewed":"84",
-      "rating":5
+      "rating":3.5
     },
     {
       "id":"66",
@@ -1603,7 +1603,7 @@
       "off":"20%",
       "bought":"51",
       "viewed":"133",
-      "rating":5
+      "rating":4.5
     },
     {
       "id":"67",
