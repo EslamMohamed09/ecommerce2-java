@@ -1092,8 +1092,8 @@ if(document.querySelector("#single-page")){
 
     if (product.color) {productContainer.querySelector(".right-block .content .color-block #selected-color").textContent = product.color;}
 
-    const colorsContainer = productContainer.querySelector(".right-block .content .colors");
-          colorsContainer.innerHTML = '';
+    const ColorsHolder = productContainer.querySelector(".right-block .content .colors-holder");
+          ColorsHolder.innerHTML = '';
 
     if (product.colors && Array.isArray(product.colors)) {
         product.colors.forEach((color) => {
@@ -1111,7 +1111,7 @@ if(document.querySelector("#single-page")){
             backgroundStyle = color;
           }
 
-          colorsContainer.innerHTML += `<span class="color-circle" style="background:${backgroundStyle};"></span>`;
+          ColorsHolder.innerHTML += `<span class="color-circle" style="background:${backgroundStyle};"></span>`;
         });
     }
 
@@ -1185,7 +1185,7 @@ if(document.querySelector("#single-page")){
 
   function flippingColors() {
     const selectedColor = document.querySelector("#single-page .right-block .color-block #selected-color");
-    const colorCircles = document.querySelectorAll("#single-page .right-block .color-block .color-circle");
+    const colorCircles = document.querySelectorAll("#single-page .right-block .color-block .colors-holder .color-circle");
 
     colorCircles.forEach((colorCircle) => {
       colorCircle.addEventListener('click', function() {
@@ -1489,13 +1489,26 @@ if(document.querySelector(".category-page")){
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
-                let colorHtml = product.colors && product.colors.length > 0 
-                  ? `<ul class="colors-holder d-flex-r-st-c">
-                        ${product.colors.slice(0,5).map((proColor) =>
-                          `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                        ).join('')}
-                    </ul>`
-                  :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
@@ -1581,13 +1594,26 @@ if(document.querySelector(".category-page")){
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
-                let colorHtml = product.colors && product.colors.length > 0 
-                  ? `<ul class="colors-holder d-flex-r-st-c">
-                        ${product.colors.slice(0,5).map((proColor) =>
-                          `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                        ).join('')}
-                    </ul>`
-                  :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
@@ -1673,13 +1699,26 @@ if(document.querySelector(".category-page")){
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
-                let colorHtml = product.colors && product.colors.length > 0 
-                  ? `<ul class="colors-holder d-flex-r-st-c">
-                        ${product.colors.slice(0,5).map((proColor) =>
-                          `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                        ).join('')}
-                    </ul>`
-                  :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
@@ -1770,13 +1809,26 @@ if(document.querySelector(".category-page")){
               let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
               let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
 
-              let colorHtml = product.colors && product.colors.length > 0 
-                ? `<ul class="colors-holder d-flex-r-st-c">
-                      ${product.colors.slice(0,5).map((proColor) =>
-                        `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                      ).join('')}
-                  </ul>`
-                :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
               let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
@@ -1955,13 +2007,26 @@ if(document.querySelector(".category-page")){
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
-                let colorHtml = product.colors && product.colors.length > 0 
-                  ? `<ul class="colors-holder d-flex-r-st-c">
-                        ${product.colors.slice(0,5).map((proColor) =>
-                          `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                        ).join('')}
-                    </ul>`
-                  :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
@@ -2046,13 +2111,26 @@ if(document.querySelector(".category-page")){
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
-                let colorHtml = product.colors && product.colors.length > 0 
-                  ? `<ul class="colors-holder d-flex-r-st-c">
-                        ${product.colors.slice(0,5).map((proColor) =>
-                          `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                        ).join('')}
-                    </ul>`
-                  :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
@@ -2139,13 +2217,26 @@ if(document.querySelector(".category-page")){
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
-                let colorHtml = product.colors && product.colors.length > 0 
-                  ? `<ul class="colors-holder d-flex-r-st-c">
-                        ${product.colors.slice(0,5).map((proColor) =>
-                          `<li class="circle-outer"><div class="color-circle" style="background-color:${proColor};"></div></li>`
-                        ).join('')}
-                    </ul>`
-                  :'';
+                let colorHtml = product.colors && product.colors.length > 0
+                              ? `<ul class="colors-holder d-flex-r-st-c">
+                                    ${product.colors.slice(0, 5).map((proColor) => {
+                                      let backgroundStyle = '';
+                            
+                                      if (proColor.includes('x')) {
+                                          const colorArray = proColor.split('x').map(c => c.trim());
+                                        if (colorArray.length === 2) {
+                                            backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                        } else {
+                                          backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                        }
+                                      } else {
+                                        backgroundStyle = proColor;
+                                      }
+                            
+                                      return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                    }).join('')}
+                                </ul>`
+                              : '';
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 

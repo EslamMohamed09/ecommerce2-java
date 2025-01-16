@@ -2837,12 +2837,14 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
               #selected-color {font-weight:normal;}
 
-              .color-circle {width:2.7rem;
-                             height:2.7rem;
-                             border-radius:50%;
-                             cursor:pointer;
-                             border:1px solid var(--gray6);
-                             box-shadow:inset 0 0 0 3px var(--gray3);}
+              .colors-holder {gap:1rem;
+                .color-circle {width:2.7rem;
+                               height:2.7rem;
+                               border-radius:50%;
+                               cursor:pointer;
+                               border:1px solid var(--gray6);
+                               box-shadow:inset 0 0 0 3px var(--gray3);}
+              }
             }
 
             .product-quantity-btns {width:fit-content;
@@ -2867,7 +2869,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
               .pro-quantity-btn:first-child {border-right:1px solid var(--gray10);}
               .pro-quantity-btn:nth-child(3) {border-left:1px solid var(--gray10);}
             }
-              
 
             .b-btn {margin-top:0.8rem;
                     width:60%;

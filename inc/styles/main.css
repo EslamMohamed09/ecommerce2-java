@@ -3186,7 +3186,10 @@ footer .bottom-footer p {
 #single-page .product-container .right-block .content .color-block #selected-color {
   font-weight: normal;
 }
-#single-page .product-container .right-block .content .color-block .color-circle {
+#single-page .product-container .right-block .content .color-block .colors-holder {
+  gap: 1rem;
+}
+#single-page .product-container .right-block .content .color-block .colors-holder .color-circle {
   width: 2.7rem;
   height: 2.7rem;
   border-radius: 50%;
