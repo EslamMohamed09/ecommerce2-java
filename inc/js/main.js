@@ -2731,25 +2731,27 @@ function dotsSlider(options) {
     }
 
     function buildDots() {
-        dotsWrapper.innerHTML = '';
-        const totalDots = Math.ceil(slides.length / slidesToScroll);
-        for (let i=0; i<totalDots; i++) {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            dot.dataset.index = i;
-            dotsWrapper.appendChild(dot);
-        }
-        updateDots();
+      dotsWrapper.innerHTML = ''; // Clear previous dots
+  
+      // Create a span element to show the current slide info
+      const slideCounter = document.createElement('span');
+      slideCounter.classList.add('slide-counter');
+      dotsWrapper.appendChild(slideCounter);
+  
+      updateDots(); // Set initial slide count display
     }
-
+  
     function updateDots() {
-        const dots = dotsWrapper.children;
-        const activeDotIndex = Math.floor(currentIndex / slidesToScroll);
-        Array.from(dots).forEach(dot => dot.classList.remove('active'));
-        if (dots[activeDotIndex]) {
-            dots[activeDotIndex].classList.add('active');
-        }
+      const totalSlides = slides.length;
+      const totalRounds = Math.ceil(totalSlides / slidesToScroll); // Calculate total rounds
+      const currentRound = Math.floor(currentIndex / slidesToScroll) + 1; // Current round number
+      
+      const slideCounter = dotsWrapper.querySelector('.slide-counter');
+      if (slideCounter) {
+          slideCounter.textContent = `${currentRound} from ${totalRounds}`;
+      }
     }
+  
 
     function setResponsive() {
         const responsiveSettings = [
