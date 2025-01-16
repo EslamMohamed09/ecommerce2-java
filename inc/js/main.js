@@ -1421,10 +1421,10 @@ if(document.querySelector(".category-page")){
          thisCategoryElement.innerHTML += '<i class="fa fa-angle-down"></i>';
          thisCategoryElement.style.cssText = 'border-bottom-left-radius:0;border-bottom-right-radius:0;';
 
-         const childsCount = document.createElement('span'); // print categories count
-               childsCount.classList.add('childs-count');
-               childsCount.textContent = `${childCategories.length} categories`;
-         document.querySelector(".category-page .category-information .category-stats").appendChild(childsCount);
+          const childsCount = document.createElement('span'); // print categories count
+                childsCount.classList.add('childs-count');
+                childsCount.textContent = `${childCategories.length} categories`;
+          document.querySelector(".category-page .category-information .category-stats").appendChild(childsCount);
 
          let childCategoriesHtml = childCategories.map((childCategory) => { // create categories items with their childs
       
@@ -1452,16 +1452,16 @@ if(document.querySelector(".category-page")){
                     </div>`
          }).join('');
 
-         const categoryItemsContainer = document.createElement('div');
-               categoryItemsContainer.classList.add('category-items-container');
-               categoryItemsContainer.innerHTML = childCategoriesHtml;
-         document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
+          const categoryItemsContainer = document.createElement('div');
+                categoryItemsContainer.classList.add('category-items-container');
+                categoryItemsContainer.innerHTML = childCategoriesHtml;
+          document.querySelector(".category-page .right-block").appendChild(categoryItemsContainer);
 
-         // Products of leaf categories
-         const leafCategoriesIds = leafCategories.map(cat => cat.id);
-         const categoriesProducts = getCategoriesProducts(leafCategoriesIds, products);
-
-         // Best Seller Products - slider
+          // Products of leaf categories
+          const leafCategoriesIds = leafCategories.map(cat => cat.id);
+          const categoriesProducts = getCategoriesProducts(leafCategoriesIds, products);
+ 
+          // Best Seller Products - slider
           const bestSellerCategoriesProducts = categoriesProducts.filter(product => product.bought > 30);
 
           if(bestSellerCategoriesProducts.length > 0){
@@ -1545,7 +1545,7 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(bestSellerCategoriesProductsElement);
           }
 
-         // Top Rated Products - slider
+          // Top Rated Products - slider
           const topRatedCategoriesProducts = categoriesProducts.filter(product => product.rating > 4);
 
           if(topRatedCategoriesProducts.length > 0){
@@ -2135,9 +2135,26 @@ if(document.querySelector(".category-page")){
 
             similarProductsThisCategoryProductsWrapper.innerHTML = similarProductsThisCategoryProductsHtml;
 
-                  similarProductsThisCategoryProductsContainer.appendChild(similarProductsThisCategoryProductsWrapper);
-                  similarProductsThisCategoryProductsElement.appendChild(similarProductsThisCategoryProductsContainer);
+            similarProductsThisCategoryProductsContainer.appendChild(similarProductsThisCategoryProductsWrapper);
+
+            similarProductsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                          <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                          <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                        </div>
+                                                                        <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+            similarProductsThisCategoryProductsElement.appendChild(similarProductsThisCategoryProductsContainer);
+
             document.querySelector(".category-page .right-block").appendChild(similarProductsThisCategoryProductsElement);
+
+            dotsSlider({
+              section:'.similar-items-this-category-products',
+              containerSelector:'.similar-items-this-category-products .slider-wrapper',
+              dotsSelector:'.similar-items-this-category-products #sliderdots',
+              prevArrowSelector:'.similar-items-this-category-products .arrow-left',
+              nextArrowSelector:'.similar-items-this-category-products .arrow-right',
+            });
+
           }
 
           selectProductColor();
@@ -2550,7 +2567,7 @@ function dotsSlider(options) {
     let startX = 0;
     let scrollStart = 0;
     let autoSlideInterval;
-    const gapSize = parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.5;
+    const gapSize = parseFloat(getComputedStyle(document.documentElement).fontSize) * 0.5;
 
     function setupSlider() {
         slides = sliderContainer.children;

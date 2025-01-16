@@ -4597,9 +4597,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
               .slider-wrapper {padding:0.5rem 0;
                                margin:0 auto;
-                               gap:1rem;
-                               display:flex;
-                               flex-wrap:wrap;
+                               gap:0.5rem;
                      
                     .product-item {flex:1 1 15rem;
                                    display:block;
@@ -4735,8 +4733,9 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                               font-size:1.1rem;}
                                   }
 
-                                  .product-price {flex-wrap:nowrap;
-                                                  width:100%;
+                                  .product-price {width:fit-content;
+                                                  gap:1.5rem;
+                                                  flex-wrap:nowrap;
                                                   margin:0;
                                                   background-color:transparent;
 
@@ -4753,7 +4752,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
               }
 
               /* <--> */
-              .arrows {width:107%;
+              .arrows {width:99.6%;
                        position:absolute;
                        top:35%;
                        right:50%;
@@ -4765,15 +4764,17 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
                      .arrow-left,
                      .arrow-right {width:2rem;
-                                   height:2rem;
+                                   height:5rem;
                                    padding:0;
                                    font-size:1.2rem;
-                                   line-height:2.1rem;
+                                   display:flex;
+                                   justify-content:center;
+                                   align-items:center;
                                    text-align:center;
                                    padding:0;
-                                   border-radius:50%;
-                                   color:var(--white);
-                                   background:var(--black);
+                                   border-radius:0;
+                                   color:var(--black);
+                                   background:var(--white);
                                    cursor:pointer;}
               }
 
