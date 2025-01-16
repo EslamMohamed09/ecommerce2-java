@@ -2301,7 +2301,7 @@ if(document.querySelector(".category-page")){
 
             document.querySelector(".category-page .right-block").appendChild(similarProductsThisCategoryProductsElement);
 
-            dotsSlider({
+            countSlider({
               section:'.similar-items-this-category-products',
               containerSelector:'.similar-items-this-category-products .slider-wrapper',
               dotsSelector:'.similar-items-this-category-products #sliderdots',
@@ -2698,7 +2698,7 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
   renderPagination(1);
 }
 
-function dotsSlider(options) {
+function countSlider(options) {
     const {
         section = 'slider-section',
         containerSelector = '.slides-container',
@@ -2731,27 +2731,24 @@ function dotsSlider(options) {
     }
 
     function buildDots() {
-      dotsWrapper.innerHTML = ''; // Clear previous dots
+      dotsWrapper.innerHTML = '';
   
-      // Create a span element to show the current slide info
       const slideCounter = document.createElement('span');
-      slideCounter.classList.add('slide-counter');
+            slideCounter.classList.add('slide-counter');
       dotsWrapper.appendChild(slideCounter);
   
-      updateDots(); // Set initial slide count display
+      updateDots();
     }
   
     function updateDots() {
-      const totalSlides = slides.length;
-      const totalRounds = Math.ceil(totalSlides / slidesToScroll); // Calculate total rounds
-      const currentRound = Math.floor(currentIndex / slidesToScroll) + 1; // Current round number
+      const totalRounds = Math.ceil(slides.length / slidesToScroll);
+      const currentRound = Math.floor(currentIndex / slidesToScroll) + 1;
       
       const slideCounter = dotsWrapper.querySelector('.slide-counter');
       if (slideCounter) {
-          slideCounter.textContent = `${currentRound} from ${totalRounds}`;
+          slideCounter.textContent = `${currentRound} of ${totalRounds}`;
       }
     }
-  
 
     function setResponsive() {
         const responsiveSettings = [

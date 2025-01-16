@@ -3594,18 +3594,23 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
@@ -3792,32 +3797,37 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        justify-content:space-between;
                        align-items:center;
 
-                     .arrow-left,
-                     .arrow-right {width:2rem;
-                                   height:2rem;
-                                   padding:0;
-                                   font-size:1.2rem;
-                                   line-height:2.1rem;
-                                   text-align:center;
-                                   padding:0;
-                                   border-radius:50%;
-                                   color:var(--white);
-                                   background:var(--black);
-                                   cursor:pointer;}
+                    .arrow-left,
+                    .arrow-right {width:2rem;
+                                  height:2rem;
+                                  padding:0;
+                                  font-size:1.2rem;
+                                  line-height:2.1rem;
+                                  text-align:center;
+                                  padding:0;
+                                  border-radius:50%;
+                                  color:var(--white);
+                                  background:var(--black);
+                                  cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
@@ -4018,18 +4028,23 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
@@ -4229,18 +4244,23 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
@@ -4439,18 +4459,23 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
@@ -4649,18 +4674,23 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
@@ -4671,7 +4701,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                              padding:0;
 
               .slider-wrapper {padding:0.5rem 0;
-                               margin:0 auto;
+                               margin:4rem auto 0;
                                gap:0.5rem;
                      
                     .product-item {flex:1 1 15rem;
@@ -4860,18 +4890,23 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    cursor:pointer;}
               }
 
-              #sliderdots {margin-top:1rem;
+              #sliderdots {position:absolute;
+                           top:4rem;
+                           right:1rem;
 
-                     .dot {display:inline-block;
-                           width:10px;
-                           height:10px;
-                           margin:5px;
-                           background-color:#ccc;
-                           border-radius:50%;
-                           cursor:pointer;}
-       
-                     .dot.active {background-color:#333;}
+                    .dot {display:inline-block;
+                          width:10px;
+                          height:10px;
+                          margin:5px;
+                          background-color:#ccc;
+                          border-radius:50%;
+                          cursor:pointer;
+                          
+                      .active {background-color:#333;}
+                    }
 
+                    .slide-counter {font-size:1.3rem;
+                                    text-transform:lowercase;}
               }
         }
       }
