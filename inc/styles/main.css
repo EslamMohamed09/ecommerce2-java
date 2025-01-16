@@ -4294,9 +4294,7 @@ footer .bottom-footer p {
 .category-page .category-page-container .right-block .hot-deals-categories-products .products-container .slider-wrapper {
   padding: 0.5rem 0;
   margin: 0 auto;
-  gap: 1rem;
-  display: flex;
-  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .category-page .category-page-container .right-block .hot-deals-categories-products .products-container .slider-wrapper .product-item {
   flex: 1 1 15rem;
@@ -4533,8 +4531,8 @@ footer .bottom-footer p {
 .category-page .category-page-container .right-block .top-rated-this-category-products .products-container .slider-wrapper {
   padding: 0.5rem 0;
   margin: 0 auto;
-  gap: 1rem;
   display: flex;
+  gap: 0.5rem;
 }
 .category-page .category-page-container .right-block .top-rated-this-category-products .products-container .slider-wrapper .product-item {
   flex: 1 1 20rem;
@@ -4771,8 +4769,8 @@ footer .bottom-footer p {
 .category-page .category-page-container .right-block .best-seller-this-category-products .products-container .slider-wrapper {
   padding: 0.5rem 0;
   margin: 0 auto;
-  gap: 1rem;
   display: flex;
+  gap: 0.5rem;
 }
 .category-page .category-page-container .right-block .best-seller-this-category-products .products-container .slider-wrapper .product-item {
   flex: 1 1 20rem;
@@ -5009,7 +5007,7 @@ footer .bottom-footer p {
 .category-page .category-page-container .right-block .hot-deals-this-category-products .products-container .slider-wrapper {
   padding: 0.5rem 0;
   margin: 0 auto;
-  gap: 1rem;
+  gap: 0.5rem;
   display: flex;
 }
 .category-page .category-page-container .right-block .hot-deals-this-category-products .products-container .slider-wrapper .product-item {

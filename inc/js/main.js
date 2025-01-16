@@ -1977,6 +1977,16 @@ if(document.querySelector(".category-page")){
                   topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsWrapper);
                   topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(topRatedThisCategoryProductsElement);
+
+            if(topRatedThisCategoryProductsWrapper.children.length > 5){
+              countSlider({
+                section:'top-rated-this-category-products',
+                containerSelector:'top-rated-this-category-products .slider-wrapper',
+                dotsSelector:'top-rated-this-category-products #sliderdots',
+                prevArrowSelector:'top-rated-this-category-products .arrow-left',
+                nextArrowSelector:'top-rated-this-category-products .arrow-right',
+              });
+            }
           }
 
           // Best Seller Products - slider
@@ -2081,6 +2091,16 @@ if(document.querySelector(".category-page")){
                   bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsWrapper);
                   bestSellerThisCategoryProductsElement.appendChild(bestSellerThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(bestSellerThisCategoryProductsElement);
+
+            if(bestSellerThisCategoryProductsWrapper.children.length > 5){
+              countSlider({
+                section:'best-seller-this-category-products',
+                containerSelector:'best-seller-this-category-products .slider-wrapper',
+                dotsSelector:'best-seller-this-category-products #sliderdots',
+                prevArrowSelector:'best-seller-this-category-products .arrow-left',
+                nextArrowSelector:'best-seller-this-category-products .arrow-right',
+              });
+            }
           }
 
           // Hot Deals Products - slider
@@ -2185,6 +2205,16 @@ if(document.querySelector(".category-page")){
                   hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsWrapper);
                   hotDealsThisCategoryProductsElement.appendChild(hotDealsThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(hotDealsThisCategoryProductsElement);
+
+            if(hotDealsThisCategoryProductsWrapper.children.length > 5){
+                countSlider({
+                  section:'hot-deals-this-category-products',
+                  containerSelector:'hot-deals-this-category-products .slider-wrapper',
+                  dotsSelector:'hot-deals-this-category-products #sliderdots',
+                  prevArrowSelector:'hot-deals-this-category-products .arrow-left',
+                  nextArrowSelector:'hot-deals-this-category-products .arrow-right',
+                });
+            }
           }
 
           // similar items - slider
