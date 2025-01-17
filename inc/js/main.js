@@ -2403,8 +2403,6 @@ if(document.querySelector(".category-page")){
             }
 
           }
-
-          selectProductColor();
       }
 
       // handle padding left to categories lists
@@ -2687,22 +2685,6 @@ if(document.querySelector(".payment-section")){
  ####### GLOBAL #######
  ######################
 */
-function selectProductColor(){
-
-  const productColors = document.querySelectorAll('.colors-holder .circle-outer .color-circle');
-        
-  productColors.forEach((productColor) => {
-    productColor.addEventListener('click', function(){
-      const productItem = this.closest('.product-item');
-  
-      productItem.querySelectorAll('.color-circle').forEach(productC => productC.classList.remove('checked'));
-  
-      this.classList.add('checked');
-    });
-  });
-
-}
-
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
