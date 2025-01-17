@@ -3042,6 +3042,43 @@ function countSlider(options) {
     // autoSlide();
 }
 
+function addProToCart(){
+
+  document.querySelectorAll(".product-item .add-to-card-btn").forEach((btn) => {
+    btn.addEventListener('click', function() {
+
+      const singlepProductContainer = document.querySelector("#single-page .product-container");
+
+      const safeTextContent = (selector) => {
+        const element = singlepProductContainer.querySelector(selector);
+        return element ? element.textContent.trim() : '';
+      };
+
+      const productIdV = safeTextContent('.id');
+
+      const product = {
+        id: productIdV,
+      };
+
+      let productCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+
+      const existingProductIndex = productCart.findIndex(item => item.id === product.id);
+
+      if(existingProductIndex > -1) {
+        productCart[existingProductIndex] = product;
+        alert('Product updated in cart');
+      } else {
+        productCart.push(product);
+        alert('Product added to cart');
+      }
+
+      localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productCart));
+
+    });
+  });
+
+}
+
 /*** REMOVE BACKGROUND ***/
 function removeBackground(imgElement, targetColor) {
   const canvas = document.createElement('canvas');
