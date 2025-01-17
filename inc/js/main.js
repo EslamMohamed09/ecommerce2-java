@@ -1821,7 +1821,7 @@ if(document.querySelector(".category-page")){
             }
           }
         
-         selectProductColor();
+         
       }
 
       if (childCategories.length > 0 && categoryProducts.length > 0) { // print | if there are category childs & category products
@@ -1911,7 +1911,7 @@ if(document.querySelector(".category-page")){
                         </div>
                         <div class="content d-flex-c-st-st">
                           ${colorHtml}
-                          <a href="single.html" class="product-name">${truncateTitle}</a>
+                          <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
                           ${descriptionHtml}
                           ${ratingHtml}
                           <div class="price-holder d-flex-r-bt-c">
@@ -1922,7 +1922,6 @@ if(document.querySelector(".category-page")){
               </div>`
             }).join('');
             productsContainer.innerHTML = categoryProductsHtml;
-            selectProductColor();
           }
 
           thisCategoryProducts.appendChild(productsContainer);
@@ -2433,7 +2432,7 @@ if(document.querySelector(".category-page")){
  ###### CART PAGE ######
  =======================
 */
-const maxTotal = 1000;
+const maxTotal = 2000;
 
 if(document.querySelector(".cart-page")){
   
@@ -2575,7 +2574,7 @@ if(document.querySelector(".cart-page")){
     } else if (progressPercentage >= 25 && progressPercentage < 100) {
       progressBar.style.backgroundColor = 'orange';
     } else {
-      progressBar.style.backgroundColor = 'var(--green10)';
+      progressBar.style.backgroundColor = 'var(--green19)';
     }
 
     progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;

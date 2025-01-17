@@ -33,7 +33,7 @@ const headerContent = `
           <i class="far fa-heart"></i>
           <div class="value"><span>84</span></div>
         </a>
-        <a href="pages/cart.html" class="service-button cart-icon d-flex-r-c-c">
+        <a href="cart.html" class="service-button cart-icon d-flex-r-c-c">
           <i class="fas fa-shopping-cart"></i>
           <div class="value"><span></span></div>
         </a>
