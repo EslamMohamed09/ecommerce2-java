@@ -1989,17 +1989,16 @@ if(document.querySelector(".category-page")){
             }).join('');
 
             topRatedThisCategoryProductsWrapper.innerHTML = topRatedThisCategoryProductsHtml;
-
             topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsWrapper);
-            topRatedThisCategoryProductsContainer.innerHTML += `<div class="arrows">
-                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
-                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
-                                                                </div>
-                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
             topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(topRatedThisCategoryProductsElement);
 
             if(topRatedThisCategoryProductsWrapper.children.length > 5){
+               topRatedThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                     <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                     <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                   </div>
+                                                                   <div id="sliderdots" class="d-flex-r-c-c"></div>`;
               countSlider({
                 section:'.top-rated-this-category-products',
                 containerSelector:'.top-rated-this-category-products .slider-wrapper',
@@ -2111,16 +2110,15 @@ if(document.querySelector(".category-page")){
 
             bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsWrapper);
 
-            bestSellerThisCategoryProductsContainer.innerHTML += `<div class="arrows">
-                                                                    <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
-                                                                    <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
-                                                                  </div>
-                                                                  <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
             bestSellerThisCategoryProductsElement.appendChild(bestSellerThisCategoryProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(bestSellerThisCategoryProductsElement);
 
             if(bestSellerThisCategoryProductsWrapper.children.length > 5){
+               bestSellerThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                       <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                       <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                     </div>
+                                                                     <div id="sliderdots" class="d-flex-r-c-c"></div>`;
               countSlider({
                 section:'.best-seller-this-category-products',
                 containerSelector:'.best-seller-this-category-products .slider-wrapper',
@@ -2232,17 +2230,16 @@ if(document.querySelector(".category-page")){
 
             hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsWrapper);
 
-            hotDealsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
-                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
-                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
-                                                                </div>
-                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
             hotDealsThisCategoryProductsElement.appendChild(hotDealsThisCategoryProductsContainer);
 
             document.querySelector(".category-page .right-block").appendChild(hotDealsThisCategoryProductsElement);
 
             if(hotDealsThisCategoryProductsWrapper.children.length > 5){
+               hotDealsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                     <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                     <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                   </div>
+                                                                   <div id="sliderdots" class="d-flex-r-c-c"></div>`;
                 countSlider({
                   section:'.hot-deals-this-category-products',
                   containerSelector:'.hot-deals-this-category-products .slider-wrapper',
@@ -2357,23 +2354,24 @@ if(document.querySelector(".category-page")){
 
             similarProductsThisCategoryProductsContainer.appendChild(similarProductsThisCategoryProductsWrapper);
 
-            similarProductsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
-                                                                          <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
-                                                                          <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
-                                                                        </div>
-                                                                        <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
             similarProductsThisCategoryProductsElement.appendChild(similarProductsThisCategoryProductsContainer);
 
             document.querySelector(".category-page .right-block").appendChild(similarProductsThisCategoryProductsElement);
 
-            countSlider({
-              section:'.similar-items-this-category-products',
-              containerSelector:'.similar-items-this-category-products .slider-wrapper',
-              dotsSelector:'.similar-items-this-category-products #sliderdots',
-              prevArrowSelector:'.similar-items-this-category-products .arrow-left',
-              nextArrowSelector:'.similar-items-this-category-products .arrow-right',
-            });
+            if(similarProductsThisCategoryProductsWrapper.children.length > 5){
+               similarProductsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
+                                                                           <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                           <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                         </div>
+                                                                         <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+              countSlider({
+                section:'.similar-items-this-category-products',
+                containerSelector:'.similar-items-this-category-products .slider-wrapper',
+                dotsSelector:'.similar-items-this-category-products #sliderdots',
+                prevArrowSelector:'.similar-items-this-category-products .arrow-left',
+                nextArrowSelector:'.similar-items-this-category-products .arrow-right',
+              });
+            }
 
           }
 
