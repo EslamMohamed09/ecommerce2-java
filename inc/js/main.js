@@ -1532,7 +1532,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -1659,7 +1659,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -1784,7 +1784,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -2020,7 +2020,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -2145,7 +2145,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -2271,7 +2271,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -2400,7 +2400,7 @@ if(document.querySelector(".category-page")){
                 }
 
                 return `<div class="product-item">
-                          <div class="image d-flex-r-c-c">
+                          <div class="image-holder d-flex-r-c-c">
                             ${imageHtml}
                           </div>
                           <div class="stats d-flex-c-st-st">
@@ -2471,6 +2471,13 @@ if(document.querySelector(".category-page")){
               childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
          }
       }
+
+      const productImages = document.querySelectorAll('.image-holder img');
+      productImages.forEach(function (img) {
+        const clonedImage = img.cloneNode();
+        removeBackground(clonedImage, '#ffffff');
+        img.parentNode.replaceChild(clonedImage, img);
+      });
 
     } catch (error) {
       console.error('Error loading categories:', error);
