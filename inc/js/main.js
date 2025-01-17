@@ -1561,9 +1561,24 @@ if(document.querySelector(".category-page")){
 
             bestSellerCategoriesProductsWrapper.innerHTML = bestSellerCategoriesProductsHtml;
 
-                  bestSellerCategoriesProductsContainer.appendChild(bestSellerCategoriesProductsWrapper);
-                  bestSellerCategoriesProductsElement.appendChild(bestSellerCategoriesProductsContainer);
+            bestSellerCategoriesProductsContainer.appendChild(bestSellerCategoriesProductsWrapper);
+            bestSellerCategoriesProductsElement.appendChild(bestSellerCategoriesProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(bestSellerCategoriesProductsElement);
+
+            if(bestSellerCategoriesProductsWrapper.children.length > 5){
+               bestSellerCategoriesProductsContainer.innerHTML += `<div class="arrows">
+                                                                    <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                    <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                  </div>
+                                                                  <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+              countSlider({
+                section:'.best-seller-categories-products',
+                containerSelector:'.best-seller-categories-products .slider-wrapper',
+                dotsSelector:'.best-seller-categories-products #sliderdots',
+                prevArrowSelector:'.best-seller-categories-products .arrow-left',
+                nextArrowSelector:'.best-seller-categories-products .arrow-right',
+              });
+            }
           }
 
           // Top Rated Products - slider
@@ -1665,10 +1680,24 @@ if(document.querySelector(".category-page")){
             }).join('');
 
             topRatedCategoriesProductsWrapper.innerHTML = topRatedCategoriesProductsHtml;
-
-                  topRatedCategoriesProductsContainer.appendChild(topRatedCategoriesProductsWrapper);
-                  topRatedCategoriesProductsElement.appendChild(topRatedCategoriesProductsContainer);
+            topRatedCategoriesProductsContainer.appendChild(topRatedCategoriesProductsWrapper);
+            topRatedCategoriesProductsElement.appendChild(topRatedCategoriesProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(topRatedCategoriesProductsElement);
+
+            if(topRatedCategoriesProductsWrapper.children.length > 5){
+               topRatedCategoriesProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+              countSlider({
+                section:'.top-rated-categories-products',
+                containerSelector:'.top-rated-categories-products .slider-wrapper',
+                dotsSelector:'.top-rated-categories-products #sliderdots',
+                prevArrowSelector:'.top-rated-categories-products .arrow-left',
+                nextArrowSelector:'.top-rated-categories-products .arrow-right',
+              });
+            }
           }
 
           // Hot Deals Products - slider
