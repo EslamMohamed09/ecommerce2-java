@@ -1566,6 +1566,10 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(bestSellerCategoriesProductsElement);
 
             if(bestSellerCategoriesProductsWrapper.children.length > 5){
+                            
+               bestSellerCategoriesProductsWrapper.style.display = 'flex';
+               bestSellerCategoriesProductsWrapper.style.gridTemplateColumns = 'unset !important';
+
                bestSellerCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                     <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                     <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -1578,6 +1582,9 @@ if(document.querySelector(".category-page")){
                 prevArrowSelector:'.best-seller-categories-products .arrow-left',
                 nextArrowSelector:'.best-seller-categories-products .arrow-right',
               });
+            } else {
+              bestSellerCategoriesProductsWrapper.style.display = 'grid';
+              bestSellerCategoriesProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
 
@@ -1685,6 +1692,9 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(topRatedCategoriesProductsElement);
 
             if(topRatedCategoriesProductsWrapper.children.length > 5){
+
+               topRatedCategoriesProductsWrapper.style.display = 'flex';
+
                topRatedCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                   <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -1697,6 +1707,9 @@ if(document.querySelector(".category-page")){
                 prevArrowSelector:'.top-rated-categories-products .arrow-left',
                 nextArrowSelector:'.top-rated-categories-products .arrow-right',
               });
+            } else {
+              topRatedCategoriesProductsWrapper.style.display = 'grid';
+              topRatedCategoriesProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
 
@@ -1806,6 +1819,9 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(hotDealsCategoriesProductsElement);
 
             if(hotDealsCategoriesProductsWrapper.children.length > 5){
+
+               hotDealsCategoriesProductsWrapper.style.display = 'flex';
+
                hotDealsCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                   <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -1818,9 +1834,11 @@ if(document.querySelector(".category-page")){
                 prevArrowSelector:'.hot-deals-categories-products .arrow-left',
                 nextArrowSelector:'.hot-deals-categories-products .arrow-right',
               });
+            } else {
+              hotDealsCategoriesProductsWrapper.style.display = 'grid';
+              hotDealsCategoriesProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
-        
          
       }
 
@@ -2035,6 +2053,9 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(topRatedThisCategoryProductsElement);
 
             if(topRatedThisCategoryProductsWrapper.children.length > 5){
+
+               topRatedThisCategoryProductsWrapper.style.display = 'flex';
+
                topRatedThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                      <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                      <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -2047,6 +2068,9 @@ if(document.querySelector(".category-page")){
                 prevArrowSelector:'.top-rated-this-category-products .arrow-left',
                 nextArrowSelector:'.top-rated-this-category-products .arrow-right',
               });
+            } else {
+              topRatedThisCategoryProductsWrapper.style.display = 'grid';
+              topRatedThisCategoryProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
 
@@ -2155,6 +2179,9 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(bestSellerThisCategoryProductsElement);
 
             if(bestSellerThisCategoryProductsWrapper.children.length > 5){
+
+               bestSellerThisCategoryProductsWrapper.style.display = 'flex';
+
                bestSellerThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                        <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                        <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -2167,6 +2194,9 @@ if(document.querySelector(".category-page")){
                 prevArrowSelector:'.best-seller-this-category-products .arrow-left',
                 nextArrowSelector:'.best-seller-this-category-products .arrow-right',
               });
+            } else {
+              bestSellerThisCategoryProductsWrapper.style.display = 'grid';
+              bestSellerThisCategoryProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
 
@@ -2276,6 +2306,9 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(hotDealsThisCategoryProductsElement);
 
             if(hotDealsThisCategoryProductsWrapper.children.length > 5){
+
+               hotDealsThisCategoryProductsWrapper.style.display = 'flex';
+
                hotDealsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                      <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                      <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -2288,6 +2321,9 @@ if(document.querySelector(".category-page")){
                   prevArrowSelector:'.hot-deals-this-category-products .arrow-left',
                   nextArrowSelector:'.hot-deals-this-category-products .arrow-right',
                 });
+            } else {
+              hotDealsThisCategoryProductsWrapper.style.display = 'grid';
+              hotDealsThisCategoryProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
 
@@ -2400,6 +2436,9 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(similarProductsThisCategoryProductsElement);
 
             if(similarProductsThisCategoryProductsWrapper.children.length > 5){
+              
+               similarProductsThisCategoryProductsWrapper.style.display = 'flex';
+
                similarProductsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                            <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                            <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -2412,8 +2451,10 @@ if(document.querySelector(".category-page")){
                 prevArrowSelector:'.similar-items-this-category-products .arrow-left',
                 nextArrowSelector:'.similar-items-this-category-products .arrow-right',
               });
+            } else {
+              similarProductsThisCategoryProductsWrapper.style.display = 'grid';
+              similarProductsThisCategoryProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
-
           }
       }
 
@@ -2811,8 +2852,9 @@ function countSlider(options) {
     const gapSize = parseFloat(getComputedStyle(document.documentElement).fontSize) * 0.5;
 
     function setupSlider() {
-        slides = sliderContainer.children;
+        slides = Array.from(sliderContainer.children);
         sliderContainer.style.display = 'flex';
+        slides.forEach(slide => {slide.style.flex = '1 1 15rem'});
         sliderContainer.style.overflow = 'hidden';
         updateSlidesToShow();
     }
