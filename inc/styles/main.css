@@ -3068,6 +3068,9 @@ footer .bottom-footer p {
   min-width: 0;
   font-weight: normal;
 }
+#single-page .product-container .left-block .parent-categories-holder li .catlink:hover {
+  text-decoration: underline !important;
+}
 #single-page .product-container .left-block .images-block {
   gap: 4rem;
 }

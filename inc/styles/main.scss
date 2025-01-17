@@ -2735,7 +2735,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                         word-break:break-word;
                         flex-grow:1;
                         min-width:0;
-                        font-weight:normal;}
+                        font-weight:normal;
+
+                    &:hover {text-decoration:underline !important;}
+              }
             }
         }
           
