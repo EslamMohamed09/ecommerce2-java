@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
   text-decoration: none !important;
   outline: none !important;
   transition: all 0.2s linear;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -3435,6 +3435,9 @@ footer .bottom-footer p {
   margin: 0;
   padding: 0 0 0 0.9rem;
   background-color: transparent;
+}
+.category-page .category-page-container .right-block > div:last-child {
+  margin-bottom: 6rem;
 }
 .category-page .category-page-container .right-block .category-items-container {
   display: grid;
