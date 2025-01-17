@@ -815,7 +815,6 @@ fetch('pages/products.json').then(response => response.json())
   pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
 
-
 }
 
 
@@ -991,7 +990,6 @@ fetch('pages/users.json').then(response => response.json())
   });
 
 }
-
 
 
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {
