@@ -1515,7 +1515,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
@@ -1642,7 +1642,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
@@ -1767,7 +1767,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
@@ -1898,7 +1898,7 @@ if(document.querySelector(".category-page")){
               let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                       product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-              let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+              let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
               let ratingHtml = '';
               if(product.rating){
@@ -2003,7 +2003,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
@@ -2128,7 +2128,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
@@ -2254,7 +2254,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
@@ -2383,7 +2383,7 @@ if(document.querySelector(".category-page")){
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
 
-                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,5).join(" ")}...</p>` : '';
+                let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
 
                 let ratingHtml = '';
                 if(product.rating){
