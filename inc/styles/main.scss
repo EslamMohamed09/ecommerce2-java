@@ -3123,154 +3123,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         }
       }
 
-      .this-category-products {margin-bottom:4rem;
-
-        .products-container {display:grid;
-                             grid-template-columns:repeat(auto-fill,minmax(190px, 1fr));
-                             gap:0.8rem;
-                             padding:0 0.3rem !important;
-                             margin:0;
-              
-            .product-item {display:block;
-                           padding:0 0.2rem;
-                           margin:0;
-                           margin-bottom:1rem;
-                           background-color:transparent;
-                           overflow:hidden;
-                           position:relative;
-
-                  .image-holder {width:100%;
-                                 height:17rem;
-                                 margin-bottom:0.8rem;
-                                 position:relative;
-                                 background-color:var(--gray);
-                                 border-bottom:1px solid var(--gray3);
-
-                          img {height:8rem;
-                               object-fit:contain;
-                               transition:all 0.7s linear;}
-
-                          img:last-child:not(:only-child) {visibility:hidden;
-                                                           opacity:0;
-                                                           position:absolute;
-                                                           left:50%;
-                                                           transform:translateX(-50%);}
-
-                          &:hover img:first-child {visibility:hidden;
-                                                   opacity:0;}
-
-                          &:hover img:last-child {visibility:visible;
-                                                  opacity:1;}
-                  }
-
-                  .stats {position:absolute;
-                          top:0.8rem;
-                          left:0.9rem;
-                          height:fit-content;
-                          gap:0.7rem;
-
-                        .stat {height:fit-content;
-                               padding:0.2rem 0.7rem;
-                               border-radius:0.2rem;
-                               text-align:center;
-                               font-size:0.9rem;
-                               line-height:1.2;
-                               color:var(--white2);
-                               box-shadow:var(--box-shadow4);
-                               &.new {background-color:var(--blue10);}
-                               &.top {background-color:var(--shin-orange);}
-                               &.hot {background-color:var(--yellow10);}
-                               &.sale {background-color:var(--gray9);
-                                       padding:0.2rem 0.4rem;}
-                        }
-                  }
-
-                  .icons {width:3rem;
-                          height:5rem;
-                          position:absolute;
-                          top:1.3rem;
-                          right:0.5rem;
-                          background-color:transparent;
-                          transition:all 0.3s linear;
-
-                        button {background-color:transparent;
-                                border:none;
-
-                                #icon {font-size:1.2rem;
-                                      color:var(--gray12);
-                                      background:transparent;}
-
-                                .fa-heart:hover {color:var(--orange-red2) !important;}
-                        }
-                  }
-
-                  .content {gap:0.7rem;
-                            width:100%;
-                            padding:0 4%;
-                            text-align:center;
-                            position:relative;
-
-                        .colors-holder {width:100%;
-                                        height:fit-content;
-                                        gap:1rem;
-                                        margin-bottom:0.4rem;
-                                        list-style:none;
-                                        flex-wrap:nowrap;
-
-                                .circle-outer {width:1.9rem;
-                                               height:1.9rem;
-                                               padding:0.40rem;
-                                               margin:0;
-                                               border-radius:50%;
-                                               box-shadow:var(--box-shadow6);
-                                               cursor:pointer;
-
-                                        .color-circle {width:100%;
-                                                       height:100%;
-                                                       border-radius:50%;
-                                                       border:none;
-                                                       position:relative;
-
-                                            &.checked::before {content:"✔";
-                                                               color:var(--gray2);
-                                                               font-size:0.8rem;
-                                                               position:absolute;
-                                                               top:50%;
-                                                               left:50%;
-                                                               transform:translate(-50%, -50%);}
-                                        }
-                                }
-                        }
-                        
-                        .product-name {font-size:14px;
-                                       font-weight:bold;
-                                       text-align:left;
-                                       line-height:1rem;
-                                       color:var(--gray11);}
-
-                        p {color:var(--gray5);
-                           padding:0;
-                           margin:0;
-                           width:fit-content;
-                           text-align:left;}
-
-                        .ratings {gap:0.1rem;
-                          svg {color:var(--yellow10);
-                                font-size:1.1rem;}
-                        }
-
-                        .price-holder {flex-wrap:nowrap;
-                                        width:100%;
-                                        margin:0;
-                                        background-color:transparent;
-
-                                .price {color:var(--orange-red2);}
-                        }
-                  }
-            }
-        }
-      }
-
       .categories-products {
 
         .categories-products-container {display:grid;
@@ -3294,8 +3146,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                  background-color:var(--gray);
                                  border-bottom:1px solid var(--gray3);
 
-                          img {width:80%;
-                               height:55%;
+                          img {height:6rem;
                                object-fit:contain;
                                transition:all 0.7s linear;}
 
@@ -3424,7 +3275,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 
@@ -3641,7 +3492,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 
@@ -3856,7 +3707,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 
@@ -4047,6 +3898,154 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
         }
       }
 
+      .this-category-products {margin-bottom:4rem;
+
+        .products-container {display:grid;
+                             grid-template-columns:repeat(auto-fill,minmax(190px, 1fr));
+                             gap:0.8rem;
+                             padding:0 0.3rem !important;
+                             margin:0;
+              
+            .product-item {display:block;
+                           padding:0 0.2rem;
+                           margin:0;
+                           margin-bottom:1rem;
+                           background-color:transparent;
+                           overflow:hidden;
+                           position:relative;
+
+                  .image-holder {width:100%;
+                                 height:17rem;
+                                 margin-bottom:0.8rem;
+                                 position:relative;
+                                 background-color:var(--gray);
+                                 border-bottom:1px solid var(--gray3);
+
+                          img {height:6rem;
+                               object-fit:contain;
+                               transition:all 0.7s linear;}
+
+                          img:last-child:not(:only-child) {visibility:hidden;
+                                                           opacity:0;
+                                                           position:absolute;
+                                                           left:50%;
+                                                           transform:translateX(-50%);}
+
+                          &:hover img:first-child {visibility:hidden;
+                                                   opacity:0;}
+
+                          &:hover img:last-child {visibility:visible;
+                                                  opacity:1;}
+                  }
+
+                  .stats {position:absolute;
+                          top:0.8rem;
+                          left:0.9rem;
+                          height:fit-content;
+                          gap:0.7rem;
+
+                        .stat {height:fit-content;
+                               padding:0.2rem 0.7rem;
+                               border-radius:0.2rem;
+                               text-align:center;
+                               font-size:0.9rem;
+                               line-height:1.2;
+                               color:var(--white2);
+                               box-shadow:var(--box-shadow4);
+                               &.new {background-color:var(--blue10);}
+                               &.top {background-color:var(--shin-orange);}
+                               &.hot {background-color:var(--yellow10);}
+                               &.sale {background-color:var(--gray9);
+                                       padding:0.2rem 0.4rem;}
+                        }
+                  }
+
+                  .icons {width:3rem;
+                          height:5rem;
+                          position:absolute;
+                          top:1.3rem;
+                          right:0.5rem;
+                          background-color:transparent;
+                          transition:all 0.3s linear;
+
+                        button {background-color:transparent;
+                                border:none;
+
+                                #icon {font-size:1.2rem;
+                                      color:var(--gray12);
+                                      background:transparent;}
+
+                                .fa-heart:hover {color:var(--orange-red2) !important;}
+                        }
+                  }
+
+                  .content {gap:0.7rem;
+                            width:100%;
+                            padding:0 4%;
+                            text-align:center;
+                            position:relative;
+
+                        .colors-holder {width:100%;
+                                        height:fit-content;
+                                        gap:1rem;
+                                        margin-bottom:0.4rem;
+                                        list-style:none;
+                                        flex-wrap:nowrap;
+
+                                .circle-outer {width:1.9rem;
+                                               height:1.9rem;
+                                               padding:0.40rem;
+                                               margin:0;
+                                               border-radius:50%;
+                                               box-shadow:var(--box-shadow6);
+                                               cursor:pointer;
+
+                                        .color-circle {width:100%;
+                                                       height:100%;
+                                                       border-radius:50%;
+                                                       border:none;
+                                                       position:relative;
+
+                                            &.checked::before {content:"✔";
+                                                               color:var(--gray2);
+                                                               font-size:0.8rem;
+                                                               position:absolute;
+                                                               top:50%;
+                                                               left:50%;
+                                                               transform:translate(-50%, -50%);}
+                                        }
+                                }
+                        }
+                        
+                        .product-name {font-size:14px;
+                                       font-weight:bold;
+                                       text-align:left;
+                                       line-height:1rem;
+                                       color:var(--gray11);}
+
+                        p {color:var(--gray5);
+                           padding:0;
+                           margin:0;
+                           width:fit-content;
+                           text-align:left;}
+
+                        .ratings {gap:0.1rem;
+                          svg {color:var(--yellow10);
+                                font-size:1.1rem;}
+                        }
+
+                        .price-holder {flex-wrap:nowrap;
+                                        width:100%;
+                                        margin:0;
+                                        background-color:transparent;
+
+                                .price {color:var(--orange-red2);}
+                        }
+                  }
+            }
+        }
+      }
+
       .top-rated-this-category-products {
 
         .products-container {position:relative;
@@ -4072,7 +4071,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 
@@ -4288,7 +4287,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 
@@ -4503,7 +4502,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 
@@ -4717,7 +4716,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                img {height:8rem;
+                                img {height:6rem;
                                      object-fit:contain;
                                      transition:all 0.7s linear;}
 

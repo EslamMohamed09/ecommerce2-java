@@ -1773,16 +1773,15 @@ if(document.querySelector(".category-page")){
 
             hotDealsCategoriesProductsContainer.appendChild(hotDealsCategoriesProductsWrapper);
 
-            hotDealsCategoriesProductsContainer.innerHTML += `<div class="arrows">
-                                                                <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
-                                                                <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
-                                                              </div>
-                                                              <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
             hotDealsCategoriesProductsElement.appendChild(hotDealsCategoriesProductsContainer);
             document.querySelector(".category-page .right-block").appendChild(hotDealsCategoriesProductsElement);
 
             if(hotDealsCategoriesProductsWrapper.children.length > 5){
+               hotDealsCategoriesProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
               countSlider({
                 section:'.hot-deals-categories-products',
                 containerSelector:'.hot-deals-categories-products .slider-wrapper',
