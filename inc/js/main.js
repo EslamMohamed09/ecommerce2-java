@@ -1395,7 +1395,6 @@ if(document.querySelector(".category-page")){
   }
 
   async function displayCategoriesAndProducts(){
-
     try {
     
       const params = new URLSearchParams(window.location.search);
@@ -2498,31 +2497,33 @@ if(document.querySelector(".category-page")){
  =======================
 */
 const maxTotal = 2000;
+let initialSubtotal = 0;
+let shippingFee = 10;
 
 if(document.querySelector(".cart-page")){
   
   function renderCartItems() {
-    const cartItems = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+
+    let productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+
     const cartTableBody = document.getElementById('cart-items');
+          cartTableBody.innerHTML = '';
 
-    cartTableBody.innerHTML = '';
-
-    if (cartItems.length === 0) {cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty</td></tr>';}
-
-    cartItems.forEach((product, index) => {
+    let ProductsHtml = productsCart.map((product, index) => {
+      let truncateTitle = product.title.split(" ").slice(0,7).join(" ");
       const itemPrice = parseFloat(product.salePrice.replace('$', ''));
     
       const itemtotal = itemPrice * product.quantity;
     
-      const productRow = `
+      return product = `
         <tr>
-          <td> <!-- Product -->
+          <td>
             <div class="product-card d-flex-r-st-st">
               <div class="image">
-                <img src="${product.image}" alt="${product.title}">
+                <img src="${product.image}" alt="${truncateTitle}">
               </div>
               <div class="content d-flex-c-st-st">
-                <h5>${product.title}</h5>
+                <h5>${truncateTitle}</h5>
                 <p>${product.color}${product.size ? ' / ' + product.size : ''}</p>
                 <p>Brand: ${product.brand}</p>
                 <span id="instock">${product.stock} in stock</span>
@@ -2530,7 +2531,7 @@ if(document.querySelector(".cart-page")){
             </div>
           </td>
           <td><p class="price">$${itemPrice.toFixed(2)}</p></td>
-          <td> <!-- Quantity -->
+          <td>
             <div class="product-quantity-btns d-flex-r-st-c">
               <button type="button" class="pro-quantity-btn decrease-quantity-btn d-flex-r-c-c" onclick="updateQuantity(${index}, 'decrease')">
                 <i class="fas fa-minus"></i>
@@ -2545,14 +2546,13 @@ if(document.querySelector(".cart-page")){
           <td><i class="fas fa-times" onclick="removeProduct(${index})"></i></td>
         </tr>
       `;
+    }).join('');
 
-      cartTableBody.innerHTML += productRow;
-
-    });
-
-    document.querySelectorAll(".cart-page .left-block table tbody .product-card .content h5").forEach((h5) => {
-      h5.textContent = truncateWords(h5.textContent, 7);
-    });
+    if (productsCart.length === 0) {
+        cartTableBody.innerHTML = '<tr><td colspan="5" style="padding-top:2rem;font-size:1.5rem;">Your cart is empty</td></tr>';
+    } else {
+      cartTableBody.innerHTML = ProductsHtml;
+    }
     
     viewSubtotalandTotal();
     
@@ -2567,7 +2567,6 @@ if(document.querySelector(".cart-page")){
    
        let initialSubtotal = 0;
        let shippingFee = 10;
-       const maxTotal = 1000;
    
        productRows.forEach((row) => {
          const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
@@ -2579,7 +2578,6 @@ if(document.querySelector(".cart-page")){
          initialSubtotal += proQuantity * proPrice;
          
          if(initialSubtotal >= maxTotal){shippingFee = 0;}
-   
        });
    
        subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
@@ -2592,17 +2590,17 @@ if(document.querySelector(".cart-page")){
   }
 
   function updateQuantity(index, action) {
-    const cartItems = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+    const productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
 
-    const stock = cartItems[index].stock;
+    const stock = productsCart[index].stock;
 
-    if (action === 'increase' && cartItems[index].quantity < stock) {
-        cartItems[index].quantity++;
-    } else if (action === 'decrease' && cartItems[index].quantity > 1) {
-        cartItems[index].quantity--;
+    if (action === 'increase' && productsCart[index].quantity < stock) {
+        productsCart[index].quantity++;
+    } else if (action === 'decrease' && productsCart[index].quantity > 1) {
+        productsCart[index].quantity--;
     }
 
-    localStorage.setItem('ecommerce2-product-cart', JSON.stringify(cartItems));
+    localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productsCart));
     renderCartItems();
   }
 
@@ -2613,9 +2611,6 @@ if(document.querySelector(".cart-page")){
     localStorage.setItem('ecommerce2-product-cart', JSON.stringify(cartItems));
     renderCartItems();
   }
-
-  let initialSubtotal = 0;
-  let shippingFee = 10;
 
   function updateShippingMessage(subtotal){
     const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
@@ -2643,12 +2638,15 @@ if(document.querySelector(".cart-page")){
     }
 
     progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
-    
   }
 
   document.addEventListener('DOMContentLoaded', renderCartItems());
+
+  // I want to ask you what is the logic approach add id only to local storage then through id get the product or products from database or add all details of each product to local storage and the big website like amazon follow any of their approaches?
   
 }
+
+
 
 /* 
  ===========================
