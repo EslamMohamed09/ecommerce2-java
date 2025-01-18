@@ -2562,8 +2562,8 @@ if(document.querySelector(".cart-page")){
 
     if(document.querySelector(".cart-page .left-block table tbody tr .price")){
        const productRows = document.querySelectorAll(".cart-page .left-block table tbody tr");
-       const subtotalProductsPrice = document.querySelector(".cart-page .right-block .calculate-block #subtotal");
-       const total = document.querySelector(".cart-page .right-block .checkout-block #total");
+       const subtotalProductsPriceElement = document.querySelector(".cart-page .right-block .calculate-block #subtotal");
+       const totalElement = document.querySelector(".cart-page .right-block .checkout-block #total");
    
        let initialSubtotal = 0;
        let shippingFee = 10;
@@ -2571,17 +2571,17 @@ if(document.querySelector(".cart-page")){
        productRows.forEach((row) => {
          const proQuantity = parseInt(row.querySelector(".product-quantity-btns #pro-quantity-no").textContent.trim());
          const proPrice = parseFloat(row.querySelector(".price").textContent.replace('$', '').trim());
-         const totalPriceProduct = row.querySelector(".total-price");
+         const totalPriceProductElement = row.querySelector(".total-price");
    
-         totalPriceProduct.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
+         totalPriceProductElement.textContent = `$${(proQuantity * proPrice).toFixed(2)}`;
    
          initialSubtotal += proQuantity * proPrice;
          
          if(initialSubtotal >= maxTotal){shippingFee = 0;}
        });
    
-       subtotalProductsPrice.textContent = `$${initialSubtotal.toFixed(2)}`;
-       total.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
+       subtotalProductsPriceElement.textContent = `$${initialSubtotal.toFixed(2)}`;
+       totalElement.textContent = `$${(initialSubtotal + shippingFee).toFixed(2)}`;
    
        updateShippingMessage(initialSubtotal);
        updateProgressBar(initialSubtotal);
@@ -2613,28 +2613,28 @@ if(document.querySelector(".cart-page")){
   }
 
   function updateShippingMessage(subtotal){
-    const shippingInfo = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
+    const shippingInfoElement = document.querySelector(".cart-page .progress-bar-block .shipping-case p");
 
     if(subtotal >= maxTotal){
-      shippingInfo.textContent = "Your order now includes free shipping!";
+      shippingInfoElement.textContent = "Your order now includes free shipping!";
     } else {
-      shippingInfo.innerHTML = `only <span id="remaining-free">${(maxTotal - subtotal).toFixed(2)}</span> away from free shipping`;
+      shippingInfoElement.innerHTML = `only <span id="remaining-free">${(maxTotal - subtotal).toFixed(2)}</span> away from free shipping`;
     }
   }
 
   function updateProgressBar(calculateTotal) {
     const progressPercentage = parseInt((calculateTotal / maxTotal) * 100);
-    const progressBar = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
+    const filledProgressBarElement = document.querySelector('.cart-page .progress-bar-block .filled-progress-bar');
     const progressIcon = document.getElementById('progress-icon');
 
-    progressBar.style.width = `${Math.min(progressPercentage, 100)}%`;
+    filledProgressBarElement.style.width = `${Math.min(progressPercentage, 100)}%`;
 
     if (progressPercentage < 25) {
-        progressBar.style.backgroundColor = 'var(--red8)';
+        filledProgressBarElement.style.backgroundColor = 'var(--red8)';
     } else if (progressPercentage >= 25 && progressPercentage < 100) {
-      progressBar.style.backgroundColor = 'orange';
+      filledProgressBarElement.style.backgroundColor = 'orange';
     } else {
-      progressBar.style.backgroundColor = 'var(--green19)';
+      filledProgressBarElement.style.backgroundColor = 'var(--green19)';
     }
 
     progressIcon.style.left = `calc(${Math.min(progressPercentage, 100)}% - 1.5rem)`;
