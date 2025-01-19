@@ -3086,13 +3086,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -3106,11 +3104,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -3314,13 +3313,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -3334,11 +3331,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -3542,13 +3540,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -3562,11 +3558,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -3770,13 +3767,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -3790,11 +3785,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -3998,13 +3994,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -4018,11 +4012,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -4575,13 +4570,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -4595,11 +4588,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -4800,13 +4794,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -4820,11 +4812,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -5025,13 +5018,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -5045,11 +5036,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -5399,13 +5391,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -5419,11 +5409,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -5624,13 +5615,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -5644,11 +5633,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -5849,13 +5839,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -5869,11 +5857,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
@@ -6074,13 +6063,11 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
-                       z-index:11;
-                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {bottom:21rem;
-                                   transform:translate(50%, -50%);
+                     .arrow-right {top:13rem;
                                    position:absolute;
+                                   transform:translateX(-50%);
                                    width:2rem;
                                    height:5rem;
                                    padding:0;
@@ -6094,11 +6081,12 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    color:var(--black);
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
-                                   cursor:pointer;}
+                                   cursor:pointer;
+                                   z-index:12;}
 
-                    .arrow-left {left:-0.9rem;}
+                    .arrow-left {left:1.2rem;}
                      
-                    .arrow-right {right:1rem;}
+                    .arrow-right {right:-0.8rem;}
               }
 
               #sliderdots {position:absolute;
