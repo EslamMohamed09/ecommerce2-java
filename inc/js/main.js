@@ -975,7 +975,7 @@ if(document.querySelector("#single-page")){
     if(product){return product.catId} else {throw new Error('Failed to load category')}
   }
 
-  async function productsOfCategory(categoryId, excludeProductId){
+  async function siblingProductsOfProduct(categoryId, excludeProductId){
     const response = await fetch('../admin/pages/products.json');
     if(!response.ok){throw new Error('Failed to load products')}
     const data = await response.json();
@@ -1026,12 +1026,142 @@ if(document.querySelector("#single-page")){
 
   async function displayCategoryProducts(){
     try {
+
       const currentProductId = getProductId();
       const productCategoryId = await categoryIdOfProduct(currentProductId);
-      const categoryProducts = await productsOfCategory(productCategoryId, currentProductId);
+      const siblingProducts = await siblingProductsOfProduct(productCategoryId, currentProductId);
 
-      console.log(categoryProducts);
+      if(siblingProducts.length > 0){
 
+        let siblingProductsHtml = siblingProducts.map((product) => {
+          
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+            let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+            let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+            let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
+            let colorHtml = product.colors && product.colors.length > 0
+                          ? `<ul class="colors-holder d-flex-r-st-c">
+                                ${product.colors.slice(0, 5).map((proColor) => {
+                                  let backgroundStyle = '';
+                        
+                                  if (proColor.includes('x')) {
+                                      const colorArray = proColor.split('x').map(c => c.trim());
+                                    if (colorArray.length === 2) {
+                                        backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                    } else {
+                                      backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                    }
+                                  } else {
+                                    backgroundStyle = proColor;
+                                  }
+                        
+                                  return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                }).join('')}
+                            </ul>`
+                          : '';
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+            let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                                    product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+            let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
+
+            let ratingHtml = '';
+            if(product.rating){
+              for (let i=1; i<=5; i++) {
+                  if (i <= product.rating) {
+                      ratingHtml += `<i class="fas fa-star"></i>`;
+                  } else if (i - 0.5 === product.rating) {
+                      ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                  } else {
+                      ratingHtml += `<i class="far fa-star"></i>`;
+                  }
+              }
+              ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+            }
+
+            return `<div class="product-item">
+                      <div class="image-holder d-flex-r-c-c">
+                        ${imageHtml}
+                      </div>
+                      <div class="stats d-flex-c-st-st">
+                        ${hotDealStat}
+                        ${topRateStat}
+                        ${dealStat}
+                      </div>
+                      <div class="icons d-flex-c-st-st">
+                        <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-eye" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
+                      </div>
+                      <div class="content d-flex-c-st-st">
+                        ${colorHtml}
+                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        ${descriptionHtml}
+                        ${ratingHtml}
+                        <div class="product-price d-flex-r-bt-c">
+                          <strong class="oldprice">${product.price}</strong>
+                          <strong class="price">${product.salePrice}</strong>
+                        </div>
+                      </div>
+            </div>`
+
+        }).join('');
+         
+        const siblingProductsBlock = document.createElement('div');
+              siblingProductsBlock.classList.add('sibling-products-block');
+
+        const siblingProductsContainer = document.createElement('div');
+              siblingProductsContainer.classList.add('sibling-products-container');
+
+        const siblingProductsWrapper = document.createElement('div');
+              siblingProductsWrapper.classList.add('slider-wrapper');
+
+        const siblingProductsHeading = document.createElement('div'); // block title
+              siblingProductsHeading.classList.add('block-heading');
+
+        const siblingProductsTitle = document.createElement('h3');
+              siblingProductsTitle.classList.add('block-heading-title');
+
+              siblingProductsTitle.textContent = 'similar products';
+              
+              siblingProductsHeading.appendChild(siblingProductsTitle);
+              siblingProductsContainer.appendChild(siblingProductsHeading);
+
+              siblingProductsWrapper.innerHTML = siblingProductsHtml;
+              siblingProductsContainer.appendChild(siblingProductsWrapper);
+              siblingProductsBlock.appendChild(siblingProductsContainer);
+
+              document.querySelector('#single-page .products-container').appendChild(siblingProductsBlock);
+
+               if(siblingProductsWrapper.children.length > 5){
+
+                  siblingProductsContainer.innerHTML += `<div class="arrows">
+                                                           <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                           <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                         </div>
+                                                         <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+                  siblingProductsWrapper.style.display = 'flex';
+
+                  countSlider({
+                    section:'.sibling-products-block',
+                    containerSelector:'.sibling-products-block .slider-wrapper',
+                    dotsSelector:'.sibling-products-block #sliderdots',
+                    prevArrowSelector:'.sibling-products-block .arrow-left',
+                    nextArrowSelector:'.sibling-products-block .arrow-right',
+                  });
+
+               } else {
+                 siblingProductsWrapper.style.display = 'grid';
+                 siblingProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
+               }
+      }
+    
     } catch (error) {
       console.error('Failed to get products');
     }
@@ -1990,13 +2120,16 @@ if(document.querySelector(".category-page")){
           if(topRatedThisCategoryProducts.length > 0){
             const topRatedThisCategoryProductsElement = document.createElement('div');
                   topRatedThisCategoryProductsElement.classList.add('top-rated-this-category-products');
+
             const topRatedThisCategoryProductsContainer = document.createElement('div');
                   topRatedThisCategoryProductsContainer.classList.add('products-container');
+
             const topRatedThisCategoryProductsWrapper = document.createElement('div');
                   topRatedThisCategoryProductsWrapper.classList.add('slider-wrapper');
 
             const topRatedThisCategoryProductsHeading = document.createElement('div'); // block title
                   topRatedThisCategoryProductsHeading.classList.add('block-heading');
+
             const topRatedThisCategoryProductsTitle = document.createElement('h3');
                   topRatedThisCategoryProductsTitle.classList.add('block-heading-title');
 
