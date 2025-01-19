@@ -1136,7 +1136,7 @@ if(document.querySelector("#single-page")){
               siblingProductsContainer.appendChild(siblingProductsWrapper);
               siblingProductsBlock.appendChild(siblingProductsContainer);
 
-              document.querySelector('#single-page .products-container').appendChild(siblingProductsBlock);
+              document.querySelector('#single-page .featured-products-container').appendChild(siblingProductsBlock);
 
               if(siblingProductsWrapper.children.length > 6){
 
@@ -1162,11 +1162,11 @@ if(document.querySelector("#single-page")){
               }
       }
 
-      const bestSellerSiblingProducts = siblingProducts.filter((product) => product.bought > 30);
+      const bestSellerSiblingProducts = siblingProducts.filter(product => product.bought > 30);
       
       if(bestSellerSiblingProducts.length > 0){
 
-        let bestSellerSiblingProductsHtml = siblingProducts.map((product) => {
+        let bestSellerSiblingProductsHtml = bestSellerSiblingProducts.map((product) => {
           
             let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
 
@@ -1269,7 +1269,7 @@ if(document.querySelector("#single-page")){
               bestSellerSiblingProductsContainer.appendChild(bestSellerSiblingProductsWrapper);
               bestSellerSiblingProductsBlock.appendChild(bestSellerSiblingProductsContainer);
 
-              document.querySelector('#single-page .products-container').appendChild(bestSellerSiblingProductsBlock);
+              document.querySelector('#single-page .featured-products-container').appendChild(bestSellerSiblingProductsBlock);
 
               if(bestSellerSiblingProductsWrapper.children.length > 6){
 
@@ -1295,12 +1295,271 @@ if(document.querySelector("#single-page")){
               }
       }
 
-      const topRatedsiblingProducts = siblingProducts.filter((product) => product.rating > 4);
-      
+      const topRatedsiblingProducts = siblingProducts.filter(product => product.rating > 4);
 
-      const highViewedsiblingProducts = siblingProducts.filter((product) => product.viewed > 100);
-      
+      if(topRatedsiblingProducts.length > 0){
 
+        let topRatedsiblingProductsHtml = topRatedsiblingProducts.map((product) => {
+          
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+            let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+            let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+            let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
+            let colorHtml = product.colors && product.colors.length > 0
+                          ? `<ul class="colors-holder d-flex-r-c-c">
+                                ${product.colors.slice(0, 5).map((proColor) => {
+                                  let backgroundStyle = '';
+                        
+                                  if (proColor.includes('x')) {
+                                      const colorArray = proColor.split('x').map(c => c.trim());
+                                    if (colorArray.length === 2) {
+                                        backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                    } else {
+                                      backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                    }
+                                  } else {
+                                    backgroundStyle = proColor;
+                                  }
+                        
+                                  return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                }).join('')}
+                            </ul>`
+                          : '';
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+            let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                                    product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+            let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
+
+            let ratingHtml = '';
+            if(product.rating){
+              for (let i=1; i<=5; i++) {
+                  if (i <= product.rating) {
+                      ratingHtml += `<i class="fas fa-star"></i>`;
+                  } else if (i - 0.5 === product.rating) {
+                      ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                  } else {
+                      ratingHtml += `<i class="far fa-star"></i>`;
+                  }
+              }
+              ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+            }
+
+            return `<div class="product-item">
+                      <div class="image-holder d-flex-r-c-c">
+                        ${imageHtml}
+                      </div>
+                      <div class="stats d-flex-c-st-st">
+                        ${hotDealStat}
+                        ${topRateStat}
+                        ${dealStat}
+                      </div>
+                      <div class="icons d-flex-c-st-st">
+                        <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-eye" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
+                      </div>
+                      <div class="content d-flex-c-st-st">
+                        ${colorHtml}
+                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        ${descriptionHtml}
+                        ${ratingHtml}
+                        <div class="product-price d-flex-r-bt-c">
+                          <strong class="oldprice">${product.price}</strong>
+                          <strong class="price">${product.salePrice}</strong>
+                        </div>
+                      </div>
+            </div>`
+
+        }).join('');
+         
+        const topRatedsiblingProductsBlock = document.createElement('div');
+              topRatedsiblingProductsBlock.classList.add('top-rated-sibling-products-block');
+
+        const topRatedsiblingProductsContainer = document.createElement('div');
+              topRatedsiblingProductsContainer.classList.add('top-rated-sibling-products-container');
+
+        const topRatedsiblingProductsWrapper = document.createElement('div');
+              topRatedsiblingProductsWrapper.classList.add('slider-wrapper');
+
+        const topRatedsiblingProductsHeading = document.createElement('div'); // block title
+              topRatedsiblingProductsHeading.classList.add('block-heading');
+
+        const topRatedsiblingProductsTitle = document.createElement('h3');
+              topRatedsiblingProductsTitle.classList.add('block-heading-title');
+
+              topRatedsiblingProductsTitle.textContent = 'top rated';
+
+              topRatedsiblingProductsHeading.appendChild(topRatedsiblingProductsTitle);
+              topRatedsiblingProductsContainer.appendChild(topRatedsiblingProductsHeading);
+
+              topRatedsiblingProductsWrapper.innerHTML = topRatedsiblingProductsHtml;
+              topRatedsiblingProductsContainer.appendChild(topRatedsiblingProductsWrapper);
+              topRatedsiblingProductsBlock.appendChild(topRatedsiblingProductsContainer);
+
+              document.querySelector('#single-page .featured-products-container').appendChild(topRatedsiblingProductsBlock);
+
+              if(topRatedsiblingProductsWrapper.children.length > 6){
+
+                topRatedsiblingProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+                topRatedsiblingProductsWrapper.style.display = 'flex';
+
+                countSliderFullScreen({
+                  section:'.top-rated-sibling-products-block',
+                  containerSelector:'.top-rated-sibling-products-block .slider-wrapper',
+                  dotsSelector:'.top-rated-sibling-products-block #sliderdots',
+                  prevArrowSelector:'.top-rated-sibling-products-block .arrow-left',
+                  nextArrowSelector:'.top-rated-sibling-products-block .arrow-right',
+                });
+
+              } else {
+                topRatedsiblingProductsWrapper.style.display = 'grid';
+                topRatedsiblingProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
+              }
+      }
+
+      const highViewedSiblingProducts = siblingProducts.filter(product => product.viewed > 100);
+
+      if(highViewedSiblingProducts.length > 0){
+
+        let highViewedSiblingProductsHtml = highViewedSiblingProducts.map((product) => {
+          
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+            let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+            let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+            let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
+            let colorHtml = product.colors && product.colors.length > 0
+                          ? `<ul class="colors-holder d-flex-r-c-c">
+                                ${product.colors.slice(0, 5).map((proColor) => {
+                                  let backgroundStyle = '';
+                        
+                                  if (proColor.includes('x')) {
+                                      const colorArray = proColor.split('x').map(c => c.trim());
+                                    if (colorArray.length === 2) {
+                                        backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                    } else {
+                                      backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                    }
+                                  } else {
+                                    backgroundStyle = proColor;
+                                  }
+                        
+                                  return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                }).join('')}
+                            </ul>`
+                          : '';
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+            let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                                    product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+            let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
+
+            let ratingHtml = '';
+            if(product.rating){
+              for (let i=1; i<=5; i++) {
+                  if (i <= product.rating) {
+                      ratingHtml += `<i class="fas fa-star"></i>`;
+                  } else if (i - 0.5 === product.rating) {
+                      ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                  } else {
+                      ratingHtml += `<i class="far fa-star"></i>`;
+                  }
+              }
+              ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+            }
+
+            return `<div class="product-item">
+                      <div class="image-holder d-flex-r-c-c">
+                        ${imageHtml}
+                      </div>
+                      <div class="stats d-flex-c-st-st">
+                        ${hotDealStat}
+                        ${topRateStat}
+                        ${dealStat}
+                      </div>
+                      <div class="icons d-flex-c-st-st">
+                        <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-eye" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
+                      </div>
+                      <div class="content d-flex-c-st-st">
+                        ${colorHtml}
+                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        ${descriptionHtml}
+                        ${ratingHtml}
+                        <div class="product-price d-flex-r-bt-c">
+                          <strong class="oldprice">${product.price}</strong>
+                          <strong class="price">${product.salePrice}</strong>
+                        </div>
+                      </div>
+            </div>`
+
+        }).join('');
+         
+        const highViewedSiblingProductsBlock = document.createElement('div');
+              highViewedSiblingProductsBlock.classList.add('high-viewed-sibling-products-block');
+
+        const highViewedSiblingProductsContainer = document.createElement('div');
+              highViewedSiblingProductsContainer.classList.add('high-viewed-sibling-products-container');
+
+        const highViewedSiblingProductsWrapper = document.createElement('div');
+              highViewedSiblingProductsWrapper.classList.add('slider-wrapper');
+
+        const highViewedSiblingProductsHeading = document.createElement('div'); // block title
+              highViewedSiblingProductsHeading.classList.add('block-heading');
+
+        const highViewedSiblingProductsTitle = document.createElement('h3');
+              highViewedSiblingProductsTitle.classList.add('block-heading-title');
+
+              highViewedSiblingProductsTitle.textContent = 'customers viewed related items';
+
+              highViewedSiblingProductsHeading.appendChild(highViewedSiblingProductsTitle);
+              highViewedSiblingProductsContainer.appendChild(highViewedSiblingProductsHeading);
+
+              highViewedSiblingProductsWrapper.innerHTML = highViewedSiblingProductsHtml;
+              highViewedSiblingProductsContainer.appendChild(highViewedSiblingProductsWrapper);
+              highViewedSiblingProductsBlock.appendChild(highViewedSiblingProductsContainer);
+
+              document.querySelector('#single-page .featured-products-container').appendChild(highViewedSiblingProductsBlock);
+
+              if(highViewedSiblingProductsWrapper.children.length > 6){
+
+                highViewedSiblingProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+                highViewedSiblingProductsWrapper.style.display = 'flex';
+
+                countSliderFullScreen({
+                  section:'.high-viewed-sibling-products-block',
+                  containerSelector:'.high-viewed-sibling-products-block .slider-wrapper',
+                  dotsSelector:'.high-viewed-sibling-products-block #sliderdots',
+                  prevArrowSelector:'.high-viewed-sibling-products-block .arrow-left',
+                  nextArrowSelector:'.high-viewed-sibling-products-block .arrow-right',
+                });
+
+              } else {
+                highViewedSiblingProductsWrapper.style.display = 'grid';
+                highViewedSiblingProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
+              }
+      }
     
     } catch (error) {
       console.error('Failed to get products');
