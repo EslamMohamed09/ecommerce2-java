@@ -1042,7 +1042,7 @@ if(document.querySelector("#single-page")){
             let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
             let colorHtml = product.colors && product.colors.length > 0
-                          ? `<ul class="colors-holder d-flex-r-st-c">
+                          ? `<ul class="colors-holder d-flex-r-c-c">
                                 ${product.colors.slice(0, 5).map((proColor) => {
                                   let backgroundStyle = '';
                         
@@ -1127,7 +1127,7 @@ if(document.querySelector("#single-page")){
         const siblingProductsTitle = document.createElement('h3');
               siblingProductsTitle.classList.add('block-heading-title');
 
-              siblingProductsTitle.textContent = 'similar products';
+              siblingProductsTitle.textContent = 'similar items';
 
               siblingProductsHeading.appendChild(siblingProductsTitle);
               siblingProductsContainer.appendChild(siblingProductsHeading);
@@ -1655,7 +1655,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -1782,7 +1782,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -1907,7 +1907,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -2038,7 +2038,7 @@ if(document.querySelector(".category-page")){
               let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -2146,7 +2146,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -2271,7 +2271,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -2397,7 +2397,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             
@@ -2526,7 +2526,7 @@ if(document.querySelector(".category-page")){
                 let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
 
                 let colorHtml = product.colors && product.colors.length > 0
-                              ? `<ul class="colors-holder d-flex-r-st-c">
+                              ? `<ul class="colors-holder d-flex-r-c-c">
                                     ${product.colors.slice(0, 5).map((proColor) => {
                                       let backgroundStyle = '';
                             

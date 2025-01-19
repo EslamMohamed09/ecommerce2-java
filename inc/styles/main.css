@@ -3043,7 +3043,7 @@ footer .bottom-footer p {
   padding: 2rem 3%;
 }
 #single-page .product-container {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 #single-page .product-container .left-block .parent-categories-holder {
   width: 100%;
@@ -3386,7 +3386,7 @@ footer .bottom-footer p {
   width: 100%;
   height: fit-content;
   gap: 1rem;
-  margin-bottom: 0.4rem;
+  margin: 0 auto 0.4rem;
   list-style: none;
   flex-wrap: nowrap;
 }
