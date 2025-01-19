@@ -983,6 +983,28 @@ if(document.querySelector("#single-page")){
     return categoryProducts;
   }
 
+  async function getSiblingCategories(categoryId) {
+
+    const response = await fetch('../admin/pages/categories.json');
+    if(!response.ok){throw new Error('Failed to load categories')}
+    const data = await response.json();
+
+    let category = data.categories.find(cat => cat.id === categoryId);
+    
+    if (!category || !category.parent_id) {return [];}
+
+    // Get all categories with the same parent_id & exclude the given category
+    return data.categories.filter(cat => cat.parent_id === category.parent_id && cat.id !== categoryId);
+  }
+
+  async function getCategoriesProducts(categoriesIds){
+   const response = await fetch('../admin/pages/products.json');
+   if(!response.ok){throw new Error('Failed to load products')}
+   const data = await response.json();
+
+    return data.products.filter(product => categoriesIds.includes(product.catId));
+  }
+
   async function loadCategories(){
     const response = await fetch('../admin/pages/categories.json');
     if (!response.ok) {throw new Error('Failed to load categories');}
@@ -1030,6 +1052,10 @@ if(document.querySelector("#single-page")){
       const currentProductId = getProductId();
       const productCategoryId = await categoryIdOfProduct(currentProductId);
       const siblingProducts = await siblingProductsOfProduct(productCategoryId, currentProductId);
+
+      const siblingCategories = await getSiblingCategories(productCategoryId);
+      const siblingCategoriesIds = siblingCategories.map((cat) => cat.id);
+      const siblingCategoriesProducts = await getCategoriesProducts(siblingCategoriesIds);
 
       if(siblingProducts.length > 0){
 
@@ -1127,7 +1153,7 @@ if(document.querySelector("#single-page")){
         const siblingProductsTitle = document.createElement('h3');
               siblingProductsTitle.classList.add('block-heading-title');
 
-              siblingProductsTitle.textContent = 'similar items';
+              siblingProductsTitle.textContent = 'related items';
 
               siblingProductsHeading.appendChild(siblingProductsTitle);
               siblingProductsContainer.appendChild(siblingProductsHeading);
@@ -1558,6 +1584,137 @@ if(document.querySelector("#single-page")){
               } else {
                 highViewedSiblingProductsWrapper.style.display = 'grid';
                 highViewedSiblingProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
+              }
+      }
+
+      if(siblingCategoriesProducts.length > 0){
+
+        let siblingCategoriesProductsHtml = siblingCategoriesProducts.map((product) => {
+          
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+            let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+            let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+            let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
+            let colorHtml = product.colors && product.colors.length > 0
+                          ? `<ul class="colors-holder d-flex-r-c-c">
+                                ${product.colors.slice(0, 5).map((proColor) => {
+                                  let backgroundStyle = '';
+                        
+                                  if (proColor.includes('x')) {
+                                      const colorArray = proColor.split('x').map(c => c.trim());
+                                    if (colorArray.length === 2) {
+                                        backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                    } else {
+                                      backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                    }
+                                  } else {
+                                    backgroundStyle = proColor;
+                                  }
+                        
+                                  return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                }).join('')}
+                            </ul>`
+                          : '';
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+            let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                                    product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+            let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
+
+            let ratingHtml = '';
+            if(product.rating){
+              for (let i=1; i<=5; i++) {
+                  if (i <= product.rating) {
+                      ratingHtml += `<i class="fas fa-star"></i>`;
+                  } else if (i - 0.5 === product.rating) {
+                      ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                  } else {
+                      ratingHtml += `<i class="far fa-star"></i>`;
+                  }
+              }
+              ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+            }
+
+            return `<div class="product-item">
+                      <div class="image-holder d-flex-r-c-c">
+                        ${imageHtml}
+                      </div>
+                      <div class="stats d-flex-c-st-st">
+                        ${hotDealStat}
+                        ${topRateStat}
+                        ${dealStat}
+                      </div>
+                      <div class="icons d-flex-c-st-st">
+                        <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-eye" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
+                      </div>
+                      <div class="content d-flex-c-st-st">
+                        ${colorHtml}
+                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        ${descriptionHtml}
+                        ${ratingHtml}
+                        <div class="product-price d-flex-r-bt-c">
+                          <strong class="oldprice">${product.price}</strong>
+                          <strong class="price">${product.salePrice}</strong>
+                        </div>
+                      </div>
+            </div>`
+
+        }).join('');
+         
+        const siblingCategoriesProductsBlock = document.createElement('div');
+              siblingCategoriesProductsBlock.classList.add('sibling-categories-products-block');
+
+        const siblingCategoriesProductsContainer = document.createElement('div');
+              siblingCategoriesProductsContainer.classList.add('sibling-categories-products-container');
+
+        const siblingCategoriesProductsWrapper = document.createElement('div');
+              siblingCategoriesProductsWrapper.classList.add('slider-wrapper');
+
+        const siblingCategoriesProductsHeading = document.createElement('div'); // block title
+              siblingCategoriesProductsHeading.classList.add('block-heading');
+
+        const siblingCategoriesProductsTitle = document.createElement('h3');
+              siblingCategoriesProductsTitle.classList.add('block-heading-title');
+
+              siblingCategoriesProductsTitle.textContent = 'recommended for you';
+
+              siblingCategoriesProductsHeading.appendChild(siblingCategoriesProductsTitle);
+              siblingCategoriesProductsContainer.appendChild(siblingCategoriesProductsHeading);
+
+              siblingCategoriesProductsWrapper.innerHTML = siblingCategoriesProductsHtml;
+              siblingCategoriesProductsContainer.appendChild(siblingCategoriesProductsWrapper);
+              siblingCategoriesProductsBlock.appendChild(siblingCategoriesProductsContainer);
+
+              document.querySelector('#single-page .featured-products-container').appendChild(siblingCategoriesProductsBlock);
+
+              if(siblingCategoriesProductsWrapper.children.length > 6){
+
+                siblingCategoriesProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+                siblingCategoriesProductsWrapper.style.display = 'flex';
+
+                countSliderFullScreen({
+                  section:'.sibling-categories-products-block',
+                  containerSelector:'.sibling-categories-products-block .slider-wrapper',
+                  dotsSelector:'.sibling-categories-products-block #sliderdots',
+                  prevArrowSelector:'.sibling-categories-products-block .arrow-left',
+                  nextArrowSelector:'.sibling-categories-products-block .arrow-right',
+                });
+
+              } else {
+                siblingCategoriesProductsWrapper.style.display = 'grid';
+                siblingCategoriesProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
               }
       }
     
