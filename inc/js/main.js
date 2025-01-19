@@ -967,6 +967,22 @@ if(document.querySelector("#single-page")){
     return product;
   }
 
+  async function categoryIdOfProduct(productId){
+    const response = await fetch('../admin/pages/products.json');
+    if(!response.ok){throw new Error('Failed to load products')}
+    const data = await response.json();
+    const product = data.products.find((product) => product.id === productId);
+    if(product){return product.catId} else {throw new Error('Failed to load category')}
+  }
+
+  async function productsOfCategory(categoryId, excludeProductId){
+    const response = await fetch('../admin/pages/products.json');
+    if(!response.ok){throw new Error('Failed to load products')}
+    const data = await response.json();
+    const categoryProducts = data.products.filter((product) => product.catId === categoryId && product.id !== excludeProductId);
+    return categoryProducts;
+  }
+
   async function loadCategories(){
     const response = await fetch('../admin/pages/categories.json');
     if (!response.ok) {throw new Error('Failed to load categories');}
@@ -1008,7 +1024,23 @@ if(document.querySelector("#single-page")){
     }
   }
 
+  async function displayCategoryProducts(){
+    try {
+      const currentProductId = getProductId();
+      const productCategoryId = await categoryIdOfProduct(currentProductId);
+      const categoryProducts = await productsOfCategory(productCategoryId, currentProductId);
+
+      console.log(categoryProducts);
+
+    } catch (error) {
+      console.error('Failed to get products');
+    }
+  }
+
   displayParentCategories();
+
+  displayCategoryProducts();
+
 
   function fetchProduct(productId){
     fetch('../admin/pages/products.json').then(response => response.json())
@@ -2645,7 +2677,6 @@ if(document.querySelector(".cart-page")){
   // I want to ask you what is the logic approach add id only to local storage then through id get the product or products from database or add all details of each product to local storage and the big website like amazon follow any of their approaches?
   
 }
-
 
 
 /* 
