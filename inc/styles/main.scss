@@ -2932,14 +2932,17 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                          position:relative;
 
                                 img {height:6rem;
+                                     max-width:80%;
                                      object-fit:contain;
-                                     transition:all 0.7s linear;}
+                                     transition:all 0.7s linear;
+                                     z-index:8;}
 
                                 img:last-child:not(:only-child) {visibility:hidden;
                                                                  opacity:0;
                                                                  position:absolute;
                                                                  left:50%;
-                                                                 transform:translateX(-50%);}
+                                                                 transform:translateX(-50%);
+                                                                 z-index:9;}
 
                                 &:hover img:first-child {visibility:hidden;
                                                          opacity:0;}
@@ -3077,18 +3080,20 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
               }
 
               /* <--> */
-              .arrows {width:99.6%;
-                       position:absolute;
-                       top:40%;
-                       right:50%;
-                       transform:translate(50%, -50%);
+              .arrows {width:100%;
+                       height:1rem;
                        display:flex !important;
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
+                       z-index:11;
+                       position:relative;
 
                      .arrow-left,
-                     .arrow-right {width:2rem;
+                     .arrow-right {bottom:20rem;
+                                   transform:translate(50%, -50%);
+                                   position:absolute;
+                                   width:2rem;
                                    height:5rem;
                                    padding:0;
                                    font-size:1.2rem;
@@ -3102,6 +3107,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                    background:var(--white);
                                    box-shadow:var(--box-shadow6);
                                    cursor:pointer;}
+
+                    .arrow-left {left:-0.9rem;}
+                     
+                    .arrow-right {right:1rem;}
               }
 
               #sliderdots {position:absolute;
@@ -3151,14 +3160,17 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                          position:relative;
 
                                 img {height:6rem;
+                                     max-width:80%;
                                      object-fit:contain;
-                                     transition:all 0.7s linear;}
+                                     transition:all 0.7s linear;
+                                     z-index:8;}
 
                                 img:last-child:not(:only-child) {visibility:hidden;
                                                                  opacity:0;
                                                                  position:absolute;
                                                                  left:50%;
-                                                                 transform:translateX(-50%);}
+                                                                 transform:translateX(-50%);
+                                                                 z-index:9;}
 
                                 &:hover img:first-child {visibility:hidden;
                                                          opacity:0;}
@@ -3305,6 +3317,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
+                       
 
                      .arrow-left,
                      .arrow-right {width:2rem;
@@ -3370,14 +3383,17 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                          position:relative;
 
                                 img {height:6rem;
+                                     max-width:80%;
                                      object-fit:contain;
-                                     transition:all 0.7s linear;}
+                                     transition:all 0.7s linear;
+                                     z-index:8;}
 
                                 img:last-child:not(:only-child) {visibility:hidden;
                                                                  opacity:0;
                                                                  position:absolute;
                                                                  left:50%;
-                                                                 transform:translateX(-50%);}
+                                                                 transform:translateX(-50%);
+                                                                 z-index:9;}
 
                                 &:hover img:first-child {visibility:hidden;
                                                          opacity:0;}
@@ -3524,6 +3540,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
+                       
 
                      .arrow-left,
                      .arrow-right {width:2rem;
@@ -3589,14 +3606,17 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                          position:relative;
 
                                 img {height:6rem;
+                                     max-width:80%;
                                      object-fit:contain;
-                                     transition:all 0.7s linear;}
+                                     transition:all 0.7s linear;
+                                     z-index:8;}
 
                                 img:last-child:not(:only-child) {visibility:hidden;
                                                                  opacity:0;
                                                                  position:absolute;
                                                                  left:50%;
-                                                                 transform:translateX(-50%);}
+                                                                 transform:translateX(-50%);
+                                                                 z-index:9;}
 
                                 &:hover img:first-child {visibility:hidden;
                                                          opacity:0;}
@@ -3743,6 +3763,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
+                       
 
                      .arrow-left,
                      .arrow-right {width:2rem;
@@ -3808,14 +3829,17 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                          position:relative;
 
                                 img {height:6rem;
+                                     max-width:80%;
                                      object-fit:contain;
-                                     transition:all 0.7s linear;}
+                                     transition:all 0.7s linear;
+                                     z-index:8;}
 
                                 img:last-child:not(:only-child) {visibility:hidden;
                                                                  opacity:0;
                                                                  position:absolute;
                                                                  left:50%;
-                                                                 transform:translateX(-50%);}
+                                                                 transform:translateX(-50%);
+                                                                 z-index:9;}
 
                                 &:hover img:first-child {visibility:hidden;
                                                          opacity:0;}
@@ -3962,6 +3986,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                        flex-direction:row;
                        justify-content:space-between;
                        align-items:center;
+                       
 
                      .arrow-left,
                      .arrow-right {width:2rem;
