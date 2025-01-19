@@ -1024,7 +1024,7 @@ if(document.querySelector("#single-page")){
     }
   }
 
-  async function displayCategoryProducts(){
+  async function displayDeterminedProducts(){
     try {
 
       const currentProductId = getProductId();
@@ -1138,7 +1138,7 @@ if(document.querySelector("#single-page")){
 
               document.querySelector('#single-page .products-container').appendChild(siblingProductsBlock);
 
-              if(siblingProductsWrapper.children.length > 5){
+              if(siblingProductsWrapper.children.length > 6){
 
                 siblingProductsContainer.innerHTML += `<div class="arrows">
                                                           <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -1161,6 +1161,146 @@ if(document.querySelector("#single-page")){
                 siblingProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
               }
       }
+
+      const bestSellerSiblingProducts = siblingProducts.filter((product) => product.bought > 30);
+      
+      if(bestSellerSiblingProducts.length > 0){
+
+        let bestSellerSiblingProductsHtml = siblingProducts.map((product) => {
+          
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+
+            let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
+            let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
+            let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
+
+            let colorHtml = product.colors && product.colors.length > 0
+                          ? `<ul class="colors-holder d-flex-r-c-c">
+                                ${product.colors.slice(0, 5).map((proColor) => {
+                                  let backgroundStyle = '';
+                        
+                                  if (proColor.includes('x')) {
+                                      const colorArray = proColor.split('x').map(c => c.trim());
+                                    if (colorArray.length === 2) {
+                                        backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+                                    } else {
+                                      backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+                                    }
+                                  } else {
+                                    backgroundStyle = proColor;
+                                  }
+                        
+                                  return `<li class="circle-outer"><div class="color-circle" style="background:${backgroundStyle};"></div></li>`;
+                                }).join('')}
+                            </ul>`
+                          : '';
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+            let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                                    product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+            let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
+
+            let ratingHtml = '';
+            if(product.rating){
+              for (let i=1; i<=5; i++) {
+                  if (i <= product.rating) {
+                      ratingHtml += `<i class="fas fa-star"></i>`;
+                  } else if (i - 0.5 === product.rating) {
+                      ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                  } else {
+                      ratingHtml += `<i class="far fa-star"></i>`;
+                  }
+              }
+              ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+            }
+
+            return `<div class="product-item">
+                      <div class="image-holder d-flex-r-c-c">
+                        ${imageHtml}
+                      </div>
+                      <div class="stats d-flex-c-st-st">
+                        ${hotDealStat}
+                        ${topRateStat}
+                        ${dealStat}
+                      </div>
+                      <div class="icons d-flex-c-st-st">
+                        <button type="button"><i class="far fa-heart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-eye" id="icon"></i></button>
+                        <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
+                      </div>
+                      <div class="content d-flex-c-st-st">
+                        ${colorHtml}
+                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        ${descriptionHtml}
+                        ${ratingHtml}
+                        <div class="product-price d-flex-r-bt-c">
+                          <strong class="oldprice">${product.price}</strong>
+                          <strong class="price">${product.salePrice}</strong>
+                        </div>
+                      </div>
+            </div>`
+
+        }).join('');
+         
+        const bestSellerSiblingProductsBlock = document.createElement('div');
+              bestSellerSiblingProductsBlock.classList.add('best-seller-sibling-products-block');
+
+        const bestSellerSiblingProductsContainer = document.createElement('div');
+              bestSellerSiblingProductsContainer.classList.add('best-seller-sibling-products-container');
+
+        const bestSellerSiblingProductsWrapper = document.createElement('div');
+              bestSellerSiblingProductsWrapper.classList.add('slider-wrapper');
+
+        const bestSellerSiblingProductsHeading = document.createElement('div'); // block title
+              bestSellerSiblingProductsHeading.classList.add('block-heading');
+
+        const bestSellerSiblingProductsTitle = document.createElement('h3');
+              bestSellerSiblingProductsTitle.classList.add('block-heading-title');
+
+              bestSellerSiblingProductsTitle.textContent = 'best seller';
+
+              bestSellerSiblingProductsHeading.appendChild(bestSellerSiblingProductsTitle);
+              bestSellerSiblingProductsContainer.appendChild(bestSellerSiblingProductsHeading);
+
+              bestSellerSiblingProductsWrapper.innerHTML = bestSellerSiblingProductsHtml;
+              bestSellerSiblingProductsContainer.appendChild(bestSellerSiblingProductsWrapper);
+              bestSellerSiblingProductsBlock.appendChild(bestSellerSiblingProductsContainer);
+
+              document.querySelector('#single-page .products-container').appendChild(bestSellerSiblingProductsBlock);
+
+              if(bestSellerSiblingProductsWrapper.children.length > 6){
+
+                bestSellerSiblingProductsContainer.innerHTML += `<div class="arrows">
+                                                                  <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+                                                                  <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+                                                                </div>
+                                                                <div id="sliderdots" class="d-flex-r-c-c"></div>`;
+
+                bestSellerSiblingProductsWrapper.style.display = 'flex';
+
+                countSliderFullScreen({
+                  section:'.best-seller-sibling-products-block',
+                  containerSelector:'.best-seller-sibling-products-block .slider-wrapper',
+                  dotsSelector:'.best-seller-sibling-products-block #sliderdots',
+                  prevArrowSelector:'.best-seller-sibling-products-block .arrow-left',
+                  nextArrowSelector:'.best-seller-sibling-products-block .arrow-right',
+                });
+
+              } else {
+                bestSellerSiblingProductsWrapper.style.display = 'grid';
+                bestSellerSiblingProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
+              }
+      }
+
+      const topRatedsiblingProducts = siblingProducts.filter((product) => product.rating > 4);
+      
+
+      const highViewedsiblingProducts = siblingProducts.filter((product) => product.viewed > 100);
+      
+
     
     } catch (error) {
       console.error('Failed to get products');
@@ -1169,7 +1309,7 @@ if(document.querySelector("#single-page")){
 
   displayParentCategories();
 
-  displayCategoryProducts();
+  displayDeterminedProducts();
 
 
   function fetchProduct(productId){
