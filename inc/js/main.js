@@ -2076,6 +2076,16 @@ if(document.querySelector("#single-page")){
 */
 if(document.querySelector(".category-page")){
 
+  async function loadProduct(productId){
+    const response = await fetch('../admin/pages/products.json');
+    if(!response.ok){throw new Error('Failed to load products')}
+    const data = await response.json();
+
+    const product = data.products.find(product => product.id === productId);
+    if(!product){throw new Error('Product not found')}
+    return product;
+  }
+
   async function loadCategories(){
     const response = await fetch('../admin/pages/categories.json');
     if (!response.ok) {throw new Error('Failed to load categories');}
@@ -3254,6 +3264,54 @@ if(document.querySelector(".category-page")){
         const clonedImage = img.cloneNode();
         removeBackground(clonedImage, '#ffffff');
         img.parentNode.replaceChild(clonedImage, img);
+      });
+
+      document.querySelectorAll(".product-item").forEach((item) => {
+        const addToCartBtn = item.querySelector('.add-to-cart-btn');
+
+        if(addToCartBtn){
+
+          addToCartBtn.addEventListener('click', async function() {
+
+            const hrefTitle = item.querySelector('.product-title').getAttribute('href');
+
+            if(hrefTitle.includes('=')){ const productId = hrefTitle.split('=')[1];
+          
+              const product = await loadProduct(productId);
+
+              const productBox = {
+                id:product.id,
+                title:product.title,
+                image:product.image[0],
+                brand:product.brand ? product.brand : null,
+                stock:product.instock,
+                oldPrice:product.price,
+                salePrice:product.salePrice,
+                size:product.size ? product.size : null,
+                color:product.color ? product.color : null,
+                quantity:1,
+              }
+
+              const productCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+
+              const existingProductIndex = productCart.findIndex((item) => item.id === productBox.id);
+
+              if(existingProductIndex > -1) {
+                 productCart[existingProductIndex] = productBox;
+                 alert('product updated to the cart');
+              } else {
+                productCart.push(productBox);
+                alert('product added to the cart');
+              }
+
+              localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productCart));
+            } else {
+              console.error('Invalid product link');
+            }
+
+          });
+
+        }
       });
 
     } catch (error) {
