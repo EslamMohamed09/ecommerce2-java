@@ -1043,7 +1043,7 @@ if(document.querySelector("#single-page")){
     }
   }
 
-  async function displayDeterminedProducts(){
+  async function displayfeaturedProducts(){
     try {
 
       const currentProductId = getProductId();
@@ -1118,7 +1118,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="icons d-flex-c-st-st">
                         <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                         <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                         <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                       </div>
@@ -1251,7 +1251,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="icons d-flex-c-st-st">
                         <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                         <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                         <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                       </div>
@@ -1384,7 +1384,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="icons d-flex-c-st-st">
                         <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                         <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                         <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                       </div>
@@ -1517,7 +1517,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="icons d-flex-c-st-st">
                         <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                         <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                         <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                       </div>
@@ -1648,7 +1648,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="icons d-flex-c-st-st">
                         <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                        <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                        <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                         <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                         <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                       </div>
@@ -1722,6 +1722,10 @@ if(document.querySelector("#single-page")){
               removeBackground(clonedImage, '#ffffff');
               img.parentNode.replaceChild(clonedImage, img);
             });
+
+      const product = await loadProduct(getProductId());
+
+      addToCartDynamic(product);
     
     } catch (error) {
       console.error('Failed to get products');
@@ -1730,7 +1734,7 @@ if(document.querySelector("#single-page")){
 
   displayParentCategories();
 
-  displayDeterminedProducts();
+  displayfeaturedProducts();
 
 
   function fetchProduct(productId){
@@ -2268,7 +2272,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -2395,7 +2399,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -2520,7 +2524,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -2651,7 +2655,7 @@ if(document.querySelector(".category-page")){
                         </div>
                         <div class="icons d-flex-c-bt-c">
                           <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                          <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                          <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                         </div>
                         <div class="content d-flex-c-st-st">
                           ${colorHtml}
@@ -2759,7 +2763,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -2883,7 +2887,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -3009,7 +3013,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -3139,7 +3143,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="icons d-flex-c-st-st">
                             <button type="button"><i class="far fa-heart" id="icon"></i></button>
-                            <button type="button"><i class="fas fa-shopping-cart" id="icon"></i></button>
+                            <button type="button" class="add-to-cart-btn"><i class="fas fa-shopping-cart" id="icon"></i></button>
                             <button type="button"><i class="fas fa-eye" id="icon"></i></button>
                             <button type="button"><i class="fas fa-compress-alt" id="icon"></i></button>
                           </div>
@@ -4028,66 +4032,56 @@ async function displayAddToCartPublic(){
 displayAddToCartPublic();
 
 
-function addToCartPublic(){
+function addToCartDynamic(product){
 
   document.querySelectorAll(".product-item").forEach((item) => {
-    item.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+    const addToCartBtn = item.querySelector('.add-to-cart-btn');
 
-      const hrefTitle = item.querySelector('.product-title').getArribute('href');
+    if(addToCartBtn){
 
-      if(hrefTitle.includes['=']){
-         const productId = hrefTitle.split('=')[1];
-      }
+      addToCartBtn.addEventListener('click', function() {
 
-      const safeTextContent = (selector) => {
-        const element = productItem.querySelector(selector);
-        return element ? element.textContent.trim() : '';
-      };
+        const hrefTitle = item.querySelector('.product-title').getAttribute('href');
+
+        if(hrefTitle.includes('=')){ const productId = hrefTitle.split('=')[1];
       
-      const productIdV = safeTextContent('.id');
-      // const product = await loadProduct(productIdV);
+          const productBox = {
+            id:product.id,
+            title:product.title,
+            image:product.image[0],
+            brand:product.brand ? product.brand : null,
+            stock:product.instock,
+            oldPrice:product.price,
+            salePrice:product.salePrice,
+            size:product.size ? product.size : null,
+            color:product.color ? product.color : null,
+            quantity:1,
+          }
 
-      const productTitleV = safeTextContent('h1');
-      const productImageV = safeGetAttribute(".image-holder img", 'src');
-      const productBrandV = safeTextContent('.brand-value') || '';
-      const productStockV = safeTextContent('.instock');
-      const oldPriceV = safeTextContent('.oldprice');
-      const salePriceV = safeTextContent('.price');
-      const sizeV = safeTextContent('.size-value') || '';
-      const colorV = safeTextContent('#selected-color');
-      const quantityV = safeTextContent('#pro-quantity-no');
+          const productCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
 
-      const productBox = {
-        id: productIdV,
-        title: productTitleV,
-        image: productImageV,
-        brand: productBrandV,
-        stock: productStockV,
-        oldPrice: oldPriceV,
-        salePrice: salePriceV,
-        size: sizeV,
-        color: colorV,
-        quantity: quantityV
-      };
+          const existingProductIndex = productCart.findIndex((item) => item.id === productBox.id);
 
-      let productCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+          if(existingProductIndex > -1) {
+              productCart[existingProductIndex] = productBox;
+              alert('product updated to the cart');
+          } else {
+            productCart.push(productBox);
+            alert('product added to the cart');
+          }
 
-      const existingProductIndex = productCart.findIndex(item => item.id === productBox.id);
+          localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productCart));
+        } else {
+          console.error('Invalid product link');
+        }
 
-      if(existingProductIndex > -1) {
-         productCart[existingProductIndex] = productBox;
-         alert('Product updated in cart');
-      } else {
-        productCart.push(productBox);
-        alert('Product added to cart');
-      }
+      });
 
-      localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productCart));
-    });
+    }
+
   });
+
 }
-
-
 
 /*** REMOVE BACKGROUND ***/
 function removeBackground(imgElement, targetColor) {
