@@ -3273,9 +3273,9 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   }
 
                                   .product-title {font-size:14px;
-                                                 font-weight:bold;
-                                                 line-height:1rem;
-                                                 color:var(--gray11);}
+                                                  font-weight:bold;
+                                                  line-height:1rem;
+                                                  color:var(--gray11);}
 
                                   p {color:var(--gray5);
                                      padding:0;
@@ -3300,6 +3300,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                   }
 
                           }
+
                           &:hover .icons {visibility:visible;
                                           opacity:1;}
                     }

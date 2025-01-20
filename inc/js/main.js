@@ -259,7 +259,7 @@ document.querySelectorAll('.banner-section .banner-slide-item .left-block p').fo
  #### POPULAR PRODUCTS ####
  ##########################
 */
-document.querySelectorAll('.popular-products-section .product-item .product-name').forEach((title) => {
+document.querySelectorAll('.popular-products-section .product-item .product-title').forEach((title) => {
   title.textContent = truncateWords(title.textContent, 4);
 });
 
@@ -1124,7 +1124,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="content d-flex-c-st-st">
                         ${colorHtml}
-                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
                         <div class="product-price d-flex-r-bt-c">
@@ -1257,7 +1257,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="content d-flex-c-st-st">
                         ${colorHtml}
-                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
                         <div class="product-price d-flex-r-bt-c">
@@ -1390,7 +1390,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="content d-flex-c-st-st">
                         ${colorHtml}
-                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
                         <div class="product-price d-flex-r-bt-c">
@@ -1523,7 +1523,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="content d-flex-c-st-st">
                         ${colorHtml}
-                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
                         <div class="product-price d-flex-r-bt-c">
@@ -1654,7 +1654,7 @@ if(document.querySelector("#single-page")){
                       </div>
                       <div class="content d-flex-c-st-st">
                         ${colorHtml}
-                        <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                        <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                         ${descriptionHtml}
                         ${ratingHtml}
                         <div class="product-price d-flex-r-bt-c">
@@ -2274,7 +2274,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
@@ -2401,7 +2401,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
@@ -2526,7 +2526,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
@@ -2655,7 +2655,7 @@ if(document.querySelector(".category-page")){
                         </div>
                         <div class="content d-flex-c-st-st">
                           ${colorHtml}
-                          <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                          <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                           ${descriptionHtml}
                           ${ratingHtml}
                           <div class="price-holder d-flex-r-bt-c">
@@ -2765,7 +2765,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
@@ -2889,7 +2889,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
@@ -3015,7 +3015,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
@@ -3145,7 +3145,7 @@ if(document.querySelector(".category-page")){
                           </div>
                           <div class="content d-flex-c-st-st">
                             ${colorHtml}
-                            <a href="single.html?id=${product.id}" class="product-name">${truncateTitle}</a>
+                            <a href="single.html?id=${product.id}" class="product-title">${truncateTitle}</a>
                             ${descriptionHtml}
                             ${ratingHtml}
                             <div class="product-price d-flex-r-bt-c">
