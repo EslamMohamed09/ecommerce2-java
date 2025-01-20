@@ -1834,7 +1834,7 @@ header {position:fixed;
                           
                           }
 
-                          .product-name {font-size:14px;
+                          .product-title {font-size:14px;
                                          font-weight:bold;
                                          line-height:1rem;
                                          color:var(--gray11);}
@@ -2154,15 +2154,15 @@ header {position:fixed;
 */
 .feature-products-section {
 
-  .product-card {border-radius:0.6rem;
+  .product-item {border-radius:0.6rem;
                  box-shadow:var(--box-shadow6);
 
-    h4 {color:var(--gray11);
-        font-size:1.1rem;}
+    .product-title {color:var(--gray11);
+                    font-size:1.1rem;}
   }
 
   .left-block {
-    .product-card {padding:5rem 2rem 2rem;
+    .product-item {padding:5rem 2rem 2rem;
                    display:flex;
                    flex-direction:row;
                    justify-content:center;
@@ -2193,17 +2193,19 @@ header {position:fixed;
                 flex-wrap:wrap;
                 gap:1.5rem;
 
-      .product-card {padding:1.5rem 1rem;
+      .product-item {padding:1.5rem 1rem;
 
         &:first-child {flex:1 1 30rem;
                        display:flex;
                        flex-direction:row;
                        justify-content:center;
                        align-items:flex-end;
+
           .content {
             p {margin-bottom:0.5rem;
                font-weight:bold;}
           }
+
           .image {
             img {height:14rem;}
           }
@@ -2225,7 +2227,8 @@ header {position:fixed;
                     flex-direction:column;
                     justify-content:flex-start;
                     align-items:flex-start;
-            h4 {margin-bottom:0.5rem;}
+
+            .product-title {margin-bottom:0.5rem;}
           }
         }
       
@@ -2246,7 +2249,8 @@ header {position:fixed;
                     flex-direction:column;
                     justify-content:flex-start;
                     align-items:flex-start;
-            h4 {margin-bottom:0.5rem;}
+
+            .product-title {margin-bottom:0.5rem;}
           }
         }
       }
@@ -3041,7 +3045,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -3268,7 +3272,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -3495,7 +3499,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -3722,7 +3726,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -3949,7 +3953,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -4358,7 +4362,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                 }
                         }
                         
-                        .product-name {font-size:14px;
+                        .product-title {font-size:14px;
                                        font-weight:bold;
                                        text-align:left;
                                        line-height:1rem;
@@ -4525,7 +4529,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -4749,7 +4753,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -4973,7 +4977,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -5180,7 +5184,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                 }
                         }
                         
-                        .product-name {font-size:14px;
+                        .product-title {font-size:14px;
                                        font-weight:bold;
                                        text-align:left;
                                        line-height:1rem;
@@ -5346,7 +5350,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -5570,7 +5574,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -5794,7 +5798,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
@@ -6018,7 +6022,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                                     }
                                   }
 
-                                  .product-name {font-size:14px;
+                                  .product-title {font-size:14px;
                                                  font-weight:bold;
                                                  line-height:1rem;
                                                  color:var(--gray11);}
