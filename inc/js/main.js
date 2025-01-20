@@ -967,19 +967,20 @@ if(document.querySelector("#single-page")){
     return product;
   }
 
-  async function categoryIdOfProduct(productId){
+  async function loadProducts(){
     const response = await fetch('../admin/pages/products.json');
     if(!response.ok){throw new Error('Failed to load products')}
     const data = await response.json();
-    const product = data.products.find((product) => product.id === productId);
+    return data.products;
+  }
+
+  function categoryIdOfProduct(productId, products){
+    const product = products.find((product) => product.id === productId);
     if(product){return product.catId} else {throw new Error('Failed to load category')}
   }
 
-  async function siblingProductsOfProduct(categoryId, excludeProductId){
-    const response = await fetch('../admin/pages/products.json');
-    if(!response.ok){throw new Error('Failed to load products')}
-    const data = await response.json();
-    const categoryProducts = data.products.filter((product) => product.catId === categoryId && product.id !== excludeProductId);
+  function siblingProductsOfProduct(categoryId, excludeProductId, products){
+    const categoryProducts = products.filter((product) => product.catId === categoryId && product.id !== excludeProductId);
     return categoryProducts;
   }
 
@@ -997,12 +998,8 @@ if(document.querySelector("#single-page")){
     return data.categories.filter(cat => cat.parent_id === category.parent_id && cat.id !== categoryId);
   }
 
-  async function getCategoriesProducts(categoriesIds){
-   const response = await fetch('../admin/pages/products.json');
-   if(!response.ok){throw new Error('Failed to load products')}
-   const data = await response.json();
-
-    return data.products.filter(product => categoriesIds.includes(product.catId));
+  function getCategoriesProducts(categoriesIds, products){
+    return products.filter(product => categoriesIds.includes(product.catId));
   }
 
   async function loadCategories(){
@@ -1050,12 +1047,13 @@ if(document.querySelector("#single-page")){
     try {
 
       const currentProductId = getProductId();
-      const productCategoryId = await categoryIdOfProduct(currentProductId);
-      const siblingProducts = await siblingProductsOfProduct(productCategoryId, currentProductId);
+      const products = await loadProducts();
+      const productCategoryId = categoryIdOfProduct(currentProductId, products);
+      const siblingProducts = siblingProductsOfProduct(productCategoryId, currentProductId, products);
 
       const siblingCategories = await getSiblingCategories(productCategoryId);
       const siblingCategoriesIds = siblingCategories.map((cat) => cat.id);
-      const siblingCategoriesProducts = await getCategoriesProducts(siblingCategoriesIds);
+      const siblingCategoriesProducts = getCategoriesProducts(siblingCategoriesIds, products);
 
       if(siblingProducts.length > 0){
 
@@ -1967,7 +1965,7 @@ if(document.querySelector("#single-page")){
 
   function addToCart(){
 
-    document.querySelector("#single-page .product-container .right-block .b-btn").addEventListener('click', function() {
+    document.querySelector("#single-page .product-container .right-block .add-btn").addEventListener('click', function() {
       const singlepProductContainer = document.querySelector("#single-page .product-container");
 
       const safeTextContent = (selector) => {

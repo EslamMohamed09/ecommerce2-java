@@ -568,12 +568,20 @@ section {padding:2rem 7%;
       width:100%;}
 
 /******************* # BUTTONS ********************/
-.add-btn {font-size:0.9rem;
+.add-btn {display:inline-block;
+          padding:0.7rem 1rem;
+          font-size:1rem;
           font-weight:bold;
-          text-transform:uppercase;
-          color:var(--gray11);
-          border:none;
-          background-color:transparent;}
+          text-align:center;
+          text-transform:capitalize;
+          color:var(--white2);
+          border:1px solid var(--black2);
+          outline:none;
+          background-color:var(--black2);
+          transition:all 0.6s linear;
+          &:hover {color:var(--black2);
+                   background-color:transparent;}
+}
 
 .trans-btn {display:inline-block;
             padding:0.7rem 1rem;
@@ -589,20 +597,6 @@ section {padding:2rem 7%;
 
        &:hover {border:1.5px solid var(--black2);
                 color:var(--white2);
-                background-color:var(--black2);}
-}
-
-.b-btn {display:inline-block;
-        padding:0.7rem 1rem;
-        font-size:1rem;
-        text-transform:capitalize;
-        text-align:center;
-        color:var(--white2);
-        background-color:var(--black2);
-        border:none;
-        outline:none;
-        transition:all 0.6s linear;
-       &:hover {color:var(--white2);
                 background-color:var(--black2);}
 }
 
@@ -1713,8 +1707,8 @@ header {position:fixed;
                                   border-bottom:1px solid var(--gray3);
                                   position:relative;
 
-                                  img {width:60%;
-                                       height:45%;
+                                  img {max-width:80%;
+                                       height:7rem;
                                        object-fit:contain;
                                        transition:all 0.4s linear;
                                        position:absolute;}
@@ -1841,9 +1835,9 @@ header {position:fixed;
                           }
 
                           .product-name {font-size:14px;
-                                          font-weight:bold;
-                                          line-height:1rem;
-                                          color:var(--gray11);}
+                                         font-weight:bold;
+                                         line-height:1rem;
+                                         color:var(--gray11);}
 
                           .ratings {gap:0.1rem;
                               svg {color:var(--yellow10);
@@ -1852,7 +1846,7 @@ header {position:fixed;
 
                           .product-price {flex-wrap:nowrap;
                                           width:fit-content;
-                                          gap:0.7rem;
+                                          gap:1rem;
                                           margin:0;
                                           background-color:transparent;
 
@@ -1999,15 +1993,16 @@ header {position:fixed;
                             font-weight:bold;}
 
             p {color:var(--gray5);
-              font-size:0.95rem;}
+               font-size:0.95rem;}
 
             .ratings {gap:0.1rem;
               svg {color:var(--yellow10);
                   font-size:1.1rem;}
             }
     
-            .price {flex-wrap:nowrap;
-                    width:100%;
+            .price {width:fit-content;
+                    gap:1.5rem;
+                    flex-wrap:nowrap;
                     padding:0 1%;
                     background-color:transparent;
     
@@ -2873,9 +2868,9 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
               .pro-quantity-btn:nth-child(3) {border-left:1px solid var(--gray10);}
             }
 
-            .b-btn {margin-top:0.8rem;
-                    width:60%;
-                    border-radius:2rem;}
+            .add-btn {margin-top:0.8rem;
+                      width:60%;
+                      border-radius:2rem;}
           }
       }
 
