@@ -1717,6 +1717,13 @@ if(document.querySelector("#single-page")){
                 siblingCategoriesProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
               }
       }
+
+      const productImages = document.querySelectorAll('.image-holder img');
+            productImages.forEach(function (img) {
+              const clonedImage = img.cloneNode();
+              removeBackground(clonedImage, '#ffffff');
+              img.parentNode.replaceChild(clonedImage, img);
+            });
     
     } catch (error) {
       console.error('Failed to get products');
