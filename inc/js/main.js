@@ -1043,7 +1043,7 @@ if(document.querySelector("#single-page")){
     }
   }
 
-  async function displayfeaturedProducts(){
+  async function displayFeaturedProducts(){
     try {
 
       const currentProductId = getProductId();
@@ -1723,9 +1723,53 @@ if(document.querySelector("#single-page")){
               img.parentNode.replaceChild(clonedImage, img);
             });
 
-      const product = await loadProduct(getProductId());
+      document.querySelectorAll(".product-item").forEach((item) => {
+        const addToCartBtn = item.querySelector('.add-to-cart-btn');
 
-      addToCartDynamic(product);
+        if(addToCartBtn){
+
+          addToCartBtn.addEventListener('click', async function() {
+
+            const hrefTitle = item.querySelector('.product-title').getAttribute('href');
+
+            if(hrefTitle.includes('=')){ const productId = hrefTitle.split('=')[1];
+          
+              const product = await loadProduct(productId);
+
+              const productBox = {
+                id:product.id,
+                title:product.title,
+                image:product.image[0],
+                brand:product.brand ? product.brand : null,
+                stock:product.instock,
+                oldPrice:product.price,
+                salePrice:product.salePrice,
+                size:product.size ? product.size : null,
+                color:product.color ? product.color : null,
+                quantity:1,
+              }
+
+              const productCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
+
+              const existingProductIndex = productCart.findIndex((item) => item.id === productBox.id);
+
+              if(existingProductIndex > -1) {
+                 productCart[existingProductIndex] = productBox;
+                 alert('product updated to the cart');
+              } else {
+                productCart.push(productBox);
+                alert('product added to the cart');
+              }
+
+              localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productCart));
+            } else {
+              console.error('Invalid product link');
+            }
+
+          });
+
+        }
+      });
     
     } catch (error) {
       console.error('Failed to get products');
@@ -1734,7 +1778,7 @@ if(document.querySelector("#single-page")){
 
   displayParentCategories();
 
-  displayfeaturedProducts();
+  displayFeaturedProducts();
 
 
   function fetchProduct(productId){
@@ -4031,57 +4075,6 @@ async function displayAddToCartPublic(){
 
 displayAddToCartPublic();
 
-
-function addToCartDynamic(product){
-
-  document.querySelectorAll(".product-item").forEach((item) => {
-    const addToCartBtn = item.querySelector('.add-to-cart-btn');
-
-    if(addToCartBtn){
-
-      addToCartBtn.addEventListener('click', function() {
-
-        const hrefTitle = item.querySelector('.product-title').getAttribute('href');
-
-        if(hrefTitle.includes('=')){ const productId = hrefTitle.split('=')[1];
-      
-          const productBox = {
-            id:product.id,
-            title:product.title,
-            image:product.image[0],
-            brand:product.brand ? product.brand : null,
-            stock:product.instock,
-            oldPrice:product.price,
-            salePrice:product.salePrice,
-            size:product.size ? product.size : null,
-            color:product.color ? product.color : null,
-            quantity:1,
-          }
-
-          const productCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
-
-          const existingProductIndex = productCart.findIndex((item) => item.id === productBox.id);
-
-          if(existingProductIndex > -1) {
-              productCart[existingProductIndex] = productBox;
-              alert('product updated to the cart');
-          } else {
-            productCart.push(productBox);
-            alert('product added to the cart');
-          }
-
-          localStorage.setItem('ecommerce2-product-cart', JSON.stringify(productCart));
-        } else {
-          console.error('Invalid product link');
-        }
-
-      });
-
-    }
-
-  });
-
-}
 
 /*** REMOVE BACKGROUND ***/
 function removeBackground(imgElement, targetColor) {
