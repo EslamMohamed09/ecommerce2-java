@@ -297,7 +297,7 @@
        --green-box-shadow:0 0 6px #09995d;
        --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
 
-       --text-shadow:0 0 5px rgb(5, 5, 5);
+       --text-shadow:0 0 2px rgba(5, 5, 5, 0.315);
        --text-shadow2:0 0 4px #fff;
        --text-shadow3:0 0 4px #00ffff9f;
        --text-shadow4:0 0 4px rgb(6, 150, 42);}
@@ -638,8 +638,8 @@ section {padding:2rem 7%;
        text-align:center;
        border-radius:0.2rem;
        color:var(--white2);
-       border:1px solid var(--blue7);
-       background-color:var(--blue7);
+       border:1px solid var(--blue8);
+       background-color:var(--blue8);
        box-shadow:var(--box-shadow5);
        transition:all 0.3s linear;
        &:hover {background-color:transparent;
@@ -1386,7 +1386,9 @@ header {position:fixed;
  # Banner
  ***********
 */
-.banner-section {padding:7rem 7%;
+.banner-section {width:100%;
+                 min-height:65vh;
+                 padding:7rem 7%;
                  background:radial-gradient(var(--gray4), var(--gray7));
                  position:relative;
 
@@ -1395,11 +1397,11 @@ header {position:fixed;
 
       .left-block {flex:1 1 25rem;
 
-        .semi-title {font-size:0.9rem;
+        .semi-title {font-size:1rem;
                      color:var(--red7);
                      font-weight:550;
                      text-transform:capitalize;
-                     text-shadow:var(--text-shadow3);
+                     text-shadow:var(--text-shadow);
                   svg {margin-right:0.2rem;}
         }
 
@@ -1536,8 +1538,8 @@ header {position:fixed;
            cursor:pointer;
            text-align:center;
            color:var(--white);
-           border:1px solid var(--gray11);
-           background-color:var(--gray11);
+           border:1px solid var(--gray12);
+           background-color:var(--gray12);
            z-index:100;
            opacity:0;
            transition:all 0.3s linear;}

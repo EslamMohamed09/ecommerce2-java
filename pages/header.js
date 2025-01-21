@@ -12,8 +12,8 @@ const headerContent = `
     <div class="right-block">
       <ul class="d-flex-r-st-c">
         <li><a href="#">my account</a></li>
-        <li><a href="pages/cart.html">my cart</a></li>
-        <li><a href="pages/checkout.html">checkout</a></li>
+        <li><a href="/pages/cart.html">my cart</a></li>
+        <li><a href="/pages/checkout.html">checkout</a></li>
         <li><button id="login-btn">login</button></li>
         <button id="open-mHeader"><i class="fas fa-bars"></i></button>
       </ul>
