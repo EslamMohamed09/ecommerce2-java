@@ -467,19 +467,32 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
             const productItem = document.createElement('div');
                   productItem.className = `product-item ${product.off}`;
 
-                  const description = product.description
-                                    ? product.description.slice(0, 17)
-                                    : product.aboutThisItem
-                                    ? product.aboutThisItem.slice(0, 17)
-                                    : product.color;
+                  let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                  const image1 = product.image?.[0] ?? 'default-image.jpg';
-                  const image2 = product.image?.[1] ?? '';
+                  let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+
+                  let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
+                      product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
+
+                  let descriptionHtml = filterDescription ? `<p>${filterDescription.split(" ").slice(0,4).join(" ")}...</p>` : '';
+
+                  let ratingHtml = '';
+                  if(product.rating){
+                    for (let i=1; i<=5; i++) {
+                        if (i <= product.rating) {
+                            ratingHtml += `<i class="fas fa-star"></i>`;
+                        } else if (i - 0.5 === product.rating) {
+                            ratingHtml += `<i class="fas fa-star-half-alt"></i>`;
+                        } else {
+                            ratingHtml += `<i class="far fa-star"></i>`;
+                        }
+                    }
+                    ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
+                  }
 
                   productItem.innerHTML = `
                       <div class="image-holder">
-                        <img src="${image1}" alt="Product Image">
-                        ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
+                        ${imageHtml}
                       </div>
                       <div class="icons">
                         <a href="#"><i class="far fa-heart"></i></a>
@@ -487,12 +500,10 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
                       </div>
                       <div class="product-content d-flex-c-bt-st">
                         <a href="pages/single.html?id=${product.id}" class="product-title">
-                          ${product.title.split(' ').slice(0, 3).join(' ')}
+                          ${truncateTitle}
                         </a>
-                        <p>${description}...</p>
-                        <div class="ratings d-flex-r-st-st">
-                          ${generateStarRating(product.rating)}
-                        </div>
+                        ${descriptionHtml}
+                        ${ratingHtml}
                         <div class="price d-flex-r-bt-c">
                           <strong>${product.price}</strong>
                           <strong>${product.salePrice}</strong>
@@ -583,7 +594,6 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
               }
               ratingHtml = `<div class="ratings d-flex-r-st-st">${ratingHtml}</div>`
             }
-
 
             productItem.innerHTML = `
               <div class="image-holder">
