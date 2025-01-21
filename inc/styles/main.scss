@@ -6529,17 +6529,19 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                   padding:0.7rem 0.9rem;
                   border:1px solid var(--gray4);
                   cursor:pointer;
-            svg {font-size:1rem;}
+
+              svg {font-size:1rem;}
+
+              &:first-child {border-top-left-radius:0.3rem;
+                             border-top-right-radius:0.3rem;}
+
+              &:last-child {border-bottom-left-radius:0.3rem;
+                            border-bottom-right-radius:0.3rem;
+                            border-top:none;}
+
+              &.selectedcheck {background-color:var(--lightblue1);}
           }
-
-            .check:first-child {border-top-left-radius:0.3rem;
-                                border-top-right-radius:0.3rem;}
-
-            .check:last-child {border-bottom-left-radius:0.3rem;
-                               border-bottom-right-radius:0.3rem;
-                               border-top:none;}
         }
-        .selectedcheck {background-color:var(--blue1);}
       }
 
       .shipping-block {padding:0;
