@@ -3109,6 +3109,19 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                     .arrow-left {left:1.2rem;}
                      
                     .arrow-right {right:-0.8rem;}
+
+                    @media(max-width:466px){
+                      .arrow-left,
+                      .arrow-right {top:6rem;
+                                    width:2.5rem;
+                                    height:3rem;
+                                    font-size:1.2rem;}
+
+                      .arrow-left {left:unset !important;
+                                   right:2.6rem;}
+                     
+                      .arrow-right {right:-0.9rem;}
+                    }
               }
 
               #sliderdots {position:absolute;

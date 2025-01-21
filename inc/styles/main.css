@@ -3483,6 +3483,22 @@ footer .bottom-footer p {
 #single-page .featured-products-container .sibling-products-block .sibling-products-container .arrows .arrow-right {
   right: -0.8rem;
 }
+@media (max-width: 466px) {
+  #single-page .featured-products-container .sibling-products-block .sibling-products-container .arrows .arrow-left,
+  #single-page .featured-products-container .sibling-products-block .sibling-products-container .arrows .arrow-right {
+    top: 6rem;
+    width: 2.5rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  #single-page .featured-products-container .sibling-products-block .sibling-products-container .arrows .arrow-left {
+    left: unset !important;
+    right: 2.6rem;
+  }
+  #single-page .featured-products-container .sibling-products-block .sibling-products-container .arrows .arrow-right {
+    right: -0.9rem;
+  }
+}
 #single-page .featured-products-container .sibling-products-block .sibling-products-container #sliderdots {
   position: absolute;
   top: 4rem;
