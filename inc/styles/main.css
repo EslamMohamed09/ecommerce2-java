@@ -638,6 +638,24 @@ section {
 }
 
 /******************* # BUTTONS ********************/
+.black-btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--white2);
+  border: 1px solid var(--black2);
+  outline: none;
+  background-color: var(--black2);
+  transition: all 0.6s linear;
+}
+.black-btn:hover {
+  color: var(--black2);
+  background-color: transparent;
+}
+
 .add-btn {
   display: inline-block;
   padding: 0.7rem 1rem;
@@ -694,7 +712,7 @@ section {
 
 .btn2 {
   display: inline-block;
-  padding: 0.6rem 1rem !important;
+  padding: 0.7rem 1rem !important;
   margin: 0;
   font-size: 14px;
   text-transform: capitalize;
@@ -3287,7 +3305,7 @@ footer .bottom-footer p {
   }
 }
 @media (max-width: 510px) {
-  #single-page .product-container .b-btn {
+  #single-page .product-container .add-to-cart-btn {
     width: 100%;
   }
 }
