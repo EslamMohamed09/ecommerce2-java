@@ -2249,21 +2249,6 @@ if(document.querySelector(".category-page")){
           const bestSellerCategoriesProducts = categoriesProducts.filter(product => product.bought > 30);
 
           if(bestSellerCategoriesProducts.length > 0){
-            const bestSellerCategoriesProductsElement = document.createElement('div'); // div element
-                  bestSellerCategoriesProductsElement.classList.add('best-seller-categories-products');
-            const bestSellerCategoriesProductsContainer = document.createElement('div');
-                  bestSellerCategoriesProductsContainer.classList.add('products-container');
-            const bestSellerCategoriesProductsWrapper = document.createElement('div');
-                  bestSellerCategoriesProductsWrapper.classList.add('slider-wrapper');
-
-            const bestSellerCategoriesProductsHeading = document.createElement('div'); // block title
-                  bestSellerCategoriesProductsHeading.classList.add('block-heading');
-            const bestSellerCategoriesProductsTitle = document.createElement('h3');
-                  bestSellerCategoriesProductsTitle.classList.add('block-heading-title');
-
-                  bestSellerCategoriesProductsTitle.textContent = 'best seller';
-                  bestSellerCategoriesProductsHeading.appendChild(bestSellerCategoriesProductsTitle);
-                  bestSellerCategoriesProductsContainer.appendChild(bestSellerCategoriesProductsHeading);
 
             let bestSellerCategoriesProductsHtml = bestSellerCategoriesProducts.map((product) => {
 
@@ -2343,6 +2328,23 @@ if(document.querySelector(".category-page")){
                 </div>`
             }).join('');
 
+            const bestSellerCategoriesProductsElement = document.createElement('div'); // div element
+                  bestSellerCategoriesProductsElement.classList.add('best-seller-categories-products');
+            const bestSellerCategoriesProductsContainer = document.createElement('div');
+                  bestSellerCategoriesProductsContainer.classList.add('products-container');
+            const bestSellerCategoriesProductsWrapper = document.createElement('div');
+                  bestSellerCategoriesProductsWrapper.classList.add('slider-wrapper');
+ 
+            const bestSellerCategoriesProductsHeading = document.createElement('div'); // block title
+                  bestSellerCategoriesProductsHeading.classList.add('block-heading');
+            const bestSellerCategoriesProductsTitle = document.createElement('h3');
+                  bestSellerCategoriesProductsTitle.classList.add('block-heading-title');
+
+                  bestSellerCategoriesProductsTitle.textContent = 'best seller';
+                  bestSellerCategoriesProductsHeading.appendChild(bestSellerCategoriesProductsTitle);
+                  bestSellerCategoriesProductsContainer.appendChild(bestSellerCategoriesProductsHeading);
+
+
             bestSellerCategoriesProductsWrapper.innerHTML = bestSellerCategoriesProductsHtml;
 
             bestSellerCategoriesProductsContainer.appendChild(bestSellerCategoriesProductsWrapper);
@@ -2376,21 +2378,6 @@ if(document.querySelector(".category-page")){
           const topRatedCategoriesProducts = categoriesProducts.filter(product => product.rating > 4);
 
           if(topRatedCategoriesProducts.length > 0){
-            const topRatedCategoriesProductsElement = document.createElement('div');
-                  topRatedCategoriesProductsElement.classList.add('top-rated-categories-products');
-            const topRatedCategoriesProductsContainer = document.createElement('div');
-                  topRatedCategoriesProductsContainer.classList.add('products-container');
-            const topRatedCategoriesProductsWrapper = document.createElement('div');
-                  topRatedCategoriesProductsWrapper.classList.add('slider-wrapper');
-
-            const topRatedCategoriesProductsHeading = document.createElement('div'); // block title
-                  topRatedCategoriesProductsHeading.classList.add('block-heading');
-            const topRatedCategoriesProductsTitle = document.createElement('h3');
-                  topRatedCategoriesProductsTitle.classList.add('block-heading-title');
-
-                  topRatedCategoriesProductsTitle.textContent = 'top rated';
-                  topRatedCategoriesProductsHeading.appendChild(topRatedCategoriesProductsTitle);
-                  topRatedCategoriesProductsContainer.appendChild(topRatedCategoriesProductsHeading);
 
             let topRatedCategoriesProductsHtml = topRatedCategoriesProducts.map((product) => {
 
@@ -2470,6 +2457,23 @@ if(document.querySelector(".category-page")){
                 </div>`
             }).join('');
 
+            const topRatedCategoriesProductsElement = document.createElement('div');
+                  topRatedCategoriesProductsElement.classList.add('top-rated-categories-products');
+            const topRatedCategoriesProductsContainer = document.createElement('div');
+                  topRatedCategoriesProductsContainer.classList.add('products-container');
+            const topRatedCategoriesProductsWrapper = document.createElement('div');
+                  topRatedCategoriesProductsWrapper.classList.add('slider-wrapper');
+
+            const topRatedCategoriesProductsHeading = document.createElement('div'); // block title
+                  topRatedCategoriesProductsHeading.classList.add('block-heading');
+            const topRatedCategoriesProductsTitle = document.createElement('h3');
+                  topRatedCategoriesProductsTitle.classList.add('block-heading-title');
+
+                  topRatedCategoriesProductsTitle.textContent = 'top rated';
+                  topRatedCategoriesProductsHeading.appendChild(topRatedCategoriesProductsTitle);
+                  topRatedCategoriesProductsContainer.appendChild(topRatedCategoriesProductsHeading);
+
+
             topRatedCategoriesProductsWrapper.innerHTML = topRatedCategoriesProductsHtml;
             topRatedCategoriesProductsContainer.appendChild(topRatedCategoriesProductsWrapper);
             topRatedCategoriesProductsElement.appendChild(topRatedCategoriesProductsContainer);
@@ -2501,21 +2505,6 @@ if(document.querySelector(".category-page")){
           const hotDealsCategoriesProducts = categoriesProducts.filter(product => parseInt(product.off) > 20);
 
           if(hotDealsCategoriesProducts.length > 0){
-            const hotDealsCategoriesProductsElement = document.createElement('div');
-                  hotDealsCategoriesProductsElement.classList.add('hot-deals-categories-products');
-            const hotDealsCategoriesProductsContainer = document.createElement('div');
-                  hotDealsCategoriesProductsContainer.classList.add('products-container');
-            const hotDealsCategoriesProductsWrapper = document.createElement('div');
-                  hotDealsCategoriesProductsWrapper.classList.add('slider-wrapper');
-
-            const hotDealsCategoriesProductsHeading = document.createElement('div'); // block title
-                  hotDealsCategoriesProductsHeading.classList.add('block-heading');
-            const hotDealsCategoriesProductsTitle = document.createElement('h3');
-                  hotDealsCategoriesProductsTitle.classList.add('block-heading-title');
-
-                  hotDealsCategoriesProductsTitle.textContent = 'hot deals';
-                  hotDealsCategoriesProductsHeading.appendChild(hotDealsCategoriesProductsTitle);
-                  hotDealsCategoriesProductsContainer.appendChild(hotDealsCategoriesProductsHeading);
 
             let hotDealsCategoriesProductsHtml = hotDealsCategoriesProducts.map((product) => {
 
@@ -2594,6 +2583,23 @@ if(document.querySelector(".category-page")){
                           </div>
                 </div>`
             }).join('');
+
+            const hotDealsCategoriesProductsElement = document.createElement('div');
+                  hotDealsCategoriesProductsElement.classList.add('hot-deals-categories-products');
+            const hotDealsCategoriesProductsContainer = document.createElement('div');
+                  hotDealsCategoriesProductsContainer.classList.add('products-container');
+            const hotDealsCategoriesProductsWrapper = document.createElement('div');
+                  hotDealsCategoriesProductsWrapper.classList.add('slider-wrapper');
+
+            const hotDealsCategoriesProductsHeading = document.createElement('div'); // block title
+                  hotDealsCategoriesProductsHeading.classList.add('block-heading');
+            const hotDealsCategoriesProductsTitle = document.createElement('h3');
+                  hotDealsCategoriesProductsTitle.classList.add('block-heading-title');
+
+                  hotDealsCategoriesProductsTitle.textContent = 'hot deals';
+                  hotDealsCategoriesProductsHeading.appendChild(hotDealsCategoriesProductsTitle);
+                  hotDealsCategoriesProductsContainer.appendChild(hotDealsCategoriesProductsHeading);
+
 
             hotDealsCategoriesProductsWrapper.innerHTML = hotDealsCategoriesProductsHtml;
 
@@ -2737,24 +2743,6 @@ if(document.querySelector(".category-page")){
           const topRatedThisCategoryProducts = categoryProducts.filter(product => product.rating > 4);
 
           if(topRatedThisCategoryProducts.length > 0){
-            const topRatedThisCategoryProductsElement = document.createElement('div');
-                  topRatedThisCategoryProductsElement.classList.add('top-rated-this-category-products');
-
-            const topRatedThisCategoryProductsContainer = document.createElement('div');
-                  topRatedThisCategoryProductsContainer.classList.add('products-container');
-
-            const topRatedThisCategoryProductsWrapper = document.createElement('div');
-                  topRatedThisCategoryProductsWrapper.classList.add('slider-wrapper');
-
-            const topRatedThisCategoryProductsHeading = document.createElement('div'); // block title
-                  topRatedThisCategoryProductsHeading.classList.add('block-heading');
-
-            const topRatedThisCategoryProductsTitle = document.createElement('h3');
-                  topRatedThisCategoryProductsTitle.classList.add('block-heading-title');
-
-                  topRatedThisCategoryProductsTitle.textContent = 'top rated';
-                  topRatedThisCategoryProductsHeading.appendChild(topRatedThisCategoryProductsTitle);
-                  topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsHeading);
 
             let topRatedThisCategoryProductsHtml = topRatedThisCategoryProducts.map((product) => {
 
@@ -2834,6 +2822,26 @@ if(document.querySelector(".category-page")){
                 </div>`
             }).join('');
 
+            const topRatedThisCategoryProductsElement = document.createElement('div');
+                  topRatedThisCategoryProductsElement.classList.add('top-rated-this-category-products');
+
+            const topRatedThisCategoryProductsContainer = document.createElement('div');
+                  topRatedThisCategoryProductsContainer.classList.add('products-container');
+
+            const topRatedThisCategoryProductsWrapper = document.createElement('div');
+                  topRatedThisCategoryProductsWrapper.classList.add('slider-wrapper');
+
+            const topRatedThisCategoryProductsHeading = document.createElement('div'); // block title
+                  topRatedThisCategoryProductsHeading.classList.add('block-heading');
+
+            const topRatedThisCategoryProductsTitle = document.createElement('h3');
+                  topRatedThisCategoryProductsTitle.classList.add('block-heading-title');
+
+                  topRatedThisCategoryProductsTitle.textContent = 'top rated';
+                  topRatedThisCategoryProductsHeading.appendChild(topRatedThisCategoryProductsTitle);
+                  topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsHeading);
+
+
             topRatedThisCategoryProductsWrapper.innerHTML = topRatedThisCategoryProductsHtml;
             topRatedThisCategoryProductsContainer.appendChild(topRatedThisCategoryProductsWrapper);
             topRatedThisCategoryProductsElement.appendChild(topRatedThisCategoryProductsContainer);
@@ -2865,21 +2873,6 @@ if(document.querySelector(".category-page")){
           const bestSellerThisCategoryProducts = categoryProducts.filter(product => product.bought > 30);
 
           if(bestSellerThisCategoryProducts.length > 0){
-            const bestSellerThisCategoryProductsElement = document.createElement('div');
-                  bestSellerThisCategoryProductsElement.classList.add('best-seller-this-category-products');
-            const bestSellerThisCategoryProductsContainer = document.createElement('div');
-                  bestSellerThisCategoryProductsContainer.classList.add('products-container');
-            const bestSellerThisCategoryProductsWrapper = document.createElement('div');
-                  bestSellerThisCategoryProductsWrapper.classList.add('slider-wrapper');
-
-            const bestSellerThisCategoryProductsHeading = document.createElement('div'); // block title
-                  bestSellerThisCategoryProductsHeading.classList.add('block-heading');
-            const bestSellerThisCategoryProductsTitle = document.createElement('h3');
-                  bestSellerThisCategoryProductsTitle.classList.add('block-heading-title');
-
-                  bestSellerThisCategoryProductsTitle.textContent = 'best seller';
-                  bestSellerThisCategoryProductsHeading.appendChild(bestSellerThisCategoryProductsTitle);
-                  bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsHeading);
 
             let bestSellerThisCategoryProductsHtml = bestSellerThisCategoryProducts.map((product) => {
 
@@ -2958,6 +2951,23 @@ if(document.querySelector(".category-page")){
                 </div>`
             }).join('');
 
+            const bestSellerThisCategoryProductsElement = document.createElement('div');
+                  bestSellerThisCategoryProductsElement.classList.add('best-seller-this-category-products');
+            const bestSellerThisCategoryProductsContainer = document.createElement('div');
+                  bestSellerThisCategoryProductsContainer.classList.add('products-container');
+            const bestSellerThisCategoryProductsWrapper = document.createElement('div');
+                  bestSellerThisCategoryProductsWrapper.classList.add('slider-wrapper');
+
+            const bestSellerThisCategoryProductsHeading = document.createElement('div'); // block title
+                  bestSellerThisCategoryProductsHeading.classList.add('block-heading');
+            const bestSellerThisCategoryProductsTitle = document.createElement('h3');
+                  bestSellerThisCategoryProductsTitle.classList.add('block-heading-title');
+
+                  bestSellerThisCategoryProductsTitle.textContent = 'best seller';
+                  bestSellerThisCategoryProductsHeading.appendChild(bestSellerThisCategoryProductsTitle);
+                  bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsHeading);
+
+
             bestSellerThisCategoryProductsWrapper.innerHTML = bestSellerThisCategoryProductsHtml;
 
             bestSellerThisCategoryProductsContainer.appendChild(bestSellerThisCategoryProductsWrapper);
@@ -2991,21 +3001,6 @@ if(document.querySelector(".category-page")){
           const hotDealsThisCategoryProducts = categoryProducts.filter(product => parseInt(product.off) > 20);
 
           if(hotDealsThisCategoryProducts.length > 0){
-            const hotDealsThisCategoryProductsElement = document.createElement('div');
-                  hotDealsThisCategoryProductsElement.classList.add('hot-deals-this-category-products');
-            const hotDealsThisCategoryProductsContainer = document.createElement('div');
-                  hotDealsThisCategoryProductsContainer.classList.add('products-container');
-            const hotDealsThisCategoryProductsWrapper = document.createElement('div');
-                  hotDealsThisCategoryProductsWrapper.classList.add('slider-wrapper');
-
-            const hotDealsThisCategoryProductsHeading = document.createElement('div'); // block title
-                  hotDealsThisCategoryProductsHeading.classList.add('block-heading');
-            const hotDealsThisCategoryProductsTitle = document.createElement('h3');
-                  hotDealsThisCategoryProductsTitle.classList.add('block-heading-title');
-
-                  hotDealsThisCategoryProductsTitle.textContent = 'hot deals';
-                  hotDealsThisCategoryProductsHeading.appendChild(hotDealsThisCategoryProductsTitle);
-                  hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsHeading);
 
             let hotDealsThisCategoryProductsHtml = hotDealsThisCategoryProducts.map((product) => {
 
@@ -3084,12 +3079,25 @@ if(document.querySelector(".category-page")){
                 </div>`
             }).join('');
 
+            const hotDealsThisCategoryProductsElement = document.createElement('div');
+                  hotDealsThisCategoryProductsElement.classList.add('hot-deals-this-category-products');
+            const hotDealsThisCategoryProductsContainer = document.createElement('div');
+                  hotDealsThisCategoryProductsContainer.classList.add('products-container');
+            const hotDealsThisCategoryProductsWrapper = document.createElement('div');
+                  hotDealsThisCategoryProductsWrapper.classList.add('slider-wrapper');
+
+            const hotDealsThisCategoryProductsHeading = document.createElement('div'); // block title
+                  hotDealsThisCategoryProductsHeading.classList.add('block-heading');
+            const hotDealsThisCategoryProductsTitle = document.createElement('h3');
+                  hotDealsThisCategoryProductsTitle.classList.add('block-heading-title');
+
+                  hotDealsThisCategoryProductsTitle.textContent = 'hot deals';
+                  hotDealsThisCategoryProductsHeading.appendChild(hotDealsThisCategoryProductsTitle);
+                  hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsHeading);
+
             hotDealsThisCategoryProductsWrapper.innerHTML = hotDealsThisCategoryProductsHtml;
-
             hotDealsThisCategoryProductsContainer.appendChild(hotDealsThisCategoryProductsWrapper);
-
             hotDealsThisCategoryProductsElement.appendChild(hotDealsThisCategoryProductsContainer);
-
             document.querySelector(".category-page .right-block").appendChild(hotDealsThisCategoryProductsElement);
 
             if(hotDealsThisCategoryProductsWrapper.children.length > 5){
@@ -3120,21 +3128,6 @@ if(document.querySelector(".category-page")){
           const similarProductsThisCategoryProducts = getCategoriesProducts(siblingCategoriesIds, products);
         
           if(similarProductsThisCategoryProducts.length > 0){
-            const similarProductsThisCategoryProductsElement = document.createElement('div');
-                  similarProductsThisCategoryProductsElement.classList.add('similar-items-this-category-products');
-            const similarProductsThisCategoryProductsContainer = document.createElement('div');
-                  similarProductsThisCategoryProductsContainer.classList.add('products-container');
-            const similarProductsThisCategoryProductsWrapper = document.createElement('div');
-                  similarProductsThisCategoryProductsWrapper.classList.add('slider-wrapper');
-
-            const similarProductsThisCategoryProductsHeading = document.createElement('div'); // block title
-                  similarProductsThisCategoryProductsHeading.classList.add('block-heading');
-            const similarProductsThisCategoryProductsTitle = document.createElement('h3');
-                  similarProductsThisCategoryProductsTitle.classList.add('block-heading-title');
-
-                  similarProductsThisCategoryProductsTitle.textContent = 'similar items';
-                  similarProductsThisCategoryProductsHeading.appendChild(similarProductsThisCategoryProductsTitle);
-                  similarProductsThisCategoryProductsContainer.appendChild(similarProductsThisCategoryProductsHeading);
 
             let similarProductsThisCategoryProductsHtml = similarProductsThisCategoryProducts.map((product) => {
 
@@ -3214,10 +3207,25 @@ if(document.querySelector(".category-page")){
                 </div>`
             }).join('');
 
+            const similarProductsThisCategoryProductsElement = document.createElement('div');
+                  similarProductsThisCategoryProductsElement.classList.add('similar-items-this-category-products');
+            const similarProductsThisCategoryProductsContainer = document.createElement('div');
+                  similarProductsThisCategoryProductsContainer.classList.add('products-container');
+            const similarProductsThisCategoryProductsWrapper = document.createElement('div');
+                  similarProductsThisCategoryProductsWrapper.classList.add('slider-wrapper');
+
+            const similarProductsThisCategoryProductsHeading = document.createElement('div'); // block title
+                  similarProductsThisCategoryProductsHeading.classList.add('block-heading');
+            const similarProductsThisCategoryProductsTitle = document.createElement('h3');
+                  similarProductsThisCategoryProductsTitle.classList.add('block-heading-title');
+
+                  similarProductsThisCategoryProductsTitle.textContent = 'similar items';
+                  similarProductsThisCategoryProductsHeading.appendChild(similarProductsThisCategoryProductsTitle);
+                  similarProductsThisCategoryProductsContainer.appendChild(similarProductsThisCategoryProductsHeading);
+
+
             similarProductsThisCategoryProductsWrapper.innerHTML = similarProductsThisCategoryProductsHtml;
-
             similarProductsThisCategoryProductsContainer.appendChild(similarProductsThisCategoryProductsWrapper);
-
             similarProductsThisCategoryProductsElement.appendChild(similarProductsThisCategoryProductsContainer);
 
             document.querySelector(".category-page .right-block").appendChild(similarProductsThisCategoryProductsElement);
@@ -3225,7 +3233,6 @@ if(document.querySelector(".category-page")){
             if(similarProductsThisCategoryProductsWrapper.children.length > 5){
               
                similarProductsThisCategoryProductsWrapper.style.display = 'flex';
-
                similarProductsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                            <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                            <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
