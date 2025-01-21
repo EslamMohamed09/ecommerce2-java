@@ -23,17 +23,17 @@ const headerContent = `
   <div id="main-header" class="main-header">
 
     <div class="middle-nav d-flex-r-bt-c">
-      <h2 class="web-title"><a href="index.html">shopping</a></h2>
+      <h2 class="web-title"><a href="/index.html">shopping</a></h2>
       <form class="search-form d-flex-r-bt-c">
         <input type="search" placeholder="search">
         <button class="search-btn"><i class="fas fa-search"></i></button>
       </form>
       <div class="buttons d-flex-r-st-c">
-        <a href="#" class="service-button like-icon d-flex-r-c-c">
+        <a href="/pages/favourite.html" class="service-button like-icon d-flex-r-c-c">
           <i class="far fa-heart"></i>
           <div class="value"><span>84</span></div>
         </a>
-        <a href="cart.html" class="service-button cart-icon d-flex-r-c-c">
+        <a href="/pages/cart.html" class="service-button cart-icon d-flex-r-c-c">
           <i class="fas fa-shopping-cart"></i>
           <div class="value"><span></span></div>
         </a>
@@ -47,10 +47,10 @@ const headerContent = `
     <div class="bottom-nav">
       <nav>
         <ul class="d-flex-r-st-c">
-          <li><a href="#">home</a></li>
-          <li><a href="#">electronics</a></li>
-          <li><a href="#">watches</a></li>
-          <li><a href="#">shoes</a></li>
+          <li><a href="/pages/category.html?id=1" target="_blank">electronics</a></li>
+          <li><a href="/pages/category.html?id=2" target="_blank">laptops</a></li>
+          <li><a href="/pages/category.html?id=30" target="_blank">watches</a></li>
+          <li><a href="/pages/category.html?id=66" target="_blank">shoes</a></li>
         </ul>
       </nav>
     </div>

@@ -2068,7 +2068,7 @@ if(document.querySelector("#single-page")){
   }
 
 }
-
+console.log(window.location.pathname)
 /*
  ===========================
  ###### CATEGORY PAGE ######
