@@ -66,6 +66,7 @@ function loadHtml(selector, htmlContent, type){
   document.querySelector(selector).innerHTML = htmlContent;
 
   if(type === "header"){document.dispatchEvent(new Event("headerLoaded"))}
+  if(type === "footer"){document.dispatchEvent(new Event("footerLoaded"))}
 }
 
 /*** SCROLL HEADER ***/
@@ -936,6 +937,13 @@ function infiniteScrollSlider(options) {
 if(document.querySelector('.brand-section')){
   infiniteScrollSlider({section:'.brand-section', containerSelector:'.brand-section .slider-wrapper'});
 }
+
+/* 
+ ################
+ #### FOOTER ####
+ ################
+*/
+loadHtml('footer', footerContent, 'footer');
 
 /* 
  ##########################
