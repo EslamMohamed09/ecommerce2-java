@@ -2175,7 +2175,7 @@ header .login-drawer.openingLoginDrawer {
   width: 100%;
   height: 2px;
   position: absolute;
-  top: 1.9rem;
+  top: 1.95rem;
   left: 0;
   background-color: var(--yellow9);
 }
@@ -2184,26 +2184,36 @@ header .login-drawer.openingLoginDrawer {
   width: 0;
   height: 0;
   position: absolute;
-  top: 1.9rem;
+  top: 1.95rem;
   left: 50%;
   transform: translateX(-50%);
   border-width: 0.6rem;
   border-style: solid;
   border-color: var(--yellow9) transparent transparent transparent;
 }
-.offers-section .side-block .inner-col {
+.offers-section .side-block {
+  height: fit-content !important;
+  padding: 0;
+}
+.offers-section .side-block .products-container {
+  height: fit-content !important;
   padding: 0;
   padding-top: 3rem;
   background-color: var(--white);
   box-shadow: var(--box-shadow7);
   position: relative;
 }
-.offers-section .side-block .inner-col .offersblock .product-item {
+.offers-section .side-block .products-container .offersblock {
+  height: fit-content !important;
+  padding: 0 !important;
+}
+.offers-section .side-block .products-container .offersblock .product-item {
+  height: fit-content;
   margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .image {
+.offers-section .side-block .products-container .offersblock .product-item .image-holder {
   width: 90%;
   margin: auto;
   display: flex;
@@ -2214,27 +2224,26 @@ header .login-drawer.openingLoginDrawer {
   transition: all 0.3s linear;
   position: relative;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .image img {
+.offers-section .side-block .products-container .offersblock .product-item .image-holder img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 50%;
   object-fit: contain;
   transition: all 1s linear;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .image img:last-child:not(:only-child) {
+.offers-section .side-block .products-container .offersblock .product-item .image-holder img:last-child:not(:only-child) {
   visibility: hidden;
   opacity: 0;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .image:hover img:first-child {
+.offers-section .side-block .products-container .offersblock .product-item .image-holder:hover img:first-child {
   visibility: hidden;
   opacity: 0;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .image:hover img:last-child {
+.offers-section .side-block .products-container .offersblock .product-item .image-holder:hover img:last-child {
   visibility: visible;
   opacity: 1;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .icons {
+.offers-section .side-block .products-container .offersblock .product-item .icons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2243,57 +2252,57 @@ header .login-drawer.openingLoginDrawer {
   height: 5rem;
   position: absolute;
   top: 1rem;
-  right: 0.3rem;
+  right: 0.1rem;
   background-color: transparent;
   transition: all 0.3s linear;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .icons svg {
+.offers-section .side-block .products-container .offersblock .product-item .icons svg {
   font-size: 1.1rem;
   color: var(--gray11);
   border: none;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .icons svg:hover {
+.offers-section .side-block .products-container .offersblock .product-item .icons svg:hover {
   color: var(--primary);
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content {
+.offers-section .side-block .products-container .offersblock .product-item .product-content {
   width: 100%;
   gap: 0.5rem;
   padding: 0 0.5rem;
   background-color: transparent;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content .product-title {
-  text-align: center;
+.offers-section .side-block .products-container .offersblock .product-item .product-content .product-title {
+  text-align: left;
   color: var(--gray11);
   font-weight: bold;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content p {
+.offers-section .side-block .products-container .offersblock .product-item .product-content p {
   color: var(--gray5);
   font-size: 0.95rem;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content .ratings {
+.offers-section .side-block .products-container .offersblock .product-item .product-content .ratings {
   gap: 0.1rem;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content .ratings svg {
+.offers-section .side-block .products-container .offersblock .product-item .product-content .ratings svg {
   color: var(--yellow10);
   font-size: 1.1rem;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content .price {
+.offers-section .side-block .products-container .offersblock .product-item .product-content .price {
   width: fit-content;
   gap: 1.5rem;
   flex-wrap: nowrap;
   padding: 0 1%;
   background-color: transparent;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content .price strong:first-child {
+.offers-section .side-block .products-container .offersblock .product-item .product-content .price strong:first-child {
   font-size: 1rem;
   color: var(--gray5);
   text-decoration: line-through !important;
 }
-.offers-section .side-block .inner-col .offersblock .product-item .product-content .price strong:last-child {
+.offers-section .side-block .products-container .offersblock .product-item .product-content .price strong:last-child {
   font-size: 1.1rem;
   color: var(--red9);
 }
-.offers-section .side-block .inner-col .arrows {
+.offers-section .side-block .products-container .arrows {
   position: absolute;
   top: 0;
   right: -0.6rem;
@@ -2306,10 +2315,10 @@ header .login-drawer.openingLoginDrawer {
   align-items: center;
   gap: 1.2rem;
 }
-.offers-section .side-block .inner-col .arrows .prev-btn,
-.offers-section .side-block .inner-col .arrows .next-btn {
+.offers-section .side-block .products-container .arrows .prev-btn,
+.offers-section .side-block .products-container .arrows .next-btn {
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0.85rem 0.8rem 1rem !important;
   width: 1.8rem;
   height: 100% !important;
   background-color: var(--blue5);
@@ -2322,23 +2331,50 @@ header .login-drawer.openingLoginDrawer {
   border: 0;
   outline: 0;
 }
-.offers-section .side-block .inner-col .arrows .prev-btn svg,
-.offers-section .side-block .inner-col .arrows .next-btn svg {
-  font-size: 1.5rem;
+.offers-section .side-block .products-container .arrows .prev-btn svg,
+.offers-section .side-block .products-container .arrows .next-btn svg {
+  font-size: 1.3rem;
   margin: 0 !important;
   padding: 0 !important;
   line-height: 0;
 }
-.offers-section .row .left-block .inner-col .offersblock .product-item .image {
+@media (min-width: 576px) {
+  .offers-section .side-block:first-child {
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .offers-section .side-block:first-child {
+    margin-bottom: 2.5rem;
+  }
+}
+.offers-section .row {
+  padding: 0;
+}
+.offers-section .row .left-block .products-container .offersblock .product-item {
+  margin-top: 3rem;
+}
+.offers-section .row .left-block .products-container .offersblock .product-item .image-holder {
   height: 20rem;
 }
-.offers-section .row .right-block .inner-col .offersblock .items {
+.offers-section .row .left-block .products-container .offersblock .product-item .image-holder img {
+  max-width: 70%;
+  height: 19rem;
+}
+.offers-section .row .right-block .products-container .offersblock .items {
+  height: fit-content !important;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(163px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(153px, 1fr));
+  justify-content: start;
+  align-content: start;
   gap: 0.8rem;
 }
-.offers-section .row .right-block .inner-col .offersblock .items .product-item .image {
+.offers-section .row .right-block .products-container .offersblock .items .product-item .image-holder {
   height: 10rem;
+}
+.offers-section .row .right-block .products-container .offersblock .items .product-item .image-holder img {
+  max-width: 80%;
+  height: 7rem;
 }
 @media (max-width: 768px) {
   .offers-section .left-block {

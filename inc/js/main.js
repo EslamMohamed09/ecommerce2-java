@@ -477,7 +477,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
                   const image2 = product.image?.[1] ?? '';
 
                   productItem.innerHTML = `
-                      <div class="image">
+                      <div class="image-holder">
                         <img src="${image1}" alt="Product Image">
                         ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
                       </div>
@@ -515,7 +515,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
         desiredProductsContainer.appendChild(offersBlock);
       }
 
-      const offersBlock = document.querySelectorAll('.offers-section .left-block .inner-col .offersblock');
+      const offersBlock = document.querySelectorAll('.offers-section .left-block .products-container .offersblock');
 
       offersBlock.forEach((block) => {
         blockSlider({
@@ -571,7 +571,7 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
             const image2 = product.image?.[1] ?? '';
 
             productItem.innerHTML = `
-              <div class="image">
+              <div class="image-holder">
                 <img src="${image1}" alt="Product Image">
                 ${image2 ? `<img src="${image2}" alt="Product Image">` : ''}
               </div>
@@ -615,7 +615,7 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
         desiredProductsContainer.appendChild(offersBlock);
       }
 
-      const offersBlock = document.querySelectorAll('.offers-section .right-block .inner-col .offersblock');
+      const offersBlock = document.querySelectorAll('.offers-section .right-block .products-container .offersblock');
 
       offersBlock.forEach((block) => {
         blockSlider({
@@ -636,8 +636,8 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 }
 
 if (document.querySelector(".offers-section")){
-    createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .inner-col"));
-    createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .inner-col"));
+    createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .products-container"));
+    createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .products-container"));
 }
 
 /* 
@@ -2068,7 +2068,7 @@ if(document.querySelector("#single-page")){
   }
 
 }
-console.log(window.location.pathname)
+
 /*
  ===========================
  ###### CATEGORY PAGE ######
