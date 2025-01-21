@@ -1058,8 +1058,10 @@ if(document.querySelector("#single-page")){
       if(siblingProducts.length > 0){
 
         let siblingProductsHtml = siblingProducts.map((product) => {
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
             let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
             let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -1085,8 +1087,6 @@ if(document.querySelector("#single-page")){
                                 }).join('')}
                             </ul>`
                           : '';
-
-            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                     product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -1191,8 +1191,10 @@ if(document.querySelector("#single-page")){
       if(bestSellerSiblingProducts.length > 0){
 
         let bestSellerSiblingProductsHtml = bestSellerSiblingProducts.map((product) => {
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
             let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
             let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -1218,8 +1220,6 @@ if(document.querySelector("#single-page")){
                                 }).join('')}
                             </ul>`
                           : '';
-
-            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                     product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -1324,8 +1324,10 @@ if(document.querySelector("#single-page")){
       if(topRatedsiblingProducts.length > 0){
 
         let topRatedsiblingProductsHtml = topRatedsiblingProducts.map((product) => {
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
             let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
             let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -1351,8 +1353,6 @@ if(document.querySelector("#single-page")){
                                 }).join('')}
                             </ul>`
                           : '';
-
-            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                     product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -1457,8 +1457,10 @@ if(document.querySelector("#single-page")){
       if(highViewedSiblingProducts.length > 0){
 
         let highViewedSiblingProductsHtml = highViewedSiblingProducts.map((product) => {
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
             let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
             let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -1484,8 +1486,6 @@ if(document.querySelector("#single-page")){
                                 }).join('')}
                             </ul>`
                           : '';
-
-            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                     product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -1588,8 +1588,10 @@ if(document.querySelector("#single-page")){
       if(siblingCategoriesProducts.length > 0){
 
         let siblingCategoriesProductsHtml = siblingCategoriesProducts.map((product) => {
+
+            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
             let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
             let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -1615,8 +1617,6 @@ if(document.querySelector("#single-page")){
                                 }).join('')}
                             </ul>`
                           : '';
-
-            let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                     product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
