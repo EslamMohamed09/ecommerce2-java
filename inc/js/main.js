@@ -2252,7 +2252,9 @@ if(document.querySelector(".category-page")){
 
             let bestSellerCategoriesProductsHtml = bestSellerCategoriesProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2278,8 +2280,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -2381,7 +2381,9 @@ if(document.querySelector(".category-page")){
 
             let topRatedCategoriesProductsHtml = topRatedCategoriesProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2407,8 +2409,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -2508,7 +2508,9 @@ if(document.querySelector(".category-page")){
 
             let hotDealsCategoriesProductsHtml = hotDealsCategoriesProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2534,8 +2536,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -2746,7 +2746,9 @@ if(document.querySelector(".category-page")){
 
             let topRatedThisCategoryProductsHtml = topRatedThisCategoryProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2772,8 +2774,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -2876,7 +2876,9 @@ if(document.querySelector(".category-page")){
 
             let bestSellerThisCategoryProductsHtml = bestSellerThisCategoryProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2902,8 +2904,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -3004,7 +3004,9 @@ if(document.querySelector(".category-page")){
 
             let hotDealsThisCategoryProductsHtml = hotDealsThisCategoryProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -3030,8 +3032,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -3131,7 +3131,9 @@ if(document.querySelector(".category-page")){
 
             let similarProductsThisCategoryProductsHtml = similarProductsThisCategoryProducts.map((product) => {
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
+                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -3157,8 +3159,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
                 let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                         product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
