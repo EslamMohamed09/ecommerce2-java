@@ -2739,11 +2739,16 @@ header .login-drawer.openingLoginDrawer {
 }
 
 /*
- ***********
- # Offers
- ***********
+ *************
+ # Top offers
+ *************
 */
+.top-offers-section .section-container {
+  display: flex;
+  gap: 2rem;
+}
 .top-offers-section .section-container .offer-block {
+  flex: 1 1 25rem;
   margin-bottom: 2rem;
   position: relative;
 }
