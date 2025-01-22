@@ -3335,14 +3335,20 @@ if(document.querySelector(".category-page")){
       for(let i=0; i<categorylists.length; i++){
           categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
       }
+
       const lastCategoryList = categorylists[categorylists.length - 1];
-      const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
-      const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .categories-block .childs-categorylist");
-      if(childsCategoryLists.length > 0){
-         for (let j=0; j<childsCategoryLists.length; j++) {
-              childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
-         }
-      }
+      
+      setTimeout(() => {
+        const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
+        const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .categories-block .childs-categorylist");
+              
+        if(childsCategoryLists.length > 0){
+          const lastPaddingValue = parseFloat(lastCategoryListPaddingLeft);
+          for (let j = 0; j < childsCategoryLists.length; j++) {
+              childsCategoryLists[j].style.paddingLeft = (lastPaddingValue + 8) + "px";
+          }
+        }
+      }, 100);
 
     } catch (error) {
       console.error('Error loading categories:', error);
