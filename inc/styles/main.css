@@ -2748,7 +2748,7 @@ header .login-drawer.openingLoginDrawer {
   gap: 2rem;
   padding: 8rem 3rem 3rem;
   border-radius: 0.6rem;
-  box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow6);
 }
 .month-deal-section .product-card .left-block {
   position: relative;
