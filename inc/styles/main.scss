@@ -298,9 +298,10 @@
        --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
 
        --text-shadow:0 0 2px rgba(5, 5, 5, 0.315);
-       --text-shadow2:0 0 4px #fff;
-       --text-shadow3:0 0 4px #00ffff9f;
-       --text-shadow4:0 0 4px rgb(6, 150, 42);}
+       --text-shadow2:0 0 4px rgba(5, 5, 5, 0.692);
+       --text-shadow3:0 0 4px #fff;
+       --text-shadow4:0 0 4px #00ffff9f;
+       --text-shadow5:0 0 4px rgb(6, 150, 42);}
 
 .dark-theme-variable {--background-color:#181a1e;
                       --black:#fff;
@@ -2498,23 +2499,26 @@ header {position:fixed;
                                  text-align:center;
                                  z-index:9;
 
-                       h3 {color:#fff;
+                       h3 {color:var(--white);
                            font-size:1.7rem;
                            font-weight:800;
                            text-transform:uppercase;
-                           text-shadow:var(--text-shadow);}
+                           text-shadow:var(--text-shadow2);
+                           font-family:"Quicksand", sans-serif;}
 
                        h2 {margin-top:1.2rem;
                            margin-bottom:1.2rem;
-                           color:#fff;
+                           color:var(--white);
                            font-size:6rem;
                            font-weight:800;
                            text-transform:uppercase;
-                           text-shadow:var(--text-shadow);}
+                           text-shadow:var(--text-shadow2);
+                           font-family:"Quicksand", sans-serif;}
 
-                       p {color:#fff;
+                       p {color:var(--white);
                           font-size:1.5rem;
-                          text-shadow:var(--text-shadow);}
+                          text-shadow:var(--text-shadow2);
+                          font-family:"Quicksand", sans-serif;}
                 }
         }
   }

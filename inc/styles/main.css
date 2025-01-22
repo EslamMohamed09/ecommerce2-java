@@ -271,9 +271,10 @@
   --green-box-shadow:0 0 6px #09995d;
   --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
   --text-shadow:0 0 2px rgba(5, 5, 5, 0.315);
-  --text-shadow2:0 0 4px #fff;
-  --text-shadow3:0 0 4px #00ffff9f;
-  --text-shadow4:0 0 4px rgb(6, 150, 42);
+  --text-shadow2:0 0 4px rgba(5, 5, 5, 0.692);
+  --text-shadow3:0 0 4px #fff;
+  --text-shadow4:0 0 4px #00ffff9f;
+  --text-shadow5:0 0 4px rgb(6, 150, 42);
 }
 
 .dark-theme-variable {
@@ -2802,25 +2803,28 @@ header .login-drawer.openingLoginDrawer {
   z-index: 9;
 }
 .top-offers-section .section-container .offer-block .banner-details h3 {
-  color: #fff;
+  color: var(--white);
   font-size: 1.7rem;
   font-weight: 800;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow2);
+  font-family: "Quicksand", sans-serif;
 }
 .top-offers-section .section-container .offer-block .banner-details h2 {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
-  color: #fff;
+  color: var(--white);
   font-size: 6rem;
   font-weight: 800;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow2);
+  font-family: "Quicksand", sans-serif;
 }
 .top-offers-section .section-container .offer-block .banner-details p {
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow2);
+  font-family: "Quicksand", sans-serif;
 }
 
 /*
