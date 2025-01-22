@@ -3274,7 +3274,6 @@ if(document.querySelector(".category-page")){
       }
 
       
-
       const productImages = document.querySelectorAll('.image-holder img');
       productImages.forEach(function (img) {
         const clonedImage = img.cloneNode();
