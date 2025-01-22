@@ -604,6 +604,27 @@ body {
   }
 }
 
+/*
+ ============= 
+  # GLOBAL
+ =============
+*/
+section {
+  padding: 2rem 7%;
+  margin: 0 !important;
+  transition: padding-top 0.05s ease;
+}
+
+@media (max-width: 280px) {
+  section {
+    padding: 2rem 3%;
+  }
+}
+.row {
+  margin: 0;
+  width: 100%;
+}
+
 .container {
   margin: 0 auto;
 }
@@ -621,23 +642,45 @@ ul li {
   margin: 0;
 }
 
-section {
-  padding: 2rem 7%;
-  margin: 0 !important;
-  transition: padding-top 0.05s ease;
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
-@media (max-width: 280px) {
-  section {
-    padding: 2rem 3%;
-  }
+.oldprice {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--gray5);
+  text-decoration: line-through !important;
 }
-.row {
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
   margin: 0;
-  width: 100%;
+  color: var(--gray11);
 }
 
-/******************* # BUTTONS ********************/
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+/***************** BUTTONS ******************/
 .black-btn {
   display: inline-block;
   padding: 0.7rem 1rem;
@@ -845,44 +888,6 @@ section {
   width: 100%;
 }
 
-img {
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.oldprice {
-  font-size: 1rem;
-  font-weight: normal;
-  color: var(--gray5);
-  text-decoration: line-through !important;
-}
-
-h1, h2, h3, h4, h5 {
-  font-weight: bold;
-  margin: 0;
-  color: var(--gray11);
-}
-
-h1 {
-  font-size: 2.1rem;
-}
-
-h2 {
-  font-size: 1.7rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
 @media (max-width: 260px) {
   h1 {
     font-size: 1.8rem;
@@ -1014,6 +1019,111 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/***************** FORMS ******************/
+/* form-horizontal2 */
+.form-horizontal2 {
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow2);
+  border-radius: 0.5rem;
+}
+.form-horizontal2 .col-left {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.form-horizontal2 .col-left .input-box {
+  width: 100%;
+  padding: 0 0 0 1rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow2);
+}
+.form-horizontal2 .col-left .input-box input {
+  flex: 1 1 20rem;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0.6rem 0.5rem;
+  border-radius: 1rem;
+  box-shadow: none;
+  color: var(--gray2);
+  background: transparent;
+  background-color: transparent;
+}
+.form-horizontal2 .col-left .input-box input:focus {
+  box-shadow: none;
+  background: transparent;
+  background-color: transparent;
+}
+.form-horizontal2 .col-left .input-box .pass-input {
+  flex: 1 1 20rem;
+  margin: 0;
+  padding: 0;
+}
+.form-horizontal2 .col-left .input-box .pass-input input {
+  width: 100%;
+}
+.form-horizontal2 .col-left select {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+  padding-right: 2rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  color: var(--gray2);
+  background: var(--white);
+  background-color: var(--white);
+  box-shadow: none;
+}
+.form-horizontal2 .col-left select option {
+  color: var(--gray2);
+  font-size: 1.2rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow3);
+}
+.form-horizontal2 .col-right {
+  padding: 0 1rem;
+  text-align: center;
+}
+.form-horizontal2 .col-right .image-box {
+  gap: 1rem;
+}
+.form-horizontal2 .col-right .image-box label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form-horizontal2 .col-right .image-box img {
+  width: 90%;
+  max-height: 25rem;
+  border: 0.4rem solid var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow2);
+}
+.form-horizontal2 .col-right .image-box .btn {
+  width: 90%;
+}
+.form-horizontal2 input[type=submit] {
+  margin-top: 3rem;
+  border-radius: 0.2rem;
+}
+.form-horizontal2 .delete-aBtn {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+}
+@media (max-width: 575px) {
+  .form-horizontal2 {
+    padding: 1rem;
+  }
+  .form-horizontal2 .col-right {
+    padding-top: 4rem !important;
+  }
 }
 
 /*
