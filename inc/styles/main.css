@@ -2608,7 +2608,7 @@ header .login-drawer.openingLoginDrawer {
 @media (max-width: 768px) {
   .today-deal-section .section-container {
     flex-direction: column-reverse;
-    background: radial-gradient(circle at 50% 26%, var(--olive19) 15%, var(--olive24) 40%);
+    background: radial-gradient(circle at 50% 26%, var(--olive14) 15%, var(--olive28) 40%);
   }
   .today-deal-section .section-container .left-block .content span {
     margin-top: 3rem;
