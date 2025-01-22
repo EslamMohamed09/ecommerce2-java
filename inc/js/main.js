@@ -1194,13 +1194,13 @@ if(document.querySelector("#single-page")){
 
               if(siblingProductsWrapper.children.length > 6){
 
+                siblingProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
+
                 siblingProductsContainer.innerHTML += `<div class="arrows">
                                                           <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                           <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
                                                         </div>
                                                         <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
-                siblingProductsWrapper.style.display = 'flex';
 
                 countSliderFullScreen({
                   section:'.sibling-products-block',
@@ -1217,7 +1217,6 @@ if(document.querySelector("#single-page")){
       }
 
       const bestSellerSiblingProducts = siblingProducts.filter(product => product.bought > 30);
-      
       if(bestSellerSiblingProducts.length > 0){
 
         let bestSellerSiblingProductsHtml = bestSellerSiblingProducts.map((product) => {
@@ -1327,13 +1326,13 @@ if(document.querySelector("#single-page")){
 
               if(bestSellerSiblingProductsWrapper.children.length > 6){
 
+                bestSellerSiblingProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
+
                 bestSellerSiblingProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                   <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
                                                                 </div>
                                                                 <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
-                bestSellerSiblingProductsWrapper.style.display = 'flex';
 
                 countSliderFullScreen({
                   section:'.best-seller-sibling-products-block',
@@ -1350,7 +1349,6 @@ if(document.querySelector("#single-page")){
       }
 
       const topRatedsiblingProducts = siblingProducts.filter(product => product.rating > 4);
-
       if(topRatedsiblingProducts.length > 0){
 
         let topRatedsiblingProductsHtml = topRatedsiblingProducts.map((product) => {
@@ -1460,13 +1458,13 @@ if(document.querySelector("#single-page")){
 
               if(topRatedsiblingProductsWrapper.children.length > 6){
 
+                topRatedsiblingProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
+
                 topRatedsiblingProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                   <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
                                                                 </div>
                                                                 <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
-                topRatedsiblingProductsWrapper.style.display = 'flex';
 
                 countSliderFullScreen({
                   section:'.top-rated-sibling-products-block',
@@ -1483,7 +1481,6 @@ if(document.querySelector("#single-page")){
       }
 
       const highViewedSiblingProducts = siblingProducts.filter(product => product.viewed > 100);
-
       if(highViewedSiblingProducts.length > 0){
 
         let highViewedSiblingProductsHtml = highViewedSiblingProducts.map((product) => {
@@ -1593,13 +1590,13 @@ if(document.querySelector("#single-page")){
 
               if(highViewedSiblingProductsWrapper.children.length > 6){
 
+                highViewedSiblingProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
+
                 highViewedSiblingProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                   <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
                                                                 </div>
                                                                 <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
-                highViewedSiblingProductsWrapper.style.display = 'flex';
 
                 countSliderFullScreen({
                   section:'.high-viewed-sibling-products-block',
@@ -1724,13 +1721,13 @@ if(document.querySelector("#single-page")){
 
               if(siblingCategoriesProductsWrapper.children.length > 6){
 
+                siblingCategoriesProductsWrapper.style.cssText = 'display:flex;margin:4rem auto !important;';
+
                 siblingCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                   <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
                                                                 </div>
                                                                 <div id="sliderdots" class="d-flex-r-c-c"></div>`;
-
-                siblingCategoriesProductsWrapper.style.display = 'flex';
 
                 countSliderFullScreen({
                   section:'.sibling-categories-products-block',
@@ -2277,7 +2274,6 @@ if(document.querySelector(".category-page")){
  
           // Best Seller Products - slider
           const bestSellerCategoriesProducts = categoriesProducts.filter(product => product.bought > 30);
-
           if(bestSellerCategoriesProducts.length > 0){
 
             let bestSellerCategoriesProductsHtml = bestSellerCategoriesProducts.map((product) => {
@@ -2382,9 +2378,8 @@ if(document.querySelector(".category-page")){
             document.querySelector(".category-page .right-block").appendChild(bestSellerCategoriesProductsElement);
 
             if(bestSellerCategoriesProductsWrapper.children.length > 5){
-                            
-               bestSellerCategoriesProductsWrapper.style.display = 'flex';
-               bestSellerCategoriesProductsWrapper.style.gridTemplateColumns = 'unset !important';
+
+               bestSellerCategoriesProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
 
                bestSellerCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                     <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -2406,7 +2401,6 @@ if(document.querySelector(".category-page")){
 
           // Top Rated Products - slider
           const topRatedCategoriesProducts = categoriesProducts.filter(product => product.rating > 4);
-
           if(topRatedCategoriesProducts.length > 0){
 
             let topRatedCategoriesProductsHtml = topRatedCategoriesProducts.map((product) => {
@@ -2511,7 +2505,7 @@ if(document.querySelector(".category-page")){
 
             if(topRatedCategoriesProductsWrapper.children.length > 5){
 
-               topRatedCategoriesProductsWrapper.style.display = 'flex';
+               topRatedCategoriesProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
 
                topRatedCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -2533,7 +2527,6 @@ if(document.querySelector(".category-page")){
 
           // Hot Deals Products - slider
           const hotDealsCategoriesProducts = categoriesProducts.filter(product => parseInt(product.off) > 20);
-
           if(hotDealsCategoriesProducts.length > 0){
 
             let hotDealsCategoriesProductsHtml = hotDealsCategoriesProducts.map((product) => {
@@ -2640,7 +2633,7 @@ if(document.querySelector(".category-page")){
 
             if(hotDealsCategoriesProductsWrapper.children.length > 5){
 
-               hotDealsCategoriesProductsWrapper.style.display = 'flex';
+               hotDealsCategoriesProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
 
                hotDealsCategoriesProductsContainer.innerHTML += `<div class="arrows">
                                                                   <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -2771,7 +2764,6 @@ if(document.querySelector(".category-page")){
 
           // Top Rated Products - slider
           const topRatedThisCategoryProducts = categoryProducts.filter(product => product.rating > 4);
-
           if(topRatedThisCategoryProducts.length > 0){
 
             let topRatedThisCategoryProductsHtml = topRatedThisCategoryProducts.map((product) => {
@@ -2879,7 +2871,7 @@ if(document.querySelector(".category-page")){
 
             if(topRatedThisCategoryProductsWrapper.children.length > 5){
 
-               topRatedThisCategoryProductsWrapper.style.display = 'flex';
+               topRatedThisCategoryProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
 
                topRatedThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                      <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -2901,7 +2893,6 @@ if(document.querySelector(".category-page")){
 
           // Best Seller Products - slider
           const bestSellerThisCategoryProducts = categoryProducts.filter(product => product.bought > 30);
-
           if(bestSellerThisCategoryProducts.length > 0){
 
             let bestSellerThisCategoryProductsHtml = bestSellerThisCategoryProducts.map((product) => {
@@ -3007,7 +2998,7 @@ if(document.querySelector(".category-page")){
 
             if(bestSellerThisCategoryProductsWrapper.children.length > 5){
 
-               bestSellerThisCategoryProductsWrapper.style.display = 'flex';
+               bestSellerThisCategoryProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
 
                bestSellerThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                        <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -3029,7 +3020,6 @@ if(document.querySelector(".category-page")){
 
           // Hot Deals Products - slider
           const hotDealsThisCategoryProducts = categoryProducts.filter(product => parseInt(product.off) > 20);
-
           if(hotDealsThisCategoryProducts.length > 0){
 
             let hotDealsThisCategoryProductsHtml = hotDealsThisCategoryProducts.map((product) => {
@@ -3132,7 +3122,7 @@ if(document.querySelector(".category-page")){
 
             if(hotDealsThisCategoryProductsWrapper.children.length > 5){
 
-               hotDealsThisCategoryProductsWrapper.style.display = 'flex';
+               hotDealsThisCategoryProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
 
                hotDealsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                      <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -3262,7 +3252,8 @@ if(document.querySelector(".category-page")){
 
             if(similarProductsThisCategoryProductsWrapper.children.length > 5){
               
-               similarProductsThisCategoryProductsWrapper.style.display = 'flex';
+               similarProductsThisCategoryProductsWrapper.style.cssText = 'display:flex;margin:4rem auto 0;';
+
                similarProductsThisCategoryProductsContainer.innerHTML += `<div class="arrows">
                                                                            <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
                                                                            <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
@@ -3282,19 +3273,7 @@ if(document.querySelector(".category-page")){
           }
       }
 
-      // handle padding left to categories lists
-      const categorylists = document.querySelectorAll(".category-page .filter-block .categories-block .categorylist");
-      for(let i=0; i<categorylists.length; i++){
-          categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
-      }
-      const lastCategoryList = categorylists[categorylists.length - 1];
-      const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
-      const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .categories-block .childs-categorylist");
-      if(childsCategoryLists.length > 0){
-         for (let j=0; j<childsCategoryLists.length; j++) {
-              childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
-         }
-      }
+      
 
       const productImages = document.querySelectorAll('.image-holder img');
       productImages.forEach(function (img) {
@@ -3351,9 +3330,24 @@ if(document.querySelector(".category-page")){
         }
       });
 
+      // handle padding left to categories lists
+      const categorylists = document.querySelectorAll(".category-page .filter-block .categories-block .categorylist");
+      for(let i=0; i<categorylists.length; i++){
+          categorylists[i].style.paddingLeft = ((i + 1) * 0.5) + "rem";
+      }
+      const lastCategoryList = categorylists[categorylists.length - 1];
+      const lastCategoryListPaddingLeft = window.getComputedStyle(lastCategoryList).paddingLeft;
+      const childsCategoryLists = document.querySelectorAll(".category-page .filter-block .categories-block .childs-categorylist");
+      if(childsCategoryLists.length > 0){
+         for (let j=0; j<childsCategoryLists.length; j++) {
+              childsCategoryLists[j].style.paddingLeft = (parseFloat(lastCategoryListPaddingLeft) + 8) + "px";
+         }
+      }
+
     } catch (error) {
       console.error('Error loading categories:', error);
     }
+
   }
 
   displayCategoriesAndProducts();
