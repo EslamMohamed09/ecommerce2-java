@@ -680,6 +680,10 @@ h5 {
   font-size: 1rem;
 }
 
+::placeholder {
+  color: var(--gray4);
+}
+
 /***************** BUTTONS ******************/
 .black-btn {
   display: inline-block;
@@ -926,6 +930,18 @@ h5 {
   background-color: var(--olive12);
 }
 
+.page-heading {
+  text-align: center;
+  margin: 2rem auto 4rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b6d6f3;
+  background: radial-gradient(rgb(0, 80, 134), #3b003b);
+}
+
 .block-heading {
   width: 100%;
   margin: 1.2rem 0 2rem;
@@ -964,6 +980,24 @@ h5 {
     text-align: center;
     font-size: 1.5rem;
   }
+}
+
+.pass-input {
+  position: relative;
+}
+.pass-input .passeye {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
+.pass-input .passeye .fa-eye,
+.pass-input .passeye .fa-eye-slash {
+  color: var(--gray10);
+  cursor: pointer;
+}
+.pass-input .passeye .fa-eye {
+  display: none;
 }
 
 /*** Pagination ***/
@@ -1024,87 +1058,98 @@ h5 {
 /***************** FORMS ******************/
 /* form-horizontal2 */
 .form-horizontal2 {
+  width: 100%;
   margin: 0;
-  padding: 2rem;
-  background-color: var(--white);
-  box-shadow: var(--box-shadow2);
+  padding: 3rem 2rem;
   border-radius: 0.5rem;
+  box-shadow: var(--box-shadow6);
+  background-color: var(--white);
 }
-.form-horizontal2 .col-left {
+.form-horizontal2 .left-block {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-.form-horizontal2 .col-left .input-box {
+.form-horizontal2 .left-block .input-holder {
   width: 100%;
   padding: 0 0 0 1rem;
   border: none;
   border-radius: 3rem;
   background-color: var(--white);
-  box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow6);
 }
-.form-horizontal2 .col-left .input-box input {
-  flex: 1 1 20rem;
+.form-horizontal2 .left-block .input-holder.gender-input-holder {
+  padding: 0 0.6rem 0 0.5rem;
+}
+.form-horizontal2 .left-block .input-holder.question-input-holder {
+  padding: 0 0.6rem 0 1rem;
+}
+.form-horizontal2 .left-block .input-holder input {
+  flex: 1 1 15rem;
   font-size: 1.2rem;
   margin: 0;
   padding: 0.6rem 0.5rem;
   border-radius: 1rem;
+  color: var(--gray11);
+  background: transparent;
+  background-color: transparent;
   box-shadow: none;
-  color: var(--gray2);
+  border: none;
+  outline: none;
+}
+.form-horizontal2 .left-block .input-holder input:focus {
+  box-shadow: none;
   background: transparent;
   background-color: transparent;
 }
-.form-horizontal2 .col-left .input-box input:focus {
-  box-shadow: none;
-  background: transparent;
-  background-color: transparent;
-}
-.form-horizontal2 .col-left .input-box .pass-input {
-  flex: 1 1 20rem;
+.form-horizontal2 .left-block .input-holder .pass-input {
+  flex: 1 1 15rem;
   margin: 0;
   padding: 0;
+  position: relative;
 }
-.form-horizontal2 .col-left .input-box .pass-input input {
+.form-horizontal2 .left-block .input-holder .pass-input input {
   width: 100%;
 }
-.form-horizontal2 .col-left select {
+.form-horizontal2 .left-block select {
   width: 100%;
-  padding: 0.8rem 0.5rem;
-  padding-right: 2rem;
+  padding: 0.8rem 2rem 0.8rem 0.3rem;
   border-radius: 2rem;
   font-size: 1.2rem;
-  color: var(--gray2);
+  color: var(--gray11);
   background: var(--white);
   background-color: var(--white);
   box-shadow: none;
+  border: none;
+  outline: none;
 }
-.form-horizontal2 .col-left select option {
-  color: var(--gray2);
+.form-horizontal2 .left-block select option {
+  color: var(--gray11);
   font-size: 1.2rem;
   background: var(--white);
   box-shadow: var(--box-shadow3);
 }
-.form-horizontal2 .col-right {
+.form-horizontal2 .right-block {
   padding: 0 1rem;
   text-align: center;
 }
-.form-horizontal2 .col-right .image-box {
+.form-horizontal2 .right-block .image-holder {
   gap: 1rem;
 }
-.form-horizontal2 .col-right .image-box label {
+.form-horizontal2 .right-block .image-holder label {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-.form-horizontal2 .col-right .image-box img {
-  width: 90%;
+.form-horizontal2 .right-block .image-holder img {
+  max-width: 90%;
   max-height: 25rem;
   border: 0.4rem solid var(--white);
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow2);
 }
-.form-horizontal2 .col-right .image-box .btn {
+.form-horizontal2 .right-block .image-holder .btn {
   width: 90%;
 }
 .form-horizontal2 input[type=submit] {
@@ -3059,9 +3104,9 @@ header .login-drawer.openingLoginDrawer {
 }
 
 /*
- **************
+ ************
   # Footer
- **************
+ ************
 */
 footer {
   background: linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);
@@ -8026,56 +8071,13 @@ footer .bottom-footer p {
  =============================
 */
 .customer-profile-page {
-  padding: 1rem 8% 2rem;
-  text-align: center;
-}
-.customer-profile-page form {
-  width: 100%;
+  padding: 1rem 8% 8rem;
   margin: 0;
-  margin-bottom: 5rem;
-}
-.customer-profile-page form .inputs-group {
-  gap: 1rem;
-  margin: 0;
-}
-.customer-profile-page form .inputs-group .input-group {
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-}
-.customer-profile-page form .inputs-group .input-group input {
-  width: 75%;
-  padding: 0.7rem 1rem;
-  box-shadow: var(--box-shadow2);
-}
-.customer-profile-page form .inputs-group .input-group .pass-col {
-  width: 75%;
-}
-.customer-profile-page form .inputs-group .input-group .pass-col input {
-  width: 100%;
-}
-.customer-profile-page form .inputs-group .input-group .btn {
-  width: 100%;
-  font-size: 1.5rem;
-}
-@media (max-width: 768px) {
-  .customer-profile-page form .inputs-group {
-    margin-bottom: 3rem;
-  }
-}
-.customer-profile-page form .img-group {
-  height: 100%;
   text-align: center;
-}
-.customer-profile-page form .img-group img {
-  width: 80%;
-  max-height: 20rem;
-  object-fit: cover;
-  box-shadow: var(--box-shadow2);
-  border: 4px solid var(--white);
 }
 @media (max-width: 768px) {
   .customer-profile-page {
-    padding: 1rem 4% 7rem;
+    padding: 1rem 4% 8rem;
   }
 }
 
