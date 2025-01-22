@@ -2744,11 +2744,11 @@ header .login-drawer.openingLoginDrawer {
  *************
 */
 .top-offers-section .section-container {
-  display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .top-offers-section .section-container .offer-block {
-  flex: 1 1 25rem;
+  flex: 1 1 20rem;
   margin-bottom: 2rem;
   position: relative;
 }

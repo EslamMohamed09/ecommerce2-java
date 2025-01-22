@@ -2444,10 +2444,10 @@ header {position:fixed;
  *************
 */
 .top-offers-section {
-  .section-container {display:flex;
-                      gap:2rem;
+  .section-container {gap:2rem;
+                      flex-wrap:wrap;
 
-      .offer-block {flex:1 1 25rem;
+      .offer-block {flex:1 1 20rem;
                     margin-bottom:2rem;
                     position:relative;
 
