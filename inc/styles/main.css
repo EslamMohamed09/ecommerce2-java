@@ -7910,4 +7910,63 @@ footer .bottom-footer p {
   }
 }
 
+/*
+ =============================
+ ##### CUSTOMERS Profile #####
+ =============================
+*/
+.customer-profile-page {
+  padding: 1rem 8% 2rem;
+  text-align: center;
+}
+.customer-profile-page form {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5rem;
+}
+.customer-profile-page form .inputs-group {
+  gap: 1rem;
+  margin: 0;
+}
+.customer-profile-page form .inputs-group .input-group {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.customer-profile-page form .inputs-group .input-group input {
+  width: 75%;
+  padding: 0.7rem 1rem;
+  box-shadow: var(--box-shadow2);
+}
+.customer-profile-page form .inputs-group .input-group .pass-col {
+  width: 75%;
+}
+.customer-profile-page form .inputs-group .input-group .pass-col input {
+  width: 100%;
+}
+.customer-profile-page form .inputs-group .input-group .btn {
+  width: 100%;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .customer-profile-page form .inputs-group {
+    margin-bottom: 3rem;
+  }
+}
+.customer-profile-page form .img-group {
+  height: 100%;
+  text-align: center;
+}
+.customer-profile-page form .img-group img {
+  width: 80%;
+  max-height: 20rem;
+  object-fit: cover;
+  box-shadow: var(--box-shadow2);
+  border: 4px solid var(--white);
+}
+@media (max-width: 768px) {
+  .customer-profile-page {
+    padding: 1rem 4% 7rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
