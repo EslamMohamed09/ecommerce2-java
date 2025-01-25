@@ -170,54 +170,53 @@ function truncateWords(text, wordsCount){
 }
 
 /* 
- ########################
- #### BANNER SECTION ####
- ########################
+ ######################
+ #### HERO SECTION ####
+ ######################
 */
-// slider code
 let index = 0;
-const bannerSection = document.querySelector(".banner-section");
-const bannerSlides = document.querySelectorAll('.banner-section .banner-slide-item');
+const heroSection = document.querySelector(".hero-section");
+const heroSlides = document.querySelectorAll('.hero-section .hero-slide-item');
 const loginDrawer = document.getElementById("login-drawer");
 const loginDrawerBtn = document.getElementById("login-btn");
 const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
 
-if(bannerSection){
+if(heroSection){
 
 function hideAllSlides(){
-  bannerSlides.forEach(slide => {
+  heroSlides.forEach(slide => {
     slide.style.display = "none";
   });
 }
 
 hideAllSlides();
 
-if (index >= 0 && index < bannerSlides.length) {bannerSlides[index].style.display = "flex";}
+if (index >= 0 && index < heroSlides.length) {heroSlides[index].style.display = "flex";}
 
 function prevB(){
-  index = (index - 1 + bannerSlides.length) % bannerSlides.length;
+  index = (index - 1 + heroSlides.length) % heroSlides.length;
   hideAllSlides();
-  bannerSlides[index].style.display = "flex";
+  heroSlides[index].style.display = "flex";
 }
 
 function nextB(){
-  index = (index + 1) % bannerSlides.length;
+  index = (index + 1) % heroSlides.length;
   hideAllSlides();
-  bannerSlides[index].style.display = "flex";
+  heroSlides[index].style.display = "flex";
 }
 
-let bannerSliderInterval = setInterval(nextB, 4000);
+let heroSliderInterval = setInterval(nextB, 4000);
 
 function stopSlider(){
-  clearInterval(bannerSliderInterval);
+  clearInterval(heroSliderInterval);
 }
 
 function startSlider(){
-  clearInterval(bannerSliderInterval);
-  bannerSliderInterval = setInterval(nextB, 4000);
+  clearInterval(heroSliderInterval);
+  heroSliderInterval = setInterval(nextB, 4000);
 }
 
-window.addEventListener('scroll', function(){ // Stop Banner Slider
+window.addEventListener('scroll', function(){ // Stop hero Slider
   if(window.scrollY > 10){
     stopSlider();
   } else if(window.scrollY === 0){
@@ -225,31 +224,31 @@ window.addEventListener('scroll', function(){ // Stop Banner Slider
   }
 });
 
-bannerSection.addEventListener('mouseenter', function(){
+heroSection.addEventListener('mouseenter', function(){
   stopSlider()
 });
 
-bannerSection.addEventListener('mouseleave', function(){
+heroSection.addEventListener('mouseleave', function(){
   startSlider()
 });
 
 function checkLoginDrawer(){
   if(loginDrawer.classList.contains("openingLoginDrawer")){
-    clearInterval(bannerSliderInterval);
+    clearInterval(heroSliderInterval);
   } else {
-    clearInterval(bannerSliderInterval);
-    bannerSliderInterval = setInterval(nextB, 4000);
+    clearInterval(heroSliderInterval);
+    heroSliderInterval = setInterval(nextB, 4000);
   }
 }
 
 loginDrawerBtn.addEventListener("click", stopSlider);
 closeLoginDrawerBtn.addEventListener("click", startSlider);
 
-document.querySelectorAll('.banner-section .banner-slide-item .left-block h2').forEach((h2) => {
+document.querySelectorAll('.hero-section .hero-slide-item .left-block h2').forEach((h2) => {
   h2.textContent = truncateWords(h2.textContent, 5);
 });
 
-document.querySelectorAll('.banner-section .banner-slide-item .left-block p').forEach((p) => {
+document.querySelectorAll('.hero-section .hero-slide-item .left-block p').forEach((p) => {
   p.textContent = truncateWords(p.textContent, 20);
 });
 

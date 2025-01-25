@@ -5,7 +5,7 @@
    text-decoration:none !important;
    outline:none !important;
    transition:all 0.2s linear;
-   font-family: "Nunito", sans-serif;
+   font-family:"Nunito", sans-serif;
    scroll-behavior:smooth;}
 
 :root {--gray:#f2f2f7;
@@ -1458,7 +1458,7 @@ header {position:fixed;
 
       .bottom-nav {
         nav ul {
-              li {padding:0.5rem 0.7rem 0.5rem 0.5rem;}
+            li {padding:0.5rem 0.7rem 0.5rem 0.5rem;}
         }
       }
     }
@@ -1496,9 +1496,7 @@ header {position:fixed;
     .main-header {
 
       .middle-nav {
-
         .web-title {font-size:1.5rem !important;}
-  
       }
 
       .bottom-nav {
@@ -1534,16 +1532,16 @@ header {position:fixed;
 
 /*
  ***********
- # Banner
+ # Hero
  ***********
 */
-.banner-section {width:100%;
+.hero-section {width:100%;
                  min-height:65vh;
                  padding:7rem 7%;
                  background:radial-gradient(var(--gray4), var(--gray7));
                  position:relative;
 
-    .banner-slide-item {width:100%;
+    .hero-slide-item {width:100%;
                         flex-wrap:wrap;
 
       .left-block {flex:1 1 25rem;
@@ -2459,7 +2457,6 @@ header {position:fixed;
                       flex-wrap:wrap;
 
       .offer-block {flex:1 1 20rem;
-                    margin-bottom:2rem;
                     position:relative;
 
               .banner-thumb {position:relative;
@@ -2617,7 +2614,6 @@ header {position:fixed;
             li.active {background-color:var(--red8);}
 
         }
-
       }
 
     }
