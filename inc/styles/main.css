@@ -1695,149 +1695,170 @@ header .login-drawer.openingLoginDrawer {
 
 /*
  ***********
- # Banner
+ # Hero
  ***********
 */
-.banner-section {
+.hero-section {
   width: 100%;
-  min-height: 65vh;
+  min-height: 75vh;
   padding: 7rem 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background: radial-gradient(var(--gray4), var(--gray7));
   position: relative;
 }
-.banner-section .banner-slide-item {
+.hero-section .slider-wrapper {
   width: 100%;
+  display: flex;
+  flex-direction: row !important;
+  overflow: hidden;
+}
+.hero-section .slider-wrapper .hero-slide-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
   flex-wrap: wrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
   /* Animation */
   /* animation */
 }
-.banner-section .banner-slide-item .left-block {
+.hero-section .slider-wrapper .hero-slide-item.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+.hero-section .slider-wrapper .hero-slide-item .left-block {
   flex: 1 1 25rem;
 }
-.banner-section .banner-slide-item .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item .left-block .semi-title {
   font-size: 1rem;
   color: var(--red7);
   font-weight: 550;
   text-transform: capitalize;
   text-shadow: var(--text-shadow);
 }
-.banner-section .banner-slide-item .left-block .semi-title svg {
+.hero-section .slider-wrapper .hero-slide-item .left-block .semi-title svg {
   margin-right: 0.2rem;
 }
-.banner-section .banner-slide-item .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item .left-block h2 {
   color: var(--gray11);
   margin-bottom: 0.6rem;
 }
-.banner-section .banner-slide-item .left-block p {
+.hero-section .slider-wrapper .hero-slide-item .left-block p {
   width: 55%;
   font-size: 1.2rem;
+  text-align: left;
   margin-bottom: 0.9rem;
   color: var(--black);
 }
-.banner-section .banner-slide-item .left-block button {
+.hero-section .slider-wrapper .hero-slide-item .left-block button {
   padding: 0.4rem 0.9rem 0.4rem 1.3rem;
 }
-.banner-section .banner-slide-item .left-block button svg {
+.hero-section .slider-wrapper .hero-slide-item .left-block button svg {
   margin-left: 0.5rem;
 }
-.banner-section .banner-slide-item:first-child .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item:first-child .left-block .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item:first-child .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item:first-child .left-block h2 {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item:first-child .left-block p {
+.hero-section .slider-wrapper .hero-slide-item:first-child .left-block p {
   animation: moveleft 0.5s linear;
 }
-.banner-section .banner-slide-item:first-child .left-block button {
+.hero-section .slider-wrapper .hero-slide-item:first-child .left-block button {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(2) .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(2) .left-block .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(2) .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(2) .left-block h2 {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(2) .left-block p {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(2) .left-block p {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(2) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(2) .left-block button {
   animation: movetop 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(3) .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(3) .left-block .semi-title {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(3) .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(3) .left-block h2 {
   animation: moveleft 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(3) .left-block p {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(3) .left-block p {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(3) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(3) .left-block button {
   animation: movetop 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(4) .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(4) .left-block .semi-title {
   animation: movebottom 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(4) .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(4) .left-block h2 {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(4) .left-block p {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(4) .left-block p {
   animation: moveleft 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(4) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(4) .left-block button {
   animation: moveright 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(5) .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(5) .left-block .semi-title {
   animation: movebottom 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(5) .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(5) .left-block h2 {
   animation: moveleft 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(5) .left-block p {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(5) .left-block p {
   animation: moveright 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(5) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(5) .left-block button {
   animation: movetop 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(6) .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(6) .left-block .semi-title {
   animation: movebottom 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(6) .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(6) .left-block h2 {
   animation: moveright 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(6) .left-block p {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(6) .left-block p {
   animation: moveleft 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item:nth-child(6) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(6) .left-block button {
   animation: moveright 0.5s linear 0.5s backwards;
 }
-.banner-section .banner-slide-item .right-block {
+.hero-section .slider-wrapper .hero-slide-item .right-block {
   flex: 1 1 25rem;
   position: relative;
   z-index: 0;
 }
-.banner-section .banner-slide-item .right-block img {
+.hero-section .slider-wrapper .hero-slide-item .right-block img {
   width: 15rem;
   height: 15rem;
   object-fit: contain;
 }
-.banner-section .banner-slide-item:first-child .right-block img {
+.hero-section .slider-wrapper .hero-slide-item:first-child .right-block img {
   animation: showimg 0.3s linear;
 }
-.banner-section .banner-slide-item:nth-child(2) .right-block img {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(2) .right-block img {
   animation: showimg 0.3s linear;
 }
-.banner-section .banner-slide-item:nth-child(3) .right-block img {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(3) .right-block img {
   animation: showimg 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(4) .right-block img {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(4) .right-block img {
   animation: showimg 0.5s linear;
 }
-.banner-section .banner-slide-item:nth-child(5) .right-block img {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(5) .right-block img {
   animation: showimg 0.8s linear;
 }
-.banner-section .banner-slide-item:nth-child(6) .right-block img {
+.hero-section .slider-wrapper .hero-slide-item:nth-child(6) .right-block img {
   animation: showimg 0.8s linear;
 }
 @keyframes movebottom {
@@ -1888,11 +1909,14 @@ header .login-drawer.openingLoginDrawer {
     opacity: 1;
   }
 }
-.banner-section #prev,
-.banner-section #next {
+.hero-section .prev-btn,
+.hero-section .next-btn {
   position: absolute;
   top: 50% !important;
   transform: translateY(-50%) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2.3rem;
   height: 2.3rem;
   padding: 0.6rem;
@@ -1907,86 +1931,120 @@ header .login-drawer.openingLoginDrawer {
   opacity: 0;
   transition: all 0.3s linear;
 }
-.banner-section #prev {
+.hero-section .prev-btn svg,
+.hero-section .next-btn svg {
+  font-size: 1rem;
+}
+.hero-section .prev-btn {
   left: -1rem;
 }
-.banner-section #next {
+.hero-section .next-btn {
   right: -1rem;
 }
-.banner-section:hover #prev {
+.hero-section:hover .prev-btn {
   left: 1%;
   opacity: 1;
 }
-.banner-section:hover #next {
+.hero-section:hover .next-btn {
   right: 1%;
   opacity: 1;
 }
-.banner-section #prev:hover {
+.hero-section .prev-btn:hover {
   background-color: transparent;
 }
-.banner-section #next:hover {
+.hero-section .next-btn:hover {
   background-color: transparent;
+}
+.hero-section .indicators-menu {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 !important;
+  gap: 1rem;
+}
+.hero-section .indicators-menu li {
+  display: inline-block;
+  font-weight: bold;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  line-height: 1.9;
+  cursor: pointer;
+  background-color: var(--green23);
+}
+.hero-section .indicators-menu li.active {
+  width: 1.3rem;
+  border-radius: 0.5rem;
+  background-color: var(--yellow6);
 }
 @media (min-width: 768px) and (max-width: 1000px) {
-  .banner-section .banner-slide-item .left-block p {
+  .hero-section .hero-slide-item .left-block p {
     width: 85%;
   }
-  .banner-section .banner-slide-item .right-block img {
+  .hero-section .hero-slide-item .right-block img {
     width: 11rem;
   }
 }
 @media (max-width: 768px) {
-  .banner-section {
+  .hero-section {
     padding: 1rem 7%;
   }
-  .banner-section #prev,
-  .banner-section #next {
+  .hero-section .prev-btn,
+  .hero-section .next-btn {
     top: 45% !important;
   }
-  .banner-section #prev {
+  .hero-section .prev-btn {
     left: 1% !important;
     opacity: 1;
   }
-  .banner-section #next {
+  .hero-section .next-btn {
     right: 1% !important;
     opacity: 1;
   }
-  .banner-section .banner-slide-item {
+  .hero-section .hero-slide-item {
     flex-flow: column-reverse;
   }
-  .banner-section .banner-slide-item .left-block {
+  .hero-section .hero-slide-item .left-block {
     justify-content: flex-start;
     padding-left: 6%;
   }
-  .banner-section .banner-slide-item .left-block p {
+  .hero-section .hero-slide-item .left-block p {
     width: 90%;
   }
 }
 @media (max-width: 450px) {
-  .banner-section .banner-slide-item .right-block img {
+  .hero-section .hero-slide-item .right-block img {
     width: 80%;
   }
 }
 @media (max-width: 300px) {
-  .banner-section .banner-slide-item .left-block p {
+  .hero-section .hero-slide-item .left-block p {
     width: 100%;
   }
 }
 @media (max-width: 260px) {
-  .banner-section .banner-slide-item .left-block p {
+  .hero-section .hero-slide-item .left-block p {
     font-size: 1rem;
   }
 }
 @media (max-width: 238px) {
-  .banner-section .banner-slide-item .left-block h2 {
+  .hero-section .hero-slide-item .left-block h2 {
     font-size: 1.3rem;
   }
 }
 @media (max-width: 208px) {
-  .banner-section .banner-slide-item .left-block {
+  .hero-section .hero-slide-item .left-block {
     padding-left: 3%;
   }
-  .banner-section .banner-slide-item .left-block h2 {
+  .hero-section .hero-slide-item .left-block h2 {
     font-size: 1.1rem;
   }
 }

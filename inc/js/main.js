@@ -174,83 +174,209 @@ function truncateWords(text, wordsCount){
  #### HERO SECTION ####
  ######################
 */
-let index = 0;
-const heroSection = document.querySelector(".hero-section");
-const heroSlides = document.querySelectorAll('.hero-section .hero-slide-item');
 const loginDrawer = document.getElementById("login-drawer");
 const loginDrawerBtn = document.getElementById("login-btn");
 const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
 
-if(heroSection){
+if(document.querySelector('.hero-section')){
 
-function hideAllSlides(){
-  heroSlides.forEach(slide => {
-    slide.style.display = "none";
-  });
+  function heroSlider(options){
+
+    const {
+        sectionSelector ='.slider-section',
+        sliderWrapperSelector = '.slider-wrapper',
+        prevBtnSelector = '.prev-btn',
+        nextBtnSelector = '.next-btn',
+        playSpeed = 5000
+    } = options;
+
+    let section = document.querySelector(sectionSelector);
+    let sliderWrapper = document.querySelector(sliderWrapperSelector);
+    let slides = Array.from(sliderWrapper.children);
+    let prevBtn = document.querySelector(prevBtnSelector);
+    let nextBtn = document.querySelector(nextBtnSelector);
+    let indicatorsMenu;
+    let currentIndex = 0;
+    let slideWidth = slides[0].offsetWidth;
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+    
+    function setupSlider(){
+        if (currentIndex >= 0 && currentIndex < slides.length) {
+            indicatorsMenu.children[currentIndex]?.classList.add('active');
+        }
+    }
+
+    function buildIndicators (){
+        indicatorsMenu = document.createElement('ul');
+        indicatorsMenu.classList.add('indicators-menu');
+        section.appendChild(indicatorsMenu);
+
+        for (let i=0; i<slides.length; i++) {
+            const indicator = document.createElement('li');
+            indicator.setAttribute('data-index', i);
+            indicatorsMenu.appendChild(indicator);
+        
+            indicator.addEventListener('click', () => {
+              currentIndex = i;
+              updateSlides();
+            });
+        }
+
+        indicatorsMenu.children[currentIndex].classList.add('active');
+
+        if(window.innerWidth < 500){
+           if(indicatorsMenu.children.length > 8){
+              indicatorsMenu.style.display = 'none';
+           }
+        } else {
+          if(indicatorsMenu.children.length > 12){
+             indicatorsMenu.style.display = 'none';
+          }
+        }
+    }
+
+    function updateSlides() {
+       const scrollPosition = currentIndex * slideWidth;
+       Array.from(indicatorsMenu.children).forEach(indicator => {indicator.classList.remove('active');});
+       indicatorsMenu.children[currentIndex].classList.add('active');
+
+       slides.forEach((slide, index) => {
+        if (index === currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+        function animateScroll(start, end, duration) {
+            let startTime = null;
+    
+            function animation(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuad(timeElapsed, start, end - start, duration);
+    
+                sliderWrapper.scrollLeft = run;
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+    
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+    
+            requestAnimationFrame(animation);
+        }
+    
+        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 900);
+        
+        sliderWrapper.scrollTo({
+            left:scrollPosition,
+            behavior:"smooth"
+        });
+    
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+            sliderWrapper.scrollLeft = 0;
+        }
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlides();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlides();
+    }
+
+    let heroSliderInterval = setInterval(nextSlide, playSpeed);
+
+    function stopSlider(){
+      clearInterval(heroSliderInterval);
+    }
+
+    function startSlider(){
+      clearInterval(heroSliderInterval);
+      heroSliderInterval = setInterval(nextSlide, playSpeed);
+    }
+
+    function startDrag(e) {
+        isDragging = true;
+        startX = e.clientX;
+        scrollStart = sliderWrapper.scrollLeft;
+    }
+
+    function duringDrag(e) {
+        if (!isDragging) return;
+        const currentX = e.clientX;
+        const dragDistance = currentX - startX;
+        sliderWrapper.scrollLeft = scrollStart - dragDistance;
+    }
+
+    function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+        const scrollLeft = sliderWrapper.scrollLeft;
+
+        if (Math.abs(scrollLeft - currentIndex * slideWidth) > slideWidth / 4) { // Snap to nearest slide after drag
+            if (scrollLeft > currentIndex * slideWidth) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        } else {
+            updateSlides();
+        }
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('mouseenter', stopSlider);
+    nextBtn.addEventListener('mouseenter', stopSlider);
+    section.addEventListener('mouseenter', stopSlider);
+    section.addEventListener('mouseleave', startSlider);
+
+    sliderWrapper.addEventListener('mousedown', startDrag);
+    sliderWrapper.addEventListener('mousemove', duringDrag);
+    sliderWrapper.addEventListener('mouseup', endDrag);
+    sliderWrapper.addEventListener('mouseleave', endDrag);
+
+    buildIndicators();
+    updateSlides();
+    setupSlider();
+
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 10){
+          stopSlider();
+      } else if(window.scrollY === 0){
+          startSlider();
+      }
+    });
+
+    section.querySelectorAll('.hero-slide-item .left-block h2').forEach((h2) => {
+      h2.textContent = truncateWords(h2.textContent, 5);
+    });
+    
+    section.querySelectorAll('.hero-slide-item .left-block p').forEach((p) => {
+      p.textContent = truncateWords(p.textContent, 20);
+    });
+
+    loginDrawerBtn.addEventListener("click", stopSlider);
+    closeLoginDrawerBtn.addEventListener("click", startSlider);
 }
 
-hideAllSlides();
-
-if (index >= 0 && index < heroSlides.length) {heroSlides[index].style.display = "flex";}
-
-function prevB(){
-  index = (index - 1 + heroSlides.length) % heroSlides.length;
-  hideAllSlides();
-  heroSlides[index].style.display = "flex";
-}
-
-function nextB(){
-  index = (index + 1) % heroSlides.length;
-  hideAllSlides();
-  heroSlides[index].style.display = "flex";
-}
-
-let heroSliderInterval = setInterval(nextB, 4000);
-
-function stopSlider(){
-  clearInterval(heroSliderInterval);
-}
-
-function startSlider(){
-  clearInterval(heroSliderInterval);
-  heroSliderInterval = setInterval(nextB, 4000);
-}
-
-window.addEventListener('scroll', function(){ // Stop hero Slider
-  if(window.scrollY > 10){
-    stopSlider();
-  } else if(window.scrollY === 0){
-    startSlider();
-  }
+heroSlider({sectionSelector:'.hero-section', 
+            sliderWrapperSelector:'.hero-section .slider-wrapper', 
+            prevBtnSelector:'.hero-section .prev-btn',
+            nextBtnSelector:'.hero-section .next-btn',
 });
 
-heroSection.addEventListener('mouseenter', function(){
-  stopSlider()
-});
-
-heroSection.addEventListener('mouseleave', function(){
-  startSlider()
-});
-
-function checkLoginDrawer(){
-  if(loginDrawer.classList.contains("openingLoginDrawer")){
-    clearInterval(heroSliderInterval);
-  } else {
-    clearInterval(heroSliderInterval);
-    heroSliderInterval = setInterval(nextB, 4000);
-  }
-}
-
-loginDrawerBtn.addEventListener("click", stopSlider);
-closeLoginDrawerBtn.addEventListener("click", startSlider);
-
-document.querySelectorAll('.hero-section .hero-slide-item .left-block h2').forEach((h2) => {
-  h2.textContent = truncateWords(h2.textContent, 5);
-});
-
-document.querySelectorAll('.hero-section .hero-slide-item .left-block p').forEach((p) => {
-  p.textContent = truncateWords(p.textContent, 20);
-});
 
 }
 
