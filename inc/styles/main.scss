@@ -1752,11 +1752,11 @@ header {position:fixed;
             border-radius:50%;
             line-height:1.9;
             cursor:pointer;
-            background-color:var(--green23);
+            background-color:var(--gray11);
 
             &.active {width:1.3rem;
                       border-radius:0.5rem;
-                      background-color:var(--yellow6);}
+                      background-color:var(--gray4);}
         }
     }
 
@@ -1890,7 +1890,7 @@ header {position:fixed;
     .products-container {display:grid;
                          grid-template-columns:repeat(auto-fill,minmax(200px, 1fr));
                          gap:0.8rem;
-                         padding:0.3rem;
+                         padding:0;
                          border-radius:0.5rem;
             
             .product-item {display:block;
@@ -1904,12 +1904,12 @@ header {position:fixed;
                                   margin-bottom:1.2rem;
                                   position:relative;
 
-                          .image {width:100%;
-                                  height:100%;
-                                  margin-bottom:1.2rem;
-                                  background-color:var(--gray);
-                                  border-bottom:1px solid var(--gray3);
-                                  position:relative;
+                          .image-holder {width:100%;
+                                         height:100%;
+                                         margin-bottom:1.2rem;
+                                         background-color:var(--gray);
+                                         border-bottom:1px solid var(--gray3);
+                                         position:relative;
 
                                   img {max-width:80%;
                                        height:7rem;
@@ -2636,9 +2636,9 @@ header {position:fixed;
         img {width:20rem;
              height:20rem;
              object-fit:contain;
-             display:none;}
-        img.active {display:block;}
-
+             display:none;
+          &.active {display:block;}
+        }
       }
 
       .indicators {width:fit-content;
@@ -2662,13 +2662,12 @@ header {position:fixed;
                 border-radius:50%;
                 line-height:1.9;
                 cursor:pointer;
-                background-color:var(--black);}
+                background-color:var(--black);
 
-            li.active {background-color:var(--red8);}
-
+              &.active {background-color:var(--red8);}
+            }
         }
       }
-
     }
 
     .right-block {
@@ -2695,10 +2694,11 @@ header {position:fixed;
         .content-footer {width:100%;
                          gap:1.1rem;
 
-          .btn {border-radius:0.2rem;}
+          .btn {border-radius:0.2rem;
+                border:1px solid var(--black);}
 
           .favourite-icon {width:3.1rem;
-                           height:2.8rem;
+                           height:3.05rem;
                            border-radius:0.2rem;
                            background-color:var(--black);
                            border:1px solid var(--black);
@@ -6895,7 +6895,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
       p:nth-child(3) {color:var(--gray5);}
 
       svg {color:var(--gray9);}
-    
     }
 
     .blocks {width:100%;
@@ -6928,11 +6927,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                 font-size:1.1rem;
             }
           }
-
         }
 
         .line {margin-top:1rem;
-              gap:1rem;
+               gap:1rem;
           hr {flex:1 1 20rem;
               height:1px;
               color:var(--gray8);}
@@ -6948,10 +6946,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                   padding:0 !important;
                   
           .right-block {gap:0.2rem;
-                      font-size:1rem;
-                      padding:0 !important;
-                      border:none;
-                      background:transparent;}
+                        font-size:1rem;
+                        padding:0 !important;
+                        border:none;
+                        background:transparent;}
         }
 
         .input-parent {width:100%;
@@ -6989,7 +6987,6 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
             input[type="text"]:focus ~ label, 
             input[type="text"]:valid ~ label {top:calc(50% - 0.8rem);}
-  
           }
 
           span {display:flex;
