@@ -1,9 +1,9 @@
 const headerContent = `
   <div class="left-header">
   
-    <div class="logo">
+    <a href="/index.html" class="logo">
       <img src="inc/images/brands/underarmour.png" alt="">
-    </div>
+    </a>
 
     <div class="asidecomponent">
       <button id="asidebutton"><i class="fas fa-chevron-right"></i></button>
