@@ -495,6 +495,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(125deg, var(--blue11) 0%, var(--blue) 100%);
+  cursor: grab;
 }
 
 *::selection {
@@ -1171,9 +1172,11 @@ section {
   padding: 3rem 0;
 }
 
-/*******************
- # TITLES
-********************/
+/*
+ *************
+  # TITLES
+ **************
+*/
 .section-heading {
   display: inline-block;
   font-size: 1.8rem;
@@ -1377,9 +1380,9 @@ input[type=file] {
 }
 
 /*
-==================
+===============
  # Forms
-==================
+===============
 */
 .form-horizontal {
   display: block;
@@ -1510,9 +1513,9 @@ input[type=file] {
 }
 
 /*
-==================
- # TABLE
-==================
+ ==============
+  # TABLE
+ ==============
 */
 table {
   width: 100%;
@@ -1823,10 +1826,10 @@ header .left-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 15%;
+  min-width: 18rem;
   height: 100%;
   gap: 1rem;
-  padding: 0.2rem 0.4rem 0.2rem 0.2rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.9rem;
   background-color: var(--white);
   box-shadow: 0;
   z-index: 5;
@@ -1838,7 +1841,8 @@ header .left-header .logo {
   gap: 1rem;
 }
 header .left-header .logo img {
-  width: 5rem;
+  height: 2rem;
+  object-fit: contain;
 }
 header .left-header .logo h2 {
   margin: 0;
@@ -1966,7 +1970,6 @@ header .right-header .content .drop-menu .drop-link {
 }
 header .right-header .content .drop-menu .drop-link:first-child {
   border-bottom: 1px solid var(--gray3);
-  background-color: var(--gray3);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
@@ -1975,7 +1978,7 @@ header .right-header .content .drop-menu .drop-link:last-child {
   border-bottom-right-radius: 0.5rem;
 }
 header .right-header .content .drop-menu .drop-link:hover {
-  background-color: var(--gray3);
+  background-color: var(--gray2);
 }
 header .right-header .content .drop-menu.dropactive {
   display: flex;
@@ -2394,12 +2397,12 @@ header .small-menu .small-menu-link {
   color: var(--white2);
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link:hover {
-  border-left: 5px solid #3c4d79;
+  border-left: 5px solid #374e88;
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link.active {
   color: var(--white2);
-  background-color: #8091c0;
-  border-left: 5px solid #3c4d79;
+  background-color: #0b84ca;
+  border-left: 5px solid #374e88;
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link.active h3 {
   color: var(--white2);
@@ -2408,10 +2411,10 @@ header .small-menu .small-menu-link {
   color: var(--white2);
 }
 .dashboard-section #main-aside::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 .dashboard-section #main-aside::-webkit-scrollbar-thumb {
-  background: var(--lightblue11);
+  background: var(--lightblue6);
   cursor: grab;
 }
 @media (max-width: 768px) {
@@ -2820,12 +2823,12 @@ header .small-menu .small-menu-link {
 .home-page .home-container .section-holder .right-aside .all-users-block .buttons li {
   width: fit-content;
   border-radius: 1rem;
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.6rem 0.2rem;
   margin: 0;
   font-size: 1rem;
   cursor: pointer;
   color: var(--white);
-  background-color: var(--milky7);
+  background-color: var(--lightblue16);
 }
 .home-page .home-container .section-holder .right-aside .all-users-block .buttons .button-active {
   color: var(--white);

@@ -2086,6 +2086,93 @@ header {position:fixed;
 }
 
 /*
+ *************
+ # Top offers
+ *************
+*/
+.top-offers-section {
+  .section-container {gap:2rem;
+                      flex-wrap:wrap;
+
+      .offer-block {flex:1 1 20rem;
+                    position:relative;
+
+              .banner-thumb {position:relative;          
+
+                      img {width:100%;
+                          height:30rem;
+                          object-fit:cover;}
+
+                      &::before {content:"";
+                                position:absolute;
+                                display:block;
+                                top:0;
+                                bottom:0;
+                                left:0;
+                                right:0;
+                                width:0;
+                                height:90%;
+                                margin:auto;
+                                border-top:1px solid #fff;
+                                border-bottom:1px solid #fff;
+                                background-color:rgba(0,0,0,0.3);
+                                transition:all 0.4s ease;
+                                z-index:10;}
+
+                      &:hover::before {width:90%;}
+
+
+                      &::after {content:"";
+                                position:absolute;
+                                display:block;
+                                top:0;
+                                bottom:0;
+                                left:0;
+                                right:0;
+                                width:90%;
+                                height:0;
+                                margin:auto;
+                                border-left:1px solid #fff;
+                                border-right:1px solid #fff;
+                                background-color:rgba(0,0,0,0.3);
+                                transition:all 0.4s ease;}
+
+                      &:hover::after {height:90%;}
+              }
+
+              .banner-details {position:absolute;
+                                top:50%;
+                                transform:translateY(-50%);
+                                width:100%;
+                                text-align:center;
+                                z-index:9;
+
+                      h3 {color:var(--white);
+                          font-size:1.7rem;
+                          font-weight:800;
+                          text-transform:uppercase;
+                          text-shadow:var(--text-shadow2);
+                          font-family:"Quicksand", sans-serif;}
+
+                      h2 {margin-top:1.2rem;
+                          margin-bottom:1.2rem;
+                          color:var(--white);
+                          font-size:6rem;
+                          font-weight:800;
+                          text-transform:uppercase;
+                          text-shadow:var(--text-shadow2);
+                          font-family:"Quicksand", sans-serif;}
+
+                      p {color:var(--white);
+                        font-size:1.5rem;
+                        text-shadow:var(--text-shadow2);
+                        font-family:"Quicksand", sans-serif;}
+              }
+      }
+  }
+}
+
+/*
  ************
   # Offers
  ************
@@ -2161,10 +2248,10 @@ header {position:fixed;
                  transition:all 1s linear;}
 
             img:last-child:not(:only-child) {visibility:hidden;
-                                            opacity:0;}
+                                             opacity:0;}
 
             &:hover img:first-child {visibility:hidden;
-                                    opacity:0;}
+                                     opacity:0;}
 
             &:hover img:last-child {visibility:visible;
                                     opacity:1;}
@@ -2186,7 +2273,7 @@ header {position:fixed;
             svg {font-size:1.1rem;
                 color:var(--gray11);
                 border:none;
-            &:hover {color:var(--primary);}
+              &:hover {color:var(--primary);}
             }
           }
 
@@ -2302,7 +2389,6 @@ header {position:fixed;
                   img {max-width:80%;
                        height:7rem;}
               }
-
             }
           }
         }
@@ -2497,94 +2583,6 @@ header {position:fixed;
 
   @media(max-width:884px){
     .section-container {grid-template-columns:1fr;}
-  }
-}
-
-/*
- *************
- # Top offers
- *************
-*/
-.top-offers-section {
-  .section-container {gap:2rem;
-                      flex-wrap:wrap;
-
-      .offer-block {flex:1 1 20rem;
-                    position:relative;
-
-              .banner-thumb {position:relative;
-                              
-
-                      img {width:100%;
-                          height:30rem;
-                          object-fit:cover;}
-
-                      &::before {content:"";
-                                position:absolute;
-                                display:block;
-                                top:0;
-                                bottom:0;
-                                left:0;
-                                right:0;
-                                width:0;
-                                height:90%;
-                                margin:auto;
-                                border-top:1px solid #fff;
-                                border-bottom:1px solid #fff;
-                                background-color:rgba(0,0,0,0.3);
-                                transition:all 0.4s ease;
-                                z-index:10;}
-
-                      &:hover::before {width:90%;}
-
-
-                      &::after {content:"";
-                                position:absolute;
-                                display:block;
-                                top:0;
-                                bottom:0;
-                                left:0;
-                                right:0;
-                                width:90%;
-                                height:0;
-                                margin:auto;
-                                border-left:1px solid #fff;
-                                border-right:1px solid #fff;
-                                background-color:rgba(0,0,0,0.3);
-                                transition:all 0.4s ease;}
-
-                      &:hover::after {height:90%;}
-              }
-
-              .banner-details {position:absolute;
-                                top:50%;
-                                transform:translateY(-50%);
-                                width:100%;
-                                text-align:center;
-                                z-index:9;
-
-                      h3 {color:var(--white);
-                          font-size:1.7rem;
-                          font-weight:800;
-                          text-transform:uppercase;
-                          text-shadow:var(--text-shadow2);
-                          font-family:"Quicksand", sans-serif;}
-
-                      h2 {margin-top:1.2rem;
-                          margin-bottom:1.2rem;
-                          color:var(--white);
-                          font-size:6rem;
-                          font-weight:800;
-                          text-transform:uppercase;
-                          text-shadow:var(--text-shadow2);
-                          font-family:"Quicksand", sans-serif;}
-
-                      p {color:var(--white);
-                        font-size:1.5rem;
-                        text-shadow:var(--text-shadow2);
-                        font-family:"Quicksand", sans-serif;}
-              }
-      }
   }
 }
 
