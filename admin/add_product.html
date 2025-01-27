@@ -15,29 +15,34 @@
 <body>
 <header class="header" id="header"></header>   
 
-<section class="dashboard-section" id="dashboard-section">
+<section class="dashboard-section add-product-page" id="dashboard-section">
 
   <aside id="main-aside"></aside>
 
-  <div class="add-product-section-container section-container">
+  <div class="add-product-page-container section-container">
 
     <h1 class="section-heading">add product</h1>
 
-    <form action="" class="add-product-form">
+    <form action="" class="add-product-form" enctype="multipart/form-data">
 
       <div class="left-block">
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- Name -->
           <label for="">name</label>
           <input type="text" autocomplete="off" title="write product name !" required="required">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- Description -->
           <label for="">description</label>
           <input type="text">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- about this item -->
+          <label for="">about this product</label>
+          <input type="text">
+        </div>
+
+        <div class="input-holder"> <!-- category -->
           <label for="">category</label>
           <select name="" id="">
             <option value="">electronics</option>
@@ -46,50 +51,60 @@
           </select>
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- tags -->
           <label for="">tags</label>
           <input type="text">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- size -->
           <label for="">size</label>
           <input type="text">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- colors -->
           <label for="">colors</label>
           <input type="text">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- offer -->
+          <label for="">offer</label>
+          <input type="text">
+        </div>
+
+        <div class="input-holder"> <!-- regular price -->
           <label for="">regular price</label>
           <input type="text">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- sale price -->
           <label for="">sale price</label>
           <input type="text" autocomplete="off" title="write product price !" required="required">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- sku -->
           <label for="">sku</label>
           <input type="text">
         </div>
 
-        <div class="input-holder">
+        <div class="input-holder"> <!-- stock quantity -->
           <label for="">stock quantity</label>
-          <input type="text" autocomplete="off" title="write product count in stock !" required="required">
+          <input type="number">
         </div>
 
       </div>
 
       <div class="right-block">
-        <div class="upload-image-holder">
-
+        <div class="upload-image-holder d-flex-c-c-c">
+          <i class="far fa-images" id="image-icon"></i>
+          <div class="uploading-button-holder d-flex-r-st-st">
+            <button class="upload-button"><i class="fas fa-upload"></i></button>
+            <h3>drop images here or <span>click to browse</span></h3>
+          </div>
+          <p>jpg, jpeg and png</p>
         </div>
       </div>
 
-      <input type="submit" value="save product">
+      <input type="submit" value="save product" class="submit-btn">
 
     </form>
 

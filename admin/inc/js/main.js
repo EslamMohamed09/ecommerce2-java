@@ -602,7 +602,7 @@ fetch('pages/customers.json').then(response => response.json())
  ===============================
 */
 if(document.querySelector('.category-page')){
-fetch('pages/categories.json').then(response => response.json())
+fetch('database/categories.json').then(response => response.json())
 .then(data => {
   const categories = data.categories;
   const categoriesMap = new Map(categories.map(cat => [cat.id, cat]));
@@ -767,7 +767,7 @@ if(document.querySelector('.messages-page')){
 */
 if(document.querySelector('.products-page')){
 
-fetch('pages/products.json').then(response => response.json())
+fetch('database/products.json').then(response => response.json())
 .then(data => {
   const products = data.products;
   const productstbody = document.querySelector('.products-page #products-tbody');
@@ -815,6 +815,15 @@ fetch('pages/products.json').then(response => response.json())
   pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
 
+}
+
+/*
+ =================================
+ ######## ADD PRODUCTS PAGE ######
+ =================================
+*/
+if(document.querySelector('.add-product-page')){
+  
 }
 
 

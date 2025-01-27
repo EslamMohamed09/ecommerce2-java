@@ -283,8 +283,9 @@ body {
   --box-shadow4:0 0 3px #eee;
   --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
   --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
-  --box-shadow7:0 0 6px rgba(2, 2, 2, 0.199);
-  --box-shadow8:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+  --box-shadow7:0 0 3px rgba(2, 2, 2, 0.11);
+  --box-shadow8:0 0 6px rgba(2, 2, 2, 0.199);
+  --box-shadow9:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
   --orange-box-shadow:0 1px 0.9rem #fd9103c5;
   --red-box-shadow:0 0.1rem 1rem #e9290779;
   --aqua-box-shadow:0 0 6px #00c7c7;
@@ -305,8 +306,7 @@ body {
   --background-color:#181a1e;
   --black:#fff;
   --black2:rgb(52, 65, 82);
-  --white:#202528;
-  --white2:#000;
+  --white2:#202528;
   --gray10:#fff;
   --gray11:#fff;
   --blue4:#e5e5e7;
@@ -843,7 +843,7 @@ button:focus {
   box-shadow: var(--box-shadow5);
   transition: all 0.3s linear;
 }
-.btn2 :hover {
+.btn2:hover {
   color: var(--white2);
   box-shadow: 0 0 6px rgba(0, 132, 255, 0.4784313725);
 }
@@ -1310,16 +1310,6 @@ section {
 /*******************
  # TITLES
 ********************/
-.input-control {
-  padding: 0.7rem 1rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.3rem !important;
-  box-shadow: var(--box-shadow6);
-  color: var(--gray10);
-  background: radial-gradient(var(--gray), var(--gray4));
-}
-
 .input-control2 {
   font-size: 1.2rem;
   border: none;
@@ -1443,6 +1433,13 @@ input[type=file] {
 }
 .form-horizontal2 .left-block .input-holder .input-control {
   width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem !important;
+  box-shadow: var(--box-shadow6);
+  color: var(--gray10);
+  background: radial-gradient(var(--gray), var(--gray4));
 }
 .form-horizontal2 .left-block .input-holder .pass-input {
   margin: 0;
@@ -1485,7 +1482,6 @@ input[type=file] {
 .form-horizontal2 input[type=submit] {
   margin-top: 2rem;
 }
-
 @media (max-width: 768px) {
   .form-horizontal2 .double-input-box {
     gap: 1rem;
@@ -1494,6 +1490,7 @@ input[type=file] {
     padding-top: 4rem !important;
   }
 }
+
 .pass-input {
   position: relative;
 }
@@ -1818,7 +1815,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--white2);
   box-shadow: var(--box-shadow2);
   z-index: 100;
 }
@@ -1830,7 +1827,7 @@ header .left-header {
   height: 100%;
   gap: 1rem;
   padding: 0.2rem 0.4rem 0.2rem 0.9rem;
-  background-color: var(--white);
+  background: transparent;
   box-shadow: 0;
   z-index: 5;
 }
@@ -1893,7 +1890,7 @@ header .right-header {
   align-items: center;
   gap: 3rem;
   padding: 0.2rem 1rem;
-  background-color: var(--white);
+  background: transparent;
   box-shadow: 0;
   z-index: 4;
 }
@@ -4401,6 +4398,173 @@ header .small-menu .small-menu-link {
   .products-page .products-page-container .managing-products .manage-products-table-block table tbody tr td .buttons {
     bottom: 0;
     left: -0.5rem;
+  }
+}
+
+/*
+ =========================
+ ###### ADD PRODUCT ######
+ =========================
+*/
+.add-product-page .add-product-page-container {
+  margin-bottom: 3rem;
+}
+.add-product-page .add-product-page-container .add-product-form {
+  margin: 0;
+  padding: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+}
+.add-product-page .add-product-page-container .add-product-form .left-block {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .input-holder {
+  width: 100%;
+  padding: 0;
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .input-holder label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: var(--gray11);
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .input-holder input {
+  width: 100%;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0.6rem 0.5rem 0.6rem 1rem;
+  border-radius: 0.2rem;
+  color: var(--gray11);
+  border: none;
+  outline: none;
+  background-color: var(--white2);
+  box-shadow: var(--box-shadow7);
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .input-holder .pass-input {
+  flex: 1 1 15rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .input-holder .pass-input input {
+  width: 100%;
+}
+.add-product-page .add-product-page-container .add-product-form .left-block select {
+  width: 100%;
+  padding: 0.6rem 2rem 0.6rem 0.3rem;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  color: var(--gray11);
+  background: var(--white2);
+  box-shadow: var(--box-shadow7);
+  border: none;
+  outline: none;
+}
+.add-product-page .add-product-page-container .add-product-form .left-block select option {
+  color: var(--gray11);
+  font-size: 1.2rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow3);
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .textarea-input-box {
+  grid-column: span 2;
+}
+.add-product-page .add-product-page-container .add-product-form .left-block .textarea-input-box textarea {
+  min-height: 8rem;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block {
+  padding: 0 1rem;
+  text-align: center;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder {
+  width: 100%;
+  height: 22rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px dashed var(--blue5);
+  background: var(--white2);
+  gap: 0.1rem;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder #image-icon {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  color: var(--gray11);
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder .uploading-button-holder {
+  gap: 0.3rem;
+  flex-wrap: nowrap;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder .uploading-button-holder .upload-button {
+  background-color: transparent;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder .uploading-button-holder .upload-button svg {
+  font-size: 2.1rem;
+  color: var(--gray11);
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder h3 {
+  margin-top: 0.5rem;
+  text-transform: lowercase;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder h3::first-letter {
+  text-transform: uppercase;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder h3 span {
+  color: var(--blue5);
+  text-transform: lowercase;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder p {
+  font-size: 1.1rem;
+  text-transform: lowercase;
+  color: var(--gray11);
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder p::first-letter {
+  text-transform: uppercase;
+}
+.add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder img {
+  width: 80% !important;
+  margin-top: 1rem;
+  max-height: 30rem !important;
+  box-shadow: var(--box-shadow5);
+  border: 4px solid var(--white);
+}
+.add-product-page .add-product-page-container .add-product-form input[type=submit] {
+  font-size: 1.2rem;
+  margin: 1rem 0 0;
+  padding: 0.6rem 0.5rem 0.6rem 1rem;
+  text-transform: capitalize;
+  border-radius: 0.1rem;
+  border: none;
+  outline: none;
+  color: var(--white);
+  box-shadow: var(--box-shadow6);
+  background: linear-gradient(to right, var(--blue13), var(--blue) 80%);
+}
+.add-product-page .add-product-page-container .add-product-form input[type=submit]:hover {
+  color: var(--white);
+  background: linear-gradient(to right, #056c9b, rgb(158, 108, 204) 80%);
+}
+@media (max-width: 1400px) {
+  .add-product-page .add-product-page-container .add-product-form .right-block .upload-image-holder {
+    width: 90% !important;
+  }
+}
+@media (min-width: 768px) {
+  .add-product-page .add-product-page-container .add-product-form .right-block {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .add-product-page .add-product-page-container .add-product-form {
+    grid-template-columns: 100%;
+  }
+  .add-product-page .add-product-page-container .add-product-form .double-input-box {
+    gap: 1rem;
+  }
+  .add-product-page .add-product-page-container .add-product-form .right-block {
+    padding-top: 4rem !important;
   }
 }
 

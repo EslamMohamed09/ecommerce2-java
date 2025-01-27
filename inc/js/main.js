@@ -572,7 +572,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
   desiredProductsContainer.innerHTML = '';
 
-  fetch('../admin/pages/products.json').then(response => response.json())
+  fetch('../admin/database/products.json').then(response => response.json())
   .then(data => {
       const filteredProducts = data.products.filter(product => desiredProducts.includes(product.off));
 
@@ -674,7 +674,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
 function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 
-  fetch('../admin/pages/products.json').then(response => response.json())
+  fetch('../admin/database/products.json').then(response => response.json())
     .then(data => {
       const offeredProducts = data.products.filter(product => desiredProducts.includes(product.off));
 
@@ -1113,7 +1113,7 @@ if(document.querySelector("#single-page")){
   }
 
   async function loadProduct(productId){
-    const response = await fetch('../admin/pages/products.json');
+    const response = await fetch('../admin/database/products.json');
     if(!response.ok){throw new Error('Failed to load products')}
     const data = await response.json();
 
@@ -1123,7 +1123,7 @@ if(document.querySelector("#single-page")){
   }
 
   async function loadProducts(){
-    const response = await fetch('../admin/pages/products.json');
+    const response = await fetch('../admin/database/products.json');
     if(!response.ok){throw new Error('Failed to load products')}
     const data = await response.json();
     return data.products;
@@ -1141,7 +1141,7 @@ if(document.querySelector("#single-page")){
 
   async function getSiblingCategories(categoryId) {
 
-    const response = await fetch('../admin/pages/categories.json');
+    const response = await fetch('../admin/database/categories.json');
     if(!response.ok){throw new Error('Failed to load categories')}
     const data = await response.json();
 
@@ -1158,7 +1158,7 @@ if(document.querySelector("#single-page")){
   }
 
   async function loadCategories(){
-    const response = await fetch('../admin/pages/categories.json');
+    const response = await fetch('../admin/database/categories.json');
     if (!response.ok) {throw new Error('Failed to load categories');}
     const data = await response.json();
     return data.categories;
@@ -1934,7 +1934,7 @@ if(document.querySelector("#single-page")){
 
 
   function fetchProduct(productId){
-    fetch('../admin/pages/products.json').then(response => response.json())
+    fetch('../admin/database/products.json').then(response => response.json())
     .then(data => {
       const product = data.products.find(p => p.id == productId);
       if(product){
@@ -2229,7 +2229,7 @@ if(document.querySelector("#single-page")){
 if(document.querySelector(".category-page")){
 
   async function loadProduct(productId){
-    const response = await fetch('../admin/pages/products.json');
+    const response = await fetch('../admin/database/products.json');
     if(!response.ok){throw new Error('Failed to load products')}
     const data = await response.json();
 
@@ -2239,14 +2239,14 @@ if(document.querySelector(".category-page")){
   }
 
   async function loadCategories(){
-    const response = await fetch('../admin/pages/categories.json');
+    const response = await fetch('../admin/database/categories.json');
     if (!response.ok) {throw new Error('Failed to load categories');}
     const data = await response.json();
     return data.categories;
   }
 
   async function loadProducts(){
-    const response = await fetch('../admin/pages/products.json');
+    const response = await fetch('../admin/database/products.json');
     if(!response.ok){throw new Error('Failed to load products')}
     const data = await response.json();
     return data.products;
@@ -4225,7 +4225,7 @@ function countSliderFullScreen(options) {
 }
 
 async function loadProduct(productId){
- const response = await fetch('../admin/pages/products.json');
+ const response = await fetch('../admin/database/products.json');
  if(!response.ok){throw new Error('Failed to load products')}
  const data = await response.json();
 
