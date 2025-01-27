@@ -823,7 +823,58 @@ fetch('database/products.json').then(response => response.json())
  =================================
 */
 if(document.querySelector('.add-product-page')){
-  
+
+  async function loadCategories(){
+    const response = await fetch('database/categories.json');
+    if(!response.ok){throw new Error('failed to load categories')}
+    const data = await response.json();
+    return data.categories;
+  }
+
+  async function displayCategoriesLevels(){
+    try {
+
+    const categories = await loadCategories();
+
+    function arrangeCategories(categories, parentId = null, level = 0) {
+      let arrangedHTML = '';
+
+      categories.filter(category => category.parent_id === parentId).forEach(category => {
+        const indent = '--'.repeat(level);
+
+        let levelLabel = '';
+        if (level === 3) {
+            levelLabel = ' (4)';
+        } else if (level === 4) {
+          levelLabel = ' (5)';
+        } else if (level === 5) {
+          levelLabel = ' (6)';
+        }
+
+        arrangedHTML += `
+          <option value="${category.id}" class="level-${level}">
+            ${indent}${category.name}${levelLabel}
+          </option>`;
+
+        // Recursively process child categories
+        arrangedHTML += arrangeCategories(categories, category.id, level + 1);
+      });
+      return arrangedHTML;
+    }
+
+    const arrangedCategories = arrangeCategories(categories);
+
+    const categorySelect = document.querySelector('.add-product-page .add-product-page-container .add-product-form .left-block .category-input-holder #category-select');
+
+          categorySelect.innerHTML = '<option value="0">...</option>' + arrangedCategories;
+
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  displayCategoriesLevels();
+
 }
 
 
