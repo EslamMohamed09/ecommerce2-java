@@ -304,7 +304,7 @@ body {overflow-x:hidden;
        --box-shadow3:0 0.3rem 4rem #252c2c2f;
        --box-shadow4:0 0 3px #eee;
        --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
-       --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
+       --box-shadow6:0 0 2px rgba(2, 2, 2, 0.158);
        --box-shadow7:0 0 3px rgba(2, 2, 2, 0.11);
        --box-shadow8:0 0 6px rgba(2, 2, 2, 0.199);
        --box-shadow9:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
@@ -1320,7 +1320,7 @@ table {width:100%;
                        background-color:var(--white);
 
 
-              .form-search {flex-wrap:nowrap;
+              .search-form {flex-wrap:nowrap;
                             width:30%;padding:0;
                             border-radius:0.2rem 0 0 0.2rem;
                             box-shadow:none;
@@ -1335,10 +1335,10 @@ table {width:100%;
                                           border-radius:0.2rem 0 0 0.2rem;}
 
                      #submit-search {width:3rem;
-                            height:100%;
-                                   padding:0.3rem 0.6rem;
-                                   border-radius:0 0.2rem 0.2rem 0;
-                                   background-color:var(--blue5);
+                                     height:100%;
+                                     padding:0.3rem 0.6rem;
+                                     border-radius:0 0.2rem 0.2rem 0;
+                                     background-color:var(--blue5);
 
                             #submit-searchi {color:var(--blue2);}
                      }
@@ -3604,27 +3604,29 @@ header {width:100%;
                                                   box-shadow:none;
                                                   background-color:var(--white);
 
-                                          .form-search {flex-wrap:nowrap;
-                                                        width:30%;padding:0;
-                                                        border-radius:0.2rem 0 0 0.2rem;
-                                                        box-shadow:none;
-                                                        border:1px solid var(--gray3);
-
+                                          .search-form {flex-wrap:nowrap;
+                                                        width:30%;
+                                                        padding:0;
+                                                        border-radius:0.3rem;
+                                                        background:var(--gray1);
+                                                        
                                                  input[type="search"] {width:calc(100% - 3rem);
                                                                        font-size:1.1rem;
-                                                                       padding:0.3rem 0.8rem 0.3rem 0.6rem;
+                                                                       padding:0.4rem 0.8rem 0.4rem 0.6rem;
                                                                        box-shadow:none;
                                                                        color:var(--gray10);
                                                                        background-color:transparent;
-                                                                       border-radius:0.2rem 0 0 0.2rem;}
+                                                                       border-radius:0.2rem 0 0 0.2rem;
+                                                                      &:focus {background:var(--yellow3);}
+                                                 }
 
-                                                 #submit-search {width:3rem;
-                                                                 height:100%;
-                                                                 padding:0.3rem 0.6rem;
-                                                                 border-radius:0 0.2rem 0.2rem 0;
-                                                                 background-color:var(--blue5);
+                                                 #submit-search-btn {width:3rem;
+                                                                     height:100%;
+                                                                     padding:0.3rem 0.6rem;
+                                                                     border-radius:0 0.2rem 0.2rem 0;
+                                                                     background:transparent;
 
-                                                        #submit-searchi {color:var(--blue2);}
+                                                        svg {color:var(--blue6);}
                                                  }
                                           }
 

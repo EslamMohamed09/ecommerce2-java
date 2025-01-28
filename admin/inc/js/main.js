@@ -856,7 +856,6 @@ if(document.querySelector('.add-product-page')){
             ${indent}${category.name}${levelLabel}
           </option>`;
 
-        // Recursively process child categories
         arrangedHTML += arrangeCategories(categories, category.id, level + 1);
       });
       return arrangedHTML;

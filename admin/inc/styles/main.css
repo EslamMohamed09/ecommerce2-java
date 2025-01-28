@@ -282,7 +282,7 @@ body {
   --box-shadow3:0 0.3rem 4rem #252c2c2f;
   --box-shadow4:0 0 3px #eee;
   --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
-  --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
+  --box-shadow6:0 0 2px rgba(2, 2, 2, 0.158);
   --box-shadow7:0 0 3px rgba(2, 2, 2, 0.11);
   --box-shadow8:0 0 6px rgba(2, 2, 2, 0.199);
   --box-shadow9:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
@@ -1587,7 +1587,7 @@ table tbody tr td img {
   box-shadow: var(--box-shadow6);
   background-color: var(--white);
 }
-.manage-table-block .table-details .form-search {
+.manage-table-block .table-details .search-form {
   flex-wrap: nowrap;
   width: 30%;
   padding: 0;
@@ -1595,7 +1595,7 @@ table tbody tr td img {
   box-shadow: none;
   border: 1px solid var(--gray3);
 }
-.manage-table-block .table-details .form-search input[type=search] {
+.manage-table-block .table-details .search-form input[type=search] {
   width: calc(100% - 3rem);
   font-size: 1.1rem;
   padding: 0.3rem 0.8rem 0.3rem 0.6rem;
@@ -1604,14 +1604,14 @@ table tbody tr td img {
   background-color: transparent;
   border-radius: 0.2rem 0 0 0.2rem;
 }
-.manage-table-block .table-details .form-search #submit-search {
+.manage-table-block .table-details .search-form #submit-search {
   width: 3rem;
   height: 100%;
   padding: 0.3rem 0.6rem;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: var(--blue5);
 }
-.manage-table-block .table-details .form-search #submit-search #submit-searchi {
+.manage-table-block .table-details .search-form #submit-search #submit-searchi {
   color: var(--blue2);
 }
 .manage-table-block .table-details .counting {
@@ -4161,32 +4161,34 @@ header .small-menu .small-menu-link {
   box-shadow: none;
   background-color: var(--white);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .search-form {
   flex-wrap: nowrap;
   width: 30%;
   padding: 0;
-  border-radius: 0.2rem 0 0 0.2rem;
-  box-shadow: none;
-  border: 1px solid var(--gray3);
+  border-radius: 0.3rem;
+  background: var(--gray1);
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search input[type=search] {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .search-form input[type=search] {
   width: calc(100% - 3rem);
   font-size: 1.1rem;
-  padding: 0.3rem 0.8rem 0.3rem 0.6rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.6rem;
   box-shadow: none;
   color: var(--gray10);
   background-color: transparent;
   border-radius: 0.2rem 0 0 0.2rem;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search #submit-search {
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .search-form input[type=search]:focus {
+  background: var(--yellow3);
+}
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .search-form #submit-search-btn {
   width: 3rem;
   height: 100%;
   padding: 0.3rem 0.6rem;
   border-radius: 0 0.2rem 0.2rem 0;
-  background-color: var(--blue5);
+  background: transparent;
 }
-.products-page .products-page-container .managing-products .manage-products-table-block .table-header .form-search #submit-search #submit-searchi {
-  color: var(--blue2);
+.products-page .products-page-container .managing-products .manage-products-table-block .table-header .search-form #submit-search-btn svg {
+  color: var(--blue6);
 }
 .products-page .products-page-container .managing-products .manage-products-table-block .table-header .add-product-btn {
   width: 9rem;
