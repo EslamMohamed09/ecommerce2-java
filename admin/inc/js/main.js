@@ -520,7 +520,7 @@ fetch('pages/customers.json').then(response => response.json())
   const customers = data.customers;
   const manageCustomersTable = document.querySelector('.customers-page #manage-customers-table');
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
-  const customersCountElement = document.querySelector('.customers-page .table-details .counting .no');
+  const customersCountElement = document.querySelector('.customers-page .table-header .counting .no');
         customersCountElement.textContent = customers.length;
 
   function renderCustomersTable(customers){
@@ -746,9 +746,9 @@ fetch('database/products.json').then(response => response.json())
           </label>
         </td>
         <td>
-          <div class="product-field d-flex-r-st-c">
+          <div class="title-field d-flex-r-st-c">
             <a href="#" class="image"><img src="${product.image[0]}" alt=""></a>
-            <a href="#" class="product-title">${truncateTitle}</a>
+            <a href="#" class="title">${truncateTitle}</a>
           </div>
         </td>  
         <td>${product.id}</td>
@@ -848,7 +848,7 @@ fetch('database/users.json').then(response => response.json())
 .then(data => {
   const users = data.users
   const manageUsersTable = document.querySelector('#users-page #manage-users-table');
-  const usersCountElement = document.querySelector('#users-page .table-details .counting .no');
+  const usersCountElement = document.querySelector('#users-page .table-header .counting .no');
         usersCountElement.textContent = users.length;
   const paginationContainer = document.querySelector('.manage-table-form .pagination');
     
@@ -865,9 +865,9 @@ fetch('database/users.json').then(response => response.json())
             </label>
           </td>
           <td>
-            <div class="product-field d-flex-r-st-c">
+            <div class="title-field d-flex-r-st-c">
               <a href="#" class="image"><img src="${user.image}" alt=""></a>
-              <a href="#" class="product-title">${user.username}</a>
+              <a href="#" class="title">${user.username}</a>
             </div>
           </td>
           <td>${user.email}</td>
