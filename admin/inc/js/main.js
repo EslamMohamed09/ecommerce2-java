@@ -496,45 +496,6 @@ collapsibleProfileBtn.addEventListener("click", function() {
 });
 }
 
-// Appear Multiple Buttons & Select all items
-function attachCheckboxListeners(){
-  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
-    const firstHeadCheckBoxes = managetable.querySelector("#first-head-checkbox");
-    const secondHeadCheckBoxes = managetable.querySelector("#second-head-checkbox");
-    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
-    const submitBttnsHolder = managetable.querySelector(".submit-buttons-holder");
-
-    if (firstHeadCheckBoxes && secondHeadCheckBoxes){
-        
-        function checkedCheckBoxes(){
-          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
-          if(selectedCheckBoxes.length > 1){
-            submitBttnsHolder.style.display = "flex";
-          } else {
-            submitBttnsHolder.style.display = "none";
-          }
-        }
-
-        checkboxes.forEach(checkbox => {
-          checkbox.addEventListener("change", checkedCheckBoxes);
-        });
-
-        firstHeadCheckBoxes.addEventListener("change", () => {
-          checkboxes.forEach(checkbox => checkbox.checked = firstHeadCheckBoxes.checked);
-          secondHeadCheckBoxes.checked = firstHeadCheckBoxes.checked;
-          checkedCheckBoxes();
-        });
-
-        secondHeadCheckBoxes.addEventListener("change", () => {
-          checkboxes.forEach(checkbox => checkbox.checked = secondHeadCheckBoxes.checked);
-          checkboxes.checked = secondHeadCheckBoxes.checked;
-          firstHeadCheckBoxes.checked = secondHeadCheckBoxes.checked;
-          checkedCheckBoxes();
-        });
-    }
-  });
-}
-
 /*
  ===============================
  ######## CUSTOMERS PAGE #######
@@ -589,7 +550,6 @@ fetch('pages/customers.json').then(response => response.json())
       `;
       manageCustomersTable.appendChild(row);
     });
-    attachCheckboxListeners();
   }
 
   pagination(customers, 10, renderCustomersTable, paginationContainer);
@@ -638,7 +598,6 @@ fetch('database/categories.json').then(response => response.json())
       `;
       manageCategoriesTable.appendChild(row);
     });
-    attachCheckboxListeners();
   }
 
   pagination(categories, 10, renderCategoryContent, paginationContainer);
@@ -812,7 +771,7 @@ fetch('database/products.json').then(response => response.json())
     });
     displayListActionButtons();
   }
-  
+
   pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
 
@@ -885,7 +844,7 @@ if(document.querySelector('.add-product-page')){
 */
 if(document.querySelector('#users-page')){
 
-fetch('pages/users.json').then(response => response.json())
+fetch('database/users.json').then(response => response.json())
 .then(data => {
   const users = data.users
   const manageUsersTable = document.querySelector('#users-page #manage-users-table');
@@ -899,26 +858,30 @@ fetch('pages/users.json').then(response => response.json())
       const row = document.createElement('tr');
       row.innerHTML = `
         <tr>
-          <td><input type="checkbox" id="user-${user.id}" name="checkbox[]" class="checkboxinput"></td>
           <td>
-            <label for="user-${user.id}">${user.username}</label>
-            <div class="buttons"> 
-              <a href="edituser.html" target="_blank">edit</a>|
-              <a href="#" class="confirm">delete</a>| 
-              <i class="fas fa-check"></i>
-            </div> 
+            <label class="checkbox-label">
+              <input type="checkbox" name="checkbox[]">
+              <span class="checkmark"></span>
+            </label>
+          </td>
+          <td>
+            <div class="product-field d-flex-r-st-c">
+              <a href="#" class="image"><img src="${user.image}" alt=""></a>
+              <a href="#" class="product-title">${user.username}</a>
+            </div>
           </td>
           <td>${user.email}</td>
           <td>${user.fullname}</td>
-          <td><p style="color:green;">${user.groupId}</p></td>
-          <td><p class="activated">${user.regStatus}</p></td>
+          <td>${user.groupId}</td>
+          <td>${user.regStatus}</td>
           <td>${user.date}</td>
           <td>${user.id}</td>
         </tr>
       `;
       manageUsersTable.appendChild(row);
     });
-    attachCheckboxListeners();
+    
+    displayListActionButtons();
   }
 
   pagination(users, 10, renderUsersTable, paginationContainer);
