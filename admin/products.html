@@ -22,230 +22,226 @@
 
     <h1 class="section-heading">products</h1>
 
-    <div class="managing-products d-flex-r-st-st">
+    <div class="manage-products-table-block manage-table-block">
 
-      <div class="manage-products-table-block">
+      <div class="table-header d-flex-r-st-c">
+        <form class="search-form d-flex-r-st-c" action="" method="POST">
+          <input type="search" name="search" placeholder="Search Product">
+          <button type="submit" name="submit-search" id="submit-search-btn"><i class="fas fa-search" id="submit-searchi"></i></button>
+        </form>
+        <button class="add-product-btn"><span><i class="fas fa-plus"></i>add product</span></button>
+        <button class="export-btn"><i class="fas fa-file-upload"></i>export</button>
+      </div>
 
-        <div class="table-header d-flex-r-st-c">
-          <form class="search-form d-flex-r-st-c" action="" method="POST">
-            <input type="search" name="search" placeholder="Search Product">
-            <button type="submit" name="submit-search" id="submit-search-btn"><i class="fas fa-search" id="submit-searchi"></i></button>
-          </form>
-          <button class="add-product-btn"><span><i class="fas fa-plus"></i>add product</span></button>
-          <button class="export-btn"><i class="fas fa-file-upload"></i>export</button>
+      <form action="" class="manage-products-table-form manage-table-form d-flex-c-st-st">
+        <table>
+
+          <thead>
+            <tr>
+              <th>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]" id="head-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </th>
+              <th>product</th>
+              <th>sku</th>
+              <th>stock</th>
+              <th>price</th>
+              <th>rating</th>
+              <th>status</th>
+              <th>category</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="products-tbody">
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div class="product-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/watches/1/1.png" alt=""></a>
+                  <a href="#" class="product-title">tomaroh</a>
+                </div>
+              </td>  
+              <td>sku</td>
+              <td>300</td>
+              <td>$250</td>
+              <td>
+                <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.2</span></div>
+              </td>
+              <td>sheduled</td>
+              <td>watches</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div class="product-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/phones/oppo1/1.png" alt=""></a>
+                  <a href="#" class="product-title">oppo f31</a>
+                </div>
+              </td>
+              <td>sku</td>
+              <td>200</td>
+              <td>$270</td>
+              <td>
+                <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.5</span></div>
+              </td>
+              <td>sheduled</td>
+              <td>phones</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div class="product-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/clothes/men/sweatshirt/10/1.jpg" alt=""></a>
+                  <a href="#" class="product-title">Lulucleaf Men's Casual</a>
+                </div>
+              </td>
+              <td>sku</td>
+              <td>200</td>
+              <td>$90</td>
+              <td>
+                <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.3</span></div>
+              </td>
+              <td>sheduled</td>
+              <td>sweatshirts</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div class="product-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/clothes/men/sweatshirt/12/1.jpg" alt=""></a>
+                  <a href="#" class="product-title">Gesean Men's Casual Long Sleeve</a>
+                </div>
+              </td>
+              <td>sku</td>
+              <td>372</td>
+              <td>$31</td>
+              <td>
+                <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>5</span></div>
+              </td>
+              <td>sheduled</td>
+              <td>sweatshirt</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div class="product-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/laptops/lenovo/1/1.png" alt=""></a>
+                  <a href="#" class="product-title">Lenovo Ideapad 3 14</a>
+                </div>
+              </td>
+              <td>sku</td>
+              <td>110</td>
+              <td>$1000</td>
+              <td>
+                <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.5</span></div>
+              </td>
+              <td>sheduled</td>
+              <td>laptops</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div class="product-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/laptops/lenovo/2/1.png" alt=""></a>
+                  <a href="#" class="product-title">Lenovo IdeaPad 3 15.6</a>
+                </div>
+              </td>
+              <td>sku</td>
+              <td>160</td>
+              <td>$1000</td>
+              <td>
+                <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>5</span></div>
+              </td>
+              <td>sheduled</td>
+              <td>laptops</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          
+        </table>
+
+        <div class="action-buttons-block">
+          <div class="action-buttons-holder d-flex-r-st-c">
+            <input type="submit" name="multipledelete" value="delete" class="btn2 delete-submit">
+          </div>
         </div>
 
-        <form action="" class="manage-products-table-form manage-table-form d-flex-c-st-st">
-          <table>
-
-            <thead>
-              <tr>
-                <th>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </th>
-                <th>product</th>
-                <th>sku</th>
-                <th>stock</th>
-                <th>price</th>
-                <th>rating</th>
-                <th>status</th>
-                <th>category</th>
-                <th>actions</th>
-              </tr>
-            </thead>
-
-            <tbody id="products-tbody">
-              <tr>
-                <td>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <td>
-                  <div class="product-field d-flex-r-st-c">
-                    <a href="#" class="image"><img src="inc/images/electronics/watches/1/1.png" alt=""></a>
-                    <a href="#" class="product-title">tomaroh</a>
-                  </div>
-                </td>  
-                <td>sku</td>
-                <td>300</td>
-                <td>$250</td>
-                <td>
-                  <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.2</span></div>
-                </td>
-                <td>sheduled</td>
-                <td>watches</td>
-                <td>
-                  <div class="action-buttons d-flex-r-c-c">
-                    <button class="view"><i class="fas fa-eye"></i></button>
-                    <button class="edit"><i class="far fa-edit"></i></button>
-                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <td>
-                  <div class="product-field d-flex-r-st-c">
-                    <a href="#" class="image"><img src="inc/images/electronics/phones/oppo1/1.png" alt=""></a>
-                    <a href="#" class="product-title">oppo f31</a>
-                  </div>
-                </td>
-                <td>sku</td>
-                <td>200</td>
-                <td>$270</td>
-                <td>
-                  <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.5</span></div>
-                </td>
-                <td>sheduled</td>
-                <td>phones</td>
-                <td>
-                  <div class="action-buttons d-flex-r-c-c">
-                    <button class="view"><i class="fas fa-eye"></i></button>
-                    <button class="edit"><i class="far fa-edit"></i></button>
-                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <td>
-                  <div class="product-field d-flex-r-st-c">
-                    <a href="#" class="image"><img src="inc/images/clothes/men/sweatshirt/10/1.jpg" alt=""></a>
-                    <a href="#" class="product-title">Lulucleaf Men's Casual</a>
-                  </div>
-                </td>
-                <td>sku</td>
-                <td>200</td>
-                <td>$90</td>
-                <td>
-                  <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.3</span></div>
-                </td>
-                <td>sheduled</td>
-                <td>sweatshirts</td>
-                <td>
-                  <div class="action-buttons d-flex-r-c-c">
-                    <button class="view"><i class="fas fa-eye"></i></button>
-                    <button class="edit"><i class="far fa-edit"></i></button>
-                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <td>
-                  <div class="product-field d-flex-r-st-c">
-                    <a href="#" class="image"><img src="inc/images/clothes/men/sweatshirt/12/1.jpg" alt=""></a>
-                    <a href="#" class="product-title">Gesean Men's Casual Long Sleeve</a>
-                  </div>
-                </td>
-                <td>sku</td>
-                <td>372</td>
-                <td>$31</td>
-                <td>
-                  <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>5</span></div>
-                </td>
-                <td>sheduled</td>
-                <td>sweatshirt</td>
-                <td>
-                  <div class="action-buttons d-flex-r-c-c">
-                    <button class="view"><i class="fas fa-eye"></i></button>
-                    <button class="edit"><i class="far fa-edit"></i></button>
-                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <td>
-                  <div class="product-field d-flex-r-st-c">
-                    <a href="#" class="image"><img src="inc/images/electronics/laptops/lenovo/1/1.png" alt=""></a>
-                    <a href="#" class="product-title">Lenovo Ideapad 3 14</a>
-                  </div>
-                </td>
-                <td>sku</td>
-                <td>110</td>
-                <td>$1000</td>
-                <td>
-                  <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>4.5</span></div>
-                </td>
-                <td>sheduled</td>
-                <td>laptops</td>
-                <td>
-                  <div class="action-buttons d-flex-r-c-c">
-                    <button class="view"><i class="fas fa-eye"></i></button>
-                    <button class="edit"><i class="far fa-edit"></i></button>
-                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-product">
-                    <input type="checkbox" name="checkbox[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
-                <td>
-                  <div class="product-field d-flex-r-st-c">
-                    <a href="#" class="image"><img src="inc/images/electronics/laptops/lenovo/2/1.png" alt=""></a>
-                    <a href="#" class="product-title">Lenovo IdeaPad 3 15.6</a>
-                  </div>
-                </td>
-                <td>sku</td>
-                <td>160</td>
-                <td>$1000</td>
-                <td>
-                  <div class="rating d-flex-r-c-c"><i class="fas fa-star"></i><span>5</span></div>
-                </td>
-                <td>sheduled</td>
-                <td>laptops</td>
-                <td>
-                  <div class="action-buttons d-flex-r-c-c">
-                    <button class="view"><i class="fas fa-eye"></i></button>
-                    <button class="edit"><i class="far fa-edit"></i></button>
-                    <button class="delete"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-            
-          </table>
-
-          <div class="submit-buttons-block">
-            <div class="submit-buttons-holder d-flex-r-st-c">
-              <input type="submit" name="multipledelete" value="delete" class="btn2">
-            </div>
-          </div>
-
-          <div class="pagination"></div>
-        </form>
-
-      </div>
+        <div class="pagination"></div>
+      </form>
 
     </div>
 

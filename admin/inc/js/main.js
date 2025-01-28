@@ -781,7 +781,7 @@ fetch('database/products.json').then(response => response.json())
       const truncateTitle = truncateWords(product.title, 4);
       row.innerHTML = `
         <td>
-          <label class="checkbox-product">
+          <label class="checkbox-label">
             <input type="checkbox" name="checkbox[]">
             <span class="checkmark"></span>
           </label>
@@ -810,8 +810,9 @@ fetch('database/products.json').then(response => response.json())
       `;
       productstbody.appendChild(row);
     });
+    displayListActionButtons();
   }
-
+  
   pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
 
@@ -1129,6 +1130,40 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
   renderPage(1);
   renderPagination(1);
+}
+
+/*
+ ######################
+ ####### GLOBAL #######
+ ######################
+*/
+function displayListActionButtons(){
+  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
+    const headCheckBox = managetable.querySelector("#head-checkbox");
+    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
+    const actionBtnsHolder = managetable.querySelector(".action-buttons-holder");
+
+    if (headCheckBox){
+        
+        function checkedCheckBoxes(){
+          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
+          if(selectedCheckBoxes.length > 1){
+             actionBtnsHolder.style.display = "flex";
+          } else {
+            actionBtnsHolder.style.display = "none";
+          }
+        }
+
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener("change", checkedCheckBoxes);
+        });
+
+        headCheckBox.addEventListener("change", () => {
+          checkboxes.forEach(checkbox => checkbox.checked = headCheckBox.checked);
+          checkedCheckBoxes();
+        });
+    }
+  });
 }
 
 function truncateWords(text, wordsCount){

@@ -49,7 +49,12 @@
 
           <thead>
             <tr>
-              <th><input type="checkbox" id="first-head-checkbox" class="checkboxinput"></th>
+              <th>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]" id="head-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </th>
               <th><label for="first-head-checkbox">Username</label></th>
               <th>Email</th>
               <th>Full Name</th>
@@ -61,39 +66,17 @@
           </thead>
 
           <tbody id="manage-users-table"></tbody>
-
-          <thead>
-            <tr>
-              <th><input type="checkbox" id="second-head-checkbox" class="checkboxinput"></th>
-              <th><label for="second-head-checkbox">username</label></th>
-              <th>Email</th>
-              <th>Full Name</th>
-              <th>Rank</th>
-              <th>status</th>
-              <th>Registerd Date</th>
-              <th>ID</th>
-            </tr>
-          </thead>
       
         </table>
 
-        <div class="submit-buttons-block">
-          <div class="submit-buttons-holder d-flex-r-st-c">
-            <input type="submit" name="multipledelete" value="delete" class="btn2" style="padding:0.5rem 1rem;">
-            <input type="submit" name="multipleapprove" value="approve" class="btn2" style="padding:0.5rem 1rem;">
+        <div class="action-buttons-block">
+          <div class="action-buttons-holder d-flex-r-st-c">
+            <input type="submit" name="multipledelete" value="delete" class="btn2 delete-submit">
+            <input type="submit" name="multipleapprove" value="approve" class="btn2 approve-submit">
           </div>
         </div>
 
-        <div class="pagination">
-            
-          <a href="#" class="pagination-link">previous</a>
-
-          <a href="#" class="pagination-link active">1</a>
-          <a href="#" class="pagination-link">2</a>
-
-          <a href="#" class="pagination-link">next</a>
-
-        </div>
+        <div class="pagination"></div>
 
       </form>
 
