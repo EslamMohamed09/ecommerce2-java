@@ -2872,11 +2872,69 @@ header {width:100%;
 .customers-page {
        .customers-page-container {
               .manage-customers-table-block {
+                     
+                     .table-header {width:100%;
+                                    gap:2.5rem;
+                                    padding:0.5rem 0.9rem;
+                                    margin:0;
+                                    margin-bottom:1rem;
+                                    background:transparent;
 
-                     /** table **/
+                            .search-form {flex-wrap:nowrap;
+                                          width:30%;
+                                          padding:0;
+                                          border-radius:0.3rem;
+                                          background:var(--gray1);
+                                          
+                                   input[type="search"] {width:calc(100% - 3rem);
+                                                        font-size:1.1rem;
+                                                        padding:0.4rem 0.8rem 0.4rem 0.6rem;
+                                                        box-shadow:none;
+                                                        color:var(--gray10);
+                                                        background-color:transparent;
+                                                        border-radius:0.2rem 0 0 0.2rem;
+                                                 &:focus {background:var(--yellow3);}
+                                   }
+
+                                   #submit-search-btn {width:3rem;
+                                                 height:100%;
+                                                 padding:0.3rem 0.6rem;
+                                                 border-radius:0 0.2rem 0.2rem 0;
+                                                 background:transparent;
+
+                                          svg {color:var(--blue6);}
+                                   }
+                            }
+
+                            .counting {font-weight:bold;
+                                       font-size:1.1rem;
+                                       color:var(--gray10);
+
+                                   .no {padding:0.3rem 1rem;
+                                        font-size:1.1rem;
+                                        border-radius:1.5rem;
+                                        margin-left:0.5rem;
+                                        color:var(--milky2);
+                                        background-color:var(--blue4);}
+                            }
+
+                            .ordering-btns {font-size:1.1rem;
+                                          font-weight:bold;
+                                          color:var(--gray10);
+
+                                   > a {font-weight:bold;
+                                   font-size:1.1rem;
+                                   color:var(--gray10);}
+
+                                   > a:hover {color:var(--primary1);}
+                            }
+
+                            @media (max-width:550px) { & {justify-content:space-between;} }
+                            @media (max-width:500px){ .counting span:first-child {display:none;} }
+                     }
+
                      table {
                             
-                            /* body */
                             tbody {
                                    tr:nth-child(even) {background-color:var(--transparent-orange);}
                      

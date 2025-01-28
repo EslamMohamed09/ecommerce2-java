@@ -24,7 +24,7 @@
 
     <div class="manage-customers-table-block manage-table-block">
 
-      <div class="table-header">
+      <div class="table-header d-flex-r-bt-c">
 
         <form class="search-form d-flex-r-st-c" action="customer_search.php" method="POST">
           <input type="search" name="search" placeholder="Search Customer" id="searchinput-customers">
@@ -49,11 +49,14 @@
 
           <thead>
             <tr>
-              <th><input type="checkbox" id="first-head-checkbox" class="checkboxinput"></th>
+              <th><label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]" id="head-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </th>
               <th><label for="first-head-checkbox">fullname</label></th>
               <th>email</th>
               <th>phone no.</th>
-              <th>image</th>
               <th>gender</th>
               <th>country</th>
               <th>city</th>
@@ -66,28 +69,11 @@
 
           <tbody id="manage-customers-table"></tbody>
 
-          <thead>
-            <tr>
-              <th><input type="checkbox" id="second-head-checkbox" class="checkboxinput"></th>
-              <th><label for="second-head-checkbox">fullname</label></th>
-              <th>email</th>
-              <th>phone no.</th>
-              <th>image</th>
-              <th>gender</th>
-              <th>country</th>
-              <th>city</th>
-              <th>po. code</th>
-              <th>question</th>
-              <th>date</th>
-              <th>iD</th>
-            </tr>
-          </thead>
-
         </table>
 
-        <div class="submit-buttons-block">
-          <div class="submit-buttons-holder d-flex-r-st-c">
-            <input type="submit" name="multipledelete" value="delete" class="btn2">
+        <div class="action-buttons-block">
+          <div class="action-buttons-holder d-flex-r-st-c">
+            <input type="submit" name="multipledelete" value="delete" class="btn2 delete-btn">
           </div>
         </div>
 

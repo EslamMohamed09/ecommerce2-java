@@ -515,7 +515,7 @@ if(document.getElementById("visaInput")){
 }
 
 if(document.querySelector('.customers-page')){
-fetch('pages/customers.json').then(response => response.json())
+fetch('database/customers.json').then(response => response.json())
 .then(data => {
   const customers = data.customers;
   const manageCustomersTable = document.querySelector('.customers-page #manage-customers-table');
@@ -529,17 +529,20 @@ fetch('pages/customers.json').then(response => response.json())
     customers.forEach((customer) => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td><input type="checkbox" name="checkbox[]" id="cu-name-${customer.id}"></td>
         <td>
-          <label for="cu-name-${customer.id}">${customer.fullname}</label>
-          <div class="buttons">
-            <a href="editcustomer.html" target="_blank">edit</a>|
-            <a href="#" class="confirm">delete</a>
+          <label class="checkbox-label">
+            <input type="checkbox" name="checkbox[]">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td>
+          <div class="title-field d-flex-r-st-c">
+            <a href="#" class="image"><img src="${customer.cust_image}" alt=""></a>
+            <a href="#" class="title">${customer.fullname}</a>
           </div>
         </td>
         <td>${customer.email}</td>
         <td>${customer.phone_no}</td>
-        <td><img src="${customer.cust_image}" alt=""></td>
         <td>${customer.gender}</td>
         <td>${customer.country}</td>
         <td>${customer.city}</td>
@@ -550,8 +553,9 @@ fetch('pages/customers.json').then(response => response.json())
       `;
       manageCustomersTable.appendChild(row);
     });
+    
+    displayListActionButtons();
   }
-
   pagination(customers, 10, renderCustomersTable, paginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
 }
@@ -1015,6 +1019,40 @@ fetch('database/users.json').then(response => response.json())
 }
 
 
+/*
+ ######################
+ ####### GLOBAL #######
+ ######################
+*/
+function displayListActionButtons(){
+  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
+    const headCheckBox = managetable.querySelector("#head-checkbox");
+    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
+    const actionBtnsHolder = managetable.querySelector(".action-buttons-holder");
+
+    if (headCheckBox){
+        
+        function checkedCheckBoxes(){
+          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
+          if(selectedCheckBoxes.length > 1){
+             actionBtnsHolder.style.display = "flex";
+          } else {
+            actionBtnsHolder.style.display = "none";
+          }
+        }
+
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener("change", checkedCheckBoxes);
+        });
+
+        headCheckBox.addEventListener("change", () => {
+          checkboxes.forEach(checkbox => checkbox.checked = headCheckBox.checked);
+          checkedCheckBoxes();
+        });
+    }
+  });
+}
+
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
@@ -1093,40 +1131,6 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
   renderPage(1);
   renderPagination(1);
-}
-
-/*
- ######################
- ####### GLOBAL #######
- ######################
-*/
-function displayListActionButtons(){
-  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
-    const headCheckBox = managetable.querySelector("#head-checkbox");
-    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
-    const actionBtnsHolder = managetable.querySelector(".action-buttons-holder");
-
-    if (headCheckBox){
-        
-        function checkedCheckBoxes(){
-          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
-          if(selectedCheckBoxes.length > 1){
-             actionBtnsHolder.style.display = "flex";
-          } else {
-            actionBtnsHolder.style.display = "none";
-          }
-        }
-
-        checkboxes.forEach(checkbox => {
-          checkbox.addEventListener("change", checkedCheckBoxes);
-        });
-
-        headCheckBox.addEventListener("change", () => {
-          checkboxes.forEach(checkbox => checkbox.checked = headCheckBox.checked);
-          checkedCheckBoxes();
-        });
-    }
-  });
 }
 
 function truncateWords(text, wordsCount){
