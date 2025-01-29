@@ -617,6 +617,26 @@ fetch('database/categories.json').then(response => response.json())
 */
 if(document.querySelector('.orders-list-page')){
 
+  async function loadOrders(){
+    const response = await fetch('database/orders.json');
+    if(!response.ok){throw new Error('Failed to load orders')}
+    const data = await response.json();
+    return data.orders;
+  }
+
+  async function displayOrders(){
+    try {
+
+      const orders = await loadOrders();
+     
+
+    } catch (error) {
+      console.error('failed to load orders', error);
+    }
+  }
+
+  displayOrders();
+
   filterItems(document.querySelectorAll('.orders-list-page .all-orders-count-menu li'), 
               document.querySelectorAll('.orders-list-page .manage-orders-table-form #orders-list-tbody tr'));
 
