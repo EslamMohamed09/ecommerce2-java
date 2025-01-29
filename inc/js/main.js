@@ -544,7 +544,7 @@ function blockSlider(options) {
     attachEvents();
 }
 
-function filterTabs(tabs, blocks){
+function filterOfferTabs(tabs, blocks){
 
   if (tabs.length === 0 || blocks.length === 0) return;
 
@@ -665,7 +665,7 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
 
       offersBlock.forEach((block) => {block.style.display = "none"});
 
-      filterTabs(document.querySelectorAll('.offers-section .left-block .tabs li'), offersBlock);
+      filterOfferTabs(document.querySelectorAll('.offers-section .left-block .tabs li'), offersBlock);
 
   }).catch(error => {
     console.error('Error fetching products:', error);
@@ -776,7 +776,7 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 
       offersBlock.forEach((block) => {block.style.display = "none"});
 
-      filterTabs(document.querySelectorAll('.offers-section .right-block .tabs li'), offersBlock);
+      filterOfferTabs(document.querySelectorAll('.offers-section .right-block .tabs li'), offersBlock);
 
     }).catch(error => {
        console.error('Error fetching products:', error);

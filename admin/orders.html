@@ -26,7 +26,20 @@
     <div class="manage-orders-block">
 
       <div class="table-header">
-
+        <div class="actions-bar d-flex-r-st-c">
+          <form class="search-form d-flex-r-st-c" action="" method="POST">
+            <input type="search" name="search" placeholder="Search Product">
+            <button type="submit" name="submit-search" id="submit-search-btn"><i class="fas fa-search" id="submit-searchi"></i></button>
+          </form>
+          <button class="export-btn"><i class="fas fa-file-upload"></i>export</button>
+          <button class="create-order-btn">create order</button>
+        </div>
+        <ul class="all-orders-count-menu d-flex-r-st-c">
+          <li class="all"><p>all</p> <span>32</span></li>
+          <li class="delivered"><p>delivered</p> <span>21</span></li>
+          <li class="pending"><p>pending</p> <span>6</span></li>
+          <li class="canceled"><p>canceled</p> <span>3</span></li>
+        </ul>
       </div>
       
       <form action="" class="manage-orders-table-form">
@@ -52,7 +65,7 @@
           </thead>
 
           <tbody id="orders-list-tbody">
-            <tr>
+            <tr class="delivered">
               <td>
                 <label class="checkbox-label">
                   <input type="checkbox" name="checkbox[]">
@@ -81,7 +94,7 @@
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr class="pending">
               <td>
                 <label class="checkbox-label">
                   <input type="checkbox" name="checkbox[]">
@@ -110,7 +123,7 @@
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr class="canceled">
               <td>
                 <label class="checkbox-label">
                   <input type="checkbox" name="checkbox[]">

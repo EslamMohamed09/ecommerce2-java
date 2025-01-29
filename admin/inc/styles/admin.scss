@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {margin:0;
    padding:0;
@@ -8,7 +8,7 @@
    list-style:none;
    text-decoration:none !important;
    text-transform:capitalize;
-   font-family:'Nunito', sans-serif;
+   font-family:"Nunito", sans-serif;
    scroll-behavior:smooth;
    transition:all 0.4s linear;}
 
@@ -17,7 +17,8 @@ html {font-size:83%}
 body {overflow-x:hidden;
       background-color:var(--background-color);}
 
-:root {--gray:#f2f2f7;
+:root {--lightgray:#fbfbfd;
+       --gray:#f2f2f7;
        --gray1:#f0f0f8;
        --gray2:#ebebee;
        --gray3:#e5e5e7;
@@ -3038,6 +3039,106 @@ header {width:100%;
                                     box-shadow:var(--box-shadow7);
                                     overflow-x:scroll;
 
+                     .table-header {display:block;
+                                    width:100%;
+                                    padding:0.5rem 1.3rem;
+                                    margin:0 0 1rem;
+                                    box-shadow:none;
+                                    background-color:transparent;
+
+                            .actions-bar {width:100%;
+                                          margin:0 0 1.5rem;
+                                          gap:1.5rem;
+
+                                   .search-form {flex-wrap:nowrap;
+                                                 flex:1 1 20rem;
+                                                 padding:0;
+                                                 border-radius:0.3rem;
+                                                 background:var(--lightgray);
+                                                 border:1px solid var(--gray);
+                                                 
+                                          input[type="search"] {width:calc(100% - 3rem);
+                                                                font-size:1.1rem;
+                                                                padding:0.5rem 0.8rem 0.5rem 0.6rem;
+                                                                box-shadow:none;
+                                                                color:var(--gray10);
+                                                                background-color:transparent;
+                                                                border-radius:0.2rem 0 0 0.2rem;
+                                                        &:focus {background:var(--yellow3);}
+                                          }
+
+                                          #submit-search-btn {width:3rem;
+                                                        height:100%;
+                                                        padding:0.3rem 0.6rem;
+                                                        border-radius:0 0.2rem 0.2rem 0;
+                                                        background:transparent;
+
+                                                 svg {color:var(--blue6);}
+                                          }
+                                   }
+
+                                   .export-btn {width:8rem;
+                                                height:2.7rem;
+                                                margin-left:auto;
+                                                border-radius:0.3rem;
+                                                font-size:1.5rem;
+                                                font-weight:bold;
+                                                text-transform:capitalize;
+                                                display:flex;
+                                                justify-content:center;
+                                                align-items:center;
+                                                border:0;
+                                                font-size:1rem;                                                       
+                                                user-select:none;
+                                                cursor:pointer;
+                                                color:var(--blue11);
+                                                background:var(--lightblue2);
+
+                                          svg {font-size:1.1rem;
+                                               margin-right:0.5rem;}
+                                   }
+
+                                   .create-order-btn {width:9rem;
+                                                      height:2.7rem;
+                                                      padding:0.15rem;
+                                                      margin:0;
+                                                      font-size:1.1rem;
+                                                      border-radius:0.3rem;
+                                                      text-transform:capitalize;
+                                                      display:flex;
+                                                      justify-content:center;
+                                                      align-items:center;                                   
+                                                      user-select:none;
+                                                      cursor:pointer;
+                                                      color:var(--white);
+                                                      border-radius:0.3rem;
+                                                      background-image:linear-gradient(124deg, var(--blue5), var(--blue16) 70%);}
+                            }
+
+                            .all-orders-count-menu {gap:2rem;
+                                   > li {display:flex;
+                                         flex-direction:row;
+                                         justify-content:flex-start;
+                                         align-items:center;
+                                         gap:0.5rem;
+                                         cursor:pointer;
+
+                                          p {font-weight:bold;}
+
+                                          span {padding:0.2rem 0.6rem 0.1rem;
+                                                background:var(--lightblue);
+                                                border-radius:0.2rem;
+                                                font-weight:bold;}
+
+                                          &.active {
+                                                 p {color:var(--olive14);}
+                                                 span {color:var(--olive14);
+                                                       border:1px solid var(--olive14);}
+                                          }
+                                   }
+                            }
+                     }
+
                      table {width:100%;
                             margin-bottom:1.5rem;
                             border-radius:0;
@@ -3105,7 +3206,7 @@ header {width:100%;
                             }
 
                             tbody {
-                                   tr {
+                                   tr {width:100%;
                                           &:nth-child(even) {background-color:var(--background-color);}
 
                                           td {padding:1.1rem 0.9rem;
@@ -3220,8 +3321,7 @@ header {width:100%;
                                                                                        visibility:visible;
                                                                                        transform:scale(1);}
                                                  }
-                                          }
-                                          
+                                          }   
                                    }
 
                                    @media(max-width:768px){ tr td .buttons {bottom:0;

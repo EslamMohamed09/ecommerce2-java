@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +24,7 @@ body {
 }
 
 :root {
+  --lightgray:#fbfbfd;
   --gray:#f2f2f7;
   --gray1:#f0f0f8;
   --gray2:#ebebee;
@@ -3520,6 +3521,115 @@ header .small-menu .small-menu-link {
   box-shadow: var(--box-shadow7);
   overflow-x: scroll;
 }
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.3rem;
+  margin: 0 0 1rem;
+  box-shadow: none;
+  background-color: transparent;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  gap: 1.5rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .search-form {
+  flex-wrap: nowrap;
+  flex: 1 1 20rem;
+  padding: 0;
+  border-radius: 0.3rem;
+  background: var(--lightgray);
+  border: 1px solid var(--gray);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .search-form input[type=search] {
+  width: calc(100% - 3rem);
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.6rem;
+  box-shadow: none;
+  color: var(--gray10);
+  background-color: transparent;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .search-form input[type=search]:focus {
+  background: var(--yellow3);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .search-form #submit-search-btn {
+  width: 3rem;
+  height: 100%;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background: transparent;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .search-form #submit-search-btn svg {
+  color: var(--blue6);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .export-btn {
+  width: 8rem;
+  height: 2.7rem;
+  margin-left: auto;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  font-size: 1rem;
+  user-select: none;
+  cursor: pointer;
+  color: var(--blue11);
+  background: var(--lightblue2);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .export-btn svg {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .create-order-btn {
+  width: 9rem;
+  height: 2.7rem;
+  padding: 0.15rem;
+  margin: 0;
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 0.3rem;
+  background-image: linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu {
+  gap: 2rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li p {
+  font-weight: bold;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li span {
+  padding: 0.2rem 0.6rem 0.1rem;
+  background: var(--lightblue);
+  border-radius: 0.2rem;
+  font-weight: bold;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li.active p {
+  color: var(--olive14);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li.active span {
+  color: var(--olive14);
+  border: 1px solid var(--olive14);
+}
 .orders-list-page .orders-list-page-container .manage-orders-block table {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -3596,6 +3706,9 @@ header .small-menu .small-menu-link {
 .orders-list-page .orders-list-page-container .manage-orders-block table thead tr th:nth-child(3) {
   padding: 0.7rem 0.5rem 0.3rem 1.5rem;
   text-align: left;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr {
+  width: 100%;
 }
 .orders-list-page .orders-list-page-container .manage-orders-block table tbody tr:nth-child(even) {
   background-color: var(--background-color);

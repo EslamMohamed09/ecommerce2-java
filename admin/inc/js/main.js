@@ -617,6 +617,9 @@ fetch('database/categories.json').then(response => response.json())
 */
 if(document.querySelector('.orders-list-page')){
 
+  filterItems(document.querySelectorAll('.orders-list-page .all-orders-count-menu li'), 
+              document.querySelectorAll('.orders-list-page .manage-orders-table-form #orders-list-tbody tr'));
+
   const actionButtonsDropdownToggle = document.querySelectorAll('.orders-list-page .manage-orders-table-form .action-buttons-dropdown .action-buttons-dropdown-toggle');
 
   actionButtonsDropdownToggle.forEach((thisToggle) => {
@@ -1178,4 +1181,34 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
 function truncateWords(text, wordsCount){
   return text.split(' ').slice(0,wordsCount).join(' ');
+}
+
+function filterItems(tabs, items){
+
+  if (tabs.length === 0 || items.length === 0) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      let statusClass = tab.classList[0];
+
+      tabs.forEach((tab) => {tab.classList.remove('active')});
+      items.forEach((item) => {item.style.display = "none";});
+
+      tab.classList.add('active');
+      
+      if (statusClass === "all") {
+          items.forEach((item) => (item.style.display = "table-row"));
+      } else {
+        items.forEach((item) => {
+          if (item.classList.contains(statusClass)) {
+            item.style.display = "table-row";
+          }
+        });
+      }
+
+    });
+  });
+
+  const defaultTab = Array.from(tabs).find((tab) => tab.classList.contains("all"));
+  if (defaultTab) defaultTab.click();
 }
