@@ -15,15 +15,136 @@
 <body>
 <header class="header" id="header"></header>  
 
-<section class="dashboard-section" id="dashboard-section">
+<section class="dashboard-section orders-list-page" id="dashboard-section">
 
   <aside id="main-aside"></aside>
 
-  <div class="section-container main-orders"> 
+  <div class="orders-list-page-container page-container">
 
     <h1 class="section-heading">orders</h1>
 
-  </div> <!-- ===== section-container ==== -->
+    <div class="manage-orders-block">
+
+      <div class="table-header">
+
+      </div>
+      
+      <form action="" class="manage-orders-table-form">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]" id="head-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </th>
+              <th>order</th>
+              <th>customer</th>
+              <th>total</th>
+              <th>status</th>
+              <th>payment method</th>
+              <th>order date</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="orders-list-tbody">
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>67643</td>
+              <td>
+                <div class="title-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/watches/1/1.png" alt=""></a>
+                  <a href="#" class="title">eslam mohamed</a>
+                </div>
+              </td>  
+              <td>$250</td>
+              <td><p class="delivered">delivered</p></td>
+              <td>paypal</td>
+              <td>19 jan, 2025</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>67533</td>
+              <td>
+                <div class="title-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/watches/1/1.png" alt=""></a>
+                  <a href="#" class="title">mahmoud ali</a>
+                </div>
+              </td>  
+              <td>$210</td>
+              <td><p class="pending">pending</p></td>
+              <td>paypal</td>
+              <td>22 jan, 2025</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="checkbox[]">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>68591</td>
+              <td>
+                <div class="title-field d-flex-r-st-c">
+                  <a href="#" class="image"><img src="inc/images/electronics/watches/1/1.png" alt=""></a>
+                  <a href="#" class="title">saif mohamed</a>
+                </div>
+              </td>  
+              <td>$160</td>
+              <td><p class="canceled">canceled</p></td>
+              <td>paypal</td>
+              <td>26 jan, 2025</td>
+              <td>
+                <div class="action-buttons d-flex-r-c-c">
+                  <button class="view"><i class="fas fa-eye"></i></button>
+                  <button class="edit"><i class="far fa-edit"></i></button>
+                  <button class="delete"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          
+        </table>
+
+        <div class="action-buttons-block">
+          <div class="action-buttons-holder d-flex-r-st-c">
+            <input type="submit" name="multipledelete" value="delete" class="btn2 delete-submit">
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
 
 </section>
 

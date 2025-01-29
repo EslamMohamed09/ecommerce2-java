@@ -39,6 +39,8 @@ function loadHtml(selector, htmlContent, type){
   if(type === "aside"){document.dispatchEvent(new Event("asideLoaded"));}
 }
 
+if(document.querySelector('.header')){
+
 document.addEventListener('headerLoaded', () => {
   const themeToggler = document.getElementById("theme-toggler");
   const adjustIcon = document.getElementById("adjust-icon");
@@ -68,23 +70,23 @@ document.addEventListener('headerLoaded', () => {
       localStorage.setItem('ecommerce2-dashboard-theme', currentTheme);
   });
 
-  if(document.querySelector('.header')){
-    let dropmenu = document.querySelector('.header .right-header .content .drop-menu');
-    let rightheader = document.querySelector('.header .right-header');
-    const profileImg = document.querySelector('#profile-img');
+  let dropmenu = document.querySelector('.header .right-header .content .drop-menu');
+  let rightheader = document.querySelector('.header .right-header');
+  const profileImg = document.querySelector('.header .right-header #profile-img');
 
-    profileImg.onclick = (event) => {
-      event.stopPropagation(); // Prevents the click event from propagating to the document body
-      dropmenu.classList.toggle('dropactive');
-      rightheader.classList.remove('dropactive');
-    };
-    document.body.addEventListener('click', (event) => { // Add click event listener to the document body
-      if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
-          dropmenu.classList.remove('dropactive');
-      }
-    });
-  }
+  profileImg.onclick = (event) => {
+    event.stopPropagation(); // Prevents the click event from propagating to the document body
+    dropmenu.classList.toggle('dropactive');
+    rightheader.classList.remove('dropactive');
+  };
+  document.body.addEventListener('click', (event) => { // Add click event listener to the document body
+    if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
+        dropmenu.classList.remove('dropactive');
+    }
+  });
 });
+
+}
 
 if(window.location.pathname.split('/').pop().split('.')[0] !== "login"){
    loadHtml('#header', headerContent, "header");
@@ -379,7 +381,7 @@ document.addEventListener('asideLoaded', () => {
 
     /*** BIG & SMALL ASIDE ***/
     const asideMenu = document.getElementById("main-aside");
-    const sectionContainer = document.querySelector(".section-container");
+    const pageContainer = document.querySelector(".page-container");
     const asideComponent = document.querySelector("header .asidecomponent");
     const asideButton = document.getElementById("asidebutton");
     const asideButton2 = document.getElementById("asidebutton2");
@@ -415,10 +417,10 @@ document.addEventListener('asideLoaded', () => {
     function handleSectionMargin(){
       const mainAsideWidth = asideMenu.offsetWidth;
       if(window.innerWidth > 768){
-        sectionContainer.style.marginLeft = `${mainAsideWidth}px`;
-        if (asideMenu.classList.contains("smallaside")){sectionContainer.style.marginLeft = '4.3rem';}
+        pageContainer.style.marginLeft = `${mainAsideWidth}px`;
+        if (asideMenu.classList.contains("smallaside")){pageContainer.style.marginLeft = '4.3rem';}
       } else {
-        sectionContainer.style.marginLeft = '4.3rem';
+        pageContainer.style.marginLeft = '4.3rem';
       }
     }
 
@@ -430,7 +432,7 @@ document.addEventListener('asideLoaded', () => {
     asideButton2.addEventListener('click', toggleSmallAside);
     
     asideMenu.addEventListener("transitionend", handleSectionMargin);
-    sectionContainer.addEventListener("transitionend", handleSectionMargin);
+    pageContainer.addEventListener("transitionend", handleSectionMargin);
 });
 
 
@@ -610,6 +612,15 @@ fetch('database/categories.json').then(response => response.json())
 
 /*
  =============================
+ ######## ORDERS PAGE ######
+ =============================
+*/
+if(document.querySelector('.orders-list-page')){
+
+}
+
+/*
+ =============================
  ######## MESSAGES PAGE ######
  =============================
 */
@@ -619,9 +630,9 @@ if(document.querySelector('.messages-page')){
   const buttonsAsideProfileImg = document.querySelector('#buttonsAsideProfileimg');
   const chatDepartmentsBtns = document.querySelectorAll('.messages-page .chat-block .chat-departments button');
   const contactedPersonsLists = document.querySelectorAll('.messages-page .chat-block .contacted-persons .contacted-persons-menu li');
-  const conversations = document.querySelectorAll('.messages-page .chat-block .conversation .main-conversation .conversation-wrapper');
-  const conversationItemDropdownToggle = document.querySelectorAll('.messages-page .conversation .conversation-item .conversation-item-dropdown-toggle');
-  const startChat = document.querySelector('.messages-page .chat-block .conversation .main-conversation .start-chat');
+  const conversations = document.querySelectorAll('.messages-page .chat-block .main-conversation .core-conversation .conversation-wrapper');
+  const conversationItemDropdownToggle = document.querySelectorAll('.messages-page .main-conversation .conversation-item .conversation-item-dropdown-toggle');
+  const startChat = document.querySelector('.messages-page .chat-block .main-conversation .core-conversation .start-chat');
 
   buttonsAsideMenuLists.forEach((buttonsAsideMenuList) => {
     buttonsAsideMenuList.addEventListener('click', () => {
@@ -706,7 +717,6 @@ if(document.querySelector('.messages-page')){
     //   item.parentElement.classList.remove('active');
     // });
   });
-
   
   document.body.addEventListener('click', (event) => {
     conversationItemDropdownToggle.forEach((item) => {
