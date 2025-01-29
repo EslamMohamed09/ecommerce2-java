@@ -617,6 +617,47 @@ fetch('database/categories.json').then(response => response.json())
 */
 if(document.querySelector('.orders-list-page')){
 
+  const actionButtonsDropdownToggle = document.querySelectorAll('.orders-list-page .manage-orders-table-form .action-buttons-dropdown .action-buttons-dropdown-toggle');
+
+  actionButtonsDropdownToggle.forEach((thisToggle) => {
+    thisToggle.addEventListener('click', function(event){
+      event.stopPropagation();
+      const isActive = this.parentElement.classList.contains('active');
+      const dropdownMenu = this.nextElementSibling;
+
+      actionButtonsDropdownToggle.forEach((toggle) => {
+        toggle.parentElement.classList.remove('active');
+        toggle.nextElementSibling.style.top = '';
+        toggle.nextElementSibling.style.bottom = '';
+      });
+
+      if (!isActive) {
+          this.parentElement.classList.add('active');
+
+          const rect = dropdownMenu.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+
+          if(rect.bottom > viewportHeight){
+             dropdownMenu.style.top = 'auto';
+             dropdownMenu.style.bottom = '100%';
+          } else {
+            dropdownMenu.style.top = '100%';
+            dropdownMenu.style.bottom = 'auto';
+          }
+      } else {
+        this.parentElement.classList.remove('active');
+      }
+    });
+  });
+  
+  document.body.addEventListener('click', (event) => {
+    actionButtonsDropdownToggle.forEach((toggle) => {
+      if (!toggle.contains(event.target) && !toggle.parentElement.contains(event.target)) {
+          toggle.parentElement.classList.remove('active');
+      }
+    });
+  });
+
 }
 
 /*
@@ -704,18 +745,10 @@ if(document.querySelector('.messages-page')){
             dropdownMenu.style.top = '100%';
             dropdownMenu.style.bottom = 'auto';
           }
-        } else {
-          document.querySelectorAll('.conversation-item.active').forEach((item) => {
-            item.classList.remove('active');
-          });
-    
-          parent.classList.add('active');
-        }
+      } else {
+        this.parentElement.classList.remove('active'); 
+      }
     });
-
-    // item.parentElement.addEventListener('mouseleave', () => {
-    //   item.parentElement.classList.remove('active');
-    // });
   });
   
   document.body.addEventListener('click', (event) => {

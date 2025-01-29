@@ -3649,32 +3649,83 @@ header .small-menu .small-menu-link {
   color: var(--orange-red);
   text-align: center;
 }
-.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .action-buttons {
-  gap: 0.6rem;
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown {
+  position: relative;
+  transition: all 0.15s ease-in-out;
 }
-.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .action-buttons button {
-  width: 2.1rem;
-  height: 1.8rem;
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-dropdown-toggle {
+  color: var(--gray9);
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-dropdown-toggle svg {
+  font-size: 1.1rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-dropdown-toggle:focus, .orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-dropdown-toggle:active {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu {
+  position: absolute;
+  top: 100%;
+  right: 0.5rem;
   padding: 0;
+  border-radius: 0.2rem;
+  transform: scale(0.9);
+  transform-origin: left top;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow7);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in-out;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu li {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  text-align: center;
-  background: var(--lightblue4);
-  border-radius: 0.3rem;
-}
-.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .action-buttons button.view {
-  color: var(--gray11);
-}
-.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .action-buttons button.edit {
-  color: var(--shin-orange2);
-}
-.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .action-buttons button.delete {
-  color: var(--red11);
-}
-.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .action-buttons button svg {
+  width: 6rem;
+  text-decoration: none;
+  color: var(--gray10);
   font-size: 1rem;
+  padding: 0.5rem 0.8rem;
   margin: 0;
+  cursor: pointer;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu li:hover {
+  background-color: var(--lightblue);
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu li:first-child {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu li:last-child {
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu li input[type=submit] {
+  background: transparent;
+  color: var(--gray11);
+  text-transform: capitalize;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown .action-buttons-menu li svg {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+}
+.orders-list-page .orders-list-page-container .manage-orders-block table tbody tr .action-buttons-field .action-buttons-dropdown.active .action-buttons-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 @media (max-width: 768px) {
   .orders-list-page .orders-list-page-container .manage-orders-block table tbody tr td .buttons {

@@ -3046,36 +3046,36 @@ header {width:100%;
                             box-shadow:none;
 
                             .checkbox-label {display:flex;
-                                          align-items:center;
-                                          font-size:1rem;
-                                          gap:0.5rem;
-                                          cursor:pointer;
+                                             align-items:center;
+                                             font-size:1rem;
+                                             gap:0.5rem;
+                                             cursor:pointer;
 
                                           input[type="checkbox"] {position:absolute;
-                                                               opacity:0;
-                                                               pointer-events:none;}
+                                                                  opacity:0;
+                                                                  pointer-events:none;}
                                                                              
                                           .checkmark {width:1.2rem;
-                                                 height:1.2rem;
-                                                 display:inline-block;
-                                                 background-color:var(--gray2);
-                                                 border-radius:0.2rem;
-                                                 position:relative;}
+                                                      height:1.2rem;
+                                                      display:inline-block;
+                                                      background-color:var(--gray2);
+                                                      border-radius:0.2rem;
+                                                      position:relative;}
 
                                           input[type="checkbox"]:checked + .checkmark {background-color:var(--blue6);
-                                                                                    border-color:var(--blue16);}
+                                                                                       border-color:var(--blue16);}
 
                                           input[type="checkbox"]:checked + .checkmark::after {content:"✔";
-                                                                                           position:absolute;
-                                                                                           top:53%;
-                                                                                           left:50%;
-                                                                                           transform:translate(-50%, -50%);
-                                                                                           font-size: 0.8rem;
-                                                                                           color:var(--white);
-                                                                                           font-weight:bold;
-                                                                                           border:solid var(-white);
-                                                                                           border-width:0 0.2rem 0.2rem 0;
-                                                                                           box-sizing:border-box;}
+                                                                                              position:absolute;
+                                                                                              top:53%;
+                                                                                              left:50%;
+                                                                                              transform:translate(-50%, -50%);
+                                                                                              font-size: 0.8rem;
+                                                                                              color:var(--white);
+                                                                                              font-weight:bold;
+                                                                                              border:solid var(-white);
+                                                                                              border-width:0 0.2rem 0.2rem 0;
+                                                                                              box-sizing:border-box;}
                             }
 
                             thead {padding:1rem 0.9rem;
@@ -3148,28 +3148,80 @@ header {width:100%;
 
                                                  .canceled {color:var(--orange-red);
                                                             text-align:center;}
+                                          }
 
-                                                 .action-buttons {gap:0.6rem;
+                                          .action-buttons-field {
+                                                 .action-buttons-dropdown {position:relative;
+                                                                           transition:all 0.15s ease-in-out;
 
-                                                        button {width:2.1rem;
-                                                                height:1.8rem;
-                                                                padding:0;
-                                                                display:flex;
-                                                                justify-content:center;
-                                                                align-items:center;
-                                                                text-align:center;
-                                                                background:var(--lightblue4);
-                                                                border-radius:0.3rem;
+                                                        .action-buttons-dropdown-toggle {color:var(--gray9);
+                                                                                         background-color:transparent;
+                                                                                         outline:transparent;
+                                                                                         border:none;
+                                                                                         cursor:pointer;
+                                                                                         transition:all 0.15s ease-in-out;
 
-                                                        &.view {color:var(--gray11);}
-                                                        &.edit {color:var(--shin-orange2);}
-                                                        &.delete {color:var(--red11);}
+                                                                                    svg {font-size:1.1rem;}
 
-                                                        svg {font-size:1rem;
-                                                             margin:0;}
-                                                        } 
+                                                                                    &:focus,
+                                                                                    &:active {background-color:transparent;
+                                                                                              outline:none;
+                                                                                              border:none;
+                                                                                              box-shadow:none;}
+                                                        }
+
+                                                        .action-buttons-menu {position:absolute;
+                                                                              top:100%;
+                                                                              right:0.5rem;
+                                                                              padding:0;
+                                                                              border-radius:0.2rem;
+                                                                              transform:scale(0.9);
+                                                                              transform-origin:left top;
+                                                                              background-color:var(--white);
+                                                                              box-shadow:var(--box-shadow7);
+                                                                              z-index:10;
+                                                                              opacity:0;
+                                                                              visibility:hidden;
+                                                                              transition:all 0.15s ease-in-out;
+
+                                                                      li {display:flex;
+                                                                          flex-direction:row;
+                                                                          justify-content:flex-start;
+                                                                          align-items:center;
+                                                                          width:6rem;
+                                                                          text-decoration:none;
+                                                                          color:var(--gray10);
+                                                                          font-size:1rem;
+                                                                          padding:0.5rem 0.8rem;
+                                                                          margin:0;
+                                                                          cursor:pointer;
+
+                                                                             &:hover {background-color:var(--lightblue);}
+
+                                                                             &:first-child {border-top-left-radius:0.2rem;
+                                                                                            border-top-right-radius:0.2rem;}
+
+                                                                             &:last-child {border-bottom-left-radius:0.2rem;
+                                                                                           border-bottom-right-radius:0.2rem;}
+
+                                                                             input[type="submit"] {background:transparent;
+                                                                                                   color:var(--gray11);
+                                                                                                   text-transform:capitalize;}
+
+                                                                             svg {font-size:1rem;
+                                                                                  margin-right:8px;}
+                                                                      }
+                                                        }
+
+                                                        &.active {opacity:1;
+                                                                  visibility:visible;}
+
+                                                        &.active .action-buttons-menu {opacity:1;
+                                                                                       visibility:visible;
+                                                                                       transform:scale(1);}
                                                  }
                                           }
+                                          
                                    }
 
                                    @media(max-width:768px){ tr td .buttons {bottom:0;
