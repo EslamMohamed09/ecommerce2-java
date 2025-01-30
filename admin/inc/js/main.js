@@ -628,7 +628,81 @@ if(document.querySelector('.orders-list-page')){
     try {
 
       const orders = await loadOrders();
-     
+
+      const deliveredOrders = orders.filter(order => order.status === "delivered");
+      const pendingOrders = orders.filter(order => order.status === "pending");
+      const canceledOrders = orders.filter(order => order.status === "canceled");
+
+
+           let ordersHTML = orders.map((order) => {
+              return `
+                  <tr class="${order.status}">
+                      <td>
+                        <label class="checkbox-label">
+                          <input type="checkbox" name="checkbox[]">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>${order.id}</td>
+                      <td>
+                        <div class="title-field d-flex-r-st-c">
+                          <a href="#" class="image"><img src="${order.image}" alt=""></a>
+                          <a href="#" class="title"${order.customername}</a>
+                        </div>
+                      </td>  
+                      <td>$250</td>
+                      <td><p class="${order.status}">${order.status}</p></td>
+                      <td>paypal</td>
+                      <td>${order.date}</td>
+                      <td class="action-buttons-field">
+                        <div class="action-buttons-dropdown">
+                          <button type="button" class="action-buttons-dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
+                          <ul class="action-buttons-menu">
+                            <li><i class="fas fa-eye"></i>view</li>
+                            <li><i class="far fa-edit"></i></i>edit</li>
+                            <li><i class="fas fa-trash-alt"></i><input type="submit" value="delete"></li>
+                          </ul>
+                        </div>
+                      </td>
+                  </tr>
+              `
+            }).join('');
+
+            const ordersCountMenuElement = document.querySelector('.orders-list-page .table-header .all-orders-count-menu');
+            const allOrdersList = document.createElement('li');
+                  allOrdersList.classList.add('all');
+            const deliveredOrdersList = document.createElement('li');
+                  deliveredOrdersList.classList.add('delivered');
+            const pendingOrdersList = document.createElement('li');
+                  pendingOrdersList.classList.add('pending');
+            const canceledOrdersList = document.createElement('li');
+                  canceledOrdersList.classList.add('canceled');
+
+            if(orders.length > 0){
+               allOrdersList.innerHTML = `<p>all</p> <span>${orders.length}</span>`;
+               ordersCountMenuElement.appendChild(allOrdersList);
+            }
+
+            if(deliveredOrders.length > 0){
+               deliveredOrdersList.innerHTML = `<p>delivered</p> <span>${deliveredOrders.length}</span>`;
+               ordersCountMenuElement.appendChild(deliveredOrdersList);
+            }
+
+            if(pendingOrders.length > 0){
+               pendingOrdersList.innerHTML = `<p>pending</p> <span>${pendingOrders.length}</span>`;
+               ordersCountMenuElement.appendChild(pendingOrdersList);
+            }
+
+            if(canceledOrders.length > 0){
+               canceledOrdersList.innerHTML = `<p>canceled</p> <span>${canceledOrders.length}</span>`;
+               ordersCountMenuElement.appendChild(canceledOrdersList);
+            }
+
+            const ordersListTbody = document.querySelector('.orders-list-page .manage-orders-table-form #orders-list-tbody');
+                  ordersListTbody.innerHTML = ordersHTML;
+
+            filterItems(document.querySelectorAll('.orders-list-page .all-orders-count-menu li'), 
+                        document.querySelectorAll('.orders-list-page .manage-orders-table-form #orders-list-tbody tr'));
 
     } catch (error) {
       console.error('failed to load orders', error);
@@ -636,9 +710,6 @@ if(document.querySelector('.orders-list-page')){
   }
 
   displayOrders();
-
-  filterItems(document.querySelectorAll('.orders-list-page .all-orders-count-menu li'), 
-              document.querySelectorAll('.orders-list-page .manage-orders-table-form #orders-list-tbody tr'));
 
   const actionButtonsDropdownToggle = document.querySelectorAll('.orders-list-page .manage-orders-table-form .action-buttons-dropdown .action-buttons-dropdown-toggle');
 
