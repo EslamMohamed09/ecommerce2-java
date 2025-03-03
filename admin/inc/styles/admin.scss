@@ -1460,7 +1460,7 @@ table {width:100%;
 
 /*** Pagination ***/
 .pagination {width:fit-content;
-             margin:2rem auto 1rem;
+             margin:1rem auto;
              padding:0;
              gap:0;
              border-radius:0.6rem;
@@ -3077,7 +3077,7 @@ header {width:100%;
                                           }
                                    }
 
-                                   .export-btn {width:8rem;
+                                   .export-btn {width:7rem;
                                                 height:2.7rem;
                                                 margin-left:auto;
                                                 border-radius:0.3rem;
@@ -3098,7 +3098,7 @@ header {width:100%;
                                                margin-right:0.5rem;}
                                    }
 
-                                   .create-order-btn {width:9rem;
+                                   .create-order-btn {width:8rem;
                                                       height:2.7rem;
                                                       padding:0.15rem;
                                                       margin:0;
@@ -3115,7 +3115,7 @@ header {width:100%;
                                                       background-image:linear-gradient(124deg, var(--blue5), var(--blue16) 70%);}
                             }
 
-                            .all-orders-count-menu {gap:2rem;
+                            .orders-tabs-menu {gap:2rem;
                                    > li {display:flex;
                                          flex-direction:row;
                                          justify-content:flex-start;
@@ -3351,7 +3351,6 @@ header {width:100%;
               }
        }
 }
-
 
 
 /*

@@ -556,7 +556,7 @@ fetch('database/customers.json').then(response => response.json())
       manageCustomersTable.appendChild(row);
     });
     
-    displayListActionButtons();
+    displayRowsActionButtons(document.querySelector('.customers-page .manage-customers-table-form'));
   }
   pagination(customers, 10, renderCustomersTable, paginationContainer);
 }).catch(error => console.error('Error loading JSON:', error));
@@ -629,80 +629,130 @@ if(document.querySelector('.orders-list-page')){
 
       const orders = await loadOrders();
 
-      const deliveredOrders = orders.filter(order => order.status === "delivered");
-      const pendingOrders = orders.filter(order => order.status === "pending");
-      const canceledOrders = orders.filter(order => order.status === "canceled");
+      let filteredOrders = [...orders];
+
+      const ordersCountMenuElement = document.querySelector('.orders-list-page .table-header .orders-tabs-menu');
+      const ordersListTbody = document.querySelector('.orders-list-page .manage-orders-table-form #orders-list-tbody');
+      const paginationContainer = document.querySelector('.orders-list-page .manage-orders-table-form .pagination');
+
+        function renderOrders(ordersToRender){
+
+          ordersListTbody.innerHTML = ordersToRender.map((order) => {
+            return `
+                <tr class="${order.status}">
+                    <td>
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="checkbox[]">
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td>${order.id}</td>
+                    <td>
+                      <div class="title-field d-flex-r-st-c">
+                        <a href="#" class="image"><img src="${order.image}" alt=""></a>
+                        <a href="#" class="title"${order.customername}</a>
+                      </div>
+                    </td>  
+                    <td>${order.totalPrice}</td>
+                    <td><p class="${order.status}">${order.status}</p></td>
+                    <td>${order.paymentMethod}</td>
+                    <td>${order.date}</td>
+                    <td class="action-buttons-field">
+                      <div class="action-buttons-dropdown">
+                        <button type="button" class="action-buttons-dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
+                        <ul class="action-buttons-menu">
+                          <li><i class="fas fa-eye"></i>view</li>
+                          <li><i class="far fa-edit"></i></i>edit</li>
+                          <li><i class="fas fa-trash-alt"></i><input type="submit" value="delete"></li>
+                        </ul>
+                      </div>
+                    </td>
+                </tr>
+            `
+          }).join('');
+          initDropdownActions();
+          displayRowsActionButtons(document.querySelector('.orders-list-page .manage-orders-table-form'));
+        }
+
+        function filterOrders(status) {
+          filteredOrders = status === "all" ? [...orders] : orders.filter(o => o.status === status);
+          pagination(filteredOrders, 5, renderOrders, paginationContainer);
+        }
+
+        function setupTabs(){
+          tabs = [
+            {class:"all", label:"All", count:orders.length},
+            {class:"delivered", label:"Delivered", count:orders.filter(o => o.status === 'delivered').length},
+            {class:"pending", label:"Pending", count:orders.filter(o => o.status === 'pending').length},
+            {class:"canceled", label:"Canceled", count:orders.filter(o => o.status === 'canceled').length}
+          ];
+  
+          ordersCountMenuElement.innerHTML = tabs.map(tab => {
+            return `<li class="${tab.class}" data-status="${tab.class}"><p>${tab.label}</p><span>${tab.count}</span></li>`;
+          }).join('');
+          
+          const ordersTabs = document.querySelectorAll('.orders-list-page .table-header .orders-tabs-menu li');
+  
+          ordersTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              ordersTabs.forEach((tab) => {tab.classList.remove('active')});
+              tab.classList.add('active');
+              filterOrders(tab.dataset.status);
+            });
+          });
+
+          const defaultTab = Array.from(ordersTabs).find((tab) => tab.classList.contains("all"));
+          if (defaultTab) defaultTab.click();
+        }
 
 
-           let ordersHTML = orders.map((order) => {
-              return `
-                  <tr class="${order.status}">
-                      <td>
-                        <label class="checkbox-label">
-                          <input type="checkbox" name="checkbox[]">
-                          <span class="checkmark"></span>
-                        </label>
-                      </td>
-                      <td>${order.id}</td>
-                      <td>
-                        <div class="title-field d-flex-r-st-c">
-                          <a href="#" class="image"><img src="${order.image}" alt=""></a>
-                          <a href="#" class="title"${order.customername}</a>
-                        </div>
-                      </td>  
-                      <td>$250</td>
-                      <td><p class="${order.status}">${order.status}</p></td>
-                      <td>paypal</td>
-                      <td>${order.date}</td>
-                      <td class="action-buttons-field">
-                        <div class="action-buttons-dropdown">
-                          <button type="button" class="action-buttons-dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
-                          <ul class="action-buttons-menu">
-                            <li><i class="fas fa-eye"></i>view</li>
-                            <li><i class="far fa-edit"></i></i>edit</li>
-                            <li><i class="fas fa-trash-alt"></i><input type="submit" value="delete"></li>
-                          </ul>
-                        </div>
-                      </td>
-                  </tr>
-              `
-            }).join('');
+        function initDropdownActions() {
+            const dropdownToggles = document.querySelectorAll('.action-buttons-dropdown-toggle');
 
-            const ordersCountMenuElement = document.querySelector('.orders-list-page .table-header .all-orders-count-menu');
-            const allOrdersList = document.createElement('li');
-                  allOrdersList.classList.add('all');
-            const deliveredOrdersList = document.createElement('li');
-                  deliveredOrdersList.classList.add('delivered');
-            const pendingOrdersList = document.createElement('li');
-                  pendingOrdersList.classList.add('pending');
-            const canceledOrdersList = document.createElement('li');
-                  canceledOrdersList.classList.add('canceled');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                    const dropdownMenu = this.nextElementSibling;
 
-            if(orders.length > 0){
-               allOrdersList.innerHTML = `<p>all</p> <span>${orders.length}</span>`;
-               ordersCountMenuElement.appendChild(allOrdersList);
-            }
+                    // Close all other dropdowns
+                    dropdownToggles.forEach(t => {
+                        if (t !== toggle) {
+                            t.parentElement.classList.remove('active');
+                            t.nextElementSibling.style.top = '';
+                            t.nextElementSibling.style.bottom = '';
+                        }
+                    });
 
-            if(deliveredOrders.length > 0){
-               deliveredOrdersList.innerHTML = `<p>delivered</p> <span>${deliveredOrders.length}</span>`;
-               ordersCountMenuElement.appendChild(deliveredOrdersList);
-            }
+                    const isActive = this.parentElement.classList.contains('active');
+                    if (!isActive) {
+                        this.parentElement.classList.add('active');
 
-            if(pendingOrders.length > 0){
-               pendingOrdersList.innerHTML = `<p>pending</p> <span>${pendingOrders.length}</span>`;
-               ordersCountMenuElement.appendChild(pendingOrdersList);
-            }
+                        // Adjust dropdown position
+                        const rect = dropdownMenu.getBoundingClientRect();
+                        if (rect.bottom > window.innerHeight) {
+                            dropdownMenu.style.top = 'auto';
+                            dropdownMenu.style.bottom = '100%';
+                        } else {
+                            dropdownMenu.style.top = '100%';
+                            dropdownMenu.style.bottom = 'auto';
+                        }
+                    } else {
+                        this.parentElement.classList.remove('active');
+                    }
+                });
+            });
 
-            if(canceledOrders.length > 0){
-               canceledOrdersList.innerHTML = `<p>canceled</p> <span>${canceledOrders.length}</span>`;
-               ordersCountMenuElement.appendChild(canceledOrdersList);
-            }
-
-            const ordersListTbody = document.querySelector('.orders-list-page .manage-orders-table-form #orders-list-tbody');
-                  ordersListTbody.innerHTML = ordersHTML;
-
-            filterItems(document.querySelectorAll('.orders-list-page .all-orders-count-menu li'), 
-                        document.querySelectorAll('.orders-list-page .manage-orders-table-form #orders-list-tbody tr'));
+            document.body.addEventListener('click', (event) => {
+                dropdownToggles.forEach(toggle => {
+                    if (!toggle.contains(event.target) && !toggle.parentElement.contains(event.target)) {
+                        toggle.parentElement.classList.remove('active');
+                    }
+                });
+            });
+        }
+        
+        setupTabs();
+        filterOrders("all");
 
     } catch (error) {
       console.error('failed to load orders', error);
@@ -710,47 +760,6 @@ if(document.querySelector('.orders-list-page')){
   }
 
   displayOrders();
-
-  const actionButtonsDropdownToggle = document.querySelectorAll('.orders-list-page .manage-orders-table-form .action-buttons-dropdown .action-buttons-dropdown-toggle');
-
-  actionButtonsDropdownToggle.forEach((thisToggle) => {
-    thisToggle.addEventListener('click', function(event){
-      event.stopPropagation();
-      const isActive = this.parentElement.classList.contains('active');
-      const dropdownMenu = this.nextElementSibling;
-
-      actionButtonsDropdownToggle.forEach((toggle) => {
-        toggle.parentElement.classList.remove('active');
-        toggle.nextElementSibling.style.top = '';
-        toggle.nextElementSibling.style.bottom = '';
-      });
-
-      if (!isActive) {
-          this.parentElement.classList.add('active');
-
-          const rect = dropdownMenu.getBoundingClientRect();
-          const viewportHeight = window.innerHeight;
-
-          if(rect.bottom > viewportHeight){
-             dropdownMenu.style.top = 'auto';
-             dropdownMenu.style.bottom = '100%';
-          } else {
-            dropdownMenu.style.top = '100%';
-            dropdownMenu.style.bottom = 'auto';
-          }
-      } else {
-        this.parentElement.classList.remove('active');
-      }
-    });
-  });
-  
-  document.body.addEventListener('click', (event) => {
-    actionButtonsDropdownToggle.forEach((toggle) => {
-      if (!toggle.contains(event.target) && !toggle.parentElement.contains(event.target)) {
-          toggle.parentElement.classList.remove('active');
-      }
-    });
-  });
 
 }
 
@@ -910,7 +919,7 @@ fetch('database/products.json').then(response => response.json())
       `;
       productstbody.appendChild(row);
     });
-    displayListActionButtons();
+    displayRowsActionButtons(document.querySelector('.products-page .manage-products-table-form'));
   }
 
   pagination(products, 10, renderProductsTable, productsPagePaginationContainer);
@@ -1022,7 +1031,7 @@ fetch('database/users.json').then(response => response.json())
       manageUsersTable.appendChild(row);
     });
     
-    displayListActionButtons();
+    displayRowsActionButtons(document.querySelector('#users-page #manage-users-table'));
   }
 
   pagination(users, 10, renderUsersTable, paginationContainer);
@@ -1161,11 +1170,10 @@ fetch('database/users.json').then(response => response.json())
  ####### GLOBAL #######
  ######################
 */
-function displayListActionButtons(){
-  document.querySelectorAll(".manage-table-form").forEach((managetable) => {
-    const headCheckBox = managetable.querySelector("#head-checkbox");
-    const checkboxes = managetable.querySelectorAll("input[name='checkbox[]']");
-    const actionBtnsHolder = managetable.querySelector(".action-buttons-holder");
+function displayRowsActionButtons(tableForm){
+    const headCheckBox = tableForm.querySelector("#head-checkbox");
+    const checkboxes = tableForm.querySelectorAll("input[name='checkbox[]']");
+    const actionBtnsHolder = tableForm.querySelector(".action-buttons-holder");
 
     if (headCheckBox){
         
@@ -1187,7 +1195,6 @@ function displayListActionButtons(){
           checkedCheckBoxes();
         });
     }
-  });
 }
 
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {
@@ -1274,29 +1281,28 @@ function truncateWords(text, wordsCount){
   return text.split(' ').slice(0,wordsCount).join(' ');
 }
 
-function filterItems(tabs, items){
+function filterTableItems(tabs, items){
 
   if (tabs.length === 0 || items.length === 0) return;
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      let statusClass = tab.classList[0];
+      let tabClass = tab.classList[0];
 
       tabs.forEach((tab) => {tab.classList.remove('active')});
       items.forEach((item) => {item.style.display = "none";});
 
       tab.classList.add('active');
       
-      if (statusClass === "all") {
+      if (tabClass === "all") {
           items.forEach((item) => (item.style.display = "table-row"));
       } else {
         items.forEach((item) => {
-          if (item.classList.contains(statusClass)) {
-            item.style.display = "table-row";
+          if (item.classList.contains(tabClass)) {
+              item.style.display = "table-row";
           }
         });
       }
-
     });
   });
 

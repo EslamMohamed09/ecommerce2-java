@@ -1750,7 +1750,7 @@ table tbody tr td img {
 /*** Pagination ***/
 .pagination {
   width: fit-content;
-  margin: 2rem auto 1rem;
+  margin: 1rem auto;
   padding: 0;
   gap: 0;
   border-radius: 0.6rem;
@@ -3565,7 +3565,7 @@ header .small-menu .small-menu-link {
   color: var(--blue6);
 }
 .orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .export-btn {
-  width: 8rem;
+  width: 7rem;
   height: 2.7rem;
   margin-left: auto;
   border-radius: 0.3rem;
@@ -3587,7 +3587,7 @@ header .small-menu .small-menu-link {
   margin-right: 0.5rem;
 }
 .orders-list-page .orders-list-page-container .manage-orders-block .table-header .actions-bar .create-order-btn {
-  width: 9rem;
+  width: 8rem;
   height: 2.7rem;
   padding: 0.15rem;
   margin: 0;
@@ -3603,10 +3603,10 @@ header .small-menu .small-menu-link {
   border-radius: 0.3rem;
   background-image: linear-gradient(124deg, var(--blue5), var(--blue16) 70%);
 }
-.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu {
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .orders-tabs-menu {
   gap: 2rem;
 }
-.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li {
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .orders-tabs-menu > li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -3614,19 +3614,19 @@ header .small-menu .small-menu-link {
   gap: 0.5rem;
   cursor: pointer;
 }
-.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li p {
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .orders-tabs-menu > li p {
   font-weight: bold;
 }
-.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li span {
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .orders-tabs-menu > li span {
   padding: 0.2rem 0.6rem 0.1rem;
   background: var(--lightblue);
   border-radius: 0.2rem;
   font-weight: bold;
 }
-.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li.active p {
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .orders-tabs-menu > li.active p {
   color: var(--olive14);
 }
-.orders-list-page .orders-list-page-container .manage-orders-block .table-header .all-orders-count-menu > li.active span {
+.orders-list-page .orders-list-page-container .manage-orders-block .table-header .orders-tabs-menu > li.active span {
   color: var(--olive14);
   border: 1px solid var(--olive14);
 }
