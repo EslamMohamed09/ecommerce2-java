@@ -369,7 +369,7 @@ if(document.querySelector('.hero-section')){
 
     loginDrawerBtn.addEventListener("click", stopSlider);
     closeLoginDrawerBtn.addEventListener("click", startSlider);
-}
+  }
 
 heroSlider({sectionSelector:'.hero-section', 
             sliderWrapperSelector:'.hero-section .slider-wrapper', 

@@ -1298,6 +1298,19 @@ section {
 /*******************
  # TITLES
 ********************/
+.input-control {
+  font-size: 1.2rem;
+  border-radius: 0.3rem !important;
+  color: var(--gray10);
+  padding: 0.3rem 0.6rem;
+  background: transparent;
+  border: 1px solid var(--gray6);
+}
+.input-control:focus {
+  outline: none;
+  border: 1px solid var(--gray6);
+}
+
 .input-control2 {
   font-size: 1.2rem;
   border: none;
@@ -1329,7 +1342,6 @@ input:-webkit-autofill {
 input:focus {
   outline: none;
   border: none;
-  box-shadow: var(--blue-box-shadow);
 }
 
 textarea {
@@ -1350,7 +1362,7 @@ textarea::-webkit-scrollbar-thumb {
 textarea:focus {
   outline: none;
   border: none;
-  box-shadow: var(--blue-box-shadow);
+  box-shadow: var(--box-shadow7);
 }
 
 input[type=file] {
@@ -2431,7 +2443,7 @@ header .small-menu .small-menu-link {
   display: block;
   width: 100%;
   padding: 1rem;
-  margin: 0;
+  margin: 0 0 2rem;
   text-align: left;
   align-items: left;
   background-color: transparent;
@@ -4833,70 +4845,81 @@ header .small-menu .small-menu-link {
  ######## SETTINGS ########
  ==========================
 */
-.settings-page-container .cards {
+.settings-page .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.settings-page-container .cards .card {
+.settings-page .cards .card {
   flex: 1 1 25rem;
   padding: 1rem;
   border: none;
   border-radius: 0.3rem;
-  background-color: var(--white);
-  box-shadow: var(--blue-box-shadow);
+  background-color: var(--white2);
+  box-shadow: var(--box-shadow7);
   /* First Card */
   /* Second Card */
-  /* Third Card */
+  /* Fourth Card */
 }
-.settings-page-container .cards .card h2 {
+.settings-page .cards .card h2 {
   font-size: 1.3rem;
   font-weight: bold;
-  color: var(--gray2);
+  color: var(--gray10);
 }
-.settings-page-container .cards .card p {
+.settings-page .cards .card p {
   font-size: 1rem;
-  color: var(--gray6);
+  color: var(--gray5);
 }
-.settings-page-container .cards .card .content-card {
+.settings-page .cards .card .content-card {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin: 0;
   margin-top: 1rem;
 }
-.settings-page-container .cards .card .line {
+.settings-page .cards .card .content-card .line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings-page .cards .card .content-card .line .info span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--gray10);
+}
+.settings-page .cards .card .line {
   display: flex;
   justify-content: space-between;
   background-color: transparent;
 }
-.settings-page-container .cards .card .line .left span {
+.settings-page .cards .card .line .left span {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--gray3);
+  color: var(--gray10);
   margin: 0;
   margin-bottom: 0.3rem;
 }
-.settings-page-container .cards .card .line .left p {
+.settings-page .cards .card .line .left p {
   font-size: 0.9rem;
-  color: var(--gray6);
+  color: var(--gray5);
 }
-.settings-page-container .cards .card .line label {
+.settings-page .cards .card .line label {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.settings-page-container .cards .card .line label input[type=checkbox],
-.settings-page-container .cards .card .line label input[type=checkbox]:focus {
+.settings-page .cards .card .line label input[type=checkbox],
+.settings-page .cards .card .line label input[type=checkbox]:focus {
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   display: none;
 }
-.settings-page-container .cards .card .line label .toggle-switch {
+.settings-page .cards .card .line label .toggle-switch {
   width: 4.5rem;
   height: 2rem;
   padding: 0 0.3rem;
@@ -4910,9 +4933,9 @@ header .small-menu .small-menu-link {
   cursor: pointer;
   position: relative;
   bottom: 0.5rem;
-  background-color: var(--gray8);
+  background-color: var(--gray5);
 }
-.settings-page-container .cards .card .line label .toggle-switch .fa-xmark {
+.settings-page .cards .card .line label .toggle-switch .fa-xmark {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0.3rem;
@@ -4921,14 +4944,14 @@ header .small-menu .small-menu-link {
   justify-content: center;
   align-items: center;
   color: var(--white);
-  background-color: var(--gray7);
+  background-color: var(--gray8);
   transition: all 0.3s linear;
   position: absolute;
   opacity: 1;
   left: 0.3rem;
   z-index: 2;
 }
-.settings-page-container .cards .card .line label .toggle-switch .fa-check {
+.settings-page .cards .card .line label .toggle-switch .fa-check {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0.3rem;
@@ -4936,7 +4959,7 @@ header .small-menu .small-menu-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--lightblue2);
+  color: var(--blue3);
   background-color: var(--white);
   transition: all 0.3s linear;
   opacity: 0;
@@ -4944,53 +4967,45 @@ header .small-menu .small-menu-link {
   left: 0.3rem;
   z-index: 1;
 }
-.settings-page-container .cards .card .line label .toggle-checkbox:checked + .toggle-switch {
-  background-color: var(--lightblue2);
+.settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue3);
 }
-.settings-page-container .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+.settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
   background-color: var(--primary9);
   left: 2.7rem;
   opacity: 0;
   z-index: 1;
 }
-.settings-page-container .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-check {
+.settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-check {
   left: 2.7rem;
   opacity: 1;
   z-index: 2;
 }
-.settings-page-container .cards .card textarea {
-  border: 1px solid var(--gray7);
+.settings-page .cards .card textarea {
   padding: 0.5rem;
   border-radius: 0.4rem;
   width: 100%;
   height: 5rem;
   resize: none;
+  border: 1px solid var(--gray3);
+  box-shadow: none;
+  color: var(--gray11);
+  background-color: var(--white2);
 }
-.settings-page-container .cards .card .second-card .content-card .input-group {
+.settings-page .cards .card.second-card .content-card .input-group {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-.settings-page-container .cards .card .second-card .content-card .input-group label {
+.settings-page .cards .card.second-card .content-card .input-group label {
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--gray3);
+  color: var(--gray10);
 }
-.settings-page-container .cards .card .content-card {
-  /* Fourth Card */
+.settings-page .cards .card.fourth-card {
+  margin-top: 1rem;
 }
-.settings-page-container .cards .card .content-card .line {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.settings-page-container .cards .card .content-card .line .info span {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--gray3);
-}
-.settings-page-container .cards .card .content-card .social-group {
+.settings-page .cards .card.fourth-card .content-card .social-group {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -4999,28 +5014,42 @@ header .small-menu .small-menu-link {
   border-radius: 0.3rem;
   border: 1px solid var(--gray7);
 }
-.settings-page-container .cards .card .content-card .social-group #social-link {
+.settings-page .cards .card.fourth-card .content-card .social-group #social-link {
+  min-width: 3rem;
   margin: 0;
-  padding: 0.4rem 1rem;
+  text-align: center;
+  padding: 0.4rem 0.8rem 0.3rem;
   background-color: var(--gray7);
 }
-.settings-page-container .cards .card .content-card .social-group #social-link #sicon {
+.settings-page .cards .card.fourth-card .content-card .social-group #social-link svg {
   font-size: 1.5rem;
-  color: var(--gray2);
+  color: var(--gray1);
   margin: 0;
 }
-.settings-page-container .cards .card .content-card .social-group #socialinput {
+.settings-page .cards .card.fourth-card .content-card .social-group .input-control {
   flex: 1 1 20rem;
   font-size: 1.1rem;
-  color: var(--gray2);
+  color: var(--gray10);
   border: none;
   outline: none;
   border-radius: 0;
   margin: 0;
   background-color: transparent;
 }
-.settings-page-container .cards .card .content-card .social-group:focus-within #social-link #sicon {
-  color: var(--lightblue3);
+.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #face-icon {
+  color: var(--blue12);
+}
+.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #instagram-icon {
+  color: red;
+}
+.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #linkedin-icon {
+  color: var(--blue11);
+}
+.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #pinterest-icon {
+  color: red;
+}
+.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #youtube-icon {
+  color: red;
 }
 
 /*
