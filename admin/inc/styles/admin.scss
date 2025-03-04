@@ -332,8 +332,10 @@ body {overflow-x:hidden;
                       --white2:#202528;
                       --gray10:#fff;
                       --gray11:#fff;
-                      --blue4:#e5e5e7;
                       --blue2:#dce1eb;
+                      --blue3:#333;
+                      --blue4:#e5e5e7;
+                      --blue20:#111;
                       --gray:#343535;
                       --gray1:#cbe8ff;
                       --gray4:#1d1d1d;
@@ -2026,19 +2028,20 @@ header {width:100%;
                                                   transition:all 300ms ease;
 
                                           #icon {font-size:1.3rem;
-                                                 color:var(--white2);
+                                                 color:var(--white);
                                                  transition:all 300ms ease;}
 
                                           h3 {font-size:1.1rem;
                                               font-weight:bold;
                                               margin:0;
-                                              color:var(--white2);}
+                                              color:var(--white);}
 
                                           &:hover {border-left:5px solid #374e88;}
 
                                           &.active {color:var(--white2);
-                                                    background-color:#0b84ca;
-                                                    border-left:5px solid #374e88;}
+                                                 //    background-color:#0b84ca;
+                                                    background-color:var(--blue8);
+                                                    border-left:5px solid var(--blue19);}
 
                                           &.active h3 {color:var(--white2);}
 
@@ -2484,7 +2487,7 @@ header {width:100%;
                              margin:0;
                              margin-bottom:3rem;
                              min-height:30vh;
-                             background-color:var(--white);
+                             background-color:var(--white2);
                              box-shadow:var(--box-shadow6);
 
                      .left-block {text-align:center;
@@ -2540,7 +2543,7 @@ header {width:100%;
                                                                                      display:none;}
 
                                                  label {
-                                                        .toggle-switch {width:4.5rem;
+                                                        .toggle-switch {width:3.8rem;
                                                                         height:1.6rem;
                                                                         padding:0 0.3rem;
                                                                         margin:0;
@@ -2555,8 +2558,8 @@ header {width:100%;
                                                                         position:relative;
                                                                         background-color:var(--gray3);
 
-                                                               .fa-xmark {width:1.2rem;
-                                                                          height:1.2rem;
+                                                               .fa-xmark {width:1.3rem;
+                                                                          height:1.3rem;
                                                                           padding:0.3rem;
                                                                           border-radius:50%;
                                                                           display:flex;
@@ -2570,31 +2573,30 @@ header {width:100%;
                                                                           z-index:2;
                                                                           opacity:1;}
 
-                                                               .fa-check {width:1.2rem;
-                                                                          height:1.2rem;
+                                                               .fa-check {width:1.3rem;
+                                                                          height:1.3rem;
                                                                           padding:0.3rem;
                                                                           border-radius:50%;
                                                                           display:flex;
                                                                           justify-content:center;
                                                                           align-items:center;
-                                                                          color:var(--blue4);
+                                                                          color:var(--blue5);
                                                                           background-color:var(--white);
                                                                           transition:all 0.3s linear;
                                                                           position:absolute;
                                                                           left:0.3rem;
                                                                           z-index:1;
                                                                           opacity:0;}
-                                                        
                                                         }
 
-                                                        input[type="checkbox"]:checked + .toggle-switch {background-color:var(--blue4);}
+                                                        input[type="checkbox"]:checked + .toggle-switch {background-color:var(--blue5);}
 
                                                         input[type="checkbox"]:checked + .toggle-switch .fa-xmark {left:3rem;
                                                                                                                    opacity:0;
                                                                                                                    z-index:1;
                                                                                                                    background-color:var(--gray4);}
 
-                                                        input[type="checkbox"]:checked + .toggle-switch .fa-check {left:3rem;
+                                                        input[type="checkbox"]:checked + .toggle-switch .fa-check {left:2.35rem;
                                                                                                                    opacity:1;
                                                                                                                    z-index:2;}
                                                  }
@@ -4296,8 +4298,8 @@ header {width:100%;
                                                                  -webkit-appearance:none;
                                                                  display:none;}                  
               
-                                   .toggle-switch {width:4.5rem;
-                                                   height:2rem;
+                                   .toggle-switch {width:3.8rem;
+                                                   height:1.6rem;
                                                    padding:0 0.3rem;
                                                    border-radius:1rem;
                                                    display:flex;
@@ -4311,8 +4313,8 @@ header {width:100%;
                                                    bottom:0.5rem;
                                                    background-color:var(--gray5);
               
-                                          .fa-xmark {width:1.5rem;
-                                                     height:1.5rem;
+                                          .fa-xmark {width:1.3rem;
+                                                     height:1.3rem;
                                                      padding:0.3rem;
                                                      border-radius:50%;
                                                      display:flex;
@@ -4326,8 +4328,8 @@ header {width:100%;
                                                      left:0.3rem;
                                                      z-index:2;}
               
-                                          .fa-check {width:1.5rem;
-                                                     height:1.5rem;
+                                          .fa-check {width:1.3rem;
+                                                     height:1.3rem;
                                                      padding:0.3rem;
                                                      border-radius:50%;
                                                      display:flex;
@@ -4349,7 +4351,7 @@ header {width:100%;
                                                                                         opacity:0;
                                                                                         z-index:1;}
               
-                                   .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.7rem;
+                                   .toggle-checkbox:checked + .toggle-switch .fa-check {left:2.35rem;
                                                                                         opacity:1;
                                                                                         z-index:2;}
                             }
@@ -4412,6 +4414,7 @@ header {width:100%;
                                           &:focus-within #social-link #linkedin-icon {color:var(--blue11);}
                                           &:focus-within #social-link #pinterest-icon {color:red;}
                                           &:focus-within #social-link #youtube-icon {color:red;}
+                                          &:focus-within #social-link #tiktok-icon {color:var(--black);}
                                    }
                             }
                      }

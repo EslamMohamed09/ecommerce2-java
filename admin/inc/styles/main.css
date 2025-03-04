@@ -310,8 +310,10 @@ body {
   --white2:#202528;
   --gray10:#fff;
   --gray11:#fff;
-  --blue4:#e5e5e7;
   --blue2:#dce1eb;
+  --blue3:#333;
+  --blue4:#e5e5e7;
+  --blue20:#111;
   --gray:#343535;
   --gray1:#cbe8ff;
   --gray4:#1d1d1d;
@@ -2396,22 +2398,22 @@ header .small-menu .small-menu-link {
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link #icon {
   font-size: 1.3rem;
-  color: var(--white2);
+  color: var(--white);
   transition: all 300ms ease;
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
-  color: var(--white2);
+  color: var(--white);
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link:hover {
   border-left: 5px solid #374e88;
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link.active {
   color: var(--white2);
-  background-color: #0b84ca;
-  border-left: 5px solid #374e88;
+  background-color: var(--blue8);
+  border-left: 5px solid var(--blue19);
 }
 .dashboard-section #main-aside .main-sidebar .main-aside-menu li .sidebar-link.active h3 {
   color: var(--white2);
@@ -2907,7 +2909,7 @@ header .small-menu .small-menu-link {
   margin: 0;
   margin-bottom: 3rem;
   min-height: 30vh;
-  background-color: var(--white);
+  background-color: var(--white2);
   box-shadow: var(--box-shadow6);
   /* right-block */
 }
@@ -2975,7 +2977,7 @@ header .small-menu .small-menu-link {
   display: none;
 }
 .profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label .toggle-switch {
-  width: 4.5rem;
+  width: 3.8rem;
   height: 1.6rem;
   padding: 0 0.3rem;
   margin: 0;
@@ -2991,8 +2993,8 @@ header .small-menu .small-menu-link {
   background-color: var(--gray3);
 }
 .profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-xmark {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
   padding: 0.3rem;
   border-radius: 50%;
   display: flex;
@@ -3007,14 +3009,14 @@ header .small-menu .small-menu-link {
   opacity: 1;
 }
 .profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label .toggle-switch .fa-check {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
   padding: 0.3rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--blue4);
+  color: var(--blue5);
   background-color: var(--white);
   transition: all 0.3s linear;
   position: absolute;
@@ -3023,7 +3025,7 @@ header .small-menu .small-menu-link {
   opacity: 0;
 }
 .profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch {
-  background-color: var(--blue4);
+  background-color: var(--blue5);
 }
 .profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-xmark {
   left: 3rem;
@@ -3032,7 +3034,7 @@ header .small-menu .small-menu-link {
   background-color: var(--gray4);
 }
 .profile-page .profile-container .profile-data .right-block .info-cards .info-card .heading label input[type=checkbox]:checked + .toggle-switch .fa-check {
-  left: 3rem;
+  left: 2.35rem;
   opacity: 1;
   z-index: 2;
 }
@@ -4920,8 +4922,8 @@ header .small-menu .small-menu-link {
   display: none;
 }
 .settings-page .cards .card .line label .toggle-switch {
-  width: 4.5rem;
-  height: 2rem;
+  width: 3.8rem;
+  height: 1.6rem;
   padding: 0 0.3rem;
   border-radius: 1rem;
   display: flex;
@@ -4936,8 +4938,8 @@ header .small-menu .small-menu-link {
   background-color: var(--gray5);
 }
 .settings-page .cards .card .line label .toggle-switch .fa-xmark {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
   padding: 0.3rem;
   border-radius: 50%;
   display: flex;
@@ -4952,8 +4954,8 @@ header .small-menu .small-menu-link {
   z-index: 2;
 }
 .settings-page .cards .card .line label .toggle-switch .fa-check {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
   padding: 0.3rem;
   border-radius: 50%;
   display: flex;
@@ -4977,7 +4979,7 @@ header .small-menu .small-menu-link {
   z-index: 1;
 }
 .settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-check {
-  left: 2.7rem;
+  left: 2.35rem;
   opacity: 1;
   z-index: 2;
 }
@@ -5050,6 +5052,9 @@ header .small-menu .small-menu-link {
 }
 .settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #youtube-icon {
   color: red;
+}
+.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #tiktok-icon {
+  color: var(--black);
 }
 
 /*
