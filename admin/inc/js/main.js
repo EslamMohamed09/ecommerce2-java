@@ -1200,6 +1200,14 @@ function displayRowsActionButtons(tableForm){
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
+  if (totalPages <= 1) {
+    paginationContainer.style.display = 'none'; 
+    renderContent(data, 1);
+    return;
+  } else {
+    paginationContainer.style.display = 'flex';
+  }
+
   function renderPage(page) {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = page * itemsPerPage;
@@ -1215,7 +1223,7 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
     if (currentPage > 1) {
        const prevButton = createPaginationLink('Previous', currentPage - 1);
-             prevButton.classList.add('previous');
+       prevButton.classList.add('previous');
        paginationContainer.appendChild(prevButton);
     }
 
@@ -1245,7 +1253,7 @@ function pagination(data, itemsPerPage, renderContent, paginationContainer) {
 
     if (currentPage < totalPages) {
        const nextButton = createPaginationLink('Next', currentPage + 1);
-             nextButton.classList.add('next');
+       nextButton.classList.add('next');
        paginationContainer.appendChild(nextButton);
     }
   }
