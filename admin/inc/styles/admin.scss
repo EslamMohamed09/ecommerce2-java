@@ -340,8 +340,10 @@ body {overflow-x:hidden;
                       --gray1:#cbe8ff;
                       --gray4:#1d1d1d;
                       --gray8:#f0eded;
+                      --lightblue18:#555;
                       --primary10:rgb(230, 130, 0);
                       --gray-yellow6:rgb(255, 196, 0);
+                      --box-shadow2:0 0.5rem 1.5rem #048bd418;
                       --box-shadow6:0 0 3px rgb(0, 0, 0);
                       --blue-box-shadow:0 0 3px #0240696c;}
 
@@ -2052,7 +2054,7 @@ header {width:100%;
               }
 
               &::-webkit-scrollbar {width:4px;}
-              &::-webkit-scrollbar-thumb {background:var(--lightblue6);
+              &::-webkit-scrollbar-thumb {background:var(--lightblue18);
                                           cursor:grab;}
 
               @media (max-width:768px){
