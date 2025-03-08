@@ -316,6 +316,7 @@ body {
   --blue20:#111;
   --gray:#343535;
   --gray1:#cbe8ff;
+  --gray2:#2f3438;
   --gray4:#1d1d1d;
   --gray8:#f0eded;
   --lightblue18:#555;
@@ -818,7 +819,7 @@ button:focus {
 
 .btn {
   display: inline-block;
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
   text-transform: capitalize;
   text-align: center;
@@ -831,6 +832,7 @@ button:focus {
 .btn:hover {
   color: var(--black);
   background-color: transparent;
+  border: 1px solid var(--black2);
 }
 
 .btn2 {
@@ -1308,7 +1310,7 @@ section {
   color: var(--gray10);
   padding: 0.3rem 0.6rem;
   background: transparent;
-  border: 1px solid var(--gray6);
+  border: 1px solid var(--gray8);
 }
 .input-control:focus {
   outline: none;
@@ -1350,12 +1352,14 @@ input:focus {
 
 textarea {
   resize: none;
-  border: none;
   width: 100%;
-  padding: 0.4rem 1rem;
-  color: var(--gray10);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  color: var(--gray11);
   font-size: 1.2rem;
-  box-shadow: var(--blue-box-shadow);
+  box-shadow: none;
+  background-color: var(--white2);
+  border: 1px solid var(--gray8);
 }
 textarea::-webkit-scrollbar {
   width: 5px;
@@ -1365,7 +1369,6 @@ textarea::-webkit-scrollbar-thumb {
 }
 textarea:focus {
   outline: none;
-  border: none;
   box-shadow: var(--box-shadow7);
 }
 
@@ -4882,48 +4885,48 @@ header .small-menu .small-menu-link {
   margin: 0;
   margin-top: 1rem;
 }
-.settings-page .cards .card .content-card .line {
+.settings-page .cards .card .content-card .item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.settings-page .cards .card .content-card .line .info span {
+.settings-page .cards .card .content-card .item .info span {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--gray10);
 }
-.settings-page .cards .card .line {
+.settings-page .cards .card .item {
   display: flex;
   justify-content: space-between;
   background-color: transparent;
 }
-.settings-page .cards .card .line .left span {
+.settings-page .cards .card .item .left span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray10);
   margin: 0;
   margin-bottom: 0.3rem;
 }
-.settings-page .cards .card .line .left p {
+.settings-page .cards .card .item .left p {
   font-size: 0.9rem;
   color: var(--gray5);
 }
-.settings-page .cards .card .line label {
+.settings-page .cards .card .item label {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.settings-page .cards .card .line label input[type=checkbox],
-.settings-page .cards .card .line label input[type=checkbox]:focus {
+.settings-page .cards .card .item label input[type=checkbox],
+.settings-page .cards .card .item label input[type=checkbox]:focus {
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   display: none;
 }
-.settings-page .cards .card .line label .toggle-switch {
+.settings-page .cards .card .item label .toggle-switch {
   width: 3.8rem;
   height: 1.6rem;
   padding: 0 0.3rem;
@@ -4939,7 +4942,7 @@ header .small-menu .small-menu-link {
   bottom: 0.5rem;
   background-color: var(--gray5);
 }
-.settings-page .cards .card .line label .toggle-switch .fa-xmark {
+.settings-page .cards .card .item label .toggle-switch .fa-xmark {
   width: 1.3rem;
   height: 1.3rem;
   padding: 0.3rem;
@@ -4955,7 +4958,7 @@ header .small-menu .small-menu-link {
   left: 0.3rem;
   z-index: 2;
 }
-.settings-page .cards .card .line label .toggle-switch .fa-check {
+.settings-page .cards .card .item label .toggle-switch .fa-check {
   width: 1.3rem;
   height: 1.3rem;
   padding: 0.3rem;
@@ -4963,7 +4966,7 @@ header .small-menu .small-menu-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--blue3);
+  color: var(--blue5);
   background-color: var(--white);
   transition: all 0.3s linear;
   opacity: 0;
@@ -4971,37 +4974,26 @@ header .small-menu .small-menu-link {
   left: 0.3rem;
   z-index: 1;
 }
-.settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch {
-  background-color: var(--blue3);
+.settings-page .cards .card .item label .toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue5);
 }
-.settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
+.settings-page .cards .card .item label .toggle-checkbox:checked + .toggle-switch .fa-xmark {
   background-color: var(--primary9);
   left: 2.7rem;
   opacity: 0;
   z-index: 1;
 }
-.settings-page .cards .card .line label .toggle-checkbox:checked + .toggle-switch .fa-check {
+.settings-page .cards .card .item label .toggle-checkbox:checked + .toggle-switch .fa-check {
   left: 2.35rem;
   opacity: 1;
   z-index: 2;
 }
-.settings-page .cards .card textarea {
-  padding: 0.5rem;
-  border-radius: 0.4rem;
-  width: 100%;
-  height: 5rem;
-  resize: none;
-  border: 1px solid var(--gray3);
-  box-shadow: none;
-  color: var(--gray11);
-  background-color: var(--white2);
-}
-.settings-page .cards .card.second-card .content-card .input-group {
+.settings-page .cards .card.second-card .content-card .input-holder {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-.settings-page .cards .card.second-card .content-card .input-group label {
+.settings-page .cards .card.second-card .content-card .input-holder label {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--gray10);
@@ -5009,28 +5001,28 @@ header .small-menu .small-menu-link {
 .settings-page .cards .card.fourth-card {
   margin-top: 1rem;
 }
-.settings-page .cards .card.fourth-card .content-card .social-group {
+.settings-page .cards .card.fourth-card .content-card .social-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   padding: 0;
   border-radius: 0.3rem;
-  border: 1px solid var(--gray7);
+  border: 1px solid var(--gray8);
 }
-.settings-page .cards .card.fourth-card .content-card .social-group #social-link {
+.settings-page .cards .card.fourth-card .content-card .social-bar #social-link {
   min-width: 3rem;
   margin: 0;
   text-align: center;
   padding: 0.4rem 0.8rem 0.3rem;
-  background-color: var(--gray7);
+  background-color: var(--gray8);
 }
-.settings-page .cards .card.fourth-card .content-card .social-group #social-link svg {
+.settings-page .cards .card.fourth-card .content-card .social-bar #social-link svg {
   font-size: 1.5rem;
-  color: var(--gray1);
+  color: var(--gray2);
   margin: 0;
 }
-.settings-page .cards .card.fourth-card .content-card .social-group .input-control {
+.settings-page .cards .card.fourth-card .content-card .social-bar .input-control {
   flex: 1 1 20rem;
   font-size: 1.1rem;
   color: var(--gray10);
@@ -5040,22 +5032,22 @@ header .small-menu .small-menu-link {
   margin: 0;
   background-color: transparent;
 }
-.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #face-icon {
+.settings-page .cards .card.fourth-card .content-card .social-bar:focus-within #social-link #face-icon {
   color: var(--blue12);
 }
-.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #instagram-icon {
+.settings-page .cards .card.fourth-card .content-card .social-bar:focus-within #social-link #instagram-icon {
   color: red;
 }
-.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #linkedin-icon {
+.settings-page .cards .card.fourth-card .content-card .social-bar:focus-within #social-link #linkedin-icon {
   color: var(--blue11);
 }
-.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #pinterest-icon {
+.settings-page .cards .card.fourth-card .content-card .social-bar:focus-within #social-link #pinterest-icon {
   color: red;
 }
-.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #youtube-icon {
+.settings-page .cards .card.fourth-card .content-card .social-bar:focus-within #social-link #youtube-icon {
   color: red;
 }
-.settings-page .cards .card.fourth-card .content-card .social-group:focus-within #social-link #tiktok-icon {
+.settings-page .cards .card.fourth-card .content-card .social-bar:focus-within #social-link #tiktok-icon {
   color: var(--black);
 }
 

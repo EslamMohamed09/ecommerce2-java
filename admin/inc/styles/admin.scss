@@ -338,6 +338,7 @@ body {overflow-x:hidden;
                       --blue20:#111;
                       --gray:#343535;
                       --gray1:#cbe8ff;
+                      --gray2:#2f3438;
                       --gray4:#1d1d1d;
                       --gray8:#f0eded;
                       --lightblue18:#555;
@@ -695,7 +696,7 @@ button:focus {box-shadow:var(--box-shadow2);}
 }
 
 .btn {display:inline-block;
-      padding:0.7rem 1rem;
+      padding:0.6rem 1rem;
       font-size:1rem;
       text-transform:capitalize;
       text-align:center;
@@ -705,7 +706,8 @@ button:focus {box-shadow:var(--box-shadow2);}
       outline:none;
       transition:all 0.6s linear;
        &:hover {color:var(--black);
-                background-color:transparent;}
+                background-color:transparent;
+                border:1px solid var(--black2);}
 }
 
 .btn2 {display:inline-block;
@@ -1096,7 +1098,7 @@ section {margin:0 auto;
                 color:var(--gray10);
                 padding:0.3rem 0.6rem;
                 background:transparent;
-                border:1px solid var(--gray6);
+                border:1px solid var(--gray8);
                 
               &:focus {outline:none;
                        border:1px solid var(--gray6);}
@@ -1129,19 +1131,19 @@ input {text-transform:none;
 }
 
 textarea {resize:none;
-          border:none;
           width:100%;
-          padding:0.4rem 1rem;
-          color:var(--gray10);
+          padding:0.4rem 0.6rem;
+          border-radius:0.4rem;
+          color:var(--gray11);
           font-size:1.2rem;
-          box-shadow:var(--blue-box-shadow);
+          box-shadow:none;
+          background-color:var(--white2);
+          border:1px solid var(--gray8);
        &::-webkit-scrollbar {width:5px;}
        &::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--green11) 0%, var(--green9) 100%);}
        &:focus {outline:none;
-                border:none;
                 box-shadow:var(--box-shadow7);}
 }
-
 
 input[type="file"] {cursor:pointer;}
 
@@ -3366,7 +3368,6 @@ header {width:100%;
        }
 }
 
-
 /*
  =======================
  ####### MESSAGES ######
@@ -4261,7 +4262,7 @@ header {width:100%;
                                     margin:0;
                                     margin-top:1rem;
 
-                            .line {display:flex;
+                            .item {display:flex;
                                    flex-direction:row;
                                    justify-content:space-between;
                                    align-items:center;
@@ -4273,7 +4274,7 @@ header {width:100%;
                      }
        
                      /* First Card */
-                     .line {display:flex;
+                     .item {display:flex;
                             justify-content:space-between;
                             background-color:transparent;
               
@@ -4298,7 +4299,7 @@ header {width:100%;
                                                                  outline:none;
                                                                  appearance:none;
                                                                  -webkit-appearance:none;
-                                                                 display:none;}                  
+                                                                 display:none;}
               
                                    .toggle-switch {width:3.8rem;
                                                    height:1.6rem;
@@ -4337,7 +4338,7 @@ header {width:100%;
                                                      display:flex;
                                                      justify-content:center;
                                                      align-items:center;
-                                                     color:var(--blue3);
+                                                     color:var(--blue5);
                                                      background-color:var(--white);
                                                      transition:all 0.3s linear;
                                                      opacity:0;
@@ -4346,7 +4347,7 @@ header {width:100%;
                                                      z-index:1;}
                                    }
               
-                                   .toggle-checkbox:checked + .toggle-switch {background-color:var(--blue3);}
+                                   .toggle-checkbox:checked + .toggle-switch {background-color:var(--blue5);}
               
                                    .toggle-checkbox:checked + .toggle-switch .fa-xmark {background-color:var(--primary9);
                                                                                         left:2.7rem;
@@ -4358,46 +4359,38 @@ header {width:100%;
                                                                                         z-index:2;}
                             }
                      }
-       
-                     textarea {padding:0.5rem;
-                               border-radius:0.4rem;
-                               width:100%;
-                               height:5rem;
-                               resize:none;
-                               border:1px solid var(--gray3);
-                               box-shadow:none;
-                               color:var(--gray11);
-                               background-color:var(--white2);}
               
                      /* Second Card */
-                     &.second-card .content-card .input-group {display:flex;
-                                                               flex-direction:column;
-                                                               gap:0.2rem;
+                     &.second-card .content-card {
+                            .input-holder {display:flex;
+                                           flex-direction:column;
+                                           gap:0.2rem;
 
-                                                        label {font-size:1.1rem;
-                                                               font-weight:bold;
-                                                               color:var(--gray10);}
+                                          label {font-size:1.1rem;
+                                                 font-weight:bold;
+                                                 color:var(--gray10);}
+                            }
                      }
 
                      /* Fourth Card */
                      &.fourth-card {margin-top:1rem;
                             .content-card {
-                                   .social-group {display:flex;
-                                                  flex-direction:row;
-                                                  align-items:center;
-                                                  justify-content:flex-start;
-                                                  padding:0;
-                                                  border-radius:0.3rem;
-                                                  border:1px solid var(--gray7);
+                                   .social-bar {display:flex;
+                                                flex-direction:row;
+                                                align-items:center;
+                                                justify-content:flex-start;
+                                                padding:0;
+                                                border-radius:0.3rem;
+                                                border:1px solid var(--gray8);
                      
                                           #social-link {min-width:3rem;
                                                         margin:0;
                                                         text-align:center;
                                                         padding:0.4rem 0.8rem 0.3rem;
-                                                        background-color:var(--gray7);
+                                                        background-color:var(--gray8);
                                                         
                                                  svg {font-size:1.5rem;
-                                                      color:var(--gray1);
+                                                      color:var(--gray2);
                                                       margin:0;}
                                           }
                                           
@@ -4409,7 +4402,6 @@ header {width:100%;
                                                           border-radius:0;
                                                           margin:0;
                                                           background-color:transparent;}
-                                                 
                      
                                           &:focus-within #social-link #face-icon {color:var(--blue12);}
                                           &:focus-within #social-link #instagram-icon {color:red;}

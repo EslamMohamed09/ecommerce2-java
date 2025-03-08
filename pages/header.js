@@ -1,5 +1,5 @@
 const headerContent = `
-  <div class="top-nav d-flex-r-bt-c">
+  <div class="top-bar d-flex-r-bt-c">
     <div class="left-block">
       <div class="d-flex-r-st-c" id="currency-select">
         <select>
@@ -12,17 +12,16 @@ const headerContent = `
     <div class="right-block">
       <ul class="d-flex-r-st-c">
         <li><a href="/pages/customerprofile.html">my account</a></li>
-        <li><a href="/pages/cart.html">my cart</a></li>
         <li><a href="/pages/checkout.html">checkout</a></li>
         <li><button id="login-btn">login</button></li>
-        <button id="open-mHeader"><i class="fas fa-bars"></i></button>
+        <button class="open-btn"><i class="fas fa-bars"></i></button>
       </ul>
     </div>
   </div>
 
   <div id="main-header" class="main-header">
 
-    <div class="middle-nav d-flex-r-bt-c">
+    <div class="middle-bar d-flex-r-bt-c">
       <h2 class="web-title"><a href="/index.html">shopping</a></h2>
       <form class="search-form d-flex-r-bt-c">
         <input type="search" placeholder="search">
@@ -44,7 +43,7 @@ const headerContent = `
       </div>
     </div>
 
-    <div class="bottom-nav">
+    <div class="bottom-bar">
       <nav>
         <ul class="d-flex-r-st-c">
           <li><a href="/pages/category.html?id=1" target="_blank">electronics</a></li>

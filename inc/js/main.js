@@ -89,54 +89,70 @@ if(header){
       loginDrawer.classList.remove("openingLoginDrawer");
     });
 
-    document.querySelectorAll('header .main-header .middle-nav .buttons .service-button .value span').forEach((span) => {
+    document.querySelectorAll('header .main-header .middle-bar .buttons .service-button .value span').forEach((span) => {
       let number = span.textContent.trim();
 
       if(/^\d{3,}$/.test(number)){
 
-        if (window.innerWidth < 490) {
-            span.parentElement.style.padding = '4px 2px 4px 1.5px';
+        if (window.innerWidth < 690) {
+            span.parentElement.style.padding = '5px 1px 4px 1px';
         } else {
           span.parentElement.style.padding = '6px 2px 5.5px';
         }
-
+  
       } else if(/^\d{2}$/.test(number)) {
-
-        if (window.innerWidth < 490) {
-            span.parentElement.style.padding = '4px 2.5px 4px 3.5px';
+  
+        if (window.innerWidth < 690) {
+            span.parentElement.style.padding = '4px 2.5px 3px 2.5px';
         } else {
           span.parentElement.style.padding = '5px 3.5px';
         }
-
+  
       } else {
-
-        if (window.innerWidth < 490) {
-            span.parentElement.style.padding = '3px 4px';
+  
+        if (window.innerWidth < 690) {
+            span.parentElement.style.padding = '3px 3px 2px';
         } else {
           span.parentElement.style.padding = '5px';
         }
-
+  
       }
     });
 
     let productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
     let productsCartCount = productsCart.length;
-    document.querySelector(".main-header .middle-nav .buttons .cart-icon span").textContent = productsCartCount;
+    document.querySelector(".main-header .middle-bar .buttons .cart-icon span").textContent = productsCartCount;
 
     /*** MOBILE HEADER ***/
-    if(document.getElementById("open-mHeader") && document.getElementById("main-header")){
-      const mobileHBtn = document.getElementById("open-mHeader");
+    if(document.querySelector(".open-btn") && document.getElementById("main-header")){
+      const openBtn = document.querySelector("header .top-bar .right-block .open-btn");
       const mainHeader = document.getElementById("main-header");
-      mobileHBtn.onclick = () => mainHeader.classList.toggle("mobile-header");
+      openBtn.onclick = () => {
+        mainHeader.classList.toggle("mobile-header");
+  
+        let icon = openBtn.querySelector("i") || openBtn.querySelector("svg");
+  
+        icon.style.transition = "transform 0.2s ease-in-out";
+        icon.style.transform = "rotate(180deg)";
+  
+        setTimeout(() => {
+          if (icon.classList.contains("fa-bars")) {
+              icon.classList.replace("fa-bars", "fa-times");
+          } else {
+              icon.classList.replace("fa-times", "fa-bars");
+          }
+          icon.style.transform = "rotate(0deg)";
+        }, 150);
+     };
     }
 
     window.addEventListener('scroll', function(){
 
       if (window.scrollY > 30){
-          document.querySelector("header .top-nav").style.display = 'none';
+          document.querySelector("header .top-bar").style.display = 'none';
           document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
       } else {
-        document.querySelector("header .top-nav").style.display = 'flex';
+        document.querySelector("header .top-bar").style.display = 'flex';
         document.querySelector(".main-header").style.boxShadow = 'none';
 
       }
