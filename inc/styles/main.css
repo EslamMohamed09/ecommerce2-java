@@ -1239,7 +1239,7 @@ header .top-bar .right-block ul .open-btn {
   cursor: pointer;
 }
 header .top-bar .right-block ul .open-btn i, header .top-bar .right-block ul .open-btn svg {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0;
   margin: 0;
   color: var(--white);
@@ -1270,7 +1270,7 @@ header .main-header .middle-bar .search-form {
   border-radius: 1.5rem;
   padding: 0;
   border: none;
-  background: linear-gradient(to right, var(--olive14) 96%, var(--olive17) 96%);
+  background: linear-gradient(to right, var(--olive14) 85%, var(--olive17) 85%);
 }
 header .main-header .middle-bar .search-form input[type=search] {
   width: 95%;
@@ -1344,7 +1344,7 @@ header .main-header .bottom-bar nav ul li {
 }
 header .main-header .bottom-bar nav ul li a {
   color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-transform: capitalize;
 }
 header .main-header .bottom-bar nav ul li:hover {
@@ -1492,9 +1492,6 @@ header .login-drawer.openingLoginDrawer {
   header .main-header .bottom-bar nav ul li {
     width: 100%;
   }
-  header .main-header .bottom-bar nav ul li a {
-    font-size: 1.3rem;
-  }
   header .main-header.mobile-header {
     width: 80% !important;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
@@ -1540,7 +1537,7 @@ header .login-drawer.openingLoginDrawer {
   header .top-bar .right-block ul button {
     font-size: 1.3rem;
   }
-  header .top-bar .right-block ul #open-btn {
+  header .top-bar .right-block ul .open-btn {
     margin-left: 5% !important;
   }
   header .main-header .middle-bar {
@@ -1597,7 +1594,7 @@ header .login-drawer.openingLoginDrawer {
   header .top-bar .right-block ul {
     gap: 0.6rem;
   }
-  header .top-bar .right-block ul #open-btn {
+  header .top-bar .right-block ul .open-btn {
     margin-left: 3% !important;
   }
 }
@@ -1675,7 +1672,7 @@ header .login-drawer.openingLoginDrawer {
   header .top-bar .right-block ul li a, header .top-bar .right-block ul button {
     font-size: 1.1rem !important;
   }
-  header .top-bar .right-block ul #open-btn {
+  header .top-bar .right-block ul .open-btn {
     margin-left: 1% !important;
   }
 }
