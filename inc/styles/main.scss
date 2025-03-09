@@ -1585,35 +1585,35 @@ header {position:fixed;
         }
 
         /* Animation */
-        &.active:first-child .left-block .semi-title {animation:movebottom 0.5s linear;}
-        &.active:first-child .left-block h2 {animation:movebottom 0.5s linear;}
-        &.active:first-child .left-block p {animation:moveleft 0.5s linear;}
-        &.active:first-child .left-block button {animation:moveright 0.5s linear;}
-    
-        &.active:nth-child(2) .left-block .semi-title {animation:movebottom 0.5s linear;}
-        &.active:nth-child(2) .left-block h2 {animation:movebottom 0.5s linear;}
-        &.active:nth-child(2) .left-block p {animation:moveright 0.5s linear;}
-        &.active:nth-child(2) .left-block button {animation:movetop 0.5s linear;}
-  
-        &.active:nth-child(3) .left-block .semi-title {animation:moveright 0.5s linear;}
-        &.active:nth-child(3) .left-block h2 {animation:moveleft 0.5s linear;}
-        &.active:nth-child(3) .left-block p {animation:moveright 0.5s linear;}
-        &.active:nth-child(3) .left-block button {animation:movetop 0.5s linear;}
-  
-        &.active:nth-child(4) .left-block .semi-title {animation:movebottom 0.5s linear;}
-        &.active:nth-child(4) .left-block h2 {animation:moveright 0.5s linear;}
-        &.active:nth-child(4) .left-block p {animation:moveleft 0.5s linear;}
-        &.active:nth-child(4) .left-block button {animation:moveright 0.5s linear;}
-  
-        &.active:nth-child(5) .left-block .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
-        &.active:nth-child(5) .left-block h2 {animation:moveleft 0.5s linear 0.5s backwards;}
-        &.active:nth-child(5) .left-block p {animation:moveright 0.5s linear 0.5s backwards;}
-        &.active:nth-child(5) .left-block button {animation:movetop 0.5s linear 0.5s backwards;}
-  
-        &.active:nth-child(6) .left-block .semi-title {animation:movebottom 0.5s linear 0.5s backwards;}
-        &.active:nth-child(6) .left-block h2 {animation:moveright 0.5s linear 0.5s backwards;}
-        &.active:nth-child(6) .left-block p {animation:moveleft 0.5s linear 0.5s backwards;}
-        &.active:nth-child(6) .left-block button {animation:moveright 0.5s linear 0.5s backwards;}
+        &.active:first-child .left-block .semi-title {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:first-child .left-block h2 {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:first-child .left-block p {animation:moveleft 0.7s linear 0.7s backwards;}
+        &.active:first-child .left-block button {animation:moveright 0.7s linear 0.7s backwards;}
+        
+        &.active:nth-child(2) .left-block .semi-title {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:nth-child(2) .left-block h2 {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:nth-child(2) .left-block p {animation:moveright 0.7s linear 0.7s backwards;}
+        &.active:nth-child(2) .left-block button {animation:movetop 0.7s linear 0.7s backwards;}
+        
+        &.active:nth-child(3) .left-block .semi-title {animation:moveright 0.7s linear 0.7s backwards;}
+        &.active:nth-child(3) .left-block h2 {animation:moveleft 0.7s linear 0.7s backwards;}
+        &.active:nth-child(3) .left-block p {animation:moveright 0.7s linear 0.7s backwards;}
+        &.active:nth-child(3) .left-block button {animation:movetop 0.7s linear 0.7s backwards;}
+        
+        &.active:nth-child(4) .left-block .semi-title {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:nth-child(4) .left-block h2 {animation:moveright 0.7s linear 0.7s backwards;}
+        &.active:nth-child(4) .left-block p {animation:moveleft 0.7s linear 0.7s backwards;}
+        &.active:nth-child(4) .left-block button {animation:moveright 0.7s linear 0.7s backwards;}
+        
+        &.active:nth-child(5) .left-block .semi-title {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:nth-child(5) .left-block h2 {animation:moveleft 0.7s linear 0.7s backwards;}
+        &.active:nth-child(5) .left-block p {animation:moveright 0.7s linear 0.7s backwards;}
+        &.active:nth-child(5) .left-block button {animation:movetop 0.7s linear 0.7s backwards;}
+        
+        &.active:nth-child(6) .left-block .semi-title {animation:movebottom 0.7s linear 0.7s backwards;}
+        &.active:nth-child(6) .left-block h2 {animation:moveright 0.7s linear 0.7s backwards;}
+        &.active:nth-child(6) .left-block p {animation:moveleft 0.7s linear 0.7s backwards;}
+        &.active:nth-child(6) .left-block button {animation:moveright 0.7s linear 0.7s backwards;}
 
         .right-block {flex:1 1 25rem;
                     position:relative;
@@ -1625,12 +1625,12 @@ header {position:fixed;
         }
 
         /* animation */
-        &:first-child .right-block img {animation:showimg 0.3s linear;}
-        &:nth-child(2) .right-block img {animation:showimg 0.3s linear;}
-        &:nth-child(3) .right-block img {animation:showimg 0.5s linear;}
-        &:nth-child(4) .right-block img {animation:showimg 0.5s linear;}
-        &:nth-child(5) .right-block img {animation:showimg 0.8s linear;}
-        &:nth-child(6) .right-block img {animation:showimg 0.8s linear;}
+        &.active:first-child .right-block img {animation:showimg 0.3s linear 0.7s backwards;}
+        &.active:nth-child(2) .right-block img {animation:showimg 0.3s linear 0.7s backwards;}
+        &.active:nth-child(3) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
+        &.active:nth-child(4) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
+        &.active:nth-child(5) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
+        &.active:nth-child(6) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
 
       }
 

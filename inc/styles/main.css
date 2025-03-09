@@ -1759,76 +1759,76 @@ header .login-drawer.openingLoginDrawer {
   margin-left: 0.5rem;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block .semi-title {
-  animation: movebottom 0.5s linear;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block h2 {
-  animation: movebottom 0.5s linear;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block p {
-  animation: moveleft 0.5s linear;
+  animation: moveleft 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block button {
-  animation: moveright 0.5s linear;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block .semi-title {
-  animation: movebottom 0.5s linear;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block h2 {
-  animation: movebottom 0.5s linear;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block p {
-  animation: moveright 0.5s linear;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block button {
-  animation: movetop 0.5s linear;
+  animation: movetop 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block .semi-title {
-  animation: moveright 0.5s linear;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block h2 {
-  animation: moveleft 0.5s linear;
+  animation: moveleft 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block p {
-  animation: moveright 0.5s linear;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block button {
-  animation: movetop 0.5s linear;
+  animation: movetop 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block .semi-title {
-  animation: movebottom 0.5s linear;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block h2 {
-  animation: moveright 0.5s linear;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block p {
-  animation: moveleft 0.5s linear;
+  animation: moveleft 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block button {
-  animation: moveright 0.5s linear;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block .semi-title {
-  animation: movebottom 0.5s linear 0.5s backwards;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block h2 {
-  animation: moveleft 0.5s linear 0.5s backwards;
+  animation: moveleft 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block p {
-  animation: moveright 0.5s linear 0.5s backwards;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block button {
-  animation: movetop 0.5s linear 0.5s backwards;
+  animation: movetop 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block .semi-title {
-  animation: movebottom 0.5s linear 0.5s backwards;
+  animation: movebottom 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block h2 {
-  animation: moveright 0.5s linear 0.5s backwards;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block p {
-  animation: moveleft 0.5s linear 0.5s backwards;
+  animation: moveleft 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block button {
-  animation: moveright 0.5s linear 0.5s backwards;
+  animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item .right-block {
   flex: 1 1 25rem;
@@ -1840,23 +1840,23 @@ header .login-drawer.openingLoginDrawer {
   height: 15rem;
   object-fit: contain;
 }
-.hero-section .slider-wrapper .hero-slide-item:first-child .right-block img {
-  animation: showimg 0.3s linear;
+.hero-section .slider-wrapper .hero-slide-item.active:first-child .right-block img {
+  animation: showimg 0.3s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item:nth-child(2) .right-block img {
-  animation: showimg 0.3s linear;
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .right-block img {
+  animation: showimg 0.3s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item:nth-child(3) .right-block img {
-  animation: showimg 0.5s linear;
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .right-block img {
+  animation: showimg 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item:nth-child(4) .right-block img {
-  animation: showimg 0.5s linear;
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .right-block img {
+  animation: showimg 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item:nth-child(5) .right-block img {
-  animation: showimg 0.8s linear;
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .right-block img {
+  animation: showimg 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item:nth-child(6) .right-block img {
-  animation: showimg 0.8s linear;
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .right-block img {
+  animation: showimg 0.7s linear 0.7s backwards;
 }
 @keyframes movebottom {
   0% {
