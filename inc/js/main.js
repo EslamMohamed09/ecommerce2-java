@@ -143,7 +143,7 @@ if(header){
           }
           icon.style.transform = "rotate(0deg)";
         }, 150);
-     };
+      };
     }
 
     window.addEventListener('scroll', function(){
