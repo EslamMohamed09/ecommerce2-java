@@ -219,9 +219,9 @@ if(document.querySelector('.hero-section')){
     let scrollStart = 0;
     
     function setupSlider(){
-        if (currentIndex >= 0 && currentIndex < slides.length) {
-            indicatorsMenu.children[currentIndex]?.classList.add('active');
-        }
+      if (currentIndex >= 0 && currentIndex < slides.length) {
+          indicatorsMenu.children[currentIndex]?.classList.add('active');
+      }
     }
 
     function buildIndicators (){
@@ -253,52 +253,52 @@ if(document.querySelector('.hero-section')){
         }
     }
 
-    function updateSlides() {
-       const scrollPosition = currentIndex * slideWidth;
-       Array.from(indicatorsMenu.children).forEach(indicator => {indicator.classList.remove('active');});
-       indicatorsMenu.children[currentIndex].classList.add('active');
+    function updateSlides(){
+      const scrollPosition = currentIndex * slideWidth;
+      Array.from(indicatorsMenu.children).forEach(indicator => {indicator.classList.remove('active');});
+      indicatorsMenu.children[currentIndex].classList.add('active');
 
-       slides.forEach((slide, index) => {
+      slides.forEach((slide, index) => {
         if (index === currentIndex) {
-          slide.classList.add('active');
+            slide.classList.add('active');
         } else {
           slide.classList.remove('active');
         }
       });
 
-        function animateScroll(start, end, duration) {
-            let startTime = null;
-    
-            function animation(currentTime) {
-                if (!startTime) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeInOutQuad(timeElapsed, start, end - start, duration);
-    
-                sliderWrapper.scrollLeft = run;
-                if (timeElapsed < duration) requestAnimationFrame(animation);
-            }
-    
-            function easeInOutQuad(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-    
-            requestAnimationFrame(animation);
-        }
-    
-        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 900);
-        
-        sliderWrapper.scrollTo({
-            left:scrollPosition,
-            behavior:"smooth"
-        });
-    
-        if (currentIndex >= slides.length) {
-            currentIndex = 0;
-            sliderWrapper.scrollLeft = 0;
-        }
+      function animateScroll(start, end, duration) {
+          let startTime = null;
+  
+          function animation(currentTime) {
+              if (!startTime) startTime = currentTime;
+              const timeElapsed = currentTime - startTime;
+              const run = easeInOutQuad(timeElapsed, start, end - start, duration);
+  
+              sliderWrapper.scrollLeft = run;
+              if (timeElapsed < duration) requestAnimationFrame(animation);
+          }
+  
+          function easeInOutQuad(t, b, c, d) {
+              t /= d / 2;
+              if (t < 1) return c / 2 * t * t + b;
+              t--;
+              return -c / 2 * (t * (t - 2) - 1) + b;
+          }
+  
+          requestAnimationFrame(animation);
+      }
+  
+      animateScroll(sliderWrapper.scrollLeft, scrollPosition, 900);
+      
+      sliderWrapper.scrollTo({
+        left:scrollPosition,
+        behavior:"smooth"
+      });
+  
+      if (currentIndex >= slides.length) {
+          currentIndex = 0;
+          sliderWrapper.scrollLeft = 0;
+      }
     }
 
     function prevSlide() {

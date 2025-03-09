@@ -118,6 +118,7 @@
        --green21:#053a15;
        --green22:#063113;
        --green23:#05270f;
+       --green24:#031a0a;
 
        --olive:#eff7f7;
        --olive1:#e5f5f5;
@@ -1555,34 +1556,49 @@ header {position:fixed;
                         visibility:hidden;
                         opacity:0;
                         transition:opacity 0.5s ease, visibility 0s linear 0.5s;
-          
-            &.active {visibility:visible;
-                      opacity:1;
-                      transition:opacity 0.7s ease;}
 
         .left-block {flex:1 1 25rem;
+          .block-content {width:70%;
+                          margin:0;
+                          padding:0;
 
-          .semi-title {font-size:1rem;
-                      color:var(--red7);
-                      font-weight:550;
-                      text-transform:capitalize;
-                      text-shadow:var(--text-shadow);
-                    svg {margin-right:0.2rem;}
-          }
+              .semi-title {font-size:1rem;
+                           color:var(--red7);
+                           font-weight:550;
+                           text-transform:capitalize;
+                           text-shadow:var(--text-shadow);
+                      svg,i {margin-right:0.2rem;}
+              }
 
-          h2 {color:var(--gray11);
-              margin-bottom:0.6rem;}
+              h2 {color:var(--gray11);
+                  margin-bottom:0.6rem;}
 
-          p {width:55%;
-             font-size:1.2rem;
-             text-align:left;
-             margin-bottom:0.9rem;
-             color:var(--black);}
-
-          button {padding:0.4rem 0.9rem 0.4rem 1.3rem;
-            svg {margin-left:0.5rem;}
+              p {width:80%;
+                 font-size:1.2rem;
+                 text-align:left;
+                 margin-bottom:0.9rem;
+                 color:var(--black);}
           }
         }
+
+        button {padding:0.4rem 0.9rem 0.4rem 1.3rem;
+          svg,i {margin-left:0.5rem;}
+        }
+
+        .right-block {flex:1 1 25rem;
+                    position:relative;
+                    z-index:0;
+
+            img {width:15rem;
+                height:15rem;
+                object-fit:contain;}
+        }
+
+        &.active {visibility:visible;
+                  opacity:1;
+                  transition:opacity 0.7s ease;}
+
+        &.active .left-block {margin-left:0.5rem;}
 
         /* Animation */
         &.active:first-child .left-block .semi-title {animation:movebottom 0.7s linear 0.7s backwards;}
@@ -1615,23 +1631,13 @@ header {position:fixed;
         &.active:nth-child(6) .left-block p {animation:moveleft 0.7s linear 0.7s backwards;}
         &.active:nth-child(6) .left-block button {animation:moveright 0.7s linear 0.7s backwards;}
 
-        .right-block {flex:1 1 25rem;
-                    position:relative;
-                    z-index:0;
-
-            img {width:15rem;
-                height:15rem;
-                object-fit:contain;}
-        }
-
-        /* animation */
+        /* animation for image */
         &.active:first-child .right-block img {animation:showimg 0.3s linear 0.7s backwards;}
         &.active:nth-child(2) .right-block img {animation:showimg 0.3s linear 0.7s backwards;}
         &.active:nth-child(3) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
         &.active:nth-child(4) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
         &.active:nth-child(5) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
         &.active:nth-child(6) .right-block img {animation:showimg 0.7s linear 0.7s backwards;}
-
       }
 
       @keyframes movebottom {
@@ -1711,8 +1717,11 @@ header {position:fixed;
                background-color:var(--gray12);
                z-index:100;
                opacity:0;
-               transition:all 0.3s linear;
+               transition:all 0.2s linear;
           svg {font-size:1rem;}
+
+          &:hover {background-color:transparent;
+                   color:var(--gray11);}
     }
 
     .prev-btn {left:-1rem;}
@@ -1724,10 +1733,6 @@ header {position:fixed;
 
     &:hover .next-btn {right:1%;
                        opacity:1;}
-
-    .prev-btn:hover {background-color:transparent;}
-
-    .next-btn:hover {background-color:transparent;}
 
     .indicators-menu {position:absolute;
                       bottom:2rem;
@@ -1775,15 +1780,21 @@ header {position:fixed;
                    opacity:1;}
 
         .hero-slide-item {flex-flow:column-reverse;
-          .left-block {justify-content:flex-start;
-                       padding-left:6%;
 
-            p {width:90%;}
+          .left-block {justify-content:flex-end;
+                       margin-bottom:1rem;
+            .block-content {width:80% !important;
+                p {width:90%;}
+            }
           }
         }
     }
 
-    @media (max-width:450px) { .hero-slide-item .right-block img {width:80%;} }
+    @media (max-width:450px) { 
+        .hero-slide-item {
+            .right-block img {width:80%;}
+        }
+    }
 
     @media (max-width:300px) { .hero-slide-item .left-block p {width:100%;} }
     

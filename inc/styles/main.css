@@ -110,6 +110,7 @@
   --green21:#053a15;
   --green22:#063113;
   --green23:#05270f;
+  --green24:#031a0a;
   --olive:#eff7f7;
   --olive1:#e5f5f5;
   --olive2:#def3f3;
@@ -1721,41 +1722,59 @@ header .login-drawer.openingLoginDrawer {
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0s linear 0.5s;
   /* Animation */
-  /* animation */
-}
-.hero-section .slider-wrapper .hero-slide-item.active {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.7s ease;
+  /* animation for image */
 }
 .hero-section .slider-wrapper .hero-slide-item .left-block {
   flex: 1 1 25rem;
 }
-.hero-section .slider-wrapper .hero-slide-item .left-block .semi-title {
+.hero-section .slider-wrapper .hero-slide-item .left-block .block-content {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+.hero-section .slider-wrapper .hero-slide-item .left-block .block-content .semi-title {
   font-size: 1rem;
   color: var(--red7);
   font-weight: 550;
   text-transform: capitalize;
   text-shadow: var(--text-shadow);
 }
-.hero-section .slider-wrapper .hero-slide-item .left-block .semi-title svg {
+.hero-section .slider-wrapper .hero-slide-item .left-block .block-content .semi-title svg, .hero-section .slider-wrapper .hero-slide-item .left-block .block-content .semi-title i {
   margin-right: 0.2rem;
 }
-.hero-section .slider-wrapper .hero-slide-item .left-block h2 {
+.hero-section .slider-wrapper .hero-slide-item .left-block .block-content h2 {
   color: var(--gray11);
   margin-bottom: 0.6rem;
 }
-.hero-section .slider-wrapper .hero-slide-item .left-block p {
-  width: 55%;
+.hero-section .slider-wrapper .hero-slide-item .left-block .block-content p {
+  width: 80%;
   font-size: 1.2rem;
   text-align: left;
   margin-bottom: 0.9rem;
   color: var(--black);
 }
-.hero-section .slider-wrapper .hero-slide-item .left-block button {
+.hero-section .slider-wrapper .hero-slide-item button {
   padding: 0.4rem 0.9rem 0.4rem 1.3rem;
 }
-.hero-section .slider-wrapper .hero-slide-item .left-block button svg {
+.hero-section .slider-wrapper .hero-slide-item button svg, .hero-section .slider-wrapper .hero-slide-item button i {
+  margin-left: 0.5rem;
+}
+.hero-section .slider-wrapper .hero-slide-item .right-block {
+  flex: 1 1 25rem;
+  position: relative;
+  z-index: 0;
+}
+.hero-section .slider-wrapper .hero-slide-item .right-block img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+}
+.hero-section .slider-wrapper .hero-slide-item.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+.hero-section .slider-wrapper .hero-slide-item.active .left-block {
   margin-left: 0.5rem;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block .semi-title {
@@ -1829,16 +1848,6 @@ header .login-drawer.openingLoginDrawer {
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block button {
   animation: moveright 0.7s linear 0.7s backwards;
-}
-.hero-section .slider-wrapper .hero-slide-item .right-block {
-  flex: 1 1 25rem;
-  position: relative;
-  z-index: 0;
-}
-.hero-section .slider-wrapper .hero-slide-item .right-block img {
-  width: 15rem;
-  height: 15rem;
-  object-fit: contain;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .right-block img {
   animation: showimg 0.3s linear 0.7s backwards;
@@ -1926,11 +1935,16 @@ header .login-drawer.openingLoginDrawer {
   background-color: var(--gray12);
   z-index: 100;
   opacity: 0;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .hero-section .prev-btn svg,
 .hero-section .next-btn svg {
   font-size: 1rem;
+}
+.hero-section .prev-btn:hover,
+.hero-section .next-btn:hover {
+  background-color: transparent;
+  color: var(--gray11);
 }
 .hero-section .prev-btn {
   left: -1rem;
@@ -1945,12 +1959,6 @@ header .login-drawer.openingLoginDrawer {
 .hero-section:hover .next-btn {
   right: 1%;
   opacity: 1;
-}
-.hero-section .prev-btn:hover {
-  background-color: transparent;
-}
-.hero-section .next-btn:hover {
-  background-color: transparent;
 }
 .hero-section .indicators-menu {
   position: absolute;
@@ -2010,10 +2018,13 @@ header .login-drawer.openingLoginDrawer {
     flex-flow: column-reverse;
   }
   .hero-section .hero-slide-item .left-block {
-    justify-content: flex-start;
-    padding-left: 6%;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
   }
-  .hero-section .hero-slide-item .left-block p {
+  .hero-section .hero-slide-item .left-block .block-content {
+    width: 80% !important;
+  }
+  .hero-section .hero-slide-item .left-block .block-content p {
     width: 90%;
   }
 }
