@@ -1290,15 +1290,16 @@ header {position:fixed;
                     left:0;
                     width:0 !important;
                     height:100%;
-                    z-index:1000;
                     transition:all 0.3s linear;
+                    z-index:1000;
+                    opacity:0;
+                    visibility:hidden;
 
           .middle-bar {padding:0.4rem 2rem 0.4rem 1rem;
                        margin-top:2rem;
                        gap:2rem;
                        border-top:none;
                        border-bottom:none;
-                       opacity:0;
                   
                 .search-form {width:45%;
                   .search-btn {padding:0.6rem 1rem;}
@@ -1308,7 +1309,6 @@ header {position:fixed;
           }
  
           .bottom-bar {padding:0.4rem 2rem 0.4rem 1rem;
-                       opacity:0;
 
             nav ul {flex-direction:column;
                     align-items:flex-start;
@@ -1318,10 +1318,9 @@ header {position:fixed;
           }
 
           &.mobile-header {width:80% !important;
+                           opacity:1;
+                           visibility:visible;
                            box-shadow:100vh 100vh 100vh 100vh rgba(0,0,0,0.3);}
-
-          &.mobile-header .middle-bar,
-          &.mobile-header .bottom-bar {opacity:1;}
       }
   }
 

@@ -1462,8 +1462,10 @@ header .login-drawer.openingLoginDrawer {
     left: 0;
     width: 0 !important;
     height: 100%;
-    z-index: 1000;
     transition: all 0.3s linear;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
   }
   header .main-header .middle-bar {
     padding: 0.4rem 2rem 0.4rem 1rem;
@@ -1471,7 +1473,6 @@ header .login-drawer.openingLoginDrawer {
     gap: 2rem;
     border-top: none;
     border-bottom: none;
-    opacity: 0;
   }
   header .main-header .middle-bar .search-form {
     width: 45%;
@@ -1484,7 +1485,6 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header .bottom-bar {
     padding: 0.4rem 2rem 0.4rem 1rem;
-    opacity: 0;
   }
   header .main-header .bottom-bar nav ul {
     flex-direction: column;
@@ -1495,10 +1495,9 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header.mobile-header {
     width: 80% !important;
-    box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
-  }
-  header .main-header.mobile-header .middle-bar, header .main-header.mobile-header .bottom-bar {
     opacity: 1;
+    visibility: visible;
+    box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
 }
 @media (max-width: 640px) {
