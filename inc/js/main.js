@@ -147,16 +147,13 @@ if(header){
     }
 
     window.addEventListener('scroll', function(){
-
       if (window.scrollY > 30){
           document.querySelector("header .top-bar").style.display = 'none';
           document.querySelector(".main-header").style.boxShadow = '0 0.4rem 1.5rem rgba(0, 247, 255, 0.356)';
       } else {
         document.querySelector("header .top-bar").style.display = 'flex';
         document.querySelector(".main-header").style.boxShadow = 'none';
-
       }
-      
     });
 
   });
@@ -254,7 +251,7 @@ if(document.querySelector('.hero-section')){
     }
 
     function updateSlides(){
-      const scrollPosition = currentIndex * slideWidth;
+      const scrollPosition = currentIndex * slideWidth - 30;
       Array.from(indicatorsMenu.children).forEach(indicator => {indicator.classList.remove('active');});
       indicatorsMenu.children[currentIndex].classList.add('active');
 

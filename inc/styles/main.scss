@@ -1024,7 +1024,7 @@ header {position:fixed;
         left:0;
         right:0;
         width:100%;
-        z-index:1000000;
+        z-index:10000000;
 
   .top-bar {padding:0.3rem 3%;
             background-color:var(--olive18);
@@ -2407,7 +2407,7 @@ header {position:fixed;
   @media(max-width:768px){
     .left-block {margin-bottom:2rem;}
       
-    .offersblock .product-item .image img {height:55%;}
+    .side-block .product-item .image img {height:55%;}
   }
 }
 
@@ -4854,8 +4854,8 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                            text-align:left;}
 
                         .ratings {gap:0.1rem;
-                          svg {color:var(--yellow10);
-                                font-size:1.1rem;}
+                          svg,i {color:var(--yellow10);
+                                 font-size:1.1rem;}
                         }
 
                         .price-holder {flex-wrap:nowrap;

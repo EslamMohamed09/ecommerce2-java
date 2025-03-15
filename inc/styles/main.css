@@ -1184,7 +1184,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1000000;
+  z-index: 10000000;
 }
 header .top-bar {
   padding: 0.3rem 3%;
@@ -2712,7 +2712,7 @@ header .login-drawer.openingLoginDrawer {
   .offers-section .left-block {
     margin-bottom: 2rem;
   }
-  .offers-section .offersblock .product-item .image img {
+  .offers-section .side-block .product-item .image img {
     height: 55%;
   }
 }
@@ -5444,7 +5444,7 @@ footer .bottom-footer p {
 .category-page .category-page-container .right-block .categories-products .categories-products-container .product-item .content .ratings {
   gap: 0.1rem;
 }
-.category-page .category-page-container .right-block .categories-products .categories-products-container .product-item .content .ratings svg {
+.category-page .category-page-container .right-block .categories-products .categories-products-container .product-item .content .ratings svg, .category-page .category-page-container .right-block .categories-products .categories-products-container .product-item .content .ratings i {
   color: var(--yellow10);
   font-size: 1.1rem;
 }
