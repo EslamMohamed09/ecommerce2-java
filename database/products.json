@@ -7258,7 +7258,42 @@
       "onSale":false,
       "catId":"49",
       "tags":["headphone"],
-      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/1.jpg", "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/2.jpg"],
+      "image":[
+        {"color":"black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/black(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/black(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/black(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/black(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/black(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/black(6).png"]
+        },
+        {"color":"gray",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/gray.png"]
+        },
+        {"color":"green x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/greenxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/greenxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/greenxblack(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/greenxblack(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/greenxblack(5).png"]
+        },
+        {"color":"red x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/redxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/redxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/redxblack(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/redxblack(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/redxblack(5).png"]
+        },
+        {"color":"silver x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/silverxblack.png"]
+        },
+        {"color":"white",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/white(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/white(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/white(3).jpg",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/2/white(4).jpg"]
+        }
+      ],
       "aboutThisItem":"Gaming Evolution: 7.1 Surround Sound: Equipped with 50mm high-precision neodymium audio drivers, this headset delivers immersive 7.1 surround sound. Experience a wide sound field with clear bass, midrange, and treble, allowing you to detect footsteps, dialogue, and explosive rumbles in the game. Crystal-Clear Communication: Transform your gaming and conversations with the 180° adjustable noise-canceling microphone. Communicate effortlessly with your team, ensuring your voice is crystal clear. Control audio with intuitive on-ear commands for mic and LED light toggling. The built-in sound card eliminates noise and echoes, providing studio-quality clarity for every interaction. Amplify Intense Sensations with Smart Bass Vibration: Elevate your gaming experience with the innovative 30mm bass vibration driver, which converts sound signals into dynamic sensory feedback. Feel the impact of battles like never before, adding a new layer of realism to your gameplay. Ultimate Long-Term Comfort: Designed with a reinforced padded headband, skin-friendly leather, and excellent breathability, this headset ensures a luxuriously comfortable experience for extended wear. RGB Brilliance for Visual Delight: Immerse yourself in captivating visuals with RGB LED effects that enhance your gameplay. The dynamic colors and gaming-inspired design create an exciting illumination that elevates the thrill of your gaming sessions.",
       "price":"$115",
       "salePrice":"$110",
