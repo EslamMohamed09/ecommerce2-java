@@ -7247,36 +7247,30 @@
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/black(3).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/black(4).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/black(5).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/black(6).png"]
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/black(6).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/black(7).png"]
         },
         {"color":"green x black",
          "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/greenxblack(1).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/greenxblack(2).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/greenxblack(3).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/greenxblack(4).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/greenxblack(5).png"]
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/greenxblack(2).png"]
         },
         {"color":"red x black",
-         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/redxblack(1).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/redxblack(2).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/redxblack(3).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/redxblack(4).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/redxblack(5).png"]
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/redxblack(1).png"]
+        },
+        {"color":"silver x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/silverxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/silverxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/silverxblack(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/silverxblack(4).png"]
         },
         {"color":"white",
          "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(1).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(2).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(3).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(4).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(5).jpg"]
-        },
-        {"color":"white x black",
-         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/whitexblack(1).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/whitexblack(2).png"]
-        },
-        {"color":"white x gray",
-         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/whitexgray(1).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/whitexgray(2).png"]
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(6).jpg",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/1/white(7).jpg"]
         }
       ],
       "aboutThisItem":"BEATS' CUSTOM ACOUSTIC PLATFORM delivers rich, immersive sound whether you’re listening to music or taking calls. LOSSLESS AUDIO via USB-C plus three distinct built-in sound profiles to enhance your listening experience HEAR WHAT YOU WANT with two distinct listening modes: fully-adaptive Active Noise Cancelling (ANC) and Transparency mode ENHANCED COMPATIBILITY with one-touch pairing and a robust set of native Apple and Android features PERSONALIZED SPATIAL AUDIO with dynamic head tracking place you at the center of an immersive 360-degree listening experience LONGER LISTENING - Up to 40 hours total battery life. A 10-minute Fast Fuel charge provides up to 4 hours of additional playback. LOUD AND CLEAR - Voice-targeting mics precisely filter background noise for crisp, clear call performance",
