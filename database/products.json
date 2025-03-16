@@ -7386,12 +7386,39 @@
     },
     {
       "id":"321",
-      "title":"SODO SD1102 Wireless Headset: Bluetooth V5.3 with External Microphone, Hi-Res Stereo Sound, HiFi Quality, SD Card Support, Over-Ear Design, Available in Black",
+      "title":"Logitech G432 Wired Gaming Headset, 7.1 Surround Sound, DTS Headphone:X 2.0, Flip-to-Mute Mic, PC (Leatherette)",
       "onSale":false,
       "catId":"49",
       "tags":["headphone"],
-      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/1.jpg"],
-      "aboutThisItem":"-Hi-Fi HD Stereo Headphones -Convenient and Hassle Free -Bluetooth Speaker -Easy and effective dual system action -Broadcast time: 8 hours -Bluetooth v5.3 -SoDo 1102",
+      "image":[
+        {"color":"black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/black(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/black(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/black(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/black(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/black(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/black(6).jpg"]
+        },
+        {"color":"green x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/greenxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/greenxblack(2).png"]
+        },
+        {"color":"red x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/redxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/redxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/redxblack(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/redxblack(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/redxblack(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/redxblack(6).png"]
+        },
+        {"color":"silverxblack",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/silverxblack(1).png"]
+        },
+        {"color":"white",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/4/white(1).png"]
+        }
+      ],
+      "aboutThisItem":"Frequency Response: 20Hz-20KHz.Headphones fit type:On-Ear Large 50 millimeter audio drivers produce great sound for a more immersive gaming experience. Advanced DTS Headphone: X 2; 0 surround sound creates precise positional audio and a 3D soundscape. 6 millimeter flip to mute mic with volume control at your fingertips Connects to PC, mobile devices and game consoles via simple 3.5 millimeter or USB DAC input. Premium leatherette ear pads and headband for comfortable gaming.",
       "price":"$85",
       "salePrice":"$81",
       "color":"black",
