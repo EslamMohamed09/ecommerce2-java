@@ -7110,7 +7110,6 @@
       "onSale":false,
       "catId":"48",
       "tags":["earbuds"],
-      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/1.jpg"],
       "image":[
         {"color":"black",
          "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(1).png",
@@ -7118,10 +7117,19 @@
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(3).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(4).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(5).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(6).jpg"]
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(6).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(7).png"]
+        },
+        {"color":"gray x white",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/grayxwhite(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/grayxwhite(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/grayxwhite(3).png"]
         },
         {"color":"green x black",
-         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/greenxblack(1).png"]
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/greenxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/greenxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/greenxblack(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/greenxblack(4).png"]
         },
         {"color":"red x black",
          "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/redxblack(1).png",
@@ -7131,11 +7139,11 @@
         {"color":"white",
          "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(1).png",
                 "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(2).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(3).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(4).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(5).png",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(6).jpg",
-                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(7).jpg"]
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(3).jpg",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(4).jpg"]
+        },
+        {"color":"white x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/whitexblack(1).png"]
         }
       ],
       "aboutThisItem":"-Noise Cancelling: No -External Product ID Type: EAN-13 -Microphone included: Yes -Connectivity : Wired/Wireless",
