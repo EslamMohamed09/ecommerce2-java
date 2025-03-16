@@ -7053,7 +7053,7 @@
       "onSale":false,
       "catId":"48",
       "tags":["earbuds"],
-      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/1/1.png", 
+      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/1/1.png",
                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/1/2.png", 
                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/1/3.png"],
       "aboutThisItem":"[JBL Pure Bass Sound] - The JBL Tune 520BT delivers the iconic JBL Pure Bass sound, utilizing the same technology that powers renowned venues worldwide. [Wireless Bluetooth 5.3 Technology] - Enjoy high-quality sound streaming from your smartphone without the hassle of cords, thanks to the latest Bluetooth technology. [Customize Your Listening Experience] - Download the free JBL Headphones App to adjust the EQ settings and tailor the sound to your preferences. [Up to 57 Hours Battery Life and Speed Charge (5 mins = 3 hours)] - Experience long-lasting enjoyment with up to 57 hours of wireless listening. Recharge in just 2 hours using the Type-C USB cable, or enjoy 3 extra hours of music with a quick 5-minute charge. [Hands-Free Calls with Voice Aware] - Manage your calls and sound easily using the buttons on the ear cup. Voice Aware technology lets you hear your voice while speaking.",
@@ -7111,6 +7111,33 @@
       "catId":"48",
       "tags":["earbuds"],
       "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/1.jpg"],
+      "image":[
+        {"color":"black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/black(6).jpg"]
+        },
+        {"color":"green x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/greenxblack(1).png"]
+        },
+        {"color":"red x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/redxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/redxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/redxblack(3).png"]
+        },
+        {"color":"white",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(6).jpg",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/On-Ear_Headphones/4/white(7).jpg"]
+        }
+      ],
       "aboutThisItem":"-Noise Cancelling: No -External Product ID Type: EAN-13 -Microphone included: Yes -Connectivity : Wired/Wireless",
       "price":"$115",
       "salePrice":"$110",
