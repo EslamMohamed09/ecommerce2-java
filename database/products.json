@@ -7349,7 +7349,30 @@
       "onSale":false,
       "catId":"49",
       "tags":["headphone"],
-      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/1.png", "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/2.jpg"],
+      "image":[
+        {"color":"grayxwhite",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/grayxwhite(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/grayxwhite(2).jpg"]
+        },
+        {"color":"green x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/greenxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/greenxblack(2).png"]
+        },
+        {"color":"red x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/redxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/redxblack(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/redxblack(3).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/redxblack(4).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/redxblack(5).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/redxblack(6).png"]
+        },
+        {"color":"silverxblack",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/silverxblack(1).png"]
+        },
+        {"color":"white",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/3/white(1).png"]
+        }
+      ],
       "aboutThisItem":"Comfort is King: Comfort’s in the Cloud III’s DNA. Built for gamers who can’t have an uncomfortable headset ruin the flow of their full-combo, disrupt their speedrun, or knocking them out of the zone. Audio Tuned for Your Entertainment: Angled 53mm drivers have been tuned by HyperX audio engineers to provide the optimal listening experience that accents the dynamic sounds of gaming. Upgraded Microphone for Clarity and Accuracy: Captures high-quality audio for clear voice chat and calls. The mic is noise-cancelling and features a built-in mesh filter to omit disruptive sounds and LED mic mute indicator lets you know when you’re muted. Durability, for the Toughest of Battles: The headset is flexible and features an aluminum frame so it’s resilient against travel, accidents, mishaps, and your ‘level-headed’ reactions to losses and defeat screens. DTS Headphone:X Spatial Audio: A lifetime activation of DTS Spatial Audio will help amp up your audio advantage and immersion with its precise sound localization and virtual 3D sound stage.",
       "price":"$115",
       "salePrice":"$110",
