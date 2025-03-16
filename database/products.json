@@ -7631,10 +7631,35 @@
       "id":"322",
       "title":"P39 Wireless Gaming Headphones: Bluetooth headphones compatible with all mobile phones, computers, and Macs. Features a foldable design, AUX line, TF card support, and comes in black",
       "onSale":false,
-      "category":["electronics", "portable sound & vision", "accessories", "headphone, earbuds & accessories", "headphones & earbuds", "Over-Ear Headphones"],
       "catId":"49",
       "tags":["headphone"],
-      "image":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/1.jpg"],
+      "image":[
+        {"color":"black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/black(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/black(2).png"]
+        },
+        {"color":"gray",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/gray.png"]
+        },
+        {"color":"green x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/greenxblack.png"]
+        },
+        {"color":"red x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/redxblack(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/redxblack(2).png",
+              "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/redxblack(3).png",
+            "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/redxblack(4).png"]
+        },
+        {"color":"silver x black",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/silverxblack.png"]
+        },
+        {"color":"white",
+         "url":["../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/white(1).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/white(2).png",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/white(3).jpg",
+                "../admin/inc/images/electronics/portable_sound_&_vision/accessories/headphone,earbuds&accessories/headphones&earbuds/Over-Ear_Headphones/5/white(4).jpg"]
+        }
+      ],
       "aboutThisItem":"Comfortable Design: Made with skin-friendly protein material, these headphones offer a soft, comfortable fit, allowing for extended wear without discomfort. High-Quality Sound: Provides clear audio with strong bass and treble for an enjoyable listening experience. Ideal Gift: A great present for Christmas, Valentine's Day, Children's Day, or birthdays. Suitable for office work, sports, school, and travel. Portable: Lightweight and compact, making them easy to carry and store.",
       "price":"$95",
       "salePrice":"$89",
