@@ -166,6 +166,9 @@
 
     {"id":"83", "name":"platforms & wedges", "Image":"../admin/inc/images/clothes/women/shoes/sandals/platforms&wedges/1/1.png", "parent_id":"71"},
 
-    {"id":"84", "name":"slides", "Image":"../admin/inc/images/clothes/women/shoes/sandals/slides/2/1.png", "parent_id":"71"}
+    {"id":"84", "name":"slides", "Image":"../admin/inc/images/clothes/women/shoes/sandals/slides/2/1.png", "parent_id":"71"},
+
+    {"id":"85", "name":"shoes", "Image":"../admin/inc/images/clothes/men/shoes/1/beige,gray,white,tan(1).png", "parent_id":"65"}
+
   ]
 }
