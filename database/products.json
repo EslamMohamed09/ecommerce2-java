@@ -8611,9 +8611,9 @@
     },
     {
       "id":"371",
-      "title":"",
+      "title":"ISTANBUL MODEL Men's Round Neck Short Sleeve T-Shirt – 95% Cotton, 5% Lycra – Pack of 1",
       "onSale":false,
-      "catId":"",
+      "catId":"89",
       "tags":["t-shirt", "men t-shirt", "man t-shirt"],
       "image":[
         {"color":"beige",
@@ -8641,8 +8641,55 @@
          "url":["../admin/inc/images/clothes/men/t-shirt/1/yellow.png"]
         }
       ],
-      "aboutThisItem":"",
-      "details":"",
+      "aboutThisItem":"Soft & Comfortable – Made from 95% breathable, high-quality cotton and 5% Spandex, these T-shirts feel gentle on your skin, perfect for all-day wear. Available in sizes S to XXL for a great fit on any body shape. Durable & Long-Lasting – Designed to maintain their shape and color over time, these men's T-shirts offer a classic crew neck and a timeless fit. Closure: Pull On.",
+      "price":"$25",
+      "salePrice":"$31",
+      "color":"beige",
+      "colors":"beige, blue, gray, navy, olive, red, white, yellow",
+      "instock":"129",
+      "off":"30%",
+      "bought":"78",
+      "viewed":"101",
+      "rating":4
+    },
+    {
+      "id":"372",
+      "title":"Men's Round Neck Short Sleeve T-Shirt – 100% Cotton, Regular Fit, Hatching Print Design",
+      "onSale":false,
+      "catId":"89",
+      "tags":["t-shirt", "men t-shirt", "man t-shirt"],
+      "image":[
+        {"color":"beige",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/beige(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/beige(2).png"]
+        },
+        {"color":"blue",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/blue(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/blue(2).png"]
+        },
+        {"color":"gray",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/gray(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/gray(2).png"]
+        },
+        {"color":"navy",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/navy(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/navy(2).png"]
+        },
+        {"color":"olive",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/olive(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/olive(2).png"]
+        },
+        {"color":"red",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/red(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/red(2).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/red(3).png"]
+        },
+        {"color":"white",
+         "url":["../admin/inc/images/clothes/men/t-shirt/2/white(1).png",
+                "../admin/inc/images/clothes/men/t-shirt/2/white(2).png"]
+        }
+      ],
+      "aboutThisItem":"Soft & Comfortable – Made from 100% cotton, these T-shirts feel gentle on your skin and are perfect for all-day wear. Available in sizes M to XXL for a comfortable fit on any body type. Durable & Long-Lasting – Designed to maintain their shape and color, even after multiple washes (max 30°C). Features: Crew Neck, Regular Fit, Pull-On Closure.",
       "price":"$25",
       "salePrice":"$31",
       "color":"beige",
@@ -8653,42 +8700,137 @@
       "rating":4
     },
     {
-      "id":"372",
-      "title":"",
+      "id":"373",
+      "title":"RUNIC Mens T-Shirt Short Sleeve Slim M Grey",
       "onSale":false,
-      "catId":"",
+      "catId":"89",
       "tags":["t-shirt", "men t-shirt", "man t-shirt"],
+      "image":["../admin/inc/images/clothes/men/t-shirt/3/lightgray(1).png",
+               "../admin/inc/images/clothes/men/t-shirt/3/lightgray(2).png",
+               "../admin/inc/images/clothes/men/t-shirt/3/lightgray(3).png"],
+      "aboutThisItem":"Brand: RUNIC. Gender: Men. Material: 100% Polyester. Color: Grey. Size: M.",
+      "details":"Material composition: 100% Polyester. Care instructions: Hand Wash Only. Closure type: Pull On.",
+      "price":"$25",
+      "salePrice":"$31",
+      "color":"beige",
+      "instock":"129",
+      "off":"30%",
+      "bought":"78",
+      "viewed":"101",
+      "rating":4
+    },
+    {
+      "id":"374",
+      "title":"Men's Classic Short Sleeve Cotton Polo Shirt",
+      "onSale":false,
+      "catId":"89",
+      "tags":["t-shirt", "men t-shirt", "man t-shirt"],
+      "image":["../admin/inc/images/clothes/men/t-shirt/4/black(1).png",
+               "../admin/inc/images/clothes/men/t-shirt/4/black(2).png",
+               "../admin/inc/images/clothes/men/t-shirt/4/black(3).png"],
+      "aboutThisItem":"Material: Premium cotton fabric offers exceptional breathability and all-day comfort. [Design]: Classic polo style featuring a sleek embroidered logo, ribbed collar, and button placket. [Versatile Style]: Ideal for casual outings, office wear, or sports, with a timeless yellow color and modern fit. [Easy Care]: Machine washable for effortless maintenance and lasting color retention. [Fit & Comfort]: Short sleeves and a comfortable cut ensure easy movement while maintaining a polished look.",
+      "details":"Care instructions: Machine Wash.Closure type: Button.",
+      "price":"$25",
+      "salePrice":"$31",
+      "color":"black",
+      "instock":"129",
+      "off":"30%",
+      "bought":"78",
+      "viewed":"101",
+      "rating":4
+    },
+    {
+      "id":"375",
+      "title":"Diadora, shirt, Men, shirt",
+      "onSale":false,
+      "catId":"89",
+      "tags":["t-shirt", "men t-shirt", "man t-shirt"],
+      "image":["../admin/inc/images/clothes/men/t-shirt/5/black(1).png",
+               "../admin/inc/images/clothes/men/t-shirt/5/black(2).png",
+               "../admin/inc/images/clothes/men/t-shirt/5/black(3).png"],
+      "aboutThisItem":"Round neck. Lightweight interlock fabric. Mesh inserts & Reflective inserts. Printed. Made in china with the excellence From Diadora Italy .",
+      "price":"$25",
+      "salePrice":"$31",
+      "color":"black",
+      "instock":"129",
+      "off":"30%",
+      "bought":"78",
+      "viewed":"101",
+      "rating":4
+    },
+    {
+      "id":"376",
+      "title":"Cody Lundin® Men's Superhero Series Compression T-Shirt – Bat Armor & America Hero Design, Short Sleeve Sports & Fitness Tee",
+      "onSale":false,
+      "catId":"89",
+      "tags":["t-shirt", "men t-shirt", "man t-shirt", "batman t-shirt"],
       "image":[
         {"color":"beige",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/beige(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/beige(2).png"]
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/beige.png"]
         },
         {"color":"blue",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/blue(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/blue(2).png"]
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/blue.png"]
+        },
+        {"color":"black",
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/black.png"]
         },
         {"color":"gray",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/gray(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/gray(2).png"]
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/gray.png"]
         },
         {"color":"navy",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/navy(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/navy(2).png"]
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/navy.png"]
         },
         {"color":"olive",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/olive(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/olive(2).png"]
-        },
-        {"color":"red",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/red(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/red(2).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/red(3).png"]
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/olive.png"]
         },
         {"color":"white",
-         "url":["../admin/inc/images/clothes/men/t-shirt/1/white(1).png",
-                "../admin/inc/images/clothes/men/t-shirt/1/white(2).png"]
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/white.png"]
+        },
+        {"color":"yellow",
+         "url":["../admin/inc/images/clothes/men/t-shirt/6/yellow.png"]
         }
       ],
+      "aboutThisItem":"[Stretchable & Comfortable]: Made from high-elasticity fabric that contours to the body for a snug fit. Flat seams reduce friction for enhanced comfort. [Breathable & Moisture-Wicking]: Quickly wicks away sweat to keep your skin dry and comfortable, even during intense workouts. [Flexible & Durable]: Highly stretchable fabric ensures full range of motion and long-lasting performance. [Temperature Control]: Adapts to external conditions, helping regulate body temperature, improve circulation, and enhance muscle performance.",
+      "details":"Care instructions: Hand Wash Only. Closure type: Pull On.",
+      "price":"$25",
+      "salePrice":"$31",
+      "color":"beige",
+      "colors":"beige, blue, gray, navy, olive, white, yellow",
+      "instock":"129",
+      "off":"30%",
+      "bought":"71",
+      "viewed":"205",
+      "rating":4
+    },
+    {
+      "id":"377",
+      "title":"Under Armour Men's Sportstyle Graphic T-Shirt – Ultra-Soft, Fast-Drying Training & Fitness Tee",
+      "onSale":false,
+      "catId":"89",
+      "tags":["t-shirt", "men t-shirt", "man t-shirt"],
+      "image":["../admin/inc/images/clothes/men/t-shirt/7/lightgray(1).png",
+               "../admin/inc/images/clothes/men/t-shirt/7/lightgray(2).png",
+               "../admin/inc/images/clothes/men/t-shirt/7/lightgray(3).png"],
+      "aboutThisItem":"[Versatile Style]: Designed for comfort and style, this men's graphic tee is perfect for casual wear or workouts, offering a soft and relaxed fit. [Soft & Comfortable]: Made from ultra-soft fabric that feels gentle on the skin, ensuring all-day comfort. [Quick-Drying]: Innovative fabric wicks sweat away, keeping you dry and free from damp patches. [Modern Graphic Design]: Features a sleek, minimalist graphic on the front for a stylish, gym-ready look. [Material & Fit]: Under Armour Sportstyle Short Sleeve Tee, 60% Cotton, 40% Polyester, Loose Fit.",
+      "details":"Material: 60% Cotton, 40% Polyester. Care Instructions: Machine wash with oxygen bleach, low-temperature drying, do not iron or dry clean. Closure: Pull-On.",
+      "price":"$25",
+      "salePrice":"$31",
+      "color":"light gray",
+      "instock":"129",
+      "off":"30%",
+      "bought":"78",
+      "viewed":"101",
+      "rating":4.5
+    },
+    {
+      "id":"378",
+      "title":"",
+      "onSale":false,
+      "catId":"89",
+      "tags":["t-shirt", "men t-shirt", "man t-shirt"],
+      "image":["../admin/inc/images/clothes/men/t-shirt/8/lightgray(1).png",
+               "../admin/inc/images/clothes/men/t-shirt/8/lightgray(2).png",
+               "../admin/inc/images/clothes/men/t-shirt/8/lightgray(3).png"],
       "aboutThisItem":"",
       "details":"",
       "price":"$25",
@@ -8698,7 +8840,7 @@
       "off":"30%",
       "bought":"78",
       "viewed":"101",
-      "rating":4
+      "rating":5
     }
   ]
 }
