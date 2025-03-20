@@ -174,7 +174,9 @@
 
     {"id":"87", "name":"casual", "Image":"../admin/inc/images/clothes/men/pants/casual/1/1.png", "parent_id":"86"},
 
-    {"id":"88", "name":"jeans", "Image":"../admin/inc/images/clothes/men/pants/jeans/1/1.png", "parent_id":"86"}
+    {"id":"88", "name":"jeans", "Image":"../admin/inc/images/clothes/men/pants/jeans/1/1.png", "parent_id":"86"},
+
+    {"id":"89", "name":"t-shirt", "Image":"../admin/inc/images/clothes/men/t-shirt/1/blue.png", "parent_id":"65"}
 
   ]
 }
