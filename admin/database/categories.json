@@ -170,7 +170,9 @@
 
     {"id":"85", "name":"shoes", "Image":"../admin/inc/images/clothes/men/shoes/1/beige,gray,white,tan(1).png", "parent_id":"65"},
 
-    {"id":"86", "name":"pants", "Image":"../admin/inc/images/clothes/men/pants/casual/1/1.png", "parent_id":"65"}
+    {"id":"86", "name":"pants", "Image":"../admin/inc/images/clothes/men/pants/casual/1/1.png", "parent_id":"65"},
+
+    {"id":"87", "name":"casual", "Image":"../admin/inc/images/clothes/men/pants/casual/1/1.png", "parent_id":"86"}
 
   ]
 }
