@@ -1972,17 +1972,32 @@ if(document.querySelector("#single-page")){
     const productContainer = document.querySelector("#single-page .product-container");
 
     const smallImagesContainer = productContainer.querySelector(".left-block .small-images-holder");
-    smallImagesContainer.innerHTML = '';
+          smallImagesContainer.innerHTML = '';
 
     if (product.image && Array.isArray(product.image)) {
-        product.image.forEach((img) => {
-          smallImagesContainer.innerHTML += `
-            <div class="small-image">
-              <img src="${img}" class="small-img" alt="Product Image">
-            </div>`;
-        });
+        const firstImage = product.image[0];
 
-      productContainer.querySelector(".left-block .big-image-holder img").src = product.image[0];
+      if (typeof firstImage === "string") {
+          product.image.forEach((img) => {
+            smallImagesContainer.innerHTML += `
+              <div class="small-image">
+                <img src="${img}" class="small-img" alt="${product.title}">
+              </div>`;
+          });
+
+          productContainer.querySelector(".left-block .big-image-holder img").src = product.image[0];
+      
+      } else if (typeof firstImage === "object" && Array.isArray(firstImage.url)) {
+
+          firstImage.url.forEach((img) => {
+            smallImagesContainer.innerHTML += `
+              <div class="small-image">
+                <img src="${img}" class="small-img" alt="${product.title}">
+              </div>`;
+          });
+
+          productContainer.querySelector(".left-block .big-image-holder img").src = firstImage.url[0];
+      }
     }
 
     if (product.title) {productContainer.querySelector(".right-block .content h1").textContent = product.title}
