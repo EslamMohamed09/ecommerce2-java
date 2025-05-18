@@ -1200,7 +1200,7 @@ if(document.querySelector("#single-page")){
 
       let parentCategoriesHtml = parentCategories.map((parentCategory, index) => `
       <li class="d-flex-r-c-c">
-        ${index !== 0 ? '<i class="fas fa-angle-left"></i>' : ''}
+        ${index !== 0 ? '<i class="fas fa-chevron-left"></i>' : ''}
         <a href="category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a>
       </li>`).join('');
    
@@ -2347,8 +2347,8 @@ if(document.querySelector(".category-page")){
       const currentCategoryId = params.get('id');
 
       if (!currentCategoryId) {
-        console.error('No category ID found in URL');
-        return;
+          console.error('No category ID found in URL');
+          return;
       }
 
       const categories = await loadCategories();

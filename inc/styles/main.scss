@@ -618,7 +618,8 @@ h4 {font-size:1.2rem;}
 h5 {font-size:1rem;}
 
 p {font-size:1rem;
-   margin:0;}
+   margin:0;
+   text-align:justify;}
 
 ul {margin:0;
     padding:0;
@@ -3103,7 +3104,9 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                 word-break:break-word;
                 font-size:clamp(0.8rem, 2vw, 1rem);
 
-              svg {margin-right:0.3rem;}
+              svg {margin-right:0.3rem;
+                   font-size:0.9rem;
+                   font-weight:normal;}
                 
               .catlink {color:var(--gray11);
                         font-size:inherit;
@@ -3174,9 +3177,10 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
                             background-color:#b1afaf50;
                             border:1px solid #d4d4d4;
                             transition:all 0.3s linear;
-                            display:none;}
+                            display:none;
 
-            .magnifier-img.active {display:block;}
+              &.active {display:block;}
+            }
 
             h1 {font-weight:700;}
 
