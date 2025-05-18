@@ -3627,9 +3627,9 @@ footer .bottom-footer p {
   cursor: pointer;
 }
 #single-page .product-container .right-block .content .color-block .colors-holder .color-thumb img {
-  width: 3.7rem;
+  width: 3.9rem;
   height: 3.7rem;
-  border-radius: 0.1rem;
+  border-radius: 0.2rem;
   cursor: pointer;
   object-fit: contain;
   border: 1.5px solid var(--gray6);

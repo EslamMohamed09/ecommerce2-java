@@ -2050,26 +2050,6 @@ if(document.querySelector("#single-page")){
     const ColorsHolder = productContainer.querySelector(".right-block .content .colors-holder");
           ColorsHolder.innerHTML = '';
 
-    // if (product.colors && Array.isArray(product.colors)) {
-    //     product.colors.forEach((color) => {
-
-    //       let backgroundStyle = '';
-
-    //       if (color.includes('x')) {
-    //           const colorArray = color.split('x').map(c => c.trim());
-    //         if (colorArray.length === 2) {
-    //             backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
-    //         } else {
-    //           backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
-    //         }
-    //       } else {
-    //         backgroundStyle = color;
-    //       }
-
-    //       ColorsHolder.innerHTML += `<span class="color-circle" style="background:${backgroundStyle};"></span>`;
-    //     });
-    // }
-
     if (product.image && Array.isArray(product.image)) {
         product.image.forEach((object) => {
           if (object.url && Array.isArray(object.url) && object.url.length > 0) {
@@ -2152,25 +2132,33 @@ if(document.querySelector("#single-page")){
 
   function flippingColors() {
     const selectedColor = document.querySelector("#single-page .right-block .color-block #selected-color");
-    const colorCircles = document.querySelectorAll("#single-page .right-block .color-block .colors-holder .color-circle");
+    const colorthumbs = document.querySelectorAll("#single-page .right-block .color-block .colors-holder .color-thumb");
 
-    colorCircles.forEach((colorCircle) => {
-      colorCircle.addEventListener('click', function() {
+    colorthumbs.forEach((colorthumb) => {
+      colorthumb.addEventListener('click', function() {
         const backgroundImage = this.style.backgroundImage;
         const backgroundColor = this.style.backgroundColor;
 
-        if (backgroundImage && backgroundImage !== 'none' && backgroundImage !== 'initial') {
-            const gradientColors = backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
+        const colorName = this.querySelector('.color-name')?.textContent.trim();
 
-            if (gradientColors && gradientColors.length > 1) {
-                const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
-                selectedColor.textContent = filteredColors.join(' x ');
-            }
-        } else if (backgroundColor && backgroundColor !== 'initial') {
-          selectedColor.textContent = backgroundColor;
+        if(colorName !== null){
+           selectedColor.textContent = colorName;
         } else {
           selectedColor.textContent = 'No valid color found';
         }
+
+        // if (backgroundImage && backgroundImage !== 'none' && backgroundImage !== 'initial') {
+        //     const gradientColors = backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
+
+        //     if (gradientColors && gradientColors.length > 1) {
+        //         const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
+        //         selectedColor.textContent = filteredColors.join(' x ');
+        //     }
+        // } else if (backgroundColor && backgroundColor !== 'initial') {
+        //   selectedColor.textContent = backgroundColor;
+        // } else {
+        //   selectedColor.textContent = 'No valid color found';
+        // }
 
       });
     });
