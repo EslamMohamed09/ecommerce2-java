@@ -3217,15 +3217,28 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 
             .color-block {margin:0.5rem 0 0.6rem;
 
-              #selected-color {font-weight:normal;}
+              p {margin-bottom:0.4rem;
+                #selected-color {font-weight:normal;}
+              }
 
               .colors-holder {gap:1rem;
-                .color-circle {width:2.7rem;
-                               height:2.7rem;
-                               border-radius:50%;
-                               cursor:pointer;
-                               border:1px solid var(--gray6);
-                               box-shadow:inset 0 0 0 3px var(--gray3);}
+                              flex-wrap:wrap;
+                .color-thumb {display:flex;
+                              flex-direction:column;
+                              justify-content:center;
+                              align-items:center;
+                              gap:0.4rem;
+                              cursor:pointer;
+                  img {width:3.7rem;
+                       height:3.7rem;
+                       border-radius:0.1rem;
+                       cursor:pointer;
+                       object-fit:contain;
+                       border:1.5px solid var(--gray6);
+                       box-shadow:inset 0 0 0 3px var(--gray3);}
+
+                  .color-name {font-size:1rem;}
+                }
               }
             }
 

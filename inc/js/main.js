@@ -2050,23 +2050,35 @@ if(document.querySelector("#single-page")){
     const ColorsHolder = productContainer.querySelector(".right-block .content .colors-holder");
           ColorsHolder.innerHTML = '';
 
-    if (product.colors && Array.isArray(product.colors)) {
-        product.colors.forEach((color) => {
+    // if (product.colors && Array.isArray(product.colors)) {
+    //     product.colors.forEach((color) => {
 
-          let backgroundStyle = '';
+    //       let backgroundStyle = '';
 
-          if (color.includes('x')) {
-              const colorArray = color.split('x').map(c => c.trim());
-            if (colorArray.length === 2) {
-                backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
-            } else {
-              backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
-            }
-          } else {
-            backgroundStyle = color;
+    //       if (color.includes('x')) {
+    //           const colorArray = color.split('x').map(c => c.trim());
+    //         if (colorArray.length === 2) {
+    //             backgroundStyle = `radial-gradient(${colorArray[0]}, ${colorArray[1]})`;
+    //         } else {
+    //           backgroundStyle = `radial-gradient(${colorArray.join(', ')})`;
+    //         }
+    //       } else {
+    //         backgroundStyle = color;
+    //       }
+
+    //       ColorsHolder.innerHTML += `<span class="color-circle" style="background:${backgroundStyle};"></span>`;
+    //     });
+    // }
+
+    if (product.image && Array.isArray(product.image)) {
+        product.image.forEach((object) => {
+          if (object.url && Array.isArray(object.url) && object.url.length > 0) {
+              ColorsHolder.innerHTML += `
+                <div class="color-thumb" title="${object.color}">
+                  <img src="${object.url[0]}" alt="${object.color}"/>
+                  <span class="color-name">${object.color}</span>
+                </div>`;
           }
-
-          ColorsHolder.innerHTML += `<span class="color-circle" style="background:${backgroundStyle};"></span>`;
         });
     }
 
