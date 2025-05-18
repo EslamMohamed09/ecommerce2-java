@@ -2064,7 +2064,7 @@ if(document.querySelector("#single-page")){
 
     productContainer.querySelector(".right-block .content .product-quantity-block #subtotal").textContent = product.salePrice;
 
-    setupImageClickEvents();
+    flippingImages();
     magnify(document.querySelector('#single-page .product-container .left-block .big-image-holder img'));
     flippingSizes();
     flippingColors(product, productContainer);
@@ -2072,7 +2072,7 @@ if(document.querySelector("#single-page")){
     addToCart();
   }
 
-  function setupImageClickEvents() {
+  function flippingImages() {
     const smallImages = document.querySelectorAll('.product-container .left-block .small-images-holder .small-image img');
     const bigImage = document.querySelector('#single-page .product-container .left-block .big-image-holder img');
 
@@ -2162,6 +2162,7 @@ if(document.querySelector("#single-page")){
         } else {
           selectedColor.textContent = 'No valid color found';
         }
+        flippingImages();
       });
     });
   }
