@@ -3638,14 +3638,14 @@ footer .bottom-footer p {
 #single-page .product-container .right-block .content .color-block .colors-holder .color-thumb .color-name {
   font-size: 1rem;
 }
-#single-page .product-container .right-block .content .product-quantity-btns {
+#single-page .product-container .right-block .content .product-quantity-block .product-quantity-btns {
   width: fit-content;
-  margin: 0;
+  margin: 0 0 0.4rem;
   gap: 0.5rem;
   border: 1px solid var(--gray10);
   border-radius: 1rem;
 }
-#single-page .product-container .right-block .content .product-quantity-btns .pro-quantity-btn {
+#single-page .product-container .right-block .content .product-quantity-block .product-quantity-btns .pro-quantity-btn {
   width: 2.1rem;
   height: 2.1rem;
   font-size: 1rem;
@@ -3653,16 +3653,16 @@ footer .bottom-footer p {
   border: none;
   background-color: transparent;
 }
-#single-page .product-container .right-block .content .product-quantity-btns #pro-quantity-no {
+#single-page .product-container .right-block .content .product-quantity-block .product-quantity-btns #pro-quantity-no {
   font-size: 1rem;
   margin: 0 0.5rem;
   padding: 0;
   color: var(--gray11);
 }
-#single-page .product-container .right-block .content .product-quantity-btns .pro-quantity-btn:first-child {
+#single-page .product-container .right-block .content .product-quantity-block .product-quantity-btns .pro-quantity-btn:first-child {
   border-right: 1px solid var(--gray10);
 }
-#single-page .product-container .right-block .content .product-quantity-btns .pro-quantity-btn:nth-child(3) {
+#single-page .product-container .right-block .content .product-quantity-block .product-quantity-btns .pro-quantity-btn:nth-child(3) {
   border-left: 1px solid var(--gray10);
 }
 #single-page .product-container .right-block .content .add-btn {

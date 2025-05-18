@@ -2067,10 +2067,9 @@ if(document.querySelector("#single-page")){
     setupImageClickEvents();
     magnify(document.querySelector('#single-page .product-container .left-block .big-image-holder img'));
     flippingSizes();
-    flippingColors();
+    flippingColors(product, productContainer);
     handleQuantity();
     addToCart();
-
   }
 
   function setupImageClickEvents() {
@@ -2130,36 +2129,39 @@ if(document.querySelector("#single-page")){
     });
   }
 
-  function flippingColors() {
+  function flippingColors(product, productContainer) {
     const selectedColor = document.querySelector("#single-page .right-block .color-block #selected-color");
     const colorthumbs = document.querySelectorAll("#single-page .right-block .color-block .colors-holder .color-thumb");
 
-    colorthumbs.forEach((colorthumb) => {
-      colorthumb.addEventListener('click', function() {
-        const backgroundImage = this.style.backgroundImage;
-        const backgroundColor = this.style.backgroundColor;
+    const smallImagesContainer = productContainer.querySelector(".left-block .small-images-holder");
+    const bigImage = productContainer.querySelector(".left-block .big-image-holder img");
 
+    colorthumbs.forEach((colorthumb) => {
+      colorthumb.addEventListener('click', function () {
         const colorName = this.querySelector('.color-name')?.textContent.trim();
 
-        if(colorName !== null){
-           selectedColor.textContent = colorName;
+        if (colorName) {
+            selectedColor.textContent = colorName;
+
+            const colorMatchObject = product.image.find(imgObj =>
+              typeof imgObj === "object" && imgObj.color?.toLowerCase() === colorName.toLowerCase()
+            );
+
+            if (colorMatchObject && Array.isArray(colorMatchObject.url)) {
+                smallImagesContainer.innerHTML = "";
+
+                colorMatchObject.url.forEach((imgUrl) => {
+                  smallImagesContainer.innerHTML += `
+                    <div class="small-image">
+                      <img src="${imgUrl}" class="small-img" alt="${product.title}">
+                    </div>`;
+                });
+
+                if (bigImage) {bigImage.src = colorMatchObject.url[0];}
+            }
         } else {
           selectedColor.textContent = 'No valid color found';
         }
-
-        // if (backgroundImage && backgroundImage !== 'none' && backgroundImage !== 'initial') {
-        //     const gradientColors = backgroundImage.match(/(rgba?\(.+?\)|#[0-9a-fA-F]{3,6}|\w+)/g);
-
-        //     if (gradientColors && gradientColors.length > 1) {
-        //         const filteredColors = gradientColors.filter(color => !['radial', 'gradient', 'linear'].includes(color));
-        //         selectedColor.textContent = filteredColors.join(' x ');
-        //     }
-        // } else if (backgroundColor && backgroundColor !== 'initial') {
-        //   selectedColor.textContent = backgroundColor;
-        // } else {
-        //   selectedColor.textContent = 'No valid color found';
-        // }
-
       });
     });
   }
