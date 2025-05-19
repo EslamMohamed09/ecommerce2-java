@@ -3627,8 +3627,8 @@ footer .bottom-footer p {
   cursor: pointer;
 }
 #single-page .product-container .right-block .content .color-block .colors-holder .color-thumb img {
-  width: 3.9rem;
-  height: 3.7rem;
+  width: 4.2rem;
+  height: 4rem;
   border-radius: 0.2rem;
   cursor: pointer;
   object-fit: contain;
@@ -3636,7 +3636,7 @@ footer .bottom-footer p {
   box-shadow: inset 0 0 0 3px var(--gray3);
 }
 #single-page .product-container .right-block .content .color-block .colors-holder .color-thumb .color-name {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 #single-page .product-container .right-block .content .product-quantity-block .product-quantity-btns {
   width: fit-content;
