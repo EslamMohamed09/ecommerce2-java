@@ -1971,34 +1971,13 @@ if(document.querySelector("#single-page")){
   function displayProductDetails(product) {
     const productContainer = document.querySelector("#single-page .product-container");
 
-    const smallImagesContainer = productContainer.querySelector(".left-block .small-images-holder");
-          smallImagesContainer.innerHTML = '';
+    const smallImagesHolder = productContainer.querySelector(".left-block .small-images-holder");
+    const bigImage = productContainer.querySelector(".left-block .big-image-holder img");
+    const colorsHolder = productContainer.querySelector(".right-block .content .colors-holder");
+    const selectedColor = productContainer.querySelector(".right-block .color-block #selected-color");
 
-    if (product.image && Array.isArray(product.image)) {
-        const firstImage = product.image[0];
-
-      if (typeof firstImage === "string") {
-          product.image.forEach((img) => {
-            smallImagesContainer.innerHTML += `
-              <div class="small-image">
-                <img src="${img}" class="small-img" alt="${product.title}">
-              </div>`;
-          });
-
-          productContainer.querySelector(".left-block .big-image-holder img").src = product.image[0];
-      
-      } else if (typeof firstImage === "object" && Array.isArray(firstImage.url)) {
-
-          firstImage.url.forEach((img) => {
-            smallImagesContainer.innerHTML += `
-              <div class="small-image">
-                <img src="${img}" class="small-img" alt="${product.title}">
-              </div>`;
-          });
-
-          productContainer.querySelector(".left-block .big-image-holder img").src = firstImage.url[0];
-      }
-    }
+    smallImagesHolder.innerHTML = '';
+    colorsHolder.innerHTML = '';
 
     if (product.title) {productContainer.querySelector(".right-block .content h1").textContent = product.title}
     if (product.id){productContainer.querySelector(".right-block .content .description-block .id").textContent = product.id}
@@ -2045,42 +2024,89 @@ if(document.querySelector("#single-page")){
 
     if (!hasSize && !hasSizes) {sizeBlock.style.display = 'none';} else {sizeBlock.style.display = 'flex';}
 
-    if (product.color) {productContainer.querySelector(".right-block .content .color-block #selected-color").textContent = product.color;}
+    if (product.color) {selectedColor.textContent = product.color;}
 
-    const ColorsHolder = productContainer.querySelector(".right-block .content .colors-holder");
-          ColorsHolder.innerHTML = '';
+    const attachFlippingImages = () => {
+      const smallImages = smallImagesHolder.querySelectorAll('.small-img');
+      smallImages.forEach((img) => {
+        img.addEventListener('click', () => {
+          bigImage.src = img.src;
+        });
+      });
+    };
 
     if (product.image && Array.isArray(product.image)) {
-        product.image.forEach((object) => {
-          if (object.url && Array.isArray(object.url) && object.url.length > 0) {
-              ColorsHolder.innerHTML += `
-                <div class="color-thumb" title="${object.color}">
-                  <img src="${object.url[0]}" alt="${object.color}"/>
-                  <span class="color-name">${object.color}</span>
+        const firstItem = product.image[0];
+
+        if (typeof firstItem === "string") {
+            product.image.forEach((img) => {
+              smallImagesHolder.innerHTML += `
+                <div class="small-image">
+                  <img src="${img}" class="small-img" alt="${product.title}">
                 </div>`;
-          }
-        });
+            });
+            bigImage.src = product.image[0];
+
+        } else if (typeof firstItem === "object" && Array.isArray(firstItem.url)) {
+
+          firstItem.url.forEach((img) => {
+            smallImagesHolder.innerHTML += `
+              <div class="small-image">
+                <img src="${img}" class="small-img" alt="${product.title}">
+              </div>`;
+          });
+
+          bigImage.src = firstItem.url[0];
+
+          product.image.forEach((object) => {
+            if (object.url && Array.isArray(object.url) && object.url.length > 0) {
+                const colorThumb = document.createElement("div");
+                colorThumb.className = "color-thumb";
+                colorThumb.title = object.color;
+                colorThumb.innerHTML = `
+                  <img src="${object.url[0]}" alt="${product.title}">
+                  <span class="color-name">${object.color}</span>
+                `;
+                colorsHolder.appendChild(colorThumb);
+
+                colorThumb.addEventListener("click", () => {
+                  const colorName = object.color;
+                  selectedColor.textContent = colorName;
+
+                  colorsHolder.querySelectorAll("img").forEach(img => {
+                    img.style.border = '1.7px solid var(--gray6)';
+                    img.style.borderRadius = '';
+                  });
+
+                  const img = colorThumb.querySelector("img");
+                  const firstColor = colorName.split('x')[0].trim().toLowerCase();
+                        img.style.border = `1.5px solid ${firstColor}`;
+                        img.style.borderRadius = '0.2rem';
+
+                  smallImagesHolder.innerHTML = '';
+                  object.url.forEach((imgUrl) => {
+                    smallImagesHolder.innerHTML += `
+                      <div class="small-image">
+                        <img src="${imgUrl}" class="small-img" alt="${product.title}">
+                      </div>`;
+                  });
+
+                  bigImage.src = object.url[0];
+                  attachFlippingImages();
+                });
+            }
+          });
+        }
     }
+
+    attachFlippingImages();
 
     productContainer.querySelector(".right-block .content .product-quantity-block #subtotal").textContent = product.salePrice;
 
-    flippingImages();
     magnify(document.querySelector('#single-page .product-container .left-block .big-image-holder img'));
     flippingSizes();
-    flippingColors(product, productContainer);
     handleQuantity();
     addToCart();
-  }
-
-  function flippingImages() {
-    const smallImages = document.querySelectorAll('.product-container .left-block .small-images-holder .small-image img');
-    const bigImage = document.querySelector('#single-page .product-container .left-block .big-image-holder img');
-
-    smallImages.forEach((smallImg) => {
-      smallImg.addEventListener('click', function () {
-        bigImage.src = smallImg.src;
-      });
-    });
   }
 
   function magnify(bigImage){
@@ -2125,57 +2151,6 @@ if(document.querySelector("#single-page")){
     document.querySelectorAll("#single-page .size-block .sizes span").forEach((size) => {
       size.addEventListener('click', function(){
         document.querySelector("#single-page .size-block .size .size-value").textContent = size.textContent;
-      });
-    });
-  }
-
-  function flippingColors(product, productContainer) {
-    const selectedColor = document.querySelector("#single-page .right-block .color-block #selected-color");
-    const colorthumbs = document.querySelectorAll("#single-page .right-block .color-block .colors-holder .color-thumb");
-
-    const smallImagesContainer = productContainer.querySelector(".left-block .small-images-holder");
-    const bigImage = productContainer.querySelector(".left-block .big-image-holder img");
-
-    colorthumbs.forEach((colorthumb) => {
-      colorthumb.addEventListener('click', function () {
-        const colorName = this.querySelector('.color-name')?.textContent.trim();
-
-        if (colorName) {
-            selectedColor.textContent = colorName;
-
-            const colorMatchObject = product.image.find(imgObj =>
-              typeof imgObj === "object" && imgObj.color?.toLowerCase() === colorName.toLowerCase()
-            );
-
-            if (colorMatchObject && Array.isArray(colorMatchObject.url)) {
-                smallImagesContainer.innerHTML = "";
-
-                colorMatchObject.url.forEach((imgUrl) => {
-                  smallImagesContainer.innerHTML += `
-                    <div class="small-image">
-                      <img src="${imgUrl}" class="small-img" alt="${product.title}">
-                    </div>`;
-                });
-
-                if (bigImage) {bigImage.src = colorMatchObject.url[0];}
-
-                const firstColor = colorName.split('x')[0].trim().toLowerCase();
-
-                document.querySelectorAll('#single-page .right-block .color-block .colors-holder .color-thumb img').forEach(img => {
-                  img.style.border = '1.7px solid var(--gray6)';
-                });
-
-                const clickedImg = this.querySelector('img');
-
-                if (clickedImg) {
-                    clickedImg.style.border = `1.5px solid ${firstColor}`;
-                    clickedImg.style.borderRadius = '0.2rem';
-                }
-            }
-        } else {
-          selectedColor.textContent = 'No valid color found';
-        }
-        flippingImages();
       });
     });
   }
