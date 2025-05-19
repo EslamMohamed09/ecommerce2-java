@@ -2158,6 +2158,19 @@ if(document.querySelector("#single-page")){
                 });
 
                 if (bigImage) {bigImage.src = colorMatchObject.url[0];}
+
+                const firstColor = colorName.split('x')[0].trim().toLowerCase();
+
+                document.querySelectorAll('#single-page .right-block .color-block .colors-holder .color-thumb img').forEach(img => {
+                  img.style.border = '1.7px solid var(--gray6)';
+                });
+
+                const clickedImg = this.querySelector('img');
+
+                if (clickedImg) {
+                    clickedImg.style.border = `1.5px solid ${firstColor}`;
+                    clickedImg.style.borderRadius = '0.2rem';
+                }
             }
         } else {
           selectedColor.textContent = 'No valid color found';
