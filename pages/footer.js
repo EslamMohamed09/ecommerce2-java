@@ -36,13 +36,17 @@ const footerContent = `
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="footer-widget">
+        <div class="footer-widget newsletter-footer-widget">
           <h4>communication</h4>
           <div class="contacts">
             <p><i class="fas fa-map-marker-alt"></i>united states, los angelos</p>
             <p><i class="fas fa-phone-alt"></i>call us at (489) 832-98430</p>
             <p><i class="fas fa-envelope"></i>example@domain.com</p>
           </div>
+          <form>
+            <input type="email" placeholder="Your email address">
+            <button type="submit">Subscribe</button>
+          </form>
           <ul class="social d-flex-r-st-c">
             <li><a href="#" class="facebook"><i class="fab fa-facebook"></i></a></li>
             <li><a href="#" class="pinterest"><i class="fab fa-pinterest"></i></a></li>
@@ -50,6 +54,7 @@ const footerContent = `
             <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
             <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
           </ul>
+          
         </div>
       </div>
     </div>
