@@ -1149,10 +1149,60 @@ header {position:fixed;
                     border-radius:1.5rem;
                     padding:0;
                     border:none;
-                    background:linear-gradient(to right, var(--olive14) 95%, var(--olive17) 95%);
+                    background: linear-gradient(to right, var(--olive17) 0%, var(--olive17) 5%, var(--olive14) 5%, var(--olive14) 89%, var(--olive17) 89%, var(--olive17) 100%);
+
+        .custom-select-wrapper {position:relative;
+                                height:100% !important;
+                                margin:0;
+                                padding:0.3rem 0;
+                                border-top-left-radius:1.5rem;
+                                border-bottom-left-radius:1.5rem;
+                                background:var(--olive17);
+                                z-index:10;
+
+          .custom-select {position:relative;
+                          height:100%;
+                          border-top-left-radius:1.5rem;
+                          border-bottom-left-radius:1.5rem;
+                          background-color:transparent;
+                          border:none;
+                          cursor:pointer;
+
+              .select-trigger {padding:0.4rem 0.8rem 0.4rem 1rem;
+                               font-size:1rem;
+                               border-top-left-radius:1.5rem;
+                               border-bottom-left-radius:1.5rem;
+                               color:var(--white);
+                               background-color:transparent;
+                               white-space:nowrap;}
+
+              .options {width:max-content;
+                        display:none;
+                        position:absolute;
+                        top:100%;
+                        left:0;
+                        background-color:var(--olive14);
+                        border-radius:0.5rem;
+                        box-shadow:0 4px 8px rgba(0,0,0,0.1);
+                        overflow:hidden;
+
+                .option {padding:0.5rem 1rem;
+                         cursor:pointer;
+                         color:var(--white);
+                         white-space:nowrap;
+
+                      &:not(:last-child) {border-bottom:1px solid var(--olive15);}
+
+                      &:hover {background-color: var(--olive17);}
+                }
+              }
+
+            &.open .options {display:block;}
+          }
+        }
 
         input[type="search"] {width:95%;
-                              padding:0.4rem 0.6rem 0.4rem 1rem;
+                              padding:0.4rem 0.6rem 0.4rem;
                               border-radius:1.5rem;
                               font-size:1rem;
                               border:none;

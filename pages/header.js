@@ -22,11 +22,28 @@ const headerContent = `
   <div id="main-header" class="main-header">
 
     <div class="middle-bar d-flex-r-bt-c">
+
       <h2 class="web-title"><a href="/index.html">shopping</a></h2>
+
       <form class="search-form d-flex-r-bt-c">
+        <div class="custom-select-wrapper">
+          <div class="custom-select">
+            <div class="select-trigger">All</div>
+            <div class="options">
+              <div class="option" data-value="all">All</div>
+              <div class="option" data-value="electronics">Electronics</div>
+              <div class="option" data-value="fashion">Fashion</div>
+              <div class="option" data-value="books">Books</div>
+              <div class="option" data-value="home">Home</div>
+            </div>
+          </div>
+          <input type="hidden" name="category" value="all">
+        </div>
+
         <input type="search" placeholder="search your favourite product">
         <button class="search-btn"><i class="fas fa-search"></i></button>
       </form>
+
       <div class="buttons d-flex-r-st-c">
         <a href="/pages/favourite.html" class="service-button like-icon d-flex-r-c-c">
           <i class="far fa-heart"></i>
@@ -41,6 +58,7 @@ const headerContent = `
           <div class="value"><span>125</span></div>
         </a>
       </div>
+      
     </div>
 
     <div class="bottom-bar">

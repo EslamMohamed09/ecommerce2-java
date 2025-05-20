@@ -89,6 +89,30 @@ if(header){
       loginDrawer.classList.remove("openingLoginDrawer");
     });
 
+    // search form
+    const customSelect = document.querySelector('header #main-header .middle-bar .custom-select');
+    const selectTrigger = customSelect.querySelector('header #main-header .middle-bar .select-trigger');
+    const options = customSelect.querySelectorAll('header #main-header .middle-bar .option');
+    const hiddenInput = document.querySelector('header #main-header .middle-bar input[name="category"]');
+
+    selectTrigger.addEventListener('click', () => {
+      customSelect.classList.toggle('open');
+    });
+
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        selectTrigger.textContent = option.textContent;
+        hiddenInput.value = option.dataset.value;
+        customSelect.classList.remove('open');
+      });
+    });
+
+    window.addEventListener('click', e => {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('open');
+      }
+    });
+
     document.querySelectorAll('header .main-header .middle-bar .buttons .service-button .value span').forEach((span) => {
       let number = span.textContent.trim();
 
