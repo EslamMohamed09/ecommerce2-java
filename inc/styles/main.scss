@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {margin:0;padding:0;
    text-transform:capitalize;
    text-decoration:none !important;
    outline:none !important;
    transition:all 0.2s linear;
-   font-family:"Nunito", sans-serif;
+   font-family: 'Inter', sans-serif;
    scroll-behavior:smooth;}
 
 :root {--gray:#f2f2f7;
@@ -330,12 +330,13 @@
 
        --text-shadow:0 0 4px #fff;
        --text-shadow2:0 0 3px #ffffff7c;
-       --text-shadow3:0 0 3px rgba(5, 5, 5, 0.315);
+       --text-shadow3:0 0 3px rgba(80, 80, 80, 0.315);
        --text-shadow4:0 0 3px rgba(5, 5, 5, 0.692);
        --text-shadow5:0 0 3px rgba(5, 5, 5, 0.404);
        --text-shadow6:0 0 3px rgba(5, 5, 5, 0.226);
        --text-shadow7:0 0 3px rgba(27, 27, 27, 0.116);
-       --aqua-text-shadow:0 0 4px #00ffff7a;
+       --aqua-text-shadow:0 0 3px #00ffff27;
+       --blue-text-shadow:0 0 3px #00b7ff27;
        --green-text-shadow:0 0 4px rgba(6, 150, 42, 0.555);}
 
 .dark-theme-variable {--background-color:#181a1e;
@@ -494,24 +495,24 @@ html {font-size:83% !important;
 @media(max-width:768px){ html {font-size:65% !important;} }
 @media(max-width:500px){ html {font-size:60% !important;} }
 
-.loader17 {width:100%;
-           height:100%;
-           position:fixed;
-           top:0;
-           left:0;
-           z-index:1000000000;
-           background:var(--lightblue5);
-           backdrop-filter:blur(80px);
-           display:flex;
-           justify-content:center;
-           align-items:center;
+#preloader {width:100%;
+            height:100vh;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000000000;
+            background:var(--lightblue5);
+            backdrop-filter:blur(80px);
+            display:flex;
+            justify-content:center;
+            align-items:center;
 
-  .loader17-container {width:100%;
-                       height:100%;
-                       background:transparent;
-                       position:relative;
+  .loader-container {width:100%;
+                     height:100%;
+                     background:transparent;
+                     position:relative;
 
-    .loader17-block {position:absolute;
+    .loader-block {position:absolute;
                      top:50%;
                      left:50%;
                      transform:translate(-50%, -50%);
@@ -1100,7 +1101,7 @@ header {position:fixed;
         li {
           a,
           button {color:var(--white);
-                  font-size:1.1rem;
+                  font-size:1rem;
                   white-space:nowrap;
                   text-transform:capitalize;
                   background-color:transparent;
@@ -1214,9 +1215,9 @@ header {position:fixed;
         ul {gap:0.5rem;
             list-style:none;
 
-          li {padding:0.7rem;
+          li {padding:0.5rem 0.7rem;
             a {color:var(--white);
-               font-size:1.3rem;
+               font-size:1.1rem;
                text-transform:capitalize;}
 
           }
@@ -1226,7 +1227,6 @@ header {position:fixed;
         }
 
       }
-      
     }
   }
 
@@ -1603,21 +1603,20 @@ header {position:fixed;
                           padding:0;
 
               .semi-title {font-size:1rem;
-                           color:var(--red7);
+                           color:var(--olive16);
                            font-weight:550;
                            text-transform:capitalize;
-                           text-shadow:var(--text-shadow);
                       svg,i {margin-right:0.2rem;}
               }
 
-              h2 {color:var(--gray11);
+              h2 {color:var(--gray13);
                   margin-bottom:0.6rem;}
 
               p {width:80%;
                  font-size:1.2rem;
                  text-align:left;
                  margin-bottom:0.9rem;
-                 color:var(--black);}
+                 color:var(--gray13);}
           }
         }
 
@@ -1753,8 +1752,8 @@ header {position:fixed;
                cursor:pointer;
                text-align:center;
                color:var(--white);
-               border:1px solid var(--gray12);
-               background-color:var(--gray12);
+               border:1px solid var(--gray13);
+               background-color:var(--gray13);
                z-index:100;
                opacity:0;
                transition:all 0.2s linear;
@@ -1795,9 +1794,9 @@ header {position:fixed;
             border-radius:50%;
             line-height:1.9;
             cursor:pointer;
-            background-color:var(--gray11);
+            background-color:var(--gray13);
 
-            &.active {width:1.3rem;
+            &.active {width:1.4rem;
                       border-radius:0.5rem;
                       background-color:var(--gray4);}
         }
