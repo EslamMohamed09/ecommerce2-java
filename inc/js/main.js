@@ -200,7 +200,7 @@ if(document.querySelector('.hero-section')){
         sliderWrapperSelector = '.slider-wrapper',
         prevBtnSelector = '.prev-btn',
         nextBtnSelector = '.next-btn',
-        playSpeed = 5000
+        playSpeed = 6000
     } = options;
 
     let section = document.querySelector(sectionSelector);

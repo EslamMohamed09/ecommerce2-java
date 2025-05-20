@@ -753,14 +753,14 @@ img {max-width:100%;
        text-align:center;
        text-transform:uppercase;
        border-radius:0.1rem;
-       color:var(--navyblue8);
        outline:none;
+       color:var(--black);
        border:1px solid var(--yellow10);
        background:var(--yellow10);
        box-shadow:var(--blue-box-shadow);
 
       &:hover {background:transparent;
-               color:var(--navyblue8);}
+               color:var(--black);}
 }
 
 .btn4-trans {margin:0;
@@ -1159,11 +1159,9 @@ header {position:fixed;
                               color:var(--white);
                               background:transparent;}
 
-        input[type="search"]::placeholder {color:var(--gray5);}
-
         .search-btn {border-top-right-radius:1.5rem;
                      border-bottom-right-radius:1.5rem;
-                     padding:0.6rem 1.3rem;
+                     padding:0.6rem 1.3rem 0.5rem;
                      height:100%;
                      border:none;
                      background-color:var(--olive17);
@@ -1760,7 +1758,7 @@ header {position:fixed;
           svg {font-size:1rem;}
 
           &:hover {background-color:transparent;
-                   color:var(--gray11);}
+                   color:var(--gray13);}
     }
 
     .prev-btn {left:-1rem;}
@@ -2152,23 +2150,20 @@ header {position:fixed;
                           object-fit:cover;}
 
                       &::before {content:"";
-                                position:absolute;
-                                display:block;
-                                top:0;
-                                bottom:0;
-                                left:0;
-                                right:0;
-                                width:0;
-                                height:90%;
-                                margin:auto;
-                                border-top:1px solid #fff;
-                                border-bottom:1px solid #fff;
-                                background-color:rgba(0,0,0,0.3);
-                                transition:all 0.4s ease;
-                                z-index:10;}
-
-                      &:hover::before {width:90%;}
-
+                                 position:absolute;
+                                 display:block;
+                                 top:0;
+                                 bottom:0;
+                                 left:0;
+                                 right:0;
+                                 width:0;
+                                 height:90%;
+                                 margin:auto;
+                                 border-top:1px solid var(--white);
+                                 border-bottom:1px solid var(--white);
+                                 background-color:rgba(0,0,0,0.3);
+                                 transition:all 0.4s ease;
+                                 z-index:2;}
 
                       &::after {content:"";
                                 position:absolute;
@@ -2180,12 +2175,11 @@ header {position:fixed;
                                 width:90%;
                                 height:0;
                                 margin:auto;
-                                border-left:1px solid #fff;
-                                border-right:1px solid #fff;
+                                border-left:1px solid var(--white);
+                                border-right:1px solid var(--white);
                                 background-color:rgba(0,0,0,0.3);
-                                transition:all 0.4s ease;}
-
-                      &:hover::after {height:90%;}
+                                transition:all 0.4s ease;
+                                z-index:3;}
               }
 
               .banner-details {position:absolute;
@@ -2193,13 +2187,13 @@ header {position:fixed;
                                 transform:translateY(-50%);
                                 width:100%;
                                 text-align:center;
-                                z-index:9;
+                                z-index:4;
 
                       h3 {color:var(--white);
                           font-size:1.7rem;
                           font-weight:800;
                           text-transform:uppercase;
-                          text-shadow:var(--text-shadow2);
+                          text-shadow:var(--text-shadow4);
                           font-family:"Quicksand", sans-serif;}
 
                       h2 {margin-top:1.2rem;
@@ -2208,14 +2202,19 @@ header {position:fixed;
                           font-size:6rem;
                           font-weight:800;
                           text-transform:uppercase;
-                          text-shadow:var(--text-shadow2);
+                          text-shadow:var(--text-shadow4);
                           font-family:"Quicksand", sans-serif;}
 
                       p {color:var(--white);
-                        font-size:1.5rem;
-                        text-shadow:var(--text-shadow2);
-                        font-family:"Quicksand", sans-serif;}
+                         font-size:1.5rem;
+                         text-align:center;
+                         text-shadow:var(--text-shadow4);
+                         font-family:"Quicksand", sans-serif;}
               }
+
+              &:hover .banner-thumb::before {width:90%;}
+
+              &:hover .banner-thumb::after {height:90%;}
       }
   }
 }

@@ -863,15 +863,15 @@ img {
   text-align: center;
   text-transform: uppercase;
   border-radius: 0.1rem;
-  color: var(--navyblue8);
   outline: none;
+  color: var(--black);
   border: 1px solid var(--yellow10);
   background: var(--yellow10);
   box-shadow: var(--blue-box-shadow);
 }
 .btn5:hover {
   background: transparent;
-  color: var(--navyblue8);
+  color: var(--black);
 }
 
 .btn4-trans {
@@ -1324,13 +1324,10 @@ header .main-header .middle-bar .search-form input[type=search] {
   color: var(--white);
   background: transparent;
 }
-header .main-header .middle-bar .search-form input[type=search]::placeholder {
-  color: var(--gray5);
-}
 header .main-header .middle-bar .search-form .search-btn {
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  padding: 0.6rem 1.3rem;
+  padding: 0.6rem 1.3rem 0.5rem;
   height: 100%;
   border: none;
   background-color: var(--olive17);
@@ -1984,7 +1981,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .prev-btn:hover,
 .hero-section .next-btn:hover {
   background-color: transparent;
-  color: var(--gray11);
+  color: var(--gray13);
 }
 .hero-section .prev-btn {
   left: -1rem;
@@ -2463,14 +2460,11 @@ header .login-drawer.openingLoginDrawer {
   width: 0;
   height: 90%;
   margin: auto;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
   background-color: rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
-  z-index: 10;
-}
-.top-offers-section .section-container .offer-block .banner-thumb:hover::before {
-  width: 90%;
+  z-index: 2;
 }
 .top-offers-section .section-container .offer-block .banner-thumb::after {
   content: "";
@@ -2483,13 +2477,11 @@ header .login-drawer.openingLoginDrawer {
   width: 90%;
   height: 0;
   margin: auto;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
   background-color: rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
-}
-.top-offers-section .section-container .offer-block .banner-thumb:hover::after {
-  height: 90%;
+  z-index: 3;
 }
 .top-offers-section .section-container .offer-block .banner-details {
   position: absolute;
@@ -2497,14 +2489,14 @@ header .login-drawer.openingLoginDrawer {
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
-  z-index: 9;
+  z-index: 4;
 }
 .top-offers-section .section-container .offer-block .banner-details h3 {
   color: var(--white);
   font-size: 1.7rem;
   font-weight: 800;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow2);
+  text-shadow: var(--text-shadow4);
   font-family: "Quicksand", sans-serif;
 }
 .top-offers-section .section-container .offer-block .banner-details h2 {
@@ -2514,14 +2506,21 @@ header .login-drawer.openingLoginDrawer {
   font-size: 6rem;
   font-weight: 800;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow2);
+  text-shadow: var(--text-shadow4);
   font-family: "Quicksand", sans-serif;
 }
 .top-offers-section .section-container .offer-block .banner-details p {
   color: var(--white);
   font-size: 1.5rem;
-  text-shadow: var(--text-shadow2);
+  text-align: center;
+  text-shadow: var(--text-shadow4);
   font-family: "Quicksand", sans-serif;
+}
+.top-offers-section .section-container .offer-block:hover .banner-thumb::before {
+  width: 90%;
+}
+.top-offers-section .section-container .offer-block:hover .banner-thumb::after {
+  height: 90%;
 }
 
 /*
