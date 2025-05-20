@@ -1154,12 +1154,12 @@ header {position:fixed;
         input[type="search"] {width:95%;
                               padding:0.4rem 0.6rem 0.4rem 1rem;
                               border-radius:1.5rem;
-                              font-size:1.2rem;
+                              font-size:1rem;
                               border:none;
                               color:var(--white);
                               background:transparent;}
 
-        input[type="search"]::placeholder {color:var(--gray2);}
+        input[type="search"]::placeholder {color:var(--gray5);}
 
         .search-btn {border-top-right-radius:1.5rem;
                      border-bottom-right-radius:1.5rem;
@@ -1575,7 +1575,7 @@ header {position:fixed;
  ***********
 */
 .hero-section {width:100%;
-               min-height:75vh;
+               min-height:69vh;
                padding:7rem 7%;
                display:flex;
                justify-content:center;
@@ -1785,12 +1785,12 @@ header {position:fixed;
                       text-align:center;
                       margin:0;
                       padding:0 !important;
-                      gap:1rem;
+                      gap:0.7rem;
 
         li {display:inline-block;
             font-weight:bold;
-            width:0.8rem;
-            height:0.8rem;
+            width:0.7rem;
+            height:0.7rem;
             border-radius:50%;
             line-height:1.9;
             cursor:pointer;
@@ -1851,19 +1851,19 @@ header {position:fixed;
  **************
 */
 .quality-section {
-  svg {color:var(--blue7);
-       margin:0;}
 
-    .col-block {
+    .col-block {gap:0.6rem;
+
+      svg,i {color:var(--blue10);
+             margin:0;
+             font-size:2rem;}
 
       .content {padding:0;
-        h4 {text-transform:capitalize;
-            color:var(--gray11);
-            margin:0;
-            margin-bottom:0.2rem;}
+        h5 {text-transform:capitalize;
+            color:var(--gray11);}
   
         p {text-transform:capitalize;
-           font-size:15px;}
+           font-size:0.9rem;}
       }
 
     }
@@ -1904,10 +1904,10 @@ header {position:fixed;
                   
             h3 {font-size:1.1rem;
                 font-weight:900;
-                color:var(--gray11);}
+                color:var(--gray13);}
     
             p {font-size:1.1rem;
-               color:var(--gray11);
+               color:var(--gray13);
                text-transform:uppercase;}
             
             .btn5 {margin-top:2rem;
@@ -7366,9 +7366,9 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
 }
 
 /*
- ==================
+ ================
   # Payment Page
- ==================
+ ================
 */
 .payment-section {background:var(--aqua);
                   padding:5rem 4rem 6rem;

@@ -24,7 +24,7 @@ const headerContent = `
     <div class="middle-bar d-flex-r-bt-c">
       <h2 class="web-title"><a href="/index.html">shopping</a></h2>
       <form class="search-form d-flex-r-bt-c">
-        <input type="search" placeholder="search">
+        <input type="search" placeholder="search your favourite product">
         <button class="search-btn"><i class="fas fa-search"></i></button>
       </form>
       <div class="buttons d-flex-r-st-c">

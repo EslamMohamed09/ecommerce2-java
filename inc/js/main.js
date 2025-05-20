@@ -2796,7 +2796,6 @@ if(document.querySelector(".category-page")){
               hotDealsCategoriesProductsWrapper.style.gridTemplateColumns = 'repeat(auto-fill, minmax(190px, 1fr))';
             }
           }
-         
       }
 
       if (childCategories.length > 0 && categoryProducts.length > 0) { // print | if there are category childs & category products
@@ -3657,7 +3656,6 @@ if(document.querySelector(".cart-page")){
   // I want to ask you what is the logic approach add id only to local storage then through id get the product or products from database or add all details of each product to local storage and the big website like amazon follow any of their approaches?
   
 }
-
 
 /* 
  ===========================
