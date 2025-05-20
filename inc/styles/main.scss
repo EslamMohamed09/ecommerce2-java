@@ -809,7 +809,7 @@ img {max-width:100%;
                 display:block;
                 margin:auto;
                 transition:0.5s;
-                background-color:var(--gray5);
+                background-color:var(--olive13);
                 z-index:20;}
 
       &:hover {color:var(--black2);}
@@ -2031,14 +2031,14 @@ header {position:fixed;
                                       transform:translateY(20px);
                                       transition:transform 0.5s ease, opacity 0.5s ease;
 
-                                    #icon {font-size:0.9rem;
+                                    svg,i {font-size:0.9rem;
                                            color:var(--black2);
                                            background:transparent;}
 
                                     &:hover {background-color:var(--black2);}
 
-                                    &:hover #icon {color:var(--white2);}
-                            }
+                                    &:hover svg,i {color:var(--white2);}
+                              }
                       }
 
                       .stats {position:absolute;
@@ -2060,7 +2060,6 @@ header {position:fixed;
                               }
 
                               .sale {height:fit-content;
-                                     padding:0.2rem 0.5rem 0.1rem;
                                      line-height:1.4;
                                      border-radius:0.2rem;
                                      text-align:center;
@@ -2574,10 +2573,10 @@ header {position:fixed;
 */
 .feature-products-section {
 
-  .product-item {border-radius:0.6rem;
-                 box-shadow:var(--box-shadow6);
+  .product-item {border-radius:0.4rem;
+                 box-shadow:var(--box-shadow7);
 
-    .product-title {color:var(--gray11);
+    .product-title {color:var(--gray13);
                     font-size:1.1rem;}
   }
 
@@ -2587,11 +2586,11 @@ header {position:fixed;
 
     .left-block {padding:0;
       .product-item {padding:5rem 2rem 2rem;
-                    display:flex;
-                    flex-direction:row;
-                    justify-content:center;
-                    align-items:flex-start;
-                    gap:0.7rem;
+                     display:flex;
+                     flex-direction:row;
+                     justify-content:center;
+                     align-items:flex-start;
+                     gap:0.7rem;background:rgba(192, 212, 192, 0.301);
 
         .content {display:flex;
                   flex-direction:column;
@@ -2599,9 +2598,7 @@ header {position:fixed;
                   align-items:flex-start;
                   gap:0.3rem;
 
-          p {font-size:1rem;
-            font-weight:bold;
-            margin-bottom:0.3rem;}
+          p {margin-bottom:0.3rem;}
         }
 
         .image {
@@ -2621,14 +2618,15 @@ header {position:fixed;
         .product-item {padding:1.5rem 1rem;
 
           &:first-child {flex:1 1 30rem;
-                        display:flex;
-                        flex-direction:row;
-                        justify-content:center;
-                        align-items:flex-end;
+                         display:flex;
+                         flex-direction:row;
+                         justify-content:center;
+                         align-items:flex-end;
+                         gap:1rem;
+                         background:rgba(212, 212, 192, 0.377);
 
             .content {
-              p {margin-bottom:0.5rem;
-                font-weight:bold;}
+              p {margin-bottom:0.5rem;}
             }
 
             .image {
@@ -2642,6 +2640,7 @@ header {position:fixed;
                           justify-content:center;
                           align-items:flex-start;
                           gap:0.6rem;
+                          background:rgba(175, 163, 148, 0.26);
 
             .image {width:100%;
                     margin-bottom:0.7rem;
@@ -2649,6 +2648,7 @@ header {position:fixed;
 
               img {height:9rem;}
             }
+
             .content {display:flex;
                       flex-direction:column;
                       justify-content:flex-start;
@@ -2664,6 +2664,7 @@ header {position:fixed;
                           justify-content:center;
                           align-items:flex-start;
                           gap:0.6rem;
+                          background:rgba(196, 192, 212, 0.356);
 
             .image {width:100%;
                     margin-bottom:0.7rem;
@@ -2671,6 +2672,7 @@ header {position:fixed;
 
               img {height:9rem;}
             }
+            
             .content {display:flex;
                       flex-direction:column;
                       justify-content:flex-start;

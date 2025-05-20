@@ -155,7 +155,6 @@ if(header){
         document.querySelector(".main-header").style.boxShadow = 'none';
       }
     });
-
   });
 
   loadHtml("header", headerContent, "header");
@@ -398,9 +397,30 @@ heroSlider({sectionSelector:'.hero-section',
  #### POPULAR PRODUCTS ####
  ##########################
 */
-document.querySelectorAll('.popular-products-section .product-item .product-title').forEach((title) => {
-  title.textContent = truncateWords(title.textContent, 4);
-});
+if(document.querySelector('.popular-products-section')){
+  document.querySelectorAll('.popular-products-section .product-item .product-title').forEach((title) => {
+    title.textContent = truncateWords(title.textContent, 4);
+  });
+
+  document.querySelectorAll('.popular-products-section .product-item .stats .sale').forEach((span) => {
+      let numberOnly = span.textContent.trim().replace(/\D/g, '');
+
+    if (numberOnly.length >= 3) {
+
+        span.style.padding = '0.2rem 0.25rem 0.1rem';
+
+    } else if (numberOnly.length === 2) {
+
+      span.style.padding = '0.2rem 0.5rem 0.1rem';
+
+    } else {
+
+      span.style.padding = '0.2rem 0.7rem 0.1rem';
+
+    }
+
+  });
+}
 
 /* 
  ########################
