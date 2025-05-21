@@ -3931,8 +3931,9 @@ function scrollSlider(options) {
           { breakpoint: 560, settings: { slidesToShow: 3, slidesToScroll: 3 }},
           { breakpoint: 720, settings: { slidesToShow: 4, slidesToScroll: 4 }},
           { breakpoint: 1000, settings: { slidesToShow: 5, slidesToScroll: 5 }},
-          { breakpoint: 1400, settings: { slidesToShow: 6, slidesToScroll: 6 }},
-          { breakpoint: 1600, settings: { slidesToShow: 7, slidesToScroll: 7 }}
+          { breakpoint: 1200, settings: { slidesToShow: 6, slidesToScroll: 6 }},
+          { breakpoint: 1400, settings: { slidesToShow: 7, slidesToScroll: 7 }},
+          { breakpoint: 1600, settings: { slidesToShow: 8, slidesToScroll: 8 }}
       ];
 
       responsiveSettings.forEach(resp => {
