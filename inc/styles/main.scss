@@ -824,7 +824,7 @@ img {max-width:100%;
 }
 
 .section-heading {position:relative;
-                  margin-bottom:3rem;
+                  margin-bottom:1.5rem;
 
     &::before {content:"";
                position:absolute;
@@ -843,7 +843,7 @@ img {max-width:100%;
                    bottom:-0.6rem;
                    width:100%;
                    height:1.6px;
-                   background-color:var(--olive12);}
+                   background-color:var(--olive15);}
     }
 }
 
@@ -1629,7 +1629,7 @@ header {position:fixed;
                justify-content:center;
                align-items:center;
                text-align:center;
-               background:radial-gradient(var(--gray4), var(--gray7));
+               background:radial-gradient(rgb(189, 206, 205), rgb(112, 150, 148));
                position:relative;
 
     .slider-wrapper {width:100%;
@@ -1805,7 +1805,7 @@ header {position:fixed;
                z-index:100;
                opacity:0;
                transition:all 0.2s linear;
-          svg {font-size:1rem;}
+          svg,i {font-size:1rem;}
 
           &:hover {background-color:transparent;
                    color:var(--gray13);}
@@ -1837,8 +1837,8 @@ header {position:fixed;
 
         li {display:inline-block;
             font-weight:bold;
-            width:0.7rem;
-            height:0.7rem;
+            width:0.5rem;
+            height:0.5rem;
             border-radius:50%;
             line-height:1.9;
             cursor:pointer;
@@ -1920,7 +1920,7 @@ header {position:fixed;
                     align-items:center;
                     gap:0.6rem;
 
-        svg,i {color:var(--blue10);
+        svg,i {color:rgb(32, 95, 92);
                margin:0;
                font-size:2rem;}
 
@@ -1929,7 +1929,8 @@ header {position:fixed;
               color:var(--gray11);}
     
           p {text-transform:capitalize;
-            font-size:0.9rem;}
+            font-size:0.9rem;
+            color:var(--gray9);}
         }
       }
     }
@@ -1965,7 +1966,7 @@ header {position:fixed;
   .section-container {position:relative;
                       padding:0;
 
-      .section-heading {margin-bottom:1rem;}
+      .section-heading {margin-bottom:0.2rem;}
 
       .slider-wrapper {padding:0.5rem 0;
                        margin:0 auto;
@@ -2033,17 +2034,17 @@ header {position:fixed;
 
       /* <--> */
       .arrows {width:110%;
-                position:absolute;
-                top:50%;
-                right:50%;
-                transform:translate(50%, -50%);
-                display:flex !important;
-                flex-direction:row;
-                justify-content:space-between;
-                align-items:center;
-                visibility:hidden;
-                opacity:0;
-                transition:all 0.4s linear;
+               position:absolute;
+               top:45%;
+               right:50%;
+               transform:translate(50%, -50%);
+               display:flex !important;
+               flex-direction:row;
+               justify-content:space-between;
+               align-items:center;
+               visibility:hidden;
+               opacity:0;
+               transition:all 0.4s linear;
 
               .arrow-left,
               .arrow-right {width:2rem;
@@ -2273,8 +2274,8 @@ header {position:fixed;
                                      font-size:0.9rem;
                                      box-shadow:var(--box-shadow4);
                                      &.new {padding:0.2rem 0.5rem;background-color:var(--blue5);color:var(--white2);}
-                                     &.top {padding:0.2rem 0.6rem;background-color:var(--shin-orange);color:var(--white2);}
-                                     &.hot {padding:0.2rem 0.65rem;background-color:var(--yellow10);color:var(--white2);}
+                                     &.top {padding:0.2rem 0.65rem;background-color:var(--shin-orange);color:var(--white2);}
+                                     &.hot {padding:0.2rem 0.7rem;background-color:var(--yellow10);color:var(--white2);}
                               }
 
                               .sale {height:fit-content;

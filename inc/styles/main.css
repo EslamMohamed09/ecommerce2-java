@@ -949,7 +949,7 @@ img {
 }
 .section-heading {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .section-heading::before {
   content: "";
@@ -971,7 +971,7 @@ img {
   bottom: -0.6rem;
   width: 100%;
   height: 1.6px;
-  background-color: var(--olive12);
+  background-color: var(--olive15);
 }
 
 .page-heading {
@@ -1796,7 +1796,7 @@ header .login-drawer.openingLoginDrawer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(var(--gray4), var(--gray7));
+  background: radial-gradient(rgb(189, 206, 205), rgb(112, 150, 148));
   position: relative;
 }
 .hero-section .slider-wrapper {
@@ -2028,8 +2028,9 @@ header .login-drawer.openingLoginDrawer {
   opacity: 0;
   transition: all 0.2s linear;
 }
-.hero-section .prev-btn svg,
-.hero-section .next-btn svg {
+.hero-section .prev-btn svg, .hero-section .prev-btn i,
+.hero-section .next-btn svg,
+.hero-section .next-btn i {
   font-size: 1rem;
 }
 .hero-section .prev-btn:hover,
@@ -2069,8 +2070,8 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .indicators-menu li {
   display: inline-block;
   font-weight: bold;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   line-height: 1.9;
   cursor: pointer;
@@ -2177,7 +2178,7 @@ header .login-drawer.openingLoginDrawer {
   gap: 0.6rem;
 }
 .quality-section .section-container .quality-item .item-holder svg, .quality-section .section-container .quality-item .item-holder i {
-  color: var(--blue10);
+  color: rgb(32, 95, 92);
   margin: 0;
   font-size: 2rem;
 }
@@ -2191,6 +2192,7 @@ header .login-drawer.openingLoginDrawer {
 .quality-section .section-container .quality-item .item-holder .content p {
   text-transform: capitalize;
   font-size: 0.9rem;
+  color: var(--gray9);
 }
 @media (max-width: 768px) {
   .quality-section .col-block {
@@ -2228,7 +2230,7 @@ header .login-drawer.openingLoginDrawer {
   /* <--> */
 }
 .categories-section .section-container .section-heading {
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 .categories-section .section-container .slider-wrapper {
   padding: 0.5rem 0;
@@ -2303,7 +2305,7 @@ header .login-drawer.openingLoginDrawer {
 .categories-section .section-container .arrows {
   width: 110%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 50%;
   transform: translate(50%, -50%);
   display: flex !important;
@@ -2561,12 +2563,12 @@ header .login-drawer.openingLoginDrawer {
   color: var(--white2);
 }
 .popular-products-section .products-container .product-item .header-item .stats .stat.top {
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.65rem;
   background-color: var(--shin-orange);
   color: var(--white2);
 }
 .popular-products-section .products-container .product-item .header-item .stats .stat.hot {
-  padding: 0.2rem 0.65rem;
+  padding: 0.2rem 0.7rem;
   background-color: var(--yellow10);
   color: var(--white2);
 }
