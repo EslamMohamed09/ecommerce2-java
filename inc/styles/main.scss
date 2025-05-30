@@ -76,6 +76,11 @@
        --transparent-orange:#af5e392a;
        --transparent-orange1:#fdad0125;
        
+       --brown1:#f1e6d6;
+       --brown2:#ecdac1;
+       --brown3:#ebd3b3;
+       --brown4:#ebcea6;
+       --brown5:#d8bb93;
        --brown6:#c8a97e;
        --brown7:#cca061;
        --brown8:#b1884e;
@@ -159,12 +164,16 @@
        --olive16:#015050;
        --olive17:#004242;
        --olive18:#013535;
-       --olive19:#b9c2c2;
-       --olive20:#9ab1b1;
-       --olive21:#7b9494;
-       --olive22:#616666;
-       --olive23:#536e6e;
-       --olive24:#4a7474;
+       --olive19:#012727;
+       --olive20:#011f1f;
+       --olive21:#001313;
+
+       --navyolive1:#b9c2c2;
+       --navyolive2:#9ab1b1;
+       --navyolive3:#7b9494;
+       --navyolive4:#616666;
+       --navyolive5:#536e6e;
+       --navyolive6:#4a7474;
 
        --transparent-olive:#0aa0a01e;
 
@@ -1094,7 +1103,7 @@ header {position:fixed;
               cursor:pointer;
               color:var(--white);
               background-color:(var(--olive18));
-              border:1px solid var(--olive20);
+              border:1px solid var(--navyolive2);
                  
         span {font-size:0.9rem;
               color:var(--white);}
@@ -1648,7 +1657,8 @@ header {position:fixed;
                justify-content:center;
                align-items:center;
                text-align:center;
-               background:radial-gradient(rgb(189, 206, 205), rgb(112, 150, 148));
+              //  background:radial-gradient(ellipse at 90% center, var(--olive18), var(--olive21));
+               background: linear-gradient(135deg, var(--olive21) 0%, var(--olive21) 30%, var(--olive18) 70%, var(--olive21) 100%);
                position:relative;
 
     .slider-wrapper {width:100%;
@@ -1670,13 +1680,13 @@ header {position:fixed;
                           padding:0;
 
               .semi-title {font-size:1rem;
-                           color:var(--olive16);
+                           color:var(--olive12);
                            font-weight:550;
                            text-transform:capitalize;
                       svg,i {margin-right:0.2rem;}
               }
 
-              h2 {color:var(--gray13);
+              h2 {color:var(--olive4);
                   margin-bottom:0.6rem;
                   text-align:left;}
 
@@ -1684,7 +1694,7 @@ header {position:fixed;
                  font-size:1.2rem;
                  text-align:left;
                  margin-bottom:0.9rem;
-                 color:var(--gray13);}
+                 color:var(--olive4);}
           }
         }
 
@@ -1940,7 +1950,7 @@ header {position:fixed;
                     align-items:center;
                     gap:0.6rem;
 
-        svg,i {color:var(--blue6);
+        svg,i {color:var(--blue9);
                margin:0;
                font-size:2rem;}
 
@@ -1949,8 +1959,8 @@ header {position:fixed;
               color:var(--gray11);}
     
           p {text-transform:capitalize;
-            font-size:0.9rem;
-            color:var(--gray9);}
+             font-size:0.9rem;
+             color:var(--gray9);}
         }
       }
     }
@@ -2731,15 +2741,15 @@ header {position:fixed;
   .section-container {flex-wrap:wrap;
                       padding:0;
                       border-radius:0.5rem;
-                      background:radial-gradient(circle at 72% 60%, var(--olive14) 1%, var(--olive18) 40%);
+                      background:radial-gradient(circle at 75% 50%, var(--olive15) 1%, var(--olive18) 9%, var(--olive21) 22%);
 
 
     .left-block {flex:1 1 25rem;
-               padding:3rem;
+                 padding:3rem;
 
       .content {gap:0.5rem;
 
-        span{color:var(--olive18);
+        span{color:var(--olive13);
              font-size:1.3rem;
              margin-bottom:1rem;}
 
@@ -2775,7 +2785,7 @@ header {position:fixed;
   }
 
   @media(max-width:280px){
-    .section-container {background:radial-gradient(circle at 50% 26%, var(--olive19) 8%, var(--olive24) 30%);
+    .section-container {background:radial-gradient(circle at 50% 26%, var(--navyolive1) 8%, var(--navyolive6) 30%);
       
       .left-block {padding:5% 5% 5% 7%;}
   
@@ -7723,7 +7733,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
   
             }
 
-            input[type="text"]:focus .inputbox {border:1px solid var(--olive19);}
+            input[type="text"]:focus .inputbox {border:1px solid var(--navyolive1);}
 
             .input-boxes {width:100%;
                           flex-wrap:wrap;
@@ -7766,7 +7776,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
               p:first-child {font-weight:bold;
                              letter-spacing:1px;}
               p {font-size:1.4rem;}
-              p.value {color:var(--olive22);}
+              p.value {color:var(--navyolive4);}
           }
 
           

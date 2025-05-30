@@ -70,6 +70,11 @@
   --orange10:rgb(248, 191, 85);
   --transparent-orange:#af5e392a;
   --transparent-orange1:#fdad0125;
+  --brown1:#f1e6d6;
+  --brown2:#ecdac1;
+  --brown3:#ebd3b3;
+  --brown4:#ebcea6;
+  --brown5:#d8bb93;
   --brown6:#c8a97e;
   --brown7:#cca061;
   --brown8:#b1884e;
@@ -147,12 +152,15 @@
   --olive16:#015050;
   --olive17:#004242;
   --olive18:#013535;
-  --olive19:#b9c2c2;
-  --olive20:#9ab1b1;
-  --olive21:#7b9494;
-  --olive22:#616666;
-  --olive23:#536e6e;
-  --olive24:#4a7474;
+  --olive19:#012727;
+  --olive20:#011f1f;
+  --olive21:#001313;
+  --navyolive1:#b9c2c2;
+  --navyolive2:#9ab1b1;
+  --navyolive3:#7b9494;
+  --navyolive4:#616666;
+  --navyolive5:#536e6e;
+  --navyolive6:#4a7474;
   --transparent-olive:#0aa0a01e;
   --milky:#eef2f7;
   --milky2:#e8ebf0;
@@ -1256,7 +1264,7 @@ header .top-bar .left-block select {
   cursor: pointer;
   color: var(--white);
   background-color: var(--olive18);
-  border: 1px solid var(--olive20);
+  border: 1px solid var(--navyolive2);
 }
 header .top-bar .left-block select span {
   font-size: 0.9rem;
@@ -1813,7 +1821,7 @@ header .login-drawer.openingLoginDrawer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(rgb(189, 206, 205), rgb(112, 150, 148));
+  background: linear-gradient(135deg, var(--olive21) 0%, var(--olive21) 30%, var(--olive18) 70%, var(--olive21) 100%);
   position: relative;
 }
 .hero-section .slider-wrapper {
@@ -1843,7 +1851,7 @@ header .login-drawer.openingLoginDrawer {
 }
 .hero-section .slider-wrapper .hero-slide-item .left-block .block-content .semi-title {
   font-size: 1rem;
-  color: var(--olive16);
+  color: var(--olive12);
   font-weight: 550;
   text-transform: capitalize;
 }
@@ -1851,7 +1859,7 @@ header .login-drawer.openingLoginDrawer {
   margin-right: 0.2rem;
 }
 .hero-section .slider-wrapper .hero-slide-item .left-block .block-content h2 {
-  color: var(--gray13);
+  color: var(--olive4);
   margin-bottom: 0.6rem;
   text-align: left;
 }
@@ -1860,7 +1868,7 @@ header .login-drawer.openingLoginDrawer {
   font-size: 1.2rem;
   text-align: left;
   margin-bottom: 0.9rem;
-  color: var(--gray13);
+  color: var(--olive4);
 }
 .hero-section .slider-wrapper .hero-slide-item button {
   padding: 0.4rem 0.9rem 0.4rem 1.3rem;
@@ -2196,7 +2204,7 @@ header .login-drawer.openingLoginDrawer {
   gap: 0.6rem;
 }
 .quality-section .section-container .quality-item .item-holder svg, .quality-section .section-container .quality-item .item-holder i {
-  color: rgb(5, 103, 128);
+  color: var(--blue9);
   margin: 0;
   font-size: 2rem;
 }
@@ -3045,7 +3053,7 @@ header .login-drawer.openingLoginDrawer {
   flex-wrap: wrap;
   padding: 0;
   border-radius: 0.5rem;
-  background: radial-gradient(circle at 72% 60%, var(--olive14) 1%, var(--olive18) 40%);
+  background: radial-gradient(circle at 75% 50%, var(--olive15) 1%, var(--olive18) 9%, var(--olive21) 22%);
 }
 .today-deal-section .section-container .left-block {
   flex: 1 1 25rem;
@@ -3055,7 +3063,7 @@ header .login-drawer.openingLoginDrawer {
   gap: 0.5rem;
 }
 .today-deal-section .section-container .left-block .content span {
-  color: var(--olive18);
+  color: var(--olive13);
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -3093,7 +3101,7 @@ header .login-drawer.openingLoginDrawer {
 }
 @media (max-width: 280px) {
   .today-deal-section .section-container {
-    background: radial-gradient(circle at 50% 26%, var(--olive19) 8%, var(--olive24) 30%);
+    background: radial-gradient(circle at 50% 26%, var(--navyolive1) 8%, var(--navyolive6) 30%);
   }
   .today-deal-section .section-container .left-block {
     padding: 5% 5% 5% 7%;
@@ -8617,7 +8625,7 @@ footer .bottom-footer p {
   font-size: 0.8rem;
 }
 .payment-section .form-container .left-block .inputs-block input[type=text]:focus .inputbox {
-  border: 1px solid var(--olive19);
+  border: 1px solid var(--navyolive1);
 }
 .payment-section .form-container .left-block .inputs-block .input-boxes {
   width: 100%;
@@ -8674,7 +8682,7 @@ footer .bottom-footer p {
   font-size: 1.4rem;
 }
 .payment-section .form-container .right-block .order-count-block .total-parent p.value {
-  color: var(--olive22);
+  color: var(--navyolive4);
 }
 .payment-section .form-container .right-block .order-details-block {
   width: 100%;
