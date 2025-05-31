@@ -881,7 +881,7 @@ img {
 }
 .btn5:hover {
   background: transparent;
-  color: var(--black);
+  color: var(--yellow11);
 }
 
 .btn4-trans {
@@ -2498,12 +2498,20 @@ header .login-drawer.openingLoginDrawer {
   color: var(--gray13);
   text-transform: uppercase;
 }
-.promo-section .section-container .card-item .content .btn5 {
+.promo-section .section-container .card-item .content .button19 {
   margin-top: 2rem;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  letter-spacing: 0;
+  color: var(--black);
+  background: var(--yellow10);
+  border: 1px solid var(--yellow10);
   box-shadow: none;
+}
+.promo-section .section-container .card-item .content .button19:hover {
+  color: rgb(255, 249, 165);
+  border: 1px solid var(--yellow11);
+  background: var(--yellow11);
 }
 .promo-section .section-container .card-item .image-holder {
   width: 30%;

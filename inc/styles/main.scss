@@ -771,7 +771,7 @@ img {max-width:100%;
        box-shadow:var(--blue-box-shadow);
 
       &:hover {background:transparent;
-               color:var(--black);}
+               color:var(--yellow11);}
 }
 
 .btn4-trans {margin:0;
@@ -844,7 +844,6 @@ img {max-width:100%;
            -moz-transition:all 0.2s ease-in;
            position:relative;
 
-
       &:hover {color:var(--white);
                box-shadow:0px 8px 15px rgba(0, 0, 0, 0.3);
                -webkit-transition:all 0.2s ease-out;
@@ -878,7 +877,7 @@ img {max-width:100%;
         }
 
         50% {
-        opacity:1;
+          opacity:1;
         }
 
         to {
@@ -2232,11 +2231,19 @@ header {position:fixed;
                color:var(--gray13);
                text-transform:uppercase;}
             
-            .btn5 {margin-top:2rem;
-                   text-transform:uppercase;
-                   font-weight:bold;
-                   padding:0.5rem 1rem;
-                   box-shadow:none;}
+            .button19 {margin-top:2rem;
+                       text-transform:uppercase;
+                       font-weight:bold;
+                       letter-spacing:0;
+                       color:var(--black);
+                       background:var(--yellow10);
+                       border:1px solid var(--yellow10);
+                       box-shadow:none;
+
+                  &:hover {color:rgb(255, 249, 165);
+                           border:1px solid var(--yellow11);
+                           background:var(--yellow11);}
+            }
         }
 
         .image-holder {width:30%;
