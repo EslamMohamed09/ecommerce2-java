@@ -1942,7 +1942,7 @@ header {position:fixed;
             cursor:pointer;
             background-color:var(--olive22);
 
-            &.active {width:1.4rem;
+            &.active {width:1.2rem;
                       border-radius:0.5rem;
                       background-color:var(--olive14);}
         }
@@ -3353,7 +3353,7 @@ header {position:fixed;
   # Footer
  ************
 */
-footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);
+footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, var(--olive20) 100%);
         padding:4rem 0 0;
 
   .footer-widget {text-align:left;
@@ -3436,7 +3436,7 @@ footer {background:linear-gradient(to top, var(--olive17), var(--olive15) 50%, v
     }
   }
 
-  .bottom-footer {background-color:var(--olive18);
+  .bottom-footer {background-color:var(--olive20);
                   padding:1.3rem 0.9rem;
                   margin-top:5rem;
 

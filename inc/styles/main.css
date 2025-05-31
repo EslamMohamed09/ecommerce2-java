@@ -2175,7 +2175,7 @@ header .login-drawer.openingLoginDrawer {
   background-color: var(--olive22);
 }
 .hero-section .indicators-menu li.active {
-  width: 1.4rem;
+  width: 1.2rem;
   border-radius: 0.5rem;
   background-color: var(--olive14);
 }
@@ -3701,7 +3701,7 @@ header .login-drawer.openingLoginDrawer {
  ************
 */
 footer {
-  background: linear-gradient(to top, var(--olive17), var(--olive15) 50%, var(--olive17) 100%);
+  background: linear-gradient(to top, var(--olive20), var(--olive17) 60%, var(--olive20) 100%);
   padding: 4rem 0 0;
 }
 footer .footer-widget {
@@ -3804,7 +3804,7 @@ footer .newsletter-footer-widget form button:hover {
   background-color: var(--olive18);
 }
 footer .bottom-footer {
-  background-color: var(--olive18);
+  background-color: var(--olive20);
   padding: 1.3rem 0.9rem;
   margin-top: 5rem;
 }
