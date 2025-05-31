@@ -145,16 +145,17 @@
   --olive9:#5ff7f7;
   --olive10:#44f7f7;
   --olive11:#04f7f7;
-  --olive12:#02a8a8;
-  --olive13:#028d8d;
-  --olive14:#3e8181;
-  --olive15:#026b6b;
-  --olive16:#015050;
-  --olive17:#004242;
-  --olive18:#013535;
-  --olive19:#012727;
-  --olive20:#011f1f;
-  --olive21:#001313;
+  --olive12:#04d4d4;
+  --olive13:#02a8a8;
+  --olive14:#028d8d;
+  --olive15:#3e8181;
+  --olive16:#026b6b;
+  --olive17:#015050;
+  --olive18:#004242;
+  --olive19:#013535;
+  --olive20:#012727;
+  --olive21:#011f1f;
+  --olive22:#001313;
   --navyolive1:#b9c2c2;
   --navyolive2:#9ab1b1;
   --navyolive3:#7b9494;
@@ -299,11 +300,12 @@
   --aqua-box-shadow:0 0 4px #00c7c7;
   --blue-box-shadow:0 0 3px #3356ca48;
   --blue2-box-shadow:0 0 3px #3356ca65;
-  --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
+  --blue3-box-shadow:0 0 5px #3356ca65;
   --blue5-box-shadow:0 0 6px #3356ca;
   --green-box-shadow:0 0 6px #09995d;
   --yellow-box-shadow:0 0 3px #fce07b46;
   --brown-box-shadow:0 0 3px #5f280246;
+  --brown-box-shadow2:0 0.1rem 1rem rgba(165, 88, 1, 0.7);
   --text-shadow:0 0 4px #fff;
   --text-shadow2:0 0 3px #ffffff7c;
   --text-shadow3:0 0 3px rgba(80, 80, 80, 0.315);
@@ -942,6 +944,72 @@ img {
 }
 .line-btn:hover::after {
   width: 100%;
+}
+
+.button19 {
+  padding: 0.5rem 0.9rem 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--olive14);
+  border: 1px solid var(--olive14);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0 transparent;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  position: relative;
+}
+.button19:hover {
+  color: var(--white);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.button19:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+.button19::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: var(--white);
+  box-shadow: 0 0 50px 30px var(--white);
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.button19:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
 
 @media (max-width: 260px) {
@@ -1821,7 +1889,7 @@ header .login-drawer.openingLoginDrawer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--olive21) 0%, var(--olive21) 30%, var(--olive18) 70%, var(--olive21) 100%);
+  background: linear-gradient(135deg, var(--olive22) 0%, var(--olive22) 30%, var(--olive18) 70%, var(--olive22) 100%);
   position: relative;
 }
 .hero-section .slider-wrapper {
@@ -1851,7 +1919,7 @@ header .login-drawer.openingLoginDrawer {
 }
 .hero-section .slider-wrapper .hero-slide-item .left-block .block-content .semi-title {
   font-size: 1rem;
-  color: var(--olive12);
+  color: var(--olive13);
   font-weight: 550;
   text-transform: capitalize;
 }
@@ -1903,7 +1971,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block p {
   animation: moveleft 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block button {
+.hero-section .slider-wrapper .hero-slide-item.active:first-child .left-block a {
   animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block .semi-title {
@@ -1915,7 +1983,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block p {
   animation: moveright 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(2) .left-block a {
   animation: movetop 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block .semi-title {
@@ -1927,7 +1995,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block p {
   animation: moveright 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(3) .left-block a {
   animation: movetop 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block .semi-title {
@@ -1939,7 +2007,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block p {
   animation: moveleft 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(4) .left-block a {
   animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block .semi-title {
@@ -1951,7 +2019,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block p {
   animation: moveright 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(5) .left-block a {
   animation: movetop 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block .semi-title {
@@ -1963,7 +2031,7 @@ header .login-drawer.openingLoginDrawer {
 .hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block p {
   animation: moveleft 0.7s linear 0.7s backwards;
 }
-.hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block button {
+.hero-section .slider-wrapper .hero-slide-item.active:nth-child(6) .left-block a {
   animation: moveright 0.7s linear 0.7s backwards;
 }
 .hero-section .slider-wrapper .hero-slide-item.active:first-child .right-block img {
@@ -2047,9 +2115,10 @@ header .login-drawer.openingLoginDrawer {
   font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
-  color: var(--white);
-  border: 1px solid var(--gray13);
-  background-color: var(--gray13);
+  color: var(--olive12);
+  background-color: var(--olive16);
+  border: 1.5px solid var(--olive16);
+  box-shadow: var(--blue3-box-shadow);
   z-index: 100;
   opacity: 0;
   transition: all 0.2s linear;
@@ -2061,8 +2130,10 @@ header .login-drawer.openingLoginDrawer {
 }
 .hero-section .prev-btn:hover,
 .hero-section .next-btn:hover {
-  background-color: transparent;
-  color: var(--gray13);
+  color: var(--olive18);
+  background-color: var(--olive12);
+  border: 1.5px solid var(--olive12);
+  box-shadow: 0 0 4px rgba(2, 168, 190, 0.7);
 }
 .hero-section .prev-btn {
   left: -1rem;
@@ -2097,16 +2168,16 @@ header .login-drawer.openingLoginDrawer {
   display: inline-block;
   font-weight: bold;
   width: 0.7rem;
-  height: 0.7rem;
+  height: 0.6rem;
   border-radius: 50%;
   line-height: 1.9;
   cursor: pointer;
-  background-color: var(--gray13);
+  background-color: var(--olive22);
 }
 .hero-section .indicators-menu li.active {
   width: 1.4rem;
   border-radius: 0.5rem;
-  background-color: var(--gray4);
+  background-color: var(--olive14);
 }
 @media (min-width: 768px) and (max-width: 1000px) {
   .hero-section .hero-slide-item .left-block p {
@@ -2793,6 +2864,16 @@ header .login-drawer.openingLoginDrawer {
   text-shadow: var(--text-shadow4);
   font-family: "Quicksand", sans-serif;
 }
+.top-offers-section .section-container .offer-block .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--black);
+  opacity: 0.2;
+}
 .top-offers-section .section-container .offer-block:hover .banner-thumb::before {
   width: 90%;
 }
@@ -3053,7 +3134,7 @@ header .login-drawer.openingLoginDrawer {
   flex-wrap: wrap;
   padding: 0;
   border-radius: 0.5rem;
-  background: radial-gradient(circle at 75% 50%, var(--olive15) 1%, var(--olive18) 9%, var(--olive21) 22%);
+  background: radial-gradient(circle at 75% 50%, var(--olive15) 1%, var(--olive18) 9%, var(--olive22) 22%);
 }
 .today-deal-section .section-container .left-block {
   flex: 1 1 25rem;
