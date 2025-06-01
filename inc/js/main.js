@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // preloader
 
   const preloader = document.createElement('div');
         preloader.id = 'preloader';
@@ -69,14 +69,14 @@ function loadHtml(selector, htmlContent, type){
   if(type === "footer"){document.dispatchEvent(new Event("footerLoaded"))}
 }
 
-/*** SCROLL HEADER ***/
+/*** HEADER ***/
 const header = document.querySelector('header');
 
-// header code:
 if(header){
 
   document.addEventListener('headerLoaded', () => {
 
+    // open / close login form
     const loginDrawerBtn = document.getElementById("login-btn");
     const closeLoginDrawerBtn = document.getElementById("close-login-drawer-btn");
     const loginDrawer = document.getElementById("login-drawer");
@@ -89,7 +89,7 @@ if(header){
       loginDrawer.classList.remove("openingLoginDrawer");
     });
 
-    // search form
+    // select category on search form
     const customSelect = document.querySelector('header #main-header .middle-bar .custom-select');
     const selectTrigger = customSelect.querySelector('header #main-header .middle-bar .select-trigger');
     const options = customSelect.querySelectorAll('header #main-header .middle-bar .option');
@@ -113,6 +113,7 @@ if(header){
       }
     });
 
+    // padding to notification of action buttons
     document.querySelectorAll('header .main-header .middle-bar .buttons .service-button .value span').forEach((span) => {
       let number = span.textContent.trim();
 
@@ -144,8 +145,17 @@ if(header){
     });
 
     let productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
-    let productsCartCount = productsCart.length;
-    document.querySelector(".main-header .middle-bar .buttons .cart-icon span").textContent = productsCartCount;
+    document.querySelector(".main-header .middle-bar .buttons .cart-icon span").textContent = productsCart.length;
+
+    window.addEventListener('scroll', function(){ // header box shadow
+      if (window.innerWidth > 768 && window.scrollY > 30){
+          document.querySelector("header .top-bar").style.display = 'none';
+          document.querySelector(".main-header").style.boxShadow = '0 0.4rem 0.9rem rgba(0, 247, 255, 0.26)';
+      } else {
+        document.querySelector("header .top-bar").style.display = 'flex';
+        document.querySelector(".main-header").style.boxShadow = 'none';
+      }
+    });
 
     /*** MOBILE HEADER ***/
     if(document.querySelector(".open-btn") && document.getElementById("main-header")){
@@ -169,16 +179,7 @@ if(header){
         }, 150);
       };
     }
-
-    window.addEventListener('scroll', function(){
-      if (window.scrollY > 30){
-          document.querySelector("header .top-bar").style.display = 'none';
-          document.querySelector(".main-header").style.boxShadow = '0 0.4rem 0.9rem rgba(0, 247, 255, 0.26)';
-      } else {
-        document.querySelector("header .top-bar").style.display = 'flex';
-        document.querySelector(".main-header").style.boxShadow = 'none';
-      }
-    });
+    
   });
 
   loadHtml("header", headerContent, "header");
@@ -186,24 +187,6 @@ if(header){
   document.body.style.paddingTop = `${header.offsetHeight}px`;
 }
 
-function eyeFunction(eyeIcon) {
-  const passInput = eyeIcon.previousElementSibling;
-  const eyeIcons = eyeIcon.querySelectorAll(".fa-eye, .fa-eye-slash");
-
-  if (passInput.type === 'password') {
-      passInput.type = 'text';
-      eyeIcons[0].style.display = "block";
-      eyeIcons[1].style.display = "none";
-  } else {
-    passInput.type = 'password';
-    eyeIcons[0].style.display = "none";
-    eyeIcons[1].style.display = "block";
-  }
-}
-
-function truncateWords(text, wordsCount){
-  return text.split(' ').slice(0,wordsCount).join(' ');
-}
 
 /* 
  ######################
@@ -4536,6 +4519,25 @@ async function displayAddToCartPublic(){
 }
 
 displayAddToCartPublic();
+
+function truncateWords(text, wordsCount){
+  return text.split(' ').slice(0,wordsCount).join(' ');
+}
+
+function eyeFunction(eyeIcon) {
+  const passInput = eyeIcon.previousElementSibling;
+  const eyeIcons = eyeIcon.querySelectorAll(".fa-eye, .fa-eye-slash");
+
+  if (passInput.type === 'password') {
+      passInput.type = 'text';
+      eyeIcons[0].style.display = "block";
+      eyeIcons[1].style.display = "none";
+  } else {
+    passInput.type = 'password';
+    eyeIcons[0].style.display = "none";
+    eyeIcons[1].style.display = "block";
+  }
+}
 
 
 /*** REMOVE BACKGROUND ***/

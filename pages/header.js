@@ -1,6 +1,11 @@
 const headerContent = `
   <div class="top-bar d-flex-r-bt-c">
-    <div class="left-block">
+    <div class="left-block d-flex-r-st-c">
+
+      <div class="logo-holder">
+        <a href="#" class="logo-brand"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
+      </div>
+
       <div class="d-flex-r-st-c" id="currency-select">
         <select>
           <option value="EN">EN / USD</option>
@@ -8,7 +13,9 @@ const headerContent = `
           <option value="EG">EG / POUND</option>
         </select>
       </div>
+
     </div>
+
     <div class="right-block">
       <ul class="d-flex-r-st-c">
         <li><a href="/pages/customerprofile.html">my account</a></li>
@@ -17,13 +24,16 @@ const headerContent = `
         <button class="open-btn"><i class="fas fa-bars"></i></button>
       </ul>
     </div>
+
   </div>
 
   <div id="main-header" class="main-header">
 
     <div class="middle-bar d-flex-r-bt-c">
 
-      <h2 class="web-title"><a href="/index.html">shopping</a></h2>
+      <div class="logo-holder">
+        <a href="#" class="logo-brand"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
+      </div>
 
       <form class="search-form d-flex-r-bt-c">
         <div class="custom-select-wrapper">
