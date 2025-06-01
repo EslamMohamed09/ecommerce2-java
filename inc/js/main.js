@@ -90,10 +90,10 @@ if(header){
     });
 
     // select category on search form
-    const customSelect = document.querySelector('header #main-header .middle-bar .custom-select');
-    const selectTrigger = customSelect.querySelector('header #main-header .middle-bar .select-trigger');
-    const options = customSelect.querySelectorAll('header #main-header .middle-bar .option');
-    const hiddenInput = document.querySelector('header #main-header .middle-bar input[name="category"]');
+    const customSelect = document.querySelector('header .main-header .middle-bar .custom-select');
+    const selectTrigger = customSelect.querySelector('header .main-header .middle-bar .select-trigger');
+    const options = customSelect.querySelectorAll('header .main-header .middle-bar .option');
+    const hiddenInput = document.querySelector('header .main-header .middle-bar input[name="category"]');
 
     selectTrigger.addEventListener('click', () => {
       customSelect.classList.toggle('open');
@@ -158,9 +158,9 @@ if(header){
     });
 
     /*** MOBILE HEADER ***/
-    if(document.querySelector(".open-btn") && document.getElementById("main-header")){
+    if(document.querySelector("header .top-bar .right-block .open-btn") && window.innerWidth < 768){
       const openBtn = document.querySelector("header .top-bar .right-block .open-btn");
-      const mainHeader = document.getElementById("main-header");
+      const mainHeader = document.querySelector("header .main-header");
       openBtn.onclick = () => {
         mainHeader.classList.toggle("mobile-header");
   

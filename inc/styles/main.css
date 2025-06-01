@@ -1688,14 +1688,6 @@ header .login-drawer.openingLoginDrawer {
   header .top-bar .right-block ul .open-btn {
     display: block;
   }
-  header header.headerscroll .top-bar {
-    position: fixed;
-    top: 0;
-    width: 100% !important;
-    box-shadow: 0 0.4rem 1.5rem rgba(0, 247, 255, 0.356);
-    transition: all 1s linear;
-    z-index: 1000000;
-  }
   header .main-header {
     position: fixed;
     top: 0;
@@ -1722,6 +1714,7 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header .bottom-bar {
     padding: 0.4rem 2rem 0.4rem 1rem;
+    margin-top: 1rem;
   }
   header .main-header .bottom-bar nav ul {
     flex-direction: column;
@@ -1732,8 +1725,6 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header.mobile-header {
     width: 80% !important;
-    opacity: 1;
-    visibility: visible;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
 }

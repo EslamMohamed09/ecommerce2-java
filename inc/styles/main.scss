@@ -1509,13 +1509,6 @@ header {position:fixed;
         }
       }
 
-      header.headerscroll .top-bar {position:fixed;
-                                    top:0;
-                                    width:100% !important;
-                                    box-shadow:0 0.4rem 1.5rem rgba(0, 247, 255, 0.356);
-                                    transition:all 1s linear;
-                                    z-index:1000000;}
-
       .main-header {position:fixed;
                     top:0;
                     left:0;
@@ -1538,6 +1531,7 @@ header {position:fixed;
           }
  
           .bottom-bar {padding:0.4rem 2rem 0.4rem 1rem;
+                       margin-top:1rem;
 
             nav ul {flex-direction:column;
                     align-items:flex-start;

@@ -27,7 +27,7 @@ const headerContent = `
 
   </div>
 
-  <div id="main-header" class="main-header">
+  <div class="main-header">
 
     <div class="middle-bar d-flex-r-bt-c">
 
