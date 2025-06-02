@@ -1411,6 +1411,9 @@ header .top-bar .right-block ul .open-btn i, header .top-bar .right-block ul .op
   border: 0 !important;
   outline: 0 !important;
 }
+header .top-bar.header-scroll {
+  box-shadow: 0 0.4rem 0.9rem rgba(0, 247, 255, 0.26);
+}
 header .main-header {
   background-color: var(--olive19);
   padding: 0 !important;
@@ -1669,6 +1672,9 @@ header .login-drawer.openingLoginDrawer {
   opacity: 1;
   transition: all 0.4s linear;
 }
+header.header-scroll {
+  box-shadow: 0 0.4rem 0.9rem rgba(0, 247, 255, 0.26);
+}
 @media (max-width: 1400px) {
   header .main-header .middle-bar .search-form {
     width: 35%;
@@ -1725,6 +1731,8 @@ header .login-drawer.openingLoginDrawer {
   }
   header .main-header.mobile-header {
     width: 80% !important;
+    opacity: 1;
+    visibility: visible;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
 }

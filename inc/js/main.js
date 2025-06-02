@@ -147,13 +147,23 @@ if(header){
     let productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
     document.querySelector(".main-header .middle-bar .buttons .cart-icon span").textContent = productsCart.length;
 
-    window.addEventListener('scroll', function(){ // header box shadow
-      if (window.innerWidth > 768 && window.scrollY > 30){
-          document.querySelector("header .top-bar").style.display = 'none';
-          document.querySelector(".main-header").style.boxShadow = '0 0.4rem 0.9rem rgba(0, 247, 255, 0.26)';
+    const topBar = document.querySelector('header .top-bar');
+
+    window.addEventListener('scroll', function() {
+      if (window.innerWidth >= 768 && window.scrollY > 30) {
+          header.classList.add("header-scroll");
+          topBar.style.display = 'none';
       } else {
-        document.querySelector("header .top-bar").style.display = 'flex';
-        document.querySelector(".main-header").style.boxShadow = 'none';
+        header.classList.remove("header-scroll");
+        if (header.classList.length === 0) {header.removeAttribute('class');}
+        topBar.style.display = 'flex';
+      }
+
+      if (window.innerWidth < 768 && window.scrollY > 30) {
+          topBar.classList.add("header-scroll");
+      } else {
+        topBar.classList.remove("header-scroll");
+        if (topBar.classList.length === 0) {topBar.removeAttribute('class');}
       }
     });
 
