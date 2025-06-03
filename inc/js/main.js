@@ -170,23 +170,9 @@ if(header){
     /*** MOBILE HEADER ***/
     if(document.querySelector("header .top-bar .right-block .open-btn") && window.innerWidth < 768){
       const openBtn = document.querySelector("header .top-bar .right-block .open-btn");
-      const mainHeader = document.querySelector("header .main-header");
       openBtn.onclick = () => {
-        mainHeader.classList.toggle("mobile-header");
-  
-        let icon = openBtn.querySelector("i") || openBtn.querySelector("svg");
-  
-        icon.style.transition = "transform 0.2s ease-in-out";
-        icon.style.transform = "rotate(180deg)";
-  
-        setTimeout(() => {
-          if (icon.classList.contains("fa-bars")) {
-              icon.classList.replace("fa-bars", "fa-times");
-          } else {
-              icon.classList.replace("fa-times", "fa-bars");
-          }
-          icon.style.transform = "rotate(0deg)";
-        }, 150);
+        header.classList.toggle("mobile-header");
+        if (header.classList.length === 0) {header.removeAttribute('class');}
       };
     }
     

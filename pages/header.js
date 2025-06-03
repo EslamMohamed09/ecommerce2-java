@@ -21,7 +21,11 @@ const headerContent = `
         <li><a href="/pages/customerprofile.html">my account</a></li>
         <li><a href="/pages/checkout.html">checkout</a></li>
         <li><button id="login-btn">login</button></li>
-        <button class="open-btn"><i class="fas fa-bars"></i></button>
+        <button class="open-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
       </ul>
     </div>
 
