@@ -150,7 +150,7 @@ if(header){
     const topBar = document.querySelector('header .top-bar');
 
     window.addEventListener('scroll', function() {
-      if (window.innerWidth >= 768 && window.scrollY > 30) {
+      if (window.innerWidth >= 768 && window.scrollY > 60) {
           header.classList.add("header-scroll");
           topBar.style.display = 'none';
       } else {
@@ -159,7 +159,7 @@ if(header){
         topBar.style.display = 'flex';
       }
 
-      if (window.innerWidth < 768 && window.scrollY > 30) {
+      if (window.innerWidth < 768 && window.scrollY > 60) {
           topBar.classList.add("header-scroll");
       } else {
         topBar.classList.remove("header-scroll");
