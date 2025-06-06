@@ -1193,24 +1193,69 @@ header {position:fixed;
               }
       }
 
-      select {gap:0.1rem;
-              cursor:pointer;
-              color:var(--white);
-              background-color:(var(--olive18));
-              border:1px solid var(--navyolive2);
-                 
-        span {font-size:0.9rem;
-              color:var(--white);}
+      .selects {
+          .currency-select-holder {min-width:11rem;
+                                   margin:0;
+                                   position:relative;
 
-        img {width:1.3rem;
-             height:1.3rem;
-             border-radius:50%;
-             margin-right:0.3rem;
-             object-fit:cover;}
+              .select-box {width:100%;
+                           display:flex;
+                           align-items:center;
+                           justify-content:space-between;
+                           border:none;
+                           border-radius:0.2rem;
+                           padding:3px;
+                           color:var(--white);
+                           background:transparent;
+                           border:1.9px solid var(--green5);
+                           cursor:pointer;
 
-        svg {color:var(--white);}
+                      .selected {display:flex;
+                                 align-items:center;
+                                 gap:8px;}
+
+                      .arrow {font-size:12px;
+                              color:var(--green5);
+                              transition:transform 0.2s;
+                          &.rotate {transform:rotate(-90deg);}
+                      }
+              }
+
+              .flag {width:2.4rem;
+                     height:1.6rem;
+
+                  img {width:100%;
+                       height:100%;
+                       object-fit:cover;
+                       border-radius:2px;}
+              }
+
+              span {font-size:0.9rem !important;
+                    color:var(--green4);}
+
+              .options {position:absolute;
+                        top:100%;
+                        left:0;
+                        right:0;
+                        border-top:none;
+                        border-radius:0 0 0.2rem 0.2rem;
+                        background:var(--green19);
+                        border:1.9px solid var(--green5);
+                        border-top-width:0;
+                        z-index:100;
+                        display:none;
+                      &.show {display:block;}
+
+                  .option {padding:5px;
+                           cursor:pointer;
+                           display:flex;
+                           align-items:center;
+                           gap:8px;
+                          &:hover {background:var(--green25);}
+                  }
+              }
+          }
       }
-
     }
 
     .right-block {width:fit-content;
@@ -1356,7 +1401,7 @@ header {position:fixed;
 
         .search-btn {width:10%;
                      height:100% !important;
-                     padding:0.9rem 0;
+                     padding:0.8rem 0;
                      display:flex !important;
                      justify-content:center !important;
                      align-items:center !important;
@@ -1408,6 +1453,74 @@ header {position:fixed;
 
     .bottom-bar {padding:0 3%;
                  margin:0;
+
+      .selects {display:none;
+          .currency-select-holder {min-width:11rem;
+                                   margin:0;
+                                   position:relative;
+
+              .select-box {width:100%;
+                            display:flex;
+                            align-items:center;
+                            justify-content:space-between;
+                            border:none;
+                            border-radius:0.2rem;
+                            padding:3px;
+                            color:var(--white);
+                            background:transparent;
+                            border:1.9px solid var(--green19);
+                            cursor:pointer;
+
+                      .selected {display:flex;
+                                  align-items:center;
+                                  gap:8px;
+                              span {font-size:1rem !important;
+                                    color:var(--green21);}
+                      }
+
+                      .arrow {font-size:1rem;
+                              color:var(--green19);
+                              margin-left:0.2rem;
+                              transition:transform 0.2s;
+                          &.rotate {transform:rotate(-90deg);}
+                      }
+              }
+
+              .flag {width:2.5rem;
+                      height:1.6rem;
+
+                  img {width:100%;
+                        height:100%;
+                        object-fit:cover;
+                        border-radius:2px;}
+              }
+
+              .options {position:absolute;
+                        top:100%;
+                        left:0;
+                        right:0;
+                        border-top:none;
+                        border-radius:0 0 0.2rem 0.2rem;
+                        background:var(--green19);
+                        border:1.9px solid var(--green19);
+                        border-top-width:0;
+                        z-index:100;
+                        display:none;
+                      &.show {display:block !important;}
+
+                  .option {padding:5px 6px;
+                            cursor:pointer;
+                            display:flex;
+                            align-items:center;
+                            gap:8px;
+                          &:hover {background:var(--green25);}
+
+                      span {font-size:1rem !important;
+                            color:var(--green5);}
+                  }
+              }
+          }
+      }
              
       nav {
 
@@ -1583,7 +1696,7 @@ header {position:fixed;
       .right-block ul li a, button {font-size:1.2rem !important;}
     }
 
-    &.mobile-header {width:90% !important;
+    &.mobile-header {
 
       .middle-bar {gap:1.5rem;
         .web-title {font-size:1.5rem;}

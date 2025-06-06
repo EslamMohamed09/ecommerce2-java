@@ -74,6 +74,38 @@ const header = document.querySelector('header');
 
 if(header){
 
+  document.body.style.paddingTop = `${header.offsetHeight}px`;
+
+  function currencyToggleOptions(selectBox) {
+    const options = selectBox.parentElement.querySelector('.options');
+    const arrow = selectBox.querySelector('.arrow');
+    options.classList.toggle('show');
+    arrow.classList.toggle('rotate');
+  }
+
+  function currencySelectOption(value, text, flagUrl, optionElem) {
+    if (!optionElem) {
+        console.warn('optionElem is undefined or null');
+        return;
+    }
+
+    const holder = optionElem.closest('.currency-select-holder');
+    const selectBox = holder.querySelector('.select-box');
+    const selected = selectBox.querySelector('.selected');
+
+    selected.innerHTML = `
+      <div class="flag">
+        <img src="${flagUrl}" alt="${value}">
+      </div>
+      <span>${text}</span>
+    `;
+
+    const options = holder.querySelector('.options');
+    const arrow = selectBox.querySelector('.arrow');
+    if (options) options.classList.remove('show');
+    if (arrow) arrow.classList.remove('rotate');
+  }
+
   document.addEventListener('headerLoaded', () => {
 
     // open / close login form
@@ -92,14 +124,14 @@ if(header){
     // select category on search form
     const customSelect = document.querySelector('header .main-header .middle-bar .custom-select');
     const selectTrigger = customSelect.querySelector('header .main-header .middle-bar .select-trigger');
-    const options = customSelect.querySelectorAll('header .main-header .middle-bar .option');
+    const categoryOptions = customSelect.querySelectorAll('header .main-header .middle-bar .option');
     const hiddenInput = document.querySelector('header .main-header .middle-bar input[name="category"]');
 
     selectTrigger.addEventListener('click', () => {
       customSelect.classList.toggle('open');
     });
 
-    options.forEach(option => {
+    categoryOptions.forEach(option => {
       option.addEventListener('click', () => {
         selectTrigger.textContent = option.textContent;
         hiddenInput.value = option.dataset.value;
@@ -179,8 +211,6 @@ if(header){
   });
 
   loadHtml("header", headerContent, "header");
-
-  document.body.style.paddingTop = `${header.offsetHeight}px`;
 }
 
 

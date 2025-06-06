@@ -6,12 +6,35 @@ const headerContent = `
         <a href="#" class="logo-brand"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
       </div>
 
-      <div class="d-flex-r-st-c" id="currency-select">
-        <select>
-          <option value="EN">EN / USD</option>
-          <option value="DE">DE / EURO</option>
-          <option value="EG">EG / POUND</option>
-        </select>
+      <div class="selects">
+        <div class="currency-select-holder d-flex-r-st-c">
+          
+          <div class="select-box" onclick="currencyToggleOptions(this)">
+            <div class="selected">
+              <div class="flag">
+                <img src="../admin/inc/images/usd.png" alt="UK">
+              </div>
+              <span>EN / USD</span>
+            </div>
+            <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+          </div>
+      
+          <div class="options">
+            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/inc/images/usd.png', this)">
+              <div class="flag"><img src="../admin/inc/images/usd.png" alt="UK"></div>
+              <span>EN / USD</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/inc/images/germany.png', this)">
+              <div class="flag"><img src="../admin/inc/images/germany.png" alt="DE"></div>
+              <span>DE / EURO</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/egy.png', this)">
+              <div class="flag"><img src="../admin/inc/images/egy.png" alt="EG"></div>
+              <span>EG / POUND</span>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -76,6 +99,38 @@ const headerContent = `
     </div>
 
     <div class="bottom-bar">
+    
+      <div class="selects">
+        <div class="currency-select-holder d-flex-r-st-c">
+          
+          <div class="select-box" onclick="currencyToggleOptions(this)">
+            <div class="selected">
+              <div class="flag">
+                <img src="inc/images/usd.png" alt="UK">
+              </div>
+              <span>EN / USD</span>
+            </div>
+            <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+          </div>
+      
+          <div class="options">
+            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', 'inc/images/usd.png', this)">
+              <div class="flag"><img src="inc/images/usd.png" alt="UK"></div>
+              <span>EN / USD</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', 'inc/images/germany.png', this)">
+              <div class="flag"><img src="inc/images/germany.png" alt="DE"></div>
+              <span>DE / EURO</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', 'inc/images/egy.png', this)">
+              <div class="flag"><img src="inc/images/egy.png" alt="EG"></div>
+              <span>EG / POUND</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <nav>
         <ul class="d-flex-r-st-c">
           <li><a href="/pages/category.html?id=1" target="_blank">electronics</a></li>
@@ -84,6 +139,7 @@ const headerContent = `
           <li><a href="/pages/category.html?id=66" target="_blank">shoes</a></li>
         </ul>
       </nav>
+
     </div>
 
   </div>
