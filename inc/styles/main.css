@@ -1372,7 +1372,7 @@ header .top-bar .left-block .selects .currency-select-holder .select-box {
   padding: 3px;
   color: var(--white);
   background: transparent;
-  border: 1.9px solid var(--green5);
+  border: 1.9px solid var(--olive14);
   cursor: pointer;
 }
 header .top-bar .left-block .selects .currency-select-holder .select-box .selected {
@@ -1382,15 +1382,15 @@ header .top-bar .left-block .selects .currency-select-holder .select-box .select
 }
 header .top-bar .left-block .selects .currency-select-holder .select-box .arrow {
   font-size: 12px;
-  color: var(--green5);
+  color: var(--olive14);
   transition: transform 0.2s;
 }
 header .top-bar .left-block .selects .currency-select-holder .select-box .arrow.rotate {
   transform: rotate(-90deg);
 }
 header .top-bar .left-block .selects .currency-select-holder .flag {
-  width: 2.4rem;
-  height: 1.6rem;
+  width: 2.1rem;
+  height: 1.4rem;
 }
 header .top-bar .left-block .selects .currency-select-holder .flag img {
   width: 100%;
@@ -1400,17 +1400,16 @@ header .top-bar .left-block .selects .currency-select-holder .flag img {
 }
 header .top-bar .left-block .selects .currency-select-holder span {
   font-size: 0.9rem !important;
-  color: var(--green4);
+  color: var(--olive3);
 }
 header .top-bar .left-block .selects .currency-select-holder .options {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  border-top: none;
   border-radius: 0 0 0.2rem 0.2rem;
-  background: var(--green19);
-  border: 1.9px solid var(--green5);
+  background: var(--olive21);
+  border: 1.9px solid var(--olive14);
   border-top-width: 0;
   z-index: 100;
   display: none;
@@ -1426,7 +1425,7 @@ header .top-bar .left-block .selects .currency-select-holder .options .option {
   gap: 8px;
 }
 header .top-bar .left-block .selects .currency-select-holder .options .option:hover {
-  background: var(--green25);
+  background: var(--olive14);
 }
 header .top-bar .right-block {
   width: fit-content;
@@ -1637,6 +1636,7 @@ header .main-header .bottom-bar {
 }
 header .main-header .bottom-bar .selects {
   display: none;
+  margin-bottom: 1rem;
 }
 header .main-header .bottom-bar .selects .currency-select-holder {
   min-width: 11rem;
@@ -1653,7 +1653,7 @@ header .main-header .bottom-bar .selects .currency-select-holder .select-box {
   padding: 3px;
   color: var(--white);
   background: transparent;
-  border: 1.9px solid var(--green19);
+  border: 1.9px solid var(--olive14);
   cursor: pointer;
 }
 header .main-header .bottom-bar .selects .currency-select-holder .select-box .selected {
@@ -1663,11 +1663,11 @@ header .main-header .bottom-bar .selects .currency-select-holder .select-box .se
 }
 header .main-header .bottom-bar .selects .currency-select-holder .select-box .selected span {
   font-size: 1rem !important;
-  color: var(--green21);
+  color: var(--olive3);
 }
 header .main-header .bottom-bar .selects .currency-select-holder .select-box .arrow {
   font-size: 1rem;
-  color: var(--green19);
+  color: var(--olive14);
   margin-left: 0.2rem;
   transition: transform 0.2s;
 }
@@ -1691,8 +1691,8 @@ header .main-header .bottom-bar .selects .currency-select-holder .options {
   right: 0;
   border-top: none;
   border-radius: 0 0 0.2rem 0.2rem;
-  background: var(--green19);
-  border: 1.9px solid var(--green19);
+  background: var(--olive21);
+  border: 1.9px solid var(--olive14);
   border-top-width: 0;
   z-index: 100;
   display: none;
@@ -1708,11 +1708,11 @@ header .main-header .bottom-bar .selects .currency-select-holder .options .optio
   gap: 8px;
 }
 header .main-header .bottom-bar .selects .currency-select-holder .options .option:hover {
-  background: var(--green25);
+  background: var(--olive14);
 }
 header .main-header .bottom-bar .selects .currency-select-holder .options .option span {
   font-size: 1rem !important;
-  color: var(--green5);
+  color: var(--olive3);
 }
 header .main-header .bottom-bar nav ul {
   gap: 0.5rem;
@@ -1826,6 +1826,9 @@ header.header-scroll {
   header .top-bar .left-block .logo-holder {
     display: block;
   }
+  header .top-bar .left-block .selects {
+    display: none;
+  }
   header .top-bar .right-block ul li a {
     font-size: 1.2rem !important;
   }
@@ -1862,6 +1865,9 @@ header.header-scroll {
   header .main-header .bottom-bar {
     padding: 0.4rem 2rem 0.4rem 1rem;
     margin-top: 1rem;
+  }
+  header .main-header .bottom-bar .selects {
+    display: flex;
   }
   header .main-header .bottom-bar nav ul {
     flex-direction: column;
@@ -2436,6 +2442,9 @@ header.header-scroll {
  # Quality
  ************
 */
+.quality-section {
+  padding: 1.5rem 5% 2rem;
+}
 .quality-section .section-container {
   display: flex;
   flex-direction: row;

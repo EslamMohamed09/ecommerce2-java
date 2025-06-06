@@ -74,8 +74,6 @@ const header = document.querySelector('header');
 
 if(header){
 
-  document.body.style.paddingTop = `${header.offsetHeight}px`;
-
   function currencyToggleOptions(selectBox) {
     const options = selectBox.parentElement.querySelector('.options');
     const arrow = selectBox.querySelector('.arrow');
@@ -107,6 +105,8 @@ if(header){
   }
 
   document.addEventListener('headerLoaded', () => {
+
+    document.body.style.paddingTop = `${header.offsetHeight}px`;
 
     // open / close login form
     const loginDrawerBtn = document.getElementById("login-btn");

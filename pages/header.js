@@ -99,14 +99,14 @@ const headerContent = `
     </div>
 
     <div class="bottom-bar">
-    
+
       <div class="selects">
         <div class="currency-select-holder d-flex-r-st-c">
           
           <div class="select-box" onclick="currencyToggleOptions(this)">
             <div class="selected">
               <div class="flag">
-                <img src="inc/images/usd.png" alt="UK">
+                <img src="../admin/inc/images/usd.png" alt="UK">
               </div>
               <span>EN / USD</span>
             </div>
@@ -114,16 +114,16 @@ const headerContent = `
           </div>
       
           <div class="options">
-            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', 'inc/images/usd.png', this)">
-              <div class="flag"><img src="inc/images/usd.png" alt="UK"></div>
+            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/inc/images/usd.png', this)">
+              <div class="flag"><img src="../admin/inc/images/usd.png" alt="UK"></div>
               <span>EN / USD</span>
             </div>
-            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', 'inc/images/germany.png', this)">
-              <div class="flag"><img src="inc/images/germany.png" alt="DE"></div>
+            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/inc/images/germany.png', this)">
+              <div class="flag"><img src="../admin/inc/images/germany.png" alt="DE"></div>
               <span>DE / EURO</span>
             </div>
-            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', 'inc/images/egy.png', this)">
-              <div class="flag"><img src="inc/images/egy.png" alt="EG"></div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/egy.png', this)">
+              <div class="flag"><img src="../admin/inc/images/egy.png" alt="EG"></div>
               <span>EG / POUND</span>
             </div>
           </div>
