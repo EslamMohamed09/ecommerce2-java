@@ -104,6 +104,20 @@ if(header){
     if (arrow) arrow.classList.remove('rotate');
   }
 
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.currency-select-holder')) {
+        document.querySelectorAll('.currency-select-holder .options').forEach(opt => opt.classList.remove('show'));
+    }
+  });
+
+  // Prevent dropdown from closing when clicking an option
+  document.querySelectorAll('.currency-select-holder .option').forEach(option => {
+    option.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  });
+
   document.addEventListener('headerLoaded', () => {
 
     document.body.style.paddingTop = `${header.offsetHeight}px`;
