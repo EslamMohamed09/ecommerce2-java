@@ -1508,6 +1508,7 @@ header .main-header .middle-bar .logo-holder .logo-brand img {
 }
 header .main-header .middle-bar .search-form {
   width: 30%;
+  height: 3rem;
   border-radius: 1.5rem;
   padding: 0;
   border: none;
@@ -1569,7 +1570,7 @@ header .main-header .middle-bar .search-form .custom-select-wrapper .custom-sele
 }
 header .main-header .middle-bar .search-form input[type=search] {
   flex: 1 1 10rem;
-  height: 1.5rem;
+  height: 100%;
   padding: 0 0.6rem 0;
   border-radius: 1.5rem;
   font-size: 1rem;
@@ -1578,7 +1579,7 @@ header .main-header .middle-bar .search-form input[type=search] {
   background: transparent;
 }
 header .main-header .middle-bar .search-form .search-btn {
-  width: 10%;
+  min-width: 3rem;
   height: 100% !important;
   padding: 0.8rem 0;
   display: flex !important;
@@ -1893,12 +1894,6 @@ header.header-scroll {
   }
 }
 @media (max-width: 640px) {
-  header .top-bar .left-block #currency-select select {
-    width: 6rem;
-  }
-  header .top-bar .left-block #currency-select span {
-    font-size: 0.8rem;
-  }
   header .top-bar .right-block ul li a, header .top-bar button {
     font-size: 1.2rem !important;
   }
@@ -3198,12 +3193,12 @@ header.header-scroll {
   background-color: transparent;
   transition: all 0.3s linear;
 }
-.offers-section .side-block .products-container .offersblock .product-item .icons svg {
+.offers-section .side-block .products-container .offersblock .product-item .icons svg, .offers-section .side-block .products-container .offersblock .product-item .icons i {
   font-size: 1.1rem;
   color: var(--gray11);
   border: none;
 }
-.offers-section .side-block .products-container .offersblock .product-item .icons svg:hover {
+.offers-section .side-block .products-container .offersblock .product-item .icons svg:hover, .offers-section .side-block .products-container .offersblock .product-item .icons i:hover {
   color: var(--primary);
 }
 .offers-section .side-block .products-container .offersblock .product-item .product-content {
@@ -3523,10 +3518,14 @@ header.header-scroll {
 }
 
 /*
- *****************
+ ***************
   # month deal
- *****************
+ ***************
 */
+.month-deal-section {
+  position: relative;
+  /* <--> */
+}
 .month-deal-section .product-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3653,6 +3652,35 @@ header.header-scroll {
   background-color: transparent !important;
   color: var(--black);
 }
+.month-deal-section .slider-wrapper-arrows {
+  width: 106%;
+  position: absolute;
+  top: 45%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.4s linear;
+}
+.month-deal-section .slider-wrapper-arrows .arrow-left,
+.month-deal-section .slider-wrapper-arrows .arrow-right {
+  width: 2rem;
+  height: 5rem;
+  padding: 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  color: var(--white);
+  background: var(--black);
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .month-deal-section .product-card {
     padding: 3rem 5%;
@@ -3738,7 +3766,7 @@ header.header-scroll {
   top: 0;
   right: 0;
 }
-.quick-view-modal .close-area #close-btn svg {
+.quick-view-modal .close-area #close-btn svg, .quick-view-modal .close-area #close-btn i {
   color: var(--black) !important;
   font-size: 1.5rem !important;
   border-radius: 2px;

@@ -961,6 +961,59 @@ if(document.querySelector(".month-deal-section")){
       monthDealSliderChecker();
     }
   });
+
+  function initMonthDealSlider() {
+
+    const sliderWrapper = document.querySelector('.month-deal-section .slider-wrapper');
+    const slideItem = document.querySelectorAll('.month-deal-section .slider-wrapper .product-card');
+    const prevBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .prev-btn');
+    const nextBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .next-btn');
+    const dots = document.querySelectorAll('.month-deal-section .indicators .dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slideItem.forEach(slide => {slide.classList.remove('active');});
+
+      dots.forEach(dot => {dot.classList.remove('active');});
+
+      slideItem[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slideItem.length) % slideItem.length;
+      showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slideItem.length;
+      showSlide(currentSlide);
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    let sliderInterval = setInterval(nextSlide, 5000);
+
+    // Pause auto-slide on hover
+    sliderWrapper.addEventListener('mouseenter', () => {
+      clearInterval(sliderInterval);
+    });
+
+    sliderWrapper.addEventListener('mouseleave', () => {
+      sliderInterval = setInterval(nextSlide, 5000);
+    });
+  }
+
+  initMonthDealSlider();
+
 }
 
 /* 
