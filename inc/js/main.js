@@ -268,32 +268,32 @@ if(document.querySelector('.hero-section')){
     }
 
     function buildIndicators (){
-        indicatorsMenu = document.createElement('ul');
-        indicatorsMenu.classList.add('indicators-menu');
-        section.appendChild(indicatorsMenu);
+      indicatorsMenu = document.createElement('ul');
+      indicatorsMenu.classList.add('indicators-menu');
+      section.appendChild(indicatorsMenu);
 
-        for (let i=0; i<slides.length; i++) {
-            const indicator = document.createElement('li');
-            indicator.setAttribute('data-index', i);
-            indicatorsMenu.appendChild(indicator);
-        
-            indicator.addEventListener('click', () => {
-              currentIndex = i;
-              updateSlides();
-            });
-        }
+      for (let i=0; i<slides.length; i++) {
+          const indicator = document.createElement('li');
+          indicator.setAttribute('data-index', i);
+          indicatorsMenu.appendChild(indicator);
+      
+          indicator.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlides();
+          });
+      }
 
-        indicatorsMenu.children[currentIndex].classList.add('active');
+      indicatorsMenu.children[currentIndex].classList.add('active');
 
-        if(window.innerWidth < 500){
-           if(indicatorsMenu.children.length > 8){
-              indicatorsMenu.style.display = 'none';
-           }
-        } else {
-          if(indicatorsMenu.children.length > 12){
-             indicatorsMenu.style.display = 'none';
+      if(window.innerWidth < 500){
+          if(indicatorsMenu.children.length > 8){
+            indicatorsMenu.style.display = 'none';
           }
+      } else {
+        if(indicatorsMenu.children.length > 12){
+            indicatorsMenu.style.display = 'none';
         }
+      }
     }
 
     function updateSlides(){
@@ -310,25 +310,25 @@ if(document.querySelector('.hero-section')){
       });
 
       function animateScroll(start, end, duration) {
-          let startTime = null;
+        let startTime = null;
   
-          function animation(currentTime) {
-              if (!startTime) startTime = currentTime;
-              const timeElapsed = currentTime - startTime;
-              const run = easeInOutQuad(timeElapsed, start, end - start, duration);
-  
-              sliderWrapper.scrollLeft = run;
-              if (timeElapsed < duration) requestAnimationFrame(animation);
-          }
-  
-          function easeInOutQuad(t, b, c, d) {
-              t /= d / 2;
-              if (t < 1) return c / 2 * t * t + b;
-              t--;
-              return -c / 2 * (t * (t - 2) - 1) + b;
-          }
-  
-          requestAnimationFrame(animation);
+        function animation(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = easeInOutQuad(timeElapsed, start, end - start, duration);
+
+          sliderWrapper.scrollLeft = run;
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
       }
   
       animateScroll(sliderWrapper.scrollLeft, scrollPosition, 900);
@@ -366,32 +366,32 @@ if(document.querySelector('.hero-section')){
     }
 
     function startDrag(e) {
-        isDragging = true;
-        startX = e.clientX;
-        scrollStart = sliderWrapper.scrollLeft;
+      isDragging = true;
+      startX = e.clientX;
+      scrollStart = sliderWrapper.scrollLeft;
     }
 
     function duringDrag(e) {
-        if (!isDragging) return;
-        const currentX = e.clientX;
-        const dragDistance = currentX - startX;
-        sliderWrapper.scrollLeft = scrollStart - dragDistance;
+      if (!isDragging) return;
+      const currentX = e.clientX;
+      const dragDistance = currentX - startX;
+      sliderWrapper.scrollLeft = scrollStart - dragDistance;
     }
 
     function endDrag() {
-        if (!isDragging) return;
-        isDragging = false;
-        const scrollLeft = sliderWrapper.scrollLeft;
+      if (!isDragging) return;
+      isDragging = false;
+      const scrollLeft = sliderWrapper.scrollLeft;
 
-        if (Math.abs(scrollLeft - currentIndex * slideWidth) > slideWidth / 4) { // Snap to nearest slide after drag
-            if (scrollLeft > currentIndex * slideWidth) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        } else {
-            updateSlides();
-        }
+      if (Math.abs(scrollLeft - currentIndex * slideWidth) > slideWidth / 4) { // Snap to nearest slide after drag
+          if (scrollLeft > currentIndex * slideWidth) {
+              nextSlide();
+          } else {
+              prevSlide();
+          }
+      } else {
+          updateSlides();
+      }
     }
 
     prevBtn.addEventListener('click', prevSlide);
@@ -885,108 +885,85 @@ if (document.querySelector(".offers-section")){
  ############################
 */
 if(document.querySelector(".month-deal-section")){
-  let monthDealSliders = document.querySelectorAll(".month-deal-section .product-card .image img");
-  let monthDealCurrentSlide = 1;
-  let monthDealPrevBtn = document.querySelector(".month-deal-section .product-card .left-block .arrows .arrow-left");
-  let monthDealNextBtn = document.querySelector(".month-deal-section .product-card .left-block .arrows .arrow-right");
-  let paginationIndicators = document.createElement("ul");
-  
-  for(let i=1; i<=monthDealSliders.length; i++){
-      let paginationIndicator = document.createElement('li');
-          paginationIndicator.setAttribute('data-index', i);
-      paginationIndicators.appendChild(paginationIndicator);
-  }
-  
-  document.querySelector(".month-deal-section .product-card .left-block .indicators").appendChild(paginationIndicators);
-  
-  let monthDealPaginationDots = document.querySelectorAll(".month-deal-section .product-card .left-block .indicators ul li");
-  
-  function monthDealPrevSlide(){
-    if(monthDealPrevBtn.classList.contains('disabled')){
-  
-       return false;
-  
-    } else {
-      monthDealCurrentSlide--;
-      monthDealSliderChecker();
-    }
-  }
-  
-  function monthDealNextSlide(){
-    if(monthDealNextBtn.classList.contains('disabled')){
-  
-       return false;
-  
-    } else {
-      monthDealCurrentSlide++;
-      monthDealSliderChecker();
-    }
-  }
-  
-  monthDealPrevBtn.onclick = monthDealPrevSlide;
-  monthDealNextBtn.onclick = monthDealNextSlide;
-  
-  function monthDealSliderChecker(){
-  
-    monthDealSliders.forEach((slider) => {
-      slider.classList.remove('active');
+  let monthDealProductCards = document.querySelectorAll(".month-deal-section .product-card");
+
+  monthDealProductCards.forEach((card) => {
+    let images = card.querySelectorAll(".image img");
+    let currentSlide = 1;
+    let prevBtn = card.querySelector(".arrow-left");
+    let nextBtn = card.querySelector(".arrow-right");
+    let indicatorsContainer = card.querySelector(".indicators");
+    let indicatorsMenu = document.createElement("ul");
+
+    images.forEach((_, i) => {
+      let indicator = document.createElement("li");
+      indicator.setAttribute("data-index", i + 1);
+      indicatorsMenu.appendChild(indicator);
     });
-  
-    monthDealPaginationDots.forEach((dot) => {
-      dot.classList.remove('active');
+
+    indicatorsContainer.appendChild(indicatorsMenu);
+    let indicators = indicatorsMenu.querySelectorAll("li");
+
+    function updateSlider() {
+      images.forEach(img => img.classList.remove("active"));
+      indicators.forEach(dot => dot.classList.remove("active"));
+
+      images[currentSlide - 1].classList.add("active");
+      indicators[currentSlide - 1].classList.add("active");
+
+      prevBtn.classList.toggle("disabled", currentSlide === 1);
+      nextBtn.classList.toggle("disabled", currentSlide === images.length);
+    }
+
+    prevBtn.onclick = () => {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateSlider();
+      }
+    };
+
+    nextBtn.onclick = () => {
+      if (currentSlide < images.length) {
+        currentSlide++;
+        updateSlider();
+      }
+    };
+
+    indicators.forEach(dot => {
+      dot.onclick = () => {
+        currentSlide = parseInt(dot.getAttribute("data-index"));
+        updateSlider();
+      };
     });
-  
-    monthDealSliders[monthDealCurrentSlide - 1].classList.add("active");
-    monthDealPaginationDots[monthDealCurrentSlide - 1].classList.add("active");
-  
-    if(monthDealCurrentSlide == 1) {
-       monthDealPrevBtn.classList.add("disabled");
-    } else {
-      monthDealPrevBtn.classList.remove("disabled");
-    }
-  
-    if(monthDealCurrentSlide == monthDealSliders.length) {
-       monthDealNextBtn.classList.add("disabled");
-    } else {
-      monthDealNextBtn.classList.remove("disabled");
-    }
-  
-  }
-  
-  monthDealSliderChecker();
-  
-  monthDealPaginationDots.forEach((dot) => {
-    dot.onclick = function (){
-      monthDealCurrentSlide = parseInt(this.getAttribute('data-index'));
-      monthDealSliderChecker();
-    }
+
+    updateSlider(); // Initialize
   });
 
   function initMonthDealSlider() {
 
     const sliderWrapper = document.querySelector('.month-deal-section .slider-wrapper');
-    const slideItem = document.querySelectorAll('.month-deal-section .slider-wrapper .product-card');
+    const slides = document.querySelectorAll('.month-deal-section .slider-wrapper .product-card');
     const prevBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .prev-btn');
     const nextBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .next-btn');
-    const dots = document.querySelectorAll('.month-deal-section .indicators .dot');
+    const dots = document.querySelectorAll('.month-deal-section .slider-wrapper-indicators .dot');
     let currentSlide = 0;
 
     function showSlide(index) {
-      slideItem.forEach(slide => {slide.classList.remove('active');});
+      slides.forEach(slide => {slide.classList.remove('active');});
 
       dots.forEach(dot => {dot.classList.remove('active');});
 
-      slideItem[index].classList.add('active');
+      slides[index].classList.add('active');
       dots[index].classList.add('active');
     }
 
     function prevSlide() {
-      currentSlide = (currentSlide - 1 + slideItem.length) % slideItem.length;
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
       showSlide(currentSlide);
     }
 
     function nextSlide() {
-      currentSlide = (currentSlide + 1) % slideItem.length;
+      currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
     }
 
@@ -1000,7 +977,7 @@ if(document.querySelector(".month-deal-section")){
       });
     });
 
-    let sliderInterval = setInterval(nextSlide, 5000);
+    let sliderInterval = setInterval(nextSlide, 6000);
 
     // Pause auto-slide on hover
     sliderWrapper.addEventListener('mouseenter', () => {
@@ -1010,6 +987,8 @@ if(document.querySelector(".month-deal-section")){
     sliderWrapper.addEventListener('mouseleave', () => {
       sliderInterval = setInterval(nextSlide, 5000);
     });
+
+    showSlide(currentSlide);
   }
 
   initMonthDealSlider();

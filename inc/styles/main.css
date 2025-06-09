@@ -3526,18 +3526,41 @@ header.header-scroll {
   position: relative;
   /* <--> */
 }
-.month-deal-section .product-card {
+.month-deal-section .slider-wrapper {
+  position: relative;
+  min-height: 34rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+.month-deal-section .slider-wrapper .product-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+.month-deal-section .slider-wrapper .product-card.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.month-deal-section .slider-wrapper .product-card .product-card-holder {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  padding: 8rem 3rem 3rem;
+  padding: 5rem 3rem 3rem;
   border-radius: 0.6rem;
-  box-shadow: var(--box-shadow6);
+  box-shadow: var(--box-shadow7);
 }
-.month-deal-section .product-card .left-block {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block {
   position: relative;
 }
-.month-deal-section .product-card .left-block .arrows {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows {
   width: 91%;
   position: absolute;
   top: 45%;
@@ -3548,8 +3571,8 @@ header.header-scroll {
   justify-content: space-between;
   align-items: center;
 }
-.month-deal-section .product-card .left-block .arrows .arrow-left,
-.month-deal-section .product-card .left-block .arrows .arrow-right {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-left,
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-right {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3562,29 +3585,29 @@ header.header-scroll {
   background: var(--black);
   cursor: pointer;
 }
-.month-deal-section .product-card .left-block .arrows .arrow-left.disabled,
-.month-deal-section .product-card .left-block .arrows .arrow-right.disabled {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-left.disabled,
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-right.disabled {
   background-color: var(--gray4);
   cursor: no-drop;
 }
-.month-deal-section .product-card .left-block .image {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image {
   width: 80%;
 }
-.month-deal-section .product-card .left-block .image img {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image img {
   width: 20rem;
   height: 20rem;
   object-fit: contain;
   display: none;
 }
-.month-deal-section .product-card .left-block .image img.active {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image img.active {
   display: block;
 }
-.month-deal-section .product-card .left-block .indicators {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators {
   width: fit-content;
   margin: 2rem auto 0;
   padding: 0.1rem;
 }
-.month-deal-section .product-card .left-block .indicators ul {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators ul {
   margin: 0;
   width: fit-content;
   display: flex;
@@ -3595,7 +3618,7 @@ header.header-scroll {
   padding: 0 !important;
   gap: 1rem;
 }
-.month-deal-section .product-card .left-block .indicators ul li {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators ul li {
   display: inline-block;
   font-weight: bold;
   width: 0.8rem;
@@ -3605,39 +3628,39 @@ header.header-scroll {
   cursor: pointer;
   background-color: var(--black);
 }
-.month-deal-section .product-card .left-block .indicators ul li.active {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators ul li.active {
   background-color: var(--red8);
 }
-.month-deal-section .product-card .right-block .content span {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content span {
   color: var(--orange-red1);
   font-weight: bold;
 }
-.month-deal-section .product-card .right-block .content h3 {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content h3 {
   margin-bottom: 1rem;
   color: var(--gray11);
 }
-.month-deal-section .product-card .right-block .content p {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content p {
   font-size: 1rem;
   font-weight: bold;
 }
-.month-deal-section .product-card .right-block .content ul {
-  margin-top: 2rem;
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content ul {
+  margin-top: 1rem;
   padding-left: 0;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
-.month-deal-section .product-card .right-block .content ul li {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content ul li {
   font-size: 1rem;
   font-weight: bold;
 }
-.month-deal-section .product-card .right-block .content .content-footer {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer {
   width: 100%;
   gap: 1.1rem;
 }
-.month-deal-section .product-card .right-block .content .content-footer .btn {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .btn {
   border-radius: 0.2rem;
   border: 1px solid var(--black);
 }
-.month-deal-section .product-card .right-block .content .content-footer .favourite-icon {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-icon {
   width: 3.1rem;
   height: 3.05rem;
   border-radius: 0.2rem;
@@ -3645,15 +3668,15 @@ header.header-scroll {
   border: 1px solid var(--black);
   color: var(--white);
 }
-.month-deal-section .product-card .right-block .content .content-footer .favourite-icon svg {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-icon svg {
   font-size: 1.4rem;
 }
-.month-deal-section .product-card .right-block .content .content-footer .favourite-icon:hover {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-icon:hover {
   background-color: transparent !important;
   color: var(--black);
 }
 .month-deal-section .slider-wrapper-arrows {
-  width: 106%;
+  width: 95%;
   position: absolute;
   top: 45%;
   right: 50%;
@@ -3662,12 +3685,10 @@ header.header-scroll {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  visibility: visible;
-  opacity: 1;
   transition: all 0.4s linear;
 }
-.month-deal-section .slider-wrapper-arrows .arrow-left,
-.month-deal-section .slider-wrapper-arrows .arrow-right {
+.month-deal-section .slider-wrapper-arrows .prev-btn,
+.month-deal-section .slider-wrapper-arrows .next-btn {
   width: 2rem;
   height: 5rem;
   padding: 0;
@@ -3680,6 +3701,21 @@ header.header-scroll {
   color: var(--white);
   background: var(--black);
   cursor: pointer;
+}
+.month-deal-section .slider-wrapper-indicators {
+  width: fit-content;
+  margin: 1rem auto;
+  gap: 0.9rem;
+}
+.month-deal-section .slider-wrapper-indicators .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--olive19);
+  cursor: pointer;
+}
+.month-deal-section .slider-wrapper-indicators .dot.active {
+  background-color: var(--olive14);
 }
 @media (max-width: 768px) {
   .month-deal-section .product-card {
