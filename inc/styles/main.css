@@ -3639,7 +3639,9 @@ header.header-scroll {
   background-color: var(--grayblue2);
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content span {
-  color: var(--orange-red1);
+  background: linear-gradient(to right, red, var(--olive14), blue);
+  -webkit-background-clip: text;
+  color: transparent;
   font-weight: bold;
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content h3 {

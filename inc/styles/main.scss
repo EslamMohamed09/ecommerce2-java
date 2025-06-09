@@ -3282,7 +3282,9 @@ header {position:fixed;
         .right-block {
           .content {
 
-            span {color:var(--orange-red1);
+            span {background:linear-gradient(to right, red, var(--olive14), blue);
+                  -webkit-background-clip:text;
+                  color:transparent;
                   font-weight:bold;}
 
             h3 {margin-bottom:1rem;
