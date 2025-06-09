@@ -885,67 +885,20 @@ if (document.querySelector(".offers-section")){
  ############################
 */
 if(document.querySelector(".month-deal-section")){
-  let monthDealProductCards = document.querySelectorAll(".month-deal-section .product-card");
 
-  monthDealProductCards.forEach((card) => {
-    let images = card.querySelectorAll(".image img");
-    let prevBtn = card.querySelector(".arrow-left");
-    let nextBtn = card.querySelector(".arrow-right");
-    let indicatorsContainer = card.querySelector(".indicators");
-    let indicatorsMenu = document.createElement("ul");
-    let currentSlide = 1;
+  function flippingAnimatedSlider({
+    sliderWrapperSelector, 
+    slidesSelector, 
+    prevBtnSelector, 
+    nextBtnSelector, 
+    indicatorsContainerSelector
+  }) {
 
-    images.forEach((_, i) => {
-      let indicator = document.createElement("li");
-      indicator.setAttribute("data-index", i + 1);
-      indicatorsMenu.appendChild(indicator);
-    });
-
-    indicatorsContainer.appendChild(indicatorsMenu);
-    let indicators = indicatorsMenu.querySelectorAll("li");
-
-    function updateSlider() {
-      images.forEach(img => img.classList.remove("active"));
-      indicators.forEach(dot => dot.classList.remove("active"));
-
-      images[currentSlide - 1].classList.add("active");
-      indicators[currentSlide - 1].classList.add("active");
-
-      prevBtn.classList.toggle("disabled", currentSlide === 1);
-      nextBtn.classList.toggle("disabled", currentSlide === images.length);
-    }
-
-    prevBtn.onclick = () => {
-      if (currentSlide > 1) {
-        currentSlide--;
-        updateSlider();
-      }
-    };
-
-    nextBtn.onclick = () => {
-      if (currentSlide < images.length) {
-        currentSlide++;
-        updateSlider();
-      }
-    };
-
-    indicators.forEach(dot => {
-      dot.onclick = () => {
-        currentSlide = parseInt(dot.getAttribute("data-index"));
-        updateSlider();
-      };
-    });
-
-    updateSlider(); // Initialize
-  });
-
-  function initMonthDealSlider() {
-
-    const sliderWrapper = document.querySelector('.month-deal-section .slider-wrapper');
-    const slides = document.querySelectorAll('.month-deal-section .slider-wrapper .product-card');
-    const prevBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .prev-btn');
-    const nextBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .next-btn');
-    const indicatorsContainer = document.querySelector('.month-deal-section .slider-wrapper-indicators');
+    const sliderWrapper = document.querySelector(sliderWrapperSelector);
+    const slides = document.querySelectorAll(slidesSelector);
+    const prevBtn = document.querySelector(prevBtnSelector);
+    const nextBtn = document.querySelector(nextBtnSelector);
+    const indicatorsContainer = document.querySelector(indicatorsContainerSelector);
     let currentSlide = 0;
 
     slides.forEach((_, i) => {
@@ -1009,7 +962,67 @@ if(document.querySelector(".month-deal-section")){
     showSlide(currentSlide);
   }
 
-  initMonthDealSlider();
+  flippingAnimatedSlider({
+    sliderWrapperSelector:'.month-deal-section .slider-wrapper',
+    slidesSelector:'.month-deal-section .slider-wrapper .product-card', 
+    prevBtnSelector:'.month-deal-section .slider-wrapper-arrows .prev-btn', 
+    nextBtnSelector:'.month-deal-section .slider-wrapper-arrows .next-btn',
+    indicatorsContainerSelector:'.month-deal-section .slider-wrapper-indicators',
+  });
+
+  let monthDealProductCards = document.querySelectorAll(".month-deal-section .product-card");
+
+  monthDealProductCards.forEach((card) => {
+    let images = card.querySelectorAll(".image img");
+    let prevBtn = card.querySelector(".arrow-left");
+    let nextBtn = card.querySelector(".arrow-right");
+    let indicatorsContainer = card.querySelector(".indicators");
+    let indicatorsMenu = document.createElement("ul");
+    let currentSlide = 1;
+
+    images.forEach((_, i) => {
+      let indicator = document.createElement("li");
+      indicator.setAttribute("data-index", i + 1);
+      indicatorsMenu.appendChild(indicator);
+    });
+
+    indicatorsContainer.appendChild(indicatorsMenu);
+    let indicators = indicatorsMenu.querySelectorAll("li");
+
+    function updateSlider() {
+      images.forEach(img => img.classList.remove("active"));
+      indicators.forEach(dot => dot.classList.remove("active"));
+
+      images[currentSlide - 1].classList.add("active");
+      indicators[currentSlide - 1].classList.add("active");
+
+      prevBtn.classList.toggle("disabled", currentSlide === 1);
+      nextBtn.classList.toggle("disabled", currentSlide === images.length);
+    }
+
+    prevBtn.onclick = () => {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateSlider();
+      }
+    };
+
+    nextBtn.onclick = () => {
+      if (currentSlide < images.length) {
+        currentSlide++;
+        updateSlider();
+      }
+    };
+
+    indicators.forEach(dot => {
+      dot.onclick = () => {
+        currentSlide = parseInt(dot.getAttribute("data-index"));
+        updateSlider();
+      };
+    });
+
+    updateSlider(); // Initialize
+  });
 
 }
 
