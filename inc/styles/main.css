@@ -3531,6 +3531,7 @@ header.header-scroll {
   min-height: 34rem;
   padding: 1rem;
   overflow: hidden;
+  z-index: 7;
 }
 .month-deal-section .slider-wrapper .product-card {
   position: absolute;
@@ -3560,12 +3561,24 @@ header.header-scroll {
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block {
   position: relative;
 }
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image {
+  width: 50%;
+  height: 15rem;
+}
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display: none;
+}
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image img.active {
+  display: block;
+}
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows {
-  width: 91%;
+  width: 70%;
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 50%;
+  transform: translateY(-50%);
   display: flex !important;
   flex-direction: row;
   justify-content: space-between;
@@ -3579,28 +3592,24 @@ header.header-scroll {
   width: 2.1rem;
   height: 2.1rem;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 50%;
   color: var(--white);
   background: var(--black);
   cursor: pointer;
+  position: absolute;
+  bottom: 35%;
+}
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-left {
+  left: -3rem;
+}
+.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-right {
+  right: -3rem;
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-left.disabled,
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .arrows .arrow-right.disabled {
-  background-color: var(--gray4);
+  background-color: var(--gray5);
   cursor: no-drop;
-}
-.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image {
-  width: 80%;
-}
-.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image img {
-  width: 20rem;
-  height: 20rem;
-  object-fit: contain;
-  display: none;
-}
-.month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .image img.active {
-  display: block;
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators {
   width: fit-content;
@@ -3616,20 +3625,18 @@ header.header-scroll {
   align-items: center;
   text-align: center;
   padding: 0 !important;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators ul li {
   display: inline-block;
-  font-weight: bold;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
+  width: 1.4rem;
+  height: 3px;
   line-height: 1.9;
   cursor: pointer;
-  background-color: var(--black);
+  background-color: var(--grayblue9);
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .left-block .indicators ul li.active {
-  background-color: var(--red8);
+  background-color: var(--grayblue2);
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content span {
   color: var(--orange-red1);
@@ -3686,34 +3693,34 @@ header.header-scroll {
   justify-content: space-between;
   align-items: center;
   transition: all 0.4s linear;
+  z-index: 1;
 }
 .month-deal-section .slider-wrapper-arrows .prev-btn,
 .month-deal-section .slider-wrapper-arrows .next-btn {
   width: 2rem;
-  height: 5rem;
-  padding: 0;
-  font-size: 1.2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0;
   color: var(--white);
-  background: var(--olive20);
-  border: 1px solid var(--olive20);
+  background: var(--black);
+  border: 1px solid var(--black);
   cursor: pointer;
 }
 .month-deal-section .slider-wrapper-indicators {
   width: fit-content;
   margin: 1rem auto;
-  gap: 0.9rem;
+  gap: 0.8rem;
 }
 .month-deal-section .slider-wrapper-indicators .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--olive19);
+  width: 1.4rem;
+  height: 3px;
   cursor: pointer;
+  background-color: var(--olive19);
 }
 .month-deal-section .slider-wrapper-indicators .dot.active {
   background-color: var(--olive14);

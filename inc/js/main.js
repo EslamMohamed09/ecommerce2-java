@@ -889,11 +889,11 @@ if(document.querySelector(".month-deal-section")){
 
   monthDealProductCards.forEach((card) => {
     let images = card.querySelectorAll(".image img");
-    let currentSlide = 1;
     let prevBtn = card.querySelector(".arrow-left");
     let nextBtn = card.querySelector(".arrow-right");
     let indicatorsContainer = card.querySelector(".indicators");
     let indicatorsMenu = document.createElement("ul");
+    let currentSlide = 1;
 
     images.forEach((_, i) => {
       let indicator = document.createElement("li");
@@ -945,12 +945,19 @@ if(document.querySelector(".month-deal-section")){
     const slides = document.querySelectorAll('.month-deal-section .slider-wrapper .product-card');
     const prevBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .prev-btn');
     const nextBtn = document.querySelector('.month-deal-section .slider-wrapper-arrows .next-btn');
-    const dots = document.querySelectorAll('.month-deal-section .slider-wrapper-indicators .dot');
+    const indicatorsContainer = document.querySelector('.month-deal-section .slider-wrapper-indicators');
     let currentSlide = 0;
+
+    slides.forEach((_, i) => {
+      let indicator = document.createElement('span');
+          indicator.classList.add('dot');
+          indicatorsContainer.appendChild(indicator);
+    });
+
+    const dots = indicatorsContainer.querySelectorAll("span");
 
     function showSlide(index) {
       slides.forEach(slide => {slide.classList.remove('active');});
-
       dots.forEach(dot => {dot.classList.remove('active');});
 
       slides[index].classList.add('active');
@@ -979,8 +986,19 @@ if(document.querySelector(".month-deal-section")){
 
     let sliderInterval = setInterval(nextSlide, 6000);
 
-    // Pause auto-slide on hover
+    slides.forEach((slide) => {
+      slide.classList.remove('active');
+    });
+
     sliderWrapper.addEventListener('mouseenter', () => {
+      clearInterval(sliderInterval);
+    });
+
+    prevBtn.addEventListener('mouseenter', () => {
+      clearInterval(sliderInterval);
+    });
+
+    nextBtn.addEventListener('mouseenter', () => {
       clearInterval(sliderInterval);
     });
 
