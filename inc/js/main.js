@@ -166,7 +166,7 @@ if(header){
       if(/^\d{3,}$/.test(number)){
 
         if (window.innerWidth < 690) {
-            span.parentElement.style.padding = '5px 1px 4px 1px';
+            span.parentElement.style.padding = '5px 2px 4px 2px';
         } else {
           span.parentElement.style.padding = '6px 2px 5.5px';
         }
@@ -174,7 +174,7 @@ if(header){
       } else if(/^\d{2}$/.test(number)) {
   
         if (window.innerWidth < 690) {
-            span.parentElement.style.padding = '4px 2.5px 3px 2.5px';
+            span.parentElement.style.padding = '4px 2.7px 3px 2.7px';
         } else {
           span.parentElement.style.padding = '5px 3.5px';
         }
@@ -182,7 +182,7 @@ if(header){
       } else {
   
         if (window.innerWidth < 690) {
-            span.parentElement.style.padding = '3px 3px 2px';
+            span.parentElement.style.padding = '3px 4px 2px';
         } else {
           span.parentElement.style.padding = '5px';
         }

@@ -1401,7 +1401,7 @@ header {position:fixed;
 
         .search-btn {min-width:3rem;
                      height:100% !important;
-                     padding:0.8rem 0;
+                     padding:0;
                      display:flex !important;
                      justify-content:center !important;
                      align-items:center !important;
@@ -1420,13 +1420,19 @@ header {position:fixed;
       .buttons {width:fit-content;
                 gap:2.8rem;
                 
-        .service-button {gap:0.1rem;
+        .service-button {display:flex;
+                         justify-content:center;
+                         align-items:center;
+                         gap:0.1rem;
                          position:relative;
 
               svg,i {color:var(--white);
                      font-size:1.3rem;}
 
-              .value {width:fit-content;
+              .value {position:absolute;
+                      top:-0.5rem;
+                      right:-0.8rem;
+                      width:fit-content;
                       height:fit-content;
                       padding:5px;
                       margin-bottom:1rem;
@@ -1436,9 +1442,6 @@ header {position:fixed;
                       align-items:center;
                       color:yellow;
                       background-color:var(--olive15);
-                      position:absolute;
-                      top:-0.5rem;
-                      right:-0.8rem;
 
                   span {width:fit-content;
                         height:fit-content;
@@ -1660,7 +1663,11 @@ header {position:fixed;
                 
               .search-form {width:55% !important;}
 
-              .buttons {gap:1.5rem;}
+              .buttons {gap:1.5rem;
+                .service-button {
+                  .value {top:-0.7rem;}
+                }
+              }
         }
 
         .bottom-bar {padding:0.4rem 2rem 0.4rem 1rem;
@@ -1668,10 +1675,17 @@ header {position:fixed;
 
           .selects {display:flex;}
 
-          nav ul {flex-direction:column;
+          nav {margin-top:1.5rem;
+              ul {flex-direction:column;
                   align-items:flex-start;
+                  gap:0.8rem;
 
-            li {width:100%;}
+              li {width:100%;
+                  background:var(--olive13);
+
+                  a {color:var(--olive2);}
+              }
+            }
           }
         }
     }

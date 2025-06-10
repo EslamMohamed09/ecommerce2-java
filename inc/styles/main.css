@@ -1581,7 +1581,7 @@ header .main-header .middle-bar .search-form input[type=search] {
 header .main-header .middle-bar .search-form .search-btn {
   min-width: 3rem;
   height: 100% !important;
-  padding: 0.8rem 0;
+  padding: 0;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -1601,6 +1601,9 @@ header .main-header .middle-bar .buttons {
   gap: 2.8rem;
 }
 header .main-header .middle-bar .buttons .service-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.1rem;
   position: relative;
 }
@@ -1609,6 +1612,9 @@ header .main-header .middle-bar .buttons .service-button svg, header .main-heade
   font-size: 1.3rem;
 }
 header .main-header .middle-bar .buttons .service-button .value {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.8rem;
   width: fit-content;
   height: fit-content;
   padding: 5px;
@@ -1619,9 +1625,6 @@ header .main-header .middle-bar .buttons .service-button .value {
   align-items: center;
   color: yellow;
   background-color: var(--olive15);
-  position: absolute;
-  top: -0.5rem;
-  right: -0.8rem;
 }
 header .main-header .middle-bar .buttons .service-button .value span {
   width: fit-content;
@@ -1863,6 +1866,9 @@ header.header-scroll {
   header .main-header .middle-bar .buttons {
     gap: 1.5rem;
   }
+  header .main-header .middle-bar .buttons .service-button .value {
+    top: -0.7rem;
+  }
   header .main-header .bottom-bar {
     padding: 0.4rem 2rem 0.4rem 1rem;
     margin-top: 1rem;
@@ -1870,12 +1876,20 @@ header.header-scroll {
   header .main-header .bottom-bar .selects {
     display: flex;
   }
+  header .main-header .bottom-bar nav {
+    margin-top: 1.5rem;
+  }
   header .main-header .bottom-bar nav ul {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.8rem;
   }
   header .main-header .bottom-bar nav ul li {
     width: 100%;
+    background: var(--olive13);
+  }
+  header .main-header .bottom-bar nav ul li a {
+    color: var(--olive2);
   }
   header.mobile-header .open-btn div:nth-child(1) {
     transform: rotate(45deg) translate(4.15px, 4.15px);
