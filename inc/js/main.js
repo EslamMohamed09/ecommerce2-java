@@ -880,6 +880,43 @@ if (document.querySelector(".offers-section")){
 }
 
 /* 
+ ###########################
+ #### FEATURED PRODUCTS ####
+ ###########################
+*/
+function flippingItems({itemsContainerSelector, prevBtnSelector, nextBtnSelector}){
+  const itemsContainer = document.querySelector(itemsContainerSelector);
+  const items = itemsContainer.children;
+  const prevBtn = document.querySelector(prevBtnSelector);
+  const nextBtn = document.querySelector(nextBtnSelector);
+  let currentIndex = 0;
+
+  function showItem(index){
+    Array.from(items).forEach((item) => {item.classList.remove('active');});
+    items[index].classList.add('active');
+  }
+
+  function prevItem(){
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showItem(currentIndex);
+  }
+
+  function nextItem(){
+    currentIndex = (currentIndex + 1) % items.length;
+    showItem(currentIndex);
+  }
+
+  prevBtn.addEventListener('click', prevItem);
+  nextBtn.addEventListener('click', nextItem);
+
+  showItem(currentIndex);
+}
+
+flippingItems({itemsContainerSelector:'.feature-products-section .section-container', 
+               prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
+               nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
+
+/* 
  ############################
  #### MONTH DEAL SECTION ####
  ############################
@@ -887,12 +924,12 @@ if (document.querySelector(".offers-section")){
 if(document.querySelector(".month-deal-section")){
 
   function flippingAnimatedSlider({
-    sliderWrapperSelector, 
-    slidesSelector, 
-    prevBtnSelector, 
-    nextBtnSelector, 
-    indicatorsContainerSelector
-  }) {
+      sliderWrapperSelector, 
+      slidesSelector, 
+      prevBtnSelector, 
+      nextBtnSelector, 
+      indicatorsContainerSelector
+    }) {
 
     const sliderWrapper = document.querySelector(sliderWrapperSelector);
     const slides = document.querySelectorAll(slidesSelector);
@@ -901,7 +938,7 @@ if(document.querySelector(".month-deal-section")){
     const indicatorsContainer = document.querySelector(indicatorsContainerSelector);
     let currentSlide = 0;
 
-    slides.forEach((_, i) => {
+    slides.forEach((_, i) => { // build dots
       let indicator = document.createElement('span');
           indicator.classList.add('dot');
           indicatorsContainer.appendChild(indicator);
@@ -938,10 +975,6 @@ if(document.querySelector(".month-deal-section")){
     });
 
     let sliderInterval = setInterval(nextSlide, 6000);
-
-    slides.forEach((slide) => {
-      slide.classList.remove('active');
-    });
 
     sliderWrapper.addEventListener('mouseover', () => {
       clearInterval(sliderInterval);
@@ -980,7 +1013,7 @@ if(document.querySelector(".month-deal-section")){
     let indicatorsMenu = document.createElement("ul");
     let currentSlide = 1;
 
-    images.forEach((_, i) => {
+    images.forEach((_, i) => { // build dots
       let indicator = document.createElement("li");
       indicator.setAttribute("data-index", i + 1);
       indicatorsMenu.appendChild(indicator);
