@@ -3,7 +3,7 @@ const headerContent = `
     <div class="left-block d-flex-r-st-c">
 
       <div class="logo-holder">
-        <a href="#" class="logo-brand"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
+        <a href="#" class="logo-title"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
       </div>
 
       <div class="selects">
@@ -59,7 +59,7 @@ const headerContent = `
     <div class="middle-bar d-flex-r-bt-c">
 
       <div class="logo-holder">
-        <a href="#" class="logo-brand"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
+        <a href="#" class="logo-title"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
       </div>
 
       <form class="search-form d-flex-r-bt-c">
@@ -81,7 +81,7 @@ const headerContent = `
         <button class="search-btn"><i class="fas fa-search"></i></button>
       </form>
 
-      <div class="buttons d-flex-r-st-c">
+      <div class="services-buttons d-flex-r-st-c">
         <a href="/pages/favourite.html" class="service-button like-icon d-flex-r-c-c">
           <i class="far fa-heart"></i>
           <div class="value"><span>84</span></div>

@@ -1343,7 +1343,7 @@ header .top-bar .left-block .logo-holder {
   padding: 0;
   display: none;
 }
-header .top-bar .left-block .logo-holder .logo-brand {
+header .top-bar .left-block .logo-holder .logo-title {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1351,7 +1351,7 @@ header .top-bar .left-block .logo-holder .logo-brand {
   color: var(--olive13);
   text-transform: uppercase;
 }
-header .top-bar .left-block .logo-holder .logo-brand img {
+header .top-bar .left-block .logo-holder .logo-title img {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1491,7 +1491,7 @@ header .main-header .middle-bar .logo-holder {
   align-items: center;
   padding: 0;
 }
-header .main-header .middle-bar .logo-holder .logo-brand {
+header .main-header .middle-bar .logo-holder .logo-title {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1500,7 +1500,7 @@ header .main-header .middle-bar .logo-holder .logo-brand {
   color: var(--olive13);
   text-transform: uppercase;
 }
-header .main-header .middle-bar .logo-holder .logo-brand img {
+header .main-header .middle-bar .logo-holder .logo-title img {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1596,22 +1596,22 @@ header .main-header .middle-bar .search-form .search-btn svg, header .main-heade
   color: var(--olive14);
   font-size: 1.1rem;
 }
-header .main-header .middle-bar .buttons {
+header .main-header .middle-bar .services-buttons {
   width: fit-content;
-  gap: 2.8rem;
+  gap: 2.2rem;
 }
-header .main-header .middle-bar .buttons .service-button {
+header .main-header .middle-bar .services-buttons .service-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.1rem;
   position: relative;
 }
-header .main-header .middle-bar .buttons .service-button svg, header .main-header .middle-bar .buttons .service-button i {
+header .main-header .middle-bar .services-buttons .service-button svg, header .main-header .middle-bar .services-buttons .service-button i {
   color: var(--white);
   font-size: 1.3rem;
 }
-header .main-header .middle-bar .buttons .service-button .value {
+header .main-header .middle-bar .services-buttons .service-button .value {
   position: absolute;
   top: -0.5rem;
   right: -0.8rem;
@@ -1626,7 +1626,7 @@ header .main-header .middle-bar .buttons .service-button .value {
   color: yellow;
   background-color: var(--olive15);
 }
-header .main-header .middle-bar .buttons .service-button .value span {
+header .main-header .middle-bar .services-buttons .service-button .value span {
   width: fit-content;
   height: fit-content;
   padding: 0;
@@ -1863,10 +1863,10 @@ header.header-scroll {
   header .main-header .middle-bar .search-form {
     width: 55% !important;
   }
-  header .main-header .middle-bar .buttons {
+  header .main-header .middle-bar .services-buttons {
     gap: 1.5rem;
   }
-  header .main-header .middle-bar .buttons .service-button .value {
+  header .main-header .middle-bar .services-buttons .service-button .value {
     top: -0.7rem;
   }
   header .main-header .bottom-bar {
@@ -1914,7 +1914,7 @@ header.header-scroll {
   header.mobile-header .middle-bar {
     gap: 1.5rem;
   }
-  header.mobile-header .middle-bar .web-title {
+  header.mobile-header .middle-bar .logo-title {
     font-size: 1.5rem;
   }
   header.mobile-header .bottom-bar {
@@ -1944,7 +1944,7 @@ header.header-scroll {
   header .main-header .middle-bar .search-form .search-btn {
     width: 13%;
   }
-  header .main-header .middle-bar .buttons {
+  header .main-header .middle-bar .services-buttons {
     gap: 1.9rem;
   }
   header .main-header nav ul li a {
@@ -1957,7 +1957,7 @@ header.header-scroll {
     padding: 0 5% 4rem 3%;
     margin-top: 2rem;
   }
-  header .main-header .middle-bar .web-title {
+  header .main-header .middle-bar .logo-title {
     font-size: 2rem !important;
   }
   header .main-header .middle-bar .search-form {
@@ -1965,14 +1965,14 @@ header.header-scroll {
     bottom: -1rem;
     width: 95% !important;
   }
-  header .main-header .middle-bar .buttons {
+  header .main-header .middle-bar .services-buttons {
     gap: 2.8rem;
   }
-  header .main-header .middle-bar .buttons .service-button svg {
+  header .main-header .middle-bar .services-buttons .service-button svg {
     color: var(--white);
     font-size: 1.7rem;
   }
-  header .main-header .middle-bar .buttons .service-button .value {
+  header .main-header .middle-bar .services-buttons .service-button .value {
     padding: 3px;
   }
   header .main-header .bottom-bar {
@@ -1994,14 +1994,11 @@ header.header-scroll {
   }
 }
 @media (max-width: 340px) {
-  header .top-bar .left-block #currency-select select {
-    width: 5rem;
-  }
   header .top-bar .right-block ul li a,
   header .top-bar .right-block ul button {
     font-size: 1.2rem;
   }
-  header .main-header .middle-bar .web-title {
+  header .main-header .middle-bar .logo-title {
     font-size: 1.8rem !important;
   }
   header .main-header .middle-bar .search-form {
@@ -2010,14 +2007,14 @@ header.header-scroll {
   header .main-header .middle-bar .search-form .search-btn {
     padding: 0.8rem 1.2rem;
   }
-  header .main-header .middle-bar .buttons {
+  header .main-header .middle-bar .services-buttons {
     gap: 2.4rem;
   }
-  header .main-header .middle-bar .buttons .service-button svg, header .main-header .middle-bar .buttons .service-button i {
+  header .main-header .middle-bar .services-buttons .service-button svg, header .main-header .middle-bar .services-buttons .service-button i {
     color: var(--white);
     font-size: 1.5rem;
   }
-  header .main-header .middle-bar .buttons .service-button .value {
+  header .main-header .middle-bar .services-buttons .service-button .value {
     padding: 3px;
   }
   header .main-header .bottom-bar nav ul li {
@@ -2025,22 +2022,9 @@ header.header-scroll {
   }
 }
 @media (max-width: 316px) {
-  header .top-bar .left-block #currency-select select {
-    width: 6rem;
-    padding: 0;
-  }
-  header .top-bar .left-block #currency-select select option {
-    font-size: 0.8rem;
-    padding: 0;
-  }
   header .top-bar .right-block ul li a,
   header .top-bar .right-block button {
     font-size: 1.1rem !important;
-  }
-}
-@media (max-width: 300px) {
-  header .top-bar .left-block #currency-select select {
-    width: 5rem;
   }
 }
 @media (max-width: 287px) {
@@ -2050,7 +2034,7 @@ header.header-scroll {
   header .top-bar .right-block ul {
     gap: 0.6rem;
   }
-  header .main-header .middle-bar .web-title {
+  header .main-header .middle-bar .logo-title {
     font-size: 1.5rem !important;
   }
   header .main-header .bottom-bar nav ul li a {
@@ -2074,11 +2058,6 @@ header.header-scroll {
   }
   header .top-bar .right-block ul li a, header .top-bar .right-block button {
     font-size: 1rem !important;
-  }
-}
-@media (max-width: 224px) {
-  header .top-bar .left-block #currency-select select {
-    width: 3rem;
   }
 }
 

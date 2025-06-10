@@ -1179,7 +1179,7 @@ header {position:fixed;
                     padding:0;
                     display:none;
 
-              .logo-brand {width:100%;
+              .logo-title {width:100%;
                            height:100%;
                            padding:0;
                            margin:0;
@@ -1318,7 +1318,7 @@ header {position:fixed;
                     align-items:center;
                     padding:0;
 
-              .logo-brand {width:100%;
+              .logo-title {width:100%;
                            height:100%;
                            padding:0;
                            margin:0;
@@ -1417,8 +1417,8 @@ header {position:fixed;
         }
       }
 
-      .buttons {width:fit-content;
-                gap:2.8rem;
+      .services-buttons {width:fit-content;
+                         gap:2.2rem;
                 
         .service-button {display:flex;
                          justify-content:center;
@@ -1663,7 +1663,7 @@ header {position:fixed;
                 
               .search-form {width:55% !important;}
 
-              .buttons {gap:1.5rem;
+              .services-buttons {gap:1.5rem;
                 .service-button {
                   .value {top:-0.7rem;}
                 }
@@ -1712,7 +1712,7 @@ header {position:fixed;
     &.mobile-header {
 
       .middle-bar {gap:1.5rem;
-        .web-title {font-size:1.5rem;}
+        .logo-title {font-size:1.5rem;}
       }
 
       .bottom-bar {margin-top:1rem;
@@ -1741,7 +1741,7 @@ header {position:fixed;
           .search-btn {width:13%;}
         }
 
-        .buttons {gap:1.9rem;}
+        .services-buttons {gap:1.9rem;}
       }
 
       nav ul li a {font-size:1.5rem !important;}
@@ -1755,13 +1755,13 @@ header {position:fixed;
                    padding:0 5% 4rem 3%;
                    margin-top:2rem;
 
-        .web-title {font-size:2rem !important;}
+        .logo-title {font-size:2rem !important;}
   
         .search-form {position:absolute;
                       bottom:-1rem;
                       width:95% !important;}
   
-        .buttons {gap:2.8rem;
+        .services-buttons {gap:2.8rem;
           .service-button {
 
             svg {color:var(--white);
@@ -1792,10 +1792,6 @@ header {position:fixed;
 
   @media(max-width:340px) {
     .top-bar {
-      .left-block {
-        #currency-select select {width:5rem;} 
-      }
-
       .right-block ul {
         li a,
         button {font-size:1.2rem;}
@@ -1806,13 +1802,13 @@ header {position:fixed;
 
       .middle-bar {
 
-        .web-title {font-size:1.8rem !important;}
+        .logo-title {font-size:1.8rem !important;}
   
         .search-form {width:94%;
             .search-btn {padding:0.8rem 1.2rem;}
         }
   
-        .buttons {gap:2.4rem;
+        .services-buttons {gap:2.4rem;
           .service-button {
 
             svg,i {color:var(--white);
@@ -1834,25 +1830,9 @@ header {position:fixed;
 
   @media (max-width:316px){
     .top-bar {
-      .left-block #currency-select {
-          select {width:6rem;
-                  padding:0;
-            option {font-size:0.8rem;
-                    padding:0;}
-        }
-      }
-
       .right-block { 
         ul li a,
         button {font-size:1.1rem !important;}
-      }
-    }
-  }
-
-  @media (max-width:300px){
-    .top-bar {
-      .left-block #currency-select {
-          select {width:5rem;}
       }
     }
   }
@@ -1864,7 +1844,7 @@ header {position:fixed;
     .main-header {
 
       .middle-bar {
-        .web-title {font-size:1.5rem !important;}
+        .logo-title {font-size:1.5rem !important;}
       }
 
       .bottom-bar {
@@ -1893,9 +1873,6 @@ header {position:fixed;
       }
     }
   }
-
-  @media (max-width:224px){ .top-bar .left-block #currency-select select {width:3rem;} }
-
 }
 
 /*
