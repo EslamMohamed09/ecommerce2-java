@@ -3568,7 +3568,7 @@ header.header-scroll {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  padding: 5rem 3rem 3rem;
+  padding: 4rem 3rem 3rem;
   border-radius: 0.6rem;
   box-shadow: var(--box-shadow7);
 }
@@ -3677,13 +3677,14 @@ header.header-scroll {
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer {
   width: 100%;
+  margin-top: 1rem;
   gap: 1.1rem;
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .btn {
   border-radius: 0.2rem;
   border: 1px solid var(--black);
 }
-.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-icon {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-btn {
   width: 3.1rem;
   height: 3.05rem;
   border-radius: 0.2rem;
@@ -3691,7 +3692,7 @@ header.header-scroll {
   border: 1px solid var(--black);
   color: var(--white);
 }
-.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-icon svg {
+.month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-btn svg, .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-btn i {
   font-size: 1.4rem;
 }
 .month-deal-section .slider-wrapper .product-card .product-card-holder .right-block .content .content-footer .favourite-icon:hover {
@@ -3714,14 +3715,14 @@ header.header-scroll {
 .month-deal-section .slider-wrapper-arrows .prev-btn,
 .month-deal-section .slider-wrapper-arrows .next-btn {
   width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+  height: 5rem;
+  padding: 0;
+  border-radius: 0;
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0;
   color: var(--white);
   background: var(--black);
   border: 1px solid var(--black);
@@ -3741,6 +3742,11 @@ header.header-scroll {
 .month-deal-section .slider-wrapper-indicators .dot.active {
   background-color: var(--olive14);
 }
+@media (max-width: 850px) {
+  .month-deal-section .slider-wrapper {
+    min-height: 36rem !important;
+  }
+}
 @media (max-width: 768px) {
   .month-deal-section .product-card {
     padding: 3rem 5%;
@@ -3752,14 +3758,19 @@ header.header-scroll {
   .month-deal-section .product-card .content-footer {
     margin: 1rem 0 0;
   }
-}
-@media (max-width: 400px) {
-  .month-deal-section .product-card .left-block .image img {
-    width: 13rem;
-    height: 13rem;
+  .month-deal-section .slider-wrapper-arrows {
+    width: 96% !important;
   }
-  .month-deal-section .product-card .left-block .arrows {
-    width: 99%;
+}
+@media (max-width: 620px) {
+  .month-deal-section .slider-wrapper {
+    min-height: 55rem !important;
+  }
+  .month-deal-section .slider-wrapper .product-card .product-card-holder {
+    grid-template-columns: 1fr !important;
+  }
+  .month-deal-section .slider-wrapper-arrows {
+    width: 97% !important;
   }
 }
 @media (max-width: 300px) {
