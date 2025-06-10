@@ -1338,7 +1338,7 @@ header {position:fixed;
                     border-radius:1.5rem;
                     padding:0;
                     border:none;
-                    background:linear-gradient(to right, var(--olive17) 0%, var(--olive17) 9%, var(--olive14) 9%, var(--olive14) 90%, var(--olive17) 90%, var(--olive17) 100%);
+                    background:linear-gradient(to right, var(--olive17) 0%, var(--olive17) 6%, var(--olive14) 6%, var(--olive14) 94%, var(--olive17) 94%, var(--olive17) 100%);
 
         .custom-select-wrapper {position:relative;
                                 height:100% !important;
@@ -1357,7 +1357,10 @@ header {position:fixed;
                           border:none;
                           cursor:pointer;
 
-              .select-trigger {padding:0.4rem 0.8rem 0.4rem 1rem;
+              .select-trigger {padding:0.4rem 0.8rem 0.3rem 1rem;
+                               display:flex;
+                               justify-content:center;
+                               align-items:center;
                                font-size:1rem;
                                border-top-left-radius:1.5rem;
                                border-bottom-left-radius:1.5rem;
@@ -3670,17 +3673,19 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
     }
   }
 
-  .bottom-footer {background-color:var(--olive20);
-                  padding:1.3rem 0.9rem;
+  .bottom-footer {padding:1.3rem 0.9rem;
                   margin-top:5rem;
+                  background-color:var(--olive20);
 
     .visa-cards {gap:1rem;
       img {height:1.5rem;}
     }
 
     p {color:var(--gray4);
-       margin-bottom:0.7rem;
-       font-size:15px;}
+       font-size:15px;
+
+      &:not(:last-child) {margin-bottom:0.7rem;}
+    }
   }
 
   @media(max-width:768px){
