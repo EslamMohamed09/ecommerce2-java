@@ -884,33 +884,49 @@ if (document.querySelector(".offers-section")){
  #### FEATURED PRODUCTS ####
  ###########################
 */
-function flippingItems({itemsContainerSelector, prevBtnSelector, nextBtnSelector}){
+function flippingItems({ itemsContainerSelector, prevBtnSelector, nextBtnSelector }) {
   const itemsContainer = document.querySelector(itemsContainerSelector);
-  const items = itemsContainer.children;
+  const items = Array.from(itemsContainer.children);
   const prevBtn = document.querySelector(prevBtnSelector);
   const nextBtn = document.querySelector(nextBtnSelector);
   let currentIndex = 0;
+  let animating = false;
 
-  function showItem(index){
-    Array.from(items).forEach((item) => {item.classList.remove('active');});
-    items[index].classList.add('active');
+  function showItem(index) {
+    if (animating) return;
+    animating = true;
+
+    const currentItem = items[currentIndex];
+    const nextItem = items[index];
+
+    currentItem.classList.remove('active');
+
+    setTimeout(() => {
+      nextItem.classList.add('active');
+      currentIndex = index;
+
+      setTimeout(() => {
+        animating = false;
+      }, 600);
+    }, 50);
   }
 
-  function prevItem(){
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    showItem(currentIndex);
+  function prevItem() {
+    const newIndex = (currentIndex - 1 + items.length) % items.length;
+    showItem(newIndex);
   }
 
-  function nextItem(){
-    currentIndex = (currentIndex + 1) % items.length;
-    showItem(currentIndex);
+  function nextItem() {
+    const newIndex = (currentIndex + 1) % items.length;
+    showItem(newIndex);
   }
 
   prevBtn.addEventListener('click', prevItem);
   nextBtn.addEventListener('click', nextItem);
 
-  showItem(currentIndex);
+  items[currentIndex].classList.add('active');
 }
+
 
 flippingItems({itemsContainerSelector:'.feature-products-section .section-container', 
                prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
