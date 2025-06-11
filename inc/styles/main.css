@@ -1068,6 +1068,19 @@ img {
 .section-heading a:hover {
   text-decoration: underline !important;
 }
+.section-heading .arrows {
+  width: fit-content;
+  gap: 1rem;
+}
+.section-heading .arrows button {
+  width: 1.8rem;
+  height: 1.5rem;
+  border: none;
+  background: transparent;
+}
+.section-heading .arrows button svg, .section-heading .arrows button i {
+  font-size: 1rem;
+}
 @media (max-width: 768px) {
   .section-heading {
     padding-right: 6rem;
@@ -3319,6 +3332,68 @@ header.header-scroll {
 }
 
 /*
+ ********************
+ # Category Products
+ ********************
+*/
+.category-products-section .left-block {
+  height: 100%;
+  background-color: var(--lightblue);
+  border-radius: 0.2rem;
+  overflow: hidden;
+  padding: 24px;
+}
+.category-products-section .left-block .ad-content {
+  text-align: center;
+}
+.category-products-section .left-block .ad-content .ad-label {
+  display: inline-block;
+  background-color: var(--blue5);
+  padding: 4px 12px;
+  margin-bottom: 16px;
+  color: var(--white);
+  border-radius: 0.2rem;
+  font-size: 12px;
+  font-weight: 500;
+}
+.category-products-section .left-block .ad-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.category-products-section .left-block .ad-content .ad-discount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.category-products-section .left-block .ad-content .ad-discount span:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+.category-products-section .left-block .ad-content .ad-discount .discount-value {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+.category-products-section .left-block .ad-content .ad-discount .discount-value sup {
+  font-size: 20px;
+  vertical-align: super;
+}
+.category-products-section .left-block .ad-content .image {
+  width: 7rem;
+  height: 10rem;
+  margin-top: 16px;
+}
+.category-products-section .left-block .ad-content .image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+/*
  ***************
  # Today Deal
  ***************
@@ -3392,19 +3467,6 @@ header.header-scroll {
 */
 .feature-products-section .section-heading h1::before {
   bottom: -0.62rem;
-}
-.feature-products-section .section-heading .arrows {
-  width: fit-content;
-  gap: 1rem;
-}
-.feature-products-section .section-heading .arrows button {
-  width: 1.8rem;
-  height: 1.5rem;
-  border: none;
-  background: transparent;
-}
-.feature-products-section .section-heading .arrows button svg, .feature-products-section .section-heading .arrows button i {
-  font-size: 1rem;
 }
 .feature-products-section .product-item {
   border-radius: 0.4rem;
