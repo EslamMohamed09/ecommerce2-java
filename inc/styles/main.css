@@ -2,12 +2,15 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
   text-transform: capitalize;
   text-decoration: none !important;
   outline: none !important;
-  transition: all 0.2s linear;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+  transition: all 0.2s linear;
 }
 
 :root {
@@ -688,13 +691,6 @@ section {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: bold;
-  margin: 0;
-  color: var(--gray11);
-  line-height: 1.2;
-}
-
 h1 {
   font-size: 2.1rem;
 }
@@ -713,6 +709,24 @@ h4 {
 
 h5 {
   font-size: 1rem;
+}
+
+@media (max-width: 260px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  margin: 0;
+  color: var(--gray11);
+  line-height: 1.2;
 }
 
 p {
@@ -1038,12 +1052,13 @@ img {
   }
 }
 .section-heading {
-  position: relative;
-  margin-bottom: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 0;
+  position: relative;
 }
 .section-heading::before {
   content: "";
@@ -1079,6 +1094,7 @@ img {
 }
 .section-heading .arrows {
   width: fit-content;
+  margin: 0;
   gap: 1rem;
 }
 .section-heading .arrows button {
@@ -1088,12 +1104,7 @@ img {
   background: transparent;
 }
 .section-heading .arrows button svg, .section-heading .arrows button i {
-  font-size: 1rem;
-}
-@media (max-width: 768px) {
-  .section-heading {
-    padding-right: 6rem;
-  }
+  font-size: 1.1rem;
 }
 
 .page-heading {

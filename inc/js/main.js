@@ -888,24 +888,26 @@ function flippingItems({ itemsContainerSelector, prevBtnSelector, nextBtnSelecto
 
       setTimeout(() => {
         animating = false;
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === items.length - 1;
       }, 600);
     }, 50);
   }
 
   function prevItem() {
-    const newIndex = (currentIndex - 1 + items.length) % items.length;
-    showItem(newIndex);
+    if (currentIndex > 0) {showItem(currentIndex - 1);}
   }
 
   function nextItem() {
-    const newIndex = (currentIndex + 1) % items.length;
-    showItem(newIndex);
+    if (currentIndex < items.length - 1) {showItem(currentIndex + 1);}
   }
 
   prevBtn.addEventListener('click', prevItem);
   nextBtn.addEventListener('click', nextItem);
 
   items[currentIndex].classList.add('active');
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex === items.length - 1;
 }
 
 

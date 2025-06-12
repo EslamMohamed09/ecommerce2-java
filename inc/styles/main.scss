@@ -1,10 +1,13 @@
 * {margin:0;padding:0;
+   outline:none;
+   border:none;
+   box-sizing:border-box;
    text-transform:capitalize;
    text-decoration:none !important;
    outline:none !important;
-   transition:all 0.2s linear;
-   font-family: 'Montserrat', sans-serif;
-   scroll-behavior:smooth;}
+   font-family:'Montserrat', sans-serif;
+   scroll-behavior:smooth;
+   transition:all 0.2s linear;}
 
 :root {--gray:#f2f2f7;
        --gray1:#f0f0f8;
@@ -625,16 +628,22 @@ section {padding:2rem 5%;
 
 .container {margin:0 auto;}
 
-h1, h2, h3, h4, h5 {font-weight:bold;
-                    margin:0;
-                    color:var(--gray11);
-                    line-height:1.2;}
-
 h1 {font-size:2.1rem;}
 h2 {font-size:1.7rem;}
 h3 {font-size:1.6rem;}
 h4 {font-size:1.2rem;}
 h5 {font-size:1rem;}
+
+@media (max-width:260px){
+  h1 {font-size:1.8rem;}
+  h2 {font-size:1.5rem;}
+  h3 {font-size:1.4rem;}
+}
+
+h1, h2, h3, h4, h5 {font-weight:bold;
+                    margin:0;
+                    color:var(--gray11);
+                    line-height:1.2;}
 
 p {font-size:1rem;
    margin:0;
@@ -910,13 +919,14 @@ img {max-width:100%;
   h3 {font-size:1.4rem;}
 }
 
-.section-heading {position:relative;
-                  margin-bottom:2.5rem;
-                  display:flex;
+.section-heading {display:flex;
                   flex-direction:row;
                   justify-content:space-between;
                   align-items:center;
-
+                  margin-bottom:2.5rem;
+                  padding:0;
+                  position:relative;
+                  
     &::before {content:"";
                position:absolute;
                bottom:-0.6rem;
@@ -947,6 +957,7 @@ img {max-width:100%;
     }
 
     .arrows {width:fit-content;
+             margin:0;
              gap:1rem;
 
       button {width:1.8rem;
@@ -954,12 +965,8 @@ img {max-width:100%;
               border:none;
               background:transparent;
 
-            svg,i {font-size:1rem;}
+            svg,i {font-size:1.1rem;}
       }
-    }
-
-    @media(max-width:768px){
-      padding-right:6rem;
     }
 }
 
@@ -3007,7 +3014,6 @@ header {position:fixed;
   .section-container {display:grid;
                       grid-template-columns:1fr 3fr;
                       gap:0.5rem;
-                      
 
     .left-block {height:100%;
                  padding:0 1.8rem 0 0;
