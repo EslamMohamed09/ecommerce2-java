@@ -6,7 +6,7 @@
   text-decoration: none !important;
   outline: none !important;
   transition: all 0.2s linear;
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -692,6 +692,7 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
   margin: 0;
   color: var(--gray11);
+  line-height: 1.2;
 }
 
 h1 {
@@ -718,6 +719,14 @@ p {
   font-size: 1rem;
   margin: 0;
   text-align: justify;
+  line-height: 1.2;
+}
+
+a {
+  font-size: 1rem;
+  margin: 0;
+  text-align: justify;
+  line-height: 1.2;
 }
 
 ul {
@@ -2563,7 +2572,6 @@ header.header-scroll {
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
-  line-height: 1rem;
   color: var(--gray11);
 }
 .categories-section .section-container .slider-wrapper .category-item:hover .image-holder img {
@@ -2695,6 +2703,7 @@ header.header-scroll {
   font-size: 1.1rem;
   color: var(--gray13);
   text-transform: uppercase;
+  font-family: "Playfair Display", serif;
 }
 .promo-section .section-container .card-item .content .button19 {
   margin-top: 2rem;
@@ -3346,8 +3355,7 @@ header.header-scroll {
   padding: 0 1.8rem 0 0;
 }
 .category-products-section .section-container .left-block .ad-holder {
-  height: 50%;
-  min-height: 30rem;
+  min-height: 35rem;
   padding: 2rem 0.8rem;
   border-radius: 0.2rem;
   overflow: hidden;

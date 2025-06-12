@@ -1,11 +1,9 @@
-// @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 * {margin:0;padding:0;
    text-transform:capitalize;
    text-decoration:none !important;
    outline:none !important;
    transition:all 0.2s linear;
-   font-family:'Inter', sans-serif;
+   font-family: 'Montserrat', sans-serif;
    scroll-behavior:smooth;}
 
 :root {--gray:#f2f2f7;
@@ -629,7 +627,8 @@ section {padding:2rem 5%;
 
 h1, h2, h3, h4, h5 {font-weight:bold;
                     margin:0;
-                    color:var(--gray11)}
+                    color:var(--gray11);
+                    line-height:1.2;}
 
 h1 {font-size:2.1rem;}
 h2 {font-size:1.7rem;}
@@ -639,7 +638,13 @@ h5 {font-size:1rem;}
 
 p {font-size:1rem;
    margin:0;
-   text-align:justify;}
+   text-align:justify;
+   line-height:1.2;}
+
+a {font-size:1rem;
+   margin:0;
+   text-align:justify;
+   line-height:1.2;}
 
 ul {margin:0;
     padding:0;
@@ -2272,7 +2277,6 @@ header {position:fixed;
                           .category-name {font-size:1.1rem;
                                           font-weight:bold;
                                           text-align:center;
-                                          line-height:1rem;
                                           color:var(--gray11);}
                   }
 
@@ -2404,7 +2408,8 @@ header {position:fixed;
     
             p {font-size:1.1rem;
                color:var(--gray13);
-               text-transform:uppercase;}
+               text-transform:uppercase;
+               font-family:'Playfair Display', serif;}
             
             .button19 {margin-top:2rem;
                        text-transform:uppercase;
@@ -3007,8 +3012,7 @@ header {position:fixed;
     .left-block {height:100%;
                  padding:0 1.8rem 0 0;
 
-      .ad-holder {height:50%;
-                  min-height:30rem;
+      .ad-holder {min-height:35rem;
                   padding:2rem 0.8rem;
                   border-radius:0.2rem;
                   overflow:hidden;
