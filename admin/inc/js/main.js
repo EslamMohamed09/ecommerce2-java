@@ -461,9 +461,7 @@ function eyeFunction(eyeIcon) {
 ######## PROFILE PAGE #######
 =============================
 */
-/*
- #### Profile-Data ####
-*/
+/*** Profile-Data ***/
 function filterWithTabs(tabButton, cardItem) {
 
   let firstFilterclick = tabButton.first().attr('filter-click');
@@ -611,9 +609,9 @@ fetch('database/categories.json').then(response => response.json())
 }
 
 /*
- =============================
+ ===========================
  ######## ORDERS PAGE ######
- =============================
+ ===========================
 */
 if(document.querySelector('.orders-list-page')){
 

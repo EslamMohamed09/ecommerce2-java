@@ -861,9 +861,18 @@ if (document.querySelector(".offers-section")){
 }
 
 /* 
- ###########################
- #### FEATURED PRODUCTS ####
- ###########################
+ ###################################
+ #### CATEGORY PRODUCTS SECTION ####
+ ###################################
+*/
+animatedFilterWithTabs(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'),
+                       document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
+
+
+/* 
+ ###################################
+ #### FEATURED PRODUCTS SECTION ####
+ ###################################
 */
 function flippingItems({ itemsContainerSelector, prevBtnSelector, nextBtnSelector }) {
   const itemsContainer = document.querySelector(itemsContainerSelector);
@@ -880,10 +889,10 @@ function flippingItems({ itemsContainerSelector, prevBtnSelector, nextBtnSelecto
     const currentItem = items[currentIndex];
     const nextItem = items[index];
 
-    currentItem.classList.remove('active');
+    currentItem.classList.remove('item-active');
 
     setTimeout(() => {
-      nextItem.classList.add('active');
+      nextItem.classList.add('item-active');
       currentIndex = index;
 
       setTimeout(() => {
@@ -905,7 +914,7 @@ function flippingItems({ itemsContainerSelector, prevBtnSelector, nextBtnSelecto
   prevBtn.addEventListener('click', prevItem);
   nextBtn.addEventListener('click', nextItem);
 
-  items[currentIndex].classList.add('active');
+  items[currentIndex].classList.add('item-active');
   prevBtn.disabled = currentIndex === 0;
   nextBtn.disabled = currentIndex === items.length - 1;
 }
@@ -4603,6 +4612,40 @@ function countSliderFullScreen(options) {
     setResponsive();
     attachEvents();
     // autoSlide();
+}
+
+function animatedFilterWithTabs(tabs, Items) {
+
+  tabs = Array.isArray ? tabs : Array.from(tabs);
+  Items = Array.isArray ? Items : Array.from(Items);
+
+  function showItems(filterClass){
+    Items.forEach((item) => {
+      if(item.classList.contains(filterClass)){item.classList.add('item-active');}
+    });
+  }
+
+  tabs[0].classList.add('button-active');
+  Items.forEach((item) => {
+    if(item.classList.contains('item-active')){item.classList.remove('item-active')}
+  });
+
+  const firstTabFilter = tabs[0].getAttribute('filter-click');
+  showItems(firstTabFilter);
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', function(){
+
+      tabs.forEach((btn) => {btn.classList.remove('button-active');});
+      this.classList.add('button-active');
+
+      Items.forEach((item) => {
+        if(item.classList.contains('item-active')){item.classList.remove('item-active')}
+      });
+
+      showItems(this.getAttribute('filter-click'));
+    });
+  });
 }
 
 async function loadProduct(productId){
