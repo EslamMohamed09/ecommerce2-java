@@ -3136,14 +3136,15 @@ header {position:fixed;
                                    height:9rem;
                                    object-fit:contain;
                                    transition:all 0.4s linear;
-                                   position:absolute;}
+                                   position:absolute;
 
-                              img:first-child {top:50%;
+                                &:first-child {top:50%;
                                                transform:translateY(-50%);}
 
-                              img:last-child:not(:only-child) {top:60%;
+                                &:last-child:not(:only-child) {top:60%;
                                                                transform:translateY(-50%);
                                                                opacity:0;}
+                              }
 
                               &:hover img:first-child {opacity:0;}
 
