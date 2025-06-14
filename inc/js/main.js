@@ -865,8 +865,8 @@ if (document.querySelector(".offers-section")){
  #### CATEGORY PRODUCTS SECTION ####
  ###################################
 */
-animatedFilterWithTabs(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'),
-                       document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
+// animatedFilterWithTabs(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'),
+//                        document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
 
 function animatedFilterWithTabs2(tabs, groups, prevBtn, nextBtn) {
   tabs = Array.from(tabs);
@@ -877,13 +877,13 @@ function animatedFilterWithTabs2(tabs, groups, prevBtn, nextBtn) {
   let currentGroup = null;
 
   function paginate(group, page) {
-    const items = Array.from(group.querySelectorAll('.product-item'));
-    const totalPages = Math.ceil(items.length / visibleCount);
+    const productItems = Array.from(group.querySelectorAll('.product-item'));
+    const totalPages = Math.ceil(productItems.length / visibleCount);
     page = Math.max(0, Math.min(page, totalPages - 1));
     const key = group.classList[1];
     pageIndexes[key] = page;
 
-    items.forEach((item, i) => {
+    productItems.forEach((item, i) => {
       item.classList.remove('show');
       item.style.display = 'none';
       if (i >= page * visibleCount && i < (page + 1) * visibleCount) {
@@ -901,6 +901,7 @@ function animatedFilterWithTabs2(tabs, groups, prevBtn, nextBtn) {
     groups.forEach(group => {
       const isActive = group.classList.contains(filterClass);
       group.classList.toggle('item-active', isActive);
+
       if (isActive) {
         currentGroup = group;
         const key = group.classList[1];
@@ -941,7 +942,7 @@ function animatedFilterWithTabs2(tabs, groups, prevBtn, nextBtn) {
 }
 
 animatedFilterWithTabs2(
-  document.querySelectorAll('.category-products-section .tabs li'),
+  document.querySelectorAll('.category-products-section .section-heading .tabs li'),
   document.querySelectorAll('.category-products-section .products-container .products-group'),
   document.querySelector('.category-products-section .section-heading .arrows .prev-btn'),
   document.querySelector('.category-products-section .section-heading .arrows .next-btn')
@@ -4586,7 +4587,8 @@ function animatedFilterWithTabs(tabs, Items) {
 
   function showItems(filterClass){
     Items.forEach((item) => {
-      if(item.classList.contains(filterClass)){item.classList.add('item-active');}
+      const isActive = item.classList.contains(filterClass);
+      item.classList.toggle('item-active', isActive);
     });
   }
 
