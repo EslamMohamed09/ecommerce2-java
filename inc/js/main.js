@@ -886,10 +886,22 @@ function animatedFilterWithTabs2(tabs, groups, prevBtn, nextBtn) {
     productItems.forEach((item, i) => {
       item.classList.remove('show');
       item.style.display = 'none';
+      
       if (i >= page * visibleCount && i < (page + 1) * visibleCount) {
-        item.style.display = 'block';
-        setTimeout(() => item.classList.add('show'), (i % visibleCount) * 100);
+          item.style.display = 'block';
+
+          item.style.opacity = "0"; // Reset animation state
+          item.style.transform = "scale(0.8) translateY(20px)";
+          item.style.transition = "none";
+          void item.offsetWidth; // force reflow
+          
+          setTimeout(() => { // Animate in with stagger
+            item.style.transition = "all 0.4s ease";
+            item.style.opacity = "1";
+            item.style.transform = "scale(1) translateY(0)";
+          }, (i % visibleCount) * 100);
       }
+
     });
 
     // Optionally disable buttons at limits
