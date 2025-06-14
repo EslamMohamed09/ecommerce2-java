@@ -3109,8 +3109,9 @@ header {position:fixed;
                          border-radius:0.5rem;
                          height:0;
                          opacity:0;
-                         transform:translateY(40px);
+                         transform:translateY(80px);
                          pointer-events:none;
+                         transition:all 0.4s linear;
             
             .product-item {display:block;
                            padding:0;
@@ -3309,16 +3310,16 @@ header {position:fixed;
                            pointer-events:auto;
 
                 .product-item {opacity:1;
-                                transform:scale(1);
+                               transform:scale(1);
 
-                      &:first-child {transition-delay:0.1s;}
-                      &:nth-child(2) {transition-delay:0.15s;}
-                      &:nth-child(3) {transition-delay:0.2s;}
-                      &:nth-child(4) {transition-delay:0.25s;}
-                      &:nth-child(5) {transition-delay:0.3s;}
-                      &:nth-child(6) {transition-delay:0.35s;}
-                      &:nth-child(7) {transition-delay:0.4s;}
-                      &:nth-child(8) {transition-delay:0.45s;}
+                    &:first-child {transition-delay:0.1s;}
+                    &:nth-child(2) {transition-delay:0.15s;}
+                    &:nth-child(3) {transition-delay:0.2s;}
+                    &:nth-child(4) {transition-delay:0.25s;}
+                    &:nth-child(5) {transition-delay:0.3s;}
+                    &:nth-child(6) {transition-delay:0.35s;}
+                    &:nth-child(7) {transition-delay:0.4s;}
+                    &:nth-child(8) {transition-delay:0.45s;}
                 }
             }
         }

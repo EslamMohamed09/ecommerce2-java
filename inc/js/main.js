@@ -868,61 +868,78 @@ if (document.querySelector(".offers-section")){
 animatedFilterWithTabs(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'),
                        document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
 
+function animatedFilterWithTabs2(tabs, Items) {
+  tabs = Array.from(tabs);
+  Items = Array.from(Items);
+
+  let currentIndex = 0;
+  const itemsPerPage = 8;
+  let currentFilterClass = tabs[0].getAttribute('filter-click');
+
+  function showItems(filterClass) {
+    const visibleItems = Items.filter(item => item.classList.contains(filterClass));
+    visibleItems.forEach((item, i) => {
+      item.classList.remove('item-active');
+      item.style.display = (i >= currentIndex && i < currentIndex + itemsPerPage) ? 'block' : 'none';
+      if (i >= currentIndex && i < currentIndex + itemsPerPage) {
+        item.classList.add('item-active');
+      }
+    });
+  }
+
+  function resetPagination() {
+    currentIndex = 0;
+    showItems(currentFilterClass);
+  }
+
+  // Initial load
+  tabs[0].classList.add('button-active');
+  showItems(currentFilterClass);
+
+  // Tab click
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', function () {
+      tabs.forEach((btn) => btn.classList.remove('button-active'));
+      this.classList.add('button-active');
+
+      currentFilterClass = this.getAttribute('filter-click');
+      resetPagination();
+    });
+  });
+
+  // Arrow buttons
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  prevBtn.addEventListener('click', () => {
+    const totalItems = Items.filter(item => item.classList.contains(currentFilterClass));
+    if (currentIndex - itemsPerPage >= 0) {
+      currentIndex -= itemsPerPage;
+      showItems(currentFilterClass);
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const totalItems = Items.filter(item => item.classList.contains(currentFilterClass));
+    if (currentIndex + itemsPerPage < totalItems.length) {
+      currentIndex += itemsPerPage;
+      showItems(currentFilterClass);
+    }
+  });
+}
+
+// animatedFilterWithTabs2(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'), 
+//                         document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
+
 
 /* 
  ###################################
  #### FEATURED PRODUCTS SECTION ####
  ###################################
 */
-function flippingItems({ itemsContainerSelector, prevBtnSelector, nextBtnSelector }) {
-  const itemsContainer = document.querySelector(itemsContainerSelector);
-  const items = Array.from(itemsContainer.children);
-  const prevBtn = document.querySelector(prevBtnSelector);
-  const nextBtn = document.querySelector(nextBtnSelector);
-  let currentIndex = 0;
-  let animating = false;
-
-  function showItem(index) {
-    if (animating) return;
-    animating = true;
-
-    const currentItem = items[currentIndex];
-    const nextItem = items[index];
-
-    currentItem.classList.remove('item-active');
-
-    setTimeout(() => {
-      nextItem.classList.add('item-active');
-      currentIndex = index;
-
-      setTimeout(() => {
-        animating = false;
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex === items.length - 1;
-      }, 600);
-    }, 50);
-  }
-
-  function prevItem() {
-    if (currentIndex > 0) {showItem(currentIndex - 1);}
-  }
-
-  function nextItem() {
-    if (currentIndex < items.length - 1) {showItem(currentIndex + 1);}
-  }
-
-  prevBtn.addEventListener('click', prevItem);
-  nextBtn.addEventListener('click', nextItem);
-
-  items[currentIndex].classList.add('item-active');
-  prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = currentIndex === items.length - 1;
-}
-
-
-flippingItems({itemsContainerSelector:'.feature-products-section .section-container', 
+animatedFlippingwithArrows({itemsContainerSelector:'.feature-products-section .section-container', 
                prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
-               nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
+                         nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
 
 /* 
  ############################
@@ -930,78 +947,6 @@ flippingItems({itemsContainerSelector:'.feature-products-section .section-contai
  ############################
 */
 if(document.querySelector(".month-deal-section")){
-
-  function flippingAnimatedSlider({
-      sliderWrapperSelector, 
-      slidesSelector, 
-      prevBtnSelector, 
-      nextBtnSelector, 
-      indicatorsContainerSelector
-    }) {
-
-    const sliderWrapper = document.querySelector(sliderWrapperSelector);
-    const slides = document.querySelectorAll(slidesSelector);
-    const prevBtn = document.querySelector(prevBtnSelector);
-    const nextBtn = document.querySelector(nextBtnSelector);
-    const indicatorsContainer = document.querySelector(indicatorsContainerSelector);
-    let currentSlide = 0;
-
-    slides.forEach((_, i) => { // build dots
-      let indicator = document.createElement('span');
-          indicator.classList.add('dot');
-          indicatorsContainer.appendChild(indicator);
-    });
-
-    const dots = indicatorsContainer.querySelectorAll("span");
-
-    function showSlide(index) {
-      slides.forEach(slide => {slide.classList.remove('active');});
-      dots.forEach(dot => {dot.classList.remove('active');});
-
-      slides[index].classList.add('active');
-      dots[index].classList.add('active');
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentSlide = index;
-        showSlide(currentSlide);
-      });
-    });
-
-    let sliderInterval = setInterval(nextSlide, 6000);
-
-    sliderWrapper.addEventListener('mouseover', () => {
-      clearInterval(sliderInterval);
-    });
-
-    prevBtn.addEventListener('mouseover', () => {
-      clearInterval(sliderInterval);
-    });
-
-    nextBtn.addEventListener('mouseover', () => {
-      clearInterval(sliderInterval);
-    });
-
-    sliderWrapper.addEventListener('mouseleave', () => {
-      sliderInterval = setInterval(nextSlide, 5000);
-    });
-
-    showSlide(currentSlide);
-  }
 
   flippingAnimatedSlider({
     sliderWrapperSelector:'.month-deal-section .slider-wrapper',
@@ -4646,6 +4591,116 @@ function animatedFilterWithTabs(tabs, Items) {
       showItems(this.getAttribute('filter-click'));
     });
   });
+}
+
+function animatedFlippingwithArrows({ itemsContainerSelector, prevBtnSelector, nextBtnSelector }) {
+  const itemsContainer = document.querySelector(itemsContainerSelector);
+  const items = Array.from(itemsContainer.children);
+  const prevBtn = document.querySelector(prevBtnSelector);
+  const nextBtn = document.querySelector(nextBtnSelector);
+  let currentIndex = 0;
+
+  items[currentIndex].classList.add('item-active');
+
+  function showItem(selectedIndex) {
+
+    const currentItem = items[currentIndex];
+          currentItem.classList.remove('item-active');
+
+    const selectedItem = items[selectedIndex];
+
+    selectedItem.classList.add('item-active');
+    currentIndex = selectedIndex;
+    
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === items.length - 1;
+  }
+
+  function prevItem() {
+    if (currentIndex > 0) {showItem(currentIndex - 1);}
+  }
+
+  function nextItem() {
+    if (currentIndex < items.length - 1) {showItem(currentIndex + 1);}
+  }
+
+  prevBtn.addEventListener('click', prevItem);
+  nextBtn.addEventListener('click', nextItem);
+
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex === items.length - 1;
+}
+
+function flippingAnimatedSlider({
+    sliderWrapperSelector, 
+    slidesSelector, 
+    prevBtnSelector, 
+    nextBtnSelector, 
+    indicatorsContainerSelector
+  }) {
+
+  const sliderWrapper = document.querySelector(sliderWrapperSelector);
+  const slides = document.querySelectorAll(slidesSelector);
+  const prevBtn = document.querySelector(prevBtnSelector);
+  const nextBtn = document.querySelector(nextBtnSelector);
+  const indicatorsContainer = document.querySelector(indicatorsContainerSelector);
+  let currentSlide = 0;
+
+  slides.forEach((_, i) => { // build dots
+    let indicator = document.createElement('span');
+        indicator.classList.add('dot');
+        indicatorsContainer.appendChild(indicator);
+  });
+
+  const dots = indicatorsContainer.querySelectorAll("span");
+
+  function showSlide(index) {
+    slides.forEach(slide => {slide.classList.remove('active');});
+    dots.forEach(dot => {dot.classList.remove('active');});
+
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+    });
+  });
+
+  let sliderInterval = setInterval(nextSlide, 6000);
+
+  sliderWrapper.addEventListener('mouseover', () => {
+    clearInterval(sliderInterval);
+  });
+
+  prevBtn.addEventListener('mouseover', () => {
+    clearInterval(sliderInterval);
+  });
+
+  nextBtn.addEventListener('mouseover', () => {
+    clearInterval(sliderInterval);
+  });
+
+  sliderWrapper.addEventListener('mouseleave', () => {
+    sliderInterval = setInterval(nextSlide, 5000);
+  });
+
+  showSlide(currentSlide);
 }
 
 async function loadProduct(productId){

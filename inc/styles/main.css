@@ -3456,8 +3456,9 @@ header.header-scroll {
   border-radius: 0.5rem;
   height: 0;
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(80px);
   pointer-events: none;
+  transition: all 0.4s linear;
 }
 .category-products-section .section-container .right-block .products-container .products-group .product-item {
   display: block;
