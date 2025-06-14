@@ -868,65 +868,85 @@ if (document.querySelector(".offers-section")){
 animatedFilterWithTabs(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'),
                        document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
 
-function animatedFilterWithTabs2(tabs, Items) {
+function animatedFilterWithTabs2(tabs, groups, prevBtn, nextBtn) {
   tabs = Array.from(tabs);
-  Items = Array.from(Items);
+  groups = Array.from(groups);
 
-  let currentIndex = 0;
-  const itemsPerPage = 8;
-  let currentFilterClass = tabs[0].getAttribute('filter-click');
+  let visibleCount = 8;
+  let pageIndexes = {};
+  let currentGroup = null;
 
-  function showItems(filterClass) {
-    const visibleItems = Items.filter(item => item.classList.contains(filterClass));
-    visibleItems.forEach((item, i) => {
-      item.classList.remove('item-active');
-      item.style.display = (i >= currentIndex && i < currentIndex + itemsPerPage) ? 'block' : 'none';
-      if (i >= currentIndex && i < currentIndex + itemsPerPage) {
-        item.classList.add('item-active');
+  function paginate(group, page) {
+    const items = Array.from(group.querySelectorAll('.product-item'));
+    const totalPages = Math.ceil(items.length / visibleCount);
+    page = Math.max(0, Math.min(page, totalPages - 1));
+    const key = group.classList[1];
+    pageIndexes[key] = page;
+
+    items.forEach((item, i) => {
+      item.classList.remove('show');
+      item.style.display = 'none';
+      if (i >= page * visibleCount && i < (page + 1) * visibleCount) {
+        item.style.display = 'block';
+        setTimeout(() => item.classList.add('show'), (i % visibleCount) * 100);
+      }
+    });
+
+    // Optionally disable buttons at limits
+    prevBtn.disabled = page === 0;
+    nextBtn.disabled = page === totalPages - 1;
+  }
+
+  function showGroup(filterClass) {
+    groups.forEach(group => {
+      const isActive = group.classList.contains(filterClass);
+      group.classList.toggle('item-active', isActive);
+      if (isActive) {
+        currentGroup = group;
+        const key = group.classList[1];
+        if (!(key in pageIndexes)) pageIndexes[key] = 0;
+        paginate(group, pageIndexes[key]);
       }
     });
   }
 
-  function resetPagination() {
-    currentIndex = 0;
-    showItems(currentFilterClass);
-  }
-
-  // Initial load
+  // Initial setup
   tabs[0].classList.add('button-active');
-  showItems(currentFilterClass);
+  showGroup(tabs[0].getAttribute('filter-click'));
 
-  // Tab click
-  tabs.forEach((tab) => {
+  // Tab click handler
+  tabs.forEach(tab => {
     tab.addEventListener('click', function () {
-      tabs.forEach((btn) => btn.classList.remove('button-active'));
+      tabs.forEach(t => t.classList.remove('button-active'));
       this.classList.add('button-active');
-
-      currentFilterClass = this.getAttribute('filter-click');
-      resetPagination();
+      const filterClass = this.getAttribute('filter-click');
+      showGroup(filterClass);
     });
   });
 
-  // Arrow buttons
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-
+  // Arrows outside, shared
   prevBtn.addEventListener('click', () => {
-    const totalItems = Items.filter(item => item.classList.contains(currentFilterClass));
-    if (currentIndex - itemsPerPage >= 0) {
-      currentIndex -= itemsPerPage;
-      showItems(currentFilterClass);
+    if (currentGroup) {
+      const key = currentGroup.classList[1];
+      paginate(currentGroup, pageIndexes[key] - 1);
     }
   });
 
   nextBtn.addEventListener('click', () => {
-    const totalItems = Items.filter(item => item.classList.contains(currentFilterClass));
-    if (currentIndex + itemsPerPage < totalItems.length) {
-      currentIndex += itemsPerPage;
-      showItems(currentFilterClass);
+    if (currentGroup) {
+      const key = currentGroup.classList[1];
+      paginate(currentGroup, pageIndexes[key] + 1);
     }
   });
 }
+
+animatedFilterWithTabs2(
+  document.querySelectorAll('.category-products-section .tabs li'),
+  document.querySelectorAll('.category-products-section .products-container .products-group'),
+  document.querySelector('.category-products-section .section-heading .arrows .prev-btn'),
+  document.querySelector('.category-products-section .section-heading .arrows .next-btn')
+);
+
 
 // animatedFilterWithTabs2(document.querySelectorAll('.category-products-section .section-container .right-block .tabs li'), 
 //                         document.querySelectorAll('.category-products-section .section-container .right-block .products-group'));
@@ -938,8 +958,8 @@ function animatedFilterWithTabs2(tabs, Items) {
  ###################################
 */
 animatedFlippingwithArrows({itemsContainerSelector:'.feature-products-section .section-container', 
-               prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
-                         nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
+                            prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
+                            nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
 
 /* 
  ############################
