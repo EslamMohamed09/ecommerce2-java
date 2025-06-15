@@ -26,7 +26,7 @@
 
     {"id":"13", "name":"iron", "Image":"../admin/inc/images/electronics/boilers&heaters/steamiron2/1.png", "parent_id":"10"},
 
-    {"id":"14", "name":"camera", "Image":"../admin/inc/images/electronics/camera/c1/1.png", "parent_id":"1"},
+    {"id":"14", "name":"digital camera", "Image":"../admin/inc/images/electronics/camera/c1/1.png", "parent_id":"1"},
 
     {"id":"15", "name":"fans & air conditions", "Image":"../admin/inc/images/electronics/fans&airconditions/fan3/1.png", "parent_id":"1"},
 
@@ -176,7 +176,8 @@
 
     {"id":"88", "name":"jeans", "Image":"../admin/inc/images/clothes/men/pants/jeans/1/1.png", "parent_id":"86"},
 
-    {"id":"89", "name":"t-shirt", "Image":"../admin/inc/images/clothes/men/t-shirt/1/blue.png", "parent_id":"65"}
+    {"id":"89", "name":"t-shirt", "Image":"../admin/inc/images/clothes/men/t-shirt/1/blue.png", "parent_id":"65"},
 
+    {"id":"90", "name":"surveillance cameras", "Image":"../admin/inc/images/electronics/surveillancecameras/2/1.jpg", "parent_id":"1"}
   ]
 }

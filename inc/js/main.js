@@ -4551,6 +4551,9 @@ function animatedFilterWithTabsAndArrows(tabs, groups, prevBtn, nextBtn) {
     const productItems = Array.from(group.querySelectorAll('.product-item'));
     const totalPages = Math.ceil(productItems.length / visibleCount);
     page = Math.max(0, Math.min(page, totalPages - 1));
+    console.log(`total pages - 1 ${totalPages}`);
+    console.log(`Math.min ${Math.min(page, totalPages - 1)}`);
+    console.log(`page ${page}`);
     const key = group.classList[1];
     pageIndexes[key] = page;
 
