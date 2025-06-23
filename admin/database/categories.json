@@ -186,6 +186,15 @@
 
     {"id":"93", "name":"bags, cases & sleeves", "Image":"../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/2.jpg", "parent_id":"92"},
 
-    {"id":"94", "name":"backpacks", "Image":"../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/2.jpg", "parent_id":"93"}
+    {"id":"94", "name":"backpacks", "Image":"../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/2.jpg", "parent_id":"93"},
+
+    {"id":"95", "name":"fashion", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":null},
+
+    {"id":"96", "name":"luggage & travel gear", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":"95"},
+
+    {"id":"97", "name":"luggage", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":"96"},
+
+    {"id":"98", "name":"luggage-sets", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":"97"}
+
   ]
 }
