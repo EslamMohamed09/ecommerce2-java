@@ -194,7 +194,9 @@
 
     {"id":"97", "name":"luggage", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":"96"},
 
-    {"id":"98", "name":"luggage-sets", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":"97"}
+    {"id":"98", "name":"luggage-sets", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg", "parent_id":"97"},
+
+    {"id":"99", "name":"suitcases", "Image":"../admin/inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/1.jpg", "parent_id":"97"}
 
   ]
 }
