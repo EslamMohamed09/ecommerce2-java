@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart page</title>
+  <link rel="stylesheet" href="../admin/inc/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../inc/styles/main.css">
+</head>
+<body>
+<header></header>
+
+<section class="cart-page">
+  <div class="section-container">
+
+    <div class="page-hierarchy d-flex-r-st-c"><p>home</p> <i class="fas fa-chevron-right"></i> <p>your card</p></div>
+
+    <div class="progress-bar-block">
+      <div class="progress-bar-value">
+        <i class="fas fa-shipping-fast" id="progress-icon"></i>
+        <div class="progress-bar"> <!-- BAR -->
+          <div class="filled-progress-bar"></div>
+        </div>
+      </div>
+      <div class="shipping-case">
+        <p>only <span id="remaining-free"></span> away from free shipping</p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="left-block col-lg-9 col-md-8 col-sm-12">
+        <table>
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>TOTAL</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+      </div> <!-- END BLOCK -->
+
+      <div class="right-block col-lg-3 col-md-4 col-sm-12">
+        <div class="col-blocks">
+
+          <div class="calculate-block d-flex-c-st-st">
+            <h5>order summary</h5>
+            <p class="subtotal-items d-flex-r-bt-c"><span>subtotal:</span> <span id="subtotal">0</span></p>
+            <p class="get-shipping">get shipping estimate:</p>
+            <div class="citypostal d-flex-r-bt-c"> <!-- city postal -->
+              <select>
+                <option>egypt</option>
+                <option>ksa</option>
+                <option>usa</option>
+                <option>kuwait</option>
+              </select>
+              <input type="text" class="postalcode-input" placeholder="postal code">
+            </div>
+            <button class="btn2">calculate shipping</button>
+          </div>
+          
+          <div class="checkout-block d-flex-c-st-st">
+            <p class="coupon-code">coupon code</p>
+            <input type="text" class="couponcode-input" placeholder="Enter Coupon Code">
+            <p class="coupon-code-info">Coupon code will be applied on the checkout page</p>
+            <p class="total-items d-flex-r-bt-c"><span>TOTAL:</span><span id="total">0</span></p>
+            <p class="tax-included">Tax included and shipping calculated at checkout</p>
+            <div class="agree-terms d-flex-r-st-c"><!-- agree-terms -->
+              <input type="checkbox" id="agreeterm-checkbox">
+              <label for="agreeterm-checkbox">I agree with terms & conditions</label>
+            </div>
+            <a href="checkout.html" class="btn2">proceed to checkout</a>
+            <a href="../index.html" class="trans-btn">continue shopping</a>
+          </div>
+
+        </div>
+      </div> <!-- END BLOCK -->
+
+    </div>
+
+    <div class="secure-shopping d-flex-r-st-c"> <!-- secure -->
+      <i class="fas fa-lock"></i>
+      <p>Secure Shopping Guarantee</p>
+    </div>
+
+    <div class="services-images d-flex-r-st-c"> <!-- images -->
+      <img src="../admin/inc/images/norton.png" alt="">
+      <img src="../admin/inc/images/TRUSTe.jpg" alt="">
+      <img src="../admin/inc/images/authorizenet.png" alt="">
+      <img src="../admin/inc/images/accredited.png" alt="">
+    </div>
+
+  </div>
+</section>
+
+<footer></footer>
+<script src="header.js"></script>
+<script src="footer.js"></script>
+<script src="../admin/inc/js/bootstrap.min.js"></script>
+<script src="../admin/inc/js/all.min.js"></script>
+<script src="../admin/inc/js/solid.min.js"></script>
+<script src="../inc/js/main.js"></script>
+</body>
+</html>

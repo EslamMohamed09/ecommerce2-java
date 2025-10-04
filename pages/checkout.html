@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>checkout</title>
+  <link rel="stylesheet" href="../admin/inc/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../inc/styles/main.css">
+</head>
+<body>
+<header></header>
+
+<section class="checkout-page">
+  <div class="section-container">
+    <div class="row">
+        
+      <div class="left-block col-md-7">
+
+        <h4>Mart Project</h4>
+        <div class="page-hierarchy d-flex-r-st-c"><p>cart</p> <i class="fas fa-chevron-right"></i> <p>Information</p></div>
+
+        <div class="blocks d-flex-c-st-st">
+
+          <div class="pay-block block">
+            <div class="buttons d-flex-r-bt-c">
+              <button class="btn2">shop <span>pay</span></button>
+              <button class="black-btn"><i class="fab fa-google"></i>pay</button>
+            </div>
+            <div class="line d-flex-r-st-c my-4 pl-2"> <!-- line -->
+              <hr><span>or</span><hr>
+            </div>
+          </div>
+        
+          <div class="contact-block block"> 
+            <div class="heading d-flex-r-bt-c">
+              <h5>contact</h5> 
+              <div class="right-block d-flex-r-st-c">
+                <span>have an account?</span>
+                <a href="loginpage">login</a>
+              </div>
+            </div>
+            <div class="input-parent d-flex-r-bt-c">
+              <div class="input-box d-flex-c-st-st">
+                <input type="text" required>
+                <label>Email or mobile phone number</label>
+              </div>
+              <span><i class="fas fa-mobile-alt"></i></span>
+            </div>
+            <div class="checkbox-parent d-flex-r-st-c">
+              <input type="checkbox" id="email-me">
+              <label for="email-me">Email me with news and offers</label>
+            </div>
+          </div>
+
+          <div class="delivery-block block">
+            <h5>delivery method</h5>
+            <div class="check-parent d-block">
+              <div class="check d-flex-r-st-c">
+                <input type="radio" name="delivery" value="ship">
+                <i class="fas fa-truck-moving"></i>
+                <p>ship</p>
+              </div>
+              <div class="check d-flex-r-st-c">
+                <input type="radio" name="delivery" value="pickup">
+                <i class="fas fa-gift"></i>
+                <p>pick up</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="shipping-block block">
+            <h5>shipping address</h5>
+            <form class="d-flex-c-st-end">
+              <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                <input type="text" maxlength="35" required>
+                <label>fullname</label>
+              </div>
+              <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                <input type="text" required>
+                <label>address</label>
+              </div>
+              <div class="inputs-box d-flex-r-bt-c">
+                <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                  <input type="text" maxlength="15" required>
+                  <label>government</label>
+                </div>
+                <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                  <input type="text" maxlength="15" required>
+                  <label>city</label>
+                </div>
+                <div class="input-parent d-flex-c-st-st"> <!-- input-parent -->
+                  <input type="text" maxlength="9" required>
+                  <label>postal code</label>
+                </div>
+              </div>
+              <button class="btn2">continue shipping</button>
+            </form>
+          </div>
+
+        </div>
+        
+      </div> <!-- END block -->
+
+      <div class="right-block col-md-5">
+        <div class="products d-flex-c-st-st">
+
+          <div class="product-item d-flex-r-bt-c">
+            <div class="content d-flex-r-st-c">
+              <div class="image">
+                <div class="value"><span>2</span></div>
+                <img src="../admin/inc/images/electronics/phones/samsung4/1.png" alt="">
+              </div>
+              <div class="details d-flex-c-st-st">
+                <h5>SAMSUNG Galaxy S22 Ultra Dual Sim</h5>
+                <p>xs / black</p>
+              </div>
+            </div>
+            <p class="pro-price">$500</p>
+          </div>
+
+        </div>
+        <div class="discount-block d-flex-c-st-st">
+          <div class="input-parent d-flex-r-bt-c"><input type="text" placeholder="Discount code"><button>apply</button></div> <!-- Discount -->
+          <p class="subtotal d-flex-r-bt-c"><span>subtotal</span><span class="value">$1000</span></p>
+          <p class="shipping d-flex-r-bt-c"><span>shipping</span><span class="value">$20</span></p>
+          <p class="total d-flex-r-bt-c"><span>total</span><span class="value">$1200</span></p>
+        </div>
+        <a href="/pages/payment.html" class="btn2">I'm ready to pay</a>
+      </div> <!-- END block -->
+
+    </div>
+  </div>
+</section>
+
+<footer></footer>
+<script src="header.js"></script>
+<script src="footer.js"></script>
+
+<script src="../admin/inc/js/bootstrap.min.js"></script>
+<script src="../admin/inc/js/all.min.js"></script>
+<script src="../admin/inc/js/solid.min.js"></script>
+<script src="../inc/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>payment</title>
+  <link rel="stylesheet" href="../admin/inc/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../inc/styles/main.css">
+</head>
+<body>
+<header></header>
+
+<section class="payment-section">
+  <div class="container form-container">
+    <div class="row">
+
+      <div class="left-block col-md-6 col-sm-6">
+        
+        <h3>billing information</h3>
+
+        <form>
+          <div class="inputs-block d-flex-c-st-st">
+          
+            <div class="inputbox d-flex-c-st-st">
+              <input type="text" required>
+              <label>Your Name</label>
+            </div>
+
+            <div class="inputbox d-flex-c-st-st">
+              <input type="email" required>
+              <label>email</label>
+            </div>
+
+            <div class="inputbox">
+              <input type="text" required>
+              <label>address</label>
+            </div>
+
+            <div class="inputbox">
+              <input type="text" required>
+              <label>city</label>
+            </div>
+
+            <div class="input-boxes d-flex-r-st-st">
+              <div class="inputbox">
+                <input type="text" required>
+                <label>country</label>
+              </div>
+              <div class="inputbox">
+                <input type="text" required>
+                <label>zip code</label>
+              </div>
+            </div>
+
+            <div class="inputbox">
+              <input type="text" required>
+              <label>name on card</label>
+            </div>
+          
+            <div class="inputbox">
+              <input type="text" required>
+              <label>card number</label>
+            </div>
+
+            <div class="inputbox">
+              <input type="text" required>
+              <label>exp month</label>
+            </div>
+          
+            <div class="input-boxes d-flex-r-st-st">
+              <div class="inputbox">
+                <input type="text" required>
+                <label>exp year</label>
+              </div>
+              <div class="inputbox">
+                <input type="text" maxlength="3" required>
+                <label>cvv</label>
+              </div>
+            </div>
+
+          </div>
+          <button class="b-btn save-info-btn wfull">save</button>
+        </form>
+
+      </div>
+
+      <div class="right-block col-md-6 col-sm-6">
+
+        <div class="order-count-block d-flex-c-st-st">
+          <h4>order summary</h4>
+          <div class="products-count-parent d-flex-r-bt-st">
+            <p><span>5</span> products</p>
+            <a href="cart.html" class="editorder-btn">edit order</a>
+          </div>
+          <div class="subtotal-parent d-flex-c-st-st">
+            <div class="shipping d-flex-r-bt-st wfull">
+              <p>shipping fee</p>
+              <p class="value">$10</p>
+            </div>
+            <div class="subtotal d-flex-r-bt-st wfull">
+              <p>subtotal</p>
+              <p class="value">$500</p>
+            </div>
+          </div>
+          <div class="total-parent d-flex-r-bt-st">
+            <p>total</p>
+            <p class="value">$500</p>
+          </div>
+        </div>
+
+        <div class="order-details-block">
+
+          <h4>your Items (5)</h4>
+          
+          <div class="product-item d-flex-r-bt-c">
+            <div class="content d-flex-r-st-c">
+              <div class="image">
+                <div class="value"><span>2</span></div>
+                <img src="../admin/inc/images/electronics/phones/samsung4/1.png" alt="">
+              </div>
+              <div class="details d-flex-c-st-st">
+                <h5>SAMSUNG Galaxy S22 Ultra Dual Sim</h5>
+                <p>xs / black</p>
+              </div>
+            </div>
+            <p class="pro-price">$500</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer></footer>
+<script src="header.js"></script>
+<script src="footer.js"></script>
+
+<script src="../inc/js/owl.carousel.min.js"></script>
+<script src="../admin/inc/js/bootstrap.min.js"></script>
+<script src="../admin/inc/js/all.min.js"></script>
+<script src="../inc/js/main.js"></script>
+</body>
+</html>
