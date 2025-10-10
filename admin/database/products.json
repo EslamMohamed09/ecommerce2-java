@@ -1666,9 +1666,15 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case1/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case1/2.jpg",
                "../inc/images/electronics/computercomponents&accessories/case/case1/3.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case1/1.png",
+               "../inc/images/electronics/pccomponents/case/case1/2.jpg",
+               "../inc/images/electronics/pccomponents/case/case1/3.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"LIAN LI LANCOOL 205 Mesh Airflow ATX Mid-Tower PC Case, Black – Pre-Installed 3 ARGB PWM Fans, Mesh Front, Tempered Glass Side, Water-Cooling Ready. High-Quality, User-Friendly Design, Ideal for Gaming.",
       "price":"$100",
       "salePrice":"$95",
@@ -1691,8 +1697,13 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case2/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case2/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case2/1.png",
+               "../inc/images/electronics/pccomponents/case/case2/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Chic RGB lighting on a black tempered glass front panel, featuring an RGB LED switch and 2 USB 3.0 ports on the I/O panel. Includes a full-size black tempered glass side panel, a PSU shroud design, and a detachable dust filter.",
       "price":"$95",
       "salePrice":"$90",
@@ -1717,10 +1728,17 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case3/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case3/2.png",
                "../inc/images/electronics/computercomponents&accessories/case/case3/3.jpg",
                "../inc/images/electronics/computercomponents&accessories/case/case3/4.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case3/1.png",
+               "../inc/images/electronics/pccomponents/case/case3/2.png",
+               "../inc/images/electronics/pccomponents/case/case3/3.jpg",
+               "../inc/images/electronics/pccomponents/case/case3/4.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Features tempered glass side and front panels. Supports the installation of 120/140/240/280/360mm radiators in the front, 120/140/240mm radiators on top, and a 120mm radiator in the rear. The tower compartment is 210mm wide with 24mm of cable management clearance. Accommodates CPU coolers up to 165mm in height and graphics cards up to 370mm in length. Includes large air intake areas on both sides of the front panel for optimal cooling.",
       "price":"$110",
       "salePrice":"$100",
@@ -1742,9 +1760,15 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case4/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case4/2.png",
                "../inc/images/electronics/computercomponents&accessories/case/case4/3.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case4/1.png",
+               "../inc/images/electronics/pccomponents/case/case4/2.png",
+               "../inc/images/electronics/pccomponents/case/case4/3.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Power: 600W. Unparalleled performance. Seamless functionality.",
       "price":"$105",
       "salePrice":"$100",
@@ -1767,8 +1791,13 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case5/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case5/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case5/1.png",
+               "../inc/images/electronics/pccomponents/case/case5/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "price":"$100",
       "salePrice":"$98",
       "color":"black",
@@ -1789,8 +1818,13 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case6/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case6/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case6/1.png",
+               "../inc/images/electronics/pccomponents/case/case6/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "description":"Special Features: We’ve enhanced our iconic H Series PC cases. The new lineup retains beloved elements from the original H Series, such as our patented cable management system, removable fan/radiator mounting brackets, and user-friendly drive trays. New updates include a front-panel USB-C connector for high-speed USB 3.1 Gen 2 devices, a tempered glass side panel that installs with a single thumbscrew, and an upgraded Smart Device V2 in the H210i",
       "aboutThisItem":"NEW FEATURES: Front I/O USB Type-C port and tempered glass side panel with single-screw installation. REMASTERED DESIGN: The sleek, modern aesthetic, iconic cable management bar, and uninterrupted tempered glass side panel highlight your impressive build. SIMPLE CABLE MANAGEMENT: Our patented cable routing kit with pre-installed channels and straps simplifies wiring. STREAMLINED COOLING: Two Aer F120mm fans* are included for optimal internal airflow, and the front panel and PSU intakes feature removable filters, along with a bracket designed for radiators up to 240mm. SPECS: Maximum GPU Clearance: 265-325mm; Radiator Support: Front - 280mm or Rear - 120mm.",
       "price":"$115",
@@ -1815,7 +1849,11 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case7/1.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case7/1.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "price":"$85",
       "salePrice":"$80",
       "brand":"BenQ",
@@ -1833,8 +1871,13 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case8/1.png", 
                "../inc/images/electronics/computercomponents&accessories/case/case8/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case8/1.png", 
+               "../inc/images/electronics/pccomponents/case/case8/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"ASUS GT501 TUF EATX Gaming Case – Equipped with 3 x 120mm Aura RGB Fans, a tempered glass side panel, metal front panel, USB 3.1, and reserved space for radiators at the front and top. User-friendly design. Constructed from high-quality materials for durability and performance.",
       "price":"$95",
       "salePrice":"$90",
@@ -1860,9 +1903,15 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case9/1.jpg",
                "../inc/images/electronics/computercomponents&accessories/case/case9/2.png",
                "../inc/images/electronics/computercomponents&accessories/case/case9/3.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case9/1.jpg",
+               "../inc/images/electronics/pccomponents/case/case9/2.png",
+               "../inc/images/electronics/pccomponents/case/case9/3.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Available at a lower price from other sellers, which may not include free Prime shipping. This computer case (without PSU) fits all types of motherboards up to ATX 245mm. It features a fully black structure made of Class A SPCC 0.55mm material. Product dimensions: (H445 x W192 x D365mm) with 4 x 12cm rainbow fans (3 located on the front). HOOD C 303 H Computer Case (without PSU). User-friendly design. High-quality construction. Perfect materials for an excellent customer experience.",
       "price":"$100",
       "salePrice":"$94",
@@ -1879,8 +1928,13 @@
       "onSale":false,
       "catId":"21",
       "tags":["computer case", "case", "pc case"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/case/case10/1.png",
                "../inc/images/electronics/computercomponents&accessories/case/case10/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/case/case10/1.png",
+               "../inc/images/electronics/pccomponents/case/case10/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Gaming PC. High-quality, premium design. Keendex C6910 Gaming PC Case with 4 Fans and 650 Watt Power Supply. User-friendly. Personal computer type.",
       "price":"$110",
       "salePrice":"$104",
@@ -1925,8 +1979,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["hard", "samsung hard"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard1/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard1/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard1/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard1/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Smart and powerful upgrade: NVMe PCIe 3.0 SSD designed for gaming and demanding applications with a data transfer rate of 3,500 Mbps. Plug into full power: Over 6.2 times faster than SATA SSDs, with read/write speeds of up to 3,500/3,000 MB/s (for the 250 GB variant). High reliability is ensured with a heat spreader and dynamic thermal guard technology, protecting against overheating and supporting up to 600 TBW (Terabytes Written), backed by a limited 5-year warranty. Offers storage capacity of up to 250 GB in a compact M.2 form factor (2280), ideal for high-performance PCs and ultrabooks. Samsung Magician software optimizes performance and keeps the drive updated. Allowable Voltage: 3.3 V ± 5%. This product is compatible with the PS5.",
       "price":"$95",
       "salePrice":"$89",
@@ -1952,8 +2011,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["hard", "transcend hard"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard2/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard2/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard2/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard2/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"The Transcend StoreJet M3 1TB External Hard Drive is a rugged, military-grade shock-resistant device that meets US military drop test standards. It features a state-of-the-art 3-stage shock protection system, ensuring durability even in harsh environments. The hard casing of this portable 2.5 inch SATA HDD includes an outer shell made of slip-resistant silicone. Additionally, the internal hard drive has a suspension damper. These features significantly reduce impact damage by providing maximum shock absorption.",
       "price":"$70",
       "salePrice":"$68",
@@ -1979,8 +2043,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["WD SSD", "WD 1TB"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard3/1.jpg",
                "../inc/images/electronics/computercomponents&accessories/hard/hard3/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard3/1.jpg",
+               "../inc/images/electronics/pccomponents/hard/hard3/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Larger files and more content require next-level performance. The My Passport SSD offers read speeds of up to 1050MB/s and write speeds of up to 1000MB/s, with capacities of up to 2TB, allowing you to access your digital world anytime, anywhere. Protect your invaluable data with password-enabled 256-bit AES hardware encryption and easy backup options. Carry your data with confidence; the My Passport SSD features a bold, metal design that's tough enough to withstand whatever comes your way. It is shock and vibration resistant, with drop resistance up to 6.5 feet (1.98m). The included backup software simplifies backing up high-capacity files to your drive or cloud service account—set it and forget it! It’s also compatible with Apple Time Machine (requires reformatting). Available in a range of stylish colors and enclosed in a sleek metal design, the My Passport SSD is engineered for quality and reliability, making it a trusted choice built on WD’s reputation.",
       "price":"$65",
       "salePrice":"$60",
@@ -2005,8 +2074,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["Western Digital ssd", "SSD"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard4/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard4/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard4/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard4/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"SLC (single-level cell) caching enhances write performance, enabling quick execution of everyday tasks. Shock-resistant and certified by WD F.I.T. Lab for compatibility and reliability. Features ultra-low power draw, allowing you to use your laptop for extended periods. Includes a 3-year limited warranty for a worry-free storage upgrade. Downloadable.",
       "price":"$35",
       "salePrice":"$30",
@@ -2032,8 +2106,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["Internal SSD", "ssd"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard5/1.jpg",
                "../inc/images/electronics/computercomponents&accessories/hard/hard5/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard5/1.jpg",
+               "../inc/images/electronics/pccomponents/hard/hard5/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-Brand: Crucial -Storage Capacity: 500 GB -Compatible operating systems: Windows -Drive Interface Type: sata_6_gbps -Drive Type: SSD.",
       "price":"$55",
       "salePrice":"$49",
@@ -2059,8 +2138,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["ssd", "sandisk ssd", "sandisk"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard6/1.jpg", 
                "../inc/images/electronics/computercomponents&accessories/hard/hard6/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard6/1.jpg", 
+               "../inc/images/electronics/pccomponents/hard/hard6/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-Read speed of up to 530 MB/s. -SanDisk internal SSD with 240 GB of storage. -Compatible with both Windows and Mac. -User-friendly design. -Ideal materials for an excellent customer experience.",
       "price":"$35",
       "salePrice":"$29",
@@ -2086,8 +2170,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["wd", "WD 6TB", "external hard drive"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard7/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard7/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard7/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard7/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "description":"Automatic backup with included WD Backup software and Time Machine compatibility. Password protection featuring hardware encryption. Redesigned for a modern look. A reliable drive built with WD's trusted quality. USB 3.0 port, also compatible with USB 2.0.",
       "price":"$115",
       "salePrice":"$109",
@@ -2110,8 +2199,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["external hard", "seagate external hard"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard8/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard8/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard8/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard8/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"HUB. Good Quality. Perfect Material. Easy to use. Unique and fashionable design.",
       "price":"$262",
       "salePrice":"$255",
@@ -2138,8 +2232,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["external hard", "crucial external hard"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard9/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard9/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard9/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard9/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"HUGE CAPACITY: Up to 4TB of storage—ample space for approximately 20,000 photos, 100 hours of video, 6,000 songs, or 400GB of documents, with extra room available. FAST: Read speeds of up to 800MB/s, making it 3.8 times faster than most hard drives. TINY, LIGHTWEIGHT: Compact enough to fit between your fingertips and weighs less than a set of car keys. BROAD COMPATIBILITY: Compatible with PC, Mac, Android, and iPad Pro8 (PS4, Xbox One, and USB-A computers require a USB-A adapter, sold separately).",
       "price":"$97",
       "salePrice":"$89",
@@ -2165,8 +2264,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["hard drive", "toshiba hard drive"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard10/1.png", 
                "../inc/images/electronics/computercomponents&accessories/hard/hard10/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard10/1.png", 
+               "../inc/images/electronics/pccomponents/hard/hard10/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Sleek profile design with a matte, smudge-resistant finish. Plug and play functionality—easy to use with no software installation required. Requires reformatting for Mac OS v10.12, OS X v10.11, and v10.4. Easily expand storage capacity for your PC and other compatible devices. Compatible with USB 3.0 and USB 2.0, with no need for an external AC power cord. Transfer rates of up to 5 Gbit/s (USB 3.0) and up to 480 Mbit/s (USB 2.0). Includes a standard 1-year limited warranty from Toshiba",
       "price":"$97",
       "salePrice":"$90",
@@ -2186,9 +2290,15 @@
       "onSale":false,
       "catId":"22",
       "tags":["kingston ssd", "ssd"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard11/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard11/2.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard11/3.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard11/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard11/2.png",
+               "../inc/images/electronics/pccomponents/hard/hard11/3.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Experience fast startup, loading, and file transfers with the A400. Its 7mm form factor allows it to fit into a wider range of systems, making it ideal for slimmer notebooks and systems with limited space. The A400 is more reliable and durable than traditional hard drives. Available in multiple capacities, it serves well for applications or as a hard drive replacement, with an operating temperature range of 0°C to 70°C. Capacity: 480GB; Interface: SATA Rev. 3.0 (6Gb/s) with backward compatibility to SATA Rev. 2.0. It offers read speeds of up to 500MB/s and write speeds of up to 450MB/s.",
       "price":"$37",
       "salePrice":"$35",
@@ -2211,8 +2321,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["kingston ssd", "ssd"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard12/1.jpg", 
                "../inc/images/electronics/computercomponents&accessories/hard/hard12/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard12/1.jpg", 
+               "../inc/images/electronics/pccomponents/hard/hard12/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-Available in multiple capacities, suitable for applications or as a hard drive replacement. -More reliable and durable than traditional hard drives. -Brand: Kingston -Storage Capacity: 960GB -Compatible Operating Systems: Windows & Mac -Drive Interface Type: SATA 3 -Drive Type: SSD",
       "price":"$65",
       "salePrice":"$59",
@@ -2238,8 +2353,13 @@
       "onSale":false,
       "catId":"22",
       "tags":["samsung ssd", "ssd"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/hard/hard13/1.png",
                "../inc/images/electronics/computercomponents&accessories/hard/hard13/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/hard/hard13/1.png",
+               "../inc/images/electronics/pccomponents/hard/hard13/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-Samsung 1TB 870 QVO Internal SSD - MZ-77Q1T0BW. -Samsung 1TB 870 QVO Internal SSD - MZ-77Q1T0BW. -Easy to use. -Good material for customer -High Quality.",
       "price":"$74",
       "salePrice":"$69",
@@ -2266,9 +2386,15 @@
       "onSale":false,
       "catId":"23",
       "tags":["motherboard", "gigabyte motherboard"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/motherboard/gigabyte1/1.png", 
                "../inc/images/electronics/computercomponents&accessories/motherboard/gigabyte1/2.png",
                "../inc/images/electronics/computercomponents&accessories/motherboard/gigabyte1/3.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/motherboard/gigabyte1/1.png", 
+               "../inc/images/electronics/pccomponents/motherboard/gigabyte1/2.png",
+               "../inc/images/electronics/pccomponents/motherboard/gigabyte1/3.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Type – Motherboard. Model - Z590. Ultra Durables.",
       "price":"$130",
       "salePrice":"$125",
@@ -2291,8 +2417,13 @@
       "onSale":false,
       "catId":"23",
       "tags":["gigabyte", "gigabyte motherboard"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/motherboard/gigabyte2/1.png",
                "../inc/images/electronics/computercomponents&accessories/motherboard/gigabyte2/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/motherboard/gigabyte2/1.png",
+               "../inc/images/electronics/pccomponents/motherboard/gigabyte2/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Compatible with 3rd Gen AMD Ryzen processors. Dual Channel ECC/Non-ECC Unbuffered DDR4, supporting 4 DIMMs. 12+2 Phases Digital Twin Power Design featuring 50A DrMOS. Enhanced thermal design with enlarged surface heatsinks. Ultra-durable PCIe 4.0 x16 slot",
       "price":"$160",
       "salePrice":"$155",
@@ -2319,9 +2450,15 @@
       "onSale":false,
       "catId":"24",
       "tags":["printer", "hp printer"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/printer/printer1/1.png", 
                "../inc/images/electronics/computercomponents&accessories/printer/printer1/2.png", 
                "../inc/images/electronics/computercomponents&accessories/printer/printer1/3.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/printer/printer1/1.png", 
+               "../inc/images/electronics/pccomponents/printer/printer1/2.png", 
+               "../inc/images/electronics/pccomponents/printer/printer1/3.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"3-Year HP warranty included at no additional cost. Print, copy, scan, and fax capabilities. Print speeds of up to 22 ppm in black and up to 18 ppm in color. Features a 250-sheet input tray and a 60-sheet output tray. Automatic two-sided printing and scanning available. Save up to 70% on ink (HP 963 inks) with HP Instant Ink, which automatically orders ink for delivery to your door when you're running low. Streamline repetitive tasks with Smart Tasks: Scan to the cloud, email, and more with just a tap, and even create editable, searchable documents from your phone or printer",
       "price":"$95",
       "salePrice":"$90",
@@ -2347,9 +2484,15 @@
       "onSale":false,
       "catId":"24",
       "tags":["cannon printer", "printer"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/printer/printer2/1.png",
                "../inc/images/electronics/computercomponents&accessories/printer/printer2/2.png",
                "../inc/images/electronics/computercomponents&accessories/printer/printer2/3.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/printer/printer2/1.png",
+               "../inc/images/electronics/pccomponents/printer/printer2/2.png",
+               "../inc/images/electronics/pccomponents/printer/printer2/3.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Wi-Fi connectivity for printing, copying, scanning, faxing, and cloud services. Efficient document management with a 20-sheet ADF. Fast and high-quality printing at 8.8 ipm in black and 4.4 ipm in color. Automatic duplex printing saves time. User-friendly control with a mono LCD for easy operation.",
       "price":"$278",
       "salePrice":"$285",
@@ -2375,8 +2518,13 @@
       "onSale":false,
       "catId":"24",
       "tags":["printer", "hp printer"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/printer/printer3/1.png",
                "../inc/images/electronics/computercomponents&accessories/printer/printer3/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/printer/printer3/1.png",
+               "../inc/images/electronics/pccomponents/printer/printer3/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-Model Name: HP Laser 107a -Product Number: 4ZB77A -Ports: Hi-Speed USB 2.0 port -Acoustic Power Emissions (Active, Printing): 6.5 B(A) -Recommended Operating Humidity Range: 20 to 70% RH (non-condensing) -Recommended Operating Temperature Range: 15 to 27°C (59 to 80.6°F) -Storage Temperature Range: -20 to 40°C (-4 to 104°F)",
       "price":"$130",
       "salePrice":"$125",
@@ -2395,8 +2543,13 @@
       "onSale":false,
       "catId":"24",
       "tags":["printer", "cannon printer"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/printer/printer4/1.png",
                "../inc/images/electronics/computercomponents&accessories/printer/printer4/2.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/printer/printer4/1.png",
+               "../inc/images/electronics/pccomponents/printer/printer4/2.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "description":"Type:Inkjet Multifunction Printer. Built-in Devices: Printer, Scanner & Copier.",
       "price":"$140",
       "salePrice":"$135",
@@ -2420,7 +2573,11 @@
       "onSale":false,
       "catId":"24",
       "tags":["printer", "brother printer"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/printer/printer5/1.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/printer/printer5/1.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-Brother PT-E110VP Label Printer. -Brother PT-E110VP Label Printer. -Easy to Use. -Perfect Material for customer. -High Quality.",
       "price":"$54",
       "salePrice":"$49",
@@ -2446,7 +2603,11 @@
       "onSale":false,
       "catId":"25",
       "tags":["ram", "16gb ram"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/ram-memory/ram1/1.png"],
+=======
+      "image":["../inc/images/electronics/pccomponents/ram-memory/ram1/1.png"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"DDR3L/DDR3 2x8GB 1333MHz 10600 SODIMM Laptop RAM Card. DDR3L-1333MHz, PC3L-10600, unbuffered, dual rank, non-ECC, 2Rx8, 204-pin, 1.35V, CL9 RAM. DDR3L 1333 is compatible with DDR3 1333. All DDR3L 2x8GB 10600 RAM cards are sourced from Samsung IC, ensuring original and high-quality memory modules suitable for notebook computers with AMD, Intel, and Mac systems. This stable and durable 16GB DDR3-1333MHz SODIMM is 100% tested for stability, durability, and compatibility. We rigorously test all PC3L-10600S RAM cards to guarantee stable performance. The PC3 16GB RAM will enhance loading times, improve system responsiveness, and increase your system’s capacity to handle heavier workloads. Note: Please ensure your laptop model is compatible with the PC3L/PC3 10600 1333 kit. Compatible with Apple, iMac, HP, Dell, Lenovo, ASUS, Acer, and more. It comes with a lifetime warranty and free technical support. For any inquiries, feel free to contact us, and we will respond within 24 hours.",
       "price":"$126",
       "salePrice":"$122",
@@ -2469,9 +2630,15 @@
       "onSale":false,
       "catId":"25",
       "tags":["ram", "8gb ram", "kingston fury beast ram"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/ram-memory/ram2/1.png",
                "../inc/images/electronics/computercomponents&accessories/ram-memory/ram2/2.png",
                "../inc/images/electronics/computercomponents&accessories/ram-memory/ram2/3.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/ram-memory/ram2/1.png",
+               "../inc/images/electronics/pccomponents/ram-memory/ram2/2.png",
+               "../inc/images/electronics/pccomponents/ram-memory/ram2/3.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Eye-catching RGB lighting with a bold design. Features patented Kingston FURY Infrared Sync Technology. Intel XMP-ready and compatible with AMD Ryzen. Easy Plug N Play functionality.",
       "price":"$54",
       "salePrice":"$49",
@@ -2488,9 +2655,15 @@
       "onSale":false,
       "catId":"25",
       "tags":["ram", "16gb ram", "kingston fury beast ram"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/ram-memory/ram3/1.png",
                "../inc/images/electronics/computercomponents&accessories/ram-memory/ram3/2.png",
                "../inc/images/electronics/computercomponents&accessories/ram-memory/ram3/3.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/ram-memory/ram3/1.png",
+               "../inc/images/electronics/pccomponents/ram-memory/ram3/2.png",
+               "../inc/images/electronics/pccomponents/ram-memory/ram3/3.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Striking RGB lighting with a bold design. Features patented Kingston FURY Infrared Sync Technology. Intel XMP-ready and compatible with AMD Ryzen. Easy Plug N Play functionality",
       "price":"$66",
       "salePrice":"$59",
@@ -2515,8 +2688,13 @@
       "onSale":false,
       "catId":"26",
       "tags":["vga", "gigabyte vga"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/vga-card/vga1/1.png",
                "../inc/images/electronics/computercomponents&accessories/vga-card/vga1/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/vga-card/vga1/1.png",
+               "../inc/images/electronics/pccomponents/vga-card/vga1/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"-NVIDIA Ampere Streaming Multiprocessors. -Second Generation RT Cores. -Third Generation Tensor Cores. -Powered by the GeForce RTX 3050. -Equipped with 8GB GDDR6 and a 128-bit memory interface. -WINDFORCE 2X Cooling System featuring alternate spinning fans. -90mm unique blade fans. -Includes a protective backplate. -Connectivity options: 2x HDMI 2.1 and 2x DisplayPort 1.4a",
       "price":"$306",
       "salePrice":"$295",
@@ -2543,8 +2721,13 @@
       "onSale":false,
       "catId":"26",
       "tags":["vga", "gigabyte vga"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/vga-card/vga2/1.png",
                "../inc/images/electronics/computercomponents&accessories/vga-card/vga2/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/vga-card/vga2/1.png",
+               "../inc/images/electronics/pccomponents/vga-card/vga2/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Powered by the GeForce GTX 1660 Ti, featuring 6GB of GDDR6 memory. Equipped with a Windforce 2X cooling system that utilizes alternate spinning fans. User-friendly controls through the AORUS engine. 6GB memory with a 192-bit GDDR6 interface. Connectivity options include 1x HDMI and 3x DisplayPort. Supports PCI Express 3.0 x16",
       "price":"$159",
       "salePrice":"$154",
@@ -2571,8 +2754,13 @@
       "onSale":false,
       "catId":"26",
       "tags":["vga", "gigabyte vga"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/computercomponents&accessories/vga-card/vga3/1.png",
                "../inc/images/electronics/computercomponents&accessories/vga-card/vga3/2.jpg"],
+=======
+      "image":["../inc/images/electronics/pccomponents/vga-card/vga3/1.png",
+               "../inc/images/electronics/pccomponents/vga-card/vga3/2.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":"Powered by the GeForce GTX 1650, featuring NVIDIA Turing architecture and GeForce Experience. Equipped with a 4GB GDDR5 memory interface with a 128-bit width. Includes a WINDFORCE 2X Cooling System with alternate spinning fans. Utilizes an 80mm unique blade fan.",
       "price":"$120",
       "salePrice":"$115",
@@ -9411,10 +9599,17 @@
       "onSale":false,
       "catId":"94",
       "tags":["Laptop Bag", "Rahala Backpack", "Travel Casual Laptop Bag"],
+<<<<<<< HEAD
       "image":["../inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/1.jpg",
                "../inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/2.jpg",
                "../inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/3.jpg",
                "../inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/4.jpg"],
+=======
+      "image":["../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/1.jpg",
+               "../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/2.jpg",
+               "../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/3.jpg",
+               "../admin/inc/images/electronics/laptop-accessories/bags,cases&sleeves/backpacks/1/4.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "details":["Care instructions: Hand Wash Only",
                  "Lining: Nylon",
                  "Closure type: Zipper"],
@@ -9436,10 +9631,17 @@
       "onSale":false,
       "catId":"98",
       "tags":["luggage", "luggage sets", "travel gear"],
+<<<<<<< HEAD
       "image":["../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/1.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/3.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/4.jpg"],
+=======
+      "image":["../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/1.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/2.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/3.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/1/4.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "salePrice":"$55",
       "instock":"420",
       "bought":"200",
@@ -9452,10 +9654,17 @@
       "onSale":false,
       "catId":"98",
       "tags":["luggage", "luggage sets", "travel gear"],
+<<<<<<< HEAD
       "image":["../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/1.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/2.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/3.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/4.jpg"],
+=======
+      "image":["../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/1.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/2.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/3.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/luggage-sets/2/4.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":["Durable & Stylish Construction: Crafted from lightweight yet ultra-tough polypropylene, this suitcase offers superior impact resistance compared to traditional ABS luggage. The dual-texture design—featuring both glossy wave patterns and a matte finish—adds a modern, fashionable touch.",
                        "Compact Yet Spacious Sizes: Cabin Suitcase: 35 x 21 x 54 cm, weighing just 2.5 kg",
                        "Cosmetic/Multipurpose Case: 26 x 18 x 33 cm, weighing 0.8 kg Both are thoughtfully designed to offer ample room for your essentials while remaining easy to carry.",
@@ -9474,10 +9683,17 @@
       "onSale":false,
       "catId":"99",
       "tags":["luggage", "suitcases", "travel gear"],
+<<<<<<< HEAD
       "image":["../inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/1.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/2.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/3.jpg",
                "../inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/4.jpg"],
+=======
+      "image":["../admin/inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/1.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/2.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/3.jpg",
+               "../admin/inc/images/fashion/luggage&travel-gear/luggage/suitcases/1/4.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "aboutThisItem":["Brand: JB",
                        "Color: Black",
                        "Material: ABS (Acrylonitrile-Butadiene-Styrene)",
@@ -9496,10 +9712,17 @@
       "onSale":false,
       "catId":"103",
       "tags":["adidas bag", "adidas bag gym", "sports duffels"],
+<<<<<<< HEAD
       "image":["../inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/1.jpg",
                "../inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/2.jpg",
                "../inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/3.jpg",
                "../inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/4.jpg"],
+=======
+      "image":["../admin/inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/1.jpg",
+               "../admin/inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/2.jpg",
+               "../admin/inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/3.jpg",
+               "../admin/inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/4.jpg"],
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       "details":["Material composition: 100% Rec",
                  "Care instructions: Do not wash"],
       "aboutThisItem":["Dimensions: 20 cm x 45 cm x 23 cm",

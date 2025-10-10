@@ -26,7 +26,11 @@
 
     {"id":"13", "name":"iron", "Image":"../admin/inc/images/electronics/boilers&heaters/steamiron2/1.png", "parent_id":"10"},
 
+<<<<<<< HEAD
     {"id":"14", "name":"digital camera", "Image":"../admin/inc/images/electronics/digitalcamera/c1/1.png", "parent_id":"1"},
+=======
+    {"id":"14", "name":"digital camera", "Image":"../admin/inc/images/electronics/camera/c1/1.png", "parent_id":"1"},
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
 
     {"id":"15", "name":"fans & air conditions", "Image":"../admin/inc/images/electronics/fans&airconditions/fan3/1.png", "parent_id":"1"},
 
@@ -38,6 +42,7 @@
 
     {"id":"19", "name":"cooler", "Image":"../admin/inc/images/electronics/pcaccessories/cooler/cooler1/1.png", "parent_id":"17"},
 
+<<<<<<< HEAD
     {"id":"20", "name":"pc components", "Image":"../admin/inc/images/electronics/computercomponents&accessories/case/case9/2.png", "parent_id":"1"},
 
     {"id":"21", "name":"case", "Image":"../admin/inc/images/electronics/computercomponents&accessories/case/case1/1.png", "parent_id":"20"},
@@ -51,6 +56,21 @@
     {"id":"25", "name":"ram memory", "Image":"../admin/inc/images/electronics/computercomponents&accessories/ram-memory/ram3/1.png", "parent_id":"20"},
 
     {"id":"26", "name":"vga card", "Image":"../admin/inc/images/electronics/computercomponents&accessories/vga-card/vga1/1.png", "parent_id":"20"},
+=======
+    {"id":"20", "name":"pc components", "Image":"../admin/inc/images/electronics/pccomponents/case/case9/2.png", "parent_id":"1"},
+
+    {"id":"21", "name":"case", "Image":"../admin/inc/images/electronics/pccomponents/case/case1/1.png", "parent_id":"20"},
+
+    {"id":"22", "name":"hard", "Image":"../admin/inc/images/electronics/pccomponents/hard/hard13/1.png", "parent_id":"20"},
+
+    {"id":"23", "name":"motherboard", "Image":"../admin/inc/images/electronics/pccomponents/motherboard/gigabyte1/1.png", "parent_id":"20"},
+
+    {"id":"24", "name":"printer", "Image":"../admin/inc/images/electronics/pccomponents/printer/printer1/1.png", "parent_id":"20"},
+
+    {"id":"25", "name":"ram memory", "Image":"../admin/inc/images/electronics/pccomponents/ram-memory/ram3/1.png", "parent_id":"20"},
+
+    {"id":"26", "name":"vga card", "Image":"../admin/inc/images/electronics/pccomponents/vga-card/vga1/1.png", "parent_id":"20"},
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
 
     {"id":"27", "name":"phones", "Image":"../admin/inc/images/electronics/phones/samsung2/2.png", "parent_id":"1"},
 

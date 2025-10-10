@@ -25,11 +25,19 @@ const headerContent = `
               <span>EN / USD</span>
             </div>
             <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/inc/images/currency/germany.png', this)">
+<<<<<<< HEAD
               <div class="flag"><img src="admin/inc/images/currency/germany.png" alt="DE"></div>
               <span>DE / EURO</span>
             </div>
             <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/currency/egy.png', this)">
               <div class="flag"><img src="admin/inc/images/currency/egy.png" alt="EG"></div>
+=======
+              <div class="flag"><img src="../admin/inc/images/currency/germany.png" alt="DE"></div>
+              <span>DE / EURO</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/currency/egy.png', this)">
+              <div class="flag"><img src="../admin/inc/images/currency/egy.png" alt="EG"></div>
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
               <span>EG / POUND</span>
             </div>
           </div>
@@ -59,7 +67,11 @@ const headerContent = `
     <div class="middle-bar d-flex-r-bt-c">
 
       <div class="logo-holder">
+<<<<<<< HEAD
         <a href="#" class="logo-title"><img src="admin/inc/images/logo.png" alt="" class="web-brand"></a>
+=======
+        <a href="#" class="logo-title"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
       </div>
 
       <form class="search-form d-flex-r-bt-c">
@@ -115,6 +127,7 @@ const headerContent = `
       
           <div class="options">
             <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/inc/images/usd.png', this)">
+<<<<<<< HEAD
               <div class="flag"><img src="admin/inc/images/usd.png" alt="UK"></div>
               <span>EN / USD</span>
             </div>
@@ -124,6 +137,17 @@ const headerContent = `
             </div>
             <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/egy.png', this)">
               <div class="flag"><img src="admin/inc/images/egy.png" alt="EG"></div>
+=======
+              <div class="flag"><img src="../admin/inc/images/usd.png" alt="UK"></div>
+              <span>EN / USD</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/inc/images/germany.png', this)">
+              <div class="flag"><img src="../admin/inc/images/germany.png" alt="DE"></div>
+              <span>DE / EURO</span>
+            </div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/egy.png', this)">
+              <div class="flag"><img src="../admin/inc/images/egy.png" alt="EG"></div>
+>>>>>>> f6df3901260a16c8cd61692d34cfcd7aa3f09f81
               <span>EG / POUND</span>
             </div>
           </div>
