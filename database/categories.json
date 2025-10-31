@@ -206,7 +206,7 @@
 
     {"id":"103", "name":"sports duffels", "Image":"../admin/inc/images/sports&outdoors/sports&outdoor-recreation-accessories/gym-bags/sports-duffels/1/4.jpg", "parent_id":"102"},
 
-    {"id":"104", "name":"games", "Image":"../admin/inc/images/clothes/women/shoes/sandals/slides/2/1.png", "parent_id":"1"},
+    {"id":"104", "name":"games", "Image":"../admin/inc/images/electronics/games/playstation4/1/1.png", "parent_id":"1"},
 
     {"id":"105", "name":"playstation4", "Image":"../admin/inc/images/electronics/games/playstation4/1/1.png", "parent_id":"104"},
 
