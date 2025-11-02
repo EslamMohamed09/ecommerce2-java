@@ -668,9 +668,24 @@ function createOneGroupedProducts(desiredProducts, desiredProductsContainer) {
             const productItem = document.createElement('div');
                   productItem.className = `product-item ${product.off}`;
 
-                  let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+                let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                  let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                   let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                       product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -775,7 +790,22 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
 
             let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+            let imageHtml = '';
+
+            if (Array.isArray(product.image)) {
+              
+              if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                  imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+              }
+              
+              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                // Find the color that matches product.color (if exists) or take first
+                const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                const urls = colorObj.url || [];
+                imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+              }
+
+            }
 
             let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                 product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';
@@ -1461,22 +1491,16 @@ if(document.querySelector("#single-page")){
             let imageHtml = '';
 
             if (Array.isArray(product.image)) {
-
-              // Case 1: Direct array of URLs
-              if (typeof product.image[0] === 'string') {
-                imageHtml = product.image.slice(0, 2)
-                  .map(src => `<img src="${src}" alt="${truncateTitle}">`)
-                  .join('');
+              
+              if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                  imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
               }
-
-              // Case 2: Array of objects with {color, url: []}
-              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {
+              
+              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
                 // Find the color that matches product.color (if exists) or take first
                 const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
                 const urls = colorObj.url || [];
-                imageHtml = urls.slice(0, 2)
-                  .map(src => `<img src="${src}" alt="${truncateTitle}">`)
-                  .join('');
+                imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
               }
 
             }
@@ -1614,22 +1638,16 @@ if(document.querySelector("#single-page")){
             let imageHtml = '';
 
             if (Array.isArray(product.image)) {
-
-              // Case 1: Direct array of URLs
-              if (typeof product.image[0] === 'string') {
-                imageHtml = product.image.slice(0, 2)
-                  .map(src => `<img src="${src}" alt="${truncateTitle}">`)
-                  .join('');
+              
+              if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                  imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
               }
-
-              // Case 2: Array of objects with {color, url: []}
-              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {
+              
+              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
                 // Find the color that matches product.color (if exists) or take first
                 const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
                 const urls = colorObj.url || [];
-                imageHtml = urls.slice(0, 2)
-                  .map(src => `<img src="${src}" alt="${truncateTitle}">`)
-                  .join('');
+                imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
               }
 
             }
@@ -1764,25 +1782,19 @@ if(document.querySelector("#single-page")){
 
             let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-             let imageHtml = '';
+            let imageHtml = '';
 
             if (Array.isArray(product.image)) {
-
-              // Case 1: Direct array of URLs
-              if (typeof product.image[0] === 'string') {
-                imageHtml = product.image.slice(0, 2)
-                  .map(src => `<img src="${src}" alt="${truncateTitle}">`)
-                  .join('');
+              
+              if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                  imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
               }
-
-              // Case 2: Array of objects with {color, url: []}
-              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {
+              
+              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
                 // Find the color that matches product.color (if exists) or take first
                 const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
                 const urls = colorObj.url || [];
-                imageHtml = urls.slice(0, 2)
-                  .map(src => `<img src="${src}" alt="${truncateTitle}">`)
-                  .join('');
+                imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
               }
 
             }
@@ -1916,7 +1928,22 @@ if(document.querySelector("#single-page")){
 
             let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
           
-            let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+            let imageHtml = '';
+
+            if (Array.isArray(product.image)) {
+              
+              if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                  imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+              }
+              
+              else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                // Find the color that matches product.color (if exists) or take first
+                const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                const urls = colorObj.url || [];
+                imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+              }
+
+            }
 
             let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
             let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2584,7 +2611,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2711,7 +2753,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2837,7 +2894,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -2982,7 +3054,22 @@ if(document.querySelector(".category-page")){
           function renderCategoryProducts(categoryProducts){
             let categoryProductsHtml = categoryProducts.map((product) => {
 
-              let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${product.title}">`).join('');
+              let imageHtml = '';
+
+              if (Array.isArray(product.image)) {
+                
+                if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                    imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                }
+                
+                else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                  // Find the color that matches product.color (if exists) or take first
+                  const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                  const urls = colorObj.url || [];
+                  imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                }
+
+              }
 
               let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
               let topRateStat = product.rating > 4 ? `<span class="stat top">top</span>` : '';
@@ -3073,7 +3160,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -3202,7 +3304,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -3329,7 +3446,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
@@ -3456,7 +3588,22 @@ if(document.querySelector(".category-page")){
 
                 let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
-                let imageHtml = product.image.slice(0,2).map((imageSrc) => `<img src="${imageSrc}" alt="${truncateTitle}">`).join('');
+                let imageHtml = '';
+
+                if (Array.isArray(product.image)) {
+                  
+                  if (typeof product.image[0] === 'string') {// Case 1: Direct array of URLs
+                      imageHtml = product.image.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+                  
+                  else if (typeof product.image[0] === 'object' && Array.isArray(product.image[0].url)) {// Case 2: Array of objects with {color, url: []}
+                    // Find the color that matches product.color (if exists) or take first
+                    const colorObj = product.image.find(img => img.color === product.color) || product.image[0];
+                    const urls = colorObj.url || [];
+                    imageHtml = urls.slice(0, 2).map(src => `<img src="${src}" alt="${truncateTitle}">`).join('');
+                  }
+
+                }
 
                 let hotDealStat = parseInt(product.off) > 20 ? `<span class="stat hot">hot</span>` : '';
                 let dealStat = product.off ? `<span class="stat sale">-${product.off}</span>` : '';
