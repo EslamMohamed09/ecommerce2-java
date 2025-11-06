@@ -900,12 +900,16 @@ if (document.querySelector(".offers-section")){
 */
 
 if(document.querySelector('.category-products-section')){
-animatedFilterWithTabsAndArrows(
-  document.querySelectorAll('.category-products-section .section-heading .tabs li'),
-  document.querySelectorAll('.category-products-section .products-container .products-group'),
-  document.querySelector('.category-products-section .section-heading .arrows .prev-btn'),
-  document.querySelector('.category-products-section .section-heading .arrows .next-btn')
-);
+    animatedFilterWithTabsAndArrows(
+      document.querySelectorAll('.category-products-section .section-heading .tabs li'),
+      document.querySelectorAll('.category-products-section .products-container .products-group'),
+      document.querySelector('.category-products-section .section-heading .arrows .prev-btn'),
+      document.querySelector('.category-products-section .section-heading .arrows .next-btn')
+    );
+
+    document.querySelectorAll('.category-products-section .product-item .product-title').forEach((title) => {
+      title.textContent = truncateWords(title.textContent, 4);
+    });
 }
 
 
