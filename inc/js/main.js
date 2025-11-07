@@ -888,10 +888,10 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
     });
 }
 
-if (document.querySelector(".offers-section")){
-    createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .products-container"));
-    createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .products-container"));
-}
+// if (document.querySelector(".offers-section")){
+//     createOneGroupedProducts(firstDesiredDiscounts, document.querySelector(".offers-section .left-block .products-container"));
+//     createTwoGroupedProducts(secondDesiredDiscounts, document.querySelector(".offers-section .right-block .products-container"));
+// }
 
 /* 
  ###################################
@@ -923,9 +923,28 @@ if(document.querySelector('.category-products-section')){
  ###################################
 */
 if(document.querySelector('.feature-products-section')){
-animatedFlippingwithArrows({itemsContainerSelector:'.feature-products-section .section-container', 
-                            prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
-                            nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
+  animatedFlippingwithArrows({itemsContainerSelector:'.feature-products-section .section-container', 
+                              prevBtnSelector:'.feature-products-section .section-heading .arrows .prev-btn',
+                              nextBtnSelector:'.feature-products-section .section-heading .arrows .next-btn'});
+}
+
+/* 
+ ########################
+ #### OFFERS SECTION ####
+ ########################
+*/
+
+if(document.querySelector('.offers-section')){
+    animatedFilterWithTabsAndArrows(
+      document.querySelectorAll('.offers-section .section-heading .tabs li'),
+      document.querySelectorAll('.offers-section .products-container .products-group'),
+      document.querySelector('.offers-section .section-heading .arrows .prev-btn'),
+      document.querySelector('.offers-section .section-heading .arrows .next-btn')
+    );
+
+    document.querySelectorAll('.offers-section .product-item .product-title').forEach((title) => {
+      title.textContent = truncateWords(title.textContent, 4);
+    });
 }
 
 /* 
