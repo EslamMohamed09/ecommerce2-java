@@ -692,23 +692,28 @@ section {
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 1.9rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 h2 {
   font-size: 1.7rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
   font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 h4 {
   font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 h5 {
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 260px) {
@@ -1127,7 +1132,7 @@ img {
 }
 .block-heading .block-heading-title {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -4947,11 +4952,11 @@ footer .bottom-footer p:not(:last-child) {
 #single-page .product-container .left-block .parent-categories-holder li {
   white-space: nowrap;
   word-break: break-word;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
 }
 #single-page .product-container .left-block .parent-categories-holder li svg, #single-page .product-container .left-block .parent-categories-holder li i {
   margin-right: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: normal;
 }
 #single-page .product-container .left-block .parent-categories-holder li .catlink {
@@ -5033,7 +5038,8 @@ footer .bottom-footer p:not(:last-child) {
   display: block;
 }
 #single-page .product-container .right-block .content h1 {
-  font-weight: 700;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 #single-page .product-container .right-block .content p {
   font-size: 1.1rem;
@@ -5335,11 +5341,13 @@ footer .bottom-footer p:not(:last-child) {
 #single-page .featured-products-container .sibling-products-block .sibling-products-container .slider-wrapper .product-item .content .product-title {
   font-size: 14px;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
   line-height: 1rem;
   color: var(--gray11);
 }
 #single-page .featured-products-container .sibling-products-block .sibling-products-container .slider-wrapper .product-item .content p {
   color: var(--gray5);
+  font-size: 0.9rem;
   padding: 0;
   margin: 0;
   text-align: left;

@@ -898,7 +898,6 @@ function createTwoGroupedProducts(desiredProducts, desiredProductsContainer) {
  #### CATEGORY PRODUCTS SECTION ####
  ###################################
 */
-
 if(document.querySelector('.category-products-section')){
     animatedFilterWithTabsAndArrows(
       document.querySelectorAll('.category-products-section .section-heading .tabs li'),
@@ -933,7 +932,6 @@ if(document.querySelector('.feature-products-section')){
  #### OFFERS SECTION ####
  ########################
 */
-
 if(document.querySelector('.offers-section')){
     animatedFilterWithTabsAndArrows(
       document.querySelectorAll('.offers-section .section-heading .tabs li'),

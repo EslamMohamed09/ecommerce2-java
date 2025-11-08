@@ -628,11 +628,11 @@ section {padding:2rem 5%;
 
 .container {margin:0 auto;}
 
-h1 {font-size:2.1rem;}
-h2 {font-size:1.7rem;}
-h3 {font-size:1.6rem;}
-h4 {font-size:1.2rem;}
-h5 {font-size:1rem;}
+h1 {font-size:1.9rem;font-family:'Montserrat', sans-serif;}
+h2 {font-size:1.7rem;font-family:'Montserrat', sans-serif;}
+h3 {font-size:1.6rem;font-family:'Montserrat', sans-serif;}
+h4 {font-size:1.2rem;font-family:'Montserrat', sans-serif;}
+h5 {font-size:1rem;font-family:'Montserrat', sans-serif;}
 
 @media (max-width:260px){
   h1 {font-size:1.8rem;}
@@ -986,7 +986,7 @@ img {max-width:100%;
                 position:relative;
 
       .block-heading-title {display:inline-block;
-                            font-size:1.8rem;
+                            font-size:1.4rem;
                             font-weight:bold;
                             margin:0;
                             padding:0;
@@ -4436,11 +4436,11 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
 
             li {white-space:nowrap;
                 word-break:break-word;
-                font-size:clamp(0.8rem, 2vw, 1rem);
+                font-size:clamp(0.6rem, 1.8vw, 0.8rem);
 
               svg,i {margin-right:0.3rem;
-                    font-size:0.9rem;
-                    font-weight:normal;}
+                     font-size:0.8rem;
+                     font-weight:normal;}
                 
               .catlink {color:var(--gray11);
                         font-size:inherit;
@@ -4516,7 +4516,8 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
               &.active {display:block;}
             }
 
-            h1 {font-weight:700;}
+            h1 {font-weight:600;
+                font-family:'Montserrat', sans-serif;}
 
             p {font-size:1.1rem;}
 
@@ -4778,11 +4779,13 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
                                   }
 
                                   .product-title {font-size:14px;
-                                                 font-weight:bold;
-                                                 line-height:1rem;
-                                                 color:var(--gray11);}
+                                                  font-weight:bold;
+                                                  font-family:'Montserrat', sans-serif;
+                                                  line-height:1rem;
+                                                  color:var(--gray11);}
 
                                   p {color:var(--gray5);
+                                     font-size:0.9rem;
                                      padding:0;
                                      margin:0;
                                      text-align:left;}
@@ -4805,6 +4808,7 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
                                   }
 
                           }
+
                           &:hover .icons {right:0;
                                           opacity:1;}
                     }
