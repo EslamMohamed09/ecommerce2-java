@@ -3075,6 +3075,8 @@ if(document.querySelector(".category-page")){
           function renderCategoryProducts(categoryProducts){
             let categoryProductsHtml = categoryProducts.map((product) => {
 
+              let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
+
               let imageHtml = '';
 
               if (Array.isArray(product.image)) {
@@ -3116,8 +3118,6 @@ if(document.querySelector(".category-page")){
                                     }).join('')}
                                 </ul>`
                               : '';
-
-              let truncateTitle = product.title.split(" ").slice(0,3).join(" ");
 
               let filterDescription = product.description ? product.description.replace(/[-:,]/g, "") :
                                       product.aboutThisItem ? product.aboutThisItem.replace(/[-:,]/g, "") : '';

@@ -164,7 +164,7 @@
 
     {"id":"82", "name":"flip-flops", "Image":"../admin/inc/images/clothes/women/shoes/sandals/flip-flops/1/1.png", "parent_id":"71"},
 
-    {"id":"83", "name":"platforms & wedges", "Image":"../admin/inc/images/clothes/women/shoes/sandals/platforms&wedges/1/1.png", "parent_id":"71"},
+    {"id":"83", "name":"platforms & wedges", "Image":"../admin/inc/images/clothes/women/shoes/sandals/platforms&wedges/1/black.jpg", "parent_id":"71"},
 
     {"id":"84", "name":"slides", "Image":"../admin/inc/images/clothes/women/shoes/sandals/slides/2/1.png", "parent_id":"71"},
 
