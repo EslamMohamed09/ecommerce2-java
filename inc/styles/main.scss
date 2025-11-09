@@ -628,11 +628,11 @@ section {padding:2rem 5%;
 
 .container {margin:0 auto;}
 
-h1 {font-size:1.9rem;font-family:'Montserrat', sans-serif;}
-h2 {font-size:1.7rem;font-family:'Montserrat', sans-serif;}
-h3 {font-size:1.6rem;font-family:'Montserrat', sans-serif;}
-h4 {font-size:1.2rem;font-family:'Montserrat', sans-serif;}
-h5 {font-size:1rem;font-family:'Montserrat', sans-serif;}
+h1 {font-size:1.9rem;}
+h2 {font-size:1.7rem;}
+h3 {font-size:1.6rem;}
+h4 {font-size:1.2rem;}
+h5 {font-size:1rem;}
 
 @media (max-width:260px){
   h1 {font-size:1.8rem;}
@@ -4516,8 +4516,7 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
               &.active {display:block;}
             }
 
-            h1 {font-weight:600;
-                font-family:'Montserrat', sans-serif;}
+            h1 {font-weight:600;}
 
             p {font-size:1.1rem;}
 
@@ -4780,7 +4779,6 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
 
                                   .product-title {font-size:14px;
                                                   font-weight:bold;
-                                                  font-family:'Montserrat', sans-serif;
                                                   line-height:1rem;
                                                   color:var(--gray11);}
 
