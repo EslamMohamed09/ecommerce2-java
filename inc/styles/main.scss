@@ -1921,6 +1921,7 @@ header {position:fixed;
                      display:flex;
                      flex-direction:row !important;
                      overflow:hidden;
+                     scroll-behavior:auto;
 
       .hero-slide-item {flex:0 0 100%;
                         max-width:100%;
