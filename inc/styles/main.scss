@@ -1956,12 +1956,12 @@ header {position:fixed;
         }
 
         .right-block {flex:1 1 25rem;
-                    position:relative;
-                    z-index:0;
+                      position:relative;
+                      z-index:0;
 
             img {width:15rem;
-                height:15rem;
-                object-fit:contain;}
+                 height:15rem;
+                 object-fit:contain;}
         }
 
         &.active {visibility:visible;

@@ -297,7 +297,7 @@ if (document.querySelector('.hero-section')) {
     }
 
     function updateSlides() {
-      const scrollPosition = currentIndex * slideWidth - 30;
+      const scrollPosition = currentIndex * slideWidth;
       Array.from(indicatorsMenu.children).forEach(indicator => { indicator.classList.remove('active'); });
       indicatorsMenu.children[currentIndex].classList.add('active');
 
