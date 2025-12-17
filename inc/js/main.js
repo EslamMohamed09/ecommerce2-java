@@ -339,8 +339,8 @@ if (document.querySelector('.hero-section')) {
       });
 
       if (currentIndex >= slides.length) {
-        currentIndex = 0;
-        sliderWrapper.scrollLeft = 0;
+          currentIndex = 0;
+          sliderWrapper.scrollLeft = 0;
       }
     }
 
