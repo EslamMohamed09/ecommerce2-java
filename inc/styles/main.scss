@@ -628,11 +628,11 @@ section {padding:2rem 5%;
 
 .container {margin:0 auto;}
 
-h1 {font-size:1.9rem;font-family:'Montserrat', sans-serif;}
-h2 {font-size:1.7rem;font-family:'Montserrat', sans-serif;}
-h3 {font-size:1.6rem;font-family:'Montserrat', sans-serif;}
-h4 {font-size:1.2rem;font-family:'Montserrat', sans-serif;}
-h5 {font-size:1rem;font-family:'Montserrat', sans-serif;}
+h1 {font-size:1.9rem;}
+h2 {font-size:1.7rem;}
+h3 {font-size:1.6rem;}
+h4 {font-size:1.2rem;}
+h5 {font-size:1rem;}
 
 @media (max-width:260px){
   h1 {font-size:1.8rem;}
@@ -713,9 +713,9 @@ img {max-width:100%;
             border:1.5px solid var(--black2);
             transition:all 0.3s linear;
 
-       &:hover {border:1.5px solid var(--black2);
-                color:var(--white2);
-                background-color:var(--black2);}
+      &:hover {border:1.5px solid var(--black2);
+               color:var(--white2);
+               background-color:var(--black2);}
 }
 
 .btn {display:inline-block;
@@ -2013,9 +2013,7 @@ header {position:fixed;
             0% {
                 opacity:0;
                 transform:translateY(-100px);
-            }
-      
-            100% {
+            } 100% {
                   opacity:1;
                   transform:translateY(0px);
             }
@@ -2025,9 +2023,7 @@ header {position:fixed;
             0% {
                 opacity:0;
                 transform:translateY(20px);
-            }
-          
-            100% {
+            } 100% {
                   opacity:1;
                   transform:translateY(0px);
             }
@@ -2037,9 +2033,7 @@ header {position:fixed;
         0% {
             opacity:0;
             transform:translateX(-100px);
-        }
-      
-        100% {
+        } 100% {
               opacity:1;
               transform:translateY(0px);
         }
@@ -2049,9 +2043,7 @@ header {position:fixed;
         0% {
             opacity:0;
             transform:translateX(100px);
-        }
-      
-        100% {
+        } 100% {
               opacity:1;
               transform:translateY(0px);
         }
@@ -2060,8 +2052,7 @@ header {position:fixed;
       @keyframes showimg {
         0%{
             opacity:0;
-        }
-        100%{
+        } 100%{
             opacity:1;
         }
       }
