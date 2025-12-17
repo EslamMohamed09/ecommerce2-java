@@ -7183,7 +7183,7 @@ footer .bottom-footer p:not(:last-child) {
 .category-page .category-page-container .right-block .best-seller-categories-products .products-container .slider-wrapper .product-item .content .ratings {
   gap: 0.1rem;
 }
-.category-page .category-page-container .right-block .best-seller-categories-products .products-container .slider-wrapper .product-item .content .ratings svg {
+.category-page .category-page-container .right-block .best-seller-categories-products .products-container .slider-wrapper .product-item .content .ratings svg, .category-page .category-page-container .right-block .best-seller-categories-products .products-container .slider-wrapper .product-item .content .ratings i {
   color: var(--yellow10);
   font-size: 1.1rem;
 }
