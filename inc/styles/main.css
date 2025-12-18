@@ -2098,13 +2098,13 @@ header.header-scroll {
 }
 
 /*
- *******
+ ******
  # Hero
- *******
+ ******
 */
 .hero-section {
   width: 100%;
-  min-height: 69vh;
+  min-height: 68vh;
   padding: 7rem 7%;
   display: flex;
   justify-content: center;
@@ -2468,7 +2468,7 @@ header.header-scroll {
  *********
 */
 .quality-section {
-  padding: 1.5rem 5% 2rem;
+  padding: 2.5rem 5% 3rem;
 }
 .quality-section .section-container {
   display: flex;
