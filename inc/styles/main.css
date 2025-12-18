@@ -1349,9 +1349,9 @@ img {
 }
 
 /*
- ***********
+ ********
  # Header
- ***********
+ ********
 */
 header {
   position: fixed;
@@ -2552,6 +2552,7 @@ header.header-scroll {
   padding: 0.5rem 0;
   margin: 0 auto;
   gap: 1.5rem;
+  scroll-behavior: auto;
 }
 .categories-section .section-container .slider-wrapper .category-item {
   display: block;
@@ -2581,7 +2582,7 @@ header.header-scroll {
   padding: 0 0.2rem;
 }
 .categories-section .section-container .slider-wrapper .category-item .content .category-name {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   color: var(--gray11);

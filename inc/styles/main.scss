@@ -1180,9 +1180,9 @@ img {max-width:100%;
 }
 
 /*
- ***********
+ ********
  # Header
- ***********
+ ********
 */
 header {position:fixed;
         top:0;
@@ -2248,6 +2248,7 @@ header {position:fixed;
       .slider-wrapper {padding:0.5rem 0;
                        margin:0 auto;
                        gap:1.5rem;
+                       scroll-behavior:auto;
               
               .category-item {display:block;
                               padding:1rem 0.2rem;
@@ -2273,7 +2274,7 @@ header {position:fixed;
                             width:100%;
                             padding:0 0.2rem;
 
-                      .category-name {font-size:1.1rem;
+                      .category-name {font-size:1rem;
                                       font-weight:bold;
                                       text-align:center;
                                       color:var(--gray11);}
