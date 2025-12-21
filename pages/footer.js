@@ -68,12 +68,12 @@ const footerContent = `
       </div>
       <div class="col-sm-6 col-xs-12">
         <div class="visa-cards d-flex-r-end-c">
-          <img src="../admin/inc/images/norton.png" alt="">
-          <img src="../admin/inc/images/TRUSTe.jpg" alt="">
-          <img src="../admin/inc/images/authorizenet.png" alt="">
-          <img src="../admin/inc/images/visa.png" alt="">
-          <img src="../admin/inc/images/mastercard.png" alt="">
-          <img src="../admin/inc/images/accredited.png" alt="">
+          <img src="admin/inc/images/payment-ways/norton.png" alt="">
+          <img src="admin/inc/images/services/TRUSTe.jpg" alt="">
+          <img src="admin/inc/images/services/authorizenet.png" alt="">
+          <img src="admin/inc/images/payment-ways/visa.png" alt="">
+          <img src="admin/inc/images/payment-ways/mastercard.png" alt="">
+          <img src="admin/inc/images/services/accredited.png" alt="">
         </div>
       </div>
     </div>
