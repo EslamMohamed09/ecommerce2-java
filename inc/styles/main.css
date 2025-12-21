@@ -215,6 +215,7 @@
   --grayblue7:#18495c;
   --grayblue8:#204b5c;
   --grayblue9:#2a4f5e;
+  --navy:#0F172A;
   --navyblue:#8B8E98;
   --navyblue2:#6a7a8d;
   --navyblue3:#424b64;
@@ -4636,6 +4637,43 @@ header.header-scroll {
   width: 7rem;
   height: 7rem;
   margin: 1rem auto !important;
+}
+
+/*
+ *********************
+  # newsletter-section
+ *********************
+*/
+.newsletter-section {
+  padding: 6rem 0;
+  background-color: var(--navy);
+  color: var(--white);
+}
+.newsletter-section h2 {
+  color: var(--white);
+}
+.newsletter-section p {
+  color: var(--white);
+  opacity: 0.8;
+  margin: 1rem 0;
+}
+.newsletter-section .newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+.newsletter-section .newsletter-form input {
+  flex: 1;
+  background: transparent;
+  padding: 0 1.5rem;
+  color: var(--white);
+  font-size: 1rem;
+}
+.newsletter-section .newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /*

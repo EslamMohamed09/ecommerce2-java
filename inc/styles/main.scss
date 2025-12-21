@@ -233,6 +233,8 @@
        --grayblue8:#204b5c;
        --grayblue9:#2a4f5e;
 
+       --navy:#0F172A;
+
        --navyblue:#8B8E98;
        --navyblue2:#6a7a8d;
        --navyblue3:#424b64;
@@ -1512,7 +1514,7 @@ header {position:fixed;
                          position:relative;
 
           svg,i {color:var(--white);
-                  font-size:1.3rem;}
+                 font-size:1.3rem;}
 
           .value {position:absolute;
                   top:-0.5rem;
@@ -1599,10 +1601,10 @@ header {position:fixed;
                   &.show {display:block !important;}
 
               .option {padding:5px 6px;
-                        cursor:pointer;
-                        display:flex;
-                        align-items:center;
-                        gap:8px;
+                       cursor:pointer;
+                       display:flex;
+                       align-items:center;
+                       gap:8px;
                       &:hover {background:var(--olive14);}
 
                 span {font-size:1rem !important;
@@ -4154,6 +4156,39 @@ header {position:fixed;
                    height:7rem;
                    margin:1rem auto !important;}
         }
+}
+
+/*
+ *********************
+  # newsletter-section
+ *********************
+*/
+.newsletter-section {padding:6rem 0;
+                     background-color:var(--navy);
+                     color:var(--white);
+
+  h2 {color:var(--white);}
+
+  p {color:var(--white);
+     opacity:0.8; 
+     margin:1rem 0;}
+
+  .newsletter-form {display:flex;
+                    max-width:500px;
+                    margin:2rem auto 0;
+                    background:rgba(255, 255, 255, 0.1);
+                    padding:0.5rem;
+                    border-radius:50px;
+
+    input {flex:1;
+           background:transparent;
+           padding:0 1.5rem;
+           color:var(--white);
+           font-size:1rem;
+
+      &::placeholder {color:rgba(255, 255, 255, 0.6);}
+    }
+  }
 }
 
 /*
