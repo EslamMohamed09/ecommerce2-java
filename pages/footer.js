@@ -4,35 +4,35 @@ const footerContent = `
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-widget">
           <h4>shop</h4>
-          <p>electronics</p>
-          <p>women clothes</p>
-          <p>mens's clothes</p>
-          <p>winter collection</p>
-          <p>furniture</p>
+          <a href="">electronics</a>
+          <a href="">women clothes</a>
+          <a href="">mens's clothes</a>
+          <a href="">winter collection</a>
+          <a href="">furniture</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-widget">
           <h4>further info</h4>
-          <p>about</p>
-          <p>customer service</p>
-          <p>reward program</p>
-          <p>shipping & returns</p>
-          <p>privacy policy</p>
-          <p>terms & conditions</p>
-          <p>blog</p>
+          <a href="">about</a>
+          <a href="">customer service</a>
+          <a href="">reward program</a>
+          <a href="">shipping & returns</a>
+          <a href="">privacy policy</a>
+          <a href="">terms & conditions</a>
+          <a href="">blog</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-widget">
           <h4>customer service</h4>
-          <p>search terms</p>
-          <p>advanced search</p>
-          <p>orders & returns</p>
-          <p>contact us</p>
-          <p>Theme FAQs</p>
-          <p>consultant</p>
-          <p>store locations</p>
+          <a href="">search terms</a>
+          <a href="">advanced search</a>
+          <a href="">orders & returns</a>
+          <a href="">contact us</a>
+          <a href="">Theme FAQs</a>
+          <a href="">consultant</a>
+          <a href="">store locations</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">

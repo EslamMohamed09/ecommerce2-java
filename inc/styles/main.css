@@ -4975,12 +4975,12 @@ footer .footer-container .footer-widget h4 {
   font-weight: bold;
   color: var(--gray2);
 }
-footer .footer-container .footer-widget p {
+footer .footer-container .footer-widget a {
   text-transform: capitalize;
   color: var(--gray3);
   padding: 0.5rem 0;
 }
-footer .footer-container .footer-widget p a {
+footer .footer-container .footer-widget a a {
   color: var(--gray8);
 }
 footer .footer-container .footer-widget .contacts {
