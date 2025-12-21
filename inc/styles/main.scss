@@ -4247,6 +4247,39 @@ header {position:fixed;
 }
 
 /*
+ *********************
+  # newsletter-section
+ *********************
+*/
+.instagram-section {padding:0;
+                    display:grid;
+                    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+                    gap:0;
+
+  .insta-item {position:relative;
+               aspect-ratio:1;
+               overflow:hidden;
+
+    img {width:100%;
+         height:100%;
+         object-fit:cover;}
+
+    &:hover .insta-overlay {opacity:1;}
+  }
+
+  .insta-overlay {position:absolute;
+                  inset:0;
+                  background:rgba(0, 0, 0, 0.5);
+                  display:flex;
+                  align-items:center;
+                  justify-content:center;
+                  color:var(--white);
+                  font-size:2rem;
+                  opacity:0;
+                  transition:0.3s;}
+}
+
+/*
  ************
  # Quick view
  ************
