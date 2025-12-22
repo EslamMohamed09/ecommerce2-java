@@ -2727,14 +2727,14 @@ header.header-scroll {
   width: 2rem;
   height: 5rem;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0;
-  color: var(--white);
-  background: var(--black);
+  color: var(--olive12);
+  background: var(--olive22);
   cursor: pointer;
 }
 .categories-section .section-container #sliderdots {
@@ -2816,7 +2816,7 @@ header.header-scroll {
   justify-content: space-between;
   align-items: center;
   flex: 1 1 25rem;
-  height: 11rem;
+  height: 10rem;
   gap: 1rem;
   padding: 2% 1.5%;
   background-color: var(--lightblue1);
@@ -4606,8 +4606,8 @@ header.header-scroll {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--white);
-  background: var(--black);
+  color: var(--olive12);
+  background: var(--olive22);
   border: 1px solid var(--black);
   cursor: pointer;
 }
@@ -4657,7 +4657,11 @@ header.header-scroll {
   }
 }
 @media (max-width: 300px) {
-  .month-deal-section .product-card .left-block .image img {
+  .month-deal-section .slider-wrapper {
+    height: 60rem !important;
+    background: var(--red4);
+  }
+  .month-deal-section .slider-wrapper .product-card .left-block .image img {
     width: 11rem;
     height: 11rem;
   }
@@ -4968,6 +4972,7 @@ footer .footer-container {
 footer .footer-container .footer-widget {
   text-align: left;
   background-color: transparent;
+  display: block;
 }
 footer .footer-container .footer-widget h4 {
   text-transform: uppercase;
@@ -4976,12 +4981,17 @@ footer .footer-container .footer-widget h4 {
   color: var(--gray2);
 }
 footer .footer-container .footer-widget a {
+  display: block;
+  color: var(--gray3);
+  font-size: 1.05rem;
+}
+footer .footer-container .footer-widget a:not(:last-child) {
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-widget p {
   text-transform: capitalize;
   color: var(--gray3);
   padding: 0.5rem 0;
-}
-footer .footer-container .footer-widget a a {
-  color: var(--gray8);
 }
 footer .footer-container .footer-widget .contacts {
   margin-top: 1.5rem;
