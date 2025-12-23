@@ -2280,12 +2280,12 @@ header.header-scroll {
 }
 .hero-section .slider-wrapper .hero-slide-item .right-block {
   flex: 1 1 25rem;
-  position: relative;
   z-index: 0;
+  position: relative;
 }
 .hero-section .slider-wrapper .hero-slide-item .right-block img {
-  width: 15rem;
-  height: 15rem;
+  width: 35%;
+  height: 35%;
   object-fit: contain;
 }
 .hero-section .slider-wrapper .hero-slide-item.active {

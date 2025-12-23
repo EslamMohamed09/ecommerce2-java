@@ -1670,13 +1670,10 @@ header {position:fixed;
             a {color:var(--white);
                font-size:1.1rem;
                text-transform:capitalize;}
-
           }
 
           li:hover {background-color:var(--olive14);}
-
         }
-
       }
     }
   }
@@ -2062,11 +2059,11 @@ header {position:fixed;
         }
 
         .right-block {flex:1 1 25rem;
-                      position:relative;
                       z-index:0;
+                      position:relative;
 
-          img {width:15rem;
-               height:15rem;
+          img {width:35%;
+               height:35%;
                object-fit:contain;}
         }
 
