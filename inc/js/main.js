@@ -163,12 +163,20 @@ if (header) {
     document.querySelectorAll('header .main-header .middle-bar .services-buttons .service-button .value span').forEach((span) => {
       let number = span.textContent.trim();
 
-      if (/^\d{3,}$/.test(number)) {
+      if (/^\d{4,}$/.test(number)) {
 
         if (window.innerWidth < 690) {
           span.parentElement.style.padding = '5px 2px 4px 2px';
         } else {
-          span.parentElement.style.padding = '6px 2px 5.5px';
+          span.parentElement.style.padding = '7px 2px 6.5px';
+        }
+
+      } else if (/^\d{3}$/.test(number)) {
+
+        if (window.innerWidth < 690) {
+          span.parentElement.style.padding = '5px 2px 4px 2px';
+        } else {
+          span.parentElement.style.padding = '6px 2.9px 5.5px';
         }
 
       } else if (/^\d{2}$/.test(number)) {
@@ -176,7 +184,7 @@ if (header) {
         if (window.innerWidth < 690) {
           span.parentElement.style.padding = '4px 2.7px 3px 2.7px';
         } else {
-          span.parentElement.style.padding = '5px 3.5px';
+          span.parentElement.style.padding = '6px 3.5px';
         }
 
       } else {
@@ -184,14 +192,14 @@ if (header) {
         if (window.innerWidth < 690) {
           span.parentElement.style.padding = '3px 4px 2px';
         } else {
-          span.parentElement.style.padding = '5px';
+          span.parentElement.style.padding = '5px 6px';
         }
 
       }
     });
 
     let productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
-    document.querySelector(".main-header .middle-bar .services-buttons .cart-icon span").textContent = productsCart.length;
+    document.querySelector(".main-header .middle-bar .services-buttons .cart-button span").textContent = productsCart.length;
 
     const topBar = document.querySelector('header .top-bar');
 
@@ -201,7 +209,7 @@ if (header) {
         topBar.style.display = 'none';
       } else {
         header.classList.remove("header-scroll");
-        if (header.classList.length === 0) { header.removeAttribute('class'); }
+        if (header.classList.length === 0) {header.removeAttribute('class');}
         topBar.style.display = 'flex';
       }
 
@@ -209,7 +217,7 @@ if (header) {
         topBar.classList.add("header-scroll");
       } else {
         topBar.classList.remove("header-scroll");
-        if (topBar.classList.length === 0) { topBar.removeAttribute('class'); }
+        if (topBar.classList.length === 0) {topBar.removeAttribute('class');}
       }
     });
 
