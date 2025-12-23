@@ -81,18 +81,19 @@ const headerContent = `
         <button class="search-btn"><i class="fas fa-search"></i></button>
       </form>
 
-      <div class="services-buttons d-flex-r-st-c">
-        <a href="#" class="service-button d-flex-r-c-c">
+      <div class="action-buttons d-flex-r-st-c">
+
+        <a href="#" class="action-button d-flex-r-c-c">
           <i class="fa-solid fa-code-compare"></i>
           <div class="value"><span>125</span></div>
         </a>
 
-        <a href="/pages/favourite.html" class="service-button like-button d-flex-r-c-c">
+        <a href="/pages/favourite.html" class="action-button like-button d-flex-r-c-c">
           <i class="far fa-heart"></i>
           <div class="value"><span>84</span></div>
         </a>
 
-        <a href="/pages/cart.html" class="service-button cart-button d-flex-r-c-c">
+        <a href="/pages/cart.html" class="action-button cart-button d-flex-r-c-c">
           <i class="fas fa-shopping-cart"></i>
           <div class="value"><span></span></div>
         </a>

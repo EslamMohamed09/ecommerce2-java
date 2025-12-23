@@ -160,7 +160,7 @@ if (header) {
     });
 
     // padding to notification of action buttons
-    document.querySelectorAll('header .main-header .middle-bar .services-buttons .service-button .value span').forEach((span) => {
+    document.querySelectorAll('header .main-header .middle-bar .action-buttons .action-button .value span').forEach((span) => {
       let number = span.textContent.trim();
 
       if (/^\d{4,}$/.test(number)) {
@@ -176,7 +176,7 @@ if (header) {
         if (window.innerWidth < 690) {
           span.parentElement.style.padding = '5px 2px 4px 2px';
         } else {
-          span.parentElement.style.padding = '6px 2.9px 5.5px';
+          span.parentElement.style.padding = '6px 2.9px';
         }
 
       } else if (/^\d{2}$/.test(number)) {
@@ -184,7 +184,7 @@ if (header) {
         if (window.innerWidth < 690) {
           span.parentElement.style.padding = '4px 2.7px 3px 2.7px';
         } else {
-          span.parentElement.style.padding = '6px 3.5px';
+          span.parentElement.style.padding = '6px 3.5px 5.5px';
         }
 
       } else {
@@ -199,7 +199,7 @@ if (header) {
     });
 
     let productsCart = JSON.parse(localStorage.getItem('ecommerce2-product-cart')) || [];
-    document.querySelector(".main-header .middle-bar .services-buttons .cart-button span").textContent = productsCart.length;
+    document.querySelector(".main-header .middle-bar .action-buttons .cart-button span").textContent = productsCart.length;
 
     const topBar = document.querySelector('header .top-bar');
 

@@ -1750,37 +1750,36 @@ header .main-header .middle-bar .search-form .search-btn svg, header .main-heade
   color: var(--olive14);
   font-size: 1.1rem;
 }
-header .main-header .middle-bar .services-buttons {
+header .main-header .middle-bar .action-buttons {
   width: fit-content;
   gap: 2.2rem;
 }
-header .main-header .middle-bar .services-buttons .service-button {
+header .main-header .middle-bar .action-buttons .action-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.1rem;
   position: relative;
 }
-header .main-header .middle-bar .services-buttons .service-button svg, header .main-header .middle-bar .services-buttons .service-button i {
+header .main-header .middle-bar .action-buttons .action-button svg, header .main-header .middle-bar .action-buttons .action-button i {
   color: var(--white);
   font-size: 1.3rem;
 }
-header .main-header .middle-bar .services-buttons .service-button .value {
+header .main-header .middle-bar .action-buttons .action-button .value {
   position: absolute;
-  top: -0.5rem;
-  right: -0.8rem;
-  width: fit-content;
-  height: fit-content;
-  padding: 5px;
-  margin-bottom: 1rem;
-  border-radius: 50%;
+  top: -0.8rem;
+  right: -0.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 1rem;
+  border-radius: 50%;
   color: yellow;
   background-color: var(--olive15);
 }
-header .main-header .middle-bar .services-buttons .service-button .value span {
+header .main-header .middle-bar .action-buttons .action-button .value span {
   width: fit-content;
   height: fit-content;
   padding: 0;
