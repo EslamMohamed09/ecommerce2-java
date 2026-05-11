@@ -548,7 +548,7 @@ html {
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(125deg, var(--olive16) 0%, var(--olive13) 100%);
   border-radius: 0;
-  cursor: pointer;
+  cursor: grab;
 }
 
 *::selection {
