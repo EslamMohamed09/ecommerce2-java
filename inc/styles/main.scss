@@ -609,9 +609,9 @@ html {font-size:83% !important;
 }
 
 /*
- ==========
+ =========
   # GLOBAL
- ==========
+ =========
 */
 section {padding:2rem 5%;
          margin:0 !important;
@@ -4455,7 +4455,7 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
 
     .footer-widget {text-align:left;
                     background-color:transparent;
-                    display: block;
+                    display:block;
 
       h4 {text-transform:uppercase;
           margin-bottom:1.5rem;
@@ -4480,24 +4480,24 @@ footer {background:linear-gradient(to top, var(--olive20), var(--olive17) 60%, v
       }
 
       .social {gap:0.7rem;
-              margin-top:0.8rem;
-              padding-left:0;
+               margin-top:0.8rem;
+               padding-left:0;
         li {display:flex;
             justify-content:center;
             align-items:center;
 
           a {display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            width:2.4rem;
-            height:2.4rem;
-            margin:0 !important;
-            border-radius:50%;
-            font-size:1rem;
-            background-color:var(--olive14);
+             justify-content:center;
+             align-items:center;
+             text-align:center;
+             width:2.4rem;
+             height:2.4rem;
+             margin:0 !important;
+             border-radius:50%;
+             font-size:1rem;
+             background-color:var(--olive14);
             svg,i {color:var(--white);
-                  margin:0 !important;}
+                   margin:0 !important;}
           }
 
           a:hover {background-color:var(--gray2);}
