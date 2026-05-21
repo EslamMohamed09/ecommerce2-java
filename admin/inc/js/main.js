@@ -364,7 +364,6 @@ if(document.querySelector("#login-section")){
   }
 }
 
-
 /*
 ======================
 ######## ASIDE #######
@@ -435,11 +434,9 @@ document.addEventListener('asideLoaded', () => {
     pageContainer.addEventListener("transitionend", handleSectionMargin);
 });
 
-
 if(window.location.pathname.split('/').pop().split('.')[0] !== "login"){
    loadHtml('#main-aside', asideContent, "aside");
 }
-
 
 function eyeFunction(eyeIcon) {
     const passInput = eyeIcon.previousElementSibling;
@@ -984,7 +981,6 @@ if(document.querySelector('.add-product-page')){
 
 }
 
-
 /*
  =============================
  ######### USERS PAGE ########
@@ -1161,7 +1157,6 @@ fetch('database/users.json').then(response => response.json())
   });
 
 }
-
 
 /*
  ######################
