@@ -1464,19 +1464,19 @@ if (document.querySelector("#single-page")) {
         }).join('');
 
         const siblingProductsBlock = document.createElement('div');
-        siblingProductsBlock.classList.add('sibling-products-block');
+              siblingProductsBlock.classList.add('sibling-products-block');
 
         const siblingProductsContainer = document.createElement('div');
-        siblingProductsContainer.classList.add('sibling-products-container');
+              siblingProductsContainer.classList.add('sibling-products-container');
 
         const siblingProductsWrapper = document.createElement('div');
-        siblingProductsWrapper.classList.add('slider-wrapper');
+              siblingProductsWrapper.classList.add('slider-wrapper');
 
         const siblingProductsHeading = document.createElement('div'); // block title
-        siblingProductsHeading.classList.add('block-heading');
+              siblingProductsHeading.classList.add('block-heading');
 
         const siblingProductsTitle = document.createElement('h3');
-        siblingProductsTitle.classList.add('block-heading-title');
+              siblingProductsTitle.classList.add('block-heading-title');
 
         siblingProductsTitle.textContent = 'related items';
 
