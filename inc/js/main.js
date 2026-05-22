@@ -1343,7 +1343,7 @@ if (document.querySelector("#single-page")) {
       let parentCategoriesHtml = parentCategories.map((parentCategory, index) => `
       <li class="d-flex-r-c-c">
         ${index !== 0 ? '<i class="fas fa-chevron-left"></i>' : ''}
-        <a href="category.html?id=${parentCategory.id}" class="catlink">${parentCategory.name}</a>
+        <a href="category.html?id=${parentCategory.id}" class="catlink">${parentCategory.title}</a>
       </li>`).join('');
 
       const parentCategoriesHolder = document.querySelector('#single-page .product-container .left-block .parent-categories-holder');
@@ -2550,16 +2550,16 @@ if (document.querySelector(".category-page")) {
 
     let parentCategoryHTML = parentCategories.map((parentCategory, index) => {
       if (index < totalParentCategories - 1) {
-        return `<li class="categorylist parentcategorylist"><a href="category.html?id=${parentCategory.id}" class="categorylink">${parentCategory.name}</a></li>`;
+        return `<li class="categorylist parentcategorylist"><a href="category.html?id=${parentCategory.id}" class="categorylink">${parentCategory.title}</a></li>`;
       } else {
-        return `<li class="categorylist thiscategorylist">${parentCategory.name}</li>`;
+        return `<li class="categorylist thiscategorylist">${parentCategory.title}</li>`;
       }
     }).join('');
 
     let childCategoryHTML = '';
     if (childCategories.length > 0) {
       childCategoryHTML = childCategories.map(childCategory => {
-        return `<li class="childs-categorylist"><a href="category.html?id=${childCategory.id}" class="categorylink childs-categorylink">${childCategory.name}</a></li>`;
+        return `<li class="childs-categorylist"><a href="category.html?id=${childCategory.id}" class="categorylink childs-categorylink">${childCategory.title}</a></li>`;
       }).join('');
     }
 
@@ -2613,7 +2613,7 @@ if (document.querySelector(".category-page")) {
             childChildsFooterHtml = `
                   <div class="cat-item-footer d-flex-c-st-st">
                     ${childCategoryChilds.map(childCategoryChild => `
-                      <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.name}</a>
+                      <a href="category.html?id=${childCategoryChild.id}" class="category-btn">${childCategoryChild.title}</a>
                     `).join('')}
                   </div>`;
           }
@@ -2621,7 +2621,7 @@ if (document.querySelector(".category-page")) {
           return `<div class="category-item ${hasChildClass}">
                       <a href="category.html?id=${childCategory.id}">
                         <div class="image d-flex-r-c-c"><img src="${childCategory.Image}" alt=""></div>
-                        <h4>${childCategory.name}</h4>
+                        <h4>${childCategory.title}</h4>
                       </a>
                       ${childChildsFooterHtml}
                     </div>`
