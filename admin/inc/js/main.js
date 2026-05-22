@@ -574,7 +574,7 @@ fetch('database/categories.json').then(response => response.json())
     if (!category.parent_id) {return { parentName: 'no parent', level: 1 };}
     const parentCategory = categoriesMap.get(category.parent_id);
     const parentDetails = getCategoryDetails(parentCategory);
-    return { parentName: parentCategory.name, level: parentDetails.level + 1 };
+    return { parentName: parentCategory.title, level: parentDetails.level + 1 };
   }
 
   function renderCategoryContent(currentCategories) {
@@ -587,12 +587,12 @@ fetch('database/categories.json').then(response => response.json())
       row.innerHTML = `
         <td><input type="checkbox" name="checkbox[]" id="cat-name-${category.id}"></td>
         <td>
-          <label for="cat-name-${category.id}">${category.name}</label>
+          <label for="cat-name-${category.id}">${category.title}</label>
           <div class="buttons">
             <a href="#">edit</a> | <a href="#">delete</a>
           </div>
         </td>
-        <td><img src="${category.Image}" alt="${category.name}" width="50"></td>
+        <td><img src="${category.Image}" alt="${category.title}" width="50"></td>
         <td>${parentName}</td>
         <td class="level-${level}">level ${level}</td>
         <td>${category.id}</td>
@@ -958,7 +958,7 @@ if(document.querySelector('.add-product-page')){
 
         arrangedHTML += `
           <option value="${category.id}" class="level-${level}">
-            ${indent}${category.name}${levelLabel}
+            ${indent}${category.title}${levelLabel}
           </option>`;
 
         arrangedHTML += arrangeCategories(categories, category.id, level + 1);
