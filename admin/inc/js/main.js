@@ -32,59 +32,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function loadHtml(selector, htmlContent, type){
-  document.querySelector(selector).innerHTML = htmlContent;
-
-  if(type === "header"){document.dispatchEvent(new Event("headerLoaded"));}
-  if(type === "aside"){document.dispatchEvent(new Event("asideLoaded"));}
-}
-
 if(document.querySelector('.header')){
 
-document.addEventListener('headerLoaded', () => {
-  const themeToggler = document.getElementById("theme-toggler");
-  const adjustIcon = document.getElementById("adjust-icon");
-  const moonIcon = document.getElementById("moon-icon");
+  document.addEventListener('headerLoaded', () => {
+    const themeToggler = document.getElementById("theme-toggler");
+    const adjustIcon = document.getElementById("adjust-icon");
+    const moonIcon = document.getElementById("moon-icon");
 
-  function saveTheme(theme) {
-    if (theme === 'dark') {
-        document.body.classList.add('dark-theme-variable');
-        moonIcon.classList.add('active');
-        adjustIcon.classList.remove('active');
-    } else {
-      document.body.classList.remove('dark-theme-variable');
-      adjustIcon.classList.add('active');
-      moonIcon.classList.remove('active');
+    function saveTheme(theme) {
+      if (theme === 'dark') {
+          document.body.classList.add('dark-theme-variable');
+          moonIcon.classList.add('active');
+          adjustIcon.classList.remove('active');
+      } else {
+        document.body.classList.remove('dark-theme-variable');
+        adjustIcon.classList.add('active');
+        moonIcon.classList.remove('active');
+      }
     }
-  }
 
-  saveTheme(localStorage.getItem('ecommerce2-dashboard-theme'));
+    saveTheme(localStorage.getItem('ecommerce2-dashboard-theme'));
 
-  themeToggler.addEventListener("click", () => {
-      document.body.classList.toggle('dark-theme-variable');
-      
-      themeToggler.querySelector('.fa-moon').classList.toggle('active');
-      themeToggler.querySelector('.fa-adjust').classList.toggle('active');
+    themeToggler.addEventListener("click", () => {
+        document.body.classList.toggle('dark-theme-variable');
+        
+        themeToggler.querySelector('.fa-moon').classList.toggle('active');
+        themeToggler.querySelector('.fa-adjust').classList.toggle('active');
 
-      const currentTheme = document.body.classList.contains('dark-theme-variable') ? 'dark' : 'light';
-      localStorage.setItem('ecommerce2-dashboard-theme', currentTheme);
+        const currentTheme = document.body.classList.contains('dark-theme-variable') ? 'dark' : 'light';
+        localStorage.setItem('ecommerce2-dashboard-theme', currentTheme);
+    });
+
+    let dropmenu = document.querySelector('.header .right-header .content .drop-menu');
+    let rightheader = document.querySelector('.header .right-header');
+    const profileImg = document.querySelector('.header .right-header #profile-img');
+
+    profileImg.onclick = (event) => {
+      event.stopPropagation(); // Prevents the click event from propagating to the document body
+      dropmenu.classList.toggle('dropactive');
+      rightheader.classList.remove('dropactive');
+    };
+    document.body.addEventListener('click', (event) => { // Add click event listener to the document body
+      if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
+          dropmenu.classList.remove('dropactive');
+      }
+    });
   });
-
-  let dropmenu = document.querySelector('.header .right-header .content .drop-menu');
-  let rightheader = document.querySelector('.header .right-header');
-  const profileImg = document.querySelector('.header .right-header #profile-img');
-
-  profileImg.onclick = (event) => {
-    event.stopPropagation(); // Prevents the click event from propagating to the document body
-    dropmenu.classList.toggle('dropactive');
-    rightheader.classList.remove('dropactive');
-  };
-  document.body.addEventListener('click', (event) => { // Add click event listener to the document body
-    if (!profileImg.contains(event.target) && !dropmenu.contains(event.target)) {// Check if the clicked element is not the image or the dropdown menu
-        dropmenu.classList.remove('dropactive');
-    }
-  });
-});
 
 }
 
@@ -390,8 +383,8 @@ document.addEventListener('asideLoaded', () => {
     function updateAsideMenuClass(){
       if(!isToggledByButton){
         if(window.innerWidth < 768){
-            asideMenu.classList.add("smallaside");
-            asideButton.style.transform = "rotate(180deg)";
+           asideMenu.classList.add("smallaside");
+           asideButton.style.transform = "rotate(180deg)";
         } else {
           asideMenu.classList.remove("smallaside");
           asideButton.style.transform = "rotate(0deg)";
@@ -494,9 +487,9 @@ collapsibleProfileBtn.addEventListener("click", function() {
 }
 
 /*
- ===============================
- ######## CUSTOMERS PAGE #######
- ===============================
+ ===========================
+ ##### CUSTOMERS PAGE ######
+ ===========================
 */
 if(document.getElementById("visaInput")){
 
@@ -558,9 +551,9 @@ fetch('database/customers.json').then(response => response.json())
 }
 
 /*
- ===============================
- ######## CATEGORIES PAGE ######
- ===============================
+ ===========================
+ ##### CATEGORIES PAGE #####
+ ===========================
 */
 if(document.querySelector('.category-page')){
 fetch('database/categories.json').then(response => response.json())
@@ -628,126 +621,126 @@ if(document.querySelector('.orders-list-page')){
 
       const ordersCountMenuElement = document.querySelector('.orders-list-page .table-header .orders-tabs-menu');
       const ordersListTbody = document.querySelector('.orders-list-page .manage-orders-table-form #orders-list-tbody');
-      const paginationContainer = document.querySelector('.orders-list-page .manage-orders-table-form .pagination');
+      const paginationContainer = document.querySelector('.orders-list-page .manage-orders-table-form .pagination-wrapper');
+      const ordersForm = document.querySelector('.orders-list-page .manage-orders-table-form');
 
-        function renderOrders(ordersToRender){
+      function renderOrders(ordersToRender){
 
-          ordersListTbody.innerHTML = ordersToRender.map((order) => {
-            return `
-                <tr class="${order.status}">
-                    <td>
-                      <label class="checkbox-label">
-                        <input type="checkbox" name="checkbox[]">
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>${order.id}</td>
-                    <td>
-                      <div class="title-field d-flex-r-st-c">
-                        <a href="#" class="image"><img src="${order.image}" alt=""></a>
-                        <a href="#" class="title"${order.customername}</a>
-                      </div>
-                    </td>  
-                    <td>${order.totalPrice}</td>
-                    <td><p class="${order.status}">${order.status}</p></td>
-                    <td>${order.paymentMethod}</td>
-                    <td>${order.date}</td>
-                    <td class="action-buttons-field">
-                      <div class="action-buttons-dropdown">
-                        <button type="button" class="action-buttons-dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
-                        <ul class="action-buttons-menu">
-                          <li><i class="fas fa-eye"></i>view</li>
-                          <li><i class="far fa-edit"></i></i>edit</li>
-                          <li><i class="fas fa-trash-alt"></i><input type="submit" value="delete"></li>
-                        </ul>
-                      </div>
-                    </td>
-                </tr>
-            `
-          }).join('');
-          initDropdownActions();
-          displayRowsActionButtons(document.querySelector('.orders-list-page .manage-orders-table-form'));
-        }
+        ordersListTbody.innerHTML = ordersToRender.map((order) => {
+          return `
+              <tr class="${order.status}">
+                  <td>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="checkbox[]" class="row-check">
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>${order.id}</td>
+                  <td>
+                    <div class="title-field d-flex-r-st-c">
+                      <a href="#" class="image"><img src="${order.image}" alt=""></a>
+                      <a href="#" class="title"${order.customername}</a>
+                    </div>
+                  </td>  
+                  <td>${order.totalPrice}</td>
+                  <td><p class="${order.status}">${order.status}</p></td>
+                  <td>${order.paymentMethod}</td>
+                  <td>${order.date}</td>
+                  <td class="action-buttons-field">
+                    <div class="action-buttons-dropdown">
+                      <button type="button" class="action-buttons-dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
+                      <ul class="action-buttons-menu">
+                        <li><i class="fas fa-eye"></i>view</li>
+                        <li><i class="far fa-edit"></i></i>edit</li>
+                        <li><i class="fas fa-trash-alt"></i><input type="submit" value="delete"></li>
+                      </ul>
+                    </div>
+                  </td>
+              </tr>
+          `
+        }).join('');
+        initDropdownActions();
+        displayRowsActionButtons(ordersForm);
+      }
 
-        function filterOrders(status) {
-          filteredOrders = status === "all" ? [...orders] : orders.filter(o => o.status === status);
-          pagination(filteredOrders, 5, renderOrders, paginationContainer);
-        }
+      function filterOrders(status) {
+        filteredOrders = status === "all" ? [...orders] : orders.filter(o => o.status === status);
+        pagination(filteredOrders, 5, renderOrders, paginationContainer);
+      }
 
-        function setupTabs(){
-          tabs = [
-            {class:"all", label:"All", count:orders.length},
-            {class:"delivered", label:"Delivered", count:orders.filter(o => o.status === 'delivered').length},
-            {class:"pending", label:"Pending", count:orders.filter(o => o.status === 'pending').length},
-            {class:"canceled", label:"Canceled", count:orders.filter(o => o.status === 'canceled').length}
-          ];
-  
-          ordersCountMenuElement.innerHTML = tabs.map(tab => {
-            return `<li class="${tab.class}" data-status="${tab.class}"><p>${tab.label}</p><span>${tab.count}</span></li>`;
-          }).join('');
-          
-          const ordersTabs = document.querySelectorAll('.orders-list-page .table-header .orders-tabs-menu li');
-  
-          ordersTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-              ordersTabs.forEach((tab) => {tab.classList.remove('active')});
-              tab.classList.add('active');
-              filterOrders(tab.dataset.status);
-            });
-          });
+      function setupTabs(){
+        tabs = [
+          {class:"all", label:"All", count:orders.length},
+          {class:"delivered", label:"Delivered", count:orders.filter(o => o.status === 'delivered').length},
+          {class:"pending", label:"Pending", count:orders.filter(o => o.status === 'pending').length},
+          {class:"canceled", label:"Canceled", count:orders.filter(o => o.status === 'canceled').length}
+        ];
 
-          const defaultTab = Array.from(ordersTabs).find((tab) => tab.classList.contains("all"));
-          if (defaultTab) defaultTab.click();
-        }
-
-
-        function initDropdownActions() {
-            const dropdownToggles = document.querySelectorAll('.action-buttons-dropdown-toggle');
-
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                    const dropdownMenu = this.nextElementSibling;
-
-                    // Close all other dropdowns
-                    dropdownToggles.forEach(t => {
-                        if (t !== toggle) {
-                            t.parentElement.classList.remove('active');
-                            t.nextElementSibling.style.top = '';
-                            t.nextElementSibling.style.bottom = '';
-                        }
-                    });
-
-                    const isActive = this.parentElement.classList.contains('active');
-                    if (!isActive) {
-                        this.parentElement.classList.add('active');
-
-                        // Adjust dropdown position
-                        const rect = dropdownMenu.getBoundingClientRect();
-                        if (rect.bottom > window.innerHeight) {
-                            dropdownMenu.style.top = 'auto';
-                            dropdownMenu.style.bottom = '100%';
-                        } else {
-                            dropdownMenu.style.top = '100%';
-                            dropdownMenu.style.bottom = 'auto';
-                        }
-                    } else {
-                        this.parentElement.classList.remove('active');
-                    }
-                });
-            });
-
-            document.body.addEventListener('click', (event) => {
-                dropdownToggles.forEach(toggle => {
-                    if (!toggle.contains(event.target) && !toggle.parentElement.contains(event.target)) {
-                        toggle.parentElement.classList.remove('active');
-                    }
-                });
-            });
-        }
+        ordersCountMenuElement.innerHTML = tabs.map(tab => { // writing tabs
+          return `<li class="${tab.class}" data-status="${tab.class}"><p>${tab.label}</p><span>${tab.count}</span></li>`;
+        }).join('');
         
-        setupTabs();
-        filterOrders("all");
+        const ordersTabs = document.querySelectorAll('.orders-list-page .table-header .orders-tabs-menu li');
+
+        ordersTabs.forEach(tab => { // add active class on clicked tab only
+          tab.addEventListener('click', () => {
+            ordersTabs.forEach((tab) => {tab.classList.remove('active')});
+            tab.classList.add('active');
+            filterOrders(tab.dataset.status);
+          });
+        });
+
+        const defaultTab = Array.from(ordersTabs).find((tab) => tab.classList.contains("all"));
+        if (defaultTab) defaultTab.click();
+      }
+
+      function initDropdownActions() {
+        const dropdownToggles = document.querySelectorAll('.action-buttons-dropdown-toggle');
+
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function (event) {
+                event.stopPropagation();
+                const dropdownMenu = this.nextElementSibling;
+
+                // Close all other dropdowns
+                dropdownToggles.forEach(t => {
+                    if (t !== toggle) {
+                        t.parentElement.classList.remove('active');
+                        t.nextElementSibling.style.top = '';
+                        t.nextElementSibling.style.bottom = '';
+                    }
+                });
+
+                const isActive = this.parentElement.classList.contains('active');
+                if (!isActive) {
+                    this.parentElement.classList.add('active');
+
+                    // Adjust dropdown position
+                    const rect = dropdownMenu.getBoundingClientRect();
+                    if (rect.bottom > window.innerHeight) {
+                        dropdownMenu.style.top = 'auto';
+                        dropdownMenu.style.bottom = '100%';
+                    } else {
+                        dropdownMenu.style.top = '100%';
+                        dropdownMenu.style.bottom = 'auto';
+                    }
+                } else {
+                    this.parentElement.classList.remove('active');
+                }
+            });
+        });
+
+        document.body.addEventListener('click', (event) => {
+            dropdownToggles.forEach(toggle => {
+                if (!toggle.contains(event.target) && !toggle.parentElement.contains(event.target)) {
+                    toggle.parentElement.classList.remove('active');
+                }
+            });
+        });
+      }
+      
+      setupTabs();
+      filterOrders("all");
 
     } catch (error) {
       console.error('failed to load orders', error);
@@ -759,9 +752,9 @@ if(document.querySelector('.orders-list-page')){
 }
 
 /*
- =============================
- ######## MESSAGES PAGE ######
- =============================
+ ============================
+ ####### MESSAGES PAGE ######
+ ============================
 */
 if(document.querySelector('.messages-page')){
   const buttonsAsideMenuLists = document.querySelectorAll('.messages-page .buttons-aside .buttons-aside-menu .menu-list');
@@ -865,9 +858,9 @@ if(document.querySelector('.messages-page')){
 }
 
 /*
- =============================
- ######## PRODUCTS PAGE ######
- =============================
+ ============================
+ ####### PRODUCTS PAGE ######
+ ============================
 */
 if(document.querySelector('.products-page')){
 
@@ -886,7 +879,7 @@ fetch('database/products.json').then(response => response.json())
       row.innerHTML = `
         <td>
           <label class="checkbox-label">
-            <input type="checkbox" name="checkbox[]">
+            <input type="checkbox" name="checkbox[]" class="row-check">
             <span class="checkmark"></span>
           </label>
         </td>
@@ -923,9 +916,9 @@ fetch('database/products.json').then(response => response.json())
 }
 
 /*
- =================================
- ######## ADD PRODUCTS PAGE ######
- =================================
+ ============================
+ ##### ADD PRODUCTS PAGE ####
+ ============================
 */
 if(document.querySelector('.add-product-page')){
 
@@ -982,9 +975,9 @@ if(document.querySelector('.add-product-page')){
 }
 
 /*
- =============================
- ######### USERS PAGE ########
- =============================
+ ============================
+ ######## USERS PAGE ########
+ ============================
 */
 if(document.querySelector('#users-page')){
 
@@ -1163,31 +1156,38 @@ fetch('database/users.json').then(response => response.json())
  ####### GLOBAL #######
  ######################
 */
+function loadHtml(selector, htmlContent, type){
+  document.querySelector(selector).innerHTML = htmlContent;
+
+  if(type === "header"){document.dispatchEvent(new Event("headerLoaded"));}
+  if(type === "aside"){document.dispatchEvent(new Event("asideLoaded"));}
+}
+
 function displayRowsActionButtons(tableForm){
-    const headCheckBox = tableForm.querySelector("#head-checkbox");
-    const checkboxes = tableForm.querySelectorAll("input[name='checkbox[]']");
-    const actionBtnsHolder = tableForm.querySelector(".action-buttons-holder");
+  const headCheckBox = tableForm.querySelector("#head-checkbox");
+  const rowsCheckBoxes = tableForm.querySelectorAll(".row-check");
+  const actionBtnsHolder = tableForm.querySelector(".action-buttons-holder");
 
-    if (headCheckBox){
-        
-        function checkedCheckBoxes(){
-          const selectedCheckBoxes = Array.from(checkboxes).filter(checkboxes => checkboxes.checked);
-          if(selectedCheckBoxes.length > 1){
-             actionBtnsHolder.style.display = "flex";
-          } else {
-            actionBtnsHolder.style.display = "none";
-          }
+  if (headCheckBox){
+      
+      function checkedCheckBoxes(){
+        const selectedCheckBoxes = Array.from(rowsCheckBoxes).filter(rowsCheckBoxes => rowsCheckBoxes.checked);
+        if(selectedCheckBoxes.length > 1){
+            actionBtnsHolder.style.display = "flex";
+        } else {
+          actionBtnsHolder.style.display = "none";
         }
+      }
 
-        checkboxes.forEach(checkbox => {
-          checkbox.addEventListener("change", checkedCheckBoxes);
-        });
+      rowsCheckBoxes.forEach(checkbox => {
+        checkbox.addEventListener("change", checkedCheckBoxes);
+      });
 
-        headCheckBox.addEventListener("change", () => {
-          checkboxes.forEach(checkbox => checkbox.checked = headCheckBox.checked);
-          checkedCheckBoxes();
-        });
-    }
+      headCheckBox.addEventListener("change", () => {
+        rowsCheckBoxes.forEach(checkbox => checkbox.checked = headCheckBox.checked);
+        checkedCheckBoxes();
+      });
+  }
 }
 
 function pagination(data, itemsPerPage, renderContent, paginationContainer) {

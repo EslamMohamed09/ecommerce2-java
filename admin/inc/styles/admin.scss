@@ -570,7 +570,7 @@ body {overflow-x:hidden;
 
                      @keyframes square-animation-loader {
                             0% {left:0;
-                            top:0;}
+                                top:0;}
                      
                             10.5% {left:0;
                                    top:0;}
@@ -579,10 +579,10 @@ body {overflow-x:hidden;
                                    top:0;}
                      
                             23% {left:32px;
-                            top:0;}
+                                 top:0;}
                      
                             25% {left:64px;
-                            top:0;}
+                                 top:0;}
                      
                             35.5% {left:64px;
                                    top:0;}
@@ -591,10 +591,10 @@ body {overflow-x:hidden;
                                    top:32px;}
                      
                             48% {left:64px;
-                            top:32px;}
+                                 top:32px;}
                      
                             50% {left:32px;
-                            top:32px;}
+                                 top:32px;}
                      
                             60.5% {left:32px;
                                    top:32px;}
@@ -603,10 +603,10 @@ body {overflow-x:hidden;
                                    top:64px;}
                      
                             73% {left:32px;
-                            top:64px;}
+                                 top:64px;}
                      
                             75% {left:0;
-                            top:64px;}
+                                 top:64px;}
                      
                             85.5% {left:0;
                                    top:64px;}
@@ -615,10 +615,10 @@ body {overflow-x:hidden;
                                    top:32px;}
                      
                             98% {left:0;
-                            top:32px;}
+                                 top:32px;}
                      
                             100% {left:0;
-                            top:0;}
+                                 top:0;}
                      }
               }
        }
@@ -1014,11 +1014,7 @@ button:focus {box-shadow:var(--box-shadow2);}
 section {margin:0 auto;
          padding:3rem 0;}
 
-/*
- *************
-  # TITLES
- **************
-*/
+/************ # TITLES ************/
 .section-heading {display:inline-block;
                   font-size:1.8rem;
                   font-weight:bold;
@@ -1129,9 +1125,7 @@ section {margin:0 auto;
            margin-left:0.5rem;}
 }
 
-/*******************
- # TITLES
-********************/
+/************* # FORMS *************/
 .input-control {font-size:1.2rem;
                 border-radius:0.3rem !important;
                 color:var(--gray10);
@@ -1187,9 +1181,9 @@ textarea {resize:none;
 input[type="file"] {cursor:pointer;}
 
 /*
-===============
+========
  # Forms
-===============
+========
 */
 .form-horizontal {display:block;
                   width:100%;
@@ -1515,13 +1509,13 @@ table {width:100%;
 @media(max-width:545px){ table {width:20%;} }
 
 /*** Pagination ***/
-.pagination {width:fit-content;
-             margin:1rem auto;
-             padding:0;
-             gap:0;
-             border-radius:0.6rem;
-             background-color:var(--white);
-             box-shadow:var(--box-shadow6);
+.pagination-wrapper {width:fit-content;
+                     margin:1rem auto;
+                     padding:0;
+                     gap:0;
+                     border-radius:0.6rem;
+                     background-color:var(--white);
+                     box-shadow:var(--box-shadow6);
 
        .pagination-link {padding:0.5rem 1.6rem;
                          font-size:1.3rem;
@@ -2041,7 +2035,7 @@ header {width:100%;
                     top:0;
                     left:0;
                     bottom:0;
-                    background-image:linear-gradient(180deg, var(--blue3) 0%, var(--blue20) 100%);
+                    background-image:linear-gradient(180deg, var(--blue5) 0%, var(--blue18) 100%);
                     box-shadow:var(--box-shadow2);
                     overflow-y:scroll;
                     z-index:1000;

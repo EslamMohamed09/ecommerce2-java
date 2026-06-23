@@ -62,13 +62,6 @@ document.addEventListener("DOMContentLoaded", () => { // preloader
   });
 });
 
-function loadHtml(selector, htmlContent, type) {
-  document.querySelector(selector).innerHTML = htmlContent;
-
-  if (type === "header") { document.dispatchEvent(new Event("headerLoaded")) }
-  if (type === "footer") { document.dispatchEvent(new Event("footerLoaded")) }
-}
-
 /*** HEADER ***/
 const header = document.querySelector('header');
 
@@ -2517,10 +2510,7 @@ if (document.querySelector(".category-page")) {
 
       children.forEach(child => findChildren(child.id));
 
-      if (children.length === 0) {
-        result.push(categories.find(cat => cat.id === id));
-      }
-
+      if (children.length === 0) {result.push(categories.find(cat => cat.id === id));}
     }
 
     findChildren(categoryId);
@@ -3568,16 +3558,16 @@ if (document.querySelector(".category-page")) {
           }).join('');
 
           const hotDealsThisCategoryProductsElement = document.createElement('div');
-          hotDealsThisCategoryProductsElement.classList.add('hot-deals-this-category-products');
+                hotDealsThisCategoryProductsElement.classList.add('hot-deals-this-category-products');
           const hotDealsThisCategoryProductsContainer = document.createElement('div');
-          hotDealsThisCategoryProductsContainer.classList.add('products-container');
+                hotDealsThisCategoryProductsContainer.classList.add('products-container');
           const hotDealsThisCategoryProductsWrapper = document.createElement('div');
-          hotDealsThisCategoryProductsWrapper.classList.add('slider-wrapper');
+                hotDealsThisCategoryProductsWrapper.classList.add('slider-wrapper');
 
           const hotDealsThisCategoryProductsHeading = document.createElement('div'); // block title
-          hotDealsThisCategoryProductsHeading.classList.add('block-heading');
+                hotDealsThisCategoryProductsHeading.classList.add('block-heading');
           const hotDealsThisCategoryProductsTitle = document.createElement('h3');
-          hotDealsThisCategoryProductsTitle.classList.add('block-heading-title');
+                hotDealsThisCategoryProductsTitle.classList.add('block-heading-title');
 
           hotDealsThisCategoryProductsTitle.textContent = 'hot deals';
           hotDealsThisCategoryProductsHeading.appendChild(hotDealsThisCategoryProductsTitle);
@@ -4090,6 +4080,13 @@ if (document.querySelector(".payment-section")) {
  ####### GLOBAL #######
  ######################
 */
+function loadHtml(selector, htmlContent, type) {
+  document.querySelector(selector).innerHTML = htmlContent;
+
+  if (type === "header") { document.dispatchEvent(new Event("headerLoaded")) }
+  if (type === "footer") { document.dispatchEvent(new Event("footerLoaded")) }
+}
+
 // constant width to stats of product
 document.querySelectorAll('.product-item .stats .sale').forEach((span) => {
   let numberOnly = span.textContent.trim().replace(/\D/g, '');
