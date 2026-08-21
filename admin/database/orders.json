@@ -10,7 +10,7 @@
 
     {"id":"5", "customername":"abdelrahman khaled", "totalPrice":"$370", "status":"pending", "paymentMethod":"paypal", "image":"../inc/images/users/eslam5.jpg", "date":"14 Jan,2024"},
 
-    {"id":"6", "customername":"adham ali", "totalPrice":"$290", "status":"shipped", "paymentMethod":"paypal", "image":"../inc/images/users/eslam6.jpg", "date":"15 Jan,2024"},
+    {"id":"6", "customername":"adham ali", "totalPrice":"$290", "status":"completed", "paymentMethod":"paypal", "image":"../inc/images/users/eslam6.jpg", "date":"15 Jan,2024"},
 
     {"id":"7", "customername":"samir rushdi", "totalPrice":"$420", "status":"canceled", "paymentMethod":"paypal", "image":"../inc/images/users/eslam7.jpg", "date":"22 Jan,2024"},
 
@@ -18,9 +18,9 @@
 
     {"id":"9", "customername":"mohaned ali", "totalPrice":"$630", "status":"shipped", "paymentMethod":"paypal", "image":"../inc/images/users/eslam9.jpg", "date":"22 Jan,2024"},
 
-    {"id":"10", "customername":"kareem mohamed", "totalPrice":"$710", "status":"shipped", "paymentMethod":"paypal", "image":"../inc/images/users/eslam10.jpg", "date":"22 Jan,2024"},
+    {"id":"10", "customername":"kareem mohamed", "totalPrice":"$710", "status":"completed", "paymentMethod":"paypal", "image":"../inc/images/users/eslam10.jpg", "date":"22 Jan,2024"},
 
-    {"id":"11", "customername":"ramy alaa", "totalPrice":"$1360", "status":"shipped", "paymentMethod":"paypal", "image":"../inc/images/users/eslam11.jpg", "date":"23 Jan,2024"},
+    {"id":"11", "customername":"ramy alaa", "totalPrice":"$1360", "status":"completed", "paymentMethod":"paypal", "image":"../inc/images/users/eslam11.jpg", "date":"23 Jan,2024"},
 
     {"id":"12", "customername":"merna ali", "totalPrice":"$250", "status":"canceled", "paymentMethod":"paypal", "image":"../inc/images/users/eslam1.jpg", "date":"26 Jan,2024"},
 

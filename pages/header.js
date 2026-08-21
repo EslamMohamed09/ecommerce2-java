@@ -3,7 +3,7 @@ const headerContent = `
     <div class="left-block d-flex-r-st-c">
 
       <div class="logo-holder">
-        <a href="#" class="logo-title"><img src="../admin/inc/images/logo.png" alt="" class="web-brand"></a>
+        <a href="#" class="logo-title"><img src="../admin/assets/images/logo.png" alt="" class="web-brand"></a>
       </div>
 
       <div class="selects">
@@ -12,7 +12,7 @@ const headerContent = `
           <div class="select-box" onclick="currencyToggleOptions(this)">
             <div class="selected">
               <div class="flag">
-                <img src="../admin/inc/images/currency/usd.png" alt="UK">
+                <img src="../admin/assets/images/currency/usd.png" alt="UK">
               </div>
               <span>EN / USD</span>
             </div>
@@ -20,16 +20,16 @@ const headerContent = `
           </div>
       
           <div class="options">
-            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/inc/images/currency/usd.png', this)">
-              <div class="flag"><img src="../admin/inc/images/currency/usd.png" alt="UK"></div>
+            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/assets/images/currency/usd.png', this)">
+              <div class="flag"><img src="../admin/assets/images/currency/usd.png" alt="UK"></div>
               <span>EN / USD</span>
             </div>
-            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/inc/images/currency/germany.png', this)">
-              <div class="flag"><img src="admin/inc/images/currency/germany.png" alt="DE"></div>
+            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/assets/images/currency/germany.png', this)">
+              <div class="flag"><img src="admin/assets/images/currency/germany.png" alt="DE"></div>
               <span>DE / EURO</span>
             </div>
-            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/currency/egy.png', this)">
-              <div class="flag"><img src="admin/inc/images/currency/egy.png" alt="EG"></div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/assets/images/currency/egy.png', this)">
+              <div class="flag"><img src="admin/assets/images/currency/egy.png" alt="EG"></div>
               <span>EG / POUND</span>
             </div>
           </div>
@@ -59,7 +59,7 @@ const headerContent = `
     <div class="middle-bar d-flex-r-bt-c">
 
       <div class="logo-holder">
-        <a href="#" class="logo-title"><img src="admin/inc/images/logo.png" alt="" class="web-brand"></a>
+        <a href="#" class="logo-title"><img src="admin/assets/images/logo.png" alt="" class="web-brand"></a>
       </div>
 
       <form class="search-form d-flex-r-bt-c">
@@ -109,7 +109,7 @@ const headerContent = `
           <div class="select-box" onclick="currencyToggleOptions(this)">
             <div class="selected">
               <div class="flag">
-                <img src="../admin/inc/images/usd.png" alt="UK">
+                <img src="../admin/assets/images/usd.png" alt="UK">
               </div>
               <span>EN / USD</span>
             </div>
@@ -117,16 +117,16 @@ const headerContent = `
           </div>
       
           <div class="options">
-            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/inc/images/usd.png', this)">
-              <div class="flag"><img src="admin/inc/images/usd.png" alt="UK"></div>
+            <div class="option" onclick="currencySelectOption('EN', 'EN / USD', '../admin/assets/images/usd.png', this)">
+              <div class="flag"><img src="admin/assets/images/usd.png" alt="UK"></div>
               <span>EN / USD</span>
             </div>
-            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/inc/images/germany.png', this)">
-              <div class="flag"><img src="admin/inc/images/germany.png" alt="DE"></div>
+            <div class="option" onclick="currencySelectOption('DE', 'DE / EURO', '../admin/assets/images/germany.png', this)">
+              <div class="flag"><img src="admin/assets/images/germany.png" alt="DE"></div>
               <span>DE / EURO</span>
             </div>
-            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/inc/images/egy.png', this)">
-              <div class="flag"><img src="admin/inc/images/egy.png" alt="EG"></div>
+            <div class="option" onclick="currencySelectOption('EG', 'EG / POUND', '../admin/assets/images/egy.png', this)">
+              <div class="flag"><img src="admin/assets/images/egy.png" alt="EG"></div>
               <span>EG / POUND</span>
             </div>
           </div>
