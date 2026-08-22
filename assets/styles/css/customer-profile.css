@@ -1,0 +1,15 @@
+/*
+ =============================
+ ##### CUSTOMERS Profile #####
+ =============================
+*/
+.customer-profile-page {
+  padding: 1rem 8% 8rem;
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .customer-profile-page {
+    padding: 1rem 4% 8rem;
+  }
+}
